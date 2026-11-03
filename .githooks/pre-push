@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+python3 tools/check_push.py "$@"
+command -v gitleaks >/dev/null || { echo 'gitleaks required'; exit 1; }
+gitleaks git --no-banner --redact .

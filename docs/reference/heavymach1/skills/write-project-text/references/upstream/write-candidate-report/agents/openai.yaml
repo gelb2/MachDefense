@@ -1,0 +1,6 @@
+interface:
+  display_name: "글쓰기 문장과 근거 적용"
+  short_description: "모든 글쓰기에서 쉬운 설명과 근거를 쓰고 메타카피·자기합리화를 제거"
+  default_prompt: "$write-candidate-report로 독자와 목적에 맞게 글을 쓰고, 기존 지시·자료·출처와 문장을 대조해줘."
+policy:
+  allow_implicit_invocation: true

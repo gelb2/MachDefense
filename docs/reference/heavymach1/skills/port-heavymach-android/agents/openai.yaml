@@ -1,0 +1,4 @@
+interface:
+  display_name: "HeavyMach Android 이식"
+  short_description: "검증된 C++ 게임 코어를 유지하며 Android APK를 빌드하고 검사"
+  default_prompt: "$port-heavymach-android 스킬로 현재 단계의 이식과 APK 검증을 진행해."
