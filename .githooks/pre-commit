@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+python3 tools/original_guard.py
+python3 tools/document_contract.py check
+command -v gitleaks >/dev/null || { echo 'gitleaks required'; exit 1; }
+gitleaks protect --staged --no-banner --redact

@@ -1,0 +1,6 @@
+interface:
+  display_name: "GameDev 원고·이미지 보고"
+  short_description: "기존 Sites에서 원문·이미지 전체와 시각 검수 결과 전달"
+  default_prompt: "$present-game-artifacts로 기존 GameDev 보고 사이트에 요청한 원문과 이미지 전체를 보존해 전달해줘."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,93 @@
+{
+  "copied_on": "2026-10-25",
+  "files": [
+    {
+      "project": "SaaS",
+      "source": ".agents/skills/sass-applications/SKILL.md",
+      "copy": "references/upstream/sass-applications/SKILL.md",
+      "sha256": "e81514c9c8805b104f07e338ea5de10ec1b980ea049dc05cdadbbca08332fcd4"
+    },
+    {
+      "project": "SaaS",
+      "source": ".agents/skills/sass-review-publication/SKILL.md",
+      "copy": "references/upstream/sass-review-publication/SKILL.md",
+      "sha256": "4c3db2e438a50847f74662d899ec168c79835c7a82d71e13d9de7a1e82f3bde7"
+    },
+    {
+      "project": "SaaS",
+      "source": "ProjectPersonalFunnelPageWeb/.agents/skills/sass-content/SKILL.md",
+      "copy": "references/upstream/sass-content/SKILL.md",
+      "sha256": "d18cba3532092899e79bcdf48498b5d88ffe2e645669b400e208bdc985b47b64"
+    },
+    {
+      "project": "Candidate",
+      "source": ".agents/skills/write-candidate-report/SKILL.md",
+      "copy": "references/upstream/write-candidate-report/SKILL.md",
+      "sha256": "2e07e21d7b8a4a4257ccdb3a891c290ea7a21ae6b6a47e5f0fe12f373ed3008f"
+    },
+    {
+      "project": "Candidate",
+      "source": ".agents/skills/write-candidate-report/agents/openai.yaml",
+      "copy": "references/upstream/write-candidate-report/agents/openai.yaml",
+      "sha256": "bdf0f811f0cd75de12eef9f44a3e564b944e818bcffcbd633cd63b8b6620b5ad"
+    },
+    {
+      "project": "Candidate",
+      "source": ".agents/skills/present-candidate-review/SKILL.md",
+      "copy": "references/upstream/present-candidate-review/SKILL.md",
+      "sha256": "c56905a19a56e572699b21a31523553696b92812e9c5ecd24dd0db818ffac7f2"
+    },
+    {
+      "project": "Candidate",
+      "source": ".agents/skills/present-candidate-review/agents/openai.yaml",
+      "copy": "references/upstream/present-candidate-review/agents/openai.yaml",
+      "sha256": "a0e1ec7def8b7d41862db0628b6bc92e197e361ca91c3adbcb6e746f49d2252a"
+    },
+    {
+      "project": "Candidate",
+      "source": ".agents/skills/present-candidate-review/references/materials.md",
+      "copy": "references/upstream/present-candidate-review/references/materials.md",
+      "sha256": "44c746d4bcaa3ea4369a64856882d5aa89afd7ac71c776e0925d0f947cfbc4a9"
+    },
+    {
+      "project": "SaaS",
+      "source": "governance/APPLICATION_WRITING.md",
+      "copy": "references/upstream/sass-application-writing.md",
+      "sha256": "fa34c468fb7869cf5a9c12251c2849ab7372349bf401ad490da908d35a78771e"
+    },
+    {
+      "project": "SaaS",
+      "source": "ProjectPersonalFunnelPageWeb/governance/AUTHORING_WORKFLOWS.md",
+      "copy": "references/upstream/sass-authoring-workflows.md",
+      "sha256": "d191a6c72a7cf12e7b23d05a363186f87d795736ca6198ee9a74c1ae8cd6e722"
+    },
+    {
+      "project": "SaaS",
+      "source": "governance/REVIEW_MATERIALS.md",
+      "copy": "references/upstream/sass-review-materials.md",
+      "sha256": "66e6ff081972a4459fd69e172eca8277f798d5f17990f4880bb1d42ed6aeed7c"
+    },
+    {
+      "project": "SaaS",
+      "source": "ProjectPersonalFunnelPageWeb/governance/CONTENT_AUTHORING_CANON.md",
+      "copy": "references/upstream/sass-content-authoring-canon.md",
+      "sha256": "0b45c89db38f7c1c621212710de924ffdbfb1ed1220dfdbbadcce5f1bb089a0a"
+    },
+    {
+      "project": "SaaS",
+      "source": "ProjectPersonalFunnelPageWeb/governance/PROPOSAL_AUTHORING_CANON.md",
+      "copy": "references/upstream/sass-proposal-authoring-canon.md",
+      "sha256": "35ce8471032461e7346e10f98b69cba87897fc00854fabacf69924e2df67605e"
+    },
+    {
+      "project": "Candidate",
+      "source": "docs/canon/design-reference.md §7.5–7.5.2",
+      "copy": "references/upstream/candidate-editorial-rules.md",
+      "sha256": "1fba3fc1f22c6b952e70f84057975b2bcc06efd420577f31e418c032cc5b2c76",
+      "source_sha256": "e6186e64eb619ee1db6455db0333e55f8fc999a569ebffac3e4b1299701943c2",
+      "mode": "section excerpt; final blank line trimmed"
+    }
+  ],
+  "duplicate": "Candidate .claude write-candidate-report and present-candidate-review are byte-identical to .agents copies.",
+  "scope": "Five current writing/content/presentation skills and their writing policies. Historical aliases are not installed skills. Source-specific operations remain reference history; use the local SKILL.md."
+}
