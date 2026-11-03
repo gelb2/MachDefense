@@ -31,6 +31,9 @@ def inspect(name, data, known, depth=0, budget=None):
     digest = hashlib.sha256(data).hexdigest()
     if digest in known:
         raise ValueError(f'original package/executable hash: {name}')
+    # Only inspectable ZIP containers are accepted at bootstrap.
+    if data.startswith((b'\x1f\x8b', b'BZh', b'\xfd7zXZ\x00', b'7z\xbc\xaf\x27\x1c', b'Rar!')) or data[257:262] == b'ustar':
+        raise ValueError(f'archive format requires explicit local inspection before tracking: {name}')
     if data.startswith(b'version https://git-lfs.github.com/spec/v1'):
         # No LFS objects are needed at bootstrap. Prevent inspecting only a pointer.
         raise ValueError(f'LFS object requires a materialized asset audit before enabling LFS: {name}')

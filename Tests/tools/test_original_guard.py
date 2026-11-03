@@ -1,4 +1,4 @@
-import hashlib, io, os, subprocess, sys, tempfile, unittest, zipfile
+import gzip, hashlib, io, os, subprocess, sys, tempfile, unittest, zipfile
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'tools'))
 import original_guard as guard
@@ -27,6 +27,10 @@ class GuardTests(unittest.TestCase):
     def test_nested_package_and_lfs(self):
         self.blocked('bundle.zip',archive({'renamed.bin':archive({'Payload/Game.app/Game':b'x'})}))
         self.blocked('renamed.dat',b'version https://git-lfs.github.com/spec/v1\noid sha256:abc\nsize 1\n')
+
+    def test_wrapped_compression(self):
+        self.blocked('disguised.bin',gzip.compress(archive({'Payload/Game.app/Game':b'x'})))
+        self.blocked('data.bin',b'7z\xbc\xaf\x27\x1c'+b'data')
 
     def test_corrupt_archive(self):
         self.blocked('x.bin',b'PK\x03\x04broken')
