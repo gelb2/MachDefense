@@ -7,8 +7,8 @@
   "game_original_candidates": 3,
   "active_skills_validated": 13,
   "original_guard_unittests": {
-    "tests": 5,
-    "passed": 5
+    "tests": 6,
+    "passed": 6
   },
   "actual_precommit_checks": [
     {
@@ -33,5 +33,15 @@
     "HeavyMach",
     "Unity",
     "hm-defense"
-  ]
+  ],
+  "remote_clean_clone": {
+    "head": "f8d11f261f0d53fd7704b7d01dcb6d9b39c25d99",
+    "tracked_files": 150,
+    "ipa_count": 0,
+    "setup_history_documents_unittests": "PASS"
+  },
+  "initial_remote_ci": {
+    "conclusion": "success",
+    "url": "https://github.com/gelb2/MachDefense/actions/runs/41682041515"
+  }
 }
