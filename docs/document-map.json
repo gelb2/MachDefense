@@ -13,7 +13,9 @@
       "docs/source-provenance.md",
       "docs/restoration-plan.md",
       ".agents/skills/restore-machdefense/SKILL.md",
-      ".agents/skills/reverse-engineer-anything/SKILL.md"
+      ".agents/skills/reverse-engineer-anything/SKILL.md",
+      "Compatibility/README.md",
+      "Compatibility/upstream.json"
     ],
     "rendering": [
       "docs/rendering-policy.md",
@@ -31,7 +33,9 @@
     "apple": [
       "docs/design.md",
       "docs/validation-plan.md",
-      ".agents/skills/apple-wireless-device/SKILL.md"
+      ".agents/skills/apple-wireless-device/SKILL.md",
+      "Compatibility/README.md",
+      "Compatibility/ios/project.yml"
     ],
     "android": [
       "docs/design.md",

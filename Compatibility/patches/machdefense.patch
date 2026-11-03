@@ -1,0 +1,437 @@
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -273,9 +273,9 @@
+ 
+     // Guest options live beside the preserved IPA so packaging controls orientation.
+     let base = sdl2::filesystem::base_path().unwrap_or_else(|_| String::from("./"));
+-    let game = std::path::Path::new(&base).join("HeavyMach.ipa");
++    let game = std::path::Path::new(&base).join("MachDefense.ipa");
+     let mut args = vec![String::from("touchHLE"), game.to_string_lossy().into_owned()];
+-    let config = std::path::Path::new(&base).join("HeavyMach_options.txt");
++    let config = std::path::Path::new(&base).join("MachDefense_options.txt");
+     match std::fs::read_to_string(&config) {
+         Ok(text) => args.extend(text.lines().map(str::trim)
+             .filter(|s| !s.is_empty() && !s.starts_with('#')).map(String::from)),
+--- a/src/frameworks.rs
++++ b/src/frameworks.rs
+@@ -34,6 +34,7 @@
+ pub mod core_telephony;
+ pub mod foundation;
+ pub mod game_kit;
++pub mod iad;
+ pub mod media_player;
+ pub mod message_ui;
+ pub mod openal;
+@@ -46,6 +47,7 @@
+ /// Container for state of various child modules
+ #[derive(Default)]
+ pub struct State {
++    pub iad_delegates: std::collections::HashMap<crate::objc::id, crate::objc::id>,
+     avfoundation: avfoundation::State,
+     audio_toolbox: audio_toolbox::State,
+     core_foundation: core_foundation::State,
+--- a/src/dyld/dylib_list.rs
++++ b/src/dyld/dylib_list.rs
+@@ -26,6 +26,7 @@
+     &frameworks::core_telephony::DYLIB,
+     &frameworks::foundation::DYLIB,
+     &frameworks::game_kit::DYLIB,
++    &frameworks::iad::DYLIB,
+     &frameworks::media_player::DYLIB,
+     &frameworks::message_ui::DYLIB,
+     &frameworks::openal::DYLIB,
+--- /dev/null
++++ b/src/frameworks/iad.rs
+@@ -0,0 +1,34 @@
++/* This Source Code Form is subject to the terms of the Mozilla Public
++ * License, v. 2.0. https://mozilla.org/MPL/2.0/ */
++//! Offline iAd banner compatibility. No ad requests or successful-ad callbacks.
++use crate::objc::{id, msg, msg_super, nil, objc_classes, ClassExports};
++
++pub const DYLIB: crate::dyld::HostDylib = crate::dyld::HostDylib {
++    path: "/System/Library/Frameworks/iAd.framework/iAd",
++    aliases: &[], class_exports: &[CLASSES], constant_exports: &[], function_exports: &[],
++};
++
++const CLASSES: ClassExports = objc_classes! {
++(env, this, _cmd);
++@implementation ADBannerView: UIView
++- (id)initWithCoder:(id)coder {
++    let this: id = msg_super![env; this initWithCoder:coder];
++    () = msg![env; this setHidden:true];
++    this
++}
++- (())setDelegate:(id)delegate {
++    env.framework_state.iad_delegates.insert(this, delegate);
++}
++- (id)delegate {
++    env.framework_state.iad_delegates.get(&this).copied().unwrap_or(nil)
++}
++- (bool)isBannerLoaded { false }
++- (bool)bannerLoaded { false }
++- (bool)isBannerViewActionInProgress { false }
++- (())cancelBannerViewAction {}
++- (())dealloc {
++    env.framework_state.iad_delegates.remove(&this);
++    msg_super![env; this dealloc]
++}
++@end
++};
+--- a/src/libc/stdlib.rs
++++ b/src/libc/stdlib.rs
+@@ -22,7 +22,7 @@
+ #[derive(Default)]
+ pub struct State {
+     rand: u32,
+-    random: u32,
++    random: DarwinRandom,
+     arc4random: u32,
+     fcvt_buf: Option<MutPtr<u8>>,
+ }
+@@ -220,20 +220,45 @@
+     (seed as i32) & RAND_MAX
+ }
+ 
+-// BSD's "better" random number generator, with an implementation that is not
+-// actually better.
++// Darwin's default random()/srandom() sequence is also used to decode game
++// resource tables. A substitute RNG corrupts the resources before gameplay.
++// Algorithm reference: Apple Libc-594.9.5 stdlib/FreeBSD/random.c, TYPE_3.
++#[derive(Debug)]
++struct DarwinRandom {
++    words: [u32; 31],
++    front: usize,
++    rear: usize,
++}
++impl DarwinRandom {
++    fn seeded(seed: u32) -> Self {
++        let mut out = Self { words: [0; 31], front: 3, rear: 0 };
++        out.words[0] = seed;
++        for i in 1..31 {
++            let mut value = out.words[i - 1] as i32 as i64;
++            if value == 0 { value = 123459876; }
++            value = 16807 * (value % 127773) - 2836 * (value / 127773);
++            if value < 0 { value += 2147483647; }
++            out.words[i] = value as u32;
++        }
++        for _ in 0..310 { out.next(); }
++        out
++    }
++    fn next(&mut self) -> i32 {
++        self.words[self.front] = self.words[self.front].wrapping_add(self.words[self.rear]);
++        let value = (self.words[self.front] >> 1) as i32;
++        self.front = (self.front + 1) % 31;
++        self.rear = (self.rear + 1) % 31;
++        value
++    }
++}
++impl Default for DarwinRandom {
++    fn default() -> Self { Self::seeded(1) }
++}
+ fn srandom(env: &mut Environment, seed: u32) {
+-    // TODO: handle errno properly
+-    set_errno(env, 0);
+-
+-    env.libc_state.stdlib.random = seed;
++    env.libc_state.stdlib.random = DarwinRandom::seeded(seed);
+ }
+ fn random(env: &mut Environment) -> i32 {
+-    // TODO: handle errno properly
+-    set_errno(env, 0);
+-
+-    env.libc_state.stdlib.random = prng(env.libc_state.stdlib.random);
+-    (env.libc_state.stdlib.random as i32) & RAND_MAX
++    env.libc_state.stdlib.random.next()
+ }
+ 
+ fn arc4random(env: &mut Environment) -> u32 {
+--- a/src/frameworks/uikit/ui_screen.rs
++++ b/src/frameworks/uikit/ui_screen.rs
+@@ -6,7 +6,7 @@
+ //! `UIScreen`.
+ 
+ use crate::frameworks::core_graphics::{CGFloat, CGPoint, CGRect, CGSize};
+-use crate::objc::{id, msg, msg_class, objc_classes, ClassExports, TrivialHostObject};
++use crate::objc::{id, msg, msg_class, objc_classes, ClassExports, TrivialHostObject, SEL};
+ 
+ #[derive(Default)]
+ pub struct State {
+@@ -45,6 +45,10 @@
+ - (())release {}
+ - (id)autorelease { this }
+ 
++- (id)displayLinkWithTarget:(id)target selector:(SEL)selector {
++    msg_class![env; CADisplayLink displayLinkWithTarget:target selector:selector]
++}
++
+ // TODO: more accessors
+ 
+ - (CGRect)bounds {
+--- a/src/frameworks/uikit/ui_nib.rs
++++ b/src/frameworks/uikit/ui_nib.rs
+@@ -397,6 +397,10 @@
+     for i in 0..visibles_count {
+         let visible: id = msg![env; visibles objectAtIndex:i];
+         () = msg![env; visible setHidden:false];
++        if env.framework_state.uikit.ui_view.ui_window.key_window.is_none()
++            && env.framework_state.uikit.ui_view.ui_window.windows.contains(&visible) {
++            () = msg![env; visible makeKeyWindow];
++        }
+     }
+ 
+     Ok(unarchiver)
+--- a/src/frameworks/uikit/ui_view/ui_alert_view.rs
++++ b/src/frameworks/uikit/ui_view/ui_alert_view.rs
+@@ -107,6 +107,7 @@
+     container: id,
+     /// 按钮命中区(逻辑坐标 x, y, 宽, 高)与按钮索引。
+     buttons: Vec<(CGFloat, CGFloat, CGFloat, CGFloat, NSInteger)>,
++    fields: Vec<(CGRect, id)>,
+     /// 没有任何按钮的框:点任意处按索引 0 关闭(见 [present] 注释)。
+     tap_anywhere: bool,
+     /// guest 屏幕坐标 → 覆盖层逻辑坐标的换算参数。
+@@ -531,6 +532,10 @@
+         }
+     };
+     if let Some(overlay) = overlay {
++        for (_, field) in &overlay.fields {
++            let _: bool = msg![env; (*field) resignFirstResponder];
++        }
++        () = msg![env; alert removeFromSuperview];
+         let container = overlay.container;
+         () = msg![env; container removeFromSuperview];
+         release(env, container);
+@@ -660,6 +665,7 @@
+     {
+         state.capture = None;
+     }
++    let mut focused_field = None;
+     let (alert, chosen) = {
+         let Some(overlay) = state.overlay.as_ref() else {
+             return Some(map);
+@@ -671,6 +677,13 @@
+                 continue;
+             }
+             let (lx, ly) = overlay.map.guest_to_logical(x, y);
++            for (frame, field) in &overlay.fields {
++                if lx >= frame.origin.x && ly >= frame.origin.y
++                    && lx <= frame.origin.x + frame.size.width
++                    && ly <= frame.origin.y + frame.size.height {
++                    focused_field = Some(*field);
++                }
++            }
+             let pressed = hit_button(overlay, lx, ly, DOWN_SLOP);
+             let better = match chosen {
+                 None => true,
+@@ -690,6 +703,9 @@
+             finger,
+             pressed,
+         });
++    }
++    if let Some(field) = focused_field {
++        let _: bool = msg![env; field becomeFirstResponder];
+     }
+     None
+ }
+@@ -937,6 +953,16 @@
+         )
+     };
+ 
++    // The original app adds its UITextField to UIAlertView before show.
++    // Keep those guest views and their input targets in the presented panel.
++    let custom_views = env.objc.borrow::<super::UIViewHostObject>(alert).subviews.clone();
++    let mut custom_frames = Vec::new();
++    let mut custom_bottom: CGFloat = 0.0;
++    for view in custom_views {
++        let frame: CGRect = msg![env; view frame];
++        custom_bottom = custom_bottom.max(frame.origin.y + frame.size.height);
++        custom_frames.push((frame, view));
++    }
+     let box_w = BOX_W.min(w - 40.0);
+     let text_w = box_w - 2.0 * PAD;
+     let max_message_h = (h - 260.0).max(80.0);
+@@ -987,7 +1013,8 @@
+             content_h += part_h;
+         }
+     }
+-    let box_h = content_h + 2.0 * PAD;
++    let box_h = (content_h + 2.0 * PAD)
++        .max(custom_bottom + buttons_h + PAD + 18.0);
+     let box_x = ((w - box_w) / 2.0).floor();
+     let box_y = ((h - box_h) / 2.0).floor().max(10.0);
+ 
+@@ -1045,6 +1072,20 @@
+         placed_any = true;
+     }
+ 
++    let mut fields = Vec::new();
++    if !custom_frames.is_empty() {
++        () = msg![env; alert setFrame:(rect(box_x, box_y, box_w, box_h))];
++        () = msg![env; container addSubview:alert];
++        let field_class = env.objc.get_known_class("UITextField", &mut env.mem);
++        for (frame, view) in custom_frames {
++            let is_field: bool = msg![env; view isKindOfClass:field_class];
++            if is_field {
++                fields.push((rect(box_x + frame.origin.x, box_y + frame.origin.y,
++                                  frame.size.width, frame.size.height), view));
++            }
++        }
++        y = y.max(box_y + custom_bottom);
++    }
+     let mut hits: Vec<(CGFloat, CGFloat, CGFloat, CGFloat, NSInteger)> = Vec::new();
+     if n > 0 {
+         if placed_any {
+@@ -1119,6 +1160,7 @@
+         alert,
+         container,
+         buttons: hits,
++        fields,
+         tap_anywhere,
+         map,
+     });
+--- a/src/frameworks/uikit/ui_graphics.rs
++++ b/src/frameworks/uikit/ui_graphics.rs
+@@ -7,9 +7,14 @@
+ 
+ use crate::dyld::{export_c_func, FunctionExports};
+ use crate::frameworks::core_graphics::cg_context::{
+-    CGContextRef, CGContextRelease, CGContextRetain,
++    CGContextRef, CGContextRelease, CGContextRetain, CGContextScaleCTM, CGContextTranslateCTM,
+ };
+-use crate::objc::nil;
++use crate::frameworks::core_graphics::cg_bitmap_context::{CGBitmapContextCreate, CGBitmapContextCreateImage};
++use crate::frameworks::core_graphics::cg_color_space::{CGColorSpaceCreateDeviceRGB, CGColorSpaceRelease};
++use crate::frameworks::core_graphics::cg_image::{CGImageRelease, kCGImageAlphaPremultipliedLast};
++use crate::frameworks::core_graphics::CGSize;
++use crate::mem::Ptr;
++use crate::objc::{nil, id, msg_class};
+ use crate::Environment;
+ 
+ #[derive(Default)]
+@@ -39,7 +44,40 @@
+         .unwrap_or(nil)
+ }
+ 
++// UIKit image contexts are bitmap contexts with a top-left origin.
++// MachDefense uses these APIs when rotating its original unit thumbnails.
++pub fn UIGraphicsBeginImageContext(env: &mut Environment, size: CGSize) {
++    if !size.width.is_finite() || !size.height.is_finite() || size.width <= 0.0 || size.height <= 0.0 {
++        UIGraphicsPushContext(env, nil);
++        return;
++    }
++    let color_space = CGColorSpaceCreateDeviceRGB(env);
++    let context = CGBitmapContextCreate(env, Ptr::null(), size.width.ceil() as u32,
++        size.height.ceil() as u32, 8, 0, color_space, kCGImageAlphaPremultipliedLast);
++    CGColorSpaceRelease(env, color_space);
++    CGContextTranslateCTM(env, context, 0.0, size.height);
++    CGContextScaleCTM(env, context, 1.0, -1.0);
++    UIGraphicsPushContext(env, context);
++    CGContextRelease(env, context);
++}
++
++pub fn UIGraphicsGetImageFromCurrentImageContext(env: &mut Environment) -> id {
++    let context = UIGraphicsGetCurrentContext(env);
++    if context == nil { return nil; }
++    let cg_image = CGBitmapContextCreateImage(env, context);
++    let image: id = msg_class![env; UIImage imageWithCGImage:cg_image];
++    CGImageRelease(env, cg_image);
++    image
++}
++
++pub fn UIGraphicsEndImageContext(env: &mut Environment) {
++    if !env.framework_state.uikit.ui_graphics.context_stack.is_empty() { UIGraphicsPopContext(env); }
++}
++
+ pub const FUNCTIONS: FunctionExports = &[
++    export_c_func!(UIGraphicsBeginImageContext(_)),
++    export_c_func!(UIGraphicsGetImageFromCurrentImageContext()),
++    export_c_func!(UIGraphicsEndImageContext()),
+     export_c_func!(UIGraphicsPushContext(_)),
+     export_c_func!(UIGraphicsPopContext()),
+     export_c_func!(UIGraphicsGetCurrentContext()),
+--- a/src/frameworks/core_graphics/cg_image.rs
++++ b/src/frameworks/core_graphics/cg_image.rs
+@@ -229,6 +229,7 @@
+ }
+ 
+ pub fn CGImageGetWidth(env: &mut Environment, image: CGImageRef) -> GuestUSize {
++    if image.is_null() { return 0; }
+     let (width, _height) = env
+         .objc
+         .borrow::<CGImageHostObject>(image)
+@@ -237,6 +238,7 @@
+     width
+ }
+ pub fn CGImageGetHeight(env: &mut Environment, image: CGImageRef) -> GuestUSize {
++    if image.is_null() { return 0; }
+     let (_width, height) = env
+         .objc
+         .borrow::<CGImageHostObject>(image)
+--- a/src/frameworks/core_graphics/cg_context.rs
++++ b/src/frameworks/core_graphics/cg_context.rs
+@@ -212,6 +212,7 @@
+     context: CGContextRef,
+     transform: CGAffineTransform,
+ ) {
++    if context.is_null() { return; }
+     log_dbg!("CGContextConcatCTM({:?})", transform);
+     let host_obj = env.objc.borrow_mut::<CGContextHostObject>(context);
+     host_obj.transform = transform.concat(host_obj.transform);
+@@ -227,6 +228,7 @@
+     host_obj.transform = host_obj.transform.rotate(angle);
+ }
+ pub fn CGContextScaleCTM(env: &mut Environment, context: CGContextRef, x: CGFloat, y: CGFloat) {
++    if context.is_null() { return; }
+     log_dbg!("CGContextScaleCTM({:?})", (x, y));
+     let host_obj = env.objc.borrow_mut::<CGContextHostObject>(context);
+     host_obj.transform = host_obj.transform.scale(x, y);
+@@ -237,6 +239,7 @@
+     tx: CGFloat,
+     ty: CGFloat,
+ ) {
++    if context.is_null() { return; }
+     log_dbg!("CGContextTranslateCTM({:?})", (tx, ty));
+     let host_obj = env.objc.borrow_mut::<CGContextHostObject>(context);
+     host_obj.transform = host_obj.transform.translate(tx, ty);
+@@ -248,6 +251,7 @@
+     rect: CGRect,
+     image: CGImageRef,
+ ) {
++    if context.is_null() || image.is_null() { return; }
+     cg_bitmap_context::draw_image(env, context, rect, image);
+ }
+ 
+--- a/src/window.rs
++++ b/src/window.rs
+@@ -3337,25 +3337,25 @@
+         messagebox::ButtonData {
+             flags: messagebox::MessageBoxButtonFlag::NOTHING,
+             button_id: 0,
+-            text: "打开日志所在文件夹",
++            text: "Open Logs",
+         },
+         messagebox::ButtonData {
+             flags: messagebox::MessageBoxButtonFlag::NOTHING,
+             button_id: 1,
+-            text: "关闭",
++            text: "Close",
+         },
+     ];
+ 
+     let log_hint = if cfg!(any(target_os = "ios", target_os = "android")) {
+-        "请在「文件」App 里找到摩尔庄园HD 文件夹,把 touchHLE_log.txt(重开游戏后是 touchHLE_log.prev.txt)发给开发者。"
++        "Find touchHLE_log.txt in the MachDefense Port folder in Files."
+     } else {
+-        "请把游戏文件夹里的 touchHLE_log.txt(重开游戏后是 touchHLE_log.prev.txt)发给开发者。"
++        "The runtime log is touchHLE_log.txt in the app data folder."
+     };
+     let Ok(clicked_button) = messagebox::show_message_box(
+         messagebox::MessageBoxFlag::ERROR,
+         &mbox,
+-        "摩尔庄园出错了",
+-        &format!("游戏遇到错误,需要退出。\n\n{error_message}\n\n{log_hint}"),
++        "MachDefense Port Error",
++        &format!("The compatibility runtime encountered an error.\n\n{error_message}\n\n{log_hint}"),
+         window.map(|win| &win.window),
+         None,
+     ) else {

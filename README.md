@@ -2,7 +2,7 @@
 
 원본 MachDefense를 현대 기기에서 실행하도록 복원하기 위한 비공개 개발 저장소다. HeavyMach 1에서 사용한 원본 분석·호환 실행·소스 재구현·비교 검증 절차를 적용한다.
 
-현재는 개발 환경과 문서 체계를 준비한 단계다. 실행 가능한 새 앱은 아직 없다. 원본 세 판본은 저장소 밖에 보관하며 기준 판본은 분석 후 결정한다.
+Mach Defense 1.0.5의 iOS 호환 실행판을 개발 중이다. 시뮬레이터에서 새 슬롯 생성·스테이지 1 진입·유닛 생산과 이동을 확인했다. iPhone Air에 무선 설치하고 타이틀·슬롯 화면을 확인했다. 이름 입력칸 위치 오류와 전투·저장·재실행 검사가 남아 있다. [호환 실행판 빌드](Compatibility/README.md)와 [현재 검사 결과](docs/current-status.md)를 참고한다. 원본 세 판본은 저장소 밖에 보관한다.
 
 - [현재 인계](HANDOVER-CURRENT.md) · [문서 목차](docs/README.md) · [남은 작업](docs/usability-todo.md)
 - [복원 계획](docs/restoration-plan.md) · [원본 명세](docs/source-provenance.md) · [스킬과 출처](docs/skills.md)

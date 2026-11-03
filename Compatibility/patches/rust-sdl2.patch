@@ -1,0 +1,11 @@
+--- a/sdl2-sys/build.rs
++++ b/sdl2-sys/build.rs
+@@ -530,7 +530,7 @@
+     let host = env::var("HOST").expect("Cargo build scripts always have HOST");
+     let target_os = get_os_from_triple(target.as_str()).unwrap();
+ 
+-    let sdl2_source_path = PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap()).join("SDL");
++    let sdl2_source_path = PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap()).join("../../SDL");
+ 
+     let sdl2_compiled_path: PathBuf;
+     #[cfg(feature = "bundled")]

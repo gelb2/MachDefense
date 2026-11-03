@@ -1,0 +1,31 @@
+{
+  "repository": "https://github.com/moleworld-dev/MoleWorld-5.5.0-touchHLE-offline.git",
+  "commit": "ebf9433e2bfd32071545bf49484b1345d15522a3",
+  "source": "fresh-port/20-touchHLE-src/touchHLE",
+  "features": [
+    "static",
+    "cpu_interpreter"
+  ],
+  "disabled_features": [
+    "moleworld_compat"
+  ],
+  "rust": "1.99.1",
+  "sdl_repository": "https://github.com/touchHLE/rust-sdl2.git",
+  "sdl_commit": "b67f98fe6a147773b6f05d50ae775d9fe16561e7",
+  "original": {
+    "bundle_id": "kr.indieapps.MachDefense",
+    "version": "1.0.5",
+    "sha256": "2c3e9aba0d249827da95c557f905762e3e2df08f79602f5404f93aa8f4c3d052",
+    "location": "external local originals directory; never committed or uploaded"
+  },
+  "compatibility_changes": [
+    "Offline ADBannerView, no advertising",
+    "Darwin TYPE_3 random/srandom sequence",
+    "UIScreen displayLinkWithTarget forwards to CADisplayLink",
+    "Original key window visibility from NIB",
+    "Original UIAlertView custom text-field input; focus position issue remains",
+    "UIGraphics bitmap context stack and image extraction",
+    "Core Graphics null-image dimensions and null-context no-op behavior",
+    "English compatibility runtime error dialog"
+  ]
+}
