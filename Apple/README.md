@@ -1,3 +1,23 @@
 # Apple
 
-공용 workspace와 하위 플랫폼 프로젝트를 구현할 위치다. Catalyst는 사용하지 않는다. 현재 프로젝트 파일은 없다.
+`MachDefense.xcworkspace`는 iPhone·iPad 유니버설 앱과 공용 코어·자원 프로젝트를 연결한다. 일반 앱은 `com.gelb2.machdefense.source`, 검사 앱은 `com.gelb2.machdefense.source.cheat`를 사용한다. 포팅판의 앱·저장과 분리된다.
+
+프로젝트 재생성:
+
+```sh
+Apple/generate-projects.sh
+```
+
+Xcode에서 workspace를 열고 `MachDefense` 또는 `MachDefenseCheat` 스킴과 iPhone/iPad 시뮬레이터를 선택한다. 제품은 `Sources/Core/Game.hpp`의 `createGame` 구현과 준비된 `Resources`를 소비한다. IPA·호환 실행기는 빌드 입력에 없다.
+
+`Sources/Platform/Apple`은 OpenGL ES 1.1 텍스처 렌더링, 입력 좌표 변환, OpenAL 버퍼 재사용, UIKit 창·생명주기·이름 입력, 명시적 원자적 파일 저장을 담당한다. 게임 버튼과 글자는 코어가 만든 스프라이트 목록으로 그린다. UIKit은 게임 버튼을 만들지 않는다.
+
+현재 Apple 음향 백엔드는 시스템 `OpenAL.framework`다. HeavyMach 1의 OpenAL Soft 배포본과는 구분한다. 원작의 음향 재생·감쇠 규칙은 게임 코어와 함께 대조한다.
+
+`MachDefenseRendererTests` 스킴은 시뮬레이터 OpenGL ES의 이미지 방향·크롭·알파·클립·입력 변환·텍스처 재사용을 검사한다. MenuRenderTests는 공용 `Menu`와 실제 자원을 연결해 타이틀, 영문 프로필 생성, 스테이지 선택을 렌더하고 PNG를 남긴다. AudioTests는 음원 80개, 반복 효과음, 배경음악 3곡의 루프 재생·중단·재개를 검사한다.
+
+배경음악은 효과음과 별도 OpenAL source로 재생한다. 같은 곡을 요청하면 재시작하지 않으며, 앱이 비활성화되면 일시정지한다. 오디오 장치가 재생성되면 곡명과 음량을 복원한다.
+
+현재 화면은 원작 iPhone의 320×480 논리 좌표를 유지한다. iPhone·iPad에서 같은 좌표계로 입력과 렌더링을 검사하며, 기기 화면 비율에 따라 여백이 생긴다. 전체화면 및 iPad 전용 배치는 후속 작업이다.
+
+iPad 시뮬레이터의 실행 지연을 조사한 프로세스 샘플에서는 `GLRendererFloat`가 픽셀을 CPU에서 그렸다. 실제 iPad 성능은 기기에서 별도로 측정한다.

@@ -26,6 +26,17 @@
     "Original UIAlertView custom text-field input; focus position issue remains",
     "UIGraphics bitmap context stack and image extraction",
     "Core Graphics null-image dimensions and null-context no-op behavior",
-    "English compatibility runtime error dialog"
+    "English compatibility runtime error dialog",
+    "Signed decimal printf formatting, including %+d upgrade increments",
+    "CADisplayLink frameInterval values below 1 clamp to 1; native iOS 26.5 simulator probe",
+    "WeMade MachDefense GuiBanner init/update/ad-open suppressed; no advertising"
+  ],
+  "comparison_originals": [
+    {
+      "bundle_id": "com.wemadeent.HeavyMachDefence",
+      "version": "1.0.3",
+      "sha256": "882fe8efa9a0c3d51c23da190ee3d30376a1b6766e16cc6b87daf09b98dc92b1",
+      "location": "external local originals only"
+    }
   ]
 }

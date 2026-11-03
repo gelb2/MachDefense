@@ -6,7 +6,8 @@
     "docs/game-design.md",
     "docs/restoration-contract.md",
     "docs/design.md",
-    "docs/current-status.md"
+    "docs/current-status.md",
+    "docs/port-observations-20261104.md"
   ],
   "domains": {
     "restoration": [
@@ -15,16 +16,31 @@
       ".agents/skills/restore-machdefense/SKILL.md",
       ".agents/skills/reverse-engineer-anything/SKILL.md",
       "Compatibility/README.md",
-      "Compatibility/upstream.json"
+      "Compatibility/upstream.json",
+      "docs/compatibility-cheat-validation-plan.md",
+      "docs/universal-assets-plan.md",
+      "docs/version-audit-plan.md",
+      "docs/evidence/version-audit-20261104.md",
+      "docs/source-reimplementation-plan.md",
+      "docs/evidence/source-analysis-20261104.md",
+      "docs/evidence/menu-layout-20261104.md",
+      "docs/evidence/source-session-validation-20261104.md"
     ],
     "rendering": [
       "docs/rendering-policy.md",
       "docs/coordinate-policy.md",
-      ".agents/skills/integrate-game-art/SKILL.md"
+      ".agents/skills/integrate-game-art/SKILL.md",
+      "docs/port-observations-20261104.md",
+      "docs/universal-assets-plan.md",
+      "Resources/README.md",
+      "docs/evidence/menu-layout-20261104.md"
     ],
     "combat": [
       "docs/game-calculation-policy.md",
-      "docs/weapon-validation-procedure.md"
+      "docs/weapon-validation-procedure.md",
+      "docs/source-reimplementation-plan.md",
+      "docs/evidence/source-analysis-20261104.md",
+      "docs/evidence/source-session-validation-20261104.md"
     ],
     "lifecycle": [
       "docs/runtime-policy.md",
@@ -35,7 +51,12 @@
       "docs/validation-plan.md",
       ".agents/skills/apple-wireless-device/SKILL.md",
       "Compatibility/README.md",
-      "Compatibility/ios/project.yml"
+      "Compatibility/ios/project.yml",
+      "docs/compatibility-cheat-validation-plan.md",
+      "docs/source-reimplementation-plan.md",
+      "Apple/README.md",
+      "Modules/README.md",
+      "docs/evidence/source-session-validation-20261104.md"
     ],
     "android": [
       "docs/design.md",
@@ -46,7 +67,8 @@
     "writing": [
       "docs/report-site.md",
       ".agents/skills/write-project-text/SKILL.md",
-      ".agents/skills/present-game-artifacts/SKILL.md"
+      ".agents/skills/present-game-artifacts/SKILL.md",
+      "docs/editorial/machdefense-report.md"
     ],
     "repository": [
       "docs/repository-management.md",

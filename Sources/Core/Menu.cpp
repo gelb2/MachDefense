@@ -1,0 +1,233 @@
+#include "Menu.hpp"
+#include <algorithm>
+#include <cmath>
+#include <ctime>
+#include <limits>
+#include <stdexcept>
+
+namespace md {
+namespace {
+std::string readText(ResourceAccess& r,std::string_view path){auto b=r.read(path);return {b.begin(),b.end()};}
+Rect centered(Vec2 c,float w,float h){return {c.x-w*.5f,480-c.y-h*.5f,w,h};}
+std::uint32_t now(){return static_cast<std::uint32_t>(std::time(nullptr));}
+std::string date(std::uint32_t value){
+    const std::time_t t=value;const auto* tm=std::localtime(&t);char b[32]{};
+    if(tm)std::strftime(b,sizeof(b),"%Y/%m/%d %H:%M:%S",tm);return b;
+}
+}
+Menu::Menu(ResourceAccess& r,HostServices& h,SaveData& s,bool deferred):resources_(r),host_(h),save_(s),
+    font_(readText(r,"Generated/TrebuchetMS-Bold-48.tsv")),maps_(DataTable::parse(readText(r,"Tables/MapList.tsv"))){
+    deferredTransitions_=deferred;host_.playMusic("Intro.mp3");rebuild();
+}
+std::optional<Menu::Screen> Menu::takeScreenRequest(){auto value=requestedScreen_;requestedScreen_.reset();return value;}
+void Menu::applyScreen(Screen screen){
+    const bool managed=deferredTransitions_;deferredTransitions_=false;
+    if(screen==Screen::profiles)showProfiles();
+    else if(screen==Screen::missions)showMissions(slot_);
+    else {resetInput();screen_=Screen::title;host_.playMusic("Intro.mp3");titleTime_=0;titleVisible_=false;titleCycleSound_=false;rebuild();}
+    deferredTransitions_=managed;
+}
+void Menu::resetInput(){
+    for(auto& b:profiles_)b.reset();for(auto& b:stages_)b.reset();
+    for(auto& b:bottom_)b.reset();for(auto& b:dialogButtons_)b.reset();
+    dragId_.reset();velocity_=0;
+}
+void Menu::showProfiles(){
+    if(deferredTransitions_){requestedScreen_=Screen::profiles;return;}
+    resetInput();screen_=Screen::profiles;dialog_=Dialog::none;host_.playMusic("UI_BGM.mp3");
+    std::uint32_t newest=0;
+    for(std::size_t i=0;i<SaveData::slotCount;++i)if(save_.active(i)){
+        auto stamp=save_.readWord(SaveData::slotStart+i*SaveData::slotStride+4);
+        if(stamp>=newest){newest=stamp;slot_=i;}
+    }
+    rebuild();
+}
+void Menu::showMissions(std::size_t slot){
+    if(!save_.active(slot))throw std::invalid_argument("Cannot select an empty profile");
+    if(deferredTransitions_){slot_=slot;requestedScreen_=Screen::missions;return;}
+    resetInput();screen_=Screen::missions;dialog_=Dialog::none;slot_=slot;host_.playMusic("UI_BGM.mp3");
+    selectedMission_=std::min(save_.stage(slot),79u);cam_=float(selectedMission_)*32;baseY_=0;rebuild();
+}
+bool Menu::persist(){
+    const bool ok=host_.writeSave(save_.encode());if(!ok)dialog_=Dialog::saveFailed;return ok;
+}
+void Menu::selectProfile(std::size_t index){
+    const auto before=save_;save_.selectProfile(index,now());
+    if(!persist()){save_=before;return;}showMissions(index);
+}
+void Menu::newProfile(){
+    bool empty=false;for(std::size_t i=0;i<SaveData::slotCount;++i)empty|=!save_.active(i);
+    if(!empty){dialog_=Dialog::full;return;}
+    namePending_=true;
+    host_.requestName("",10,[this](std::optional<std::string> value){
+        namePending_=false;
+        if(!value){rebuild();return;}
+        if(value->empty()||value->size()>10||std::any_of(value->begin(),value->end(),[](unsigned char c){return c<32||c>126;})){
+            dialog_=Dialog::invalidName;rebuild();return;
+        }
+        const auto before=save_;const auto created=save_.createProfile(*value,now());
+        if(created){slot_=*created;if(!persist())save_=before;}
+        rebuild();
+    });
+}
+void Menu::beginMission(){
+    if(selectedMission_>save_.stage(slot_))return;
+    save_.writeWord(SaveData::slotStart+slot_*SaveData::slotStride+0x34,selectedMission_);
+    mission_=MissionRequest{slot_,selectedMission_};resetInput();
+}
+std::optional<MissionRequest> Menu::takeMissionRequest(){auto value=mission_;mission_.reset();return value;}
+void Menu::tick(){
+    if(screen_==Screen::title){
+        titleTime_+=.0166f;
+        const float phase=static_cast<float>(std::fmod(static_cast<double>(titleTime_),2.0));
+        if(phase<.2f){
+            if(!titleCycleSound_){host_.playSound("Title_TapToStart.wav");titleCycleSound_=true;}
+            if(titleRandom_.next()%10<=5)titleVisible_=(titleRandom_.next()&1)==0;
+        }else if(phase<1.2f)titleVisible_=true;
+        else if(titleCycleSound_){titleCycleSound_=false;titleVisible_=false;}
+    }
+    if(screen_==Screen::missions && dialog_==Dialog::none){
+        if(!dragId_){if(std::fabs(velocity_)>.1f)velocity_-=velocity_/10;else velocity_=0;cam_+=velocity_;}
+        const auto current=save_.stage(slot_);const float bottom=current<5?125:float(current)*32;
+        if(cam_<120)cam_=120-cam_>.1f?cam_+(120-cam_)/5:120;
+        if(cam_>bottom)cam_=cam_-bottom>.1f?cam_+(bottom-cam_)/5:bottom;
+        if(std::fabs(baseY_-cam_)>.1f)baseY_+=(cam_-baseY_)/5;else baseY_=cam_;
+    }
+    rebuild();
+}
+void Menu::sprite(std::string image,Vec2 center,float width,float height,unsigned tile,unsigned splitY){
+    const auto sz=resources_.imageSize(image);
+    Sprite s;s.image=std::move(image);s.sourcePx=Rect{0,float(tile)*sz.y/splitY,sz.x,sz.y/splitY};
+    s.destination=centered(center,width,height);frame_.sprites.push_back(std::move(s));
+}
+void Menu::text(std::string_view value,Vec2 center,float width,float height,float size,Color color,int align){
+    float x=center.x-width*.5f;if(align==1)x=center.x-font_.width(value,size)*.5f;
+    if(align==2)x=center.x+width*.5f-font_.width(value,size);
+    font_.draw(frame_,value,{x,480-center.y-height*.5f},size,color);
+}
+void Menu::number(std::string_view value,Vec2 position,bool right){
+    float x=position.x-(right?float(value.size()-1)*6:0);
+    for(unsigned char c:value){
+        int index=-1;if(c>='0'&&c<='9')index=c-'0';
+        else if(c==':')index=12;else if(c=='/')index=11;else if(c=='.')index=10;else if(c=='-')index=13;else if(c=='%')index=14;else if(c=='*')index=15;
+        if(index>=0){Sprite s;s.image="NumSet01b.png";s.sourcePx=Rect{float(index*8),0,8,8};
+            s.destination=centered({x,position.y},8,8);frame_.sprites.push_back(std::move(s));}
+        x+=6;
+    }
+}
+void Menu::bottom(unsigned index,std::string image,unsigned splitY){
+    auto& b=bottom_[index];b.bounds=centered({80+80*float(index),30},screen_==Screen::missions?80:64,screen_==Screen::missions?40:32);
+    sprite(std::move(image),{80+80*float(index),30},64,32,b.pressed()?1:0,splitY);
+}
+void Menu::drawDialog(){
+    Sprite shade;shade.destination={0,0,320,480};shade.color={0,0,0,.7f};frame_.sprites.push_back(shade);
+    sprite("MessageBox.png",{160,240},256,64);
+    const char* a="",*b="";
+    switch(dialog_){
+    case Dialog::deleteProfile:a="Delete this profile?";b="Saved progress will be removed.";break;
+    case Dialog::full:a="No empty profile slots.";b="Delete a profile to create another.";break;
+    case Dialog::saveFailed:a="Could not save progress.";b="Please try again.";break;
+    case Dialog::support:a="Support email is unavailable";b="in this build.";break;
+    case Dialog::invalidName:a="Incorrect name.";b="Enter 1 to 10 English characters.";break;
+    case Dialog::none:return;
+    }
+    text(a,{160,250},240,16,12,{},1);text(b,{160,230},240,16,10,{},1);
+    const bool confirm=dialog_==Dialog::deleteProfile;
+    dialogButtons_[0].bounds=centered({confirm?112.f:160.f,185},64,32);
+    sprite(confirm?"Common_Btn_YES.png":"Common_Btn_OK.png",{confirm?112.f:160.f,185},64,32,dialogButtons_[0].pressed()?1:0,confirm?2:4);
+    if(confirm){dialogButtons_[1].bounds=centered({208,185},64,32);sprite("Common_Btn_NO.png",{208,185},64,32,dialogButtons_[1].pressed()?1:0,2);}
+}
+void Menu::rebuild(){
+    frame_.sprites.clear();frame_.logicalWidth=320;frame_.logicalHeight=480;
+    if(screen_==Screen::title){
+        sprite("Title.jpg",{160,240},320,480);
+        if(titleVisible_)sprite("Main_TapToStart.png",{160,208},128,32);
+        return;
+    }
+    sprite("iPon_SelSlot_BG@2x.jpg",{160,240},320,480);
+    if(screen_==Screen::profiles){
+        for(std::size_t i=0;i<SaveData::slotCount;++i){
+            auto& b=profiles_[i];b.shown=save_.active(i);if(!b.shown)continue;
+            const float y=340-80*float(i);b.bounds=centered({160,y},256,60);
+            sprite("iPon_SelSlot_Sel@2x.png",{160,y},256,128,i==slot_||b.pressed()?0:1,2);
+            text(save_.name(i),{136,y+20},128,16,10,{0,0,0,1});text(save_.name(i),{136,y+21},128,16,10,{160.f/255,1,1,1});
+            const auto at=SaveData::slotStart+i*SaveData::slotStride;
+            text(std::to_string(save_.readWord(at+0x2054)),{200,y+20},128,16,9,{160.f/255,1,1,1},2);
+            // New profiles use the original English/us country image.
+            const auto bytes=save_.plaintext();std::string country;
+            for(std::size_t j=0;j<3&&bytes[at+0x30+j];++j)country+=char(bytes[at+0x30+j]);
+            if(country.empty())country="us";
+            sprite(country+".png",{60,y+23},16,16);
+            number(date(save_.readWord(at)),{70,y-2});number(date(save_.readWord(at+4)),{70,y-20});
+            number(std::to_string(save_.stage(i)+1),{234,y-1},true);number(std::to_string(save_.credits(i)),{248,y-21},true);
+        }
+        bottom(0,"Common_Btn_BACK.png");bottom(1,"Common_Btn_DEL.png");bottom(2,"Common_Btn_NEW.png");
+    }else{
+        const auto current=std::min(save_.stage(slot_),79u);const auto count=std::min(current+11,80u);
+        for(unsigned i=0;i<count;++i){
+            const float y=240+baseY_-32*float(i);stages_[i].bounds=centered({160,y},256,32);
+            stages_[i].shown=true;
+            sprite("SelStage_Btn_Stage.png",{160,y},256,32,i>current?2:stages_[i].pressed()?1:0,4);
+            text("Stage "+std::to_string(i+1),{150,y},128,21,16,i>current?Color{10.f/255,10.f/255,10.f/255,1}:Color{10.f/255,1,1,1});
+            const auto row=maps_.findRow(std::to_string(i+1));
+            if(row){const std::string map(maps_.value(*row,"ImageFile"));sprite("t"+map+"_01.png",{198,y},48,24);sprite("t"+map+"_02.png",{246,y},48,24);}
+            if(i<current)sprite("SelStage_CompleteMark.png",{320,y},64,16);
+        }
+        sprite("SelStage_Btn_Stage.png",{160,240+baseY_-32*float(selectedMission_)},256,32,3,4);
+        sprite("iPon_SelStage_Fore@2x.png",{160,240},320,480);
+        bottom(0,"Common_Btn_BACK.png");bottom(1,"Support.png");bottom(2,"Common_Btn_OK.png",4);
+    }
+    if(dialog_!=Dialog::none)drawDialog();
+}
+void Menu::touch(const Touch& t){
+    if(namePending_)return;
+    if(dialog_!=Dialog::none){
+        const auto count=dialog_==Dialog::deleteProfile?2u:1u;
+        for(unsigned i=0;i<count;++i)if(dialogButtons_[i].touch(t).action==ButtonAction::pop){
+            if(i==0&&dialog_==Dialog::deleteProfile){const auto before=save_;save_.deleteProfile(slot_);dialog_=Dialog::none;if(!persist())save_=before;}
+            else dialog_=Dialog::none;
+            for(auto& b:dialogButtons_)b.reset();rebuild();return;
+        }
+        rebuild();return;
+    }
+    if(screen_==Screen::title){if(t.phase==TouchPhase::ended){showProfiles();}return;}
+    for(unsigned i=0;i<3;++i){
+        const auto result=bottom_[i].touch(t);
+        if(result.action==ButtonAction::pop){
+            host_.playSound("UI_Btn_OK.wav");
+            if(screen_==Screen::profiles){
+                if(i==0){if(deferredTransitions_)requestedScreen_=Screen::title;else applyScreen(Screen::title);}
+                else if(i==1&&save_.active(slot_))dialog_=Dialog::deleteProfile;
+                else if(i==2)newProfile();
+            }else{
+                if(i==0)showProfiles();else if(i==1)dialog_=Dialog::support;else beginMission();
+            }
+            rebuild();return;
+        }
+        if(result.consumed){rebuild();return;}
+    }
+    if(screen_==Screen::profiles){
+        for(std::size_t i=0;i<SaveData::slotCount;++i)if(profiles_[i].touch(t).action==ButtonAction::push){
+            host_.playSound("UI_Click.wav");if(i==slot_)selectProfile(i);else slot_=i;break;
+        }
+    }else{
+        if(t.phase==TouchPhase::began){
+            const auto count=std::min(save_.stage(slot_)+11,80u);
+            for(unsigned i=0;i<count;++i)if(stages_[i].contains(t.position)){
+                dragId_=t.id;lastDragY_=t.position.y;velocity_=0;break;
+            }
+        }
+        if(dragId_&&*dragId_==t.id&&t.phase==TouchPhase::moved){
+            velocity_=lastDragY_-t.position.y;cam_+=velocity_;lastDragY_=t.position.y;
+        }
+        const auto count=std::min(save_.stage(slot_)+11,80u);
+        for(unsigned i=0;i<count;++i){const auto result=stages_[i].touch(t);
+            if(result.action==ButtonAction::pop&&i<=save_.stage(slot_)){
+                host_.playSound("UI_Btn_OK.wav");if(i==selectedMission_)beginMission();else selectedMission_=i;break;
+            }
+        }
+        if(dragId_&&*dragId_==t.id&&(t.phase==TouchPhase::ended||t.phase==TouchPhase::cancelled))dragId_.reset();
+    }
+    rebuild();
+}
+}

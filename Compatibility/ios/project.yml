@@ -6,12 +6,13 @@ targets:
   MachDefenseCompatibility:
     type: application
     platform: iOS
-    sources: [Stub]
+    sources: []
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.gelb2.machdefense.compatibility
         ARCHS: arm64
         PRODUCT_NAME: MachDefenseCompatibility
+        MD_DISPLAY_NAME: MachDefense Port
         DEVELOPMENT_TEAM: PDF8XXXYH9
         CODE_SIGN_STYLE: Automatic
         TARGETED_DEVICE_FAMILY: '1,2'
@@ -31,6 +32,40 @@ targets:
           "$SRCROOT/../build-runtime.sh" "$TARGET"
           python3 "$SRCROOT/../package-local.py" --xcode
         outputFiles:
+          - "$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)"
+          - "$(TARGET_BUILD_DIR)/$(WRAPPER_NAME)/MachDefense.ipa"
+          - "$(TARGET_BUILD_DIR)/$(WRAPPER_NAME)/MachDefense_options.txt"
+        basedOnDependencyAnalysis: false
+  MachDefenseCompatibilityCheat:
+    type: application
+    platform: iOS
+    sources: []
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.gelb2.machdefense.compatibility.cheat
+        ARCHS: arm64
+        PRODUCT_NAME: MachDefenseCompatibilityCheat
+        MD_DISPLAY_NAME: MachDefense Port Cheat
+        DEVELOPMENT_TEAM: PDF8XXXYH9
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: '1,2'
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: Info.plist
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
+        ENABLE_DEBUG_DYLIB: NO
+    postBuildScripts:
+      - name: Package local original MachDefense with compatibility runtime
+        script: |
+          set -eu
+          if [ "$PLATFORM_NAME" = "iphonesimulator" ]; then
+            TARGET=aarch64-apple-ios-sim
+          else
+            TARGET=aarch64-apple-ios
+          fi
+          "$SRCROOT/../build-runtime.sh" "$TARGET"
+          python3 "$SRCROOT/../package-local.py" --xcode
+        outputFiles:
+          - "$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)"
           - "$(TARGET_BUILD_DIR)/$(WRAPPER_NAME)/MachDefense.ipa"
           - "$(TARGET_BUILD_DIR)/$(WRAPPER_NAME)/MachDefense_options.txt"
         basedOnDependencyAnalysis: false

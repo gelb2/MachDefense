@@ -1,0 +1,12 @@
+MachName    	Rate
+Tanker      	100000
+ShotGun     	100000
+MissileTurret	100000
+HMG         	20000
+Vulcan      	5000
+//HeavyMissile	5000
+PlasmaGun    	500
+PlasmaCannon  	500
+IonRifle    	100
+IonCannon     	100
+//LaserTurret  	20

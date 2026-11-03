@@ -1,0 +1,31 @@
+Key         	Value
+NotEnoughCr 	Cr이 부족합니다.
+TapToAttackPos	공격할 지점을 탭 하십시오.
+TapToTurretPos	유닛을 설치할 지점을 탭하세요.
+NoMoreMach  	타겟 근처에 공격 가능한 매크가 없습니다.
+VisitIndiean	IndieApps 홈페이지를 방문하여|다른 게임들을 구경하시겠습니까?
+DeleteSlot  	슬롯을 삭제하면 해당 슬롯의 모든|게임데이터가 삭제됩니다.
+NotEmptySlot	슬롯은 최대 5개까지|만들 수 있습니다.|기존의 슬롯을 제거하고|새로운 슬롯을 만드십시오.
+IncorrectName	이름은 1~10글자로 입력해야합니다.
+KillCount   	파괴한 적 유닛
+DeadCount   	파괴된 아군 유닛
+// Mach Name
+MN_MachineGun	머신건
+MN_HMG      	헤비머신건
+MN_Missile  	미사일
+MN_HeavyMissile	헤비미사일
+MN_ShotGun  	샷건
+MN_PlasmaGun	플라즈마건
+MN_IonRifle 	이온라이플
+MN_RifleTurret	라이플터렛
+MN_MissileTurret	미사일터렛
+MN_Vulcan   	벌컨포
+MN_IonCannon	이온포
+MN_LaserTurret	레이저포
+MN_PlasmaCannon	플라즈마포
+MN_Tanker   	탱커
+// Stat Name
+Stat_Atk    	공격력
+Stat_Rng    	사거리
+Stat_Def    	방어력
+Stat_Spd    	기동력

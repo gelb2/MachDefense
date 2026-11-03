@@ -1,0 +1,805 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		037B882AE7B9E25237D4351F /* MDApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9427C033AD771D00358FBE88 /* MDApplication.mm */; };
+		047C0D4EE0AFF1CBF536CD59 /* libMachDefenseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F218510BA65B17C6C002E654 /* libMachDefenseCore.a */; };
+		0924C650DEF9A1B1165AE884 /* libMachDefenseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F218510BA65B17C6C002E654 /* libMachDefenseCore.a */; };
+		123F3C1FA231206C22B05A06 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D827A2E2456D8CC12C4008D8 /* QuartzCore.framework */; };
+		16CC7E3432B105F8BAE63DE6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DD597DF4483E412F63EE90 /* OpenGLES.framework */; };
+		18A1E71574CF42968A4263F3 /* MDAudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9419C46E340B52E601FAF22E /* MDAudio.mm */; };
+		1FAFBA75FDD273F9F3F7A5A2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D827A2E2456D8CC12C4008D8 /* QuartzCore.framework */; };
+		2109B01E14823CEA2483B009 /* MDRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5FA298F56C0D8B0FA51BCE3E /* MDRenderer.mm */; };
+		23AA6C37AB865C04CE6E3C43 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DD597DF4483E412F63EE90 /* OpenGLES.framework */; };
+		2A7B3CFBFABBDC2271FF5F30 /* AudioTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC7801542E24516598BD22E7 /* AudioTests.mm */; };
+		328EB314528359BA9012F6F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9FD548D9AB06589D082A84 /* CoreGraphics.framework */; };
+		397B696F7283E863183288ED /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 935C12677FC2026C703B1EDE /* ImageIO.framework */; };
+		3CDEF1012D93C6CCD4E155EB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85239814D3FC2F9DEBC13880 /* AVFoundation.framework */; };
+		4706FBE2DEE8985590B7F406 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9FD548D9AB06589D082A84 /* CoreGraphics.framework */; };
+		49CB690B359CC763AA3393AE /* MDApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9427C033AD771D00358FBE88 /* MDApplication.mm */; };
+		4DD286338F403E2F4F7FF7D4 /* MDRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5FA298F56C0D8B0FA51BCE3E /* MDRenderer.mm */; };
+		4E1FA5FD0EB1D362606B05A6 /* MachDefenseAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1AF5F39A1C4D173245FF503 /* MachDefenseAssets.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4E2D61915F3AF5F0CB5302B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1FC97C23E9FFD2DDDF94FC /* UIKit.framework */; };
+		56CB3623C984AE2D218E79AD /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD7AB66775B3B42B15E4CB6 /* OpenAL.framework */; };
+		586CFE0CC7A7C97CA801EDA7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD7AB66775B3B42B15E4CB6 /* OpenAL.framework */; };
+		59A01E474BDAFBA1D1D143E3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC02202F17311B7C70C39DE /* AudioToolbox.framework */; };
+		5E36EA5934345FF5585E3736 /* MDAudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9419C46E340B52E601FAF22E /* MDAudio.mm */; };
+		638F842D737E0851C8F595C8 /* libMachDefenseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F218510BA65B17C6C002E654 /* libMachDefenseCore.a */; };
+		6BF68F0B6AC57131F1EB5B0D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DD597DF4483E412F63EE90 /* OpenGLES.framework */; };
+		856CFD68D9A8124597204D4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1FC97C23E9FFD2DDDF94FC /* UIKit.framework */; };
+		9B6DE09A7D8C6DB5F9187FDA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC02202F17311B7C70C39DE /* AudioToolbox.framework */; };
+		AF50C7C777C0F7D087771833 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1FC97C23E9FFD2DDDF94FC /* UIKit.framework */; };
+		B27795A9D0E03194FF1DA64E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC02202F17311B7C70C39DE /* AudioToolbox.framework */; };
+		B5830815542B0BD21E49760B /* MenuRenderTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33FF06C42EA9A44B26B9CE2E /* MenuRenderTests.mm */; };
+		C5D8943C488DCA769D4B0EDD /* MachDefenseAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1AF5F39A1C4D173245FF503 /* MachDefenseAssets.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CEA8D9985CD860BE6584C503 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D827A2E2456D8CC12C4008D8 /* QuartzCore.framework */; };
+		D2BB831F958B7E19C5A9DF34 /* MachDefenseAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1AF5F39A1C4D173245FF503 /* MachDefenseAssets.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DFB99711FB0DD25B75F3EFF3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85239814D3FC2F9DEBC13880 /* AVFoundation.framework */; };
+		ED14EF70B3058E6CD1F40F94 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD7AB66775B3B42B15E4CB6 /* OpenAL.framework */; };
+		F065EC8AB2FD8C8A4AE0499A /* MDRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5FA298F56C0D8B0FA51BCE3E /* MDRenderer.mm */; };
+		FA15F9154647C3FA13FF0BB5 /* RendererTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7FF6004B3123526EAA94D577 /* RendererTests.mm */; };
+		FA5C5F02D9D683403BE89DC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9FD548D9AB06589D082A84 /* CoreGraphics.framework */; };
+		FD41E118DE2EB222AB4BAA37 /* MDAudio.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9419C46E340B52E601FAF22E /* MDAudio.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AD504A36F013B1A2738AF3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED0767664662932D121EFD3E /* MachDefenseModules */;
+			proxyType = 1;
+			remoteGlobalIDString = CB12357BA0860D2586EA95E8;
+			remoteInfo = MachDefenseCore;
+		};
+		255E659FCDC5B248ABFD305D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED0767664662932D121EFD3E /* MachDefenseModules */;
+			proxyType = 2;
+			remoteGlobalIDString = 21632D4DB375A00211A2A172;
+			remoteInfo = MachDefenseAssets;
+		};
+		7F6E6EC56BD31684B65B0E86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED0767664662932D121EFD3E /* MachDefenseModules */;
+			proxyType = 1;
+			remoteGlobalIDString = CB12357BA0860D2586EA95E8;
+			remoteInfo = MachDefenseCore;
+		};
+		98250EE64ACF44E539D05B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED0767664662932D121EFD3E /* MachDefenseModules */;
+			proxyType = 1;
+			remoteGlobalIDString = E4C0D0534D626C168CAEC7AA;
+			remoteInfo = MachDefenseAssets;
+		};
+		9D7B93FE632A843E92FEA01D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED0767664662932D121EFD3E /* MachDefenseModules */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B0F89A1D41C22FD7265F382;
+			remoteInfo = MachDefenseCore;
+		};
+		B9F50F8B6ECAD16FE1A12512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED0767664662932D121EFD3E /* MachDefenseModules */;
+			proxyType = 1;
+			remoteGlobalIDString = E4C0D0534D626C168CAEC7AA;
+			remoteInfo = MachDefenseAssets;
+		};
+		C60975B6EA0ECEEB218B4F62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED0767664662932D121EFD3E /* MachDefenseModules */;
+			proxyType = 1;
+			remoteGlobalIDString = CB12357BA0860D2586EA95E8;
+			remoteInfo = MachDefenseCore;
+		};
+		DEE71D433C7294804E66D427 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED0767664662932D121EFD3E /* MachDefenseModules */;
+			proxyType = 1;
+			remoteGlobalIDString = E4C0D0534D626C168CAEC7AA;
+			remoteInfo = MachDefenseAssets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1755641B355B470D3C6678C6 /* MachDefenseCheat.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MachDefenseCheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A9FD548D9AB06589D082A84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		33FF06C42EA9A44B26B9CE2E /* MenuRenderTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MenuRenderTests.mm; sourceTree = "<group>"; };
+		3DC02202F17311B7C70C39DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		427943AB691B489FE4A04936 /* MachDefenseRendererTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MachDefenseRendererTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4732A4117DABD41E700A18D9 /* MDAudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDAudio.h; sourceTree = "<group>"; };
+		5FA298F56C0D8B0FA51BCE3E /* MDRenderer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MDRenderer.mm; sourceTree = "<group>"; };
+		63989782F0FADF6F3355CAA2 /* MachDefense.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MachDefense.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FF6004B3123526EAA94D577 /* RendererTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RendererTests.mm; sourceTree = "<group>"; };
+		85239814D3FC2F9DEBC13880 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		935C12677FC2026C703B1EDE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		9419C46E340B52E601FAF22E /* MDAudio.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MDAudio.mm; sourceTree = "<group>"; };
+		9427C033AD771D00358FBE88 /* MDApplication.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MDApplication.mm; sourceTree = "<group>"; };
+		9CD7AB66775B3B42B15E4CB6 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		AD1FC97C23E9FFD2DDDF94FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C238FF42A55FF65918A5ED67 /* MDRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDRenderer.h; sourceTree = "<group>"; };
+		D827A2E2456D8CC12C4008D8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E2DD597DF4483E412F63EE90 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		EC7801542E24516598BD22E7 /* AudioTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioTests.mm; sourceTree = "<group>"; };
+		ED0767664662932D121EFD3E /* MachDefenseModules */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MachDefenseModules; path = ../../Modules/MachDefenseModules.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCAAB81071DEB1155CD338C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF50C7C777C0F7D087771833 /* UIKit.framework in Frameworks */,
+				CEA8D9985CD860BE6584C503 /* QuartzCore.framework in Frameworks */,
+				4706FBE2DEE8985590B7F406 /* CoreGraphics.framework in Frameworks */,
+				23AA6C37AB865C04CE6E3C43 /* OpenGLES.framework in Frameworks */,
+				397B696F7283E863183288ED /* ImageIO.framework in Frameworks */,
+				638F842D737E0851C8F595C8 /* libMachDefenseCore.a in Frameworks */,
+				586CFE0CC7A7C97CA801EDA7 /* OpenAL.framework in Frameworks */,
+				59A01E474BDAFBA1D1D143E3 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1F335196C073E96CE76DD98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047C0D4EE0AFF1CBF536CD59 /* libMachDefenseCore.a in Frameworks */,
+				856CFD68D9A8124597204D4E /* UIKit.framework in Frameworks */,
+				1FAFBA75FDD273F9F3F7A5A2 /* QuartzCore.framework in Frameworks */,
+				FA5C5F02D9D683403BE89DC1 /* CoreGraphics.framework in Frameworks */,
+				6BF68F0B6AC57131F1EB5B0D /* OpenGLES.framework in Frameworks */,
+				56CB3623C984AE2D218E79AD /* OpenAL.framework in Frameworks */,
+				9B6DE09A7D8C6DB5F9187FDA /* AudioToolbox.framework in Frameworks */,
+				3CDEF1012D93C6CCD4E155EB /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E295075F41FFFA9D793D323A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0924C650DEF9A1B1165AE884 /* libMachDefenseCore.a in Frameworks */,
+				4E2D61915F3AF5F0CB5302B7 /* UIKit.framework in Frameworks */,
+				123F3C1FA231206C22B05A06 /* QuartzCore.framework in Frameworks */,
+				328EB314528359BA9012F6F3 /* CoreGraphics.framework in Frameworks */,
+				16CC7E3432B105F8BAE63DE6 /* OpenGLES.framework in Frameworks */,
+				ED14EF70B3058E6CD1F40F94 /* OpenAL.framework in Frameworks */,
+				B27795A9D0E03194FF1DA64E /* AudioToolbox.framework in Frameworks */,
+				DFB99711FB0DD25B75F3EFF3 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4284068E6014AC9BB71B2667 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				ED0767664662932D121EFD3E /* MachDefenseModules */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		4B0953B8B2FF3388C57615D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F218510BA65B17C6C002E654 /* libMachDefenseCore.a */,
+				D1AF5F39A1C4D173245FF503 /* MachDefenseAssets.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B116E4CB0E72CDFD9AF900F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63989782F0FADF6F3355CAA2 /* MachDefense.app */,
+				1755641B355B470D3C6678C6 /* MachDefenseCheat.app */,
+				427943AB691B489FE4A04936 /* MachDefenseRendererTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51F260BEE4BA0AF291D98B28 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EC7801542E24516598BD22E7 /* AudioTests.mm */,
+				33FF06C42EA9A44B26B9CE2E /* MenuRenderTests.mm */,
+				7FF6004B3123526EAA94D577 /* RendererTests.mm */,
+			);
+			name = Tests;
+			path = ../Tests;
+			sourceTree = "<group>";
+		};
+		563EB91718DB26578BC39E46 = {
+			isa = PBXGroup;
+			children = (
+				94D1674EFAA596B53F1F28B6 /* Apple */,
+				51F260BEE4BA0AF291D98B28 /* Tests */,
+				8FB8801D6D047E0DDC5F9C94 /* Frameworks */,
+				4B116E4CB0E72CDFD9AF900F /* Products */,
+				4284068E6014AC9BB71B2667 /* Projects */,
+			);
+			sourceTree = "<group>";
+		};
+		8FB8801D6D047E0DDC5F9C94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DC02202F17311B7C70C39DE /* AudioToolbox.framework */,
+				85239814D3FC2F9DEBC13880 /* AVFoundation.framework */,
+				2A9FD548D9AB06589D082A84 /* CoreGraphics.framework */,
+				935C12677FC2026C703B1EDE /* ImageIO.framework */,
+				9CD7AB66775B3B42B15E4CB6 /* OpenAL.framework */,
+				E2DD597DF4483E412F63EE90 /* OpenGLES.framework */,
+				D827A2E2456D8CC12C4008D8 /* QuartzCore.framework */,
+				AD1FC97C23E9FFD2DDDF94FC /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94D1674EFAA596B53F1F28B6 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				9427C033AD771D00358FBE88 /* MDApplication.mm */,
+				4732A4117DABD41E700A18D9 /* MDAudio.h */,
+				9419C46E340B52E601FAF22E /* MDAudio.mm */,
+				C238FF42A55FF65918A5ED67 /* MDRenderer.h */,
+				5FA298F56C0D8B0FA51BCE3E /* MDRenderer.mm */,
+			);
+			name = Apple;
+			path = ../../Sources/Platform/Apple;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E2C9562DE48484149C4956B /* MachDefenseCheat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF576BBD06EE136BD4751C5D /* Build configuration list for PBXNativeTarget "MachDefenseCheat" */;
+			buildPhases = (
+				C0182BEC2DA8F06F09F303B5 /* Sources */,
+				C15914C733BFB60E2618A57A /* Resources */,
+				D1F335196C073E96CE76DD98 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94893A158FAC5F0821428DE7 /* PBXTargetDependency */,
+				9B17027550DFC1A554BEE393 /* PBXTargetDependency */,
+			);
+			name = MachDefenseCheat;
+			packageProductDependencies = (
+			);
+			productName = MachDefenseCheat;
+			productReference = 1755641B355B470D3C6678C6 /* MachDefenseCheat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A21C8C1D20E9DDFE9BC7AD03 /* MachDefenseRendererTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05B32DC5C1275EF04D0B8F94 /* Build configuration list for PBXNativeTarget "MachDefenseRendererTests" */;
+			buildPhases = (
+				72A8729E607DE64EA5DD14F6 /* Sources */,
+				67F23FEC9A4BC5BCEFBEB6CE /* Resources */,
+				CCAAB81071DEB1155CD338C8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCC87B6E5B936ECD7604A462 /* PBXTargetDependency */,
+				D6821E073B091C1587369DDC /* PBXTargetDependency */,
+			);
+			name = MachDefenseRendererTests;
+			packageProductDependencies = (
+			);
+			productName = MachDefenseRendererTests;
+			productReference = 427943AB691B489FE4A04936 /* MachDefenseRendererTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BBC35B37629E35C409848BD9 /* MachDefense */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D911AC845EE84835F8854019 /* Build configuration list for PBXNativeTarget "MachDefense" */;
+			buildPhases = (
+				5B05357E88BFF1FB32CFC071 /* Sources */,
+				D179CAA97E7A5AB984E5049B /* Resources */,
+				E295075F41FFFA9D793D323A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42AC6947E5E880A493865EF8 /* PBXTargetDependency */,
+				854E01DDA72D1508C33E97F8 /* PBXTargetDependency */,
+			);
+			name = MachDefense;
+			packageProductDependencies = (
+			);
+			productName = MachDefense;
+			productReference = 63989782F0FADF6F3355CAA2 /* MachDefense.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A80067C41774863C875BD5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0E2C9562DE48484149C4956B = {
+						ProvisioningStyle = Automatic;
+					};
+					A21C8C1D20E9DDFE9BC7AD03 = {
+						ProvisioningStyle = Automatic;
+					};
+					BBC35B37629E35C409848BD9 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7FED2C3C9E837CD2B8D771C8 /* Build configuration list for PBXProject "MachDefense" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 563EB91718DB26578BC39E46;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4B116E4CB0E72CDFD9AF900F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4B0953B8B2FF3388C57615D7 /* Products */;
+					ProjectRef = ED0767664662932D121EFD3E /* MachDefenseModules */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				BBC35B37629E35C409848BD9 /* MachDefense */,
+				0E2C9562DE48484149C4956B /* MachDefenseCheat */,
+				A21C8C1D20E9DDFE9BC7AD03 /* MachDefenseRendererTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D1AF5F39A1C4D173245FF503 /* MachDefenseAssets.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MachDefenseAssets.bundle;
+			remoteRef = 255E659FCDC5B248ABFD305D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F218510BA65B17C6C002E654 /* libMachDefenseCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMachDefenseCore.a;
+			remoteRef = 9D7B93FE632A843E92FEA01D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67F23FEC9A4BC5BCEFBEB6CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2BB831F958B7E19C5A9DF34 /* MachDefenseAssets.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C15914C733BFB60E2618A57A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E1FA5FD0EB1D362606B05A6 /* MachDefenseAssets.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D179CAA97E7A5AB984E5049B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5D8943C488DCA769D4B0EDD /* MachDefenseAssets.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B05357E88BFF1FB32CFC071 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037B882AE7B9E25237D4351F /* MDApplication.mm in Sources */,
+				18A1E71574CF42968A4263F3 /* MDAudio.mm in Sources */,
+				4DD286338F403E2F4F7FF7D4 /* MDRenderer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72A8729E607DE64EA5DD14F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A7B3CFBFABBDC2271FF5F30 /* AudioTests.mm in Sources */,
+				5E36EA5934345FF5585E3736 /* MDAudio.mm in Sources */,
+				2109B01E14823CEA2483B009 /* MDRenderer.mm in Sources */,
+				B5830815542B0BD21E49760B /* MenuRenderTests.mm in Sources */,
+				FA15F9154647C3FA13FF0BB5 /* RendererTests.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0182BEC2DA8F06F09F303B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49CB690B359CC763AA3393AE /* MDApplication.mm in Sources */,
+				FD41E118DE2EB222AB4BAA37 /* MDAudio.mm in Sources */,
+				F065EC8AB2FD8C8A4AE0499A /* MDRenderer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42AC6947E5E880A493865EF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MachDefenseCore;
+			targetProxy = 0AD504A36F013B1A2738AF3B /* PBXContainerItemProxy */;
+		};
+		854E01DDA72D1508C33E97F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MachDefenseAssets;
+			targetProxy = B9F50F8B6ECAD16FE1A12512 /* PBXContainerItemProxy */;
+		};
+		94893A158FAC5F0821428DE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MachDefenseCore;
+			targetProxy = 7F6E6EC56BD31684B65B0E86 /* PBXContainerItemProxy */;
+		};
+		9B17027550DFC1A554BEE393 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MachDefenseAssets;
+			targetProxy = DEE71D433C7294804E66D427 /* PBXContainerItemProxy */;
+		};
+		D6821E073B091C1587369DDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MachDefenseAssets;
+			targetProxy = 98250EE64ACF44E539D05B5A /* PBXContainerItemProxy */;
+		};
+		DCC87B6E5B936ECD7604A462 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MachDefenseCore;
+			targetProxy = C60975B6EA0ECEEB218B4F62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09AF5EE667FB11737BECB0CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelb2.machdefense.renderertests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0AEE72446806F74138ECB371 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelb2.machdefense.renderertests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1807C01A64C78D8DDD1E96CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(inherited)",
+					"-ffp-contract=off",
+					"-fno-fast-math",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		354A9D2D728F4A03E5805B0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"MD_VALIDATION=0",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelb2.machdefense.source;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D1937589EFF6B491D43831E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"MD_VALIDATION=1",
+				);
+				INFOPLIST_FILE = "Cheat-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelb2.machdefense.source.cheat;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7A22FA02D8C6B71DDEFBA5CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(inherited)",
+					"-ffp-contract=off",
+					"-fno-fast-math",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8E8E6733B756A66D3C893F36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"MD_VALIDATION=0",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelb2.machdefense.source;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E29C32D70BF4EF26E336CF23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"MD_VALIDATION=1",
+				);
+				INFOPLIST_FILE = "Cheat-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gelb2.machdefense.source.cheat;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05B32DC5C1275EF04D0B8F94 /* Build configuration list for PBXNativeTarget "MachDefenseRendererTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AEE72446806F74138ECB371 /* Debug */,
+				09AF5EE667FB11737BECB0CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7FED2C3C9E837CD2B8D771C8 /* Build configuration list for PBXProject "MachDefense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1807C01A64C78D8DDD1E96CA /* Debug */,
+				7A22FA02D8C6B71DDEFBA5CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BF576BBD06EE136BD4751C5D /* Build configuration list for PBXNativeTarget "MachDefenseCheat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E29C32D70BF4EF26E336CF23 /* Debug */,
+				4D1937589EFF6B491D43831E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D911AC845EE84835F8854019 /* Build configuration list for PBXNativeTarget "MachDefense" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354A9D2D728F4A03E5805B0E /* Debug */,
+				8E8E6733B756A66D3C893F36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A80067C41774863C875BD5D /* Project object */;
+}

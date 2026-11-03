@@ -40,43 +40,6 @@
      &frameworks::media_player::DYLIB,
      &frameworks::message_ui::DYLIB,
      &frameworks::openal::DYLIB,
---- /dev/null
-+++ b/src/frameworks/iad.rs
-@@ -0,0 +1,34 @@
-+/* This Source Code Form is subject to the terms of the Mozilla Public
-+ * License, v. 2.0. https://mozilla.org/MPL/2.0/ */
-+//! Offline iAd banner compatibility. No ad requests or successful-ad callbacks.
-+use crate::objc::{id, msg, msg_super, nil, objc_classes, ClassExports};
-+
-+pub const DYLIB: crate::dyld::HostDylib = crate::dyld::HostDylib {
-+    path: "/System/Library/Frameworks/iAd.framework/iAd",
-+    aliases: &[], class_exports: &[CLASSES], constant_exports: &[], function_exports: &[],
-+};
-+
-+const CLASSES: ClassExports = objc_classes! {
-+(env, this, _cmd);
-+@implementation ADBannerView: UIView
-+- (id)initWithCoder:(id)coder {
-+    let this: id = msg_super![env; this initWithCoder:coder];
-+    () = msg![env; this setHidden:true];
-+    this
-+}
-+- (())setDelegate:(id)delegate {
-+    env.framework_state.iad_delegates.insert(this, delegate);
-+}
-+- (id)delegate {
-+    env.framework_state.iad_delegates.get(&this).copied().unwrap_or(nil)
-+}
-+- (bool)isBannerLoaded { false }
-+- (bool)bannerLoaded { false }
-+- (bool)isBannerViewActionInProgress { false }
-+- (())cancelBannerViewAction {}
-+- (())dealloc {
-+    env.framework_state.iad_delegates.remove(&this);
-+    msg_super![env; this dealloc]
-+}
-+@end
-+};
 --- a/src/libc/stdlib.rs
 +++ b/src/libc/stdlib.rs
 @@ -22,7 +22,7 @@
@@ -182,26 +145,65 @@
      Ok(unarchiver)
 --- a/src/frameworks/uikit/ui_view/ui_alert_view.rs
 +++ b/src/frameworks/uikit/ui_view/ui_alert_view.rs
-@@ -107,6 +107,7 @@
+@@ -107,6 +107,11 @@
      container: id,
      /// 按钮命中区(逻辑坐标 x, y, 宽, 高)与按钮索引。
      buttons: Vec<(CGFloat, CGFloat, CGFloat, CGFloat, NSInteger)>,
 +    fields: Vec<(CGRect, id)>,
++    panel_art: id,
++    initial_origin: CGPoint,
++    panel_offset: CGPoint,
++    keyboard_rect: Option<[f32; 4]>,
      /// 没有任何按钮的框:点任意处按索引 0 关闭(见 [present] 注释)。
      tap_anywhere: bool,
      /// guest 屏幕坐标 → 覆盖层逻辑坐标的换算参数。
-@@ -531,6 +532,10 @@
+@@ -531,6 +536,13 @@
          }
      };
      if let Some(overlay) = overlay {
 +        for (_, field) in &overlay.fields {
 +            let _: bool = msg![env; (*field) resignFirstResponder];
 +        }
++        if overlay.panel_art != nil {
++            () = msg![env; (overlay.panel_art) removeFromSuperview];
++        }
 +        () = msg![env; alert removeFromSuperview];
          let container = overlay.container;
          () = msg![env; container removeFromSuperview];
          release(env, container);
-@@ -660,6 +665,7 @@
+@@ -565,6 +577,31 @@
+ 
+ /// [扫描修 2026-09-15] 由 uikit::handle_events 每轮运行循环调用:队首弹框还没挂上就挂到 keyWindow。
+ pub fn pump(env: &mut Environment) {
++    // Custom alert subclasses may move the panel when editing begins. Keep
++    // its artwork, guest fields and touch rectangles in the same coordinates.
++    let moving = env.framework_state.uikit.ui_alert_view.overlay.as_ref()
++        .filter(|o| o.panel_art != nil).map(|o| (o.alert, o.initial_origin));
++    if let Some((alert, origin)) = moving {
++        let frame: CGRect = msg![env; alert frame];
++        let mut keyboard_area = None;
++        if let Some(overlay) = env.framework_state.uikit.ui_alert_view.overlay.as_mut() {
++            overlay.panel_offset = CGPoint { x: frame.origin.x - origin.x, y: frame.origin.y - origin.y };
++            let rect = [frame.origin.x, frame.origin.y, frame.size.width, frame.size.height];
++            if crate::window::mole_text_input_active() {
++                if overlay.keyboard_rect != Some(rect) {
++                    overlay.keyboard_rect = Some(rect);
++                    keyboard_area = Some((rect, [overlay.map.logical_w, overlay.map.logical_h]));
++                }
++            } else {
++                overlay.keyboard_rect = None;
++            }
++        }
++        if let Some((rect, size)) = keyboard_area {
++            env.on_parent_stack_in_coroutine(move |window, _| {
++                window.set_alert_text_input_rect(rect, size);
++            });
++        }
++    }
+     let front = {
+         let state = &env.framework_state.uikit.ui_alert_view;
+         if state.overlay.is_some() {
+@@ -660,6 +697,7 @@
      {
          state.capture = None;
      }
@@ -209,10 +211,11 @@
      let (alert, chosen) = {
          let Some(overlay) = state.overlay.as_ref() else {
              return Some(map);
-@@ -671,6 +677,13 @@
+@@ -671,6 +709,14 @@
                  continue;
              }
              let (lx, ly) = overlay.map.guest_to_logical(x, y);
++            let (lx, ly) = (lx - overlay.panel_offset.x, ly - overlay.panel_offset.y);
 +            for (frame, field) in &overlay.fields {
 +                if lx >= frame.origin.x && ly >= frame.origin.y
 +                    && lx <= frame.origin.x + frame.size.width
@@ -223,7 +226,7 @@
              let pressed = hit_button(overlay, lx, ly, DOWN_SLOP);
              let better = match chosen {
                  None => true,
-@@ -690,6 +703,9 @@
+@@ -690,6 +736,9 @@
              finger,
              pressed,
          });
@@ -233,7 +236,15 @@
      }
      None
  }
-@@ -937,6 +953,16 @@
+@@ -738,6 +787,7 @@
+                             Some(0)
+                         } else {
+                             let (lx, ly) = overlay.map.guest_to_logical(x, y);
++                            let (lx, ly) = (lx - overlay.panel_offset.x, ly - overlay.panel_offset.y);
+                             capture
+                                 .pressed
+                                 .filter(|&down| button_contains(overlay, down, lx, ly, UP_SLOP))
+@@ -937,6 +987,16 @@
          )
      };
  
@@ -250,7 +261,7 @@
      let box_w = BOX_W.min(w - 40.0);
      let text_w = box_w - 2.0 * PAD;
      let max_message_h = (h - 260.0).max(80.0);
-@@ -987,7 +1013,8 @@
+@@ -987,7 +1047,8 @@
              content_h += part_h;
          }
      }
@@ -260,14 +271,60 @@
      let box_x = ((w - box_w) / 2.0).floor();
      let box_y = ((h - box_h) / 2.0).floor().max(10.0);
  
-@@ -1045,6 +1072,20 @@
+@@ -997,15 +1058,27 @@
+     let dim = color(env, 0.0, 0.0, 0.0, 0.45);
+     () = msg![env; container setBackgroundColor:dim];
+ 
++    let art = if custom_frames.is_empty() {
++        container
++    } else {
++        () = msg![env; alert setFrame:(rect(box_x, box_y, box_w, box_h))];
++        () = msg![env; container addSubview:alert];
++        let view: id = msg_class![env; UIView alloc];
++        let view: id = msg![env; view initWithFrame:(rect(-box_x, -box_y, w, h))];
++        () = msg![env; alert insertSubview:view atIndex:0i32];
++        release(env, view);
++        view
++    };
++
+     let border = color(env, 0.85, 0.88, 0.95, 0.9);
+     add_plain_view(
+         env,
+-        container,
++        art,
+         rect(box_x - 2.0, box_y - 2.0, box_w + 4.0, box_h + 4.0),
+         border,
+     );
+     let panel = color(env, 0.07, 0.12, 0.29, 0.96);
+-    add_plain_view(env, container, rect(box_x, box_y, box_w, box_h), panel);
++    add_plain_view(env, art, rect(box_x, box_y, box_w, box_h), panel);
+ 
+     let white = color(env, 1.0, 1.0, 1.0, 1.0);
+     let soft_white = color(env, 0.9, 0.93, 1.0, 1.0);
+@@ -1016,7 +1089,7 @@
+     if title_h > 0.0 {
+         add_text_label(
+             env,
+-            container,
++            art,
+             rect(box_x + PAD, y, text_w, title_h),
+             title,
+             title_font,
+@@ -1033,7 +1106,7 @@
+         }
+         add_text_label(
+             env,
+-            container,
++            art,
+             rect(box_x + PAD, y, text_w, message_h),
+             message,
+             message_font,
+@@ -1045,6 +1118,18 @@
          placed_any = true;
      }
  
 +    let mut fields = Vec::new();
 +    if !custom_frames.is_empty() {
-+        () = msg![env; alert setFrame:(rect(box_x, box_y, box_w, box_h))];
-+        () = msg![env; container addSubview:alert];
 +        let field_class = env.objc.get_known_class("UITextField", &mut env.mem);
 +        for (frame, view) in custom_frames {
 +            let is_field: bool = msg![env; view isKindOfClass:field_class];
@@ -281,11 +338,33 @@
      let mut hits: Vec<(CGFloat, CGFloat, CGFloat, CGFloat, NSInteger)> = Vec::new();
      if n > 0 {
          if placed_any {
-@@ -1119,6 +1160,7 @@
+@@ -1068,7 +1153,7 @@
+             let mode = line_break_mode_for(env, button_title);
+             add_text_label(
+                 env,
+-                container,
++                art,
+                 rect(bx, by, bw, BTN_H),
+                 button_title,
+                 button_font,
+@@ -1086,7 +1171,7 @@
+         let hint = ns_string::get_static_str(env, "(点击任意处关闭)");
+         add_text_label(
+             env,
+-            container,
++            art,
+             rect(box_x + PAD, y, text_w, hint_h),
+             hint,
+             message_font,
+@@ -1119,6 +1204,11 @@
          alert,
          container,
          buttons: hits,
 +        fields,
++        panel_art: if art == container { nil } else { art },
++        initial_origin: CGPoint { x: box_x, y: box_y },
++        panel_offset: CGPoint { x: 0.0, y: 0.0 },
++        keyboard_rect: None,
          tap_anywhere,
          map,
      });
@@ -403,7 +482,32 @@
  
 --- a/src/window.rs
 +++ b/src/window.rs
-@@ -3337,25 +3337,25 @@
+@@ -3288,6 +3288,24 @@
+         }
+     }
+ 
++    /// Keep an alert's complete editable area above the host software keyboard.
++    /// SDL expects window points, while guest overlays use logical game points.
++    pub fn set_alert_text_input_rect(&self, rect: [f32; 4], size: [f32; 2]) {
++        assert!(self.on_main_stack);
++        let (vx, vy, vw, vh) = self.viewport();
++        let (dw, dh) = self.window.drawable_size();
++        let (ww, wh) = self.window.size();
++        let sx = ww as f32 / dw as f32;
++        let sy = wh as f32 / dh as f32;
++        let host = sdl2_sys::SDL_Rect {
++            x: ((vx as f32 + rect[0] / size[0] * vw as f32) * sx).floor() as i32,
++            y: ((vy as f32 + rect[1] / size[1] * vh as f32) * sy).floor() as i32,
++            w: (rect[2] / size[0] * vw as f32 * sx).ceil() as i32,
++            h: ((rect[3] + 8.0) / size[1] * vh as f32 * sy).ceil() as i32,
++        };
++        unsafe { sdl2_sys::SDL_SetTextInputRect(&host); }
++    }
++
+     pub fn start_text_input(&self) {
+         assert!(self.on_main_stack);
+         // [MoleWorld] 标记文本输入激活:让物理 T 键在编辑时当普通字符(见 poll_for_events)。
+@@ -3337,25 +3355,25 @@
          messagebox::ButtonData {
              flags: messagebox::MessageBoxButtonFlag::NOTHING,
              button_id: 0,
@@ -435,3 +539,166 @@
          window.map(|win| &win.window),
          None,
      ) else {
+--- a/src/libc/stdio/printf.rs
++++ b/src/libc/stdio/printf.rs
+@@ -30,6 +30,22 @@
+ 
+ const INTEGER_SPECIFIERS: [u8; 6] = *b"diouxX";
+ const FLOAT_SPECIFIERS: [u8; 3] = *b"feg";
++
++/// Decimal formatting shared by printf and NSString. A positive sign is part
++/// of the field width; integer precision disables zero field padding.
++fn format_decimal(value: i64, signed: bool, plus: bool, precision: Option<usize>, width: usize, zero: bool) -> String {
++    let sign = if signed && value < 0 { "-" } else if signed && plus { "+" } else { "" };
++    let mut digits = if value == 0 && precision == Some(0) { String::new() } else { value.unsigned_abs().to_string() };
++    if let Some(p) = precision {
++        if p > digits.len() { digits = "0".repeat(p - digits.len()) + &digits; }
++    }
++    let padding = width.saturating_sub(sign.len() + digits.len());
++    if zero && precision.is_none() {
++        format!("{}{}{}", sign, "0".repeat(padding), digits)
++    } else {
++        format!("{}{}{}", " ".repeat(padding), sign, digits)
++    }
++}
+ 
+ /// String formatting implementation for `printf` and `NSLog` function families.
+ ///
+@@ -293,34 +309,10 @@
+                     int.into()
+                 };
+ 
+-                let int_with_precision = if precision.is_some_and(|value| value > 0) {
+-                    format!("{:01$}", int, precision.unwrap())
+-                } else {
+-                    format!("{int}")
+-                };
+-
+-                if pad_width > 0 {
+-                    let pad_width = pad_width as usize;
+-                    if pad_char == '0' && precision.is_none() {
+-                        if prepend_sign {
+-                            assert!(int != 0); // TODO
+-                            assert!(pad_width > 0);
+-                            if int > 0 {
+-                                write!(&mut res, "+{:0>1$}", int, pad_width - 1).unwrap();
+-                            } else {
+-                                write!(&mut res, "-{:0>1$}", int.abs(), pad_width - 1).unwrap();
+-                            }
+-                        } else {
+-                            write!(&mut res, "{int:0>pad_width$}").unwrap();
+-                        }
+-                    } else {
+-                        assert!(!prepend_sign);
+-                        write!(&mut res, "{int_with_precision:>pad_width$}").unwrap();
+-                    }
+-                } else {
+-                    assert!(!prepend_sign);
+-                    res.extend_from_slice(int_with_precision.as_bytes());
+-                }
++                res.extend_from_slice(format_decimal(
++                    int, specifier != b'u', prepend_sign, precision,
++                    pad_width as usize, pad_char == '0',
++                ).as_bytes());
+             }
+             b'@' if NS_LOG => {
+                 assert!(!prepend_sign);
+--- /dev/null
++++ b/src/frameworks/iad.rs
+@@ -0,0 +1,34 @@
++/* This Source Code Form is subject to the terms of the Mozilla Public
++ * License, v. 2.0. https://mozilla.org/MPL/2.0/ */
++//! Offline iAd banner compatibility. No ad requests or successful-ad callbacks.
++use crate::objc::{id, msg, msg_super, nil, objc_classes, ClassExports};
++
++pub const DYLIB: crate::dyld::HostDylib = crate::dyld::HostDylib {
++    path: "/System/Library/Frameworks/iAd.framework/iAd",
++    aliases: &[], class_exports: &[CLASSES], constant_exports: &[], function_exports: &[],
++};
++
++const CLASSES: ClassExports = objc_classes! {
++(env, this, _cmd);
++@implementation ADBannerView: UIView
++- (id)initWithCoder:(id)coder {
++    let this: id = msg_super![env; this initWithCoder:coder];
++    () = msg![env; this setHidden:true];
++    this
++}
++- (())setDelegate:(id)delegate {
++    env.framework_state.iad_delegates.insert(this, delegate);
++}
++- (id)delegate {
++    env.framework_state.iad_delegates.get(&this).copied().unwrap_or(nil)
++}
++- (bool)isBannerLoaded { false }
++- (bool)bannerLoaded { false }
++- (bool)isBannerViewActionInProgress { false }
++- (())cancelBannerViewAction {}
++- (())dealloc {
++    env.framework_state.iad_delegates.remove(&this);
++    msg_super![env; this dealloc]
++}
++@end
++};
+--- a/vendor/SDL/src/video/uikit/SDL_uikitviewcontroller.m
++++ b/vendor/SDL/src/video/uikit/SDL_uikitviewcontroller.m
+@@ -380,7 +380,9 @@
+ 
+ - (void)keyboardWillHide:(NSNotification *)notification
+ {
+-    if (!showingKeyboard && !rotatingOrientation) {
++    /* A hardware keyboard can hide the software keyboard without ending
++     * editing. Keep SDL text events enabled while our field owns focus. */
++    if (!showingKeyboard && !rotatingOrientation && !textField.isFirstResponder) {
+         SDL_StopTextInput();
+     }
+     [self setKeyboardHeight:0];
+--- a/vendor/rust-sdl2/sdl2-sys/build.rs
++++ b/vendor/rust-sdl2/sdl2-sys/build.rs
+@@ -531,6 +531,7 @@
+     let target_os = get_os_from_triple(target.as_str()).unwrap();
+ 
+     let sdl2_source_path = PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap()).join("../../SDL");
++    println!("cargo:rerun-if-changed={}", sdl2_source_path.join("src/video/uikit/SDL_uikitviewcontroller.m").display());
+ 
+     let sdl2_compiled_path: PathBuf;
+     #[cfg(feature = "bundled")]
+--- a/src/frameworks/core_animation/ca_display_link.rs
++++ b/src/frameworks/core_animation/ca_display_link.rs
+@@ -64,8 +64,10 @@
+ 
+ - (())setFrameInterval:(NSInteger)frameInterval {
+     log_dbg!("[(CADisplayLink*){:?} setFrameInterval:{}]", this, frameInterval);
+-    assert!(frameInterval >= 1);
+-    let interval = frameInterval as f64 / 60.0;
++    // MachDefense (WeMade 1.0.3) supplies zero in startAnimation.
++    // A native iOS simulator probe maps both zero and negative values to one,
++    // including when the previous interval was two. Match that normalization.
++    let interval = frameInterval.max(1) as f64 / 60.0;
+     let ns_timer = env.objc.borrow::<CADisplayLinkHostObject>(this).ns_timer;
+     set_time_interval(env, ns_timer, interval);
+ }
+--- a/src/objc/messages.rs
++++ b/src/objc/messages.rs
+@@ -418,6 +418,21 @@
+     }
+ 
+     let orig_class = super2.unwrap_or_else(|| ObjC::read_isa(receiver, &env.mem));
++    // MachDefense's WeMade release adds its own download/display banner object.
++    // No-ad policy: leave normal object allocation/lifetime intact, but never
++    // start its request, advance/display its banner, or open the ad destination.
++    // This is deliberately limited to this guest bundle and class; networking
++    // and invalid receivers elsewhere keep their normal behavior.
++    if env.objc.try_get_class_name(orig_class) == Some("GuiBanner")
++        && env.bundle.bundle_identifier() == "com.wemadeent.HeavyMachDefence"
++        && matches!(selector.as_str(&env.mem), "initgb" | "tick" | "ClickBanner" | "onTap:State:ID:")
++    {
++        if first_compat_warning("machdefense-no-ads", "GuiBanner", selector.as_str(&env.mem)) {
++            log!("MachDefense no-ad policy: GuiBanner {} suppressed", selector.as_str(&env.mem));
++        }
++        env.cpu.regs_mut()[0..2].fill(0);
++        return;
++    }
+     // MoleWorld offline port: a non-nil receiver can still have a nil isa/class
+     // when it isn't a real object — e.g. the analytics/ad SDKs use the result of
+     // a no-op'd function (CFArrayCreate/Sec*/ASIdentifierManager return 0/nil) as

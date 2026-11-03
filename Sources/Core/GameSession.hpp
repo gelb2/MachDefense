@@ -1,0 +1,19 @@
+#pragma once
+#include "Game.hpp"
+namespace md {
+class World;
+class GameSession final:public Game {
+public:
+    GameSession(ResourceAccess&,HostServices&,bool validation);
+    ~GameSession()override;
+    const Frame& frame()const override;
+    void tick()override;
+    void touch(const Touch&)override;
+    void setActive(bool)override;
+    void resize(float,float)override;
+    int preferredFramesPerSecond()const override{return 60;}
+    World* validationWorld();
+private:
+    struct State;std::unique_ptr<State> state_;
+};
+}
