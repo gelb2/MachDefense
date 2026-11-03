@@ -1,0 +1,311 @@
+{
+  "source_repository": "gelb2/HeavyMach",
+  "source_commit": "e73a77399a2bdff76f4a5a9383fb199abaa5b17d",
+  "files": [
+    {
+      "source": ".agents/skills/apple-wireless-device/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/apple-wireless-device/SKILL.md",
+      "sha256": "8061471b27bf8d9e3f493c72c2a1170b1f5732d36e2a26d6eed3eb0e490a7d96"
+    },
+    {
+      "source": ".agents/skills/debug-heavymach-android/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/debug-heavymach-android/SKILL.md",
+      "sha256": "ab4de80934f217d5f07243ce67e1862fb19a7f3ef51477450f959393edd60772"
+    },
+    {
+      "source": ".agents/skills/engineering-browser/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/engineering-browser/SKILL.md",
+      "sha256": "5297f908548e0584fd35916b1e348d516c10ce563aa3295c714fdebd881718ca"
+    },
+    {
+      "source": ".agents/skills/engineering-debug/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/engineering-debug/SKILL.md",
+      "sha256": "db6d47e58d5b04681a61090a88487cb8c685becd927a16de011861fcc8e6d3e7"
+    },
+    {
+      "source": ".agents/skills/engineering-debug/references/LICENSE",
+      "destination": "docs/reference/heavymach1/skills/engineering-debug/references/LICENSE",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
+    },
+    {
+      "source": ".agents/skills/engineering-debug/references/upstream.md",
+      "destination": "docs/reference/heavymach1/skills/engineering-debug/references/upstream.md",
+      "sha256": "21f3960f5d7ae2cc95c40896545004dbbcbbd752ea65fc2d53962554d4174220"
+    },
+    {
+      "source": ".agents/skills/engineering-review/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/engineering-review/SKILL.md",
+      "sha256": "2174d179a84ec900d52e1754d9d4721fe7b4e403713938a13df6c510f4c504c8"
+    },
+    {
+      "source": ".agents/skills/engineering-review/references/LICENSE",
+      "destination": "docs/reference/heavymach1/skills/engineering-review/references/LICENSE",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
+    },
+    {
+      "source": ".agents/skills/engineering-review/references/upstream.md",
+      "destination": "docs/reference/heavymach1/skills/engineering-review/references/upstream.md",
+      "sha256": "2db1e850379f255fd3091ef278cde24cd6c7d2ba23e360cc52ea522c40d4396e"
+    },
+    {
+      "source": ".agents/skills/engineering-test/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/engineering-test/SKILL.md",
+      "sha256": "db15dd3771fda9e7e59ee1345471b7d63f86f07c2c5fb3a229c3f2b024561423"
+    },
+    {
+      "source": ".agents/skills/engineering-test/references/LICENSE",
+      "destination": "docs/reference/heavymach1/skills/engineering-test/references/LICENSE",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
+    },
+    {
+      "source": ".agents/skills/engineering-test/references/upstream.md",
+      "destination": "docs/reference/heavymach1/skills/engineering-test/references/upstream.md",
+      "sha256": "7c0c6ac057c19d7f8be65d9f49c3a638703b868f4625c78b70da5439d5d74fca"
+    },
+    {
+      "source": ".agents/skills/game-keyboard-input/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/game-keyboard-input/SKILL.md",
+      "sha256": "5446d907a42a1bf272975104ff33bfc71ed89e7e21c2f5083f857f1f6b4ca45d"
+    },
+    {
+      "source": ".agents/skills/integrate-game-art/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/integrate-game-art/SKILL.md",
+      "sha256": "060e5c555918039b18caed96652260388f04bf6baa148424cd3a2b779863f7f2"
+    },
+    {
+      "source": ".agents/skills/integrate-game-art/references/unity-original.md",
+      "destination": "docs/reference/heavymach1/skills/integrate-game-art/references/unity-original.md",
+      "sha256": "8f3b1a8b938aaf2f6fee83cfa71c85c28341f08ac74259c292f5255d66483d19"
+    },
+    {
+      "source": ".agents/skills/port-heavymach-android/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/port-heavymach-android/SKILL.md",
+      "sha256": "1f2078a541cafd7b1f8995ebdb7addf4f53490bcf4b26e5ac7a1818414ebfb70"
+    },
+    {
+      "source": ".agents/skills/port-heavymach-android/agents/openai.yaml",
+      "destination": "docs/reference/heavymach1/skills/port-heavymach-android/agents/openai.yaml",
+      "sha256": "25d0ceaaf3b30e0451f6e4ac3ea8d4b58c4e0831a584d6404adcdf1b0f0a0b6b"
+    },
+    {
+      "source": ".agents/skills/present-game-artifacts/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/present-game-artifacts/SKILL.md",
+      "sha256": "98353c8b8cdc3fb6499bcdb9238c30e3f2c4e4df6ff4df482a59b12b2204b02c"
+    },
+    {
+      "source": ".agents/skills/present-game-artifacts/agents/openai.yaml",
+      "destination": "docs/reference/heavymach1/skills/present-game-artifacts/agents/openai.yaml",
+      "sha256": "aef4074ee64cdb46f49004327cdada817ed2467af7ee44967b7bd40c95005a9b"
+    },
+    {
+      "source": ".agents/skills/write-project-text/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/SKILL.md",
+      "sha256": "de99134aa1c929e81eebe434e561b585e3b0276e4e557dfae770f9af07c16cdc"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/source-manifest.json",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/source-manifest.json",
+      "sha256": "acb9a2b5d3582f35c16b7799a53b34d327e5a3bc0bc40219fcb10e08d704f686"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/candidate-editorial-rules.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/candidate-editorial-rules.md",
+      "sha256": "1fba3fc1f22c6b952e70f84057975b2bcc06efd420577f31e418c032cc5b2c76"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/present-candidate-review/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/present-candidate-review/SKILL.md",
+      "sha256": "c56905a19a56e572699b21a31523553696b92812e9c5ecd24dd0db818ffac7f2"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/present-candidate-review/agents/openai.yaml",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/present-candidate-review/agents/openai.yaml",
+      "sha256": "a0e1ec7def8b7d41862db0628b6bc92e197e361ca91c3adbcb6e746f49d2252a"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/present-candidate-review/references/materials.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/present-candidate-review/references/materials.md",
+      "sha256": "44c746d4bcaa3ea4369a64856882d5aa89afd7ac71c776e0925d0f947cfbc4a9"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/sass-application-writing.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/sass-application-writing.md",
+      "sha256": "fa34c468fb7869cf5a9c12251c2849ab7372349bf401ad490da908d35a78771e"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/sass-applications/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/sass-applications/SKILL.md",
+      "sha256": "e81514c9c8805b104f07e338ea5de10ec1b980ea049dc05cdadbbca08332fcd4"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/sass-authoring-workflows.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/sass-authoring-workflows.md",
+      "sha256": "d191a6c72a7cf12e7b23d05a363186f87d795736ca6198ee9a74c1ae8cd6e722"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/sass-content/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/sass-content/SKILL.md",
+      "sha256": "d18cba3532092899e79bcdf48498b5d88ffe2e645669b400e208bdc985b47b64"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/sass-content-authoring-canon.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/sass-content-authoring-canon.md",
+      "sha256": "0b45c89db38f7c1c621212710de924ffdbfb1ed1220dfdbbadcce5f1bb089a0a"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/sass-proposal-authoring-canon.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/sass-proposal-authoring-canon.md",
+      "sha256": "35ce8471032461e7346e10f98b69cba87897fc00854fabacf69924e2df67605e"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/sass-review-materials.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/sass-review-materials.md",
+      "sha256": "66e6ff081972a4459fd69e172eca8277f798d5f17990f4880bb1d42ed6aeed7c"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/sass-review-publication/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/sass-review-publication/SKILL.md",
+      "sha256": "4c3db2e438a50847f74662d899ec168c79835c7a82d71e13d9de7a1e82f3bde7"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/write-candidate-report/SKILL.md",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/write-candidate-report/SKILL.md",
+      "sha256": "2e07e21d7b8a4a4257ccdb3a891c290ea7a21ae6b6a47e5f0fe12f373ed3008f"
+    },
+    {
+      "source": ".agents/skills/write-project-text/references/upstream/write-candidate-report/agents/openai.yaml",
+      "destination": "docs/reference/heavymach1/skills/write-project-text/references/upstream/write-candidate-report/agents/openai.yaml",
+      "sha256": "bdf0f811f0cd75de12eef9f44a3e564b944e818bcffcbd633cd63b8b6620b5ad"
+    },
+    {
+      "source": "docs/document-governance.md",
+      "destination": "docs/reference/heavymach1/policies/document-governance.md",
+      "sha256": "83ec04b98bbc2c2c87e462336c03b797d2c4d5f42718becf77421a631f23066a"
+    },
+    {
+      "source": "docs/restoration-contract.md",
+      "destination": "docs/reference/heavymach1/policies/restoration-contract.md",
+      "sha256": "332227a7d741f91f416e1bf7072886537c56d3f9dc98ef8297c4c4c16c1a3912"
+    },
+    {
+      "source": "docs/coordinate-policy.md",
+      "destination": "docs/reference/heavymach1/policies/coordinate-policy.md",
+      "sha256": "ff03f095e8a978c1297dc96e428ee94b07b7c92f51fd59fd017d4afd658f6d01"
+    },
+    {
+      "source": "docs/rendering-policy.md",
+      "destination": "docs/reference/heavymach1/policies/rendering-policy.md",
+      "sha256": "d43d28c3b93f7efe3618dcea7e8c680032b2f81b0aaefe3869a8bd6abc141d6d"
+    },
+    {
+      "source": "docs/game-calculation-policy.md",
+      "destination": "docs/reference/heavymach1/policies/game-calculation-policy.md",
+      "sha256": "03cc6a3247e9871e41652601def0aea5b8281732f28fcc754941a100dade8ecf"
+    },
+    {
+      "source": "docs/runtime-policy.md",
+      "destination": "docs/reference/heavymach1/policies/runtime-policy.md",
+      "sha256": "dddb57113fffd016b89d8ac901d428a28528ba1cc93cf87bf137ebae6020e482"
+    },
+    {
+      "source": "docs/weapon-validation-procedure.md",
+      "destination": "docs/reference/heavymach1/policies/weapon-validation-procedure.md",
+      "sha256": "fd765b7aef8382c3e6f948825ac896b47e9fa97bcd9d355475b49bc4a94039f6"
+    },
+    {
+      "source": "docs/stage-transition-contract.md",
+      "destination": "docs/reference/heavymach1/policies/stage-transition-contract.md",
+      "sha256": "4c6c233e958a839ae25576343d36a8d6a61d536e20baec3527716e8c37d3f8ba"
+    },
+    {
+      "source": "docs/apple-platforms.md",
+      "destination": "docs/reference/heavymach1/policies/apple-platforms.md",
+      "sha256": "feb8dc9c44316a7d1b5e170e7702e6ff7e301305f3998fb9ae13b45a2d968060"
+    },
+    {
+      "source": "docs/wireless-device-workflow.md",
+      "destination": "docs/reference/heavymach1/policies/wireless-device-workflow.md",
+      "sha256": "4befe865e81066fec3030c5f1f99c672b3577f7e210ac6fc13ee9491e7ade33f"
+    },
+    {
+      "source": "docs/keyboard-input-policy.md",
+      "destination": "docs/reference/heavymach1/policies/keyboard-input-policy.md",
+      "sha256": "a2da96111cd38c5ff9b953af76b9ff8107d894ac429be0b28795ec7e66abf936"
+    },
+    {
+      "source": "docs/android-port-plan-20261026.md",
+      "destination": "docs/reference/heavymach1/policies/android-port-plan-20261026.md",
+      "sha256": "2b905437e0021bf69ccc7692b326e25f8ac1e51c2e91bf59a4bff5111f9d1359"
+    },
+    {
+      "source": "docs/web-port-20261028.md",
+      "destination": "docs/reference/heavymach1/policies/web-port-20261028.md",
+      "sha256": "e6f11116afb92f763de729f717aa892956508199a2c91aa65c0c7568d524a1c1"
+    },
+    {
+      "source": "docs/desktop-web-plan-20261031.md",
+      "destination": "docs/reference/heavymach1/policies/desktop-web-plan-20261031.md",
+      "sha256": "2521f32a0cc94d5e11d2ffd5e95eea725ac37e04f881dfcfa76f441af279e02b"
+    },
+    {
+      "source": "docs/repository-management.md",
+      "destination": "docs/reference/heavymach1/policies/repository-management.md",
+      "sha256": "16dd2d1b3f15cadf80f044f02627ef91d593fb6f27167ccc9307ba922b8e01fc"
+    },
+    {
+      "source": "docs/series-restoration-handoff.md",
+      "destination": "docs/reference/heavymach1/policies/series-restoration-handoff.md",
+      "sha256": "2bbc9507c8abd470641845da86850f571d696ec8ec66f98d3e17bd41da358623"
+    },
+    {
+      "source": "docs/public/rea-restoration-method-20261025.md",
+      "destination": "docs/reference/heavymach1/policies/public/rea-restoration-method-20261025.md",
+      "sha256": "10c2bc275c0a029ab4cdb1e8740fef60d8bb8c0cea1cbfd1a6d2b99c5b125885"
+    },
+    {
+      "source": "docs/public/ipa-port-and-native-app-20261026.md",
+      "destination": "docs/reference/heavymach1/policies/public/ipa-port-and-native-app-20261026.md",
+      "sha256": "28d678423171bc0e4704baa86aea09d2d6058326b82219c48b30818f6e277fbb"
+    },
+    {
+      "source": "docs/ui-implementation-audit.md",
+      "destination": "docs/reference/heavymach1/policies/ui-implementation-audit.md",
+      "sha256": "d8302857591bf6c581c883206ab5b969af6bf39ddda9af5a770c47be68b88716"
+    },
+    {
+      "source": "/Users/sokol/.agents/skills/reverse-engineer-anything/SKILL.md",
+      "destination": ".agents/skills/reverse-engineer-anything/SKILL.md",
+      "sha256": "fbcd39d6abe803cf7aa49c1880815bc8e22ba2af87a23681944f687bb7629eb1"
+    },
+    {
+      "source": "/Users/sokol/.agents/skills/reverse-engineer-anything/references/javascript-applications.md",
+      "destination": ".agents/skills/reverse-engineer-anything/references/javascript-applications.md",
+      "sha256": "aaa78502a3e95268f6269e75f373908045291fedf6ddd106001555ed06bb2bf6"
+    },
+    {
+      "source": "/Users/sokol/.agents/skills/reverse-engineer-anything/references/runtime-observation.md",
+      "destination": ".agents/skills/reverse-engineer-anything/references/runtime-observation.md",
+      "sha256": "fea85e2005a8fd1c86a946eeede24c20e57592a1deb36576b45216e9854803c8"
+    },
+    {
+      "source": "/Users/sokol/.agents/skills/reverse-engineer-anything/references/native-and-artifacts.md",
+      "destination": ".agents/skills/reverse-engineer-anything/references/native-and-artifacts.md",
+      "sha256": "18b8828aec6476be03ca92bdb9506c47cc9ef8c1415c37d33e4af2f8c55cf8f9"
+    },
+    {
+      "source": "/Users/sokol/.agents/skills/reverse-engineer-anything/references/evidence-workflows.md",
+      "destination": ".agents/skills/reverse-engineer-anything/references/evidence-workflows.md",
+      "sha256": "2bdee98a843d018cf850c706111bb74c459ba8640da00799e9208122e4d5ab80"
+    },
+    {
+      "source": "/Users/sokol/.agents/skills/reverse-engineer-anything/references/connection-and-recovery.md",
+      "destination": ".agents/skills/reverse-engineer-anything/references/connection-and-recovery.md",
+      "sha256": "a33760c84ae100f6ffd27d666e515956c5014ac33a6ee2414807833ae666a2b1"
+    },
+    {
+      "source": "/Users/sokol/.agents/skills/reverse-engineer-anything/references/android-applications.md",
+      "destination": ".agents/skills/reverse-engineer-anything/references/android-applications.md",
+      "sha256": "67a9237d76a5b736640c6404f5e1fe01d83369848142feb7e11d78f4a5e62732"
+    }
+  ]
+}

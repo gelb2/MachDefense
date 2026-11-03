@@ -1,0 +1,525 @@
+{
+  "source": "https://archive.org/details/heavy-mach-archive_202406",
+  "verified_catalog_date": "2026-10-30",
+  "files": [
+    {
+      "name": "Game IPAs/Heavy MACH: Assault/HM Assault v1.0.3 (com.wemadeent.HeavyMachAssault).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20MACH%3A%20Assault/HM%20Assault%20v1.0.3%20%28com.wemadeent.HeavyMachAssault%29.ipa",
+      "bytes": 36209210,
+      "archive_sha1": "e5f00bdad987771d08ee4067c36f0ba64906a127",
+      "sha1": "e5f00bdad987771d08ee4067c36f0ba64906a127",
+      "sha256": "d9dc48eb38cffbecd8896b4ce53a803a87d4ffbba135844644b6bdd136dd2cf9",
+      "zip_crc": "passed",
+      "members": 813,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach.app/Info.plist",
+          "CFBundleIdentifier": "com.wemadeent.HeavyMachAssault",
+          "CFBundleDisplayName": "HM:Assault",
+          "CFBundleName": "HM:Assault",
+          "CFBundleVersion": "1.0.3",
+          "CFBundleShortVersionString": "1.0.3",
+          "CFBundleExecutable": "HeavyMach",
+          "MinimumOSVersion": "4.3",
+          "UIDeviceFamily": [
+            1
+          ],
+          "UISupportedInterfaceOrientations": [],
+          "DTPlatformVersion": "5.0",
+          "DTSDKName": "iphoneos5.0",
+          "executable_sha256": "4f60403b4b7e2a4b3c0b5ddaac268bff2d4fc6b2397c54ea2bde3ae6cadfa006",
+          "executable_bytes": 326848
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy MACH: Assault/com.wemadeent.HeavyMachAssault-iOS4.3-(Clutch-2.0.4).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20MACH%3A%20Assault/com.wemadeent.HeavyMachAssault-iOS4.3-%28Clutch-2.0.4%29.ipa",
+      "bytes": 35162328,
+      "archive_sha1": "437a1879e3c02e78dc3534abf6d237e0a35556fa",
+      "sha1": "437a1879e3c02e78dc3534abf6d237e0a35556fa",
+      "sha256": "71368f0167061e629deb2db2d7a53b7338e03239740caa2e5771a9ac77fb00a8",
+      "zip_crc": "passed",
+      "members": 808,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach.app/Info.plist",
+          "CFBundleIdentifier": "com.wemadeent.HeavyMachAssault",
+          "CFBundleDisplayName": "HM:Assault",
+          "CFBundleName": "HM:Assault",
+          "CFBundleVersion": "1.0.3",
+          "CFBundleShortVersionString": "1.0.3",
+          "CFBundleExecutable": "HeavyMach",
+          "MinimumOSVersion": "4.3",
+          "UIDeviceFamily": [
+            1
+          ],
+          "UISupportedInterfaceOrientations": [],
+          "DTPlatformVersion": "5.0",
+          "DTSDKName": "iphoneos5.0",
+          "executable_sha256": "37827b677f739c48a55b6d4c5362f61fccbe92bf713727e9f0526e4eff779762",
+          "executable_bytes": 326848
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy MACH: Defense/MachDefense v1.0.3 - (com.wemadeent.HeavyMachDefence).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20MACH%3A%20Defense/MachDefense%20v1.0.3%20-%20%28com.wemadeent.HeavyMachDefence%29.ipa",
+      "bytes": 62512014,
+      "archive_sha1": "1e22f0c772cb5ec23525dd34ca5157c733d502bc",
+      "sha1": "1e22f0c772cb5ec23525dd34ca5157c733d502bc",
+      "sha256": "882fe8efa9a0c3d51c23da190ee3d30376a1b6766e16cc6b87daf09b98dc92b1",
+      "zip_crc": "passed",
+      "members": 1296,
+      "apps": [
+        {
+          "plist_path": "Payload/MachDefense.app/Info.plist",
+          "CFBundleIdentifier": "com.wemadeent.HeavyMachDefence",
+          "CFBundleDisplayName": "HM:Defense",
+          "CFBundleName": "HM:Defense",
+          "CFBundleVersion": "1.0.3",
+          "CFBundleShortVersionString": "1.0.3",
+          "CFBundleExecutable": "MachDefense",
+          "MinimumOSVersion": "4.3",
+          "UIDeviceFamily": [
+            1,
+            2
+          ],
+          "UISupportedInterfaceOrientations": [
+            "UIInterfaceOrientationPortrait",
+            "UIInterfaceOrientationPortraitUpsideDown"
+          ],
+          "DTPlatformVersion": "5.0",
+          "DTSDKName": "iphoneos5.0",
+          "executable_sha256": "6ec47ea094abaa31bab10058fe47bb25d46c6038b2e88a7da2629899f84af112",
+          "executable_bytes": 475648
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach 2/Heavy Mach 2 HD/HeavyMach2HD v1.0.0 - (kr.indieapps.HvM2HD).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach%202/Heavy%20Mach%202%20HD/HeavyMach2HD%20v1.0.0%20-%20%28kr.indieapps.HvM2HD%29.ipa",
+      "bytes": 84574273,
+      "archive_sha1": "9f6885133185013858900b64df99c7c1a97183bf",
+      "sha1": "9f6885133185013858900b64df99c7c1a97183bf",
+      "sha256": "31ebed81043fe9a7c5ab25a7adaf13eaa3629f885bce18c3793f5d78f571cc56",
+      "zip_crc": "passed",
+      "members": 1925,
+      "apps": [
+        {
+          "plist_path": "Payload/HM2HD.app/Info.plist",
+          "CFBundleIdentifier": "kr.indieapps.HvM2HD",
+          "CFBundleDisplayName": "HM2 HD",
+          "CFBundleName": "HM2HD",
+          "CFBundleVersion": "1.0.0",
+          "CFBundleExecutable": "HM2HD",
+          "MinimumOSVersion": "3.2",
+          "UIDeviceFamily": [
+            2
+          ],
+          "DTPlatformVersion": "4.0 GM",
+          "DTSDKName": "iphoneos3.2",
+          "executable_sha256": "ff9db936a0fd54f58df1b8a5333a08c897efe87772029f17f06df9e45d28de9f",
+          "executable_bytes": 3345200
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach 2/Heavy Mach 2 HD/HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach%202/Heavy%20Mach%202%20HD/HeavyMach2HD%20v1.0.3%20-%20%28kr.indieapps.HvM2HD%29.ipa",
+      "bytes": 69171560,
+      "archive_sha1": "472bbd0acbe632fe60ffc312c9f2fa5bad6b96b2",
+      "sha1": "472bbd0acbe632fe60ffc312c9f2fa5bad6b96b2",
+      "sha256": "7eeb36590b3c19a28741e21671379029d9023864ceb241a5b8560eef045112d2",
+      "zip_crc": "passed",
+      "members": 1488,
+      "apps": [
+        {
+          "plist_path": "Payload/HM2HD.app/Info.plist",
+          "CFBundleIdentifier": "kr.indieapps.HvM2HD",
+          "CFBundleDisplayName": "HM2 HD",
+          "CFBundleName": "HM2HD",
+          "CFBundleVersion": "1.0.3",
+          "CFBundleExecutable": "HM2HD",
+          "MinimumOSVersion": "3.2",
+          "UIDeviceFamily": [
+            2
+          ],
+          "DTPlatformVersion": "4.3",
+          "DTSDKName": "iphoneos4.3",
+          "executable_sha256": "5feb7ae5f796cdfee5d650037923d338ce7b28de7f600c8548a7a5bbf7ef5090",
+          "executable_bytes": 414720
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach 2/Heavy Mach 2/HeavyMach2 v1.0.0 - (kr.indieapps.HeavyMach2).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach%202/Heavy%20Mach%202/HeavyMach2%20v1.0.0%20-%20%28kr.indieapps.HeavyMach2%29.ipa",
+      "bytes": 46597712,
+      "archive_sha1": "20460b44aa66315a225bb9dd766379c06a80ec7d",
+      "sha1": "20460b44aa66315a225bb9dd766379c06a80ec7d",
+      "sha256": "695df77db78b46dd6a42c58c923df4a3737f9637a96433c82650fb66a0e9ff60",
+      "zip_crc": "passed",
+      "members": 1397,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach2.app/Info.plist",
+          "CFBundleIdentifier": "kr.indieapps.HeavyMach2",
+          "CFBundleDisplayName": "HeavyMach2",
+          "CFBundleName": "HeavyMach2",
+          "CFBundleVersion": "1.0",
+          "CFBundleExecutable": "HeavyMach2",
+          "MinimumOSVersion": "3.1.2",
+          "DTSDKName": "iphoneos3.1.2",
+          "executable_sha256": "288d40343c3638ae7e2076f12319eeb4042e936953d237c169a78e3a2d151705",
+          "executable_bytes": 646000
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach 2/Heavy Mach 2/HeavyMach2 v1.1.0 - (com.indiean.HeavyMach2).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach%202/Heavy%20Mach%202/HeavyMach2%20v1.1.0%20-%20%28com.indiean.HeavyMach2%29.ipa",
+      "bytes": 46638849,
+      "archive_sha1": "2971c47671bd5237b3411c73a104c69c1df8ae2e",
+      "sha1": "2971c47671bd5237b3411c73a104c69c1df8ae2e",
+      "sha256": "4223a877fae11da54b8cc7239ecb6ee22fc0bff53743a5e84abba53d18b9d251",
+      "zip_crc": "passed",
+      "members": 1403,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach2.app/Info.plist",
+          "CFBundleIdentifier": "kr.indieapps.HeavyMach2",
+          "CFBundleDisplayName": "HeavyMach2",
+          "CFBundleName": "HeavyMach2",
+          "CFBundleVersion": "1.1",
+          "CFBundleExecutable": "HeavyMach2",
+          "MinimumOSVersion": "3.1.2",
+          "DTSDKName": "iphoneos3.1.2",
+          "executable_sha256": "75cce15a00443a6e87e33fa3778aa9c65298c59605d2e90d77a36287af3beb24",
+          "executable_bytes": 652176
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach 2/Heavy Mach 2/HeavyMach2 v1.3.0 - (com.indiean.HeavyMach2).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach%202/Heavy%20Mach%202/HeavyMach2%20v1.3.0%20-%20%28com.indiean.HeavyMach2%29.ipa",
+      "bytes": 52987116,
+      "archive_sha1": "d7b1f17ef1a72e55b7ade6fd0ab5f6a17872900d",
+      "sha1": "d7b1f17ef1a72e55b7ade6fd0ab5f6a17872900d",
+      "sha256": "c446bab6bb022abc704ce0bad41e8b18e74cec2cec19861dcc630c53d1b1b56b",
+      "zip_crc": "passed",
+      "members": 1418,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach2.app/Info.plist",
+          "CFBundleIdentifier": "kr.indieapps.HeavyMach2",
+          "CFBundleDisplayName": "HeavyMach2",
+          "CFBundleName": "HeavyMach2",
+          "CFBundleVersion": "1.3",
+          "CFBundleExecutable": "HeavyMach2",
+          "MinimumOSVersion": "3.1.2",
+          "DTSDKName": "iphoneos3.1.2",
+          "executable_sha256": "183570673665a8a6fc945b343d84f43e1210c4b9c7423b12ef4a187f1fbefa6d",
+          "executable_bytes": 652752
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach 2/Heavy Mach 2/HeavyMach2 v2.0.1 - (com.indiean.HeavyMach2).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach%202/Heavy%20Mach%202/HeavyMach2%20v2.0.1%20-%20%28com.indiean.HeavyMach2%29.ipa",
+      "bytes": 55854756,
+      "archive_sha1": "849da2eeef19807f2ab1f4e3111cd92e782a478f",
+      "sha1": "849da2eeef19807f2ab1f4e3111cd92e782a478f",
+      "sha256": "23ff9c74c7d890cc6f28952b4845f6c616bae4bb7207a393f80ed9ed76062d32",
+      "zip_crc": "passed",
+      "members": 1506,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach2.app/Info.plist",
+          "CFBundleIdentifier": "kr.indieapps.HeavyMach2",
+          "CFBundleDisplayName": "HeavyMach2",
+          "CFBundleName": "HeavyMach2",
+          "CFBundleVersion": "2.0.1",
+          "CFBundleShortVersionString": "2.0.1",
+          "CFBundleExecutable": "HeavyMach2",
+          "MinimumOSVersion": "3.1",
+          "UIDeviceFamily": [
+            1
+          ],
+          "UISupportedInterfaceOrientations": [
+            "UIInterfaceOrientationLandscapeRight",
+            "UIInterfaceOrientationLandscapeLeft"
+          ],
+          "DTPlatformVersion": "4.3",
+          "DTSDKName": "iphoneos4.3",
+          "executable_sha256": "0b8873d69d3e99d592855f636f7eacbd56119273f84e9286e027c56d7530d786",
+          "executable_bytes": 1024912
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach/HeavyMach v1.10 - (com.indiean.HeavyMach).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach/HeavyMach%20v1.10%20-%20%28com.indiean.HeavyMach%29.ipa",
+      "bytes": 20750867,
+      "archive_sha1": "0dc777158cd22521b92b0137b621851d67d2dba7",
+      "sha1": "0dc777158cd22521b92b0137b621851d67d2dba7",
+      "sha256": "7121eedc9a3729edc16f89f16e5b596234f9154b27ae041bff593e479e2739fd",
+      "zip_crc": "passed",
+      "members": 636,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach.app/Info.plist",
+          "CFBundleIdentifier": "com.indiean.HeavyMach",
+          "CFBundleDisplayName": "HeavyMach",
+          "CFBundleName": "HeavyMach",
+          "CFBundleVersion": "1.10",
+          "CFBundleExecutable": "HeavyMach",
+          "MinimumOSVersion": "2.1",
+          "DTSDKName": "iphoneos2.1",
+          "executable_sha256": "d7927187ae7e663e68b2a9cca2d73639a001d1ba7b75a51254eec13443bbb1d6",
+          "executable_bytes": 308144
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach/HeavyMach v1.11 - (com.indiean.HeavyMach).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach/HeavyMach%20v1.11%20-%20%28com.indiean.HeavyMach%29.ipa",
+      "bytes": 20810431,
+      "archive_sha1": "28d04780bd39a1520df6ac2930a240e7cd3c221b",
+      "sha1": "28d04780bd39a1520df6ac2930a240e7cd3c221b",
+      "sha256": "f254ee2716c8a704a24873133fadb36e543c36096ec4bfea7ed08400841af51c",
+      "zip_crc": "passed",
+      "members": 641,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach.app/Info.plist",
+          "CFBundleIdentifier": "com.indiean.HeavyMach",
+          "CFBundleDisplayName": "HeavyMach",
+          "CFBundleName": "HeavyMach",
+          "CFBundleVersion": "1.11",
+          "CFBundleExecutable": "HeavyMach",
+          "MinimumOSVersion": "2.1",
+          "DTSDKName": "iphoneos2.1",
+          "executable_sha256": "583f0a356a182390df0459f16ed97dc82e6846e71e15bd4b49f4fa8e444c32d9",
+          "executable_bytes": 313088
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach/HeavyMach v1.12 - (com.indiean.HeavyMach).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach/HeavyMach%20v1.12%20-%20%28com.indiean.HeavyMach%29.ipa",
+      "bytes": 29182355,
+      "archive_sha1": "0f44d83e98a935a0c58764f03a26eed2d2826b3c",
+      "sha1": "0f44d83e98a935a0c58764f03a26eed2d2826b3c",
+      "sha256": "bef0dd54f8f8737b2c44c98ffa20ae28c9b64fa12bcdbba2e3f72de15d39f078",
+      "zip_crc": "passed",
+      "members": 732,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach.app/Info.plist",
+          "CFBundleIdentifier": "com.indiean.HeavyMach",
+          "CFBundleDisplayName": "HeavyMach",
+          "CFBundleName": "HeavyMach",
+          "CFBundleVersion": "1.12",
+          "CFBundleExecutable": "HeavyMach",
+          "MinimumOSVersion": "2.1",
+          "DTSDKName": "iphoneos2.1",
+          "executable_sha256": "50a447ef8aebf167b196ca9bd7a4210eff494c3696ac20889fa0f327601ff5b8",
+          "executable_bytes": 313456
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach/HeavyMach v1.13 - (com.indiean.HeavyMach).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach/HeavyMach%20v1.13%20-%20%28com.indiean.HeavyMach%29.ipa",
+      "bytes": 29886736,
+      "archive_sha1": "e19b001221eb51256359f0f44bbb9e907ede3587",
+      "sha1": "e19b001221eb51256359f0f44bbb9e907ede3587",
+      "sha256": "33c9535ed2e83310f594b192cec7e190ca000ca2ce81fdd2a85d2975a172bfb9",
+      "zip_crc": "passed",
+      "members": 777,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach.app/Info.plist",
+          "CFBundleIdentifier": "com.indiean.HeavyMach",
+          "CFBundleDisplayName": "HeavyMach",
+          "CFBundleName": "HeavyMach",
+          "CFBundleVersion": "1.13",
+          "CFBundleExecutable": "HeavyMach",
+          "MinimumOSVersion": "2.1",
+          "DTSDKName": "iphoneos2.1",
+          "executable_sha256": "2838a74a285477deb0e5f65782e25e2eee9eadfcb34b2c5262aaa9d7db6d4e89",
+          "executable_bytes": 313456
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach/HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach/HeavyMach%20v1.13%20-%20%28kr.connect.touch.HeavyMach.game%29.ipa",
+      "bytes": 30266903,
+      "archive_sha1": "dc518ddcd867d70a8751278db588329889f7f475",
+      "sha1": "dc518ddcd867d70a8751278db588329889f7f475",
+      "sha256": "477c672f92110c6020be3f744dfa7a3456739e6f970c66715e3b7b3cd32b7776",
+      "zip_crc": "passed",
+      "members": 781,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach.app/Info.plist",
+          "CFBundleIdentifier": "kr.connect.touch.HeavyMach.game",
+          "CFBundleDisplayName": "HeavyMach",
+          "CFBundleName": "HeavyMach",
+          "CFBundleVersion": "1.13",
+          "CFBundleExecutable": "HeavyMach",
+          "MinimumOSVersion": "2.1",
+          "DTSDKName": "iphoneos2.1",
+          "executable_sha256": "97166198d701dd929243196a85e81182d7716915cdd50dec2acdc1918d10deeb",
+          "executable_bytes": 331968
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach/HeavyMach v1.15 - (com.indiean.HeavyMach).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach/HeavyMach%20v1.15%20-%20%28com.indiean.HeavyMach%29.ipa",
+      "bytes": 30579356,
+      "archive_sha1": "0a8370cc9b238a6b6fec16206b6989595e095c98",
+      "sha1": "0a8370cc9b238a6b6fec16206b6989595e095c98",
+      "sha256": "5d41c6adf7645f93006d719fa66d6dc9d8e445ee8f7a221fe0eda4d0f9f2afe8",
+      "zip_crc": "passed",
+      "members": 788,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach.app/Info.plist",
+          "CFBundleIdentifier": "com.indiean.HeavyMach",
+          "CFBundleDisplayName": "HeavyMach",
+          "CFBundleName": "HeavyMach",
+          "CFBundleVersion": "1.15",
+          "CFBundleExecutable": "HeavyMach",
+          "MinimumOSVersion": "2.1",
+          "DTSDKName": "iphoneos2.1",
+          "executable_sha256": "b74b686d98f894212754f88082f67a8b3852d065f85b2e563d56473f6bc6b3ce",
+          "executable_bytes": 337184
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach/HeavyMach v1.22 - (com.indiean.HeavyMach).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach/HeavyMach%20v1.22%20-%20%28com.indiean.HeavyMach%29.ipa",
+      "bytes": 34398327,
+      "archive_sha1": "d533618366fa7f9800a5a181417576459b75170f",
+      "sha1": "d533618366fa7f9800a5a181417576459b75170f",
+      "sha256": "517b0fa88df75bafe4bd433b3acd600777d458b7598052831e6fc2a888cde804",
+      "zip_crc": "passed",
+      "members": 799,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach.app/Info.plist",
+          "CFBundleIdentifier": "com.indiean.HeavyMach",
+          "CFBundleDisplayName": "HeavyMach",
+          "CFBundleName": "HeavyMach",
+          "CFBundleVersion": "1.22",
+          "CFBundleExecutable": "HeavyMach",
+          "MinimumOSVersion": "4.1",
+          "UIDeviceFamily": [
+            1
+          ],
+          "DTPlatformVersion": "4.3",
+          "DTSDKName": "iphoneos4.3",
+          "executable_sha256": "7eab5178bfed4f2a2a2958a60586f70df74424a3dc7a407f0ff44474ef97781d",
+          "executable_bytes": 568720
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Heavy Mach/HeavyMach v1.24 - (com.indiean.HeavyMach).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Heavy%20Mach/HeavyMach%20v1.24%20-%20%28com.indiean.HeavyMach%29.ipa",
+      "bytes": 35206225,
+      "archive_sha1": "b9988b4249d50847f061aba3fdf04bc27841fa4a",
+      "sha1": "b9988b4249d50847f061aba3fdf04bc27841fa4a",
+      "sha256": "198574e47da8958b50733fd7c20d78ebebf87c0a7a8413cef0a68384b9a47eff",
+      "zip_crc": "passed",
+      "members": 810,
+      "apps": [
+        {
+          "plist_path": "Payload/HeavyMach.app/Info.plist",
+          "CFBundleIdentifier": "com.indiean.HeavyMach",
+          "CFBundleDisplayName": "Heavy Mach",
+          "CFBundleName": "Heavy Mach",
+          "CFBundleVersion": "124",
+          "CFBundleShortVersionString": "1.24",
+          "CFBundleExecutable": "HeavyMach",
+          "MinimumOSVersion": "4.3",
+          "UIDeviceFamily": [
+            1
+          ],
+          "UISupportedInterfaceOrientations": [],
+          "DTPlatformVersion": "5.0",
+          "DTSDKName": "iphoneos5.0",
+          "executable_sha256": "4d4c5e25e2a363ddee2ff3fef67ca6dd7869971f11c831995f8e291634d96628",
+          "executable_bytes": 326464
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Mach Defense/Mach_Defense v1.0.3 - (kr.indieapps.MachDefense).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Mach%20Defense/Mach_Defense%20v1.0.3%20-%20%28kr.indieapps.MachDefense%29.ipa",
+      "bytes": 74978449,
+      "archive_sha1": "ed06589604c9037b06f4991cd6a713888f4e6b87",
+      "sha1": "ed06589604c9037b06f4991cd6a713888f4e6b87",
+      "sha256": "c7ee8f88fdf63bc4eb4b6c7ed3e497a9edd092e567a5143862bf8c103c1a78e2",
+      "zip_crc": "passed",
+      "members": 1269,
+      "apps": [
+        {
+          "plist_path": "Payload/MachDefense.app/Info.plist",
+          "CFBundleIdentifier": "kr.indieapps.MachDefense",
+          "CFBundleDisplayName": "Mach Defense",
+          "CFBundleName": "MachDefense",
+          "CFBundleVersion": "1.0.3",
+          "CFBundleExecutable": "MachDefense",
+          "MinimumOSVersion": "4.2",
+          "UIDeviceFamily": [
+            1,
+            2
+          ],
+          "DTPlatformVersion": "4.2 Seed 2",
+          "DTSDKName": "iphoneos4.2",
+          "executable_sha256": "333193c3ffdfa0075a4c59ba4132d63b598f7ec1d28aae8b6110434bb3708165",
+          "executable_bytes": 1429760
+        }
+      ]
+    },
+    {
+      "name": "Game IPAs/Mach Defense/Mach_Defense v1.0.5 - (kr.indieapps.MachDefense).ipa",
+      "url": "https://archive.org/download/heavy-mach-archive_202406/Game%20IPAs/Mach%20Defense/Mach_Defense%20v1.0.5%20-%20%28kr.indieapps.MachDefense%29.ipa",
+      "bytes": 62698352,
+      "archive_sha1": "72ade18b5c5b62e37e9e71363597136559518cbe",
+      "sha1": "72ade18b5c5b62e37e9e71363597136559518cbe",
+      "sha256": "2c3e9aba0d249827da95c557f905762e3e2df08f79602f5404f93aa8f4c3d052",
+      "zip_crc": "passed",
+      "members": 1271,
+      "apps": [
+        {
+          "plist_path": "Payload/MachDefense.app/Info.plist",
+          "CFBundleIdentifier": "kr.indieapps.MachDefense",
+          "CFBundleDisplayName": "Mach Defense",
+          "CFBundleName": "MachDefense",
+          "CFBundleVersion": "1.0.5",
+          "CFBundleExecutable": "MachDefense",
+          "MinimumOSVersion": "4.1",
+          "UIDeviceFamily": [
+            1,
+            2
+          ],
+          "UISupportedInterfaceOrientations": [
+            "UIInterfaceOrientationPortrait",
+            "UIInterfaceOrientationPortraitUpsideDown"
+          ],
+          "DTPlatformVersion": "4.3",
+          "DTSDKName": "iphoneos4.3",
+          "executable_sha256": "90ca256102a5504993119db520e6af5362fd892a639a8787cc70c47b8356b4b7",
+          "executable_bytes": 906336
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "base_read": [
+    "AGENTS.md",
+    "docs/canonical.md",
+    "docs/document-governance.md",
+    "docs/game-design.md",
+    "docs/restoration-contract.md",
+    "docs/design.md",
+    "docs/current-status.md"
+  ],
+  "domains": {
+    "restoration": [
+      "docs/source-provenance.md",
+      "docs/restoration-plan.md",
+      ".agents/skills/restore-machdefense/SKILL.md",
+      ".agents/skills/reverse-engineer-anything/SKILL.md"
+    ],
+    "rendering": [
+      "docs/rendering-policy.md",
+      "docs/coordinate-policy.md",
+      ".agents/skills/integrate-game-art/SKILL.md"
+    ],
+    "combat": [
+      "docs/game-calculation-policy.md",
+      "docs/weapon-validation-procedure.md"
+    ],
+    "lifecycle": [
+      "docs/runtime-policy.md",
+      "docs/stage-transition-contract.md"
+    ],
+    "apple": [
+      "docs/design.md",
+      "docs/validation-plan.md",
+      ".agents/skills/apple-wireless-device/SKILL.md"
+    ],
+    "android": [
+      "docs/design.md",
+      "docs/runtime-policy.md",
+      ".agents/skills/port-machdefense-android/SKILL.md",
+      ".agents/skills/debug-machdefense-android/SKILL.md"
+    ],
+    "writing": [
+      "docs/report-site.md",
+      ".agents/skills/write-project-text/SKILL.md",
+      ".agents/skills/present-game-artifacts/SKILL.md"
+    ],
+    "repository": [
+      "docs/repository-management.md",
+      "docs/development.md",
+      "tools/original_guard.py",
+      "tools/setup.py"
+    ]
+  }
+}

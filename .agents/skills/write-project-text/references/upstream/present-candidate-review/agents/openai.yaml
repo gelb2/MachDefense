@@ -1,0 +1,6 @@
+interface:
+  display_name: "Candidate 원고·이미지 검수 보고"
+  short_description: "원고·이미지·OG 카드를 비공개 Sites 검수 링크로 전달"
+  default_prompt: "$present-candidate-review로 요청한 원문과 이미지 전체를 보존한 비공개 검수 페이지를 배포하고 링크를 전달해줘."
+policy:
+  allow_implicit_invocation: true
