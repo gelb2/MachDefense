@@ -1,0 +1,61 @@
+{
+  "source_sha256": "882fe8efa9a0c3d51c23da190ee3d30376a1b6766e16cc6b87daf09b98dc92b1",
+  "prepared_hashes_checked": 1287,
+  "unique_tables": 94,
+  "source_tables": 95,
+  "missions": 80,
+  "native_imageio_comparisons": [
+    {
+      "source": "FormationIcon_01.png",
+      "pixel_equal": true,
+      "maximum_channel_difference": 0
+    },
+    {
+      "source": "FormationIcon_02.png",
+      "pixel_equal": true,
+      "maximum_channel_difference": 0
+    },
+    {
+      "source": "FormationIcon_03.png",
+      "pixel_equal": true,
+      "maximum_channel_difference": 0
+    },
+    {
+      "source": "FormationIcon_04.png",
+      "pixel_equal": true,
+      "maximum_channel_difference": 0
+    },
+    {
+      "source": "FormationIcon_05.png",
+      "pixel_equal": true,
+      "maximum_channel_difference": 0
+    },
+    {
+      "source": "ww.png",
+      "pixel_equal": true,
+      "maximum_channel_difference": 0
+    },
+    {
+      "source": "Airplane.png",
+      "pixel_equal": true,
+      "maximum_channel_difference": 0
+    },
+    {
+      "source": "Ani_BuildMach.png",
+      "pixel_equal": true,
+      "maximum_channel_difference": 0
+    },
+    {
+      "source": "Ani_Formation.png",
+      "pixel_equal": true,
+      "maximum_channel_difference": 0
+    },
+    {
+      "source": "Ani_SpAttack.png",
+      "pixel_equal": true,
+      "maximum_channel_difference": 0
+    }
+  ],
+  "darwin_random_10000_bytes_match": true,
+  "adam7_known_pixel_fixture": "17x19 exact RGBA match"
+}

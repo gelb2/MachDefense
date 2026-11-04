@@ -17,6 +17,12 @@
 - [skills](skills.md)
 - [source-provenance](source-provenance.md)
 - [stage-transition-contract](stage-transition-contract.md)
+- [트러블슈팅](troubleshooting.md)
 - [usability-todo](usability-todo.md)
 - [validation-plan](validation-plan.md)
 - [weapon-validation-procedure](weapon-validation-procedure.md)
+
+- [포팅판·소스판 동일 조건 대조](evidence/port-source-parity-20261104.md)
+
+- [공용 모듈 진단과 플랫폼 확장 계획](module-audit-20261105.md)
+- [모듈화 전후 치트앱 검증 계획](module-validation-plan.md)

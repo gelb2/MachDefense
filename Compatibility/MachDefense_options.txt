@@ -1,0 +1,2 @@
+# Original portrait gameplay. No frame, coordinate, or gameplay overrides.
+--device-family=iphone

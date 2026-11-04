@@ -1,5 +1,24 @@
 # 보고와 Sass 전달
 
-이 프로젝트 원고와 시각 자료는 docs/editorial에서 관리한다. HeavyMach 1 보고 사이트는 기존 상태를 보존한다. MachDefense 보고 주소는 아직 없다. 사이트 보고 요청 시 사용자 지정 통합 위치를 확인해 연결한다. Sass 세션에는 출처·원고·캡처·현재 상태를 전달하며 해당 CMS를 이 프로젝트에서 수정하지 않는다. IPA·원본 실행 바이너리·개인 저장·기기 식별자는 업로드하지 않는다.
+MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지를 계속 갱신한다.
 
-현재 원본 분석과 게임 구현은 미착수다. 확정된 값과 실행 결과가 생기면 근거 경로를 추가한다.
+- 사이트: https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site
+- MachDefense 페이지: https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html
+- Sites project: `appgprj_6addbf55aea081918d3d182d7e496e88`
+- 원고: [판본 비교와 복원 진행](editorial/machdefense-report.md)
+- 근거: [판본 조사](evidence/version-audit-20261104.md)
+
+기존 사이트의 소유자 전용 공개 범위를 유지한다. 다음 보고는 이 페이지와 목차에 누적한다. 실제 배포 결과는 HANDOVER-CURRENT.md에 기록한다. Sass 세션에는 출처·원고·캡처·현재 상태를 전달하며 해당 CMS는 수정하지 않는다. IPA·실행 바이너리·개인 저장·기기 식별자는 업로드하지 않는다.
+
+## 최근 갱신 — 2026-11-04 23:58
+
+[정식 앱 피드백 수정·iPad 검사](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#feedback-20261104)를 추가했다. 생산·효과음·완료 표시·기지 강화·핵폭탄·오디오 복귀·성능·검사 누락 원인과 남은 대조를 담았다. 실제 iPad 캡처 4장을 포함한다. Sites 배포 상태 succeeded, 기존 소유자 전용 접근 유지.
+
+## 최근 갱신 — 2026-11-05 공용 모듈 진단
+
+[공용 모듈 정밀진단](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#module-audit-20261105)을 기존 페이지에 추가했다. HeavyMach의 브랜치·모듈화 이력, MachDefense Core 58개 파일의 책임·의존성, 오디오 교체, 플랫폼별 연결, 분리·검증 순서와 긴급지원 조달의 공통 코드 배치를 담았다. 원고·파일 목록·TODO 다운로드도 연결했다.
+
+- Sites 판본 159, 소스 `dff14afca0c7b888cba3bb80c9fa860c7236dd81`.
+- 배포 `appgdep_6aeb7a6e77e081918c6035d55590ac21`, 상태 `succeeded`. 기존 접근 범위 유지.
+- 로컬 Chrome에서 보고서 구조·표·다운로드 연결을 확인했다. 운영 주소를 연 Chrome은 `ERR_INTERNET_DISCONNECTED`를 표시해 운영 화면 직접 확인은 남았다.
+- 업로드 용량 제한은 기존 PNG의 무손실 재압축으로 해결했다. 픽셀·파일 경로·기존 원고를 보존했다.

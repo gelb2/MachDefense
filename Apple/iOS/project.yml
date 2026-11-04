@@ -1,0 +1,114 @@
+name: MachDefense
+options:
+  deploymentTarget:
+    iOS: '15.0'
+projectReferences:
+  MachDefenseModules:
+    path: ../../Modules/MachDefenseModules.xcodeproj
+settings:
+  base:
+    CLANG_CXX_LANGUAGE_STANDARD: c++20
+    CLANG_ENABLE_OBJC_ARC: 'YES'
+    OTHER_CPLUSPLUSFLAGS: [$(inherited), -ffp-contract=off, -fno-fast-math]
+    TARGETED_DEVICE_FAMILY: '1,2'
+    SUPPORTS_MACCATALYST: 'NO'
+    SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: 'NO'
+    ENABLE_USER_SCRIPT_SANDBOXING: 'YES'
+    CODE_SIGN_STYLE: Automatic
+    CURRENT_PROJECT_VERSION: '1'
+    MARKETING_VERSION: '0.1'
+targetTemplates:
+  GameApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: ../../Sources/Platform/Apple
+      - path: Assets.xcassets
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: MachDefense
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen: {}
+        UIStatusBarHidden: true
+        UIViewControllerBasedStatusBarAppearance: true
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+          UISceneConfigurations: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown]
+        UIRequiresFullScreen: true
+    dependencies:
+      - target: MachDefenseModules/MachDefenseCore
+        link: true
+        embed: false
+      - target: MachDefenseModules/MachDefenseAssets
+        embed: true
+        codeSign: false
+      - sdk: UIKit.framework
+      - sdk: QuartzCore.framework
+      - sdk: CoreGraphics.framework
+      - sdk: OpenGLES.framework
+      - sdk: OpenAL.framework
+      - sdk: AudioToolbox.framework
+      - sdk: AVFoundation.framework
+targets:
+  MachDefense:
+    templates: [GameApp]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.gelb2.machdefense.source
+        GCC_PREPROCESSOR_DEFINITIONS: [$(inherited), MD_VALIDATION=0]
+  MachDefenseCheat:
+    templates: [GameApp]
+    info:
+      path: Cheat-Info.plist
+      properties:
+        CFBundleDisplayName: MachDefense Test
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.gelb2.machdefense.source.cheat
+        GCC_PREPROCESSOR_DEFINITIONS: [$(inherited), MD_VALIDATION=1]
+  MachDefenseRendererTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: ../Tests
+    settings:
+      base:
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/MachDefenseCheat.app/MachDefenseCheat
+        PRODUCT_BUNDLE_IDENTIFIER: com.gelb2.machdefense.renderertests
+        GENERATE_INFOPLIST_FILE: 'YES'
+    dependencies:
+      - sdk: AVFoundation.framework
+      - sdk: UIKit.framework
+      - sdk: QuartzCore.framework
+      - sdk: CoreGraphics.framework
+      - sdk: OpenGLES.framework
+      - target: MachDefenseCheat
+        link: false
+      - sdk: ImageIO.framework
+      - target: MachDefenseModules/MachDefenseCore
+        link: true
+        embed: false
+      - sdk: OpenAL.framework
+      - sdk: AudioToolbox.framework
+      - target: MachDefenseModules/MachDefenseAssets
+        embed: true
+        codeSign: false
+schemes:
+  MachDefense:
+    build:
+      targets:
+        MachDefense: all
+  MachDefenseCheat:
+    build:
+      targets:
+        MachDefenseCheat: all
+  MachDefenseRendererTests:
+    build:
+      targets:
+        MachDefenseRendererTests: all
+    test:
+      targets: [MachDefenseRendererTests]

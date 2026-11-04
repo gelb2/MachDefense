@@ -1,9 +1,209 @@
 # MachDefense 인계 — 2026-11-04
 
+2026-11-05 최신 검증 계획: [모듈화 전후 치트앱 검사](docs/module-validation-plan.md). 원작 대조 수정과 기준점 검증을 먼저 하고 모듈 분리 전후를 비교한다. 기존 6개 선택 실행 외 렌더·음향·지형·표적·저장·장시간·일반 앱 검사를 포함한다. 이번 변경은 계획 작성이며 모듈화·새 검사는 아직 실행하지 않았다.
+
 위치: `/Users/sokol/Git/ProjectGameDev-Hub/MachDefense`. 독립 비공개 저장소 `gelb2/MachDefense`다. 시작 문서는 AGENTS.md와 docs/canonical.md이며 현재 결과는 docs/current-status.md에 있다.
 
-이번 요청은 HeavyMach 1과 같은 스킬·절차·문서 체계로 개발 가능한 상태를 만드는 것이다. 게임 개발은 아직 시작하지 않았다. 다음 작업은 docs/restoration-plan.md의 원본 세 판본 비교와 기준 선정이다. Mesabloo 포크 기반 개발이 아니다.
+현재 브랜치는 `feat/source-reimplementation`이다. 위메이드 1.0.3 기준 C++ 재개발 앱의 메뉴·생산·전투·저장 연결을 검증 중이다. `docs/current-status.md`와 `docs/evidence/source-session-validation-20261104.md`를 먼저 읽는다. 현재 작업 순서는 [TODO 맨 위](docs/usability-todo.md#현재-작업-순서--2026-11-04-ipad-수정본-기준)를 따른다. 아래 포팅판 기록은 이전 단계다. Mesabloo 포크 기반 개발이 아니다.
 
 IPA 19개는 저장소 밖 원본 보관소에 있다. 파일을 저장소·원격·보고 사이트에 복사하지 않는다. `.local/originals.json`은 보관 경로만 담고 Git 제외다. 실제 스킬은 `.agents/skills`, HeavyMach 1 원본은 `docs/reference/heavymach1`에 있다.
 
 새 clone에서는 tools/setup.py로 훅을 설치한다. docs/repository-management.md의 브랜치·반출 규칙을 따른다. HeavyMach 1·Unity·기존 hm-defense와 사용자 저장을 보존한다. 자동 새 세션 전환이나 별도 인계 승인을 요구하지 않는다.
+
+HeavyMach 1·2·MachDefense 모두 광고를 표시하거나 요청하지 않는다. 호환판에도 적용한다. 원본 IPA는 수정하지 않고 광고 API는 로컬 실행기에서 비표시 처리한다.
+
+## 이전 단계 — 호환판 구현·검사 인계
+
+- 브랜치: `feat/ios-compatibility`. develop·main 병합과 원격 push는 수행하지 않는다.
+- 원본: Mach Defense 1.0.5의 ARMv7 실행 파일을 touchHLE 인터프리터로 구동한다. 이 기록 당시에는 소스 재구현을 시작하기 전이었다.
+- 완료: 시뮬레이터 슬롯 생성·Stage 1 진입·유닛 생산/이동, iPhone Air 무선 설치·타이틀/슬롯 화면 확인. 슬롯 생성 때 종료되던 빈 이미지 처리와 Xcode 서명 문제는 재발 후 실행 파일 생성 의존 관계를 다시 고쳤고 두 번의 증분 빌드를 확인했다.
+- 사용자의 후속 지시와 잠금 해제 뒤 아이폰 수정본을 직접 검사했다. 기지·네 유닛 강화 상세의 증감값 표시·닫기와 생산·교전·저장·재실행을 확인했다. 최신 근거는 docs/evidence/ios-compatibility-upgrade-error-20261104.md다. 실제 강화 구매는 남았다.
+- 남은 문제: 이름 입력칸 포커스 후 위치 이동. 구버전 API/키보드 알림 문제라는 사용자 추정과 합성 경로 전환을 함께 조사한다. 아직 원인을 확정하지 않았다.
+- 남은 검사: 교전·미션 완료·저장·재실행, iPad 실기기, 음향·성능. 기존 증거를 다시 완료로 확대하지 않는다.
+- 현재 빌드/런타임은 `/Users/sokol/Documents/Codex/Builds/MachDefense/compat-ios-20261104`에 있다. 기기용 GUI 빌드는 Xcode DerivedData에 있다. 경로·원본은 `.local/compatibility.json`, 검사 로그는 `.local`에 보관한다.
+- 런타임 수정 뒤 `Compatibility/patches/machdefense.patch`도 갱신하고 역적용 검사로 사본과 일치하는지 확인한다. 원본과 HeavyMach 1 사본은 수정하지 않는다.
+
+## 치트 검증 후 재개발 지시
+
+사용자가 아이폰 일반 포팅판을 플레이한다. 그 앱은 종료·재설치하거나 저장을 변경하지 않는다. [치트 검증 계획](docs/compatibility-cheat-validation-plan.md)에 따라 시뮬레이터용 별도 포팅판 치트앱부터 준비한다. 포팅판 전체 기능을 검사한 뒤 소스 재개발판과 대조한다.
+
+## 사용자 플레이 관측 인계
+
+[관측 기록](docs/port-observations-20261104.md)에 적/기지 파괴·미션 클리어·패배 후 미션 선택 복귀의 사용자 확인, 가격 누락·한글 이름·유닛 자글거림의 비교 요청을 모았다. 재개발 전과 UI/그래픽 변경 때 읽는다. 현재 아이폰 일반 포팅판은 사용자가 플레이 중이므로 조작하지 않는다.
+
+신규 버전은 공용 에셋을 쓰는 유니버설 구성을 목표로 한다. [고해상도 자원 사전조사](docs/universal-assets-plan.md)를 재개발 전 수행한다. HD판이 존재한다는 추측과 현재 확보한 판본을 구분한다.
+
+2026-11-04 언어 후속 지시: 사용자는 캐나다·미국 계정 구매판에서 유닛 이름까지 모두 영문이었다고 확인했다. 현재 기준은 indieapps 1.0.5이며 로컬 아이폰 빌드의 포함 IPA 해시가 일치한다. 시뮬레이터 로그에서는 원본에 `ko, en`/`KR` 전달을 확인했다. 실제 언어 선택 원인은 [언어 조사](docs/port-observations-20261104.md)에 따라 판본·기기 언어·지역·슬롯 국가를 나누어 확인한다.
+
+## 당시 작업 우선순위 — 판본 조사 착수 시점
+
+신규 앱은 영어만 지원한다. 다음 작업은 [전체 판본 조사와 재개발 계획](docs/version-audit-plan.md)이며, 별도 HD판 존재와 추가 빌드부터 확인한다. 현재 3개가 모든 출시판이라고 간주하지 않는다. 기준 코드·영문/고해상도 자원을 비교하고 계획을 정한 뒤 소스 재개발로 진행한다.
+
+## 2026-11-04 판본 조사 후속
+
+현재 기준은 위메이드 1.0.3. 기존 indie105 → 별도 위메이드 포팅 검사 → 소스 재개발 순서다. 사용자의 실기기 ordinary 앱을 변경하지 않았다. iPhone Air iOS 26.5의 별도 audit 앱으로 첫 전투·생산·교전·저장·강화 6종 구매와 재실행 보존을 검사했다. 결과·남은 항목은 docs/evidence/version-audit-20261104.md와 docs/current-status.md.
+
+외부 runtime에 frameInterval 0 보정과 WeMade GuiBanner 광고 차단을 추가하고 machdefense.patch에 반영했다. 역적용 check 통과. 일반 실기기 binary에는 아직 이번 변경을 반영하지 않았다. 별도 앱 패키지는 validation/package-version.py로 생성한다. 위메이드와 indie의 저장 크기·슬롯 간격이 다르므로 교환 금지. `.local/version-audit`의 원본 시험 저장과 fixture는 보존했다.
+
+통합 보고 사이트의 `/machdefense.html` 게시 성공. 소스 커밋 `eb29ffc3244569c9156173f01a4ab44f50b38720`, 배포 `appgdep_6aea4fdca940819188366867d076cd52`, 버전 `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_e86ac7470d1481918356b98fd00d0c40`. 기존 목차에 연결했다. 새 캡처 3개는 무손실 WebP로 변환하고 픽셀 일치를 검사했다. 로컬 페이지의 표·링크·이미지를 확인했다. 배포 뒤 Chrome은 `ERR_INTERNET_DISCONNECTED`를 표시해 운영 화면의 브라우저 확인은 남았다. Sites 배포 상태는 `succeeded`다. 시뮬레이터 시험 앱은 종료하고 홈 화면 복귀를 확인했다.
+
+
+## 최신 작업 — 소스 재개발
+
+`afa58fc`에서 `feat/source-reimplementation`을 만들고 기존 변경을 보존했다. `docs/source-reimplementation-plan.md`와 `docs/current-status.md`의 C++ 소스 재개발 절을 먼저 읽는다. 앞선 “미착수” 기록은 당시 상태다. 새 코어·Resources·Apple workspace와 `createGame` 연결을 구현했다. 전투·생산·강화·저장 통합 검사를 진행했으며, 전체 미션·연출·화면 배치의 남은 범위는 아래 최신 소스 앱 연결을 따른다. 포팅판 실행을 소스판 실행으로 보고하지 않는다. `.local/source-build`의 CTest와 `.local/apple-*-tests.*`의 시뮬레이터 검사 증거를 재사용한다. 원본 분석은 저장소 밖 source-20261104/analysis에 있다. IPA·원본 실행 파일·전체 디컴파일 출력을 Git에 넣지 않는다.
+
+## 최신 소스 앱 연결
+
+`GameSession.cpp`의 createGame을 구현했다. Apple 일반·치트 시뮬레이터 앱 빌드, iPhone 직접 프로필 생성과 생산·이동을 확인했다. 기존 사용자 기기 포팅 앱은 보존했다. 현재 전체 재개발 완료가 아니며, 최신 남은 범위는 current-status와 source-session-validation을 따른다. 과거 createGame 미구현 문장은 당시 단계의 기록이다.
+
+## 소스판 보고서 게시와 다음 진입
+
+기존 `/machdefense.html` 갱신 배포가 성공했다. 사이트 소스 `c3e6f79aebe450e5185bfd74734ac840f949eaf7`, 배포 `appgdep_6aea657c47d881919a1d014749bee850`, 버전 `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_79f3fe38d60c81918987f79eccd7a26d`. 현재 확인범위·22개 검사·오류 수정·최종 iPhone 캡처·남은 작업을 같은 페이지에 추가했다. 사이트 배포만 수행했고 MachDefense 저장소의 커밋·푸시·develop/main 병합은 수행하지 않았다.
+
+새 일반/치트 앱 모두 두 시뮬레이터에 설치했다. 직접 검사의 상세와 캡처 위치는 `.local/source-simulator-validation-20261104.md`에 있다. 사용자의 실기기 포팅 앱·저장은 보존했고 시험 시뮬레이터를 종료했다. 마지막 iPad HUD 레이어 수정본의 직접 검사는 Mac 잠금으로 남았다. iPhone 최종 화면과 공통 HUD 회귀검사는 통과했다.
+
+이 보고서 게시 당시에는 치트 검증 화면을 다음 작업으로 정했다. 이후 구현 결과는 아래 치트 앱·80개 캠페인 절에 있다. 당시 계획은 다음과 같았다: 원작 기능·진형·전투 연출을 완성하면서80개 미션의 진행·보상·저장을 검사한다. 그다음 전체 회귀·장시간 성능을 검증하고, 이후 iPhone·iPad 화면을 확장한 뒤 재검사한다. 최신 순서는 docs/source-reimplementation-plan.md를 따른다. 새 소스판 전체 완료로 보고하지 않는다.
+
+보고 사이트는 256MiB에 가까워졌다. 이번 archive는 macOS xattr·AppleDouble을 제외한 ustar로268406272바이트다. `.local/site-tar-bin/tar`를 PATH 앞에 두고 Sites source helper로 포장했다. 게임 자료와 캡처의 픽셀을 삭제·변경하지 않았다. 다음 이미지 추가 전에는 사이트 용량을 재정리해야 한다. 원본 IPA/바이너리는 계속 반출 금지다.
+
+## 이전 순서와 작업 보존 — 2026-11-04
+
+사용자가 치트앱 계획 기록과 지금까지 작업의 커밋을 지시했다. `feat/source-reimplementation`에서 커밋하며 develop/main 병합·원격 push는 포함하지 않는다. 치트앱 준비 → 원작 기능 및80개 미션 진행·저장 검사 → 전체 검증 → iPhone/iPad 화면 대응 → 재검사 순서로 정본·계획·검증·TODO를 맞췄다. 통합 보고 원고에도 같은 순서를 반영했다. 이 순서 수정분은 로컬 원고이며 사이트에는 아직 재게시하지 않았다.
+
+## 치트 앱·80개 캠페인 구현 후속 — 2026-11-04
+
+`feat/source-reimplementation`에서 TEST5쪽과 ValidationTools를 구현했다. 최신 결과는 docs/evidence/source-cheat-campaign-20261104.md. 최종 CTest31종, Apple XCTest10건, 최신 일반·치트 빌드 성공. 80개 진행·저장과 치트 조건80개 교전을 나누어 검사했다. 총구·탄피·궤적·잔해를 연결했고 원본 진형 아이콘 no-op을 확인했다. 결과 저장 실패 후 Next/Retry/Select Stage 재시도와 TEST 오류창 입력도 수정했다.
+
+사용자 기기 포팅판은 변경하지 않았다. 시뮬레이터 직접 검사를 마치고 앱 종료·홈 복귀·시뮬레이터 종료까지 확인했다. 같은 조건 포팅판 대조·일반 난이도 진행·장시간 메모리/프레임·독립 빌드가 남는다. 이 단계 후 화면 대응을 한다. 최종 로그 `.local/final-core-tests.log`, `.local/source-validation-ui-20261104.md`를 재사용한다.
+
+기능 변경 커밋은31395fb다. 추적 파일만 git archive로 `.local/clean-source-31395fb`에 풀고 새 DerivedData에서 일반 iOS Simulator 앱 빌드 성공. `.local/clean-source-apple-build.log`를 보존했다. 같은 조건 포팅판 대조와 장시간 검사가 남으며 화면 확장은 아직 시작하지 않았다.
+
+## iPad 오디오·UI 수정 작업 보존 — 2026-11-04
+
+`feat/source-reimplementation`에서 오디오 컨텍스트 유지, 보상·오류창의 반복 파일 읽기 제거, 생산·보상 미리보기 회전, 강화 비용 정렬, iPad 두 세로 방향 지원을 수정했다. 치트 앱 전용 프레임 측정은 메모리에 수집하고 비활성 전환 때 CSV로 내보낸다. 일반 앱에서는 켜지지 않는다.
+
+오디오 XCTest 2개와 관련 코어 회귀 7개가 통과했다. iPad 치트 앱의 수정 후 248.82초·14,912프레임 측정과 사용자 개선 확인은 `docs/troubleshooting.md`에 있다. `docs/usability-todo.md` 맨 위의 현재 작업 순서를 따른다. 전체 무기·오디오 중단 복귀·메모리 판정·일반 앱·전체 UI 및 실제 회전 재검사는 남았다. 화면 확장은 그 뒤다.
+
+Xcode GUI가 바꾼 개인 서명 팀과 공유 스킴 형식 3개 파일은 로컬에서 보존하고 이번 기능 커밋에서 제외한다. `Apple/iOS/project.yml`과 두 Info.plist의 방향 수정은 커밋 대상이다. develop/main 병합은 하지 않는다. 원본 IPA·실행 바이너리·로컬 측정 원본은 Git에 넣지 않는다.
+
+## 최신 사용자 작업 순서
+
+포팅판 대조 → 인게임 일러스트 앱 아이콘 제작 → 아이콘 방향·가격·회전 재검사 → 치트앱 전체 기능 연속 검사 → 성능·음향·메모리·생명주기 검사 → iPhone·iPad 화면 확장 계획 수립 순서로 변경했다. 직전 답변 번호는 4 → 6 → 2 → 1 → 3, 그다음 5의 계획 수립이다. 6은 앱 아이콘 제작이며 웹·PWA·Tauri 착수를 앞당기는 지시가 아니다. 다음 작업은 위메이드 1.0.3 포팅판 대조부터 시작한다.
+
+## 포팅판 동일 조건 대조 진행
+
+기지 강화 6종을 두 앱에서 실제 구매하고 저장을 비교했다. 차감 7,800Cr·저장 단계·누적 점수가 일치했다. 대조에서 발견한 누적 점수 표시와 레이더 누락을 수정했고 관련 검사 4개 및 시뮬레이터 화면을 확인했다. [근거와 남은 대조](docs/evidence/port-source-parity-20261104.md). 아직 전체 대조 완료는 아니다.
+
+유닛 4종 Lv.1→Lv.2 구매를 양쪽 앱에서 완료했다. Save & Exit 후 저장 비교에서 잔액 987,250Cr·점수 274·레벨·장비 순서·장착 상태가 일치했다. 상세는 위 근거 문서를 따른다. 소스판 CLOSE 후 강화창이 남는 오류를 추가 수정했고 관련 3종 검사가 통과했다. 마지막 수정본을 iPhone Air 시뮬레이터에 설치하고 유닛·특수기술 창의 CLOSE를 각각 직접 눌러 그림 제거와 전투 재개를 확인했다. 실기기 사용자 저장은 변경하지 않았다.
+
+초기 특수기술 3종도 양쪽 앱에서 Lv.2로 강화하고 Save & Exit 후 비교했다. 비용 합계 1,820Cr, 잔액 985,430Cr, 점수 274, 저장 레벨·수량·장착 상태·순서가 일치했다. `.local/parity-20261104/special-comparison.json`에 결과를 보존했다. CLOSE 수정과 이전 대조 기록의 커밋은 a3ee24f다.
+
+## 2026-11-04 첫 미션 교전 대조 후속
+
+초기 특수기술 강화 대조, 두 앱의 실제 첫 미션 승리·500Cr 보상·Stage 2 진입·저장을 추가 확인했다. 소스판 재실행 슬롯은 985,966Cr·점수 1,324·Stage 2다. 입력 시점·난수를 고정하지 않아 교전 결과의 완전 일치를 주장하지 않는다. 자세한 수치와 자료는 docs/evidence/port-source-parity-20261104.md에 있다. 시험 저장의 잘못된 최대 단계 입력과 소스판 예외를 보존했다. 정상 범위 입력으로 양쪽 재검사를 마쳤다. 원본의 경계값 보정 구현은 TODO MD-PARITY-BOUNDARY-01에 남았다.
+
+사용자가 검사 지연을 지적해 HeavyMach 1 방식의 Apple XCTest를 연결했다. 아래 최신 결과를 따른다. 앱 아이콘 등 나머지 작업 순서는 유지한다.
+
+개발자의 변 작성, 인용 후보 출처 확인, 사용자 글감의 중심 주제를 TODO MD-WRITING-01~03으로 등록했다. 완성 원고는 아직 작성하지 않았다. 이번 변경은 로컬 기능 브랜치에만 기록하며 main/develop 병합·배포를 하지 않는다.
+
+## Apple 자동검사 연결 — 2026-11-04
+
+HeavyMach 1의 XCTest 방식을 적용했다. 실제 렌더러·오디오·시험 저장을 연결한 3종 검사가 빌드 포함 33.083초에 통과했다. 80개 미션 승패·재도전·보상·진행·저장 재읽기, 포팅판 관측값에 따른 13개 강화 구매, 생산 220건·운반봇 배치 60건·특수공격 54건을 검사했다. [실행 결과와 재실행 방법](docs/evidence/apple-automated-sweep-20261104.md).
+
+전체 강화 단계 구매와 모든 일반 무장 검사, 입력·난수를 고정한 포팅판 교전 대조 및 실기기 성능 측정은 남았다. 반복 항목은 이 자동검사에 추가한다.
+
+## 2026-11-04 정식 앱 피드백 수정
+
+전체 강화·무장·iPad 짧은 성능 검사는 완료했다. [측정 결과](docs/evidence/full-upgrade-weapon-device-20261104.md). 이후 사용자가 정식 앱에서 포탑 안내·딤·생산 완료음·복귀 먹통을 발견했고 로딩 일러스트도 확인하도록 지시했다. [수정·검사·설치 상태](docs/evidence/source-ui-audio-lifecycle-20261104.md)를 먼저 확인한다. 현재 작업 파일에는 이 수정과 아이콘·실기기 자동검사 변경이 함께 있다. 사용자 Xcode 서명 설정 변경을 보존한다.
+
+
+사용자 최신 지시: 현재 정식 빌드를 직접 테스트 중이므로 계속 전달하는 관측을 TODO에 누적한다. iPhone 앱을 임의로 종료·재설치하지 않는다. 다섯 오류 수정본은 iPhone/iPad 정식과 iPad 치트에 설치했다. 그 뒤 안내창 글자 축소 보정은 iPad 치트에만 추가 반영했다. 정식 앱 후속 반영은 사용자 테스트 후 진행한다. iPhone 치트는 3개 앱 한도이며 기존 포팅판 삭제 승인을 기다린다.
+
+## 후속 수정·핵폭탄 검사 — 2026-11-04 23:19
+
+아이패드 치트 앱에 완료 표시 오류·로딩 효과음·버튼 효과음·유닛 겹침 해소 수정본을 설치했다. [수정 및 실기기 검사](docs/evidence/source-ui-audio-lifecycle-20261104.md). 핵폭탄은 원본 피해식과 수치가 일치하며 5레벨 체력 검사가 실제 iPad에서도 통과했다. [핵폭탄 검사](docs/evidence/nuclear-damage-20261104.md).
+
+미션 3 구멍 위 포탑 설치와 미션 4 정체의 포팅판 실행 대조, 피격·플라스마·공간 음향 대조는 남았다. 화면 확장은 계획만 기록했다. iPhone 정식 앱은 사용자 테스트 중이므로 종료·재설치하지 않는다.
+
+## 2026-11-04 23:40 후속 검사
+
+기지 강화 실제 효과·핵폭탄 일반 체력 적 피해/처치·오디오 지연 중단 알림 및 미디어 재설정 복구를 iPad에서 검사했다. 3개 검사 4.275초 통과. [수정과 결과](docs/evidence/base-audio-followup-20261104.md). iPhone 정식 앱은 사용자 플레이 중이라 교체하지 않았다. 지형 포팅판 직접 대조·실제 출력음 녹음·피격/지속 피해음 대조는 남았다.
+
+### 23:58 추가 결과와 남은 실행
+
+- HitBody 3종·지속 피해음 연결 완료. DamageAudioSweep 72조건 iPad 통과. 원본 raw OpenAL source15의 WeMade 포팅판 매핑은 Missile06.wav. 옛 iOS 드라이버 매핑과 공간 위치음향은 미확인.
+- 최신 CTest33/33,184.48초 통과. iPad1800프레임/410효과음/쓰기0; 교전3구간 p95 16.67ms,25ms 초과0. `.local/final-audio-performance-ipad.xcresult`.
+- 최신 iPad 검사 호스트 앱 일반 실행도 devicectl 성공, PID7675 종료 완료. 직접 화면 확인은 CUA cgWindowNotFound로 막혔다. 사용자에게 Mac 잠금 여부를 확인 요청했다.
+- 테스트 플러그인 없는 별도 치트 앱은 `.local/clean-cheat-feedback`에서 컴파일했으나 CLI 서명 errSecInternalComponent로 실패. Xcode GUI 창 접근 복구 뒤 기존 절차로 Clean Build Folder→MachDefenseCheat build→설치→터치·홈복귀 확인 필요. 기기에는 최신 XCTest 호스트가 남아 있다. 이전 깨끗한 앱으로 되돌리면 수정이 빠지므로 덮어쓰지 않았다.
+- 사용자 플레이 중인 iPhone 정식 앱은 건드리지 않았다.
+- 포팅판 시뮬레이터의 Stage4 시험 저장을 `.local/av-parity-20261104/port-before-stage4.sav`로 복원하고 바이트 일치 확인. 이후 미션3·4 직접 비교 때 다시 시험용 저장을 준비한다.
+- 보고서 소스는 `.local/report-site-edit`, 기존 project appgprj_6addbf55aea081918d3d182d7e496e88. 4개캡처·강화/핵폭탄/오디오/절차점검 추가. 배포기록은 아래 최종상태를 확인한다.
+
+### 통합 보고서 배포 완료
+
+2026-11-04 23:58:46 KST, Sites 상태 succeeded. URL: https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#feedback-20261104
+소스 SHA `3611c5444ba7168f8c5342a73b1f47682f6bec85`, 배포 `appgdep_6aeb4802cfb081918c1194640d18d4e6`. 소유자 전용 유지. Safari 로컬 화면에서 새 절·표·링크를 확인했다. 배포 후 브라우저 열기는 Mac 창 접근 실패로 미실행. 공식 배포 성공 응답 확인.
+
+사이트 압축 파일의 확장 용량 제한을 넘겨 새 캡처를 무손실 WebP로 바꾸고 기존 PNG/GIF도 픽셀·애니메이션 프레임·시간을 유지한 채 압축했다. 기존 이미지 URL은 유지했다. macOS AppleDouble 메타데이터를 COPYFILE_DISABLE=1로 패키지에서 제외한 최종 tar는255.53MiB다. 게임 자원은 변경하지 않았다.
+
+## 2026-11-05 00:08 설치·화면 연결 후속
+
+Xcode에서 Clean Build Folder 후 MachDefenseCheat 빌드 성공. 테스트 PlugIns가 없는 앱과 코드 서명을 확인하고 실제 iPad에 설치·실행했다. `.local/final-feedback-apps/MachDefenseCheat.app`, `.local/final-feedback-ipad-install.log`, `.local/final-feedback-ipad-launch.json`. 위 23:58의 CLI 서명 실패 후속은 이 GUI 빌드로 해결했다.
+
+Device Hub 전체 창에서 좌표 입력이 noWindowsAvailable로 실패했지만, AX의 Switch to compact window를 누른 뒤 좌표 입력이 복구됐다. 서비스·서버 버전과 서명은 일치했고 인증 거절은 없었다. 서비스나 권한은 변경하지 않았다. 실제 iPad에서 TEST 표시, IPADTEST 슬롯, Stage2 선택·진입, RifleTurret 선택 시 Tap to build 안내, 월드 터치 후 생산 대기열과 셀 차감을 확인했다. 백그라운드 복귀 검사는 진행 중이다.
+
+## iPad 직접 조작 — 2026-11-05 00:11
+
+테스트 플러그인이 없는 최종 치트 앱을 Xcode GUI에서 새로 빌드하고 iPad에 설치했다. 서명 검사 통과. 실제 IPADTEST 프로필의 Stage2에서 포탑 선택→Tap to build 안내→위치 지정→생산→배치→사격을 확인했다. 홈 화면으로 나갔다 돌아오자 System Menu가 열렸고, 셀 412에서 멈춰 있었다. Resume Game을 누르자 메뉴가 닫히고 셀 증가·적 이동·포탑 사격이 재개됐다. 복귀 뒤 특수기술 패널과 Menu도 직접 눌렀다. Save & Exit로 타이틀 복귀를 확인하고 프로세스를 종료했다. iPad 홈 화면도 확인했다.
+
+Device Hub 전체 창의 좌표 입력 오류는 작은 기기 창으로 전환한 뒤 해소됐다. 재현 조건과 복구 방법을 apple-wireless-device 스킬에 기록했다. 이번 화면 검사는 오디오 녹음 검사를 포함하지 않는다. 사진 촬영 후 실제 출력음 비교는 남아 있다. iPhone 정식 앱은 변경하지 않았다.
+
+00:13 Safari에서 배포된 통합 사이트의 MachDefense 링크를 열고 수정 표·피격음72조건·1800프레임 결과·남은 과제 본문을 확인했다. 실제 운영 경로는 `/machdefense#feedback-20261104`로 표시된다. 사이트 보고서에는 23:48 자동검사까지 반영돼 있고, 00:11 직접 조작 결과는 현재 저장소 근거 문서에 추가했다.
+
+## 2026-11-05 화면 확장 후속
+
+사용자 최신 지시로 iPhone→iPad 화면 대응을 먼저 진행했다. 전투만 확장하고 메뉴에 여백이 남은 상태를 사용자가 지적하여 메뉴도 수정했다. 시뮬레이터·실제 iPhone/iPad 자동검사가 통과했다. [근거와 남은 검사](docs/evidence/viewport-20261105.md). iPhone 포팅판은 사용자 승인으로 저장을 저장소 밖에 백업하고 삭제했다. HeavyMach 정식과 MachDefense 정식은 유지한다. 아직 이 작업을 커밋·병합하지 않았다.
+
+## 2026-11-05 01:24 iPhone 정식 설치와 iPad 후속
+
+사용자 요청으로 Xcode GUI MachDefense 일반 앱을 빌드해 iPhone에 설치했다. 저장 42,496바이트 전후 일치, 코드 서명·일반 번들·PlugIns 없음 확인. 정식 앱 Stage6 전투 화면 확인 후 아이폰을 더 조작하지 않는다. 이후 기기 작업은 연결된 iPad만 사용한다.
+
+iPad 회색 띠는 이번에 넣은 GameHUD::append의 x=250부터 오른쪽 끝까지 원본 금속 조각을 반복하는 코드 때문이다. 전장 폭256은 그대로 두고 HUD만 오른쪽으로 이동한 결과다. 사용자 요구를 충족하지 않아 미완료로 기록했다. [근거](docs/evidence/viewport-20261105.md), [TODO](docs/usability-todo.md). 아직 회색 띠 수정 코드는 적용하지 않았다. 마지막 타이틀 좌우 샘플 폭1px 수정은 01:23 일반 앱에 포함됐고, iPad 치트 설치본은 그 직전이다.
+
+Device Hub에서 화면이 보이지만 클릭이 전달되지 않고 회전 시 The connection was invalidated가 나왔다. Device Hub 앱만 종료 후 다시 열어 기기 선택·View Screen·compact 전환하자 실제 iPhone 슬롯 생성·이름 입력·미션 진입·생산·메뉴/재개·Save & Exit 입력이 복구됐다. Apple 권한·키체인·기기 신뢰는 변경하지 않았다.
+
+## 2026-11-05 01:40 — iPad 회색 띠 수정과 다음 커밋
+
+- 사용자 요청: 현재 작업을 끝내고 커밋한 뒤, Downloads의 01:32:18 스크린샷에 나온 기지 업그레이드 창 문제를 계획·수정한다. 투두에 원본 위치와 관측을 기록했다. Finder 미리보기로 확인했다.
+- 회색 띠 제거. World의 presentationScale은 표시 전용이며 전화 폭에서는 1이다. 맵/유닛/효과/메시를 같은 배율로 그리며 터치와 카메라는 역변환한다. 원래 전투 좌표를 바꾸지 않는다.
+- gray-red.log 간격 검사 실패 → gray-green.log 6/6 통과. gray-simulator.xcresult와 gray-ipad.xcresult 성공. 기기검사 21.61초.
+- 사용자 iPhone은 정식 앱 01:24 설치·저장 바이트 동일 확인 이후 조작하지 않았다. 향후 기기 검사는 iPad로 한다.
+- 다음 버그 원인 후보: base upgrade는 HUD가 bottomRight 기준으로 올라오는데 항목은 layout.center로 이동해 서로 다른 좌표를 사용한다. 커밋 후 화면과 버튼을 HUD 기준으로 맞추고 확장된 하단 배경 끝을 점검한다.
+
+## 2026-11-05 01:48 — 스크린샷 후속 수정
+
+`9e1121e`에 그전 수정 전체를 커밋했다. 이후 기지 업그레이드 창 항목/입력을 하단 HUD 기준으로 통일하고 배경 중앙·하단 틈을 기존 에셋으로 연결했다. core, 시뮬레이터, 실제 iPad 검사 통과. 새 검사는 5화면에서 첫 강화 선택/구매/크레딧 감소/레벨 증가/닫기까지 확인한다. base-ipad.xcresult 본문 3.23초. 지금 최종 치트/정식 앱 설치와 직접 화면 확인을 이어간다.
+
+01:53 추가: 기지 창 위로 생산 아이콘이 비치는 레이어 문제를 직접 발견하고 원본 layer 7<9 순서로 수정했다. core 2/2 통과. 마지막 수정의 기기 재빌드 전 Mac이 잠김(ioreg 확인). 사용자에게 해제 요청했고 시뮬레이터 검사는 계속한다. 최신 설치본은 창 위치/배경 수정까지이며 레이어 수정은 아직 미설치다. iPhone에는 계속 접근하지 않는다.
+
+마지막 레이어 수정의 시뮬레이터 검사는 통과했다(`base-layer-simulator.xcresult`). Mac 잠금은 재확인됐고, CLI 기기 서명은 `errSecInternalComponent`로 실패했다. 후속 순서: 잠금 해제 후 Xcode GUI 기기 빌드 → iPad 화면/입력 검사 → 정식·치트 설치 → 직접 기지 강화 구매/닫기 및 Save & Exit → 앱 종료·홈 복귀. iPhone은 사용하지 않는다.
+
+## 2026-11-05 지형·이동 정밀진단
+
+미션 10·11 원형 구조물 정체와 아군 터렛 밀집 정체를 사용자 피드백으로 기록했다. 코어에서 터렛 없는 MachineGun 단독 정체를 두 미션 모두 재현했다. 원본 MapInfo 바이트는 일치한다. addColVector 네 번째 검사점은 원본과 다르며, 그 점만 원본대로 바꾼 로컬 시험으로는 미션 10 정체가 풀리지 않았다. 제품 코드 수정은 아직 없다. [진단·다음 대조](docs/evidence/terrain-motion-audit-20261104.md). 포팅판 실행 대조를 위해 기존 iPhone Air 시뮬레이터를 부팅했으나 CUA가 Simulator 번들 ID와 Xcode 내 앱 경로 모두 Invalid app으로 반환했다. 사용자 기기는 조작하지 않았다. 기존 iPad 마지막 HUD 레이어 설치·검사도 아직 남아 있다.
+
+## 추가 사용자 지시 — 오른쪽 HUD·모듈화 준비, 2026-11-05
+
+오른쪽 HUD는 사용자가 iPad의 입체감 있는 처리를 선택했다. iPhone의 회색 반복 연장과 설치 버전 차이를 함께 확인하고 수정한다. MD-HUD-DEPTH-01. HeavyMach 1의 모듈화를 심층 대조해 MachDefense의 피해·아군 메크/적 이동·사거리·표적 선택·충돌 등 공용 모듈 후보와 의존성, 분리·검증 순서를 조사한다. MD-MODULE-AUDIT-01. [TODO 상세](docs/usability-todo.md#추가-요청--2026-11-05)에 등록했으며 모듈 구현은 아직 착수하지 않았다.
+
+## 오디오 교체와 모듈화 검사 — 2026-11-05
+
+MD-AUDIO-BACKEND-01을 모듈화 단계에 포함한다. 원본 IPA는 Apple OpenAL 호출, 포팅판은 touchHLE→OpenAL Soft, 새 소스판은 Apple OpenAL 직접 연결임을 확인했다. 포팅판의 검증된 구현과 원작 재생 절차를 재사용하도록 수정할 과제다. 시뮬레이터 일반/치트 빌드와 실제 출력음·전체 기능·저장·프레임 검사를 주 검증으로 사용한다. 오디오 교체와 모듈 분리는 순차 커밋·비교하며 마지막에 iPad 음향 중단/복귀·지연을 확인한다. 아직 코드 교체·모듈 분리·develop 병합을 하지 않았다. HeavyMach 모듈화 이력 조사에는 feat/apple-workspace-modules, 58ade7ae, 63afa4f5를 포함한다.
+
+## 공용 모듈 진단 보고서 — 2026-11-05
+
+[정밀진단](docs/module-audit-20261105.md)과 [Core 58파일 해시/include 목록](docs/evidence/module-inventory-20261105.json)을 작성했다. 문서 진입에 modules 도메인을 추가했다. 목표는 Apple 유니버설·Android 네이티브·웹/PWA·Tauri Mac이다. 실제 모듈 분리·오디오 교체·develop 병합은 아직 수행하지 않았다. 보고 사이트는 기존 MachDefense 페이지에 이어 올린다.
+
+보고서 게시 완료: Sites 판본 159, 배포 `appgdep_6aeb7a6e77e081918c6035d55590ac21` succeeded. [게시 기록](docs/report-site.md). 로컬 화면은 확인했고 운영 Chrome은 네트워크 오류로 직접 확인이 남았다.
+
+긴급지원 조달은 MD-RESUPPLY-01로 등록했다. 기존 인앱결제 버튼을 대체하고 30·45·60초 활성화, 크레딧/셀/혼합 지급, J·B·P의 영문 격려문, 원작 글꼴·타이핑·스킬 글로우를 사용한다. 규칙·수령 상태·중복 지급 방지는 공통 C++에 둔다. 게임 시간과 기존 자원 갱신을 사용하고 플랫폼별 UI·타이머·지급 코드를 만들지 않는다. 지급량·반복 수령·재진입 정책은 미확정이다. 구현은 아직 시작하지 않았다.
