@@ -1,6 +1,6 @@
 # 설계
 
-원본 비교 실행기는 Compatibility/ios에 있다. 소스 재개발판은 C++20 코어·공용 자원 번들·Objective-C++ Apple 실행기로 작성 중이다. Apple/MachDefense.xcworkspace에 일반·치트 앱과 Modules 프로젝트를 연결했다. GameSession에 메뉴·전투·강화·보상·저장을 연결했다. 현재 위메이드 1.0.3 포팅판과 기능·표시를 대조하고 실기기 검증을 진행한다. 전체 완료 범위는 [현재 상태](current-status.md), 작업 순서는 [소스 재개발 계획](source-reimplementation-plan.md)을 따른다.
+원본 비교 실행기는 Compatibility/ios에 있다. 아래 Android·Web·Desktop·Distribution 및 native macOS 경로 설명은 예정 책임이며 현재 앱 구현 완료를 뜻하지 않는다. 소스 재개발판은 C++20 코어·공용 자원 번들·Objective-C++ Apple 실행기로 작성 중이다. Apple/MachDefense.xcworkspace에 일반·치트 앱과 Modules 프로젝트를 연결했다. GameSession에 메뉴·전투·강화·보상·저장을 연결했다. 현재 위메이드 1.0.3 포팅판과 기능·표시를 대조하고 실기기 검증을 진행한다. 전체 완료 범위는 [현재 상태](current-status.md), 작업 순서는 [소스 재개발 계획](source-reimplementation-plan.md)을 따른다.
 
 | 경로 | 책임 |
 |---|---|
@@ -19,3 +19,7 @@
 원본 비교판의 구성과 빌드는 [Compatibility](../Compatibility/README.md)를 따른다. ARMv7 명령은 touchHLE 인터프리터, 그래픽은 기존 OpenGL ES 호환 경로, 음향은 기존 OpenAL 호환 경로를 사용한다. 이미 정상인 플랫폼이 생긴 후에는 새 플랫폼 때문에 그 소스·공용 동작을 임의 변경하지 않는다.
 
 신규 Apple 앱은 iPhone/iPad 유니버설 구성을 목표로 한다. 공용 에셋 원본·메타데이터를 플랫폼들이 소비하며, [자원 사전조사](universal-assets-plan.md)에 따라 픽셀 해상도와 게임 좌표를 분리한다.
+
+## 2026-11-05 공용 모듈·음향·후속 플랫폼 계획
+
+[공용 모듈 진단과 플랫폼 확장 계획](module-audit-20261105.md)에 현재 파일별 책임, HeavyMach 분기·병합 이력, OpenAL 구현 차이, 예정 폴더·빌드 대상과 분리 전후 검사를 정리했다. 목표 플랫폼은 iPhone/iPad·Android 네이티브·웹/PWA·Tauri Mac이다. 파일 이동·음향 교체·모듈 분리는 아직 실행하지 않았다. 기존 코어/자원 번들을 유지하며 오디오 교체와 구조 변경을 별도 커밋으로 진행한다.

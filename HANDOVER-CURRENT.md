@@ -1,5 +1,7 @@
 # MachDefense 인계 — 2026-11-04
 
+2026-11-05 최신 검증 계획: [모듈화 전후 치트앱 검사](docs/module-validation-plan.md). 원작 대조 수정과 기준점 검증을 먼저 하고 모듈 분리 전후를 비교한다. 기존 6개 선택 실행 외 렌더·음향·지형·표적·저장·장시간·일반 앱 검사를 포함한다. 이번 변경은 계획 작성이며 모듈화·새 검사는 아직 실행하지 않았다.
+
 위치: `/Users/sokol/Git/ProjectGameDev-Hub/MachDefense`. 독립 비공개 저장소 `gelb2/MachDefense`다. 시작 문서는 AGENTS.md와 docs/canonical.md이며 현재 결과는 docs/current-status.md에 있다.
 
 현재 브랜치는 `feat/source-reimplementation`이다. 위메이드 1.0.3 기준 C++ 재개발 앱의 메뉴·생산·전투·저장 연결을 검증 중이다. `docs/current-status.md`와 `docs/evidence/source-session-validation-20261104.md`를 먼저 읽는다. 현재 작업 순서는 [TODO 맨 위](docs/usability-todo.md#현재-작업-순서--2026-11-04-ipad-수정본-기준)를 따른다. 아래 포팅판 기록은 이전 단계다. Mesabloo 포크 기반 개발이 아니다.
@@ -185,3 +187,23 @@ Device Hub에서 화면이 보이지만 클릭이 전달되지 않고 회전 시
 01:53 추가: 기지 창 위로 생산 아이콘이 비치는 레이어 문제를 직접 발견하고 원본 layer 7<9 순서로 수정했다. core 2/2 통과. 마지막 수정의 기기 재빌드 전 Mac이 잠김(ioreg 확인). 사용자에게 해제 요청했고 시뮬레이터 검사는 계속한다. 최신 설치본은 창 위치/배경 수정까지이며 레이어 수정은 아직 미설치다. iPhone에는 계속 접근하지 않는다.
 
 마지막 레이어 수정의 시뮬레이터 검사는 통과했다(`base-layer-simulator.xcresult`). Mac 잠금은 재확인됐고, CLI 기기 서명은 `errSecInternalComponent`로 실패했다. 후속 순서: 잠금 해제 후 Xcode GUI 기기 빌드 → iPad 화면/입력 검사 → 정식·치트 설치 → 직접 기지 강화 구매/닫기 및 Save & Exit → 앱 종료·홈 복귀. iPhone은 사용하지 않는다.
+
+## 2026-11-05 지형·이동 정밀진단
+
+미션 10·11 원형 구조물 정체와 아군 터렛 밀집 정체를 사용자 피드백으로 기록했다. 코어에서 터렛 없는 MachineGun 단독 정체를 두 미션 모두 재현했다. 원본 MapInfo 바이트는 일치한다. addColVector 네 번째 검사점은 원본과 다르며, 그 점만 원본대로 바꾼 로컬 시험으로는 미션 10 정체가 풀리지 않았다. 제품 코드 수정은 아직 없다. [진단·다음 대조](docs/evidence/terrain-motion-audit-20261104.md). 포팅판 실행 대조를 위해 기존 iPhone Air 시뮬레이터를 부팅했으나 CUA가 Simulator 번들 ID와 Xcode 내 앱 경로 모두 Invalid app으로 반환했다. 사용자 기기는 조작하지 않았다. 기존 iPad 마지막 HUD 레이어 설치·검사도 아직 남아 있다.
+
+## 추가 사용자 지시 — 오른쪽 HUD·모듈화 준비, 2026-11-05
+
+오른쪽 HUD는 사용자가 iPad의 입체감 있는 처리를 선택했다. iPhone의 회색 반복 연장과 설치 버전 차이를 함께 확인하고 수정한다. MD-HUD-DEPTH-01. HeavyMach 1의 모듈화를 심층 대조해 MachDefense의 피해·아군 메크/적 이동·사거리·표적 선택·충돌 등 공용 모듈 후보와 의존성, 분리·검증 순서를 조사한다. MD-MODULE-AUDIT-01. [TODO 상세](docs/usability-todo.md#추가-요청--2026-11-05)에 등록했으며 모듈 구현은 아직 착수하지 않았다.
+
+## 오디오 교체와 모듈화 검사 — 2026-11-05
+
+MD-AUDIO-BACKEND-01을 모듈화 단계에 포함한다. 원본 IPA는 Apple OpenAL 호출, 포팅판은 touchHLE→OpenAL Soft, 새 소스판은 Apple OpenAL 직접 연결임을 확인했다. 포팅판의 검증된 구현과 원작 재생 절차를 재사용하도록 수정할 과제다. 시뮬레이터 일반/치트 빌드와 실제 출력음·전체 기능·저장·프레임 검사를 주 검증으로 사용한다. 오디오 교체와 모듈 분리는 순차 커밋·비교하며 마지막에 iPad 음향 중단/복귀·지연을 확인한다. 아직 코드 교체·모듈 분리·develop 병합을 하지 않았다. HeavyMach 모듈화 이력 조사에는 feat/apple-workspace-modules, 58ade7ae, 63afa4f5를 포함한다.
+
+## 공용 모듈 진단 보고서 — 2026-11-05
+
+[정밀진단](docs/module-audit-20261105.md)과 [Core 58파일 해시/include 목록](docs/evidence/module-inventory-20261105.json)을 작성했다. 문서 진입에 modules 도메인을 추가했다. 목표는 Apple 유니버설·Android 네이티브·웹/PWA·Tauri Mac이다. 실제 모듈 분리·오디오 교체·develop 병합은 아직 수행하지 않았다. 보고 사이트는 기존 MachDefense 페이지에 이어 올린다.
+
+보고서 게시 완료: Sites 판본 159, 배포 `appgdep_6aeb7a6e77e081918c6035d55590ac21` succeeded. [게시 기록](docs/report-site.md). 로컬 화면은 확인했고 운영 Chrome은 네트워크 오류로 직접 확인이 남았다.
+
+긴급지원 조달은 MD-RESUPPLY-01로 등록했다. 기존 인앱결제 버튼을 대체하고 30·45·60초 활성화, 크레딧/셀/혼합 지급, J·B·P의 영문 격려문, 원작 글꼴·타이핑·스킬 글로우를 사용한다. 규칙·수령 상태·중복 지급 방지는 공통 C++에 둔다. 게임 시간과 기존 자원 갱신을 사용하고 플랫폼별 UI·타이머·지급 코드를 만들지 않는다. 지급량·반복 수령·재진입 정책은 미확정이다. 구현은 아직 시작하지 않았다.

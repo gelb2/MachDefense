@@ -87,6 +87,15 @@
       "docs/development.md",
       "tools/original_guard.py",
       "tools/setup.py"
+    ],
+    "modules": [
+      "docs/design.md",
+      "docs/module-audit-20261105.md",
+      "docs/module-validation-plan.md",
+      "docs/evidence/module-inventory-20261105.json",
+      "docs/source-reimplementation-plan.md",
+      "docs/validation-plan.md",
+      "docs/usability-todo.md"
     ]
   }
 }

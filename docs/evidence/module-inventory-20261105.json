@@ -1,0 +1,739 @@
+{
+  "commit": "eb8b334cc9d5f69784175abe0e782a586b436771",
+  "kind": "static source inventory; not runtime validation",
+  "files": [
+    {
+      "path": "Sources/Core/Battle.cpp",
+      "sha256": "9496927fc2ecd4f95839ece24becd9770e69fe74677c0ffa708ae51640793ff7",
+      "lines": 378,
+      "group": "Simulation",
+      "includes": [
+        "Battle.hpp",
+        "algorithm",
+        "bit",
+        "cmath",
+        "functional",
+        "limits",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/Battle.hpp",
+      "sha256": "5fff16acf8bfe731826954dbe717b05d994887b71b1855f9f46ee2f82741c3f4",
+      "lines": 165,
+      "group": "Simulation",
+      "includes": [
+        "Chunk.hpp",
+        "DarwinRandom.hpp",
+        "DataTable.hpp",
+        "functional",
+        "RenderTypes.hpp",
+        "optional",
+        "array",
+        "string",
+        "unordered_map",
+        "vector"
+      ]
+    },
+    {
+      "path": "Sources/Core/Bipod.cpp",
+      "sha256": "52dbf44a5451715f499939d9fbf002cc23f7e486739440cd831f7e8955fed58b",
+      "lines": 136,
+      "group": "Simulation",
+      "includes": [
+        "Bipod.hpp",
+        "algorithm",
+        "cmath",
+        "limits",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/Bipod.hpp",
+      "sha256": "0305e42fc7be7c1969fd2ab9e2c00d6ea5fc3b8baff91ee1114d06085dd3431e",
+      "lines": 45,
+      "group": "Simulation",
+      "includes": [
+        "Battle.hpp",
+        "array",
+        "span"
+      ]
+    },
+    {
+      "path": "Sources/Core/Button.hpp",
+      "sha256": "aeb5602c44de90d8bf3e103816559e7aa3c081a09980bd13c9c9a0e505d5e60e",
+      "lines": 36,
+      "group": "Presentation",
+      "includes": [
+        "RenderTypes.hpp",
+        "optional"
+      ]
+    },
+    {
+      "path": "Sources/Core/Chunk.cpp",
+      "sha256": "685d24b9570ecdb5e1ef4e32a9d0ea722a5edfbdd28baab349e6612a7a457af6",
+      "lines": 39,
+      "group": "Data",
+      "includes": [
+        "Chunk.hpp",
+        "bit",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/Chunk.hpp",
+      "sha256": "41582a05137b234e5d03b57c19e131fb24cf96192da4b68580828390fe2acdef",
+      "lines": 21,
+      "group": "Data",
+      "includes": [
+        "cstdint",
+        "span",
+        "string",
+        "vector"
+      ]
+    },
+    {
+      "path": "Sources/Core/Combat.cpp",
+      "sha256": "d93296fbe9ac3115ae5314fd79896ec3b18c8e3ec568ba670bcb5bec5bb8a703",
+      "lines": 49,
+      "group": "Simulation",
+      "includes": [
+        "Combat.hpp",
+        "array",
+        "cmath",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/Combat.hpp",
+      "sha256": "c3dd7400502aa1d75ec3d2f4c6ec61f6d71588de1127b4cbea340da9a124dca7",
+      "lines": 30,
+      "group": "Simulation",
+      "includes": [
+        "DataTable.hpp",
+        "cstdint",
+        "string",
+        "unordered_map"
+      ]
+    },
+    {
+      "path": "Sources/Core/DarwinRandom.hpp",
+      "sha256": "dff7a9221cf3244a2753cdb031057415ba33a01a225c948240354e238094b2ae",
+      "lines": 31,
+      "group": "Contracts",
+      "includes": [
+        "array",
+        "bit",
+        "cstdint"
+      ]
+    },
+    {
+      "path": "Sources/Core/DataTable.cpp",
+      "sha256": "095dc87660b01e5307c4f5b13e352a206e0a512f15bbdab8c0a9522faa346ca7",
+      "lines": 105,
+      "group": "Data",
+      "includes": [
+        "DataTable.hpp",
+        "algorithm",
+        "charconv",
+        "cmath",
+        "fstream",
+        "iterator",
+        "locale",
+        "sstream",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/DataTable.hpp",
+      "sha256": "65e935d058d2facc45adc9166c99bd9a021143d25f50dc3953399ea6e737fde3",
+      "lines": 33,
+      "group": "Data",
+      "includes": [
+        "cstddef",
+        "cstdint",
+        "filesystem",
+        "optional",
+        "string",
+        "string_view",
+        "vector"
+      ]
+    },
+    {
+      "path": "Sources/Core/Economy.cpp",
+      "sha256": "4e1acc7770994b0c87502d4d6a6a74d4ec2495dd27f203e90fbbab25f058a09e",
+      "lines": 58,
+      "group": "Simulation",
+      "includes": [
+        "Economy.hpp",
+        "cstdio",
+        "algorithm",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/Economy.hpp",
+      "sha256": "2818ca8750fa12319d6d230f5136edd8a7c2171ddaa50474135bbe213139d4ec",
+      "lines": 33,
+      "group": "Simulation",
+      "includes": [
+        "DataTable.hpp",
+        "SaveData.hpp",
+        "array",
+        "optional",
+        "vector"
+      ]
+    },
+    {
+      "path": "Sources/Core/Formation.cpp",
+      "sha256": "b3988644e81fce7c6dd5f7ce0b7a1103db4e0e8daf7593b5429305523226a5ac",
+      "lines": 8,
+      "group": "Simulation",
+      "includes": [
+        "Formation.hpp"
+      ]
+    },
+    {
+      "path": "Sources/Core/Formation.hpp",
+      "sha256": "fbc23a117b2b0252b7a2b01d0be6edd1763d25406a2d603fd9956c9fdea85120",
+      "lines": 9,
+      "group": "Simulation",
+      "includes": [
+        "RenderTypes.hpp",
+        "optional"
+      ]
+    },
+    {
+      "path": "Sources/Core/FrameLayout.hpp",
+      "sha256": "cc0e7c84486860e8faf0d12c1bdad637e78ba4366047641980bfe808d6844826",
+      "lines": 25,
+      "group": "Contracts",
+      "includes": [
+        "RenderTypes.hpp",
+        "algorithm",
+        "cmath"
+      ]
+    },
+    {
+      "path": "Sources/Core/Game.hpp",
+      "sha256": "c4d8aec6f42ecffde759254bb3244fc26152de96e70d282b56ac508ef024309d",
+      "lines": 46,
+      "group": "Contracts",
+      "includes": [
+        "RenderTypes.hpp",
+        "cstdint",
+        "functional",
+        "memory",
+        "optional",
+        "span",
+        "string",
+        "string_view",
+        "vector"
+      ]
+    },
+    {
+      "path": "Sources/Core/GameHUD.cpp",
+      "sha256": "ae9b730da056d7cf2df46c5aed973e0805bd43dc7fa2a25b2e63d2af1c75b91c",
+      "lines": 270,
+      "group": "Presentation",
+      "includes": [
+        "GameHUD.hpp",
+        "algorithm",
+        "cmath",
+        "utility"
+      ]
+    },
+    {
+      "path": "Sources/Core/GameHUD.hpp",
+      "sha256": "e469044b636a061c2a873fad1cc122caddbcb7c4a4fc6b948673cb7af19fffc4",
+      "lines": 80,
+      "group": "Presentation",
+      "includes": [
+        "Button.hpp",
+        "Game.hpp",
+        "SpriteFont.hpp",
+        "FrameLayout.hpp",
+        "array",
+        "functional"
+      ]
+    },
+    {
+      "path": "Sources/Core/GameSession.cpp",
+      "sha256": "391de933092d71063c202c5c749227d89bbff0edf48dbc2651b57083f3951554",
+      "lines": 330,
+      "group": "Session",
+      "includes": [
+        "GameSession.hpp",
+        "Help.hpp",
+        "Menu.hpp",
+        "SummaryDialog.hpp",
+        "Transition.hpp",
+        "UpgradeDialog.hpp",
+        "World.hpp",
+        "ValidationTools.hpp",
+        "algorithm",
+        "bit",
+        "cmath",
+        "cstdio",
+        "ctime",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/GameSession.hpp",
+      "sha256": "604b2500f3f5014e71b235a4687bad20766ae5b22da2955a6d2a879278067c31",
+      "lines": 22,
+      "group": "Session",
+      "includes": [
+        "Game.hpp",
+        "SaveData.hpp"
+      ]
+    },
+    {
+      "path": "Sources/Core/Help.hpp",
+      "sha256": "d1028ec35555ca654de6b516139544988be1b8bec0ffa00893488b29ddbe0320",
+      "lines": 29,
+      "group": "Presentation",
+      "includes": [
+        "Game.hpp",
+        "algorithm",
+        "cstdio"
+      ]
+    },
+    {
+      "path": "Sources/Core/Loot.cpp",
+      "sha256": "e33e734d4ef1962914cd3568b848346b4d6ae46f6f810f7e795f8179fd4c8aaa",
+      "lines": 89,
+      "group": "Simulation",
+      "includes": [
+        "Loot.hpp",
+        "algorithm",
+        "cmath",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/Loot.hpp",
+      "sha256": "4a0dabdf5a0d1e67c52f823c53e4f1eec054d0d1b2e3e97059f268dd307a1431",
+      "lines": 40,
+      "group": "Simulation",
+      "includes": [
+        "DarwinRandom.hpp",
+        "DataTable.hpp",
+        "RenderTypes.hpp",
+        "functional",
+        "optional",
+        "span",
+        "string"
+      ]
+    },
+    {
+      "path": "Sources/Core/Menu.cpp",
+      "sha256": "c888b222d931d79a00f1f1899c394f29770940f7d0156fc524d93fd6a54526d6",
+      "lines": 289,
+      "group": "Presentation",
+      "includes": [
+        "Menu.hpp",
+        "algorithm",
+        "cmath",
+        "ctime",
+        "limits",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/Menu.hpp",
+      "sha256": "2f94408fb6b7809715eff694e7b59d0749b3b90a689b78d1c96690685331c3a5",
+      "lines": 67,
+      "group": "Presentation",
+      "includes": [
+        "Game.hpp",
+        "SaveData.hpp",
+        "SpriteFont.hpp",
+        "Button.hpp",
+        "DarwinRandom.hpp",
+        "FrameLayout.hpp",
+        "array",
+        "optional"
+      ]
+    },
+    {
+      "path": "Sources/Core/PlayerParts.cpp",
+      "sha256": "6786ebaedf4a0949d07e0b726c75853a1ce7c7fe683db0baf697018efcfa9610",
+      "lines": 39,
+      "group": "Simulation",
+      "includes": [
+        "PlayerParts.hpp",
+        "cstdio",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/PlayerParts.hpp",
+      "sha256": "4c70116a6527de07f58ce6cfda5ed09256629bc59d802c732d50a3b976be71ec",
+      "lines": 16,
+      "group": "Simulation",
+      "includes": [
+        "Battle.hpp",
+        "Economy.hpp",
+        "Production.hpp"
+      ]
+    },
+    {
+      "path": "Sources/Core/Production.cpp",
+      "sha256": "761b3a37473bfc9296750e8a12bdf4adfce93d6d1cca9ac7d27ceee608d84ab0",
+      "lines": 50,
+      "group": "Simulation",
+      "includes": [
+        "Production.hpp",
+        "algorithm",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/Production.hpp",
+      "sha256": "d78a1d4ad30f505456de0f72d26dbc5dd61a96fe6a49cf2cdc6b4dbc71ef46e9",
+      "lines": 40,
+      "group": "Simulation",
+      "includes": [
+        "Battle.hpp",
+        "array",
+        "functional",
+        "optional",
+        "unordered_map"
+      ]
+    },
+    {
+      "path": "Sources/Core/Projectile.cpp",
+      "sha256": "fdc3ab2632626d788da0788c7e1822cc0707bc7cf5bb6e769d93b075f74aaa3f",
+      "lines": 226,
+      "group": "Simulation",
+      "includes": [
+        "Projectile.hpp",
+        "algorithm",
+        "cmath",
+        "cstdint"
+      ]
+    },
+    {
+      "path": "Sources/Core/Projectile.hpp",
+      "sha256": "3b8391ab0e8ecdbb563c115557dcaa5c13cf608c036c9d828dd46fae254d547b",
+      "lines": 98,
+      "group": "Simulation",
+      "includes": [
+        "Combat.hpp",
+        "DarwinRandom.hpp",
+        "RenderTypes.hpp",
+        "optional",
+        "functional",
+        "array",
+        "span",
+        "vector"
+      ]
+    },
+    {
+      "path": "Sources/Core/RenderTypes.hpp",
+      "sha256": "4cb4c125cc60cf3f5483ab65b8511a0a819f177121924eaa4c39e3618ceae9a7",
+      "lines": 41,
+      "group": "Contracts",
+      "includes": [
+        "cstdint",
+        "optional",
+        "string",
+        "vector"
+      ]
+    },
+    {
+      "path": "Sources/Core/SaveData.cpp",
+      "sha256": "8f5b0416ab4435f826284b6495e2e8bb4d5b3c96d143730ca802319caaa19109",
+      "lines": 158,
+      "group": "Session",
+      "includes": [
+        "SaveData.hpp",
+        "DarwinRandom.hpp",
+        "algorithm",
+        "bit",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/SaveData.hpp",
+      "sha256": "f5ad609e81bfbee65d266fe8ac1ae57fdb638a029e79cba3d5a353cb7c726c78",
+      "lines": 48,
+      "group": "Session",
+      "includes": [
+        "array",
+        "cstddef",
+        "cstdint",
+        "span",
+        "string",
+        "string_view",
+        "optional",
+        "vector"
+      ]
+    },
+    {
+      "path": "Sources/Core/Settlement.cpp",
+      "sha256": "68f1587d2891c9273bedeab2da2e2f099b4efc65ba1acad282d38028a6712c52",
+      "lines": 77,
+      "group": "Session",
+      "includes": [
+        "Settlement.hpp",
+        "algorithm",
+        "array",
+        "bit",
+        "cstdio",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/Settlement.hpp",
+      "sha256": "8a42f13c27e0fa99950b9ef41ff2500d2a8ee84b74deddf82ac3f1a5e9b7980a",
+      "lines": 23,
+      "group": "Session",
+      "includes": [
+        "Production.hpp",
+        "SaveData.hpp"
+      ]
+    },
+    {
+      "path": "Sources/Core/SpecialAttack.cpp",
+      "sha256": "a70f9f9f069bf2387d46dab53fd71c32002bca588ae65a4865fce6736e36a896",
+      "lines": 76,
+      "group": "Simulation",
+      "includes": [
+        "SpecialAttack.hpp",
+        "cmath",
+        "cstdio"
+      ]
+    },
+    {
+      "path": "Sources/Core/SpecialAttack.hpp",
+      "sha256": "73e29b4d4f15e84ed5507a7804f3c776104c1c59169c0a36b86d06bc6762eb47",
+      "lines": 31,
+      "group": "Simulation",
+      "includes": [
+        "Projectile.hpp",
+        "string",
+        "string_view"
+      ]
+    },
+    {
+      "path": "Sources/Core/SpriteFont.hpp",
+      "sha256": "b7287dbc6aeeef83e7d27ddc4d520919774fb4257854de07dd94f2f108a1b26f",
+      "lines": 42,
+      "group": "Presentation",
+      "includes": [
+        "DataTable.hpp",
+        "RenderTypes.hpp",
+        "array",
+        "stdexcept",
+        "string_view"
+      ]
+    },
+    {
+      "path": "Sources/Core/SummaryDialog.cpp",
+      "sha256": "8357e092d2180c1802a7e1bba86c1687a8a30076d2f5228583ad894ddfd40988",
+      "lines": 51,
+      "group": "Presentation",
+      "includes": [
+        "SummaryDialog.hpp",
+        "algorithm",
+        "cmath",
+        "cstdio",
+        "utility"
+      ]
+    },
+    {
+      "path": "Sources/Core/SummaryDialog.hpp",
+      "sha256": "d12af19578d5050ced16db8df196f14ccc67ccab96bb8faef738533705654587",
+      "lines": 28,
+      "group": "Presentation",
+      "includes": [
+        "GameHUD.hpp",
+        "Settlement.hpp"
+      ]
+    },
+    {
+      "path": "Sources/Core/Trail.cpp",
+      "sha256": "f7ab0eab89e2d37fa4942e5e9977541aafe4af45edf02a2fedac07a2dd8c53ad",
+      "lines": 76,
+      "group": "Simulation",
+      "includes": [
+        "Trail.hpp",
+        "algorithm",
+        "cmath",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/Trail.hpp",
+      "sha256": "63064357620fc49bea70717138a67e18a143bfdc290ada03a8e4127ddf8e4730",
+      "lines": 27,
+      "group": "Simulation",
+      "includes": [
+        "Combat.hpp",
+        "DarwinRandom.hpp",
+        "RenderTypes.hpp",
+        "functional",
+        "optional",
+        "span"
+      ]
+    },
+    {
+      "path": "Sources/Core/Transition.cpp",
+      "sha256": "0faefd9af29aa67ef3ef124293de7a67bb3f5bda36fb0e9160daf299759c22e9",
+      "lines": 70,
+      "group": "Presentation",
+      "includes": [
+        "Transition.hpp",
+        "cmath"
+      ]
+    },
+    {
+      "path": "Sources/Core/Transition.hpp",
+      "sha256": "42bddaf4a45044e3ad81255e981b1523fda7642726e069c34500d99974ccb81b",
+      "lines": 32,
+      "group": "Presentation",
+      "includes": [
+        "Game.hpp",
+        "array",
+        "optional"
+      ]
+    },
+    {
+      "path": "Sources/Core/UpgradeDialog.cpp",
+      "sha256": "218f7ac698269797707664a6fdc94d9022dcbb2b7b4e8224a23668eccbf05bed",
+      "lines": 142,
+      "group": "Presentation",
+      "includes": [
+        "UpgradeDialog.hpp",
+        "algorithm",
+        "utility"
+      ]
+    },
+    {
+      "path": "Sources/Core/UpgradeDialog.hpp",
+      "sha256": "632c973f429b1b9dca3344b8e15fb4aba3188e398a8248758e2ac9ac9dd21899",
+      "lines": 52,
+      "group": "Presentation",
+      "includes": [
+        "GameHUD.hpp"
+      ]
+    },
+    {
+      "path": "Sources/Core/ValidationPanel.cpp",
+      "sha256": "6c40bf05b040dd4046993685e962ce76accdccb9259edff8f288186bb72ce448",
+      "lines": 91,
+      "group": "Validation",
+      "includes": [
+        "ValidationPanel.hpp",
+        "algorithm",
+        "cmath",
+        "stdexcept",
+        "utility"
+      ]
+    },
+    {
+      "path": "Sources/Core/ValidationPanel.hpp",
+      "sha256": "a40e13066b6038dc76b91aefaee5bb369181ba191330d26e72c8d31ef713b11c",
+      "lines": 44,
+      "group": "Validation",
+      "includes": [
+        "Button.hpp",
+        "Game.hpp",
+        "SpriteFont.hpp",
+        "unordered_set"
+      ]
+    },
+    {
+      "path": "Sources/Core/ValidationTools.cpp",
+      "sha256": "46912df3c831d14dc816fc0409e5dbd6846049b7a6a95b17c6bdbebb880f3591",
+      "lines": 118,
+      "group": "Validation",
+      "includes": [
+        "ValidationTools.hpp",
+        "World.hpp",
+        "algorithm",
+        "cstdio"
+      ]
+    },
+    {
+      "path": "Sources/Core/ValidationTools.hpp",
+      "sha256": "defd9acc92734ca27a5e18112a4cbe3964d993dcd729dcc852ab633443332811",
+      "lines": 35,
+      "group": "Validation",
+      "includes": [
+        "Game.hpp",
+        "Economy.hpp",
+        "Production.hpp",
+        "ValidationPanel.hpp"
+      ]
+    },
+    {
+      "path": "Sources/Core/WeaponController.cpp",
+      "sha256": "275e82cee45a5b14246cb9b950803edcc74e61ac448b34c9ec231c6b4bed771e",
+      "lines": 69,
+      "group": "Simulation",
+      "includes": [
+        "WeaponController.hpp",
+        "cmath"
+      ]
+    },
+    {
+      "path": "Sources/Core/WeaponController.hpp",
+      "sha256": "5bc44b135758f442b2c8c7e54da4122ceae64dd4a7eaa7a7c9198ef6239c1a3b",
+      "lines": 48,
+      "group": "Simulation",
+      "includes": [
+        "Combat.hpp",
+        "DarwinRandom.hpp",
+        "RenderTypes.hpp",
+        "functional",
+        "optional"
+      ]
+    },
+    {
+      "path": "Sources/Core/World.cpp",
+      "sha256": "e88f78f8c8cb4324973867fb1ee1d9f981671fa1c909b8dd4cf950163c2610f1",
+      "lines": 565,
+      "group": "Simulation",
+      "includes": [
+        "World.hpp",
+        "Formation.hpp",
+        "algorithm",
+        "cmath",
+        "cstdio",
+        "functional",
+        "stdexcept"
+      ]
+    },
+    {
+      "path": "Sources/Core/World.hpp",
+      "sha256": "42c37b2dc366456852d467841786432b40dfe5f512c008839d820948db20006a",
+      "lines": 144,
+      "group": "Simulation",
+      "includes": [
+        "Bipod.hpp",
+        "Game.hpp",
+        "PlayerParts.hpp",
+        "Loot.hpp",
+        "Projectile.hpp",
+        "SpecialAttack.hpp",
+        "Trail.hpp",
+        "WeaponController.hpp",
+        "memory"
+      ]
+    },
+    {
+      "path": "Sources/Core/WorldEffects.cpp",
+      "sha256": "d8b3894128b2a91ca79b40ec21915b4d32eef9c552a828d3cd133c222d42b5c2",
+      "lines": 41,
+      "group": "Simulation",
+      "includes": [
+        "World.hpp",
+        "cmath"
+      ]
+    }
+  ]
+}
