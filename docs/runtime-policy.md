@@ -11,3 +11,5 @@
 효과음 버퍼·source·컨텍스트는 `Sources/Audio/OpenALEffects`가 관리한다. Apple 실행기는 AudioFile로 WAV 원본 PCM을 한 번 읽는다. 발사·피격 때 디코딩·버퍼 생성·파일 저장을 하지 않는다. BGM은 원본과 같은 AudioFile/AudioQueue 압축 패킷 반복 재생으로 처리한다.
 
 피격음은 원본의 카메라 상대 위치 계산을 거쳐 HostServices.playSoundAt으로 전달한다. 원본의 제곱근 계산이 음수 좌표에서 NaN을 만드는 경우 이전 source 위치를 유지한다. 피해·음원 선택·난수 호출 순서는 유지한다. [원본 주소와 검증](evidence/module-work-20261105.md).
+
+AVAudioSession 설정·활성화·비활성화는 Apple 어댑터의 직렬 큐에서 비동기로 실행한다. 게임 입력·렌더링·OpenAL 객체는 메인 스레드에서 유지한다. 오래된 세션 완료가 최신 비활성 상태를 덮지 않게 요청 세대 번호를 대조한다. [실기기 검사](evidence/audio-session-20261105.md).
