@@ -1,0 +1,292 @@
+[
+  {
+    "from": "Sources/Core/Battle.cpp",
+    "to": "Sources/Core/Simulation/Battle.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Battle.hpp",
+    "to": "Sources/Core/Simulation/Battle.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Bipod.cpp",
+    "to": "Sources/Core/Simulation/Bipod.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Bipod.hpp",
+    "to": "Sources/Core/Simulation/Bipod.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Button.hpp",
+    "to": "Sources/Core/Presentation/Button.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Chunk.cpp",
+    "to": "Sources/Core/Data/Chunk.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Chunk.hpp",
+    "to": "Sources/Core/Data/Chunk.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Combat.cpp",
+    "to": "Sources/Core/Simulation/Combat.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Combat.hpp",
+    "to": "Sources/Core/Simulation/Combat.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/DarwinRandom.hpp",
+    "to": "Sources/Core/Contracts/DarwinRandom.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/DataTable.cpp",
+    "to": "Sources/Core/Data/DataTable.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/DataTable.hpp",
+    "to": "Sources/Core/Data/DataTable.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Economy.cpp",
+    "to": "Sources/Core/Simulation/Economy.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Economy.hpp",
+    "to": "Sources/Core/Simulation/Economy.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Formation.cpp",
+    "to": "Sources/Core/Simulation/Formation.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Formation.hpp",
+    "to": "Sources/Core/Simulation/Formation.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/FrameLayout.hpp",
+    "to": "Sources/Core/Contracts/FrameLayout.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Game.hpp",
+    "to": "Sources/Core/Contracts/Game.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/GameHUD.cpp",
+    "to": "Sources/Core/Presentation/GameHUD.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/GameHUD.hpp",
+    "to": "Sources/Core/Presentation/GameHUD.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/GameSession.cpp",
+    "to": "Sources/Core/Session/GameSession.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/GameSession.hpp",
+    "to": "Sources/Core/Session/GameSession.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Help.hpp",
+    "to": "Sources/Core/Presentation/Help.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Loot.cpp",
+    "to": "Sources/Core/Simulation/Loot.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Loot.hpp",
+    "to": "Sources/Core/Simulation/Loot.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Menu.cpp",
+    "to": "Sources/Core/Presentation/Menu.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Menu.hpp",
+    "to": "Sources/Core/Presentation/Menu.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/PlayerParts.cpp",
+    "to": "Sources/Core/Simulation/PlayerParts.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/PlayerParts.hpp",
+    "to": "Sources/Core/Simulation/PlayerParts.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Production.cpp",
+    "to": "Sources/Core/Simulation/Production.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Production.hpp",
+    "to": "Sources/Core/Simulation/Production.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Projectile.cpp",
+    "to": "Sources/Core/Simulation/Projectile.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Projectile.hpp",
+    "to": "Sources/Core/Simulation/Projectile.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/RenderTypes.hpp",
+    "to": "Sources/Core/Contracts/RenderTypes.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/SaveData.cpp",
+    "to": "Sources/Core/Session/SaveData.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/SaveData.hpp",
+    "to": "Sources/Core/Session/SaveData.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Settlement.cpp",
+    "to": "Sources/Core/Session/Settlement.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Settlement.hpp",
+    "to": "Sources/Core/Session/Settlement.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/SpecialAttack.cpp",
+    "to": "Sources/Core/Simulation/SpecialAttack.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/SpecialAttack.hpp",
+    "to": "Sources/Core/Simulation/SpecialAttack.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/SpriteFont.hpp",
+    "to": "Sources/Core/Presentation/SpriteFont.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/SummaryDialog.cpp",
+    "to": "Sources/Core/Presentation/SummaryDialog.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/SummaryDialog.hpp",
+    "to": "Sources/Core/Presentation/SummaryDialog.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Trail.cpp",
+    "to": "Sources/Core/Simulation/Trail.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Trail.hpp",
+    "to": "Sources/Core/Simulation/Trail.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Transition.cpp",
+    "to": "Sources/Core/Presentation/Transition.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/Transition.hpp",
+    "to": "Sources/Core/Presentation/Transition.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/UpgradeDialog.cpp",
+    "to": "Sources/Core/Presentation/UpgradeDialog.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/UpgradeDialog.hpp",
+    "to": "Sources/Core/Presentation/UpgradeDialog.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/ValidationPanel.cpp",
+    "to": "Sources/Core/Validation/ValidationPanel.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/ValidationPanel.hpp",
+    "to": "Sources/Core/Validation/ValidationPanel.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/ValidationTools.cpp",
+    "to": "Sources/Core/Validation/ValidationTools.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/ValidationTools.hpp",
+    "to": "Sources/Core/Validation/ValidationTools.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/WeaponController.cpp",
+    "to": "Sources/Core/Simulation/WeaponController.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/WeaponController.hpp",
+    "to": "Sources/Core/Simulation/WeaponController.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/World.cpp",
+    "to": "Sources/Core/Simulation/World.cpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/World.hpp",
+    "to": "Sources/Core/Simulation/World.hpp",
+    "body_unchanged": true
+  },
+  {
+    "from": "Sources/Core/WorldEffects.cpp",
+    "to": "Sources/Core/Simulation/WorldEffects.cpp",
+    "body_unchanged": true
+  }
+]

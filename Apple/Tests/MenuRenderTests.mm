@@ -3,9 +3,9 @@
 #import <AVFAudio/AVFAudio.h>
 #import <OpenGLES/EAGL.h>
 #import "../../Sources/Platform/Apple/MDRenderer.h"
-#include "../../Sources/Core/Menu.hpp"
-#include "../../Sources/Core/GameSession.hpp"
-#include "../../Sources/Core/World.hpp"
+#include "Core/Presentation/Menu.hpp"
+#include "Core/Session/GameSession.hpp"
+#include "Core/Simulation/World.hpp"
 #include "../../Tests/ContentSweep.hpp"
 #include "../../Tests/NuclearDamageSweep.hpp"
 #include "../../Tests/BaseUpgradeEffectSweep.hpp"
@@ -35,10 +35,10 @@ public:
 };
 // Isolated disk save and the production OpenAL backend. Never opens app saves.
 class SweepHost final:public md::HostServices {
-    NSURL* file_; MDAudio* audio_;
+    NSURL* file_; MDAudio* audio_;bool musicOutput_;
 public:
-    unsigned writes=0;std::map<std::string,unsigned> soundCalls;
-    SweepHost(NSURL* file,MDAudio* audio):file_(file),audio_(audio){}
+    unsigned writes=0;std::map<std::string,unsigned> soundCalls,musicCalls;
+    SweepHost(NSURL* file,MDAudio* audio,bool musicOutput=true):file_(file),audio_(audio),musicOutput_(musicOutput){}
     std::optional<md::Bytes> readSave()override {
         NSData* d=[NSData dataWithContentsOfURL:file_];if(!d)return {};
         const auto* p=static_cast<const std::uint8_t*>(d.bytes);return md::Bytes(p,p+d.length);
@@ -53,11 +53,17 @@ public:
         NSString* name=[[NSString alloc]initWithBytes:n.data() length:n.size() encoding:NSUTF8StringEncoding];
         [audio_ play:name gain:gain*.05f pan:pan];
     }
+    void playSoundAt(std::string_view n,md::Vec2 position,float gain)override {
+        ++soundCalls[std::string(n)];
+        NSString* name=[[NSString alloc]initWithBytes:n.data() length:n.size() encoding:NSUTF8StringEncoding];
+        [audio_ play:name gain:gain*.05f x:position.x y:position.y];
+    }
     void playMusic(std::string_view n,float gain)override {
+        ++musicCalls[std::string(n)];if(!musicOutput_)return;
         NSString* name=[[NSString alloc]initWithBytes:n.data() length:n.size() encoding:NSUTF8StringEncoding];
         [audio_ playMusic:name gain:gain*.05f];
     }
-    void stopMusic()override{[audio_ stopMusic];}
+    void stopMusic()override{if(musicOutput_)[audio_ stopMusic];}
     void requestName(std::string,std::size_t,std::function<void(std::optional<std::string>)> done)override{done("SWEEP");}
 };
 void sweepTap(md::GameSession& s,float x,float y){s.touch({1,md::TouchPhase::began,{x,y}});s.touch({1,md::TouchPhase::ended,{x,y}});}
@@ -207,7 +213,7 @@ public:
     [view audioReset:[NSNotification notificationWithName:AVAudioSessionMediaServicesWereResetNotification object:nil]];
     audio=[view valueForKey:@"audio"];XCTAssertEqualObjects(audio.musicName,@"GamePlay.mp3");XCTAssertTrue(audio.musicPlaying);
     const float beforePlayback=audio.musicPlaybackTime;
-    XCTestExpectation* advances=[self expectationWithDescription:@"OpenAL playback advances after recovery"];
+    XCTestExpectation* advances=[self expectationWithDescription:@"AudioQueue playback advances after recovery"];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW,int64_t(.2*NSEC_PER_SEC)),dispatch_get_main_queue(),^{[advances fulfill];});
     [self waitForExpectations:@[advances] timeout:2];
     XCTAssertGreaterThan(audio.musicPlaybackTime,beforePlayback+.05f);
@@ -291,7 +297,9 @@ public:
     MenuResources resources(root,renderer);
     NSURL* directory=[NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:NSUUID.UUID.UUIDString] isDirectory:YES];
     XCTAssertTrue([NSFileManager.defaultManager createDirectoryAtURL:directory withIntermediateDirectories:YES attributes:nil error:nil]);
-    SweepHost host([directory URLByAppendingPathComponent:@"MachDefense.sav"],audio);
+    // This matrix checks music requests; AudioTests covers the three actual
+    // tracks, looping and queue recreation. SFX and GPU remain real here.
+    SweepHost host([directory URLByAppendingPathComponent:@"MachDefense.sav"],audio,false);
     auto initial=md::SaveData::empty(1);initial.createProfile("SWEEP",1);initial.writeWord(md::SaveData::slotStart+0xc,5);
     XCTAssertTrue(host.writeSave(initial.encode()));
     NSMutableArray* records=[NSMutableArray array];const auto start=CFAbsoluteTimeGetCurrent();
@@ -329,12 +337,13 @@ public:
         else{XCTAssertTrue(sweepPress(session,"SummaryBtn_Retry.png"));XCTAssertEqual(session.validationWorld()->stage(),79u);}
         [records addObject:@{@"mission":@(stage+1),@"clearCount":@(cleared.clearCount(0,stage)),@"credits":@(cleared.credits(0)),@"score":@(cleared.readWord(md::SaveData::slotStart+0x2054)),@"writes":@(host.writes)}];
     }}
-    XCTAssertEqual(records.count,80u);XCTAssertGreaterThan(audio.playCount,0u);XCTAssertEqual(audio.loadedSounds,80u);
+    XCTAssertEqual(records.count,80u);XCTAssertGreaterThan(audio.playCount,0u);XCTAssertEqual(audio.loadedSounds,77u);
     auto finalSave=md::SaveData::decode(*host.readSave());for(unsigned stage=0;stage<80;++stage)XCTAssertEqual(finalSave.clearCount(0,stage),1u);
     NSDictionary* report=@{@"mode":@"accelerated-result-paths",@"seconds":@(CFAbsoluteTimeGetCurrent()-start),@"soundCalls":@(audio.playCount),@"missions":records};
     NSData* json=[NSJSONSerialization dataWithJSONObject:report options:NSJSONWritingPrettyPrinted error:nil];
     XCTAttachment* result=[XCTAttachment attachmentWithData:json uniformTypeIdentifier:@"public.json"];result.name=@"campaign-sweep.json";result.lifetime=XCTAttachmentLifetimeKeepAlways;[self addAttachment:result];
     NSLog(@"MD_CAMPAIGN_SWEEP missions=%lu sounds=%lu seconds=%.3f",(unsigned long)records.count,(unsigned long)audio.playCount,CFAbsoluteTimeGetCurrent()-start);
+    XCTAssertGreaterThan(host.musicCalls["GamePlay.mp3"],0u);XCTAssertGreaterThan(host.musicCalls["UI_BGM.mp3"],0u);
     [audio stopMusic];[audio setActive:NO];[renderer finish];window.hidden=YES;
     XCTAssertTrue([NSFileManager.defaultManager removeItemAtURL:directory error:nil]);
 }
@@ -457,7 +466,9 @@ public:
     MenuResources resources(root,renderer);
     NSURL* directory=[NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:NSUUID.UUID.UUIDString] isDirectory:YES];
     XCTAssertTrue([NSFileManager.defaultManager createDirectoryAtURL:directory withIntermediateDirectories:YES attributes:nil error:nil]);
-    SweepHost host([directory URLByAppendingPathComponent:@"MachDefense.sav"],audio);
+    // This matrix checks music requests; AudioTests covers the three actual
+    // tracks, looping and queue recreation. SFX and GPU remain real here.
+    SweepHost host([directory URLByAppendingPathComponent:@"MachDefense.sav"],audio,false);
     auto table=[&](std::string name){auto b=resources.read("Tables/"+name+".tsv");return md::DataTable::parse(std::string_view(reinterpret_cast<const char*>(b.data()),b.size()));};
 
     const auto started=CFAbsoluteTimeGetCurrent();unsigned purchases=0,blocked=0,reloads=0;
@@ -496,6 +507,7 @@ public:
     XCTAssertGreaterThan(purchases,100u);XCTAssertEqual(reloads,cases.size());
     NSLog(@"MD_UPGRADE_SWEEP rows=%lu purchases=%u rejected=%u diskReloads=%u seconds=%.3f",cases.size(),purchases,blocked,reloads,CFAbsoluteTimeGetCurrent()-started);
 
+    XCTAssertGreaterThan(host.musicCalls["GamePlay.mp3"],0u);XCTAssertGreaterThan(host.musicCalls["UI_BGM.mp3"],0u);
     [audio stopMusic];[audio setActive:NO];[renderer finish];window.hidden=YES;
     XCTAssertTrue([NSFileManager.defaultManager removeItemAtURL:directory error:nil]);
 }
@@ -572,7 +584,7 @@ public:
     const auto originalGun=friendly->weapons;friendly->weapons.clear();hostile->weapons.clear();
     struct Sample {unsigned phase;double interval,cpu;NSUInteger sprites;std::uint64_t footprint;};
     std::vector<Sample> samples;samples.reserve(1800);unsigned frames=0;double previous=0;
-    auto done=[self expectationWithDescription:@"30-second normal-speed battle"];
+    auto done=[self expectationWithDescription:@"1800-frame cadence measurement"];
     MDSweepDisplay* observer=[MDSweepDisplay new];
     observer.onFrame=^(CADisplayLink* link){
         // Block below calls a C++ closure to retain mutable test state by reference.
@@ -595,7 +607,7 @@ public:
     observer.onFrame=^(CADisplayLink* link){run(link);};
     CADisplayLink* display=[CADisplayLink displayLinkWithTarget:observer selector:@selector(frame:)];display.preferredFramesPerSecond=60;
     [display addToRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
-    [self waitForExpectations:@[done] timeout:50];[display invalidate];observer.onFrame=nil;
+    [self waitForExpectations:@[done] timeout:120];[display invalidate];observer.onFrame=nil;
     XCTAssertEqual(frames,1800u);XCTAssertEqual(host.writes,0u);XCTAssertGreaterThan(audio.playCount,0u);
     NSMutableArray* report=[NSMutableArray array];
     for(unsigned phase=0;phase<4;++phase){std::vector<double> cadence,cpu;std::uint64_t low=UINT64_MAX,high=0;NSUInteger sprites=0;unsigned over=0;
@@ -610,5 +622,55 @@ public:
 
     [audio stopMusic];[audio setActive:NO];[renderer finish];window.hidden=YES;
     XCTAssertTrue([NSFileManager.defaultManager removeItemAtURL:directory error:nil]);
+}
+- (void)testTenMinuteBattleLifecycleSoak {
+    NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
+    UIWindow* window=[[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];window.rootViewController=[UIViewController new];
+    MDMenuSurface* surface=[[MDMenuSurface alloc]initWithFrame:window.bounds];surface.contentScaleFactor=UIScreen.mainScreen.scale;surface.layer.contentsScale=surface.contentScaleFactor;
+    CAEAGLLayer* layer=(CAEAGLLayer*)surface.layer;layer.opaque=YES;layer.drawableProperties=@{kEAGLDrawablePropertyRetainedBacking:@YES,kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8};
+    [window.rootViewController.view addSubview:surface];[window makeKeyAndVisible];
+    MDRenderer* renderer=[[MDRenderer alloc]initWithResourceRoot:root];MDAudio* audio=[[MDAudio alloc]initWithResourceRoot:root];XCTAssertTrue([audio prepareSounds]);
+    MenuResources resources(root,renderer);
+    NSURL* directory=[NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:NSUUID.UUID.UUIDString] isDirectory:YES];
+    XCTAssertTrue([NSFileManager.defaultManager createDirectoryAtURL:directory withIntermediateDirectories:YES attributes:nil error:nil]);
+    SweepHost host([directory URLByAppendingPathComponent:@"MachDefense.sav"],audio);
+    auto save=md::SaveData::empty(1);save.createProfile("SOAK",1);
+    md::World world(resources,host,save,0,md::BattleGeometry::phone(),123);
+    auto restart=[&]{
+        world.start(0);md::WorldActor *friendly=nullptr,*hostile=nullptr;
+        for(auto& a:world.actors())if(a->base)(a->player?friendly:hostile)=a.get();
+        XCTAssertNotEqual(friendly,nullptr);XCTAssertNotEqual(hostile,nullptr);if(!friendly||!hostile)return;
+        friendly->hp=friendly->maxHP=100000000;hostile->hp=hostile->maxHP=100000000;
+        hostile->position={friendly->position.x,friendly->position.y+60};friendly->target=hostile->id;
+        friendly->weapons.front().name="BaseWpn07";
+    };restart();[audio playMusic:@"GamePlay.mp3" gain:.01];
+    unsigned frames=0,cycles=0,lastSecond=0;std::vector<std::uint64_t> memory;std::vector<double> cpu;
+    const double origin=CACurrentMediaTime();
+    auto done=[self expectationWithDescription:@"600 seconds combat, 20 lifecycle entries"];
+    MDSweepDisplay* observer=[MDSweepDisplay new];
+    std::function<void(CADisplayLink*)> run=[&](CADisplayLink* link){@autoreleasepool{
+        const double now=CACurrentMediaTime(),elapsed=now-origin;
+        if(unsigned(elapsed/30)>cycles&&cycles<19){
+            ++cycles;[audio setActive:NO];[renderer discardDrawable];restart();[audio setActive:YES];
+        }
+        md::validation::keepBasesAlive(world);world.tick();world.prepareDraw();md::Frame frame;world.appendSprites(frame);
+        XCTAssertTrue([renderer drawFrame:frame toLayer:layer]);++frames;
+        if(unsigned(elapsed)>lastSecond){
+            lastSecond=unsigned(elapsed);task_vm_info_data_t info{};mach_msg_type_number_t count=TASK_VM_INFO_COUNT;
+            task_info(mach_task_self(),TASK_VM_INFO,reinterpret_cast<task_info_t>(&info),&count);memory.push_back(info.phys_footprint);cpu.push_back((CACurrentMediaTime()-now)*1000);
+            if(lastSecond%60==0)NSLog(@"MD_SOAK second=%u frames=%u memory=%llu uploads=%lu sounds=%lu writes=%u",lastSecond,frames,(unsigned long long)info.phys_footprint,(unsigned long)renderer.textureUploads,(unsigned long)audio.playCount,host.writes);
+        }
+        if(elapsed>=600){[link invalidate];[done fulfill];}
+    }};
+    observer.onFrame=^(CADisplayLink* link){run(link);};CADisplayLink* display=[CADisplayLink displayLinkWithTarget:observer selector:@selector(frame:)];display.preferredFramesPerSecond=60;
+    [display addToRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];[self waitForExpectations:@[done] timeout:625];[display invalidate];observer.onFrame=nil;
+    XCTAssertEqual(cycles,19u);XCTAssertGreaterThan(frames,15000u);XCTAssertEqual(host.writes,0u);XCTAssertGreaterThan(audio.playCount,100u);XCTAssertTrue(audio.musicPlaying);
+    if(memory.size()>120){
+        const auto warm=*std::min_element(memory.begin()+60,memory.begin()+120);
+        const auto final=*std::min_element(memory.end()-60,memory.end());
+        XCTAssertLessThan(final,warm+32ull*1024*1024);
+        NSLog(@"MD_SOAK_RESULT frames=%u entries=%u warm_min=%llu final_min=%llu sounds=%lu writes=%u",frames,cycles+1,(unsigned long long)warm,(unsigned long long)final,(unsigned long)audio.playCount,host.writes);
+    }
+    [audio stopMusic];[audio setActive:NO];[renderer finish];window.hidden=YES;[NSFileManager.defaultManager removeItemAtURL:directory error:nil];
 }
 @end

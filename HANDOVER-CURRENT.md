@@ -1,16 +1,14 @@
-# MachDefense 인계 — 2026-11-04
+# MachDefense 인계 — 2026-11-05
 
-2026-11-05 최신 검증 계획: [모듈화 전후 치트앱 검사](docs/module-validation-plan.md). 원작 대조 수정과 기준점 검증을 먼저 하고 모듈 분리 전후를 비교한다. 기존 6개 선택 실행 외 렌더·음향·지형·표적·저장·장시간·일반 앱 검사를 포함한다. 이번 변경은 계획 작성이며 모듈화·새 검사는 아직 실행하지 않았다.
+현재 브랜치는 `refactor/shared-core-audio`다. 기존 재개발·계획을 `0243083`에 보존하고 로컬 develop의 `8109ae6`에서 분기했다. 원본 오디오·텍스처 대조 수정은 `f623eba`에 커밋했다. 이후 공용 Core·Audio 분리와 검사를 진행했다. 최신 결과는 [모듈화 실행 기록](docs/evidence/module-work-20261105.md), 남은 과제는 [TODO](docs/usability-todo.md)를 따른다. 원격 push·main 병합·제품 배포는 하지 않았다.
 
-위치: `/Users/sokol/Git/ProjectGameDev-Hub/MachDefense`. 독립 비공개 저장소 `gelb2/MachDefense`다. 시작 문서는 AGENTS.md와 docs/canonical.md이며 현재 결과는 docs/current-status.md에 있다.
+Core는 Contracts·Data·Simulation·Session·Presentation·Validation로 나뉘고 효과음은 Audio 모듈을 사용한다. 게임 갱신·난수 순서를 보존했다. 원본 IPA와 실행 바이너리는 저장소 밖에서 분석에만 사용한다. 새 checkout에 들어가는 소스와 Resources만으로 일반 앱 Release 빌드를 확인했다.
 
-현재 브랜치는 `feat/source-reimplementation`이다. 위메이드 1.0.3 기준 C++ 재개발 앱의 메뉴·생산·전투·저장 연결을 검증 중이다. `docs/current-status.md`와 `docs/evidence/source-session-validation-20261104.md`를 먼저 읽는다. 현재 작업 순서는 [TODO 맨 위](docs/usability-todo.md#현재-작업-순서--2026-11-04-ipad-수정본-기준)를 따른다. 아래 포팅판 기록은 이전 단계다. Mesabloo 포크 기반 개발이 아니다.
+C++ 34개와 분리 전후 160조건·144,000틱 비교, iPhone 시뮬레이터 26개 검사는 통과했다. iPad 25개와 재실행 1개, 10분 전투·20회 월드 시작, 일반/치트 직접 조작·저장 재실행도 확인했다. 실기기 출력·성능과 원작 음향 전수 대조는 남아 있다. 테스트 성공을 기존 길찾기·화면 밖 표적·HUD 그림 과제의 해결로 해석하지 않는다. 해당 문제는 TODO에 남아 있다.
 
-IPA 19개는 저장소 밖 원본 보관소에 있다. 파일을 저장소·원격·보고 사이트에 복사하지 않는다. `.local/originals.json`은 보관 경로만 담고 Git 제외다. 실제 스킬은 `.agents/skills`, HeavyMach 1 원본은 `docs/reference/heavymach1`에 있다.
+HeavyMach 1 저장소는 읽기만 했다. 사용자의 iPhone을 조작하지 않는다. 일반/치트 저장과 원본·실패 로그를 보존한다. 원본·디컴파일 출력은 Git·보고 사이트에 넣지 않는다. 현행 정책은 AGENTS.md·docs/canonical.md와 문서 연결표를 따른다.
 
-새 clone에서는 tools/setup.py로 훅을 설치한다. docs/repository-management.md의 브랜치·반출 규칙을 따른다. HeavyMach 1·Unity·기존 hm-defense와 사용자 저장을 보존한다. 자동 새 세션 전환이나 별도 인계 승인을 요구하지 않는다.
-
-HeavyMach 1·2·MachDefense 모두 광고를 표시하거나 요청하지 않는다. 호환판에도 적용한다. 원본 IPA는 수정하지 않고 광고 API는 로컬 실행기에서 비표시 처리한다.
+아래는 이전 단계의 기록이다. 현재 브랜치·결과는 위 문서와 최신 실행 기록을 우선한다.
 
 ## 이전 단계 — 호환판 구현·검사 인계
 

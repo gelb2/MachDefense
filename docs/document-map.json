@@ -95,7 +95,10 @@
       "docs/evidence/module-inventory-20261105.json",
       "docs/source-reimplementation-plan.md",
       "docs/validation-plan.md",
-      "docs/usability-todo.md"
+      "docs/usability-todo.md",
+      "docs/evidence/module-work-20261105.md",
+      "Modules/README.md",
+      "docs/development.md"
     ]
   }
 }

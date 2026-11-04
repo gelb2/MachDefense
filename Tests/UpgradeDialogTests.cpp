@@ -1,4 +1,4 @@
-#include "UpgradeDialog.hpp"
+#include "Core/Presentation/UpgradeDialog.hpp"
 #include <cassert>
 #include <filesystem>
 #include <fstream>

@@ -45,4 +45,16 @@
         [audio setActive:NO];audio=nil;
     }}
 }
+- (void)testMusicQueueLoopsPastEndOfShortResource {
+    NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
+    MDAudio* audio=[[MDAudio alloc]initWithResourceRoot:root];XCTAssertTrue([audio prepareSounds]);
+    // This WAV lasts about 0.6 seconds. The same packet queue must refill from
+    // its beginning repeatedly; playing=true alone cannot prove output advanced.
+    [audio playMusic:@"BuildMachComplete.wav" gain:.01];
+    auto done=[self expectationWithDescription:@"AudioQueue loops past EOF"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW,int64_t(2.5*NSEC_PER_SEC)),dispatch_get_main_queue(),^{[done fulfill];});
+    [self waitForExpectations:@[done] timeout:4];
+    XCTAssertTrue(audio.musicPlaying);XCTAssertGreaterThan(audio.musicPlaybackTime,2.f);
+    [audio stopMusic];XCTAssertFalse(audio.musicPlaying);
+}
 @end

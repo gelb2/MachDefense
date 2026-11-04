@@ -1,6 +1,7 @@
 // Deterministic before/after transcript. Run both builds with identical compiler,
 // assets and seeds; compare stdout byte for byte. No object padding is hashed.
 #include "SessionTestSupport.hpp"
+#include "Core/Validation/ValidationPanel.hpp"
 #include <bit>
 #include <iomanip>
 #include <type_traits>
@@ -29,8 +30,34 @@ struct TraceHost:Host {
     Digest audio;
     void playSound(std::string_view n,float g,float p)override {Host::playSound(n,g,p);audio.add(n);audio.add(g);audio.add(p);}
 };
+static void normalCheatParity(Resources& resources){
+    Host normalHost,cheatHost;auto save=SaveData::empty(123);save.createProfile("PARITY",1);
+    normalHost.saved=cheatHost.saved=save.encode();
+    GameSession normal(resources,normalHost,false),cheat(resources,cheatHost,true);
+    auto check=[&]{
+        auto a=normal.frame(),b=cheat.frame();
+        // The TEST control is drawn before transition overlays. Remove only
+        // that control and its four glyphs, preserving all game draw order.
+        auto entry=std::find_if(b.sprites.begin(),b.sprites.end(),[](const Sprite& s){return s.image=="SysMenu_Btn.png"&&s.destination.x==2&&s.destination.width==34&&s.destination.height==18;});
+        assert(entry!=b.sprites.end()&&b.sprites.end()-entry>=5);
+        for(auto i=entry+1;i!=entry+5;++i)assert(i->image.starts_with("Generated/"));
+        b.sprites.erase(entry,entry+5);
+        Digest da,db;da.frame(a);db.frame(b);assert(da.value==db.value);
+        assert(normalHost.saved==cheatHost.saved);
+        assert(normalHost.soundCalls==cheatHost.soundCalls);
+        assert(normalHost.song==cheatHost.song);
+        assert(normalHost.writes==cheatHost.writes);
+    };
+    auto advance=[&](unsigned n){for(unsigned i=0;i<n;++i){normal.tick();cheat.tick();check();}};
+    auto touch=[&](float x,float y){tap(normal,x,y);tap(cheat,x,y);check();};
+    check();touch(160,240);advance(160);touch(160,140);advance(160);touch(240,450);advance(160);
+    touch(160,450);advance(60);touch(292,52);advance(900);
+    touch(284,435);advance(30);normal.setActive(false);cheat.setActive(false);advance(30);
+    normal.setActive(true);cheat.setActive(true);check();touch(130,96);advance(300);
+    assert(normal.validationWorld()==nullptr);assert(!normal.applyValidationCommand(validationOpenCommand));
+}
 int main(int argc,char** argv){
-    assert(argc==2);Resources resources;resources.root=argv[1];
+    assert(argc==2);Resources resources;resources.root=argv[1];normalCheatParity(resources);
     for(bool pad:{false,true})for(unsigned mission=0;mission<80;++mission){
         auto save=SaveData::empty(1);save.createProfile("PARITY",1);save.setCredits(0,1000000);
         TraceHost host;World world(resources,host,save,0,pad?BattleGeometry::pad():BattleGeometry::phone(),123+mission);

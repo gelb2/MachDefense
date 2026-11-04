@@ -3,6 +3,7 @@
 - (instancetype)initWithResourceRoot:(NSURL*)root;
 - (BOOL)prepareSounds;
 - (void)play:(NSString*)name gain:(float)gain pan:(float)pan;
+- (void)play:(NSString*)name gain:(float)gain x:(float)x y:(float)y;
 - (void)playMusic:(NSString*)name gain:(float)gain;
 - (void)stopMusic;
 - (void)stopEffects;

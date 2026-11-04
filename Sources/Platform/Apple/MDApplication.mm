@@ -2,7 +2,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "MDRenderer.h"
 #import "MDAudio.h"
-#include "../../Core/Game.hpp"
+#include "Core/Contracts/Game.hpp"
 #include <algorithm>
 #include <map>
 #include <stdexcept>
@@ -68,6 +68,12 @@ public:
     void playSound(std::string_view name,float gain,float pan) override {
         const double start=audit?CACurrentMediaTime():0;
         NSString* n=[[NSString alloc] initWithBytes:name.data() length:name.size() encoding:NSUTF8StringEncoding];[audio_ play:n gain:gain pan:pan];
+        if(audit){++auditSounds;auditAudioMs+=(CACurrentMediaTime()-start)*1000;}
+    }
+    void playSoundAt(std::string_view name,md::Vec2 position,float gain) override {
+        const double start=audit?CACurrentMediaTime():0;
+        NSString* n=[[NSString alloc] initWithBytes:name.data() length:name.size() encoding:NSUTF8StringEncoding];
+        [audio_ play:n gain:gain x:position.x y:position.y];
         if(audit){++auditSounds;auditAudioMs+=(CACurrentMediaTime()-start)*1000;}
     }
     void playMusic(std::string_view name,float gain) override {

@@ -7,10 +7,11 @@ projectReferences:
     path: ../../Modules/MachDefenseModules.xcodeproj
 settings:
   base:
+    ARCHS: arm64
     CLANG_CXX_LANGUAGE_STANDARD: c++20
     CLANG_ENABLE_OBJC_ARC: 'YES'
     OTHER_CPLUSPLUSFLAGS: [$(inherited), -ffp-contract=off, -fno-fast-math]
-    HEADER_SEARCH_PATHS: [$(inherited), $(SRCROOT)/../../Modules/ThirdParty/openal-soft/include]
+    HEADER_SEARCH_PATHS: [$(inherited), $(SRCROOT)/../../Sources, $(SRCROOT)/../../Modules/ThirdParty/openal-soft/include]
     LIBRARY_SEARCH_PATHS: [$(inherited), $(SRCROOT)/../../.local/openal/$(PLATFORM_NAME)]
     TARGETED_DEVICE_FAMILY: '1,2'
     SUPPORTS_MACCATALYST: 'NO'
@@ -50,6 +51,9 @@ targetTemplates:
         UIRequiresFullScreen: true
     dependencies:
       - target: MachDefenseModules/MachDefenseCore
+        link: true
+        embed: false
+      - target: MachDefenseModules/MachDefenseAudio
         link: true
         embed: false
       - target: MachDefenseModules/MachDefenseAssets

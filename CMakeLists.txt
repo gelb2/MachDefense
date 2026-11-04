@@ -3,14 +3,13 @@ project(MachDefense LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-add_library(MachDefenseCore STATIC Sources/Core/SaveData.cpp Sources/Core/DataTable.cpp
-    Sources/Core/Chunk.cpp Sources/Core/Battle.cpp Sources/Core/Combat.cpp Sources/Core/Economy.cpp
-    Sources/Core/WeaponController.cpp Sources/Core/Menu.cpp Sources/Core/Production.cpp
-    Sources/Core/Bipod.cpp Sources/Core/Projectile.cpp Sources/Core/Transition.cpp Sources/Core/PlayerParts.cpp
-    Sources/Core/Settlement.cpp Sources/Core/GameHUD.cpp Sources/Core/World.cpp
-    Sources/Core/UpgradeDialog.cpp Sources/Core/SummaryDialog.cpp Sources/Core/GameSession.cpp Sources/Core/Loot.cpp Sources/Core/SpecialAttack.cpp Sources/Core/Formation.cpp Sources/Core/ValidationPanel.cpp Sources/Core/ValidationTools.cpp Sources/Core/Trail.cpp Sources/Core/WorldEffects.cpp)
-target_include_directories(MachDefenseCore PUBLIC Sources/Core)
+include(Modules/core-sources.cmake)
+add_library(MachDefenseCore STATIC ${MACHDEFENSE_CORE_SOURCES})
+target_include_directories(MachDefenseCore PUBLIC Sources)
 target_compile_options(MachDefenseCore PRIVATE -Wall -Wextra -Wpedantic -ffp-contract=off -fno-fast-math)
+add_library(MachDefenseAudio STATIC Sources/Audio/OpenALEffects.cpp)
+target_include_directories(MachDefenseAudio PUBLIC Sources PRIVATE Modules/ThirdParty/openal-soft/include)
+target_compile_options(MachDefenseAudio PRIVATE -Wall -Wextra -Wpedantic)
 include(CTest)
 if(BUILD_TESTING)
     add_executable(ModuleParityTests Tests/ModuleParityTests.cpp)

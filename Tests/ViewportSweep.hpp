@@ -1,7 +1,7 @@
 #pragma once
-#include "../Sources/Core/GameSession.hpp"
-#include "../Sources/Core/World.hpp"
-#include "../Sources/Core/FrameLayout.hpp"
+#include "Core/Session/GameSession.hpp"
+#include "Core/Simulation/World.hpp"
+#include "Core/Contracts/FrameLayout.hpp"
 #include <functional>
 #include <sstream>
 #include <stdexcept>

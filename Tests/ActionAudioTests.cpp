@@ -41,5 +41,20 @@ int main(int argc,char** argv) {
     expect("Install.wav",[&]{tapImage(game,"UpgradeBtn_Install.png");});
     assert(h.soundCalls["UI_Btn_OK.wav"]==0);
     assert(h.writes==1); // Audio feedback does not persist transient actions.
+    {
+        struct PositionedHost:Host {
+            Vec2 position{};unsigned positioned=0;
+            void playSoundAt(std::string_view cue,Vec2 p,float gain)override {position=p;++positioned;playSound(cue,gain,0);}
+        } positioned;
+        auto state=SaveData::empty(1);state.createProfile("POSITION",1);
+        World w(r,positioned,state,0,BattleGeometry::phone(),123);w.start(0);
+        const auto center=w.screenToWorld({160,240});
+        const auto id=w.validationSpawn("E_Tank_01",false,{center.x+100,center.y+400});
+        w.damage(id,1);assert(positioned.positioned==1);
+        assert(positioned.position.x==1&&positioned.position.y==2);
+        w.actor(id)->position.x=center.x-100;w.damage(id,1);
+        assert(std::isnan(positioned.position.x)&&positioned.position.y==2);
+        assert(positioned.writes==0);
+    }
     std::cout<<"ActionAudio: panels, queue acceptance, base/unit/special upgrade and slot cues passed\n";
 }
