@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD2400000000000000000001 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85239814D3FC2F9DEBC13880 /* AVFoundation.framework */; };
+        A11000000000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000003 /* Assets.xcassets */; };
+        A11000000000000000000002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11000000000000000000003 /* Assets.xcassets */; };
 		037B882AE7B9E25237D4351F /* MDApplication.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9427C033AD771D00358FBE88 /* MDApplication.mm */; };
 		047C0D4EE0AFF1CBF536CD59 /* libMachDefenseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F218510BA65B17C6C002E654 /* libMachDefenseCore.a */; };
 		0924C650DEF9A1B1165AE884 /* libMachDefenseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F218510BA65B17C6C002E654 /* libMachDefenseCore.a */; };
@@ -107,14 +110,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1755641B355B470D3C6678C6 /* MachDefenseCheat.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MachDefenseCheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        A11000000000000000000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		1755641B355B470D3C6678C6 /* MachDefenseCheat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MachDefenseCheat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9FD548D9AB06589D082A84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		33FF06C42EA9A44B26B9CE2E /* MenuRenderTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MenuRenderTests.mm; sourceTree = "<group>"; };
 		3DC02202F17311B7C70C39DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		427943AB691B489FE4A04936 /* MachDefenseRendererTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MachDefenseRendererTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4732A4117DABD41E700A18D9 /* MDAudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDAudio.h; sourceTree = "<group>"; };
 		5FA298F56C0D8B0FA51BCE3E /* MDRenderer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MDRenderer.mm; sourceTree = "<group>"; };
-		63989782F0FADF6F3355CAA2 /* MachDefense.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MachDefense.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63989782F0FADF6F3355CAA2 /* MachDefense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MachDefense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF6004B3123526EAA94D577 /* RendererTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RendererTests.mm; sourceTree = "<group>"; };
 		85239814D3FC2F9DEBC13880 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		935C12677FC2026C703B1EDE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -142,6 +146,7 @@
 				638F842D737E0851C8F595C8 /* libMachDefenseCore.a in Frameworks */,
 				586CFE0CC7A7C97CA801EDA7 /* OpenAL.framework in Frameworks */,
 				59A01E474BDAFBA1D1D143E3 /* AudioToolbox.framework in Frameworks */,
+				BD2400000000000000000001 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,8 +194,8 @@
 		4B0953B8B2FF3388C57615D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F218510BA65B17C6C002E654 /* libMachDefenseCore.a */,
 				D1AF5F39A1C4D173245FF503 /* MachDefenseAssets.bundle */,
+				F218510BA65B17C6C002E654 /* libMachDefenseCore.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			);
 			dependencies = (
 				DCC87B6E5B936ECD7604A462 /* PBXTargetDependency */,
+                A11000000000000000000004 /* Cheat test host */,
 				D6821E073B091C1587369DDC /* PBXTargetDependency */,
 			);
 			name = MachDefenseRendererTests;
@@ -399,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E1FA5FD0EB1D362606B05A6 /* MachDefenseAssets.bundle in Resources */,
+                A11000000000000000000001 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5D8943C488DCA769D4B0EDD /* MachDefenseAssets.bundle in Resources */,
+                A11000000000000000000002 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,8 +436,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A7B3CFBFABBDC2271FF5F30 /* AudioTests.mm in Sources */,
-				5E36EA5934345FF5585E3736 /* MDAudio.mm in Sources */,
-				2109B01E14823CEA2483B009 /* MDRenderer.mm in Sources */,
 				B5830815542B0BD21E49760B /* MenuRenderTests.mm in Sources */,
 				FA15F9154647C3FA13FF0BB5 /* RendererTests.mm in Sources */,
 			);
@@ -448,6 +454,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+        A11000000000000000000004 /* Cheat test host */ = {isa = PBXTargetDependency; target = 0E2C9562DE48484149C4956B; };
 		42AC6947E5E880A493865EF8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MachDefenseCore;
@@ -496,6 +503,8 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gelb2.machdefense.renderertests;
+                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MachDefenseCheat.app/MachDefenseCheat";
+                DEVELOPMENT_TEAM = PDF8XXXYH9;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -516,6 +525,8 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gelb2.machdefense.renderertests;
+                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MachDefenseCheat.app/MachDefenseCheat";
+                DEVELOPMENT_TEAM = PDF8XXXYH9;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -601,6 +612,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = PDF8XXXYH9;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"MD_VALIDATION=0",
@@ -625,6 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = PDF8XXXYH9;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"MD_VALIDATION=1",
@@ -717,6 +730,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = PDF8XXXYH9;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"MD_VALIDATION=0",
@@ -741,6 +755,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = PDF8XXXYH9;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"MD_VALIDATION=1",

@@ -114,6 +114,21 @@ int main(int argc,char** argv) {
     md::TrainMotion train;train.setDestination({600,800});train.tick();
     assert(std::abs(train.position.x-.0036f)<1e-8f&&std::abs(train.position.y-.0048f)<1e-8f);
     train.setDestination(train.position);train.tick();assert(train.state==0&&train.speed==0);
+    // Original same-side collision separates overlaps once and keeps turrets
+    // fixed. It intentionally leaves coincident centers unchanged.
+    md::Vec2 first{0,0},second{10,0};
+    md::separateGroundBodies(first,10,false,second,10,false);
+    assert(first.x==-1.5f&&second.x==11.5f);
+    first={0,0};second={10,0};md::separateGroundBodies(first,10,true,second,10,false);
+    assert(first.x==0&&second.x==13);
+    first={0,0};second={10,0};md::separateGroundBodies(first,10,false,second,10,true);
+    assert(first.x==-3&&second.x==10);
+    first=second={0,0};md::separateGroundBodies(first,10,false,second,10,false);
+    assert(first.x==0&&second.x==0);
+    second={20,0};md::separateGroundBodies(first,10,false,second,10,false);
+    assert(first.x==0&&second.x==20);
+    first={0,0};second={10,0};md::separateGroundBodies(first,20,false,second,10,false);
+    assert(first.x==-4&&second.x==12);
     auto segment=md::TerrainSegment::between({0,0},{100,0});
     assert(segment.normal.x==0&&segment.normal.y==-1&&segment.length==100);
     assert(segment.penetration({50,10})==6&&segment.penetration({50,-10})==6);

@@ -109,3 +109,71 @@ Xcode GUI가 바꾼 개인 서명 팀과 공유 스킴 형식 3개 파일은 로
 HeavyMach 1의 XCTest 방식을 적용했다. 실제 렌더러·오디오·시험 저장을 연결한 3종 검사가 빌드 포함 33.083초에 통과했다. 80개 미션 승패·재도전·보상·진행·저장 재읽기, 포팅판 관측값에 따른 13개 강화 구매, 생산 220건·운반봇 배치 60건·특수공격 54건을 검사했다. [실행 결과와 재실행 방법](docs/evidence/apple-automated-sweep-20261104.md).
 
 전체 강화 단계 구매와 모든 일반 무장 검사, 입력·난수를 고정한 포팅판 교전 대조 및 실기기 성능 측정은 남았다. 반복 항목은 이 자동검사에 추가한다.
+
+## 2026-11-04 정식 앱 피드백 수정
+
+전체 강화·무장·iPad 짧은 성능 검사는 완료했다. [측정 결과](docs/evidence/full-upgrade-weapon-device-20261104.md). 이후 사용자가 정식 앱에서 포탑 안내·딤·생산 완료음·복귀 먹통을 발견했고 로딩 일러스트도 확인하도록 지시했다. [수정·검사·설치 상태](docs/evidence/source-ui-audio-lifecycle-20261104.md)를 먼저 확인한다. 현재 작업 파일에는 이 수정과 아이콘·실기기 자동검사 변경이 함께 있다. 사용자 Xcode 서명 설정 변경을 보존한다.
+
+
+사용자 최신 지시: 현재 정식 빌드를 직접 테스트 중이므로 계속 전달하는 관측을 TODO에 누적한다. iPhone 앱을 임의로 종료·재설치하지 않는다. 다섯 오류 수정본은 iPhone/iPad 정식과 iPad 치트에 설치했다. 그 뒤 안내창 글자 축소 보정은 iPad 치트에만 추가 반영했다. 정식 앱 후속 반영은 사용자 테스트 후 진행한다. iPhone 치트는 3개 앱 한도이며 기존 포팅판 삭제 승인을 기다린다.
+
+## 후속 수정·핵폭탄 검사 — 2026-11-04 23:19
+
+아이패드 치트 앱에 완료 표시 오류·로딩 효과음·버튼 효과음·유닛 겹침 해소 수정본을 설치했다. [수정 및 실기기 검사](docs/evidence/source-ui-audio-lifecycle-20261104.md). 핵폭탄은 원본 피해식과 수치가 일치하며 5레벨 체력 검사가 실제 iPad에서도 통과했다. [핵폭탄 검사](docs/evidence/nuclear-damage-20261104.md).
+
+미션 3 구멍 위 포탑 설치와 미션 4 정체의 포팅판 실행 대조, 피격·플라스마·공간 음향 대조는 남았다. 화면 확장은 계획만 기록했다. iPhone 정식 앱은 사용자 테스트 중이므로 종료·재설치하지 않는다.
+
+## 2026-11-04 23:40 후속 검사
+
+기지 강화 실제 효과·핵폭탄 일반 체력 적 피해/처치·오디오 지연 중단 알림 및 미디어 재설정 복구를 iPad에서 검사했다. 3개 검사 4.275초 통과. [수정과 결과](docs/evidence/base-audio-followup-20261104.md). iPhone 정식 앱은 사용자 플레이 중이라 교체하지 않았다. 지형 포팅판 직접 대조·실제 출력음 녹음·피격/지속 피해음 대조는 남았다.
+
+### 23:58 추가 결과와 남은 실행
+
+- HitBody 3종·지속 피해음 연결 완료. DamageAudioSweep 72조건 iPad 통과. 원본 raw OpenAL source15의 WeMade 포팅판 매핑은 Missile06.wav. 옛 iOS 드라이버 매핑과 공간 위치음향은 미확인.
+- 최신 CTest33/33,184.48초 통과. iPad1800프레임/410효과음/쓰기0; 교전3구간 p95 16.67ms,25ms 초과0. `.local/final-audio-performance-ipad.xcresult`.
+- 최신 iPad 검사 호스트 앱 일반 실행도 devicectl 성공, PID7675 종료 완료. 직접 화면 확인은 CUA cgWindowNotFound로 막혔다. 사용자에게 Mac 잠금 여부를 확인 요청했다.
+- 테스트 플러그인 없는 별도 치트 앱은 `.local/clean-cheat-feedback`에서 컴파일했으나 CLI 서명 errSecInternalComponent로 실패. Xcode GUI 창 접근 복구 뒤 기존 절차로 Clean Build Folder→MachDefenseCheat build→설치→터치·홈복귀 확인 필요. 기기에는 최신 XCTest 호스트가 남아 있다. 이전 깨끗한 앱으로 되돌리면 수정이 빠지므로 덮어쓰지 않았다.
+- 사용자 플레이 중인 iPhone 정식 앱은 건드리지 않았다.
+- 포팅판 시뮬레이터의 Stage4 시험 저장을 `.local/av-parity-20261104/port-before-stage4.sav`로 복원하고 바이트 일치 확인. 이후 미션3·4 직접 비교 때 다시 시험용 저장을 준비한다.
+- 보고서 소스는 `.local/report-site-edit`, 기존 project appgprj_6addbf55aea081918d3d182d7e496e88. 4개캡처·강화/핵폭탄/오디오/절차점검 추가. 배포기록은 아래 최종상태를 확인한다.
+
+### 통합 보고서 배포 완료
+
+2026-11-04 23:58:46 KST, Sites 상태 succeeded. URL: https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#feedback-20261104
+소스 SHA `3611c5444ba7168f8c5342a73b1f47682f6bec85`, 배포 `appgdep_6aeb4802cfb081918c1194640d18d4e6`. 소유자 전용 유지. Safari 로컬 화면에서 새 절·표·링크를 확인했다. 배포 후 브라우저 열기는 Mac 창 접근 실패로 미실행. 공식 배포 성공 응답 확인.
+
+사이트 압축 파일의 확장 용량 제한을 넘겨 새 캡처를 무손실 WebP로 바꾸고 기존 PNG/GIF도 픽셀·애니메이션 프레임·시간을 유지한 채 압축했다. 기존 이미지 URL은 유지했다. macOS AppleDouble 메타데이터를 COPYFILE_DISABLE=1로 패키지에서 제외한 최종 tar는255.53MiB다. 게임 자원은 변경하지 않았다.
+
+## 2026-11-05 00:08 설치·화면 연결 후속
+
+Xcode에서 Clean Build Folder 후 MachDefenseCheat 빌드 성공. 테스트 PlugIns가 없는 앱과 코드 서명을 확인하고 실제 iPad에 설치·실행했다. `.local/final-feedback-apps/MachDefenseCheat.app`, `.local/final-feedback-ipad-install.log`, `.local/final-feedback-ipad-launch.json`. 위 23:58의 CLI 서명 실패 후속은 이 GUI 빌드로 해결했다.
+
+Device Hub 전체 창에서 좌표 입력이 noWindowsAvailable로 실패했지만, AX의 Switch to compact window를 누른 뒤 좌표 입력이 복구됐다. 서비스·서버 버전과 서명은 일치했고 인증 거절은 없었다. 서비스나 권한은 변경하지 않았다. 실제 iPad에서 TEST 표시, IPADTEST 슬롯, Stage2 선택·진입, RifleTurret 선택 시 Tap to build 안내, 월드 터치 후 생산 대기열과 셀 차감을 확인했다. 백그라운드 복귀 검사는 진행 중이다.
+
+## iPad 직접 조작 — 2026-11-05 00:11
+
+테스트 플러그인이 없는 최종 치트 앱을 Xcode GUI에서 새로 빌드하고 iPad에 설치했다. 서명 검사 통과. 실제 IPADTEST 프로필의 Stage2에서 포탑 선택→Tap to build 안내→위치 지정→생산→배치→사격을 확인했다. 홈 화면으로 나갔다 돌아오자 System Menu가 열렸고, 셀 412에서 멈춰 있었다. Resume Game을 누르자 메뉴가 닫히고 셀 증가·적 이동·포탑 사격이 재개됐다. 복귀 뒤 특수기술 패널과 Menu도 직접 눌렀다. Save & Exit로 타이틀 복귀를 확인하고 프로세스를 종료했다. iPad 홈 화면도 확인했다.
+
+Device Hub 전체 창의 좌표 입력 오류는 작은 기기 창으로 전환한 뒤 해소됐다. 재현 조건과 복구 방법을 apple-wireless-device 스킬에 기록했다. 이번 화면 검사는 오디오 녹음 검사를 포함하지 않는다. 사진 촬영 후 실제 출력음 비교는 남아 있다. iPhone 정식 앱은 변경하지 않았다.
+
+00:13 Safari에서 배포된 통합 사이트의 MachDefense 링크를 열고 수정 표·피격음72조건·1800프레임 결과·남은 과제 본문을 확인했다. 실제 운영 경로는 `/machdefense#feedback-20261104`로 표시된다. 사이트 보고서에는 23:48 자동검사까지 반영돼 있고, 00:11 직접 조작 결과는 현재 저장소 근거 문서에 추가했다.
+
+## 2026-11-05 화면 확장 후속
+
+사용자 최신 지시로 iPhone→iPad 화면 대응을 먼저 진행했다. 전투만 확장하고 메뉴에 여백이 남은 상태를 사용자가 지적하여 메뉴도 수정했다. 시뮬레이터·실제 iPhone/iPad 자동검사가 통과했다. [근거와 남은 검사](docs/evidence/viewport-20261105.md). iPhone 포팅판은 사용자 승인으로 저장을 저장소 밖에 백업하고 삭제했다. HeavyMach 정식과 MachDefense 정식은 유지한다. 아직 이 작업을 커밋·병합하지 않았다.
+
+## 2026-11-05 01:24 iPhone 정식 설치와 iPad 후속
+
+사용자 요청으로 Xcode GUI MachDefense 일반 앱을 빌드해 iPhone에 설치했다. 저장 42,496바이트 전후 일치, 코드 서명·일반 번들·PlugIns 없음 확인. 정식 앱 Stage6 전투 화면 확인 후 아이폰을 더 조작하지 않는다. 이후 기기 작업은 연결된 iPad만 사용한다.
+
+iPad 회색 띠는 이번에 넣은 GameHUD::append의 x=250부터 오른쪽 끝까지 원본 금속 조각을 반복하는 코드 때문이다. 전장 폭256은 그대로 두고 HUD만 오른쪽으로 이동한 결과다. 사용자 요구를 충족하지 않아 미완료로 기록했다. [근거](docs/evidence/viewport-20261105.md), [TODO](docs/usability-todo.md). 아직 회색 띠 수정 코드는 적용하지 않았다. 마지막 타이틀 좌우 샘플 폭1px 수정은 01:23 일반 앱에 포함됐고, iPad 치트 설치본은 그 직전이다.
+
+Device Hub에서 화면이 보이지만 클릭이 전달되지 않고 회전 시 The connection was invalidated가 나왔다. Device Hub 앱만 종료 후 다시 열어 기기 선택·View Screen·compact 전환하자 실제 iPhone 슬롯 생성·이름 입력·미션 진입·생산·메뉴/재개·Save & Exit 입력이 복구됐다. Apple 권한·키체인·기기 신뢰는 변경하지 않았다.
+
+## 2026-11-05 01:40 — iPad 회색 띠 수정과 다음 커밋
+
+- 사용자 요청: 현재 작업을 끝내고 커밋한 뒤, Downloads의 01:32:18 스크린샷에 나온 기지 업그레이드 창 문제를 계획·수정한다. 투두에 원본 위치와 관측을 기록했다. Finder 미리보기로 확인했다.
+- 회색 띠 제거. World의 presentationScale은 표시 전용이며 전화 폭에서는 1이다. 맵/유닛/효과/메시를 같은 배율로 그리며 터치와 카메라는 역변환한다. 원래 전투 좌표를 바꾸지 않는다.
+- gray-red.log 간격 검사 실패 → gray-green.log 6/6 통과. gray-simulator.xcresult와 gray-ipad.xcresult 성공. 기기검사 21.61초.
+- 사용자 iPhone은 정식 앱 01:24 설치·저장 바이트 동일 확인 이후 조작하지 않았다. 향후 기기 검사는 iPad로 한다.
+- 다음 버그 원인 후보: base upgrade는 HUD가 bottomRight 기준으로 올라오는데 항목은 layout.center로 이동해 서로 다른 좌표를 사용한다. 커밋 후 화면과 버튼을 HUD 기준으로 맞추고 확장된 하단 배경 끝을 점검한다.

@@ -76,6 +76,10 @@ struct MachineDefinition {
     static MachineDefinition fromTable(const DataTable& table,std::size_t row,BattleGeometry geometry);
 };
 struct CollisionSurface { Vec2 normal,direction; };
+// GobHvMach::onCollideObject: (WeMade 1.0.3, 0x13a04).
+// Apply once per same-side pair in original child-list order.
+void separateGroundBodies(Vec2& first,float firstRadius,bool firstTurret,
+                          Vec2& second,float secondRadius,bool secondTurret);
 struct VehicleMotion {
     Vec2 position,destination,direction;
     float angle=0,speed=0,moveSpeed=.6f,rotationDivisor=30,scale=1;

@@ -88,6 +88,10 @@ bool decode(NSURL* url,std::vector<std::int16_t>& samples,ALsizei& rate,ALenum& 
     if(ALenum error=alGetError();error!=AL_NO_ERROR){_lastError=[NSString stringWithFormat:@"OpenAL play error 0x%x",error];return;}
     ++_playCount;
 }
+- (void)stopEffects {
+    Scope scope(_context);if(!scope.valid)return;
+    for(auto& [name,sound]:_sounds)alSourceStop(sound.source);
+}
 - (void)setActive:(BOOL)active {
     _active=active;
     if(active){
@@ -122,5 +126,7 @@ bool decode(NSURL* url,std::vector<std::int16_t>& samples,ALsizei& rate,ALenum& 
 - (NSString*)musicName{return _musicName;}
 - (BOOL)musicPlaying {Scope scope(_context);if(!scope.valid||!_musicSource)return NO;ALint value=0;alGetSourcei(_musicSource,AL_SOURCE_STATE,&value);return value==AL_PLAYING;}
 - (BOOL)musicLooping {Scope scope(_context);if(!scope.valid||!_musicSource)return NO;ALint value=0;alGetSourcei(_musicSource,AL_LOOPING,&value);return value==AL_TRUE;}
+- (float)musicGain {Scope scope(_context);if(!scope.valid||!_musicSource)return 0;ALfloat value=0;alGetSourcef(_musicSource,AL_GAIN,&value);return value;}
+- (float)musicPlaybackTime {Scope scope(_context);if(!scope.valid||!_musicSource)return 0;ALfloat value=0;alGetSourcef(_musicSource,AL_SEC_OFFSET,&value);return value;}
 - (NSUInteger)loadedSounds{return _sounds.size();}
 @end

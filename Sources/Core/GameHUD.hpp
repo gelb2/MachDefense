@@ -2,6 +2,7 @@
 #include "Button.hpp"
 #include "Game.hpp"
 #include "SpriteFont.hpp"
+#include "FrameLayout.hpp"
 #include <array>
 #include <functional>
 
@@ -35,6 +36,8 @@ struct GameHUDState {
     std::vector<RadarMark> radarMarks;
     std::optional<Vec2> radarCamera; // World-space bottom and top.
     std::optional<std::size_t> selectedAttack,selectedFormation;
+    std::string instruction;
+    double gameTime=0;
 };
 struct HUDAction {
     unsigned buttonId=0; // Original notification ID, never a platform UI action.
@@ -48,14 +51,21 @@ public:
     using DrawMachine=std::function<void(Frame&,std::string_view,Vec2,float)>;
     explicit GameHUD(ResourceAccess&,DrawMachine={});
     void setState(GameHUDState);
+    void setLayout(FrameLayout);
     void append(Frame&) const;
     bool touch(const Touch&);
     std::vector<HUDAction> takeActions();
 private:
+    FrameLayout layout_;
+    Vec2 controlOffset(unsigned)const;
     ResourceAccess& resources_;
     SpriteFont font_;
     DrawMachine machine_;
     GameHUDState state_;
+    std::string instruction_;
+    double instructionStart_=0;
+    bool hideInstruction_=false;
+    Vec2 instructionScale_{1,1};
     struct Control { unsigned id; std::size_t row; Button button; };
     std::vector<Control> controls_;
     std::vector<HUDAction> actions_;

@@ -4,6 +4,7 @@
 #include "SpriteFont.hpp"
 #include "Button.hpp"
 #include "DarwinRandom.hpp"
+#include "FrameLayout.hpp"
 #include <array>
 #include <optional>
 
@@ -14,6 +15,7 @@ public:
     enum class Screen { title, profiles, missions };
     Menu(ResourceAccess&,HostServices&,SaveData&,bool deferredTransitions=false);
     void tick();
+    void setLayout(const FrameLayout&);
     void touch(const Touch&);
     const Frame& frame() const { return frame_; }
     std::optional<MissionRequest> takeMissionRequest();
@@ -31,6 +33,8 @@ private:
     SpriteFont font_;
     DataTable maps_;
     Frame frame_;
+    FrameLayout layout_;
+    void expandFrame();
     Screen screen_=Screen::title;
     bool deferredTransitions_=false;
     std::optional<Screen> requestedScreen_;

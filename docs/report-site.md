@@ -9,3 +9,7 @@ MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지�
 - 근거: [판본 조사](evidence/version-audit-20261104.md)
 
 기존 사이트의 소유자 전용 공개 범위를 유지한다. 다음 보고는 이 페이지와 목차에 누적한다. 실제 배포 결과는 HANDOVER-CURRENT.md에 기록한다. Sass 세션에는 출처·원고·캡처·현재 상태를 전달하며 해당 CMS는 수정하지 않는다. IPA·실행 바이너리·개인 저장·기기 식별자는 업로드하지 않는다.
+
+## 최근 갱신 — 2026-11-04 23:58
+
+[정식 앱 피드백 수정·iPad 검사](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#feedback-20261104)를 추가했다. 생산·효과음·완료 표시·기지 강화·핵폭탄·오디오 복귀·성능·검사 누락 원인과 남은 대조를 담았다. 실제 iPad 캡처 4장을 포함한다. Sites 배포 상태 succeeded, 기존 소유자 전용 접근 유지.

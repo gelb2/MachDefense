@@ -80,5 +80,38 @@ int main(int argc,char** argv){
     tap(m,160,450);h.fail=true;tap(m,112,295);assert(s.active(0));assert(h.writes==3); // Failed write restores memory.
     tap(m,160,295);h.fail=false;tap(m,160,450);tap(m,112,295);assert(!s.active(0));assert(h.writes==4);
     assert(!SaveData::decode(h.saved).active(0));
-    std::cout<<"PASS menus: original geometry resources, blink timing, name validation, create/select/delete, locked mission, save failure rollback, no tick writes\n";
+    // The WeMade port requests missing CompleteMark.png. It does not draw
+    // SelStage_CompleteMark.png, which the source version had substituted at
+    // x=320 and clipped. Completion is represented by unlocked rows, while
+    // the selected row keeps its original selection frame.
+    Host parityHost;auto paritySave=SaveData::empty(456);assert(paritySave.createProfile("PARITY",456));
+    for(unsigned progress:{1u,4u,80u}){
+        paritySave.writeWord(SaveData::slotStart+0x38,progress);
+        Menu parity(r,parityHost,paritySave);parity.showMissions(0);
+        for(unsigned tick=0;tick<120;++tick)parity.tick();
+        assert(!hasImage(parity.frame(),"SelStage_CompleteMark.png"));
+        unsigned selected=0,unlocked=0;
+        for(const auto& sprite:parity.frame().sprites)if(sprite.image=="SelStage_Btn_Stage.png"){
+            if(sprite.sourcePx->y==192){++selected;assert(sprite.destination.x==32&&sprite.destination.width==256);}
+            if(sprite.sourcePx->y==0)++unlocked;
+        }
+        assert(selected==1&&unlocked==std::min(progress+1,80u));
+        tap(parity,240,450);auto selectedRequest=parity.takeMissionRequest();
+        assert(selectedRequest&&selectedRequest->mission==std::min(progress,79u));
+        assert(paritySave.stage(0)==progress&&parityHost.writes==0);
+    }
+    for(const auto dims: {Vec2{420,912},Vec2{1024,1366}}){
+        Host resizedHost;auto resizedSave=SaveData::empty(789);Menu resized(r,resizedHost,resizedSave);
+        FrameLayout layout;layout.resize(dims.x,dims.y,24,20);resized.setLayout(layout);
+        const auto c=layout.center();const float buttonY=layout.height-layout.bottom-30;
+        tap(resized,layout.width/2,layout.height/2);
+        tap(resized,240+c.x,buttonY);assert(resizedSave.active(0)&&resizedHost.writes==1);
+        tap(resized,160+c.x,buttonY);tap(resized,208+c.x,295+c.y);assert(resizedSave.active(0));
+        tap(resized,160+c.x,140+c.y);assert(resized.screen()==Menu::Screen::missions);
+        tap(resized,160+c.x,buttonY);tap(resized,160+c.x,295+c.y); // Support modal dismisses.
+        tap(resized,80+c.x,buttonY);assert(resized.screen()==Menu::Screen::profiles);
+        tap(resized,160+c.x,buttonY);tap(resized,112+c.x,295+c.y);assert(!resizedSave.active(0));
+        assert(resizedHost.writes==3);
+    }
+    std::cout<<"PASS menus: original geometry resources, blink timing, name validation, create/select/delete, locked mission, save failure rollback, no tick writes, completed-port parity\n";
 }

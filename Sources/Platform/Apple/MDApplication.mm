@@ -34,6 +34,7 @@ public:
 };
 }
 @interface MDGameView:UIView
+- (instancetype)initWithFrame:(CGRect)frame saveDirectory:(NSURL*)directory;
 - (void)setApplicationActive:(BOOL)active;
 - (void)shutdown;
 - (void)requestName:(std::string)initial maximum:(std::size_t)maximum completion:(std::function<void(std::optional<std::string>)>)completion;
@@ -46,9 +47,10 @@ public:
     bool audit=false;unsigned auditSounds=0,auditWrites=0;double auditAudioMs=0;
 private:
 public:
-    Services(MDGameView* view,MDAudio* audio):view_(view),audio_(audio){
-        NSURL* root=[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask].firstObject;
-        root=[root URLByAppendingPathComponent:@"MachDefense" isDirectory:YES];
+    Services(MDGameView* view,MDAudio* audio,NSURL* directory):view_(view),audio_(audio){
+        NSURL* root=directory;
+        if(!root){root=[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask].firstObject;
+            root=[root URLByAppendingPathComponent:@"MachDefense" isDirectory:YES];}
         NSError* error=nil;if(![[NSFileManager defaultManager] createDirectoryAtURL:root withIntermediateDirectories:YES attributes:nil error:&error])throw std::runtime_error("Cannot create save directory");
         saveURL_=[root URLByAppendingPathComponent:@"MachDefense.sav"];
     }
@@ -97,13 +99,16 @@ public:
 }
 + (Class)layerClass{return CAEAGLLayer.class;}
 - (instancetype)initWithFrame:(CGRect)frame {
+    return [self initWithFrame:frame saveDirectory:nil];
+}
+- (instancetype)initWithFrame:(CGRect)frame saveDirectory:(NSURL*)directory {
     if(!(self=[super initWithFrame:frame]))return nil;
     self.multipleTouchEnabled=YES;self.opaque=YES;self.backgroundColor=UIColor.blackColor;
     CAEAGLLayer* layer=(CAEAGLLayer*)self.layer;layer.opaque=YES;layer.drawableProperties=@{kEAGLDrawablePropertyRetainedBacking:@NO,kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8};
     NSURL* root=resourceRoot();if(!root)throw std::runtime_error("MachDefenseAssets.bundle is missing");
     _renderer=[[MDRenderer alloc] initWithResourceRoot:root];if(!_renderer)throw std::runtime_error("OpenGL ES initialization failed");
     _audio=[[MDAudio alloc] initWithResourceRoot:root];[_audio prepareSounds];
-    _resources=std::make_unique<Resources>(root,_renderer);_services=std::make_unique<Services>(self,_audio);
+    _resources=std::make_unique<Resources>(root,_renderer);_services=std::make_unique<Services>(self,_audio,directory);
     _auditFrames=MD_VALIDATION&&[NSProcessInfo.processInfo.environment[@"MD_FRAME_AUDIT"] isEqualToString:@"1"];
     if(_auditFrames){_samples.reserve(18000);_services->audit=true;}
     _game=md::createGame(*_resources,*_services,MD_VALIDATION!=0);
@@ -124,7 +129,7 @@ public:
 }
 - (void)layoutSubviews {
     [super layoutSubviews];self.contentScaleFactor=self.window.screen.scale?:UIScreen.mainScreen.scale;self.layer.contentsScale=self.contentScaleFactor;
-    if(_game){_game->resize(float(self.bounds.size.width),float(self.bounds.size.height));if(_active)[_renderer drawFrame:_game->frame() toLayer:(CAEAGLLayer*)self.layer];}
+    if(_game){_game->resize(float(self.bounds.size.width),float(self.bounds.size.height),float(self.safeAreaInsets.top),float(self.safeAreaInsets.bottom));if(_active)[_renderer drawFrame:_game->frame() toLayer:(CAEAGLLayer*)self.layer];}
 }
 - (void)display:(CADisplayLink*)link {
     if(!_active||_nameInputPending||!_game)return;
@@ -157,31 +162,58 @@ public:
     if(_game)for(const auto& [native,event]:pending){auto cancelled=event;cancelled.phase=md::TouchPhase::cancelled;_game->touch(cancelled);}
 }
 - (void)setApplicationActive:(BOOL)active {
-    _sceneActive=active;[self updateActivity];
+    _sceneActive=active;
+    if(active&&!_shutdown){
+        NSError* error=nil;
+        if([AVAudioSession.sharedInstance setActive:YES error:&error])_audioInterrupted=NO;
+        else NSLog(@"MachDefense audio foreground activation: %@",error);
+    }
+    [self updateActivity];
+    if(!active){
+        // Stop OpenAL before deactivating the session so the system need not
+        // suspend an active audio session while the game is in the background.
+        NSError* error=nil;
+        if(![AVAudioSession.sharedInstance setActive:NO withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&error])NSLog(@"MachDefense audio deactivation: %@",error);
+    }
 }
 - (void)updateActivity {
-    const BOOL active=_sceneActive&&!_audioInterrupted&&!_shutdown;
+    const BOOL active=_sceneActive&&!_shutdown;
     _displayLink.paused=!active||_nameInputPending;
+    // An audio interruption must not disable Resume or other game input.
+    [_audio setActive:active&&!_audioInterrupted];
     if(_active==active)return;_active=active;
     if(!active){[self cancelTouches];[_renderer finish];[_renderer discardDrawable];[self writeFrameAudit];_previousFrameTimestamp=0;_previousCallback=0;}
-    if(_game)_game->setActive(active);[_audio setActive:active];
+    if(_game)_game->setActive(active);
 }
 - (void)audioInterrupted:(NSNotification*)notification {
     if(!NSThread.isMainThread){__weak MDGameView* weakSelf=self;dispatch_async(dispatch_get_main_queue(),^{[weakSelf audioInterrupted:notification];});return;}
     if(_shutdown)return;
     NSNumber* kind=notification.userInfo[AVAudioSessionInterruptionTypeKey];
     _audioInterrupted=kind.unsignedIntegerValue==AVAudioSessionInterruptionTypeBegan;
+    const BOOL wasSuspended=[notification.userInfo[AVAudioSessionInterruptionWasSuspendedKey] boolValue];
+    if(_audioInterrupted&&wasSuspended&&_sceneActive){
+        NSError* error=nil;
+        if([AVAudioSession.sharedInstance setActive:YES error:&error])_audioInterrupted=NO;
+        else NSLog(@"MachDefense delayed suspension recovery: %@",error);
+    }
+    if(_audioInterrupted&&_game){_game->setActive(false);_game->setActive(_sceneActive&&!_shutdown);}
     if(!_audioInterrupted&&_sceneActive)[AVAudioSession.sharedInstance setActive:YES error:nil];
+    if(MD_VALIDATION)NSLog(@"MD_AUDIO interruption=%@ suspended=%d scene=%d blocked=%d",kind,wasSuspended,_sceneActive,_audioInterrupted);
     [self updateActivity];
 }
 - (void)audioReset:(NSNotification*)notification {
     if(!NSThread.isMainThread){__weak MDGameView* weakSelf=self;dispatch_async(dispatch_get_main_queue(),^{[weakSelf audioReset:notification];});return;}
     if(_shutdown)return;
+    NSString* music=[_audio.musicName copy];const float gain=_audio.musicGain;
     [AVAudioSession.sharedInstance setCategory:AVAudioSessionCategoryAmbient error:nil];
     if(_sceneActive)[AVAudioSession.sharedInstance setActive:YES error:nil];
     [_audio setActive:NO];_services->setAudio(nil);_audio=nil;
     _audio=[[MDAudio alloc] initWithResourceRoot:resourceRoot()];[_audio prepareSounds];
-    [_audio setActive:_active];_services->setAudio(_audio);
+    [_audio setActive:_active&&!_audioInterrupted];_services->setAudio(_audio);
+    if(music.length)[_audio playMusic:music gain:gain];
+#if MD_VALIDATION
+    NSLog(@"MD_AUDIO reset captured=%@ restored=%@ buffers=%lu error=%@",music,_audio.musicName,(unsigned long)_audio.loadedSounds,_audio.lastError);
+#endif
 }
 - (void)sendTouches:(NSSet<UITouch*>*)touches phase:(md::TouchPhase)phase {
     if(!_active||_nameInputPending||!_game)return;
@@ -228,7 +260,14 @@ public:
 @end
 @interface MDViewController:UIViewController @end
 @implementation MDViewController
-- (void)loadView {self.view=[[MDGameView alloc] initWithFrame:UIScreen.mainScreen.bounds];}
+- (void)loadView {
+#if MD_VALIDATION
+    // XCTest supplies its own renderer, audio and isolated save. Do not open a
+    // second OpenAL device or the player's save while hosting those tests.
+    if(NSClassFromString(@"XCTestCase")||NSProcessInfo.processInfo.environment[@"XCTestConfigurationFilePath"]){self.view=[UIView new];return;}
+#endif
+    self.view=[[MDGameView alloc] initWithFrame:UIScreen.mainScreen.bounds];
+}
 - (BOOL)prefersStatusBarHidden{return YES;}
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad
@@ -247,9 +286,9 @@ public:
     [AVAudioSession.sharedInstance setActive:YES error:nil];
     self.window=[[UIWindow alloc] initWithWindowScene:(UIWindowScene*)scene];self.window.rootViewController=[MDViewController new];[self.window makeKeyAndVisible];
 }
-- (void)sceneDidBecomeActive:(UIScene*)scene {[(MDGameView*)self.window.rootViewController.view setApplicationActive:YES];}
-- (void)sceneWillResignActive:(UIScene*)scene {[(MDGameView*)self.window.rootViewController.view setApplicationActive:NO];}
-- (void)sceneDidDisconnect:(UIScene*)scene {[(MDGameView*)self.window.rootViewController.view shutdown];self.window=nil;}
+- (void)sceneDidBecomeActive:(UIScene*)scene {if([self.window.rootViewController.view respondsToSelector:@selector(setApplicationActive:)])[(MDGameView*)self.window.rootViewController.view setApplicationActive:YES];}
+- (void)sceneWillResignActive:(UIScene*)scene {if([self.window.rootViewController.view respondsToSelector:@selector(setApplicationActive:)])[(MDGameView*)self.window.rootViewController.view setApplicationActive:NO];}
+- (void)sceneDidDisconnect:(UIScene*)scene {if([self.window.rootViewController.view respondsToSelector:@selector(shutdown)])[(MDGameView*)self.window.rootViewController.view shutdown];self.window=nil;}
 @end
 @interface MDAppDelegate:UIResponder<UIApplicationDelegate> @end
 @implementation MDAppDelegate

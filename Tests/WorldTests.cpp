@@ -31,5 +31,16 @@ int main(int argc,char**argv){assert(argc==2);Resources resources;resources.root
         world.damage(enemy,100000000);assert(world.state()==md::WorldState::cleared);bool clear=false;for(const auto&e:world.takeEvents())clear|=e.kind==md::WorldEvent::Kind::stageCleared;assert(clear);
         world.start(1);for(const auto&a:world.actors())if(a->base&&a->player)player=a->id;world.damage(player,100000000);assert(world.state()==md::WorldState::failed);
     }
+    // Enemy collision override must separate earlier same-side bodies. Freeze
+    // their AI/motion to measure only the collision, away from map obstacles.
+    {md::World world(resources,host,save,0,md::BattleGeometry::phone(),123);world.start(0);
+        auto first=world.validationSpawn("E_Tank_01",false,{0,0});
+        auto second=world.validationSpawn("E_Tank_01",false,{10,0});
+        auto* a=world.actor(first);auto* b=world.actor(second);
+        a->radius=b->radius=10;a->enemyAI.stopDelay=b->enemyAI.stopDelay=10000;
+        a->vehicle.state=b->vehicle.state=0;a->attackCheck=b->attackCheck=10000;
+        world.tick();world.tick();
+        assert(std::abs(a->position.x+1.5f)<.0001f&&std::abs(b->position.x-11.5f)<.0001f);
+    }
     assert(host.writes==0);std::cout<<"WorldTests: 80 phone + 80 pad maps, bases, production, pause, coordinates, clear/fail, no implicit save passed\n";
 }

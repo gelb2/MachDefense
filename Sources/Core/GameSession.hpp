@@ -11,7 +11,7 @@ public:
     void tick()override;
     void touch(const Touch&)override;
     void setActive(bool)override;
-    void resize(float,float)override;
+    void resize(float,float,float safeTop=0,float safeBottom=0)override;
     int preferredFramesPerSecond()const override{return 60;}
     World* validationWorld();
     bool applyValidationCommand(unsigned);

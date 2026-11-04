@@ -73,6 +73,9 @@ int main(int argc,char** argv){
     f={};h.append(f);validate(f,r);assert(find(f,"Icon02001.png").destination.x==292-r.imageSize("Icon02001.png").x/4);assert(find(f,"SelMach.png").blend==Blend::additive);
     tap(h,292,52);actions=h.takeActions();assert(actions.size()==1&&actions[0].buttonId==0x40e&&actions[0].row==0);
     tap(h,293,406);assert(h.takeActions().at(0).buttonId==0x3fe);
+    h.touch({90,TouchPhase::began,{292,52}});
+    actions=h.takeActions();assert(actions.size()==1&&actions[0].buttonId==0x40e&&actions[0].row==0);
+    h.touch({90,TouchPhase::ended,{292,52}});assert(h.takeActions().empty());
     state.selectedPanel=3;state.selectedFormation=4;h.setState(state);f={};h.append(f);validate(f,r);
     for(unsigned i=0;i<5;++i){tap(h,292,52+51.f*i);actions=h.takeActions();assert(actions.size()==1&&actions[0].buttonId==0x40e&&actions[0].row==i);}
     assert(std::none_of(f.sprites.begin(),f.sprites.end(),[](const auto& s){return s.image=="Btn_UpgradeEquip.png";}));
@@ -105,5 +108,24 @@ int main(int argc,char** argv){
             tap(h,284,469);assert(h.takeActions().at(0).buttonId==0x413);
         }
     }
-    std::cout<<"GameHUD original assets, prices, gauges, production touch, pause and volume checks passed\n";
+    // Original MachButton right-column tiles contain the glow. Hold, cancel,
+    // select and clear each lower button without creating a new effect asset.
+    const auto lowerTile=[&](const Frame& frame,unsigned index){
+        unsigned count=0;for(const auto& sprite:frame.sprites)if(sprite.image=="MachButton.png"){
+            if(count++==index)return unsigned(sprite.sourcePx->y/64)*2+unsigned(sprite.sourcePx->x/64);
+        }assert(false);return 0u;
+    };
+    state.mainPanelOffsetY=0;state.selectedPanel=1;h.setState(state);f={};h.append(f);
+    assert(lowerTile(f,0)==1&&lowerTile(f,1)==2&&lowerTile(f,2)==6);
+    for(unsigned index=1;index<=2;++index){
+        const Vec2 pos{index==1?161.f:208.5f,443};
+        h.touch({100+index,TouchPhase::began,pos});
+        for(unsigned frame=0;frame<20;++frame){state.gameTime+=1./60;h.setState(state);f={};h.append(f);assert(lowerTile(f,index)==(index==1?3u:7u));}
+        h.touch({100+index,TouchPhase::moved,{20,300}});f={};h.append(f);assert(lowerTile(f,index)==(index==1?2u:6u));
+        h.touch({100+index,TouchPhase::cancelled,{20,300}});assert(h.takeActions().empty());
+    }
+    state.selectedPanel=2;h.setState(state);f={};h.append(f);assert(lowerTile(f,0)==0&&lowerTile(f,1)==3);
+    h.touch({110,TouchPhase::began,{115.5f,443}});f={};h.append(f);assert(lowerTile(f,0)==1);
+    h.touch({110,TouchPhase::ended,{115.5f,443}});actions=h.takeActions();assert(actions.size()==1&&actions[0].buttonId==0x409);
+    std::cout<<"GameHUD original assets, prices, gauges, production touch, pause, lower glow tiles and special push checks passed\n";
 }

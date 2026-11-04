@@ -27,6 +27,7 @@ void Menu::applyScreen(Screen screen){
     else {resetInput();screen_=Screen::title;host_.playMusic("Intro.mp3");titleTime_=0;titleVisible_=false;titleCycleSound_=false;rebuild();}
     deferredTransitions_=managed;
 }
+void Menu::setLayout(const FrameLayout& layout){layout_=layout;resetInput();rebuild();}
 void Menu::resetInput(){
     for(auto& b:profiles_)b.reset();for(auto& b:stages_)b.reset();
     for(auto& b:bottom_)b.reset();for(auto& b:dialogButtons_)b.reset();
@@ -142,7 +143,7 @@ void Menu::rebuild(){
     if(screen_==Screen::title){
         sprite("Title.jpg",{160,240},320,480);
         if(titleVisible_)sprite("Main_TapToStart.png",{160,208},128,32);
-        return;
+        expandFrame();return;
     }
     sprite("iPon_SelSlot_BG@2x.jpg",{160,240},320,480);
     if(screen_==Screen::profiles){
@@ -171,13 +172,68 @@ void Menu::rebuild(){
             text("Stage "+std::to_string(i+1),{150,y},128,21,16,i>current?Color{10.f/255,10.f/255,10.f/255,1}:Color{10.f/255,1,1,1});
             const auto row=maps_.findRow(std::to_string(i+1));
             if(row){const std::string map(maps_.value(*row,"ImageFile"));sprite("t"+map+"_01.png",{198,y},48,24);sprite("t"+map+"_02.png",{246,y},48,24);}
-            if(i<current)sprite("SelStage_CompleteMark.png",{320,y},64,16);
+            // GuiSelectStage::init 0x3c564 requests CompleteMark.png, which
+            // is absent in WeMade 1.0.3. The port therefore has no stamp.
+            // Do not substitute SelStage_CompleteMark.png at the off-screen
+            // original child coordinate (160 + 160).
         }
         sprite("SelStage_Btn_Stage.png",{160,240+baseY_-32*float(selectedMission_)},256,32,3,4);
         sprite("iPon_SelStage_Fore@2x.png",{160,240},320,480);
         bottom(0,"Common_Btn_BACK.png");bottom(1,"Support.png");bottom(2,"Common_Btn_OK.png",4);
     }
     if(dialog_!=Dialog::none)drawDialog();
+    expandFrame();
+}
+void Menu::expandFrame(){
+    if(layout_.width==320&&layout_.height==480&&layout_.top==0&&layout_.bottom==0)return;
+    const auto center=layout_.center();
+    const Vec2 bottom{center.x,layout_.height-480-layout_.bottom};
+    const Vec2 top{center.x,layout_.top};
+    auto moveBounds=[](Button& b,Vec2 d){b.bounds.x+=d.x;b.bounds.y+=d.y;};
+    for(auto& b:profiles_)moveBounds(b,center);
+    for(auto& b:stages_)moveBounds(b,center);
+    for(auto& b:bottom_)moveBounds(b,bottom);
+    for(auto& b:dialogButtons_)moveBounds(b,center);
+    auto original=std::move(frame_.sprites);frame_.sprites.clear();
+    frame_.logicalWidth=layout_.width;frame_.logicalHeight=layout_.height;
+    auto piece=[&](const Sprite& src,Rect pixels,Rect dest){auto s=src;s.sourcePx=pixels;s.destination=dest;frame_.sprites.push_back(std::move(s));};
+    // Nine-slice only the existing background. Labels and buttons retain their
+    // original proportions. No OS view or replacement artwork is introduced.
+    auto panel=[&](const Sprite& src,bool title){
+        const auto sz=resources_.imageSize(src.image);
+        const float x=title?center.x:top.x,y=title?center.y:top.y;
+        const float end=title?y+480:layout_.height-layout_.bottom;
+        const float xs[]={0,x,x+320,layout_.width};
+        if(title){
+            for(int col=0;col<3;++col){if(xs[col+1]<=xs[col])continue;
+                const float sx=col==2?sz.x-1:0,sw=col==1?sz.x:1;
+                auto edge=src;edge.flipX=col!=1;edge.flipY=true;
+                // Reflect cloud/fire edge regions, never the baked-in title lettering.
+                piece(edge,{sx,0,sw,64},{xs[col],0,xs[col+1]-xs[col],y});
+                edge.flipY=false;piece(edge,{sx,0,sw,sz.y},{xs[col],y,xs[col+1]-xs[col],480});
+                edge.flipY=true;piece(edge,{sx,sz.y-120,sw,120},{xs[col],end,xs[col+1]-xs[col],layout_.height-end});
+            }
+        }else{
+            // Header and footer keep their height; extend the unlabelled metal body.
+            const float ys[]={0,y,y+106,end-78,end,layout_.height};
+            const float sy[]={0,0,212,804,sz.y,sz.y};
+            for(int col=0;col<3;++col)for(int row=0;row<5;++row){
+                if(xs[col+1]<=xs[col]||ys[row+1]<=ys[row])continue;
+                const float sx=col==0?0:col==1?0:sz.x-1,sw=col==1?sz.x:1;
+                const float sourceY=row==0?0:row==4?sz.y-1:sy[row];
+                const float sourceH=(row==0||row==4)?1:sy[row+1]-sy[row];
+                piece(src,{sx,sourceY,sw,sourceH},{xs[col],ys[row],xs[col+1]-xs[col],ys[row+1]-ys[row]});
+            }
+        }
+    };
+    for(auto s:original){
+        if(s.image=="Title.jpg"){panel(s,true);continue;}
+        if(s.image=="iPon_SelSlot_BG@2x.jpg"||s.image=="iPon_SelStage_Fore@2x.png"){panel(s,false);continue;}
+        if(s.image.empty()){s.destination={0,0,layout_.width,layout_.height};frame_.sprites.push_back(std::move(s));continue;}
+        const bool bottomButton=s.image=="Common_Btn_BACK.png"||s.image=="Common_Btn_DEL.png"||s.image=="Common_Btn_NEW.png"||s.image=="Support.png"||(s.image=="Common_Btn_OK.png"&&s.destination.y==434);
+        const auto d=bottomButton?bottom:center;s.destination.x+=d.x;s.destination.y+=d.y;
+        frame_.sprites.push_back(std::move(s));
+    }
 }
 void Menu::touch(const Touch& t){
     if(namePending_)return;

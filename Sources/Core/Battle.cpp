@@ -177,6 +177,25 @@ MachineDefinition MachineDefinition::fromTable(const DataTable& table,std::size_
     if(ref=="BOT_D") m.referenceType=1;else if(ref=="BOT_P") m.referenceType=2;else if(ref=="BOT_R") m.referenceType=3;
     return m;
 }
+void separateGroundBodies(Vec2& first,float firstRadius,bool firstTurret,
+                          Vec2& second,float secondRadius,bool secondTurret) {
+    const float radius=firstRadius+secondRadius;
+    Vec2 delta{first.x-second.x,first.y-second.y};
+    if(std::abs(delta.x)>=radius||std::abs(delta.y)>=radius)return;
+    const float squared=delta.x*delta.x+delta.y*delta.y;
+    if(squared==0||squared>=radius*radius)return;
+    const float distance=std::sqrt(squared);
+    delta.x/=distance;delta.y/=distance;
+    const float push=(radius-distance)*.3f;
+    delta.x*=push;delta.y*=push;
+    if(firstTurret){second.x-=delta.x;second.y-=delta.y;}
+    else if(secondTurret){first.x+=delta.x;first.y+=delta.y;}
+    else {
+        const float firstShare=firstRadius/radius,secondShare=secondRadius/radius;
+        first.x+=delta.x*firstShare;first.y+=delta.y*firstShare;
+        second.x-=delta.x*secondShare;second.y-=delta.y*secondShare;
+    }
+}
 void VehicleMotion::tick(DarwinRandom& random,std::optional<CollisionSurface> collision) {
     if(state!=1) return;
     Vec2 delta{destination.x-position.x,destination.y-position.y};

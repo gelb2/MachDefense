@@ -1,4 +1,7 @@
 #include "World.hpp"
+#include "NuclearDamageSweep.hpp"
+#include "BaseUpgradeEffectSweep.hpp"
+#include "DamageAudioSweep.hpp"
 #include <cassert>
 #include <cmath>
 #include <filesystem>
@@ -12,6 +15,9 @@ struct Resources:md::ResourceAccess{
 };
 struct Host:md::HostServices{int writes=0,sounds=0;std::optional<md::Bytes>readSave()override{return{};}bool writeSave(std::span<const std::uint8_t>)override{++writes;return true;}void playSound(std::string_view,float,float)override{++sounds;}void playMusic(std::string_view,float)override{}void stopMusic()override{}void requestName(std::string,std::size_t,std::function<void(std::optional<std::string>)>)override{}};
 int main(int argc,char**argv){assert(argc==2);Resources resources;resources.root=argv[1];Host host;
+    std::cout<<md::validation::runNuclearDamageSweep(resources,host);assert(host.writes==0);
+    std::cout<<md::validation::runBaseUpgradeEffectSweep(resources,host);assert(host.writes==0);
+    std::cout<<md::validation::runDamageAudioSweep(resources,host);assert(host.writes==0);
     for(auto geometry:{md::BattleGeometry::phone(),md::BattleGeometry::pad()}){
         auto save=md::SaveData::empty(1);save.createProfile("PLAYER",1);
         md::World world(resources,host,save,0,geometry,123);world.start(0);

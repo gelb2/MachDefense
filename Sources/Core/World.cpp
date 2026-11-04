@@ -97,7 +97,9 @@ bool World::enqueueBuild(std::string_view name,std::optional<Vec2> destination){
     if(!started_||paused_||state_!=WorldState::running)return false;
     const auto owned=save_.builds(slot_);const auto selected=std::find_if(owned.begin(),owned.end(),[&](const auto& b){return b.name==name;});if(selected==owned.end())return false;
     char suffix[16];std::snprintf(suffix,sizeof suffix,"_%02u",selected->level+1);const auto* definition=builds_.find(selected->name+suffix);if(!definition)return false;
-    float cells=clock_.cells();bool accepted=production_.enqueue(*definition,time(),buildFactor_,cells,destination);clock_.setCells(cells);return accepted;
+    float cells=clock_.cells();bool accepted=production_.enqueue(*definition,time(),buildFactor_,cells,destination);clock_.setCells(cells);
+    // BuildItem::init (0x30254) plays this only after a queue item is created.
+    if(accepted)host_.playSound("BuildMach.wav");return accepted;
 }
 bool World::activateSpecial(std::string_view name,Vec2 point){
     if(!started_||paused_||state_!=WorldState::running)return false;
@@ -131,9 +133,22 @@ bool World::activateSpecial(std::string_view name,Vec2 point){
     }else return false;
     --selected->count;save_.setAttacks(slot_,owned);return true;
 }
+void World::setViewport(float w,float h,float top){
+    if(!std::isfinite(w)||!std::isfinite(h)||w<=0||h<=0)return;
+    const bool bottom=onBottom_,upper=onTop_;
+    viewWidth_=w;viewHeight_=h;safeTop_=top;
+    // Fit the original 256-unit battlefield up to the 64-unit production HUD.
+    // This changes presentation only; collision, weapons and save use the
+    // original BattleGeometry. Phone-width layouts keep scale 1.
+    presentationScale_=geometry_.deviceScale==.5f?std::max(1.f,(w-64.f)/256.f):1.f;
+    cameraTouch_.reset();radarTouch_.reset();cameraVelocity_=0;
+    if(bottom)camera_=height()*.5f-bottomMargin()-geometry_.halfLength();
+    else if(upper)camera_=geometry_.halfLength()-height()*.5f;
+    clampCamera();actualCamera_=camera_;
+}
 void World::setUIMargin(float value){
     uiMargin_=value;
-    const float lower=height()*.5f-uiMargin_-geometry_.halfLength();
+    const float lower=height()*.5f-bottomMargin()-geometry_.halfLength();
     if(onBottom_)camera_=lower;
     else if(camera_<lower)onBottom_=true;
 }
@@ -153,6 +168,8 @@ void World::tick(){
         for(const auto& e:incoming)addNamed(e.name,e.worldPosition,false);
         production_.tick(time(),geometry_,random_,[&](const ProducedUnit& unit){
             ++statistics_.produced;
+            // BuildItem::tick (WeMade 1.0.3, 0x30644) plays sfxID 17 here.
+            host_.playSound("BuildMachComplete.wav");
             WorldActor* a;
             if(unit.definition.setType==0)a=&addParts(unit.definition,unit.position);
             else if(unit.definition.placementType==0)a=&addNamed(unit.definition.machine,unit.position,true);
@@ -169,7 +186,7 @@ void World::tick(){
     for(auto& trail:trails_)trail.motion->tick(time(),random_);
     std::erase_if(trails_,[](const auto& trail){return trail.motion->removed();});
     updateProjectiles();
-    for(auto& p:particles_->particles())p.tick(float(time()),height()*.5f);
+    for(auto& p:particles_->particles())p.tick(float(time()),geometry_.deviceScale==.5f?240.f:512.f);
     std::vector<LootCollector> collectors;for(const auto& a:actors_)if(a->player&&!a->removed)collectors.push_back({a->id,a->position,a->type,a->hp});
     for(auto& item:loot_)if(auto pickup=item.tick(time(),collectors,random_)){
         host_.playSound("Game_GetItem.wav");
@@ -210,7 +227,7 @@ void World::updateActor(WorldActor& a){
     }else if(a.type==1){a.vehicle.position=a.position;a.vehicle.tick(random_,a.collision);a.position=a.vehicle.position;a.angle=a.vehicle.angle;}
     else if(a.type==2||a.type==5){a.aircraft.position=a.position;a.aircraft.tick();a.position=a.aircraft.position;a.angle=a.aircraft.angle;}
     else if(a.type==4){a.train.position=a.position;a.train.tick();a.position=a.train.position;}
-    if(a.type!=2&&a.type!=5&&double(a.collisionCheck+.02f)<time()){collideTerrain(a);a.collisionCheck=float(time());}
+    if(a.type!=2&&a.type!=5&&double(a.collisionCheck+.02f)<time()){collideTerrain(a);collideGroundBodies(a);a.collisionCheck=float(time());}
     if(target&&time()>double(a.targetCheck)+.5&&!(a.statusFlags&2)){
         if(a.moveToTarget)setDestination(a,distanceSquared(a.position,target->position)<(.8f*a.range)*(.8f*a.range)?a.position:target->position);
         a.targetCheck=float(time());
@@ -218,7 +235,12 @@ void World::updateActor(WorldActor& a){
     if(a.maxHP>0&&a.hp*100/a.maxHP<80&&random_.next()%unsigned(a.hp*200/a.maxHP+10)==0)emitDamageSmoke(a,false);
     ParticleState* statusParticle=nullptr;
     const auto status=a.specialDamage.tick(time(),random_,[&]{statusParticle=particles_->acquire(float(time()),random_);return statusParticle!=nullptr;},[&](const StatusEvent& event){
-        if(event.dealsDamage)damage(a.id,event.damage);
+        if(event.dealsDamage){
+            damage(a.id,event.damage);
+            // processSpDamage 0x11040 passes raw OpenAL source 15, not SFX15.
+            // The WeMade compatibility port loads Missile06.wav into that slot.
+            host_.playSound("Missile06.wav");
+        }
         if(event.hasParticle&&statusParticle){auto& p=*statusParticle;p.position=a.position;p.life=event.particleLife;p.alpha=p.maxAlpha=event.particleAlpha;p.angle=event.particleAngle;p.setTileAnimation(int(event.animationFrames));setParticleImage(&p,"Efx_Plasma.png",8,1);p.start(float(time()));}
     });a.statusFlags=status.flags;
     if(a.hp>0)updateWeapons(a);
@@ -320,8 +342,14 @@ void World::updateProjectiles(){
 }
 void World::damage(ActorId id,int value,ActorId attacker){
     auto* a=actor(id);if(!a||a->hp<=0||a->removed)return;
+    auto playHit=[&]{
+        // GobHvMach::onDamage (0x13fd0): draw after onCrash has finished
+        // consuming its explosion, drop and wreck-lifetime random values.
+        constexpr std::array sounds{"SFX_HitBody01.wav","SFX_HitBody02.wav","SFX_HitBody03.wav"};
+        host_.playSound(sounds[random_.next()%sounds.size()]);
+    };
     a->hp=hpAfterDamage(a->hp,value);
-    if(a->hp>0){if(const auto* target=actor(a->target);target&&target->base)a->target=attacker;return;}
+    if(a->hp>0){if(const auto* target=actor(a->target);target&&target->base)a->target=attacker;playHit();return;}
     host_.playSound("SFX_ExplMach.wav");emitCrashExplosion(a->position);
     if(!a->player){
         auto drops=enemyLootDrops(a->coin,a->coinRate,upgradeParameter(upgrades_,save_,slot_,BaseUpgrade::creditResearch),a->position,time(),geometry_.deviceScale,random_,[&](std::string_view name)->const LootDefinition*{auto i=lootDefinitions_.find(std::string(name));return i==lootDefinitions_.end()?nullptr:&i->second;});
@@ -342,6 +370,7 @@ void World::damage(ActorId id,int value,ActorId attacker){
         const auto offset=SaveData::slotStart+slot_*SaveData::slotStride+0x2054;
         save_.writeWord(offset,save_.readWord(offset)+unsigned(a->coin));
     }
+    playHit();
 }
 void World::finish(WorldState state){
     state_=state;events_.push_back({state==WorldState::cleared?WorldEvent::Kind::stageCleared:WorldEvent::Kind::stageFailed,0,0});
@@ -356,8 +385,14 @@ void World::refreshBaseUpgrades(){
     clock_.configure(capacity_,upgradeParameter(upgrades_,save_,slot_,BaseUpgrade::cellResearch));
     auto* a=actor(playerBase_);if(!a)return;auto loadout=PlayerLoadout::forBase(save_,slot_,upgrades_,geometry_);
     if(a->maxHP!=loadout.hp)a->hp=a->maxHP=loadout.hp;
-    if(a->weapons.empty()||a->weapons.front().name!=loadout.weapon){a->assembly=std::move(loadout.assembly);configureWeapons(*a);}
-    else if(!a->assembly.empty()&&!a->assembly.front().children.empty()){a->assembly.front().children.front().name=loadout.assembly.front().children.front().name;}
+    if(a->weapons.empty()||a->weapons.front().name!=loadout.weapon){
+        // DlgUpgradeBase::setUpgrade (0x344cc) replaces only the two guns.
+        // setStage (0x1627c) applies body/radar appearances on stage entry.
+        auto replaceGuns=[&](auto&& self,std::vector<AssemblyPart>& parts)->void{
+            for(auto& part:parts){if(weapons_.find(part.name))part.name=loadout.weapon;self(self,part.children);}
+        };
+        replaceGuns(replaceGuns,a->assembly);configureWeapons(*a);
+    }
 }
 bool World::upgradeCells(){
     if(!started_||paused_||state_!=WorldState::running||cellLevel_>=5)return false;
@@ -414,10 +449,22 @@ void World::collideTerrain(WorldActor& a){
         if(penetration>0){a.position.x-=segment.normal.x*penetration;a.position.y-=segment.normal.y*penetration;a.collision=CollisionSurface{segment.normal,segment.direction};}
     }
 }
+void World::collideGroundBodies(WorldActor& a){
+    // Enemy/player overrides (0xdda8/0x10328) visit preceding living
+    // same-side ground children, stopping at self so each pair runs once.
+    if(a.base||a.type==2||(a.player&&a.type==5))return;
+    for(const auto& other:actors_){
+        if(other->player!=a.player||other->removed||other->hp<=0||other->base||other->type==2||(a.player&&other->type==5))continue;
+        if(other.get()==&a)break;
+        separateGroundBodies(a.position,a.radius,a.type==3,
+                             other->position,other->radius,other->type==3);
+    }
+}
 void World::clampCamera(){
     onBottom_=onTop_=true;float upper=geometry_.halfLength()-height()*.5f;
     if(camera_<=upper)onTop_=false;else camera_=upper;
     float lower=height()*.5f-bottomMargin()-geometry_.halfLength();
+    if(lower>upper){camera_=(lower+upper)*.5f;return;}
     if(camera_<lower)camera_=lower;else onBottom_=false;
 }
 void World::updateCamera(){
@@ -425,19 +472,20 @@ void World::updateCamera(){
     if(onBottom_){cameraVelocity_=0;actualCamera_=camera_;}
     else if(actualCamera_!=camera_)actualCamera_=std::abs(actualCamera_-camera_)>.5f?actualCamera_+(camera_-actualCamera_)/5.f:camera_;
 }
-Vec2 World::worldToScreen(Vec2 p)const{return {p.x-cameraX()+width()*.5f,height()*.5f-(p.y-actualCamera_)};}
-Vec2 World::screenToWorld(Vec2 p)const{return {cameraX()-width()*.5f+p.x,actualCamera_+height()*.5f-p.y};}
+Vec2 World::worldToView(Vec2 p)const{return {p.x-cameraX()+width()*.5f,height()*.5f-(p.y-actualCamera_)};}
+Vec2 World::worldToScreen(Vec2 p)const{const auto v=worldToView(p);return {v.x*presentationScale_,v.y*presentationScale_};}
+Vec2 World::screenToWorld(Vec2 p)const{return {cameraX()-width()*.5f+p.x/presentationScale_,actualCamera_+height()*.5f-p.y/presentationScale_};}
 std::optional<Vec2> World::touch(const Touch& t){
     if(!started_||paused_||state_!=WorldState::running)return {};
-    const float x=t.position.x,y=height()-t.position.y;
-    const bool phone=geometry_.deviceScale==.5f;Vec2 radar=phone?Vec2{18,398}:Vec2{55,824};Vec2 half=phone?Vec2{16,64}:Vec2{32,128};
+    const float x=t.position.x,y=height()*presentationScale_-t.position.y;
+    const bool phone=geometry_.deviceScale==.5f;Vec2 radar=phone?Vec2{18,height()*presentationScale_-82-safeTop_}:Vec2{55,824};Vec2 half=phone?Vec2{16,64}:Vec2{32,128};
     if(t.phase==TouchPhase::began){
         if(std::abs(x-radar.x)<half.x&&std::abs(y-radar.y)<half.y){radarTouch_=t.id;camera_=(y-radar.y)*8;clampCamera();}
-        else if(x<(phone?256:640)&&y>bottomMargin()&&!cameraTouch_){cameraTouch_=t.id;dragY_=y;onlyTap_=true;}
+        else if(x>=0&&x<(phone?256.f*presentationScale_:640.f)&&y>uiMargin_&&!cameraTouch_){cameraTouch_=t.id;dragY_=y;onlyTap_=true;}
     }else if(radarTouch_==t.id){camera_=(y-radar.y)*8;clampCamera();if(t.phase==TouchPhase::ended||t.phase==TouchPhase::cancelled)radarTouch_.reset();}
     else if(cameraTouch_==t.id){
         if(onlyTap_){if(std::abs(y-dragY_)>16)onlyTap_=false;}
-        else {cameraVelocity_=dragY_-y;camera_+=cameraVelocity_;clampCamera();dragY_=y;}
+        else {cameraVelocity_=(dragY_-y)/presentationScale_;camera_+=cameraVelocity_;clampCamera();dragY_=y;}
         if(t.phase==TouchPhase::ended||t.phase==TouchPhase::cancelled){cameraTouch_.reset();if(onlyTap_&&t.phase==TouchPhase::ended)return screenToWorld(t.position);if(std::abs(cameraVelocity_)<8)cameraVelocity_=0;}
     }return {};
 }
@@ -471,37 +519,46 @@ void World::prepareDraw(){
 }
 void World::appendSprites(Frame& frame)const{
     if(!started_)return;
+    const auto firstSprite=frame.sprites.size(),firstMesh=frame.meshes.size();
     const float scale=geometry_.deviceScale;
-    for(int part=0;part<2;++part){Sprite s;s.image=(scale==.5f?"iPon_":"")+background_+(part==0?"_01.jpg":"_02.jpg");Vec2 center=worldToScreen({0,float(part==0?-512:512)*scale});s.destination={center.x-256*scale,center.y-512*scale,512*scale,1024*scale};s.blend=Blend::opaque;frame.sprites.push_back(std::move(s));}
+    for(int part=0;part<2;++part){Sprite s;s.image=(scale==.5f?"iPon_":"")+background_+(part==0?"_01.jpg":"_02.jpg");Vec2 center=worldToView({0,float(part==0?-512:512)*scale});s.destination={center.x-256*scale,center.y-512*scale,512*scale,1024*scale};s.blend=Blend::opaque;frame.sprites.push_back(std::move(s));}
     // QobManager::drawVisual visits layers 0..13. Part shadows use layer 0;
     // child parts use the machine layer + 1 (GobHvMach::setLayer 0x14430).
     std::array<Frame,10> layers;
     for(const auto& a:actors_)if(!a->removed){
         const auto poses=models_.pose(a->assembly,scale,a->angle,a->angle,a->radarAngle);
         const int baseLayer=a->hp<=0?1:(a->base?(a->player?7:5):(a->player?3:1));
-        for(const auto& pose:poses){Frame part;models_.appendSprites(part,std::span<const PartPose>(&pose,1),worldToScreen(a->position),[&](std::string_view n){return resources_.imageSize(n);});
+        for(const auto& pose:poses){Frame part;models_.appendSprites(part,std::span<const PartPose>(&pose,1),worldToView(a->position),[&](std::string_view n){return resources_.imageSize(n);});
             if(part.sprites.size()==2){layers[0].sprites.push_back(std::move(part.sprites[0]));layers[baseLayer+(a->hp>0&&pose.hasParent?1:0)].sprites.push_back(std::move(part.sprites[1]));}
         }
     }
-    for(const auto& item:loot_)item.appendSprites(layers[0],worldToScreen(item.position),[&](std::string_view n){return resources_.imageSize(n);});
-    auto particles=particles_->particles();for(std::size_t i=0;i<particles.size();++i){const auto& p=particles[i];const auto& image=particleImages_[i];if(!p.shown||image.image.empty())continue;const float imageScale=image.assetScale?image.assetScale:scale;if(auto s=p.sprite(image.image,resources_.imageSize(image.image),image.columns,image.rows,worldToScreen({p.position.x-image.origin.x*p.scale.x*imageScale,p.position.y-image.origin.y*p.scale.y*imageScale}),imageScale))layers[5].sprites.push_back(std::move(*s));}
+    for(const auto& item:loot_)item.appendSprites(layers[0],worldToView(item.position),[&](std::string_view n){return resources_.imageSize(n);});
+    auto particles=particles_->particles();for(std::size_t i=0;i<particles.size();++i){const auto& p=particles[i];const auto& image=particleImages_[i];if(!p.shown||image.image.empty())continue;const float imageScale=image.assetScale?image.assetScale:scale;if(auto s=p.sprite(image.image,resources_.imageSize(image.image),image.columns,image.rows,worldToView({p.position.x-image.origin.x*p.scale.x*imageScale,p.position.y-image.origin.y*p.scale.y*imageScale}),imageScale))layers[5].sprites.push_back(std::move(*s));}
     struct MovingVisual {std::uint64_t order;const WorldTrail* trail=nullptr;const WorldProjectile* projectile=nullptr;};
     std::vector<MovingVisual> moving;for(const auto& trail:trails_)moving.push_back({trail.renderOrder,&trail,nullptr});for(const auto& p:projectiles_)moving.push_back({p.renderOrder,nullptr,&p});
     std::sort(moving.begin(),moving.end(),[](const auto& a,const auto& b){return a.order<b.order;});
     for(const auto& visual:moving){
-        if(visual.trail){visual.trail->motion->appendMesh(layers[visual.trail->layer],[&](Vec2 p){return worldToScreen(p);});continue;}
+        if(visual.trail){visual.trail->motion->appendMesh(layers[visual.trail->layer],[&](Vec2 p){return worldToView(p);});continue;}
         const auto& p=*visual.projectile;const auto* w=weapons_.find(p.weapon);if(!w)continue;
         if(!w->bulletImage.empty()){
         const auto size=resources_.imageSize(w->bulletImage);const unsigned columns=w->bulletImage=="Blt_Bullet.png"?4:1,rows=w->bulletImage=="Blt_Bullet.png"?8:1;
         const float cellWidth=size.x/columns,cellHeight=size.y/rows;
         Sprite s;s.image=w->bulletImage;s.sourcePx=Rect{float(unsigned(w->bulletTile)%columns)*cellWidth,float(unsigned(w->bulletTile)/columns)*cellHeight,cellWidth,cellHeight};
-        const Vec2 center=worldToScreen(p.motion.position);const float wpx=cellWidth*scale*p.motion.imageScale.x,hpx=cellHeight*scale*p.motion.imageScale.y;
+        const Vec2 center=worldToView(p.motion.position);const float wpx=cellWidth*scale*p.motion.imageScale.x,hpx=cellHeight*scale*p.motion.imageScale.y;
         s.destination={center.x-wpx*.5f,center.y-hpx*.5f,wpx,hpx};s.rotationDegrees=-p.motion.angle*180.f/float(3.141592653589793);layers[p.layer].sprites.push_back(std::move(s));
         }
-        if(!w->effectImage.empty())if(auto effect=p.motion.attachedEffect(*w,resources_.imageSize(w->effectImage),worldToScreen(p.motion.position),scale))layers[p.layer].sprites.push_back(std::move(*effect));
+        if(!w->effectImage.empty())if(auto effect=p.motion.attachedEffect(*w,resources_.imageSize(w->effectImage),worldToView(p.motion.position),scale))layers[p.layer].sprites.push_back(std::move(*effect));
     }
-    for(const auto& strike:airStrikes_)strike.motion.appendSprite(layers[7],worldToScreen(strike.motion.position),resources_.imageSize("Airplane.png"),scale);
+    for(const auto& strike:airStrikes_)strike.motion.appendSprite(layers[7],worldToView(strike.motion.position),resources_.imageSize("Airplane.png"),scale);
     for(auto& layer:layers){const auto offset=frame.sprites.size();for(auto& mesh:layer.meshes){mesh.beforeSpriteIndex+=offset;frame.meshes.push_back(std::move(mesh));}for(auto& sprite:layer.sprites)frame.sprites.push_back(std::move(sprite));}
+
+    // Transform every world layer together, including shadows and trail meshes.
+    if(presentationScale_!=1){
+        const float z=presentationScale_;
+        auto scaleRect=[&](Rect& r){r.x*=z;r.y*=z;r.width*=z;r.height*=z;};
+        for(auto i=firstSprite;i<frame.sprites.size();++i){auto& s=frame.sprites[i];scaleRect(s.destination);if(s.clip)scaleRect(*s.clip);}
+        for(auto i=firstMesh;i<frame.meshes.size();++i)for(auto& v:frame.meshes[i].vertices){v.position.x*=z;v.position.y*=z;}
+    }
 
 }
 std::vector<WorldEvent> World::takeEvents(){auto e=std::move(events_);events_.clear();return e;}

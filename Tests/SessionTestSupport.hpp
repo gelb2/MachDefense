@@ -21,10 +21,10 @@ struct Resources:ResourceAccess {
     }
 };
 struct Host:HostServices {
-    Bytes saved;int writes=0,sounds=0;std::string song;
+    Bytes saved;int writes=0,sounds=0;std::string song;std::map<std::string,unsigned> soundCalls;
     std::optional<Bytes> readSave()override{if(saved.empty())return {};return saved;}
     bool writeSave(std::span<const std::uint8_t> b)override{saved.assign(b.begin(),b.end());++writes;return true;}
-    void playSound(std::string_view,float,float)override{++sounds;}
+    void playSound(std::string_view n,float,float)override{++sounds;++soundCalls[std::string(n)];}
     void playMusic(std::string_view n,float)override{song=n;}
     void stopMusic()override{song.clear();}
     void requestName(std::string,std::size_t max,std::function<void(std::optional<std::string>)> cb)override{assert(max==10);cb("PLAYER");}

@@ -2,8 +2,15 @@
 
 논리 해상도, 기기별 화면, 원점, 스케일, 터치 변환, 카메라, 파츠 피벗을 원본에서 확인한다. 일반판과 WeMade 판본의 세로 화면 표시는 원본 명세에 있다. HeavyMach 1의 가로 480×320을 적용하지 않는다. 렌더와 히트박스는 같은 변환을 사용하며 화면 가장자리와 회전 입력을 검사한다.
 
-현재 소스판의 논리 화면은 320×480이다. [World](../Sources/Core/World.cpp)는 위쪽이 양수인 월드 좌표를 사용하고 worldToScreen/screenToWorld에서 화면 좌표와 변환한다. [GameHUD](../Sources/Core/GameHUD.cpp)는 원작 UI 좌표를 화면 위쪽 원점으로 변환한다. [Apple 렌더러](../Sources/Platform/Apple/MDRenderer.mm)는 화면에 맞춰 비율을 유지한다. GameSession::resize는 아직 확장을 적용하지 않는다. iPhone·iPad 화면 확장은 [현재 작업 순서](source-reimplementation-plan.md)의 마지막 계획 과제다.
+소스판은 320×480 원본 UI를 기준으로 기기 비율에 맞는 전체 캔버스를 만든다. `GameSession::resize`와 `FrameLayout`이 이 크기를 계산한다. 월드 좌표는 위쪽이 양수이며 화면·터치 좌표는 `World::worldToScreen/screenToWorld`로 왕복한다. Apple OpenGL ES 렌더러는 이 캔버스를 디바이스 전체에 표시한다.
 
 현재 포팅 옵션은 iPhone 모드다. iPad/HD 에셋 선택과 배율은 [MD-ART-01](port-observations-20261104.md)에서 확인한다.
 
 [유니버설 에셋 계획](universal-assets-plan.md): 고해상도 에셋 채택 시 픽셀 크기를 월드 크기로 사용하지 않는다. 원본 논리 크기·파츠 피벗·충돌과 화면/입력 변환을 보존한다.
+
+
+2026-11-04 화면 확장 후속: iPhone Air 상하·iPad Air 좌우 여백의 코드 원인과 맵 범위 제약을 확인했다. [MD-VIEWPORT-07 연구 계획](universal-assets-plan.md#화면-여백과-월드-확장-연구--md-viewport-07)을 따른다. 당시에는 계획 단계였다. 11월 5일 구현·검사 결과는 아래에 있다.
+
+## 화면 확장 — 2026-11-05
+
+FrameLayout은 디바이스 비율과 상하 안전 영역으로 전체 논리 캔버스를 계산한다. 원래 320×480에서 사용하던 스프라이트 크기를 유지한다. HUD 우측·하단과 중앙 창의 그림/터치에는 동일한 오프셋을 적용한다. 전투 맵 폭 256·높이 1024와 유닛의 월드 좌표는 그대로 둔다. iPhone은 세로 맵 표시량을 늘린다. iPad는 기존 256 너비 맵을 생산 HUD 왼쪽 경계에 맞춰 균등 배율로 표시한다. 배율은 `(캔버스 너비-64)/256`이며 iPhone 너비 320에서는 1이다. 월드 배경·유닛·그림자·탄환·효과·메시를 같은 배율로 그린다. 카메라 가시 높이와 입력 역변환도 같은 배율을 쓴다. 전투 맵·충돌·사거리·저장 값은 바꾸지 않는다. 지도 밖을 회색 패널로 채우던 이전 코드는 제거했다. 메뉴는 기존 배경 부분과 버튼의 위치를 조정한다. [검사](evidence/viewport-20261105.md).

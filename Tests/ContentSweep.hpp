@@ -49,8 +49,11 @@ ContentCounts runContentSweep(ResourceAccess& resources,Host& host,const std::fu
             require(world.enqueueBuild(name,d.placementType?std::optional<Vec2>(destination):std::nullopt),full+" enqueue");
             require(world.cells()==10&&world.productionCount()==1&&world.productionOccupied(name)==1,full+" exact cost/queue");
             require(world.productionRows().front().name==full,full+" queue level");
+            const auto completions=host.soundCalls["BuildMachComplete.wav"];
             const auto queued=world.time();unsigned elapsed=0;
-            while(world.statistics().produced==0&&elapsed++<5000)step(world);
+            while(world.statistics().produced==0&&elapsed++<5000){step(world);
+                require(host.soundCalls["BuildMachComplete.wav"]==completions+world.statistics().produced,full+" completion sound timing/count");
+            }
             require(world.statistics().produced==1&&world.productionCount()==0,full+" production timeout/count");
             require(world.time()>queued,full+" production skipped timer");
             const auto* unit=producedActor(world,d);require(unit&&unit->hp>0&&!unit->assembly.empty(),full+" missing assembled unit");
@@ -64,6 +67,7 @@ ContentCounts runContentSweep(ResourceAccess& resources,Host& host,const std::fu
                 }
                 require(transformed,full+" carrier did not deploy original turret");++placementChecks;
             }else require(!unit->weapons.empty(),full+" missing original weapons");
+            require(host.soundCalls["BuildMachComplete.wav"]==completions+1,full+" completion sound missing/repeated after deployment");
             Frame frame;world.prepareDraw();world.appendSprites(frame);inspect(frame);
             require(host.writes==0,full+" production wrote a save file");++buildChecks;
         }

@@ -67,6 +67,7 @@ public:
     ActorId validationSpawn(std::string_view machineName,bool player,Vec2 position);
     bool activateSpecial(std::string_view ownedBaseName,Vec2 worldPoint);
     void setUIMargin(float);
+    void setViewport(float width,float height,float safeTop=0);
     // Returns a world-space tap only after the original camera tap/drag test.
     std::optional<Vec2> touch(const Touch&);
     Vec2 worldToScreen(Vec2)const;
@@ -119,6 +120,7 @@ private:
     unsigned stage_=0;WorldState state_=WorldState::running;
     bool started_=false,paused_=false;
     float capacity_=0,buildFactor_=1,baseBoundary_=0,topPlayerPosition_=-800;
+    float viewWidth_=0,viewHeight_=0,safeTop_=0,presentationScale_=1;
     float camera_=0,actualCamera_=0,cameraVelocity_=0,dragY_=0,uiMargin_=0;
     bool onBottom_=true,onTop_=false,onlyTap_=false;
     std::optional<std::uint64_t> cameraTouch_,radarTouch_;
@@ -130,12 +132,13 @@ private:
     void updateActor(WorldActor&);
     void updateWeapons(WorldActor&);
     void updateProjectiles();
-    void buildTerrain();void collideTerrain(WorldActor&);
+    void buildTerrain();void collideTerrain(WorldActor&);void collideGroundBodies(WorldActor&);
     void updateCamera();void clampCamera();
     void finish(WorldState);
-    float width()const{return geometry_.deviceScale==.5f?320.f:768.f;}
-    float height()const{return geometry_.deviceScale==.5f?480.f:1024.f;}
-    float cameraX()const{return geometry_.deviceScale==.5f?32.f:0.f;}
-    float bottomMargin()const{return uiMargin_;}
+    float width()const{return viewWidth_?viewWidth_/presentationScale_:(geometry_.deviceScale==.5f?320.f:768.f);}
+    float height()const{return viewHeight_?viewHeight_/presentationScale_:(geometry_.deviceScale==.5f?480.f:1024.f);}
+    float cameraX()const{return geometry_.deviceScale==.5f?32.f+(width()-320.f)*.5f:0.f;}
+    float bottomMargin()const{return uiMargin_/presentationScale_;}
+    Vec2 worldToView(Vec2)const;
 };
 }

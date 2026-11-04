@@ -1,6 +1,10 @@
 #include "SessionTestSupport.hpp"
 #include <sstream>
-void pressSprite(GameSession& s,std::string_view name){std::optional<Vec2> p;for(const auto& x:s.frame().sprites)if(x.image==name)p=Vec2{x.destination.x+x.destination.width/2,x.destination.y+x.destination.height/2};assert(p);tap(s,p->x,p->y);ticks(s);}
+void pressSprite(GameSession& s,std::string_view name){std::optional<Vec2> p;for(const auto& x:s.frame().sprites)if(x.image==name)p=Vec2{x.destination.x+x.destination.width/2,x.destination.y+x.destination.height/2};assert(p);tap(s,p->x,p->y);ticks(s);
+    // The original map illustration fades in and out before input resumes.
+    for(unsigned frame=0;has(s.frame(),"StageClear01.png")&&frame<240;++frame)s.tick();
+    assert(!has(s.frame(),"StageClear01.png"));
+}
 void destroyBase(GameSession& s,bool player){auto* w=s.validationWorld();ActorId id=0;for(const auto& a:w->actors())if(a->base&&a->player==player)id=a->id;assert(id);w->damage(id,w->actor(id)->hp);s.tick();}
 int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];Host h;
     auto initial=SaveData::empty(1);assert(initial.createProfile("CAMPAIGN",1)==0);initial.writeWord(SaveData::slotStart+0xc,5);h.saved=initial.encode();

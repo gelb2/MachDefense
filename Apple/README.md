@@ -32,4 +32,6 @@ iPad 시뮬레이터의 실행 지연을 조사한 프로세스 샘플에서는 
 python3 tools/run_apple_sweep.py --simulator <시뮬레이터-UDID>
 ```
 
-저장소 루트에서 실행한다. 80미션 결과·저장, 포팅판 관측값의 강화 구매, 생산·특수공격을 실제 Apple 렌더러·오디오에 연결한다. [검사 범위와 결과](../docs/evidence/apple-automated-sweep-20261104.md). 실기기 성능 측정은 별도로 실행한다.
+저장소 루트에서 실행한다. 80미션 결과·저장, 전체 강화 단계 구매, 일반 무장 211개, 생산·특수공격을 실제 Apple 렌더러·오디오에 연결한다. 30초 CADisplayLink 성능 검사도 포함한다. [기존 검사](../docs/evidence/apple-automated-sweep-20261104.md), [전체 강화·무장·기기 측정](../docs/evidence/full-upgrade-weapon-device-20261104.md).
+
+실기기는 Xcode에서 `MachDefenseRendererTests`와 연결된 기기를 선택한 뒤 Test를 실행한다. 기존 치트 앱이 XCTest 호스트이며, 검사 중에는 일반 게임 화면의 오디오를 중복 초기화하지 않는다. 저장은 임시 디렉터리를 사용한다. 검사를 마친 뒤 배포할 앱은 Clean Build Folder 후 `MachDefense`·`MachDefenseCheat` 스킴으로 각각 빌드한다. 테스트 플러그인이 없는 최종 앱을 설치한다.

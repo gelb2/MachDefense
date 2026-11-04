@@ -38,7 +38,7 @@ public:
     virtual void tick()=0;
     virtual void touch(const Touch& event)=0;
     virtual void setActive(bool active)=0;
-    virtual void resize(float availableWidth,float availableHeight)=0;
+    virtual void resize(float availableWidth,float availableHeight,float safeTop=0,float safeBottom=0)=0;
     virtual int preferredFramesPerSecond() const=0;
 };
 // Implemented by the reconstructed game, not by the platform adapter.

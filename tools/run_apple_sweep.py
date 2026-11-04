@@ -14,6 +14,9 @@ TESTS = [
     'testPortObservedPurchasesThroughGameButtonsAndDiskSave',
     'testEightyMissionFailureVictoryNextAndDiskReloadSweep',
     'testAllProductionAndSpecialLevelsWithGraphicsAndAudio',
+    'testEveryUpgradeLevelThroughButtonsAndDisk',
+    'testEveryWeaponDefinitionFiringAndImpacts',
+    'testShortRealtimeBattlePerformance',
 ]
 
 def main():
@@ -42,7 +45,7 @@ def main():
     report = dict(simulator=a.simulator, exit_code=result.returncode,
                   build_and_test_seconds=round(time.monotonic()-start, 3),
                   expected=TESTS, passed=passed,
-                  counters=[line for line in text.splitlines() if re.search(r'MD_(PORT_PURCHASE|CAMPAIGN|CONTENT)_SWEEP ', line)])
+                  counters=[line for line in text.splitlines() if re.search(r'MD_(PORT_PURCHASE|CAMPAIGN|CONTENT|UPGRADE|WEAPON|PERFORMANCE)_SWEEP ', line)])
     (output / 'summary.json').write_text(json.dumps(report, indent=2)+'\n')
     print(json.dumps(report, indent=2))
     return 0 if result.returncode == 0 and len(passed) == len(TESTS) else 1

@@ -23,6 +23,7 @@ targetTemplates:
     platform: iOS
     sources:
       - path: ../../Sources/Platform/Apple
+      - path: Assets.xcassets
     info:
       path: Info.plist
       properties:
@@ -74,17 +75,19 @@ targets:
     platform: iOS
     sources:
       - path: ../Tests
-      - path: ../../Sources/Platform/Apple/MDRenderer.mm
-      - path: ../../Sources/Platform/Apple/MDAudio.mm
     settings:
       base:
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/MachDefenseCheat.app/MachDefenseCheat
         PRODUCT_BUNDLE_IDENTIFIER: com.gelb2.machdefense.renderertests
         GENERATE_INFOPLIST_FILE: 'YES'
     dependencies:
+      - sdk: AVFoundation.framework
       - sdk: UIKit.framework
       - sdk: QuartzCore.framework
       - sdk: CoreGraphics.framework
       - sdk: OpenGLES.framework
+      - target: MachDefenseCheat
+        link: false
       - sdk: ImageIO.framework
       - target: MachDefenseModules/MachDefenseCore
         link: true
