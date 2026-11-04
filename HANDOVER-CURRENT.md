@@ -1,6 +1,6 @@
 # MachDefense 인계 — 2026-11-05
 
-현재 브랜치는 `refactor/shared-core-audio`다. 기존 재개발·계획을 `0243083`에 보존하고 로컬 develop의 `8109ae6`에서 분기했다. 원본 오디오·텍스처 대조 수정은 `f623eba`에 커밋했다. 이후 공용 Core·Audio 분리와 검사를 진행했다. 최신 결과는 [모듈화 실행 기록](docs/evidence/module-work-20261105.md), 남은 과제는 [TODO](docs/usability-todo.md)를 따른다. 원격 push·main 병합·제품 배포는 하지 않았다.
+현재 브랜치는 `refactor/shared-core-audio`다. 기존 재개발·계획을 `0243083`에 보존하고 로컬 develop의 `8109ae6`에서 분기했다. 원본 오디오·텍스처 대조 수정은 `f623eba`에 커밋했다. 이후 공용 Core·Audio 분리와 검사 결과를 `193ed2f`에 커밋했다. 최신 결과는 [모듈화 실행 기록](docs/evidence/module-work-20261105.md), 남은 과제는 [TODO](docs/usability-todo.md)를 따른다. 원격 push·main 병합·제품 배포는 하지 않았다. [통합 보고서](docs/report-site.md#최근-갱신--2026-11-05-모듈-구현검사)는 게시했다.
 
 Core는 Contracts·Data·Simulation·Session·Presentation·Validation로 나뉘고 효과음은 Audio 모듈을 사용한다. 게임 갱신·난수 순서를 보존했다. 원본 IPA와 실행 바이너리는 저장소 밖에서 분석에만 사용한다. 새 checkout에 들어가는 소스와 Resources만으로 일반 앱 Release 빌드를 확인했다.
 

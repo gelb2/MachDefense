@@ -22,3 +22,15 @@ MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지�
 - 배포 `appgdep_6aeb7a6e77e081918c6035d55590ac21`, 상태 `succeeded`. 기존 접근 범위 유지.
 - 로컬 Chrome에서 보고서 구조·표·다운로드 연결을 확인했다. 운영 주소를 연 Chrome은 `ERR_INTERNET_DISCONNECTED`를 표시해 운영 화면 직접 확인은 남았다.
 - 업로드 용량 제한은 기존 PNG의 무손실 재압축으로 해결했다. 픽셀·파일 경로·기존 원고를 보존했다.
+
+
+## 최근 갱신 — 2026-11-05 모듈 구현·검사
+
+[모듈화 작업 결과](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#module-work-20261105)를 기존 페이지에 추가했다. 원본 오디오·텍스처 수정, Core/Audio 분리, 분리 전후 144,000틱 비교, C++·시뮬레이터 검사, Instruments·누수·10분 전투, 일반/치트 직접 조작과 남은 과제를 담았다. iPad 시뮬레이터 TEST 패널 캡처를 포함했다.
+
+- 제품 커밋: 원본 절차 수정 `f623eba`, 모듈 분리·검사 `193ed2f`. `refactor/shared-core-audio`에 있으며 제품 원격 push·main 병합은 하지 않았다.
+- 사이트 소스: `80ab6814b42fff5a48c969c674a1c775fb75a356`.
+- Sites 버전: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_a4d13efe732c8191995f1923fb0e0602`.
+- 배포: `appgdep_6aeb8ed1a4448191983376cd23fac27b`, 상태 `succeeded`. 기존 소유자 전용 접근 유지.
+- 로컬 Chrome에서 최종 본문·표를 확인했다. 운영 주소의 Chrome은 기존 `ERR_INTERNET_DISCONNECTED`가 지속됐다. 게시 완료는 Sites의 성공 응답으로 확인했다.
+- 첫 업로드는 확장 용량 제한으로 거절됐다. macOS 부가 메타데이터를 제외한 ustar로 다시 포장해 성공했다. 최종 확장 크기는 267,757,568바이트다. 기존 페이지·자료를 보존했다.
