@@ -24,6 +24,15 @@ int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];Host h
     // Close the base dialog through its original close control.
     const auto& frame=s.frame();bool closed=false;for(const auto& sprite:frame.sprites)if(sprite.image=="Btn_UpgradeBase_Close.png"){tap(s,sprite.destination.x+sprite.destination.width/2,sprite.destination.y+sprite.destination.height/2);closed=true;break;}
     assert(closed);ticks(s,60);assert(!world->paused());
+    // Closing either equipment dialog removes its sprites and resumes play.
+    for(const bool specials:{false,true}){
+        if(specials)tap(s,160,445);
+        tap(s,294,403);assert(world->paused());assert(has(s.frame(),"CommonUI_Upgrade.png"));
+        tap(s,specials?220:192,353.75f);assert(!world->paused());
+        assert(!has(s.frame(),"CommonUI_Upgrade.png"));
+        const auto resumedAt=world->time();ticks(s,2);assert(world->time()>resumedAt);
+        assert(h.writes==2);
+    }
     ActorId enemy=0;for(const auto& a:world->actors())if(a->base&&!a->player)enemy=a->id;
     world->damage(enemy,100000000);s.tick();assert(h.writes==3);checkImages(s.frame(),r);
     auto saved=SaveData::decode(h.saved);assert(saved.stage(0)==1&&saved.clearCount(0,0)==1&&saved.credits(0)>=500);

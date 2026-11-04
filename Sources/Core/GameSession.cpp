@@ -186,7 +186,7 @@ struct GameSession::State {
         case 0x40e:if(panel==3)break;else if(upgradeState.kind==UpgradeDialogState::Kind::attacks){auto list=save.attacks(slot);std::size_t row=0;for(std::size_t i=0;i<list.size();++i)if(list[i].onSlot){if(row++==a.row){upgradeState.selectedAttack=i;break;}}refreshUpgrades();}else selectedAttack=a.row;break;
         case 0x400:if(a.row<upgradeState.units.size()){settlement.upgradeBuild(save,slot,upgradeState.units[a.row].name);refreshUpgrades();}break;
         case 0x401:case 0x402:{auto b=save.builds(slot);if(a.row<b.size()){const auto count=std::count_if(b.begin(),b.end(),[](const auto& b){return b.onSlot;});if(a.buttonId==0x402||count<7){b[a.row].onSlot=a.buttonId==0x401;save.setBuilds(slot,b);refreshUpgrades();}}break;}
-        case 0x3ff:upgradeState.kind=UpgradeDialogState::Kind::hidden;break;
+        case 0x3ff:upgradeState.kind=UpgradeDialogState::Kind::hidden;upgrades.setState(upgradeState);break;
         case 0x3f9:if(pendingSave&&!persist())break;openMission({slot,save.readWord(offset()+0x34)});break;
         case 0x3fa:if(pendingSave&&!persist())break;openMission({slot,summaryState.mission});break;
         case 0x3f8:if(pendingSave&&!persist())break;menu.showMissions(slot);break;

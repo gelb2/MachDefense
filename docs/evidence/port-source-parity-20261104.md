@@ -24,9 +24,21 @@ iPhone Air iOS 26.5 시뮬레이터 하나에서 두 앱을 번갈아 실행했�
 
 GameSession 회귀 검사는 수정 전 표식 누락으로 실패했다. 수정 뒤 GameHUD·GameSession·World·FrameIO 4개가 통과했다. 시험 프로필의 점수 274 표시, 지도 범위 밖 표식 제외, 카메라 이동에 따른 범위 표시, 전투 중 파일 쓰기 여부를 검사한다. 시뮬레이터 새 빌드·설치·실행 후 실제 점수와 레이더 표시를 확인했다. 캡처는 `source-radar-score-fixed.png`, 검사 로그는 `hud-tests.log`다.
 
-## 유닛 강화 대조 진행
+## 초기 유닛 4종 강화 구매
 
-소스 앱에서 초기 유닛 4종을 각각 Lv.1에서 Lv.2로 구매했다. 표시 잔액은 988,300Cr에서 987,250Cr로 바뀌었다. 화면은 `source-units-level2.png`에 보존했다. 이 시점에 Mac이 잠겨 Save & Exit, 저장 파일 비교와 포팅판의 같은 구매는 남았다. 이 결과를 두 앱 일치로 집계하지 않는다.
+두 앱에서 MachineGun·Missile·Tanker·RifleTurret를 각각 Lv.1에서 Lv.2로 구매했다. 비용은 200 / 400 / 250 / 200Cr, 합계 1,050Cr다. Save & Exit 뒤 저장을 해독해 아래 값이 일치함을 확인했다.
+
+| 항목 | 포팅판 | 소스판 |
+| --- | --- | --- |
+| 잔액 | 987,250Cr | 987,250Cr |
+| 누적 점수 | 274 | 274 |
+| 4종 저장 레벨 | 모두 1 — 표시 Lv.2 | 모두 1 — 표시 Lv.2 |
+| 장비 순서 | MachineGun → Missile → Tanker → RifleTurret | 동일 |
+| 장착 상태 | 모두 장착 | 모두 장착 |
+
+로컬 근거는 `unit-comparison.json`, `port-after-units-level2.sav`, `source-after-units-level2.sav`, 두 앱의 `*-units-level2.png`다. 각 유닛의 다음 단계 비용은 500 / 800 / 500 / 500Cr로 표시됐다.
+
+소스판에서 CLOSE를 누르면 전투는 재개되지만 강화창 그림이 남았다. 포팅판에서는 사라졌다. GameSession이 입력 상태만 hidden으로 바꾸고 UpgradeDialog에 전달하지 않은 것이 원인이었다. 닫을 때 표시·입력 상태를 함께 갱신했다. 두 장비 창의 실제 CLOSE 입력, 그림 제거, 시간 재개와 추가 저장 없음 검사를 추가했다. 수정 전 실패를 확인했고, 수정 후 GameSession·FrameIO·SaveFailure 3종이 통과했다. 로그는 `close-red.log`, `close-tests.log`다. 수정본의 시뮬레이터 빌드·설치 후 유닛 창과 특수기술 창에서 CLOSE를 직접 눌렀다. 두 창 모두 사라졌고 전투가 재개됐다. 특수기술 창을 닫은 직후 셀 값이 547에서 550으로 증가하는 것도 확인했다.
 
 ## 미션 종료 시 저장 순서 조사
 
