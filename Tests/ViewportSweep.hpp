@@ -20,6 +20,7 @@ inline std::string runViewportSweep(ResourceAccess& r,const std::function<void(c
     auto ticks=[](GameSession& g,int n=160){while(n--)g.tick();};
     auto tap=[](GameSession& g,Vec2 p){g.touch({91,TouchPhase::began,p});g.touch({91,TouchPhase::ended,p});};
     auto fixture=SaveData::empty(123);fixture.createProfile("VIEWPORT",1);fixture.writeWord(SaveData::slotStart+0xc,5);
+    fixture.setCredits(0,20000);
     fixture.setBuilds(0,std::vector<OwnedBuild>{{"RifleTurret",0,true},{"MachineGun",0,true}});
     struct Size {float w,h,top,bottom;const char* name;};
     const Size sizes[]={{320,480,0,0,"reference"},{390,844,59,34,"iphone"},{420,912,62,34,"iphone-air"},{1024,1366,24,20,"ipad-air"},{768,1024,24,20,"ipad"}};
@@ -63,6 +64,19 @@ inline std::string runViewportSweep(ResourceAccess& r,const std::function<void(c
         tap(game,{284+br.x,435+br.y});require(world->paused(),"Moved menu button missed");
         tap(game,{130+center.x,96+center.y});require(!world->paused(),"Moved resume button missed");
         tap(game,{284+br.x,469+br.y});ticks(game,60);require(world->paused(),"Moved base upgrade button missed");
+        const auto findSprite=[&](std::string_view name)->const Sprite&{for(const auto& sprite:game.frame().sprites)if(sprite.image==name)return sprite;throw std::runtime_error("Missing dialog sprite");};
+        const auto& firstBaseRow=findSprite("Btn_BaseUpgrade_BaseCannon.png");
+        const auto& panel=findSprite("iPon_GameUI_BG@2x.png");
+        require(std::abs(firstBaseRow.destination.y+firstBaseRow.destination.height/2-panel.destination.y-157)<.01f,"Base upgrade rows drift from sliding HUD");
+        require(std::abs(firstBaseRow.destination.x+firstBaseRow.destination.width/2-(196+br.x))<.01f,"Base upgrade rows use wrong horizontal anchor");
+        // The metal backing must cover every x at the bottom when the drawer opens.
+        if(layout.width!=320||layout.height!=480)for(float x=0;x<layout.width;x+=8){bool covered=false;for(const auto& sprite:game.frame().sprites)if(sprite.image=="GameUI_BtmL.png"||sprite.image=="GameUI_BtmR.png"){const auto r=sprite.destination;covered|=x>=r.x&&x<r.x+r.width&&r.y+r.height>=layout.height-.01f;}require(covered,"Open base drawer leaves bottom or middle gap");}
+        if(capture)capture(game.frame(),std::string(size.name)+"-base-upgrade");
+        const auto previousLevel=game.validationSave()->baseUpgrade(0,0);const auto previousCredits=game.validationSave()->credits(0);
+        tap(game,{firstBaseRow.destination.x+firstBaseRow.destination.width/2,firstBaseRow.destination.y+firstBaseRow.destination.height/2});
+        const auto buy=findSprite("Btn_UpgradeBase_Upgrade.png").destination;
+        tap(game,{buy.x+buy.width/2,buy.y+buy.height/2});
+        require(game.validationSave()->baseUpgrade(0,0)==previousLevel+1&&game.validationSave()->credits(0)<previousCredits,"Moved base upgrade purchase failed");
         bool closed=false;for(const auto& s:game.frame().sprites)if(s.image=="Btn_UpgradeBase_Close.png"){tap(game,{s.destination.x+s.destination.width/2,s.destination.y+s.destination.height/2});closed=true;break;}
         require(closed,"Missing base dialog close");ticks(game,60);require(!world->paused(),"Moved base dialog close missed");
         world->setValidationCells(500);game.tick();tap(game,{292+tr.x,52+tr.y});

@@ -99,6 +99,7 @@ int main(int argc,char** argv){
         const auto slotIndex=std::size_t(&find(f,"GameUI_MachSlot.png")-f.sprites.data());
         const auto hudIndex=std::size_t(&find(f,"iPon_GameUI_BG@2x.png")-f.sprites.data());
         assert(slotIndex<hudIndex);unsigned quickCount=0;
+        for(std::size_t i=0;i<f.sprites.size();++i)if(f.sprites[i].image=="Btn_BuildMachBG.png"||f.sprites[i].image=="Btn_UpgradeEquip.png"||f.sprites[i].image=="FormationIcon_01.png")assert(i<hudIndex);
         for(std::size_t i=0;i<f.sprites.size();++i)if(f.sprites[i].image=="iPon_QuickBtn@2x.png"){
             assert(i>slotIndex);assert(f.sprites[i].sourcePx->width==r.imageSize("iPon_QuickBtn@2x.png").x/2);++quickCount;
         }

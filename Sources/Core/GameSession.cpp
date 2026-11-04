@@ -225,8 +225,9 @@ struct GameSession::State {
         const auto stats=world->statistics();summaryState.kills=stats.enemyDestroyed;summaryState.deaths=stats.playerDestroyed;summaryState.built=stats.produced;summaryState.elapsedSeconds=world->time()-world->startTime();
         if(summaryState.cleared)summaryState.reward=settlement.clear(save,slot,world->randomSource());summary.setState(summaryState);persist();
     }
+    Vec2 upgradeOffset()const{return upgradeState.kind==UpgradeDialogState::Kind::base?layout.bottomRight():layout.center();}
     void cancelGameTouches(){
-        for(const auto& [id,position]:activeTouches){Touch t{id,TouchPhase::cancelled,position};menu.touch(t);hud.touch(t);const auto modal=translatedTouch(t,layout.center());upgrades.touch(modal);summary.touch(modal);if(validationPanel)validationPanel->touch(modal);if(world)world->touch(t);}
+        for(const auto& [id,position]:activeTouches){Touch t{id,TouchPhase::cancelled,position};menu.touch(t);hud.touch(t);const auto modal=translatedTouch(t,layout.center());upgrades.touch(translatedTouch(t,upgradeOffset()));summary.touch(modal);if(validationPanel)validationPanel->touch(modal);if(world)world->touch(t);}
     }
     bool validationAction(unsigned command){
         if(!validationTools)return false;
@@ -260,7 +261,9 @@ struct GameSession::State {
         if(screen<4)frame=menu.frame();else{
             frame.sprites.clear();frame.meshes.clear();frame.logicalWidth=layout.width;frame.logicalHeight=layout.height;
             if(world)world->appendSprites(frame);hud.append(frame);
-            auto n=frame.sprites.size(),m=frame.meshes.size();upgrades.append(frame);summary.append(frame);if(help)help->append(frame);
+            auto n=frame.sprites.size(),m=frame.meshes.size();upgrades.append(frame);
+            translateFrame(frame,n,m,upgradeOffset());
+            n=frame.sprites.size();m=frame.meshes.size();summary.append(frame);if(help)help->append(frame);
             translateFrame(frame,n,m,layout.center());
             if(help&&n<frame.sprites.size())for(auto i=n;i<frame.sprites.size();++i)if(frame.sprites[i].image.empty())frame.sprites[i].destination={0,0,layout.width,layout.height};
         }
@@ -297,7 +300,7 @@ struct GameSession::State {
         else if(world){
             if(help){if(help->touch(modal)){help.reset();updatePause();}}
             else if(summaryState.visible){summary.touch(modal);for(auto a:summary.takeActions())action(a);}
-            else if(upgradeState.kind!=UpgradeDialogState::Kind::hidden){const bool consumed=upgrades.touch(modal);for(auto a:upgrades.takeActions())action(a);if(!consumed){hud.touch(t);for(auto a:hud.takeActions())action(a);}}
+            else if(upgradeState.kind!=UpgradeDialogState::Kind::hidden){const bool consumed=upgrades.touch(translatedTouch(t,upgradeOffset()));for(auto a:upgrades.takeActions())action(a);if(!consumed){hud.touch(t);for(auto a:hud.takeActions())action(a);}}
             else if(hud.touch(t)){for(auto a:hud.takeActions())action(a);}
             else if(auto point=world->touch(t)){
                 if(placement&&world->enqueueBuild(*placement,*point)){placement.reset();refreshHUD();}

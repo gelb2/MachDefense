@@ -81,6 +81,55 @@ void GameHUD::append(Frame& f)const{
         }
     }
     move(layout_.topRight());
+    // Original DlgBuildMach item sprites use layer 7 (0x2ea8c/0x2eca4),
+    // below the layer-9 game HUD and its sliding base drawer. The equipment
+    // button is constructed before the layer-9 main panel (GuiGame::init).
+    if(state_.productionVisible&&state_.selectedPanel==1){
+        for(std::size_t i=0;i<std::min<std::size_t>(7,state_.production.size());++i){
+            const auto& row=state_.production[i];const float y=428-51.f*i;
+            image(f,"Btn_BuildMachBG.png",{292,y});image(f,"Btn_BuildMach.png",{282.5f,y-8.5f});
+            if(machine_)machine_(f,row.machine,{292,480-y},.5f);
+            // ImageAttacher::attachText uses 14px in a half-scale composite.
+            if(!state_.upgradeMode)text(f,std::to_string(row.mineralCost),{262,y+15.5f},7);
+            else{
+                image(f,"Btn_BuildMachUpgrade.png",{255.5f,y-9});
+                text(f,std::to_string(row.level+1)+"/"+std::to_string(row.maximumLevel),{262,y+15.5f},7);
+                // DlgBuildMach::refreshButtonsWithType: 0x2e090 uses Align=2
+                // at x=158 in its half-scale composite: right edge x=271.
+                const auto cost=std::to_string(row.upgradeCost)+"cr";
+                font_.draw(f,cost,{271-font_.width(cost,6),480-(y-10.5f)-3},6);
+            }
+            text(f,row.englishName,{292,y-21.5f},5.5f,{240/255.f,1,1,1});
+            for(unsigned n=0;n<row.capacity;++n)image(f,"Btn_BuildMachInd.png",{269.5f,y-1.5f-6.5f*n},2,1,n<row.occupied?0:1);
+            if(row.upgrading)image(f,"Btn_BuildMachUpgradeOn.png",{256,y-1.5f});
+            if(pressed(0x40d,i)){image(f,"SelMach.png",{292,y});f.sprites.back().blend=Blend::additive;}
+            if(!state_.upgradeMode&&!row.enabled)image(f,"BuildMach_Cover.png",{282.5f,y-8.5f});
+        }
+    }
+    // DlgSpecialAttack::refreshButtonsWithType 0x30de0 and
+    // DlgFormation::refreshButtons 0x3dd94: local(-35,-176) at(327,604).
+    if(state_.productionVisible&&state_.selectedPanel==2){
+        for(std::size_t i=0;i<state_.attacks.size();++i){const auto& a=state_.attacks[i];const float y=428-51.f*i;
+            image(f,a.icon,{292,y});image(f,"Btn_BuildMach.png",{282.5f,y-8.5f});
+            text(f,std::to_string(a.level+1)+"/"+std::to_string(a.maximumLevel),{262,y+14},7,{240/255.f,1,1,1});
+            text(f,std::to_string(a.count),{292,y-21},6.5f,{240/255.f,1,1,1});
+            if(state_.upgradeMode){image(f,"Btn_BuildMachUpgrade.png",{255.5f,y-9});
+                const auto cost=std::to_string(a.upgradeCost)+"cr";
+                font_.draw(f,cost,{271.5f-font_.width(cost,6),480-(y-12)-4},6,{240/255.f,1,1,1});
+                if(a.upgradeAvailable)image(f,"Btn_BuildMachUpgradeOn.png",{256,y-1.5f});
+            }
+            if(state_.selectedAttack==i||pressed(0x40e,i)){image(f,"SelMach.png",{292,y});f.sprites.back().blend=Blend::additive;}
+        }
+    }
+    if(state_.productionVisible&&state_.selectedPanel==3){
+        for(std::size_t i=0;i<5;++i){const float y=428-51.f*i;
+            image(f,"FormationIcon_0"+std::to_string(i+1)+".png",{292,y});image(f,"Btn_BuildMach.png",{282.5f,y-8.5f});
+            if(state_.selectedFormation==i||pressed(0x40e,i)){image(f,"SelMach.png",{292,y});f.sprites.back().blend=Blend::additive;}
+        }
+    }
+    move(layout_.topRight());
+    if(state_.selectedPanel!=3)image(f,"Btn_UpgradeEquip.png",{293,74},1,4,(state_.selectedPanel==2?2:0)+(pressed(0x3fe)?1:0));
+    move(layout_.bottomRight());
     const auto panelStart=f.sprites.size();
     image(f,"iPon_GameUI_BG@2x.png",{160,62});
     if(layout_.width>320){
@@ -91,8 +140,22 @@ void GameHUD::append(Frame& f)const{
         auto middle=original;middle.sourcePx=Rect{190,0,2,256};middle.destination.x=96-(layout_.width-320);middle.destination.width=layout_.width-320;f.sprites.push_back(middle);
         auto right=original;right.sourcePx=Rect{192,0,448,256};right.destination.x=96;right.destination.width=224;f.sprites.push_back(right);
     }
+    const auto backingStart=f.sprites.size();
     image(f,"GameUI_BtmL.png",{32,-130});f.sprites.back().destination.x-=layout_.width-320;
+    if(layout_.width>320){
+        // Extend the unlabelled join between the original drawer halves.
+        auto join=f.sprites.back();join.sourcePx=Rect{254,0,2,512};
+        join.destination.x=96-(layout_.width-320);join.destination.width=layout_.width-320;f.sprites.push_back(join);
+    }
     image(f,"GameUI_BtmR.png",{224,-130});
+    if(layout_.width!=320||layout_.height!=480){
+        const auto backingEnd=f.sprites.size();
+        for(auto i=backingStart;i<backingEnd;++i){
+            auto edge=f.sprites[i];const float bottom=edge.destination.y+edge.destination.height;
+            const float missing=480+layout_.bottom+state_.mainPanelOffsetY-bottom;
+            if(missing>0){edge.sourcePx->y=510;edge.sourcePx->height=2;edge.destination.y=bottom;edge.destination.height=missing;f.sprites.push_back(edge);}
+        }
+    }
     for(auto i=panelStart;i<f.sprites.size();++i)f.sprites[i].destination.y-=state_.mainPanelOffsetY;
     move(layout_.bottomRight());
     image(f,"RaderBG.png",{18,398.5f});
@@ -139,52 +202,6 @@ void GameHUD::append(Frame& f)const{
     image(f,"iPon_QuickBtn@2x.png",{284,34},2,2,pressed(0x415)?1:0);
     image(f,"iPon_QuickBtn@2x.png",{284,11},2,2,pressed(0x413)?3:2);
     for(auto i=buttonStart;i<f.sprites.size();++i)f.sprites[i].destination.y-=state_.mainPanelOffsetY;
-    move(layout_.bottomRight());
-    if(state_.productionVisible&&state_.selectedPanel==1){
-        for(std::size_t i=0;i<std::min<std::size_t>(7,state_.production.size());++i){
-            const auto& row=state_.production[i];const float y=428-51.f*i;
-            image(f,"Btn_BuildMachBG.png",{292,y});image(f,"Btn_BuildMach.png",{282.5f,y-8.5f});
-            if(machine_)machine_(f,row.machine,{292,480-y},.5f);
-            // ImageAttacher::attachText uses 14px in a half-scale composite.
-            if(!state_.upgradeMode)text(f,std::to_string(row.mineralCost),{262,y+15.5f},7);
-            else{
-                image(f,"Btn_BuildMachUpgrade.png",{255.5f,y-9});
-                text(f,std::to_string(row.level+1)+"/"+std::to_string(row.maximumLevel),{262,y+15.5f},7);
-                // DlgBuildMach::refreshButtonsWithType: 0x2e090 uses Align=2
-                // at x=158 in its half-scale composite: right edge x=271.
-                const auto cost=std::to_string(row.upgradeCost)+"cr";
-                font_.draw(f,cost,{271-font_.width(cost,6),480-(y-10.5f)-3},6);
-            }
-            text(f,row.englishName,{292,y-21.5f},5.5f,{240/255.f,1,1,1});
-            for(unsigned n=0;n<row.capacity;++n)image(f,"Btn_BuildMachInd.png",{269.5f,y-1.5f-6.5f*n},2,1,n<row.occupied?0:1);
-            if(row.upgrading)image(f,"Btn_BuildMachUpgradeOn.png",{256,y-1.5f});
-            if(pressed(0x40d,i)){image(f,"SelMach.png",{292,y});f.sprites.back().blend=Blend::additive;}
-            if(!state_.upgradeMode&&!row.enabled)image(f,"BuildMach_Cover.png",{282.5f,y-8.5f});
-        }
-    }
-    // DlgSpecialAttack::refreshButtonsWithType 0x30de0 and
-    // DlgFormation::refreshButtons 0x3dd94: local(-35,-176) at(327,604).
-    if(state_.productionVisible&&state_.selectedPanel==2){
-        for(std::size_t i=0;i<state_.attacks.size();++i){const auto& a=state_.attacks[i];const float y=428-51.f*i;
-            image(f,a.icon,{292,y});image(f,"Btn_BuildMach.png",{282.5f,y-8.5f});
-            text(f,std::to_string(a.level+1)+"/"+std::to_string(a.maximumLevel),{262,y+14},7,{240/255.f,1,1,1});
-            text(f,std::to_string(a.count),{292,y-21},6.5f,{240/255.f,1,1,1});
-            if(state_.upgradeMode){image(f,"Btn_BuildMachUpgrade.png",{255.5f,y-9});
-                const auto cost=std::to_string(a.upgradeCost)+"cr";
-                font_.draw(f,cost,{271.5f-font_.width(cost,6),480-(y-12)-4},6,{240/255.f,1,1,1});
-                if(a.upgradeAvailable)image(f,"Btn_BuildMachUpgradeOn.png",{256,y-1.5f});
-            }
-            if(state_.selectedAttack==i||pressed(0x40e,i)){image(f,"SelMach.png",{292,y});f.sprites.back().blend=Blend::additive;}
-        }
-    }
-    if(state_.productionVisible&&state_.selectedPanel==3){
-        for(std::size_t i=0;i<5;++i){const float y=428-51.f*i;
-            image(f,"FormationIcon_0"+std::to_string(i+1)+".png",{292,y});image(f,"Btn_BuildMach.png",{282.5f,y-8.5f});
-            if(state_.selectedFormation==i||pressed(0x40e,i)){image(f,"SelMach.png",{292,y});f.sprites.back().blend=Blend::additive;}
-        }
-    }
-    move(layout_.topRight());
-    if(state_.selectedPanel!=3)image(f,"Btn_UpgradeEquip.png",{293,74},1,4,(state_.selectedPanel==2?2:0)+(pressed(0x3fe)?1:0));
     move(layout_.bottomRight());
     text(f,state_.cellUpgradeLevel>=5?"FULL":std::to_string(state_.cellUpgradeCost)+" cell",{304,457.5f},7);
     if(state_.cellUpgradeAvailable)image(f,"CellUpgrade.png",{267,457.5f});
