@@ -1,0 +1,67 @@
+{
+  "BaseUpgrade": {
+    "equal": true,
+    "sha256": "cc1f63df44eb991dca10eefc3c823b09118e132525aff7292c1a10bf1f8073a8"
+  },
+  "WeaponInfo": {
+    "equal": true,
+    "sha256": "2ae3f8d1823a67ae5a61ed0647964a4483ff849ee547149c20e44ddb971cef63"
+  },
+  "source_sha256": "6ec47ea094abaa31bab10058fe47bb25d46c6038b2e88a7da2629899f84af112",
+  "original_methods": [
+    {
+      "address": "0x1a53c",
+      "owner": "GlobalInfo",
+      "selector": "updateBaseUpgrade",
+      "evidence_ids": {
+        "pseudo": "ev_5c8c791065903d02f847187ac1ee9544cf1b988d5d7a24ec2cf33043944ca262",
+        "assembly": "ev_ea007ac4485ecb64872521fa6e7a19134c5029e46306ab0d02fcfc56386f2b23"
+      }
+    },
+    {
+      "address": "0x160ec",
+      "owner": "GobWorld",
+      "selector": "processGameRule",
+      "evidence_ids": {
+        "pseudo": "ev_2e2cd5d4059aaa345e79fa105b84082287b8e3fb7d092347da6f5ec86a022f0a",
+        "assembly": "ev_9b682340824a3c667dd49aa56f553a4279dc5c0c347fc993c77268ad4346d65c"
+      }
+    },
+    {
+      "address": "0x1616c",
+      "owner": "GobWorld",
+      "selector": "tick",
+      "evidence_ids": {
+        "pseudo": "ev_b8f5e33b2cb83276006326ef37deb9bdb95be612a19aacdf2835c4c6bcb509be",
+        "assembly": "ev_795d70b276cbbdcf759f75d25d08ce08592aa3276e482ca5ea49f49352d1cca6"
+      }
+    },
+    {
+      "address": "0xdf1c",
+      "owner": "GobHvM_Enemy",
+      "selector": "onCrash",
+      "evidence_ids": {
+        "pseudo": "ev_4401858b94154af433f30df93a8af5d7029c28755bab769b9e00470a179842eb",
+        "assembly": "ev_2da9cff8e1d2737974490f44ab446984c1526ba762c8a99add9672b7fdcb6933"
+      }
+    },
+    {
+      "address": "0x304d8",
+      "owner": "BuildItem",
+      "selector": "setItemWithBuildSet:Type:",
+      "evidence_ids": {
+        "pseudo": "ev_98c38e3a969a0c952a925ed07e7a6a3954bb7e2db03af0244527f433a505b91e",
+        "assembly": "ev_058674128cbe5b77ed7ff9364952b2396cc036a875c2eb821c9be6f6b9de1c06"
+      }
+    },
+    {
+      "address": "0x344cc",
+      "owner": "DlgUpgradeBase",
+      "selector": "setUpgrade",
+      "evidence_ids": {
+        "pseudo": "ev_d67e1e783bfe3f68c07131cf3dc00231eaa752d35e2221f26898b095c9b1645e",
+        "assembly": "ev_6fd750834aaf2be6a82ccbf2b59f1afdecbcc21746f5c801a456a3b5744c9469"
+      }
+    }
+  ]
+}
