@@ -42,3 +42,7 @@ Apple의 [세션 비활성화 설명](https://developer.apple.com/documentation/
 ## 설치본 직접 검사
 
 검사 후 Xcode Clean Build Folder와 일반·치트 앱 빌드로 XCTest PlugIns 없는 Debug 앱을 만들었다. 서명 검사 후 실제 iPad에 두 앱을 설치했다. 두 앱 모두 Stage 1 진입, MachineGun·Missile 생산, 홈 화면 이동·복귀, System Menu의 Resume Game을 직접 눌러 전투가 재개되는 것을 확인했다. 오디오 출력의 진행은 앞의 자동 검사에서 확인했다. 직접 검사 후 두 앱을 종료하고 검사 전 일반·치트 저장을 복원했으며 읽어 온 바이트가 일치했다.
+
+## 후속 사용자 발견: 효과음 복귀 누락
+
+위 검사 이후 사용자가 음악만 들리고 효과음은 들리지 않는다고 보고했다. 기존 검사의 효과음 호출 횟수로는 출력 정지를 발견하지 못했다. 샘플 재생 위치 검사로 실패를 재현하고 OpenAL Soft 장치 재시작을 연결했다. [후속 수정과 재검사](effects-resume-20261105.md).

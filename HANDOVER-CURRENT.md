@@ -1,5 +1,7 @@
 # MachDefense 인계 — 2026-11-05
 
+최신 후속: 사용자가 복귀 후 효과음 소실을 발견했다. OpenAL Soft 장치 pause/resume 누락을 iPad에서 재현·수정했고 샘플 진행을 포함한 오디오·전투 검사 6개가 통과했다. [효과음 복귀 수정](docs/evidence/effects-resume-20261105.md).
+
 현재 브랜치는 `refactor/shared-core-audio`다. 기존 재개발·계획을 `0243083`에 보존하고 로컬 develop의 `8109ae6`에서 분기했다. 원본 오디오·텍스처 대조 수정은 `f623eba`에 커밋했다. 이후 공용 Core·Audio 분리와 검사 결과를 `193ed2f`에 커밋했다. 최신 결과는 [모듈화 실행 기록](docs/evidence/module-work-20261105.md), 남은 과제는 [TODO](docs/usability-todo.md)를 따른다. 원격 push·main 병합·제품 배포는 하지 않았다. [통합 보고서](docs/report-site.md#최근-갱신--2026-11-05-모듈-구현검사)는 게시했다.
 
 2026-11-05 06:08 iPhone 정식 앱도 최신 모듈·오디오 수정본으로 빌드·설치했다. 기존 Stage 17·Lv.65 저장 불러오기, 전투·생산·메뉴 재개를 확인했다. 검사 후 저장을 원래 바이트로 복원하고 앱을 종료했다. [기기 검사 기록](docs/evidence/module-ipad-device-20261105.md).

@@ -187,6 +187,18 @@ public:
     XCTNSPredicateExpectation* ready=[[XCTNSPredicateExpectation alloc]initWithPredicate:finished object:view];
     [self waitForExpectations:@[ready] timeout:10];
 }
+- (void)assertEffectsAdvance:(MDAudio*)audio {
+    NSArray<NSString*>* names=@[@"HMG01.wav",@"BuildMachComplete.wav"];
+    for(NSString* name in names)[audio play:name gain:.1f pan:0];
+    XCTestExpectation* progress=[self expectationWithDescription:@"OpenAL effect samples advance"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW,int64_t(.2*NSEC_PER_SEC)),dispatch_get_main_queue(),^{[progress fulfill];});
+    [self waitForExpectations:@[progress] timeout:2];
+    for(NSString* name in names){
+        const float position=[audio effectPlaybackTime:name];
+        NSLog(@"MD_EFFECT_PROGRESS %@ seconds=%.6f",name,position);
+        XCTAssertGreaterThan(position,.05f,@"%@ output stopped after session transition",name);
+    }
+}
 - (void)testForegroundRecoversWithoutInterruptionEnded {
     NSURL* directory=[NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:NSUUID.UUID.UUIDString] isDirectory:YES];
     Class gameClass=NSClassFromString(@"MDGameView");XCTAssertNotNil(gameClass);if(!gameClass)return;
@@ -195,17 +207,18 @@ public:
     window.rootViewController.view=view;[window makeKeyAndVisible];[view layoutIfNeeded];
     MDAudio* audio=[view valueForKey:@"audio"];
     [view setApplicationActive:YES];[self waitForAudioSession:view];[audio playMusic:@"GamePlay.mp3" gain:.05f];XCTAssertTrue(audio.musicPlaying);
+    [self assertEffectsAdvance:audio];
     NSNotification* began=[NSNotification notificationWithName:AVAudioSessionInterruptionNotification object:nil userInfo:@{AVAudioSessionInterruptionTypeKey:@(AVAudioSessionInterruptionTypeBegan)}];
     NSNotification* ended=[NSNotification notificationWithName:AVAudioSessionInterruptionNotification object:nil userInfo:@{AVAudioSessionInterruptionTypeKey:@(AVAudioSessionInterruptionTypeEnded)}];
     for(unsigned cycle=0;cycle<3;++cycle){
         [view audioInterrupted:began];
         // Resume and menu input remain enabled while an audio interruption exists.
         XCTAssertTrue([[view valueForKey:@"active"] boolValue]);XCTAssertFalse(audio.musicPlaying);
-        [view setApplicationActive:NO];XCTAssertTrue([[view valueForKey:@"displayLink"] isPaused]);
+        [view setApplicationActive:NO];[self waitForAudioSession:view];XCTAssertTrue([[view valueForKey:@"displayLink"] isPaused]);
         [view setApplicationActive:YES];[self waitForAudioSession:view]; // Camera may not deliver an interruption-ended notification.
         XCTAssertTrue([[view valueForKey:@"active"] boolValue]);XCTAssertFalse([[view valueForKey:@"displayLink"] isPaused]);
         XCTAssertFalse([[view valueForKey:@"audioInterrupted"] boolValue]);XCTAssertTrue(audio.musicPlaying);
-        const auto count=audio.playCount;[audio play:@"BuildMachComplete.wav" gain:.05f pan:0];XCTAssertEqual(audio.playCount,count+1);
+        const auto count=audio.playCount;[audio play:@"BuildMachComplete.wav" gain:.05f pan:0];XCTAssertEqual(audio.playCount,count+1);[self assertEffectsAdvance:audio];
         [view audioInterrupted:ended];[self waitForAudioSession:view];XCTAssertTrue(audio.musicPlaying);
     }
     // A suspension notification may arrive after the foreground callback.
@@ -217,6 +230,7 @@ public:
     audio=nil; // The host owns the audio context; do not retain the retired device in this fixture.
     [view audioReset:[NSNotification notificationWithName:AVAudioSessionMediaServicesWereResetNotification object:nil]];
     [self waitForAudioSession:view];audio=[view valueForKey:@"audio"];XCTAssertEqualObjects(audio.musicName,@"GamePlay.mp3");XCTAssertTrue(audio.musicPlaying);
+    [self assertEffectsAdvance:audio];
     const float beforePlayback=audio.musicPlaybackTime;
     XCTestExpectation* advances=[self expectationWithDescription:@"AudioQueue playback advances after recovery"];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW,int64_t(.2*NSEC_PER_SEC)),dispatch_get_main_queue(),^{[advances fulfill];});
@@ -225,7 +239,7 @@ public:
     for(unsigned i=0;i<10;++i){[view setApplicationActive:NO];[view setApplicationActive:YES];}
     [view setApplicationActive:NO];[self waitForAudioSession:view];
     XCTAssertFalse(audio.musicPlaying);XCTAssertFalse([[view valueForKey:@"audioSessionReady"] boolValue]);
-    [view setApplicationActive:YES];[self waitForAudioSession:view];XCTAssertTrue(audio.musicPlaying);
+    [view setApplicationActive:YES];[self waitForAudioSession:view];XCTAssertTrue(audio.musicPlaying);[self assertEffectsAdvance:audio];
     [view shutdown];[self waitForAudioSession:view];XCTAssertFalse([[view valueForKey:@"active"] boolValue]);XCTAssertFalse(audio.musicPlaying);
     window.hidden=YES;window.rootViewController=nil;view=nil;
     [NSFileManager.defaultManager removeItemAtURL:directory error:nil];

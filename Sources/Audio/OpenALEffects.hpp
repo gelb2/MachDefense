@@ -18,6 +18,7 @@ public:
     bool contains(std::string_view name)const;
     bool prepare(std::string name,const PCM&);
     void play(std::string_view name,float gain,float x=0,float y=0);
+    float playbackTime(std::string_view name)const;
     void stop();
     void setActive(bool);
     std::size_t loaded()const;

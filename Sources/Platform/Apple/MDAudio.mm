@@ -66,6 +66,7 @@ bool decode(NSURL* url,md::audio::PCM& output){
     if(!name.length)return;_effects.play(name.UTF8String,gain,x,y);
     if(!_effects.error().empty())_lastError=[NSString stringWithUTF8String:_effects.error().c_str()];
 }
+- (float)effectPlaybackTime:(NSString*)name {return name.length?_effects.playbackTime(name.UTF8String):-1;}
 - (void)stopEffects {_effects.stop();}
 - (void)setActive:(BOOL)active {
     _active=active;

@@ -6,6 +6,7 @@
 - (void)play:(NSString*)name gain:(float)gain x:(float)x y:(float)y;
 - (void)playMusic:(NSString*)name gain:(float)gain;
 - (void)stopMusic;
+- (float)effectPlaybackTime:(NSString*)name;
 - (void)stopEffects;
 - (void)setActive:(BOOL)active;
 @property(nonatomic,readonly) NSUInteger currentContextIdentity;
