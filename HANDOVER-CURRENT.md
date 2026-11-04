@@ -73,3 +73,5 @@ HeavyMach 1·2·MachDefense 모두 광고를 표시하거나 요청하지 않는
 `feat/source-reimplementation`에서 TEST5쪽과 ValidationTools를 구현했다. 최신 결과는 docs/evidence/source-cheat-campaign-20261104.md. 최종 CTest31종, Apple XCTest10건, 최신 일반·치트 빌드 성공. 80개 진행·저장과 치트 조건80개 교전을 나누어 검사했다. 총구·탄피·궤적·잔해를 연결했고 원본 진형 아이콘 no-op을 확인했다. 결과 저장 실패 후 Next/Retry/Select Stage 재시도와 TEST 오류창 입력도 수정했다.
 
 사용자 기기 포팅판은 변경하지 않았다. 시뮬레이터 직접 검사를 마치고 앱 종료·홈 복귀·시뮬레이터 종료까지 확인했다. 같은 조건 포팅판 대조·일반 난이도 진행·장시간 메모리/프레임·독립 빌드가 남는다. 이 단계 후 화면 대응을 한다. 최종 로그 `.local/final-core-tests.log`, `.local/source-validation-ui-20261104.md`를 재사용한다.
+
+기능 변경 커밋은31395fb다. 추적 파일만 git archive로 `.local/clean-source-31395fb`에 풀고 새 DerivedData에서 일반 iOS Simulator 앱 빌드 성공. `.local/clean-source-apple-build.log`를 보존했다. 같은 조건 포팅판 대조와 장시간 검사가 남으며 화면 확장은 아직 시작하지 않았다.

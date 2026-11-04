@@ -39,3 +39,7 @@
 로컬 로그: `.local/final-core-tests.log`, `.local/save-failure-result.log`, `.local/source-build-release/Testing/Temporary/LastTest.log`. 저장 실패 수정 전 실패 로그와 회귀검사를 보존한다. 시뮬레이터 캡처는 `.local/source-cheat-*.png`다. 원본 패키지·실행 파일·개인 저장은 보고 사이트에 포함하지 않는다.
 
 최신 일반·치트 Apple 증분 빌드도 성공했다. iPad 재설치 후 슬롯2 TEST·1,000Cr 유지와 미사일 생산을 확인했다. 마지막 탄환 부착 효과·레이저 번개는 Apple 빌드와 코어 검사까지 완료했고, 원본과의 화면 비교는 남았다. OpenGL ES/OpenAL deprecated 경고는 남아 있다. 시험 앱을 종료하고 홈 화면을 확인한 뒤 시뮬레이터를 모두 종료했다.
+
+## 추적 파일만으로 새 빌드
+
+커밋31395fb를 git archive로 별도 빈 폴더에 풀었다. 기존 .local·DerivedData·외부 IPA를 복사하지 않았다. 새 DerivedData에서 일반 앱의 iOS Simulator 빌드가 성공했다. 빌드 로그에 외부 원본·호환 실행기 경로가 없음을 확인했다. 로그는 `.local/clean-source-apple-build.log`다.
