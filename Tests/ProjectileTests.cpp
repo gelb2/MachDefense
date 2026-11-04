@@ -99,5 +99,8 @@ int main() {
     part->tick(1);assert(!part->shown&&!part->sprite("effect.png",{128,128},4,4,{40,50}));
     for(auto& item:pool.particles())item.shown=true;
     assert(!pool.acquire(2,poolRandom));assert(poolRandom.next()==poolExpected.next());
+    WeaponDefinition attached;attached.effectImage="Glow.png";attached.effectColumns=4;attached.effectRows=2;Projectile glow;
+    for(int type:{1,2,8}){attached.effectType=type;glow.effectVisible=true;auto visual=glow.attachedEffect(attached,{128,64},{10,20},.5f);assert(visual&&visual->sourcePx->width==32&&visual->destination.width==16&&visual->blend==Blend::additive);glow.effectVisible=false;assert(bool(glow.attachedEffect(attached,{128,64},{10,20},.5f))==(type!=2));}
+    attached.effectType=3;assert(!glow.attachedEffect(attached,{128,64},{10,20},1));
     std::cout<<"Projectile original movement and collision checks passed\n";
 }

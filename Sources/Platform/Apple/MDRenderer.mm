@@ -27,6 +27,7 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
     std::map<std::string,Texture> _textures;
     std::map<std::string,md::Vec2> _imageSizes;
     std::set<std::string> _failedTextures;
+    MDRenderMetrics _metrics;
 }
 - (instancetype)initWithResourceRoot:(NSURL*)root {
     if(!(self=[super init]))return nil;
@@ -88,6 +89,7 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
 }
 - (BOOL)drawFrame:(const md::Frame&)frame toLayer:(CAEAGLLayer*)layer {
     if(!(std::isfinite(frame.logicalWidth)&&std::isfinite(frame.logicalHeight)&&frame.logicalWidth>0&&frame.logicalHeight>0))return NO;
+    const double started=CACurrentMediaTime();_metrics={};_metrics.sprites=frame.sprites.size();
     EAGLContext* previous=EAGLContext.currentContext;
     if(![EAGLContext setCurrentContext:_context])return NO;
     if(![self allocate:layer]){[EAGLContext setCurrentContext:previous];return NO;}
@@ -104,7 +106,31 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
     glMatrixMode(GL_MODELVIEW);glLoadIdentity();glMatrixMode(GL_TEXTURE);glLoadIdentity();glMatrixMode(GL_MODELVIEW);
     glActiveTexture(GL_TEXTURE0);glClientActiveTexture(GL_TEXTURE0);glEnableClientState(GL_VERTEX_ARRAY);glEnableClientState(GL_TEXTURE_COORD_ARRAY);glDisableClientState(GL_COLOR_ARRAY);
     BOOL valid=YES;
-    for(const auto& s:frame.sprites){
+    std::vector<const md::TextureMesh*> meshes;meshes.reserve(frame.meshes.size());
+    for(const auto& mesh:frame.meshes)meshes.push_back(&mesh);
+    std::stable_sort(meshes.begin(),meshes.end(),[](const auto* a,const auto* b){return a->beforeSpriteIndex<b->beforeSpriteIndex;});
+    auto drawMesh=[&](const md::TextureMesh& mesh){
+        if(mesh.vertices.size()<3)return;
+        for(const auto& v:mesh.vertices)if(!std::isfinite(v.position.x)||!std::isfinite(v.position.y)||!std::isfinite(v.uv.x)||!std::isfinite(v.uv.y))return;
+        const bool premultiplied=mesh.blend==md::Blend::premultipliedAlpha;
+        Texture* texture=[self texture:mesh.image premultiplied:premultiplied];if(!texture){valid=NO;return;}
+        glDisable(GL_SCISSOR_TEST);glEnable(GL_TEXTURE_2D);glBindTexture(GL_TEXTURE_2D,texture->id);
+        glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);glTexEnvi(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
+        if(mesh.blend==md::Blend::opaque)glDisable(GL_BLEND);else{glEnable(GL_BLEND);glBlendFunc(premultiplied?GL_ONE:GL_SRC_ALPHA,mesh.blend==md::Blend::additive?GL_ONE:GL_ONE_MINUS_SRC_ALPHA);}
+        std::vector<md::MeshVertex> vertices=mesh.vertices;
+        if(premultiplied)for(auto& v:vertices){v.color.r*=v.color.a;v.color.g*=v.color.a;v.color.b*=v.color.a;}
+        glLoadIdentity();glEnableClientState(GL_COLOR_ARRAY);
+        glVertexPointer(2,GL_FLOAT,sizeof(md::MeshVertex),&vertices.front().position.x);
+        glTexCoordPointer(2,GL_FLOAT,sizeof(md::MeshVertex),&vertices.front().uv.x);
+        glColorPointer(4,GL_FLOAT,sizeof(md::MeshVertex),&vertices.front().color.r);
+        glDrawArrays(GL_TRIANGLE_STRIP,0,GLsizei(vertices.size()));glDisableClientState(GL_COLOR_ARRAY);
+        ++_metrics.drawCalls;++_metrics.textureBinds;++_metrics.filterChanges;++_metrics.blendChanges;++_metrics.clipChanges;
+    };
+    std::size_t meshIndex=0;
+    for(std::size_t spriteIndex=0;spriteIndex<=frame.sprites.size();++spriteIndex){
+        while(meshIndex<meshes.size()&&meshes[meshIndex]->beforeSpriteIndex<=spriteIndex)drawMesh(*meshes[meshIndex++]);
+        if(spriteIndex==frame.sprites.size())break;
+        const auto& s=frame.sprites[spriteIndex];
         if(!validRect(s.destination)||!std::isfinite(s.rotationDegrees)||!std::isfinite(s.pivot.x)||!std::isfinite(s.pivot.y))continue;
         if(s.destination.width==0||s.destination.height==0)continue;
         if(s.clip){
@@ -113,6 +139,7 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
             const float top=std::clamp(c.y,0.f,frame.logicalHeight),bottom=std::clamp(c.y+std::max(0.f,c.height),0.f,frame.logicalHeight);
             glEnable(GL_SCISSOR_TEST);glScissor(vx+GLint(left*sx),vy+GLint((frame.logicalHeight-bottom)*sy),GLsizei(std::max(0.f,(right-left)*sx)),GLsizei(std::max(0.f,(bottom-top)*sy)));
         }else glDisable(GL_SCISSOR_TEST);
+        ++_metrics.blendChanges;++_metrics.clipChanges;
         switch(s.blend){case md::Blend::opaque:glDisable(GL_BLEND);break;
             case md::Blend::alpha:glEnable(GL_BLEND);glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);break;
             case md::Blend::premultipliedAlpha:glEnable(GL_BLEND);glBlendFunc(GL_ONE,GL_ONE_MINUS_SRC_ALPHA);break;
@@ -124,6 +151,7 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
         GLfloat uv[]={0,0,1,0,0,1,1,1};
         if(!s.image.empty()){
             Texture* t=[self texture:s.image premultiplied:premultiplied];if(!t){valid=NO;continue;}
+            ++_metrics.textureBinds;++_metrics.filterChanges;
             glEnable(GL_TEXTURE_2D);glBindTexture(GL_TEXTURE_2D,t->id);
             glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,s.nearest?GL_NEAREST:GL_LINEAR);glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,s.nearest?GL_NEAREST:GL_LINEAR);
             glTexEnvi(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
@@ -133,10 +161,14 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
             uv[0]=l;uv[1]=top;uv[2]=rr;uv[3]=top;uv[4]=l;uv[5]=b;uv[6]=rr;uv[7]=b;
         }else glDisable(GL_TEXTURE_2D);
         glLoadIdentity();glTranslatef(s.destination.x+w*s.pivot.x,s.destination.y+h*s.pivot.y,0);glRotatef(s.rotationDegrees,0,0,1);glTranslatef(-w*s.pivot.x,-h*s.pivot.y,0);
-        glVertexPointer(2,GL_FLOAT,0,vertices);glTexCoordPointer(2,GL_FLOAT,0,uv);glDrawArrays(GL_TRIANGLE_STRIP,0,4);
+        glVertexPointer(2,GL_FLOAT,0,vertices);glTexCoordPointer(2,GL_FLOAT,0,uv);glDrawArrays(GL_TRIANGLE_STRIP,0,4);++_metrics.drawCalls;
     }
+    while(meshIndex<meshes.size())drawMesh(*meshes[meshIndex++]);
     glDisable(GL_SCISSOR_TEST);glBindRenderbufferOES(GL_RENDERBUFFER_OES,_renderbuffer);
+    const double submitted=CACurrentMediaTime();
     BOOL ok=[_context presentRenderbuffer:GL_RENDERBUFFER_OES];
+    const double presented=CACurrentMediaTime();
+    _metrics.submitMilliseconds=(submitted-started)*1000;_metrics.presentMilliseconds=(presented-submitted)*1000;_metrics.totalMilliseconds=(presented-started)*1000;
     const GLenum error=glGetError();if(error!=GL_NO_ERROR){[self fail:[NSString stringWithFormat:@"OpenGL error 0x%x",error]];ok=NO;}
     if(ok)++_presentedFrames;[EAGLContext setCurrentContext:previous];return ok&&valid;
 }
@@ -158,5 +190,6 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
     glReadPixels(0,0,_width,_height,GL_RGBA,GL_UNSIGNED_BYTE,data.mutableBytes);
     BOOL ok=glGetError()==GL_NO_ERROR;[EAGLContext setCurrentContext:previous];return ok?data:nil;
 }
+- (MDRenderMetrics)lastFrameMetrics{return _metrics;}
 - (CGSize)drawablePixelSize{return CGSizeMake(_width,_height);}
 @end

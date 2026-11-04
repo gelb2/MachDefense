@@ -104,19 +104,19 @@ std::vector<PartPose> BattleModels::pose(std::string_view name,float scale,float
 std::vector<PartPose> BattleModels::pose(const std::vector<AssemblyPart>& tree,float scale,float bodyAngle,float weaponAngle,float radarAngle) const {
     std::vector<PartPose> poses;
     auto rotate=[](Vec2 v,float a){float c=std::cos(a),s=std::sin(a);return Vec2{v.x*c-v.y*s,v.x*s+v.y*c};};
-    std::function<void(const AssemblyPart&,Vec2,float)> append=[&](const AssemblyPart& a,Vec2 basePos,float parentAngle){
+    std::function<void(const AssemblyPart&,Vec2,float,bool)> append=[&](const AssemblyPart& a,Vec2 basePos,float parentAngle,bool hasParent){
         auto p=part(a.name);if(!p) throw std::runtime_error("Assembly references unknown part");
         float angle=a.angle.value_or(p->type==4?weaponAngle:(p->type==7?radarAngle:parentAngle));
         Vec2 anchor=p->socket(0,scale),drawingAnchor=anchor;
         if(a.reverse) drawingAnchor.y=-drawingAnchor.y;
         Vec2 baseRot=rotate(basePos,parentAngle),anchorRot=rotate(drawingAnchor,angle),add=rotate(a.addPosition,angle);
-        poses.push_back({p,{baseRot.x+add.x-anchorRot.x,baseRot.y+add.y-anchorRot.y},angle,scale,a.zOrder,a.reverse,a.visualScale});
+        poses.push_back({p,{baseRot.x+add.x-anchorRot.x,baseRot.y+add.y-anchorRot.y},angle,scale,a.zOrder,a.reverse,a.visualScale,hasParent});
         for(const auto& child:a.children) {
             Vec2 socket=p->socket(child.parentSocket,scale);
-            append(child,{basePos.x+socket.x-anchor.x,basePos.y+socket.y-anchor.y},angle);
+            append(child,{basePos.x+socket.x-anchor.x,basePos.y+socket.y-anchor.y},angle,true);
         }
     };
-    for(const auto& a:tree) append(a,{},bodyAngle);
+    for(const auto& a:tree) append(a,{},bodyAngle,false);
     std::stable_sort(poses.begin(),poses.end(),[](const auto& a,const auto& b){return a.zOrder<b.zOrder;});
     return poses;
 }

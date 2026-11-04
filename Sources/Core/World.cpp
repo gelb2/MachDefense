@@ -1,4 +1,5 @@
 #include "World.hpp"
+#include "Formation.hpp"
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
@@ -65,7 +66,7 @@ WorldActor& World::addParts(const BuildDefinition& definition,Vec2 position){
 }
 void World::start(unsigned stage){
     if(stage>=80||stage>=maps_.children.size()||stage>=mapTable_.rowCount())throw std::out_of_range("Original stage index");
-    stage_=stage;startTime_=time();statistics_={};actors_.clear();loot_.clear();projectiles_.clear();airStrikes_.clear();spawners_.clear();production_.clear();events_.clear();
+    stage_=stage;startTime_=time();statistics_={};actors_.clear();loot_.clear();projectiles_.clear();trails_.clear();airStrikes_.clear();spawners_.clear();production_.clear();events_.clear();
     for(auto& p:particles_->particles())p.shown=false;
     cellLevel_=0;state_=WorldState::running;paused_=false;started_=true;cameraTouch_.reset();radarTouch_.reset();cameraVelocity_=0;
     save_.writeWord(SaveData::slotStart+slot_*SaveData::slotStride+0x34,stage);
@@ -117,7 +118,7 @@ bool World::activateSpecial(std::string_view name,Vec2 point){
             const float distance=distanceSquared(a->position,point);
             if(distance>10000.f&&distance<=float(weapon->shotRange*weapon->shotRange)){
                 auto bullets=crossfireProjectiles(*weapon,a->position,point,a->angle,time(),random_);
-                for(auto& bullet:bullets)projectiles_.push_back({weaponName,std::move(bullet),a->id});
+                for(auto& bullet:bullets)addProjectile(weaponName,std::move(bullet),a->id,1);
                 ++fired;
             }
         }
@@ -163,8 +164,10 @@ void World::tick(){
     // children on the following update, keeping actor references stable.
     const auto count=actors_.size();for(std::size_t i=0;i<count;++i)updateActor(*actors_[i]);
     for(auto& strike:airStrikes_)if(const auto* weapon=weapons_.find(strike.weapon))
-        if(auto bullet=strike.motion.tick(*weapon,time(),random_))projectiles_.push_back({strike.weapon,*bullet,0});
+        if(auto bullet=strike.motion.tick(*weapon,time(),random_))addProjectile(strike.weapon,*bullet,0,0);
     std::erase_if(airStrikes_,[](const auto& strike){return strike.motion.removed;});
+    for(auto& trail:trails_)trail.motion->tick(time(),random_);
+    std::erase_if(trails_,[](const auto& trail){return trail.motion->removed();});
     updateProjectiles();
     for(auto& p:particles_->particles())p.tick(float(time()),height()*.5f);
     std::vector<LootCollector> collectors;for(const auto& a:actors_)if(a->player&&!a->removed)collectors.push_back({a->id,a->position,a->type,a->hp});
@@ -176,7 +179,8 @@ void World::tick(){
     std::erase_if(loot_,[](const auto& l){return l.removed;});
 }
 void World::updateActor(WorldActor& a){
-    if(a.removed||a.hp<=0)return;
+    if(a.removed)return;
+    if(a.hp<=0){updateCrash(a);return;}
     a.radarAngle+=.2f;if(a.radarAngle>0x1.921fb6p+2f)a.radarAngle-=0x1.921fb6p+2f;
     auto* target=actor(a.target);if(target&&(target->hp<=0||target->removed)){a.target=0;a.moveToTarget=false;target=nullptr;}
     const bool aiEnabled=a.player||!(a.statusFlags&2);
@@ -211,6 +215,7 @@ void World::updateActor(WorldActor& a){
         if(a.moveToTarget)setDestination(a,distanceSquared(a.position,target->position)<(.8f*a.range)*(.8f*a.range)?a.position:target->position);
         a.targetCheck=float(time());
     }
+    if(a.maxHP>0&&a.hp*100/a.maxHP<80&&random_.next()%unsigned(a.hp*200/a.maxHP+10)==0)emitDamageSmoke(a,false);
     ParticleState* statusParticle=nullptr;
     const auto status=a.specialDamage.tick(time(),random_,[&]{statusParticle=particles_->acquire(float(time()),random_);return statusParticle!=nullptr;},[&](const StatusEvent& event){
         if(event.dealsDamage)damage(a.id,event.damage);
@@ -236,21 +241,79 @@ void World::updateWeapons(WorldActor& a){
         auto muzzle=pose?pose->muzzle(gun.muzzle):std::nullopt;
         frame.muzzlePosition={a.position.x+(muzzle?muzzle->x:0),a.position.y+(muzzle?muzzle->y:0)};
         const auto fired=gun.controller.tick(*definition,frame,random_,[&](const WeaponFire& shot){
-            if(shot.directDamage){if(target&&target->hp>0)damage(target->id,definition->damage,a.id);}
-            else {WorldProjectile p{gun.name,Projectile::fire(*definition,shot.origin,shot.destination,shot.angle,time(),random_),a.id};p.motion.toPlayer=!a.player;projectiles_.push_back(std::move(p));}
+            // Original muzzle flash is allocated before damage/projectile creation.
+            if(auto* p=particles_->acquire(float(time()),random_)){
+                p->life=.1f;p->tile=int(random_.next()%12);p->position=shot.origin;
+                const float angle=float(random_.next())*0x1p-31f*0x1.921fb6p+1f;p->angle=angle+angle;
+                setParticleImage(p,"Efx_Fire.png",4,4);p->start(float(time()));
+            }
+            if(shot.directDamage){
+                emitWeaponImpact(*definition,shot.destination,shot.angle,.03f);
+                if(auto* p=particles_->acquire(float(time()),random_)){
+                    const Vec2 delta{shot.destination.x-shot.origin.x,shot.destination.y-shot.origin.y};
+                    p->blend=Blend::additive;p->life=.1f;p->position={shot.origin.x+delta.x*.5f,shot.origin.y+delta.y*.5f};
+                    p->angle=shot.angle;p->scale={std::sqrt(delta.x*delta.x+delta.y*delta.y)*.015625f,definition->type==WeaponType::gun?geometry_.deviceScale:1.f};
+                    setParticleImage(p,"Efx_BulletTrail.png",1,1);p->start(float(time()));
+                }
+                if(auto* p=particles_->acquire(float(time()),random_)){
+                    const float angleRandom=float(random_.next())*0x1p-31f;
+                    const float speedRandom=float(random_.next())*0x1p-31f;
+                    const bool left=a.player&&a.type==0&&!(part.reverse&2);
+                    const float shellAngle=float(double(gun.controller.angle())+(left?1.5707963267948966:-1.5707963267948966)+double((angleRandom+angleRandom)-1.f));
+                    float speed=(speedRandom+speedRandom)+1.5f;
+                    const bool sniper=definition->type==WeaponType::sniper;
+                    if(!sniper&&geometry_.deviceScale==.5f)speed*=.5f;
+                    const float lifeRandom=float(random_.next())*0x1p-31f;
+                    const float lifeBase=sniper?.7f:.3f;p->life=lifeRandom*lifeBase+lifeBase;
+                    p->position={a.position.x+(pose?pose->localCenter.x:0),a.position.y+(pose?pose->localCenter.y:0)};
+                    const float shellScale=sniper?.7f:.6f;p->scale={shellScale,shellScale};p->scaleVelocity=-.004f;p->rotationVelocity=.4f;
+                    p->velocity={std::cos(shellAngle)*speed,std::sin(shellAngle)*speed};p->velocityAdd=-.05f;
+                    setParticleImage(p,"BulletShell.png",2,1);p->start(float(time()));
+                }
+                if(target&&target->hp>0)damage(target->id,definition->damage,a.id);
+            }
+            else {WorldProjectile p{gun.name,Projectile::fire(*definition,shot.origin,shot.destination,shot.angle,time(),random_),a.id,{}};p.motion.toPlayer=!a.player;addProjectile(p.weapon,std::move(p.motion),a.id);}
         });
         if(fired.advanceMuzzle&&pose)gun.muzzle=pose->nextMuzzle(gun.muzzle);
         if(fired.playFireSound)host_.playSound(definition->fireSound);
         gun.recoil=fired.recoil;
     }
 }
+void World::addProjectile(std::string name,Projectile motion,ActorId attacker,int layer){
+    WorldProjectile bullet{std::move(name),std::move(motion),attacker,{},layer,0};
+    if(const auto* weapon=weapons_.find(bullet.weapon)){
+        const bool launched=bullet.motion.launchVelocity.x!=0||bullet.motion.launchVelocity.y!=0;
+        if(auto trail=Trail::forWeapon(*weapon,geometry_.deviceScale,launched?Vec2{}:bullet.motion.position)){
+            bullet.trail=std::make_shared<Trail>(std::move(*trail));
+            if(!launched)bullet.trail->add(bullet.motion.position,time(),random_);
+            trails_.push_back({bullet.trail,layer,nextRenderOrder_++});
+        }
+    }
+    bullet.renderOrder=nextRenderOrder_++;projectiles_.push_back(std::move(bullet));
+}
 void World::updateProjectiles(){
     for(auto& p:projectiles_){auto* weapon=weapons_.find(p.weapon);if(!weapon||p.motion.removed)continue;
         if(!p.motion.tick(*weapon))continue;
+        if(p.trail&&(weapon->effectType==5||weapon->effectType==6))p.trail->add(p.motion.position,time(),random_);
         std::vector<ProjectileTarget> enemies,players;std::vector<ActorId> enemyIds,playerIds;
         for(const auto& a:actors_){auto& snapshots=a->player?players:enemies;auto& ids=a->player?playerIds:enemyIds;snapshots.push_back({a->position,a->removed?0:a->hp,a->radius});ids.push_back(a->id);}
+        if(weapon->damageRange>0){
+            if(weapon->type==WeaponType::nuclear||weapon->type==WeaponType::emp){
+                if(auto* effect=particles_->acquire(float(time()),random_)){
+                    effect->life=weapon->type==WeaponType::nuclear?.25f:.15f;effect->position=p.motion.position;
+                    effect->scale={.1f,.1f};effect->scaleVelocity=.25f;effect->blend=Blend::additive;
+                    setParticleImage(effect,weapon->type==WeaponType::nuclear?"Efx_Nuclear.png":"Efx_EMP.png",1,1);effect->start(float(time()));
+                }
+                if(weapon->type==WeaponType::emp)if(auto* effect=particles_->acquire(float(time()),random_)){
+                    effect->life=16.f*.04f;effect->position=p.motion.position;effect->scale={2,2};effect->blend=Blend::additive;
+                    effect->setTileAnimation(16);setParticleImage(effect,"Efx_ExplodeBoss.png",4,4);effect->start(float(time()));
+                }
+            }
+            host_.playSound("SFX_ExplGround.wav");
+        }
         const auto hits=projectileCollide(*weapon,p.motion.position,p.motion.toPlayer,time(),enemies,players);
-        for(const auto& hit:hits){auto id=(hit.player?playerIds:enemyIds).at(hit.index);damage(id,hit.damage,p.attacker);if(hit.special){auto* a=actor(id);if(a&&a->hp>0&&a->specialDamage.add(*hit.special)){a->target=0;setDestination(*a,a->position);}}}
+        for(const auto& hit:hits){auto id=(hit.player?playerIds:enemyIds).at(hit.index);damage(id,hit.damage,p.attacker);if(hit.special){auto* a=actor(id);if(a&&a->hp>0&&a->specialDamage.add(*hit.special)){a->target=0;setDestination(*a,a->position);}}if(hit.secondary)if(const auto* a=actor(id))emitSecondaryImpact(*weapon,p.motion.position,a->position);}
+        emitWeaponImpact(*weapon,p.motion.position,0,.04f);
         p.motion.removed=true;
     }
     std::erase_if(projectiles_,[](const auto& p){return p.motion.removed;});
@@ -259,18 +322,23 @@ void World::damage(ActorId id,int value,ActorId attacker){
     auto* a=actor(id);if(!a||a->hp<=0||a->removed)return;
     a->hp=hpAfterDamage(a->hp,value);
     if(a->hp>0){if(const auto* target=actor(a->target);target&&target->base)a->target=attacker;return;}
+    host_.playSound("SFX_ExplMach.wav");emitCrashExplosion(a->position);
     if(!a->player){
         auto drops=enemyLootDrops(a->coin,a->coinRate,upgradeParameter(upgrades_,save_,slot_,BaseUpgrade::creditResearch),a->position,time(),geometry_.deviceScale,random_,[&](std::string_view name)->const LootDefinition*{auto i=lootDefinitions_.find(std::string(name));return i==lootDefinitions_.end()?nullptr:&i->second;});
         for(auto& item:drops)loot_.push_back(std::move(item));
     }
+    if(a->player&&a->type==0){
+        std::function<void(std::vector<AssemblyPart>&)> removeWeapons=[&](auto& nodes){std::erase_if(nodes,[&](const auto& p){return weapons_.find(p.name)!=nullptr;});for(auto& node:nodes)removeWeapons(node.children);};removeWeapons(a->assembly);
+    }else{if(a->assembly.size()>1)a->assembly.resize(1);if(!a->assembly.empty())a->assembly.front().children.clear();}
     for(auto& item:loot_)item.pickerDead(id);
     if(a->base&&state_==WorldState::running)finish(a->player?WorldState::failed:WorldState::cleared);
     ++(a->player?statistics_.playerDestroyed:statistics_.enemyDestroyed);
     events_.push_back({a->player?WorldEvent::Kind::playerDestroyed:WorldEvent::Kind::enemyDestroyed,a->id,a->experience});
     for(auto& b:actors_)if(b->target==id){b->target=0;b->moveToTarget=false;}
+    const float life=static_cast<float>(random_.next())*0x1p-31f*2.f;
+    a->crashTime=float(time()+3.0+double(life));
     if(!a->player){
-        const float life=static_cast<float>(random_.next())*0x1p-31f*2.f;
-        a->crashTime=float(time()+3.0+double(life));statistics_.score+=a->coin;
+        statistics_.score+=a->coin;
         const auto offset=SaveData::slotStart+slot_*SaveData::slotStride+0x2054;
         save_.writeWord(offset,save_.readWord(offset)+unsigned(a->coin));
     }
@@ -297,10 +365,23 @@ bool World::upgradeCells(){
     clock_.setCells(clock_.cells()-float(cost));++cellLevel_;refreshBaseUpgrades();
     host_.playSound("UpgradeBase.wav");return true;
 }
+void World::setValidationCells(float value){
+    if(!std::isfinite(value)||value<0)throw std::invalid_argument("Invalid validation cell amount");
+    clock_.setCells(value);
+}
+bool World::setValidationHealth(ActorId id,int value){
+    auto* a=actor(id);if(!a||a->removed)return false;
+    if(value<=0){if(a->hp>0)damage(id,a->hp);}else a->hp=value;
+    return true;
+}
+ActorId World::validationSpawn(std::string_view name,bool player,Vec2 position){
+    if(!started_||!std::isfinite(position.x)||!std::isfinite(position.y))throw std::invalid_argument("Invalid validation spawn");
+    return addNamed(name,position,player).id;
+}
 void World::order(unsigned index){
     if(index!=0||paused_||state_!=WorldState::running)return;
-    for(auto& a:actors_)if(a->player&&a->hp>0&&a->type==0&&topPlayerPosition_-a->position.y<120){
-        setDestination(*a,{a->position.x,(topPlayerPosition_-80)+(topPlayerPosition_-a->position.y)*-.8f});a->moveToTarget=false;a->playerAI.isOrder=true;
+    for(auto& a:actors_)if(a->player&&!a->removed)if(auto destination=originalRetreatDestination(index,a->position,a->hp,a->type,topPlayerPosition_)){
+        setDestination(*a,*destination);a->moveToTarget=false;a->playerAI.isOrder=true;
     }
 }
 void World::buildTerrain(){
@@ -360,13 +441,31 @@ std::optional<Vec2> World::touch(const Touch& t){
         if(t.phase==TouchPhase::ended||t.phase==TouchPhase::cancelled){cameraTouch_.reset();if(onlyTap_&&t.phase==TouchPhase::ended)return screenToWorld(t.position);if(std::abs(cameraVelocity_)<8)cameraVelocity_=0;}
     }return {};
 }
+void World::emitWeaponImpact(const WeaponDefinition& weapon,Vec2 position,float angle,float frameDuration){
+    if(weapon.explodeImage.empty())return;
+    unsigned columns=4,rows=4;
+    if(weapon.explodeImage=="Efx_Explode01.png"){columns=4;rows=2;}
+    else if(weapon.explodeImage=="Efx_Explode02.png"){columns=6;rows=4;}
+    else if(weapon.explodeImage=="Efx_ExplodeGround.png"){columns=4;rows=5;}
+    else if(weapon.explodeImage=="Efx_Damage.png"){columns=6;rows=1;}
+    else if(weapon.explodeImage=="Efx_DamageHMG.png"){columns=8;rows=1;}
+    if(auto* p=particles_->acquire(float(time()),random_)){
+        p->blend=Blend::alpha;p->life=float(columns*rows)*frameDuration;p->position=position;p->angle=angle;
+        p->setTileAnimation(int(columns*rows));
+        const float effectScale=weapon.type==WeaponType::sniper?1.f:weapon.explodeScale;p->scale={effectScale,effectScale};
+        setParticleImage(p,weapon.explodeImage,columns,rows);p->start(float(time()));
+    }
+}
 void World::setParticleImage(ParticleState* p,std::string image,unsigned columns,unsigned rows){
-    const auto i=std::size_t(p-particles_->particles().data());particleImages_.at(i)={std::move(image),columns,rows};
+    const auto i=std::size_t(p-particles_->particles().data());Vec2 origin;if(image=="Efx_Explode02.png")origin.y=-44;if(image=="Efx_DamageHMG.png")origin.x=-24;
+    const float assetScale=(image=="Efx_BulletTrail.png"||image=="Efx_Lightning.png")?1.f:0.f;
+    particleImages_.at(i)={std::move(image),columns,rows,origin,assetScale};
 }
 void World::prepareDraw(){
     if(!started_||paused_)return;
     for(auto& bullet:projectiles_){const auto* weapon=weapons_.find(bullet.weapon);if(!weapon)continue;ParticleState* particle=nullptr;
         const auto effect=bullet.motion.drawEffect(*weapon,time(),random_,[&]{particle=particles_->acquire(float(time()),random_);return particle!=nullptr;});
+        if(effect&&effect->trailPoint&&bullet.trail)bullet.trail->add(effect->position,time(),random_);
         if(effect&&particle&&!effect->trailPoint){auto& p=*particle;p.position=effect->position;p.life=effect->life;p.scale={effect->scale,effect->scale};p.scaleVelocity=effect->scaleVelocity;p.angle=effect->angle;p.rotationVelocity=effect->rotationVelocity;p.blend=effect->additive?Blend::additive:Blend::alpha;setParticleImage(&p,weapon->effectImage,unsigned(weapon->effectColumns),unsigned(weapon->effectRows));p.start(float(time()));}
     }
 }
@@ -374,20 +473,36 @@ void World::appendSprites(Frame& frame)const{
     if(!started_)return;
     const float scale=geometry_.deviceScale;
     for(int part=0;part<2;++part){Sprite s;s.image=(scale==.5f?"iPon_":"")+background_+(part==0?"_01.jpg":"_02.jpg");Vec2 center=worldToScreen({0,float(part==0?-512:512)*scale});s.destination={center.x-256*scale,center.y-512*scale,512*scale,1024*scale};s.blend=Blend::opaque;frame.sprites.push_back(std::move(s));}
-    // Original objects use enemy/player layers, with bases above mobile bodies.
-    std::vector<const WorldActor*> sorted;for(const auto& a:actors_)if(!a->removed&&a->hp>0)sorted.push_back(a.get());
-    std::stable_sort(sorted.begin(),sorted.end(),[](auto* a,auto* b){return (a->base?(a->player?7:5):(a->player?3:1))<(b->base?(b->player?7:5):(b->player?3:1));});
-    for(const auto* a:sorted){auto poses=models_.pose(a->assembly,scale,a->angle,a->angle,a->radarAngle);models_.appendSprites(frame,poses,worldToScreen(a->position),[&](std::string_view n){return resources_.imageSize(n);});}
-    for(const auto& p:projectiles_){const auto* w=weapons_.find(p.weapon);if(!w||w->bulletImage.empty())continue;
+    // QobManager::drawVisual visits layers 0..13. Part shadows use layer 0;
+    // child parts use the machine layer + 1 (GobHvMach::setLayer 0x14430).
+    std::array<Frame,10> layers;
+    for(const auto& a:actors_)if(!a->removed){
+        const auto poses=models_.pose(a->assembly,scale,a->angle,a->angle,a->radarAngle);
+        const int baseLayer=a->hp<=0?1:(a->base?(a->player?7:5):(a->player?3:1));
+        for(const auto& pose:poses){Frame part;models_.appendSprites(part,std::span<const PartPose>(&pose,1),worldToScreen(a->position),[&](std::string_view n){return resources_.imageSize(n);});
+            if(part.sprites.size()==2){layers[0].sprites.push_back(std::move(part.sprites[0]));layers[baseLayer+(a->hp>0&&pose.hasParent?1:0)].sprites.push_back(std::move(part.sprites[1]));}
+        }
+    }
+    for(const auto& item:loot_)item.appendSprites(layers[0],worldToScreen(item.position),[&](std::string_view n){return resources_.imageSize(n);});
+    auto particles=particles_->particles();for(std::size_t i=0;i<particles.size();++i){const auto& p=particles[i];const auto& image=particleImages_[i];if(!p.shown||image.image.empty())continue;const float imageScale=image.assetScale?image.assetScale:scale;if(auto s=p.sprite(image.image,resources_.imageSize(image.image),image.columns,image.rows,worldToScreen({p.position.x-image.origin.x*p.scale.x*imageScale,p.position.y-image.origin.y*p.scale.y*imageScale}),imageScale))layers[5].sprites.push_back(std::move(*s));}
+    struct MovingVisual {std::uint64_t order;const WorldTrail* trail=nullptr;const WorldProjectile* projectile=nullptr;};
+    std::vector<MovingVisual> moving;for(const auto& trail:trails_)moving.push_back({trail.renderOrder,&trail,nullptr});for(const auto& p:projectiles_)moving.push_back({p.renderOrder,nullptr,&p});
+    std::sort(moving.begin(),moving.end(),[](const auto& a,const auto& b){return a.order<b.order;});
+    for(const auto& visual:moving){
+        if(visual.trail){visual.trail->motion->appendMesh(layers[visual.trail->layer],[&](Vec2 p){return worldToScreen(p);});continue;}
+        const auto& p=*visual.projectile;const auto* w=weapons_.find(p.weapon);if(!w)continue;
+        if(!w->bulletImage.empty()){
         const auto size=resources_.imageSize(w->bulletImage);const unsigned columns=w->bulletImage=="Blt_Bullet.png"?4:1,rows=w->bulletImage=="Blt_Bullet.png"?8:1;
         const float cellWidth=size.x/columns,cellHeight=size.y/rows;
         Sprite s;s.image=w->bulletImage;s.sourcePx=Rect{float(unsigned(w->bulletTile)%columns)*cellWidth,float(unsigned(w->bulletTile)/columns)*cellHeight,cellWidth,cellHeight};
         const Vec2 center=worldToScreen(p.motion.position);const float wpx=cellWidth*scale*p.motion.imageScale.x,hpx=cellHeight*scale*p.motion.imageScale.y;
-        s.destination={center.x-wpx*.5f,center.y-hpx*.5f,wpx,hpx};s.rotationDegrees=-p.motion.angle*180.f/float(3.141592653589793);frame.sprites.push_back(std::move(s));
+        s.destination={center.x-wpx*.5f,center.y-hpx*.5f,wpx,hpx};s.rotationDegrees=-p.motion.angle*180.f/float(3.141592653589793);layers[p.layer].sprites.push_back(std::move(s));
+        }
+        if(!w->effectImage.empty())if(auto effect=p.motion.attachedEffect(*w,resources_.imageSize(w->effectImage),worldToScreen(p.motion.position),scale))layers[p.layer].sprites.push_back(std::move(*effect));
     }
-    for(const auto& strike:airStrikes_)strike.motion.appendSprite(frame,worldToScreen(strike.motion.position),resources_.imageSize("Airplane.png"),scale);
-    for(const auto& item:loot_)item.appendSprites(frame,worldToScreen(item.position),[&](std::string_view n){return resources_.imageSize(n);});
-    auto particles=particles_->particles();for(std::size_t i=0;i<particles.size();++i){const auto& p=particles[i];const auto& image=particleImages_[i];if(!p.shown||image.image.empty())continue;if(auto s=p.sprite(image.image,resources_.imageSize(image.image),image.columns,image.rows,worldToScreen(p.position),scale))frame.sprites.push_back(std::move(*s));}
+    for(const auto& strike:airStrikes_)strike.motion.appendSprite(layers[7],worldToScreen(strike.motion.position),resources_.imageSize("Airplane.png"),scale);
+    for(auto& layer:layers){const auto offset=frame.sprites.size();for(auto& mesh:layer.meshes){mesh.beforeSpriteIndex+=offset;frame.meshes.push_back(std::move(mesh));}for(auto& sprite:layer.sprites)frame.sprites.push_back(std::move(sprite));}
+
 }
 std::vector<WorldEvent> World::takeEvents(){auto e=std::move(events_);events_.clear();return e;}
 }

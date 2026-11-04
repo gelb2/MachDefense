@@ -69,6 +69,14 @@ bool Projectile::tick(const WeaponDefinition& weapon,bool paused,bool shown) {
     if(weapon.effectType==2) effectVisible=!effectVisible;
     return collide;
 }
+std::optional<Sprite> Projectile::attachedEffect(const WeaponDefinition& weapon,Vec2 imageSize,Vec2 screen,float scale) const {
+    if(removed||weapon.effectImage.empty()||imageSize.x<=0||imageSize.y<=0)return {};
+    if(weapon.effectType!=1&&weapon.effectType!=2&&weapon.effectType!=8)return {};
+    if(weapon.effectType==2&&!effectVisible)return {};
+    const float width=imageSize.x/float(std::max(1,weapon.effectColumns)),height=imageSize.y/float(std::max(1,weapon.effectRows));
+    Sprite s;s.image=weapon.effectImage;s.sourcePx=Rect{0,0,width,height};s.destination={screen.x-width*scale*.5f,screen.y-height*scale*.5f,width*scale,height*scale};
+    s.rotationDegrees=-angle*180.f/3.14159265358979323846f;s.blend=Blend::additive;return s;
+}
 std::optional<ProjectileEffect> Projectile::drawEffect(const WeaponDefinition& weapon,double time,DarwinRandom& random,
                                                        const std::function<bool()>& acquireParticle) {
     if(weapon.effectType>=5&&weapon.effectType<=8) {

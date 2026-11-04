@@ -134,6 +134,7 @@ struct PartPose {
     float angle=0,deviceScale=.5f;
     unsigned zOrder=0,reverse=0;
     float visualScale=1;
+    bool hasParent=false;
     [[nodiscard]] std::optional<Vec2> muzzle(unsigned socketIndex=1,bool reverse=false) const;
     [[nodiscard]] unsigned nextMuzzle(unsigned current) const;
 };

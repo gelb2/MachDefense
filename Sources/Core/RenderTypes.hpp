@@ -23,10 +23,18 @@ struct Sprite {
     bool flipX=false, flipY=false;
     std::optional<Rect> clip;
 };
+struct MeshVertex {Vec2 position,uv;Color color;};
+struct TextureMesh {
+    std::string image;
+    std::vector<MeshVertex> vertices; // triangle strip; normalized image UVs
+    Blend blend=Blend::alpha;
+    std::size_t beforeSpriteIndex=0;
+};
 struct Frame {
     float logicalWidth=320, logicalHeight=480;
     Color background{0,0,0,1};
     std::vector<Sprite> sprites;
+    std::vector<TextureMesh> meshes;
 };
 enum class TouchPhase { began, moved, ended, cancelled };
 struct Touch { std::uint64_t id=0; TouchPhase phase=TouchPhase::began; Vec2 position; };

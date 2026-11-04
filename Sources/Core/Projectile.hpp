@@ -24,6 +24,7 @@ struct Projectile {
     // True means the original proximity test called setCollide. The caller must
     // resolve damage at position and then remove the projectile.
     bool tick(const WeaponDefinition&,bool paused=false,bool shown=true);
+    std::optional<Sprite> attachedEffect(const WeaponDefinition&,Vec2 imageSize,Vec2 screenPosition,float deviceScale) const;
     // GobBullet::draw 0xb290. Allocator is queried only when an effect is due.
     std::optional<ProjectileEffect> drawEffect(const WeaponDefinition&,double time,DarwinRandom&,
                                                const std::function<bool()>& acquireParticle);

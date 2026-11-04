@@ -1,5 +1,6 @@
 #pragma once
 #include "Game.hpp"
+#include "SaveData.hpp"
 namespace md {
 class World;
 class GameSession final:public Game {
@@ -13,6 +14,8 @@ public:
     void resize(float,float)override;
     int preferredFramesPerSecond()const override{return 60;}
     World* validationWorld();
+    bool applyValidationCommand(unsigned);
+    std::optional<SaveData> validationSave()const;
 private:
     struct State;std::unique_ptr<State> state_;
 };

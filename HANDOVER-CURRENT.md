@@ -67,3 +67,9 @@ HeavyMach 1·2·MachDefense 모두 광고를 표시하거나 요청하지 않는
 ## 검증 순서 수정과 작업 보존 — 2026-11-04
 
 사용자가 치트앱 계획 기록과 지금까지 작업의 커밋을 지시했다. `feat/source-reimplementation`에서 커밋하며 develop/main 병합·원격 push는 포함하지 않는다. 치트앱 준비 → 원작 기능 및80개 미션 진행·저장 검사 → 전체 검증 → iPhone/iPad 화면 대응 → 재검사 순서로 정본·계획·검증·TODO를 맞췄다. 통합 보고 원고에도 같은 순서를 반영했다. 이 순서 수정분은 로컬 원고이며 사이트에는 아직 재게시하지 않았다.
+
+## 치트 앱·80개 캠페인 구현 후속 — 2026-11-04
+
+`feat/source-reimplementation`에서 TEST5쪽과 ValidationTools를 구현했다. 최신 결과는 docs/evidence/source-cheat-campaign-20261104.md. 최종 CTest31종, Apple XCTest10건, 최신 일반·치트 빌드 성공. 80개 진행·저장과 치트 조건80개 교전을 나누어 검사했다. 총구·탄피·궤적·잔해를 연결했고 원본 진형 아이콘 no-op을 확인했다. 결과 저장 실패 후 Next/Retry/Select Stage 재시도와 TEST 오류창 입력도 수정했다.
+
+사용자 기기 포팅판은 변경하지 않았다. 시뮬레이터 직접 검사를 마치고 앱 종료·홈 복귀·시뮬레이터 종료까지 확인했다. 같은 조건 포팅판 대조·일반 난이도 진행·장시간 메모리/프레임·독립 빌드가 남는다. 이 단계 후 화면 대응을 한다. 최종 로그 `.local/final-core-tests.log`, `.local/source-validation-ui-20261104.md`를 재사용한다.

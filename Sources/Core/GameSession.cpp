@@ -5,6 +5,7 @@
 #include "Transition.hpp"
 #include "UpgradeDialog.hpp"
 #include "World.hpp"
+#include "ValidationTools.hpp"
 #include <algorithm>
 #include <bit>
 #include <cmath>
@@ -37,11 +38,13 @@ struct GameSession::State {
     Menu menu;Transition transition;GameHUD hud;UpgradeDialog upgrades;SummaryDialog summary;
     UpgradeDialogState upgradeState;SummaryState summaryState;
     std::unique_ptr<World> world;std::optional<Help> help;
+    std::unique_ptr<ValidationTools> validationTools;std::unique_ptr<ValidationPanel> validationPanel;bool validationOpen=false;
+    std::unordered_map<std::uint64_t,Vec2> activeTouches;
     std::optional<MissionRequest> mission;
     std::optional<std::string> placement;
     std::optional<std::size_t> selectedAttack;
     Frame frame;unsigned screen=1,panel=1;std::size_t slot=0;
-    bool active=true,paused=false,validation=false;
+    bool active=true,paused=false,validation=false,pendingSave=false;
     float panelOffset=0;
     std::string message;Button messageOK;
     State(ResourceAccess& r,HostServices& h,bool v):resources(r),host(h),save(loadSave(h)),
@@ -54,7 +57,7 @@ struct GameSession::State {
                  [this](Frame& f,const auto&,Vec2 p,float s){auto parts=PlayerLoadout::forBase(save,slot,baseUpgrades,BattleGeometry::phone());drawParts(f,parts.assembly,p,s);}),
       summary(r,[this](Frame& f,const StageReward& reward,Vec2 p,float s){drawReward(f,reward,p,s);}),validation(v){
         models.configureTiles(table(r,"PartsList"),table(r,"TileList"));
-        messageOK.bounds={128,279,64,32};rebuild();
+        messageOK.bounds={128,279,64,32};if(validation){validationTools=std::make_unique<ValidationTools>(r);validationPanel=std::make_unique<ValidationPanel>(r);}rebuild();
     }
     std::size_t offset()const{return SaveData::slotStart+slot*SaveData::slotStride;}
     std::string label(std::string_view name)const{auto row=descriptions.findRow("MN_"+std::string(name));return row?std::string(descriptions.value(*row,"Value")):std::string(name);}
@@ -76,8 +79,8 @@ struct GameSession::State {
         char name[40];std::snprintf(name,sizeof name,"Icon%05d.png",int(*item));auto size=resources.imageSize(name);
         for(unsigned i=0;i<reward.attackCount;++i){Sprite s;s.image=name;const float x=p.x+(float(i)*80-float(reward.attackCount-1)*40)*scale;s.destination={x-size.x*scale*.5f,p.y-size.y*scale*.5f,size.x*scale,size.y*scale};f.sprites.push_back(s);}
     }
-    bool persist(){if(host.writeSave(save.encode()))return true;message="Could not save progress.";return false;}
-    void updatePause(){if(world)world->setPaused(paused||help.has_value()||upgradeState.kind!=UpgradeDialogState::Kind::hidden||!message.empty()||!active);}
+    bool persist(){pendingSave=!host.writeSave(save.encode());if(!pendingSave)return true;message="Could not save progress.";return false;}
+    void updatePause(){if(world)world->setPaused(paused||validationOpen||help.has_value()||upgradeState.kind!=UpgradeDialogState::Kind::hidden||!message.empty()||!active);}
     void requestScreen(unsigned target){if(transition.request(target))updatePause();}
     void openMission(MissionRequest request){mission=request;requestScreen(4);}
     void changeScreen(unsigned target){
@@ -171,13 +174,14 @@ struct GameSession::State {
         case 0x412:upgradeState.selectedAttack=a.row;refreshUpgrades();break;
         case 0x403:case 0x404:attacks.purchase(save,slot,a.row,a.buttonId==0x403);refreshUpgrades();break;
         case 0x405:case 0x406:{auto list=save.attacks(slot);if(a.row<list.size()){auto slots=std::count_if(list.begin(),list.end(),[](const auto& item){return item.onSlot;});if(a.buttonId==0x406||slots<7){list[a.row].onSlot=a.buttonId==0x405;save.setAttacks(slot,list);selectedAttack.reset();refreshUpgrades();}}break;}
-        case 0x40e:if(panel==3)world->order(unsigned(a.row));else if(upgradeState.kind==UpgradeDialogState::Kind::attacks){auto list=save.attacks(slot);std::size_t row=0;for(std::size_t i=0;i<list.size();++i)if(list[i].onSlot){if(row++==a.row){upgradeState.selectedAttack=i;break;}}refreshUpgrades();}else selectedAttack=a.row;break;
+        case 0x3fc:world->order(0);break;
+        case 0x40e:if(panel==3)break;else if(upgradeState.kind==UpgradeDialogState::Kind::attacks){auto list=save.attacks(slot);std::size_t row=0;for(std::size_t i=0;i<list.size();++i)if(list[i].onSlot){if(row++==a.row){upgradeState.selectedAttack=i;break;}}refreshUpgrades();}else selectedAttack=a.row;break;
         case 0x400:if(a.row<upgradeState.units.size()){settlement.upgradeBuild(save,slot,upgradeState.units[a.row].name);refreshUpgrades();}break;
         case 0x401:case 0x402:{auto b=save.builds(slot);if(a.row<b.size()){const auto count=std::count_if(b.begin(),b.end(),[](const auto& b){return b.onSlot;});if(a.buttonId==0x402||count<7){b[a.row].onSlot=a.buttonId==0x401;save.setBuilds(slot,b);refreshUpgrades();}}break;}
         case 0x3ff:upgradeState.kind=UpgradeDialogState::Kind::hidden;break;
-        case 0x3f9:openMission({slot,save.readWord(offset()+0x34)});break;
-        case 0x3fa:openMission({slot,summaryState.mission});break;
-        case 0x3f8:menu.showMissions(slot);break;
+        case 0x3f9:if(pendingSave&&!persist())break;openMission({slot,save.readWord(offset()+0x34)});break;
+        case 0x3fa:if(pendingSave&&!persist())break;openMission({slot,summaryState.mission});break;
+        case 0x3f8:if(pendingSave&&!persist())break;menu.showMissions(slot);break;
         default:break;
         }
         host.playSound("UI_Btn_OK.wav");updatePause();refreshHUD();
@@ -187,6 +191,22 @@ struct GameSession::State {
         summaryState.visible=true;summaryState.cleared=state==WorldState::cleared;summaryState.mission=world->stage();
         const auto stats=world->statistics();summaryState.kills=stats.enemyDestroyed;summaryState.deaths=stats.playerDestroyed;summaryState.built=stats.produced;summaryState.elapsedSeconds=world->time()-world->startTime();
         if(summaryState.cleared)summaryState.reward=settlement.clear(save,slot,world->randomSource());summary.setState(summaryState);persist();
+    }
+    void cancelGameTouches(){
+        for(const auto& [id,position]:activeTouches){Touch t{id,TouchPhase::cancelled,position};menu.touch(t);hud.touch(t);upgrades.touch(t);summary.touch(t);if(world)world->touch(t);}
+    }
+    bool validationAction(unsigned command){
+        if(!validationTools)return false;
+        if(world)validationTools->setSlot(slot);
+        if(command==validationOpenCommand){cancelGameTouches();if(world)validationTools->setSlot(slot);else if(screen>1&&save.active(menu.selectedProfile()))validationTools->setSlot(menu.selectedProfile());validationOpen=true;}
+        else if(command==validationCloseCommand)validationOpen=false;
+        else{
+            const auto result=validationTools->apply(command,save,world.get());
+            if(result.start){validationOpen=false;openMission({validationTools->slot(),validationTools->mission()});}
+            if(result.persist)persist();
+            if(result.changed){placement.reset();selectedAttack.reset();if(world){refreshUpgrades();refreshHUD();if(world->state()!=WorldState::running)validationOpen=false;}else menu.applyScreen(menu.screen());}
+        }
+        updatePause();rebuild();return true;
     }
     void tick(){
         if(!active)return;
@@ -203,7 +223,8 @@ struct GameSession::State {
         if(world)world->prepareDraw();rebuild();
     }
     void rebuild(){
-        if(screen<4)frame=menu.frame();else{frame.sprites.clear();frame.logicalWidth=320;frame.logicalHeight=480;if(world)world->appendSprites(frame);hud.append(frame);upgrades.append(frame);summary.append(frame);if(help)help->append(frame);}
+        if(screen<4)frame=menu.frame();else{frame.sprites.clear();frame.meshes.clear();frame.logicalWidth=320;frame.logicalHeight=480;if(world)world->appendSprites(frame);hud.append(frame);upgrades.append(frame);summary.append(frame);if(help)help->append(frame);}
+        if(validationPanel){validationPanel->setState(validationTools->panel(save,world.get(),validationOpen));validationPanel->append(frame);}
         if(!message.empty()){
             Sprite shade;shade.destination={0,0,320,480};shade.color={0,0,0,.7f};frame.sprites.push_back(shade);
             Sprite box;box.image="MessageBox.png";box.destination={32,208,256,64};frame.sprites.push_back(box);
@@ -213,8 +234,10 @@ struct GameSession::State {
         transition.append(frame);
     }
     void touch(const Touch& t){
+        if(t.phase==TouchPhase::began||t.phase==TouchPhase::moved)activeTouches[t.id]=t.position;else activeTouches.erase(t.id);
         if(!active||transition.visible())return;
         if(!message.empty()){if(messageOK.touch(t).action==ButtonAction::pop){message.clear();updatePause();}rebuild();return;}
+        if(validationPanel&&validationPanel->touch(t)){for(const auto& event:validationPanel->takeEvents())validationAction(event.commandId);rebuild();return;}
         if(screen<4){menu.touch(t);if(auto req=menu.takeScreenRequest())requestScreen(unsigned(*req)+1);if(auto req=menu.takeMissionRequest())openMission(*req);}
         else if(world){
             if(help){if(help->touch(t)){help.reset();updatePause();}}
@@ -237,5 +260,7 @@ void GameSession::touch(const Touch& t){state_->touch(t);}
 void GameSession::setActive(bool active){state_->active=active;if(!active&&state_->world)state_->paused=true;state_->updatePause();state_->refreshHUD();state_->rebuild();}
 void GameSession::resize(float,float){}
 World* GameSession::validationWorld(){return state_->validation?state_->world.get():nullptr;}
+bool GameSession::applyValidationCommand(unsigned command){return state_->validationAction(command);}
+std::optional<SaveData> GameSession::validationSave()const{if(!state_->validation)return {};return state_->save;}
 std::unique_ptr<Game> createGame(ResourceAccess& r,HostServices& h,bool validation){return std::make_unique<GameSession>(r,h,validation);}
 }

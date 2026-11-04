@@ -85,4 +85,13 @@
     [self assertPixel:[_renderer readFramebufferRGBA] x:160 y:240 red:128 green:0 blue:128];
     XCTAssertEqual(_renderer.textureUploads,2u);
 }
+- (void)testTrailMeshInterleavesWithSpritesAndRestoresColorState {
+    md::Frame frame;md::Sprite background;background.destination={0,0,320,480};background.color={0,1,0,1};frame.sprites.push_back(background);
+    md::TextureMesh mesh;mesh.image="four.png";mesh.beforeSpriteIndex=1;mesh.blend=md::Blend::opaque;
+    mesh.vertices={{{0,0},{.25f,.25f},{1,1,1,1}},{{320,0},{.25f,.25f},{1,1,1,1}},{{0,480},{.25f,.25f},{1,1,1,1}},{{320,480},{.25f,.25f},{1,1,1,1}}};frame.meshes.push_back(mesh);
+    md::Sprite foreground;foreground.destination={160,0,160,480};foreground.color={0,0,1,1};frame.sprites.push_back(foreground);
+    XCTAssertTrue([_renderer drawFrame:frame toLayer:(CAEAGLLayer*)_surface.layer]);NSData* data=[_renderer readFramebufferRGBA];
+    [self assertPixel:data x:40 y:40 red:255 green:0 blue:0];[self assertPixel:data x:280 y:40 red:0 green:0 blue:255];
+    XCTAssertEqual([_renderer lastFrameMetrics].drawCalls,3u);
+}
 @end

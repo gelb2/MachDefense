@@ -5,6 +5,7 @@
 #include "Loot.hpp"
 #include "Projectile.hpp"
 #include "SpecialAttack.hpp"
+#include "Trail.hpp"
 #include "WeaponController.hpp"
 #include <memory>
 
@@ -29,7 +30,7 @@ struct WorldActor {
     EnemySteering enemyAI; PlayerSteering playerAI;
     std::vector<AssemblyPart> assembly; std::vector<WorldWeapon> weapons;
 };
-struct WorldProjectile { std::string weapon; Projectile motion; ActorId attacker=0; };
+struct WorldProjectile { std::string weapon; Projectile motion; ActorId attacker=0; std::shared_ptr<Trail> trail; int layer=5;std::uint64_t renderOrder=0; };
 struct WorldStatistics { unsigned enemyDestroyed=0,playerDestroyed=0,produced=0;int score=0; };
 struct WorldEvent {
     enum class Kind { enemyDestroyed,playerDestroyed,stageCleared,stageFailed } kind;
@@ -60,6 +61,10 @@ public:
     std::size_t productionOccupied(std::string_view baseName)const;
     bool enqueueBuild(std::string_view name,std::optional<Vec2> destination={});
     void order(unsigned orderIndex);
+    // Called only by the validation application; these mutate memory, never files.
+    void setValidationCells(float);
+    bool setValidationHealth(ActorId,int);
+    ActorId validationSpawn(std::string_view machineName,bool player,Vec2 position);
     bool activateSpecial(std::string_view ownedBaseName,Vec2 worldPoint);
     void setUIMargin(float);
     // Returns a world-space tap only after the original camera tap/drag test.
@@ -92,12 +97,20 @@ private:
     std::vector<std::unique_ptr<WorldActor>> actors_;
     struct WorldAirStrike {std::string weapon;AirStrike motion;};
     std::vector<WorldAirStrike> airStrikes_;
+    struct WorldTrail {std::shared_ptr<Trail> motion;int layer;std::uint64_t renderOrder;};
+    std::vector<WorldTrail> trails_;std::uint64_t nextRenderOrder_=0;
+    void addProjectile(std::string,Projectile,ActorId,int layer=5);
     std::vector<WorldProjectile> projectiles_;std::vector<WorldEvent> events_;
     std::unordered_map<std::string,LootDefinition> lootDefinitions_;std::vector<LootState> loot_;
     std::unique_ptr<ParticlePool> particles_;
-    struct ParticleImage {std::string image;unsigned columns=1,rows=1;};
+    struct ParticleImage {std::string image;unsigned columns=1,rows=1;Vec2 origin;float assetScale=0;};
     std::array<ParticleImage,ParticlePool::capacity> particleImages_;
     void setParticleImage(ParticleState*,std::string,unsigned,unsigned);
+    void emitWeaponImpact(const WeaponDefinition&,Vec2,float angle,float frameDuration);
+    void emitCrashExplosion(Vec2);
+    void emitSecondaryImpact(const WeaponDefinition&,Vec2 from,Vec2 to);
+    void updateCrash(WorldActor&);
+    void emitDamageSmoke(const WorldActor&,bool crashed);
     ActorId nextId_=1,playerBase_=0,enemyBase_=0;
     double startTime_=0;WorldStatistics statistics_;
     std::function<void(WorldState)> finishHandler_;
