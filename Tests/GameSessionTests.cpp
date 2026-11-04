@@ -5,6 +5,12 @@ int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];Host h
     tap(s,160,140);ticks(s);assert(has(s.frame(),"iPon_SelStage_Fore@2x.png"));assert(h.writes==2);
     tap(s,240,450);ticks(s);auto* world=s.validationWorld();assert(world&&world->stage()==0);assert(has(s.frame(),"iPon_HelpScrMain_us@2x.jpg"));
     tap(s,160,450);assert(!has(s.frame(),"iPon_HelpScrMain_us@2x.jpg"));assert(!world->paused());checkImages(s.frame(),r);
+    // Original production previews face up; world actors retain their own aim.
+    unsigned previewParts=0;
+    for(const auto& sprite:s.frame().sprites){const auto& b=sprite.destination;
+        if(b.x>272&&b.x+b.width<318&&b.y>35&&b.y+b.height<70&&std::abs(sprite.rotationDegrees+90)<.001f)++previewParts;
+    }
+    assert(previewParts>0);
     const auto initial=world->actors().size();tap(s,292,52);ticks(s,220);assert(world->actors().size()>initial);assert(h.writes==2);
     // Menu pause, inactive transition and resume all stop world time.
     tap(s,284,435);assert(world->paused());const auto time=world->time();ticks(s,20);assert(world->time()==time);

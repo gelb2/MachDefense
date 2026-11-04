@@ -84,7 +84,10 @@ void GameHUD::append(Frame& f)const{
             else{
                 image(f,"Btn_BuildMachUpgrade.png",{255.5f,y-9});
                 text(f,std::to_string(row.level+1)+"/"+std::to_string(row.maximumLevel),{262,y+15.5f},7);
-                text(f,std::to_string(row.upgradeCost)+"cr",{271,y-10.5f},6);
+                // DlgBuildMach::refreshButtonsWithType: 0x2e090 uses Align=2
+                // at x=158 in its half-scale composite: right edge x=271.
+                const auto cost=std::to_string(row.upgradeCost)+"cr";
+                font_.draw(f,cost,{271-font_.width(cost,6),480-(y-10.5f)-3},6);
             }
             text(f,row.englishName,{292,y-21.5f},5.5f,{240/255.f,1,1,1});
             for(unsigned n=0;n<row.capacity;++n)image(f,"Btn_BuildMachInd.png",{269.5f,y-1.5f-6.5f*n},2,1,n<row.occupied?0:1);

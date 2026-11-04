@@ -75,3 +75,11 @@ HeavyMach 1·2·MachDefense 모두 광고를 표시하거나 요청하지 않는
 사용자 기기 포팅판은 변경하지 않았다. 시뮬레이터 직접 검사를 마치고 앱 종료·홈 복귀·시뮬레이터 종료까지 확인했다. 같은 조건 포팅판 대조·일반 난이도 진행·장시간 메모리/프레임·독립 빌드가 남는다. 이 단계 후 화면 대응을 한다. 최종 로그 `.local/final-core-tests.log`, `.local/source-validation-ui-20261104.md`를 재사용한다.
 
 기능 변경 커밋은31395fb다. 추적 파일만 git archive로 `.local/clean-source-31395fb`에 풀고 새 DerivedData에서 일반 iOS Simulator 앱 빌드 성공. `.local/clean-source-apple-build.log`를 보존했다. 같은 조건 포팅판 대조와 장시간 검사가 남으며 화면 확장은 아직 시작하지 않았다.
+
+## iPad 오디오·UI 수정 작업 보존 — 2026-11-04
+
+`feat/source-reimplementation`에서 오디오 컨텍스트 유지, 보상·오류창의 반복 파일 읽기 제거, 생산·보상 미리보기 회전, 강화 비용 정렬, iPad 두 세로 방향 지원을 수정했다. 치트 앱 전용 프레임 측정은 메모리에 수집하고 비활성 전환 때 CSV로 내보낸다. 일반 앱에서는 켜지지 않는다.
+
+오디오 XCTest 2개와 관련 코어 회귀 7개가 통과했다. iPad 치트 앱의 수정 후 248.82초·14,912프레임 측정과 사용자 개선 확인은 `docs/troubleshooting.md`에 있다. `docs/usability-todo.md` 맨 위의 현재 작업 순서를 따른다. 전체 무기·오디오 중단 복귀·메모리 판정·일반 앱·전체 UI 및 실제 회전 재검사는 남았다. 화면 확장은 그 뒤다.
+
+Xcode GUI가 바꾼 개인 서명 팀과 공유 스킴 형식 3개 파일은 로컬에서 보존하고 이번 기능 커밋에서 제외한다. `Apple/iOS/project.yml`과 두 Info.plist의 방향 수정은 커밋 대상이다. develop/main 병합은 하지 않는다. 원본 IPA·실행 바이너리·로컬 측정 원본은 Git에 넣지 않는다.

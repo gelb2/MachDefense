@@ -1,4 +1,5 @@
 #import <XCTest/XCTest.h>
+#import <OpenAL/alc.h>
 #import "../../Sources/Platform/Apple/MDAudio.h"
 @interface AudioTests:XCTestCase @end
 @implementation AudioTests
@@ -9,13 +10,14 @@
     MDAudio* audio=[[MDAudio alloc] initWithResourceRoot:root];
     XCTAssertTrue([audio prepareSounds],@"%@",audio.lastError);
     XCTAssertEqual(audio.loadedSounds,80u);
+    ALCcontext* context=alcGetCurrentContext();XCTAssertNotEqual(context,nullptr);
     NSArray<NSURL*>* files=[NSFileManager.defaultManager contentsOfDirectoryAtURL:[root URLByAppendingPathComponent:@"Audio"] includingPropertiesForKeys:nil options:0 error:nil];
     NSString* name=nil;for(NSURL* file in files)if([file.pathExtension.lowercaseString isEqualToString:@"wav"]){name=file.lastPathComponent;break;}
     XCTAssertNotNil(name);if(!name)return;
-    for(int i=0;i<100;++i)[audio play:name gain:.01f pan:0];
+    for(int i=0;i<100;++i){[audio play:name gain:.01f pan:0];XCTAssertEqual(alcGetCurrentContext(),context);}
     XCTAssertEqual(audio.playCount,100u);XCTAssertEqual(audio.loadedSounds,80u);
-    [audio setActive:NO];[audio play:name gain:.01f pan:0];XCTAssertEqual(audio.playCount,100u);
-    [audio setActive:YES];[audio play:name gain:.01f pan:0];XCTAssertEqual(audio.playCount,101u);
+    [audio setActive:NO];XCTAssertEqual(alcGetCurrentContext(),nullptr);[audio play:name gain:.01f pan:0];XCTAssertEqual(audio.playCount,100u);
+    [audio setActive:YES];XCTAssertEqual(alcGetCurrentContext(),context);[audio play:name gain:.01f pan:0];XCTAssertEqual(audio.playCount,101u);
     XCTAssertTrue([audio prepareSounds]);XCTAssertEqual(audio.loadedSounds,80u);
 }
 - (void)testMusicLoopIsIndependentAndResumesAfterInterruption {

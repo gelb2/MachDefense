@@ -36,7 +36,7 @@ targetTemplates:
           UIApplicationSupportsMultipleScenes: false
           UISceneConfigurations: {}
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
-        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait]
+        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown]
         UIRequiresFullScreen: true
     dependencies:
       - target: MachDefenseModules/MachDefenseCore

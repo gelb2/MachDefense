@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <map>
 #include <stdexcept>
+#include <vector>
+#include <cstdio>
 
 #ifndef MD_VALIDATION
 #define MD_VALIDATION 0
@@ -41,6 +43,9 @@ class Services final:public md::HostServices {
     MDGameView* __weak view_;MDAudio* __strong audio_;NSURL* __strong saveURL_;
     std::string music_;float musicGain_=1;
 public:
+    bool audit=false;unsigned auditSounds=0,auditWrites=0;double auditAudioMs=0;
+private:
+public:
     Services(MDGameView* view,MDAudio* audio):view_(view),audio_(audio){
         NSURL* root=[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask].firstObject;
         root=[root URLByAppendingPathComponent:@"MachDefense" isDirectory:YES];
@@ -54,11 +59,14 @@ public:
     }
     bool writeSave(std::span<const std::uint8_t> bytes) override {
         if(bytes.empty())return false;
+        if(audit)++auditWrites;
         NSError* error=nil;BOOL ok=[[NSData dataWithBytes:bytes.data() length:bytes.size()] writeToURL:saveURL_ options:NSDataWritingAtomic error:&error];
         if(!ok)NSLog(@"MachDefense save failed: %@",error);return ok;
     }
     void playSound(std::string_view name,float gain,float pan) override {
+        const double start=audit?CACurrentMediaTime():0;
         NSString* n=[[NSString alloc] initWithBytes:name.data() length:name.size() encoding:NSUTF8StringEncoding];[audio_ play:n gain:gain pan:pan];
+        if(audit){++auditSounds;auditAudioMs+=(CACurrentMediaTime()-start)*1000;}
     }
     void playMusic(std::string_view name,float gain) override {
         music_=name;musicGain_=gain;
@@ -82,6 +90,10 @@ public:
     std::uint64_t _nextTouch;
     std::uint64_t _nameRequestGeneration;
     BOOL _active,_sceneActive,_audioInterrupted,_nameInputPending,_shutdown;
+    struct FrameSample {double time,interval,callbackInterval,tick,submit,present,audio;NSUInteger sprites,uploads;unsigned sounds,writes;};
+    std::vector<FrameSample> _samples;
+    BOOL _auditFrames;double _auditOrigin,_previousFrameTimestamp,_previousCallback;
+
 }
 + (Class)layerClass{return CAEAGLLayer.class;}
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -92,6 +104,8 @@ public:
     _renderer=[[MDRenderer alloc] initWithResourceRoot:root];if(!_renderer)throw std::runtime_error("OpenGL ES initialization failed");
     _audio=[[MDAudio alloc] initWithResourceRoot:root];[_audio prepareSounds];
     _resources=std::make_unique<Resources>(root,_renderer);_services=std::make_unique<Services>(self,_audio);
+    _auditFrames=MD_VALIDATION&&[NSProcessInfo.processInfo.environment[@"MD_FRAME_AUDIT"] isEqualToString:@"1"];
+    if(_auditFrames){_samples.reserve(18000);_services->audit=true;}
     _game=md::createGame(*_resources,*_services,MD_VALIDATION!=0);
     if(!_game)throw std::runtime_error("Game initialization failed");
     _displayLink=[CADisplayLink displayLinkWithTarget:self selector:@selector(display:)];
@@ -112,7 +126,32 @@ public:
     [super layoutSubviews];self.contentScaleFactor=self.window.screen.scale?:UIScreen.mainScreen.scale;self.layer.contentsScale=self.contentScaleFactor;
     if(_game){_game->resize(float(self.bounds.size.width),float(self.bounds.size.height));if(_active)[_renderer drawFrame:_game->frame() toLayer:(CAEAGLLayer*)self.layer];}
 }
-- (void)display:(CADisplayLink*)link {if(!_active||_nameInputPending||!_game)return;_game->tick();[_renderer drawFrame:_game->frame() toLayer:(CAEAGLLayer*)self.layer];}
+- (void)display:(CADisplayLink*)link {
+    if(!_active||_nameInputPending||!_game)return;
+    if(!_auditFrames){_game->tick();[_renderer drawFrame:_game->frame() toLayer:(CAEAGLLayer*)self.layer];return;}
+    const double start=CACurrentMediaTime();if(!_auditOrigin)_auditOrigin=start;
+    _services->auditSounds=0;_services->auditWrites=0;_services->auditAudioMs=0;
+    const NSUInteger uploads=_renderer.textureUploads;
+    _game->tick();const double ticked=CACurrentMediaTime();
+    [_renderer drawFrame:_game->frame() toLayer:(CAEAGLLayer*)self.layer];
+    const auto m=[_renderer lastFrameMetrics];
+    if(_samples.size()<18000)_samples.push_back({(start-_auditOrigin)*1000,
+        _previousFrameTimestamp?(link.timestamp-_previousFrameTimestamp)*1000:0,
+        _previousCallback?(start-_previousCallback)*1000:0,(ticked-start)*1000,
+        m.submitMilliseconds,m.presentMilliseconds,_services->auditAudioMs,m.sprites,
+        _renderer.textureUploads-uploads,_services->auditSounds,_services->auditWrites});
+    _previousFrameTimestamp=link.timestamp;_previousCallback=start;
+}
+- (void)writeFrameAudit {
+    if(!_auditFrames||_samples.empty())return;
+    // Explicit diagnostic export on inactivity only, never during combat frames.
+    NSURL* directory=[NSFileManager.defaultManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
+    NSURL* url=[directory URLByAppendingPathComponent:@"frame-audit.csv"];
+    FILE* file=fopen(url.fileSystemRepresentation,"w");if(!file)return;
+    fprintf(file,"time_ms,display_interval_ms,callback_interval_ms,tick_ms,submit_ms,present_ms,audio_ms,sprites,uploads,sounds,writes\n");
+    for(const auto& p:_samples)fprintf(file,"%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%lu,%lu,%u,%u\n",p.time,p.interval,p.callbackInterval,p.tick,p.submit,p.present,p.audio,(unsigned long)p.sprites,(unsigned long)p.uploads,p.sounds,p.writes);
+    fclose(file);_samples.clear();_auditOrigin=0;
+}
 - (void)cancelTouches {
     auto pending=std::move(_touches);_touches.clear();
     if(_game)for(const auto& [native,event]:pending){auto cancelled=event;cancelled.phase=md::TouchPhase::cancelled;_game->touch(cancelled);}
@@ -124,7 +163,7 @@ public:
     const BOOL active=_sceneActive&&!_audioInterrupted&&!_shutdown;
     _displayLink.paused=!active||_nameInputPending;
     if(_active==active)return;_active=active;
-    if(!active){[self cancelTouches];[_renderer finish];[_renderer discardDrawable];}
+    if(!active){[self cancelTouches];[_renderer finish];[_renderer discardDrawable];[self writeFrameAudit];_previousFrameTimestamp=0;_previousCallback=0;}
     if(_game)_game->setActive(active);[_audio setActive:active];
 }
 - (void)audioInterrupted:(NSNotification*)notification {
@@ -191,6 +230,11 @@ public:
 @implementation MDViewController
 - (void)loadView {self.view=[[MDGameView alloc] initWithFrame:UIScreen.mainScreen.bounds];}
 - (BOOL)prefersStatusBarHidden{return YES;}
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad
+        ?(UIInterfaceOrientationMaskPortrait|UIInterfaceOrientationMaskPortraitUpsideDown)
+        :UIInterfaceOrientationMaskPortrait;
+}
 - (UIRectEdge)preferredScreenEdgesDeferringSystemGestures{return UIRectEdgeAll;}
 @end
 @interface MDSceneDelegate:UIResponder<UIWindowSceneDelegate>

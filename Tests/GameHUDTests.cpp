@@ -64,6 +64,12 @@ int main(int argc,char** argv){
     for(unsigned i=0;i<5;++i){tap(h,292,52+51.f*i);actions=h.takeActions();assert(actions.size()==1&&actions[0].buttonId==0x40e&&actions[0].row==i);}
     assert(std::none_of(f.sprites.begin(),f.sprites.end(),[](const auto& s){return s.image=="Btn_UpgradeEquip.png";}));
     state.selectedPanel=1;state.upgradeMode=true;state.production[0].enabled=true;h.setState(state);
+    f={};h.append(f);
+    auto metricBytes=r.read("Generated/TrebuchetMS-Bold-48.tsv");SpriteFont font({reinterpret_cast<const char*>(metricBytes.data()),metricBytes.size()});
+    std::vector<const Sprite*> costGlyphs;
+    for(const auto& s:f.sprites)if(s.image.starts_with("Generated/")&&std::abs(s.destination.y-58.5f)<.001f)costGlyphs.push_back(&s);
+    assert(costGlyphs.size()==5); // 400cr, right aligned at original x=271.
+    assert(std::abs(costGlyphs.front()->destination.x-(271-font.width("400cr",6)-1))<.001f);
     tap(h,284,446);assert(h.takeActions().empty());tap(h,284,469);assert(h.takeActions().empty());
     tap(h,161,443);assert(h.takeActions().at(0).buttonId==0x40b);
     tap(h,292,52);assert(h.takeActions().at(0).buttonId==0x40d);

@@ -12,9 +12,9 @@
 namespace {
 struct Sound {ALuint buffer=0,source=0;};
 struct Scope {
-    ALCcontext* previous=alcGetCurrentContext();bool valid=false;
-    explicit Scope(ALCcontext* c){valid=c&&alcMakeContextCurrent(c);}
-    ~Scope(){if(valid)alcMakeContextCurrent(previous);}
+    ALCcontext* previous=alcGetCurrentContext();ALCcontext* current=nullptr;bool valid=false;
+    explicit Scope(ALCcontext* c){valid=c&&(previous==c||alcMakeContextCurrent(c));current=c;}
+    ~Scope(){if(valid&&previous!=current)alcMakeContextCurrent(previous);}
 };
 bool decode(NSURL* url,std::vector<std::int16_t>& samples,ALsizei& rate,ALenum& format){
     ExtAudioFileRef file=nullptr;if(ExtAudioFileOpenURL((__bridge CFURLRef)url,&file))return false;
@@ -47,7 +47,9 @@ bool decode(NSURL* url,std::vector<std::int16_t>& samples,ALsizei& rate,ALenum& 
 - (instancetype)initWithResourceRoot:(NSURL*)root {
     if(!(self=[super init]))return nil;_root=root;_active=YES;
     _device=alcOpenDevice(nullptr);if(_device)_context=alcCreateContext(_device,nullptr);
-    Scope scope(_context);if(!scope.valid){_lastError=@"Cannot initialize OpenAL";return self;}
+    // Original 0x48ddc keeps its context current after initialization. Detaching
+    // it after each sound stops RemoteIO on iPad and stalls the game thread.
+    if(!_context||!alcMakeContextCurrent(_context)){_lastError=@"Cannot initialize OpenAL";return self;}
     alDistanceModel(AL_NONE);alListener3f(AL_POSITION,0,0,0);alListenerf(AL_GAIN,1);
     alGenSources(1,&_musicSource);alSourcei(_musicSource,AL_SOURCE_RELATIVE,AL_TRUE);
     alSourcei(_musicSource,AL_LOOPING,AL_TRUE);alSourcef(_musicSource,AL_ROLLOFF_FACTOR,0);return self;
@@ -81,15 +83,25 @@ bool decode(NSURL* url,std::vector<std::int16_t>& samples,ALsizei& rate,ALenum& 
     if(!_active||!name.length||!std::isfinite(gain)||!std::isfinite(pan))return;
     Scope scope(_context);if(!scope.valid)return;
     auto i=_sounds.find(name.UTF8String);if(i==_sounds.end())return;
-    const auto source=i->second.source;alSourceStop(source);alSourceRewind(source);alSourcef(source,AL_GAIN,std::clamp(gain,0.f,1.f));
+    const auto source=i->second.source;alSourceStop(source);alSourcef(source,AL_GAIN,std::clamp(gain,0.f,1.f));
     alSource3f(source,AL_POSITION,std::clamp(pan,-1.f,1.f),0,-1);alSourcePlay(source);
     if(ALenum error=alGetError();error!=AL_NO_ERROR){_lastError=[NSString stringWithFormat:@"OpenAL play error 0x%x",error];return;}
     ++_playCount;
 }
 - (void)setActive:(BOOL)active {
-    _active=active;Scope scope(_context);if(!scope.valid)return;
-    if(!active){for(auto& [name,sound]:_sounds)alSourceStop(sound.source);if(_musicSource)alSourcePause(_musicSource);alcSuspendContext(_context);}
-    else {alcProcessContext(_context);if(_musicName.length){ALint state=0;alGetSourcei(_musicSource,AL_SOURCE_STATE,&state);if(state!=AL_PLAYING)alSourcePlay(_musicSource);}}
+    _active=active;
+    if(active){
+        if(!_context||!(alcGetCurrentContext()==_context||alcMakeContextCurrent(_context)))return;
+        alcProcessContext(_context);
+        if(_musicName.length){ALint state=0;alGetSourcei(_musicSource,AL_SOURCE_STATE,&state);if(state!=AL_PLAYING)alSourcePlay(_musicSource);}
+    }else{
+        {
+            Scope scope(_context);if(!scope.valid)return;
+            for(auto& [name,sound]:_sounds)alSourceStop(sound.source);
+            if(_musicSource)alSourcePause(_musicSource);alcSuspendContext(_context);
+        }
+        if(alcGetCurrentContext()==_context)alcMakeContextCurrent(nullptr);
+    }
 }
 - (void)playMusic:(NSString*)name gain:(float)gain {
     if(!name.length||!std::isfinite(gain))return;

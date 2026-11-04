@@ -15,6 +15,7 @@
 namespace md {
 namespace {
 DataTable table(ResourceAccess& r,std::string_view n){auto b=r.read("Tables/"+std::string(n)+".tsv");return DataTable::parse({reinterpret_cast<const char*>(b.data()),b.size()});}
+std::string fontMetrics(ResourceAccess& r){auto b=r.read("Generated/TrebuchetMS-Bold-48.tsv");return {b.begin(),b.end()};}
 SaveData loadSave(HostServices& host){if(auto data=host.readSave())return SaveData::decode(*data);return SaveData::empty(std::uint32_t(std::time(nullptr)));}
 std::string levelName(std::string_view name,unsigned level){char b[24];std::snprintf(b,sizeof b,"_%02u",level+1);return std::string(name)+b;}
 std::string attackIcon(int itemId){char b[32];std::snprintf(b,sizeof b,"Icon%05d.png",itemId);return b;}
@@ -33,7 +34,7 @@ public:
 }
 struct GameSession::State {
     ResourceAccess& resources;SessionHost host;SaveData save;
-    DataTable items,machines,descriptions;
+    DataTable items,machines,descriptions;SpriteFont messageFont;
     BuildCatalog builds;WeaponCatalog weapons;BaseUpgradeCatalog baseUpgrades;AttackCatalog attacks;Settlement settlement;BattleModels models;
     Menu menu;Transition transition;GameHUD hud;UpgradeDialog upgrades;SummaryDialog summary;
     UpgradeDialogState upgradeState;SummaryState summaryState;
@@ -48,7 +49,7 @@ struct GameSession::State {
     float panelOffset=0;
     std::string message;Button messageOK;
     State(ResourceAccess& r,HostServices& h,bool v):resources(r),host(h),save(loadSave(h)),
-      items(table(r,"ItemInfo")),machines(table(r,"MachList")),descriptions(table(r,"Description_us")),
+      items(table(r,"ItemInfo")),machines(table(r,"MachList")),descriptions(table(r,"Description_us")),messageFont(fontMetrics(r)),
       builds(BuildCatalog::load(table(r,"MachBuild_Parts"),table(r,"MachBuild_Name"))),weapons(WeaponCatalog::load(table(r,"WeaponInfo"),true)),
       baseUpgrades(table(r,"BaseUpgrade")),attacks(table(r,"SpAttackList")),settlement(builds,table(r,"MachRegen")),
       models(BattleModels::parse(Chunk::parse(r.read("RawData/PartsInfo.mcb")),Chunk::parse(r.read("RawData/MachInfo.mcb")))),
@@ -61,22 +62,25 @@ struct GameSession::State {
     }
     std::size_t offset()const{return SaveData::slotStart+slot*SaveData::slotStride;}
     std::string label(std::string_view name)const{auto row=descriptions.findRow("MN_"+std::string(name));return row?std::string(descriptions.value(*row,"Value")):std::string(name);}
-    void drawParts(Frame& f,const std::vector<AssemblyPart>& parts,Vec2 p,float scale){
-        const auto poses=models.pose(parts,scale,0,0,0);models.appendSprites(f,poses,p,[&](std::string_view n){return resources.imageSize(n);});
+    void drawParts(Frame& f,const std::vector<AssemblyPart>& parts,Vec2 p,float scale,bool unitPreview=false){
+        auto poses=models.pose(parts,scale,0,0,0);
+        // UiObjMachParts::attachTo:X:Y: (0x3baf8) bakes unit art facing up.
+        // Rotate the complete preview, including fixed-angle child parts.
+        if(unitPreview)for(auto& pose:poses){const auto c=pose.localCenter;pose.localCenter={-c.y,c.x};pose.angle+=1.5707963267948966f;}
+        models.appendSprites(f,poses,p,[&](std::string_view n){return resources.imageSize(n);});
     }
     void drawUnit(Frame& f,std::string_view n,Vec2 p,float scale){
         const auto* d=builds.find(n);if(!d){auto owned=save.builds(slot);auto i=std::find_if(owned.begin(),owned.end(),[&](const auto& b){return b.name==n;});if(i!=owned.end())d=settlement.definition(*i);}
         if(!d)return;
-        if(d->setType==0){auto parts=PlayerLoadout::fromBuild(*d,items,BattleGeometry::phone());drawParts(f,parts.assembly,p,scale);}
-        else if(const auto* parts=models.machine(d->machine))drawParts(f,*parts,p,scale);
+        if(d->setType==0){auto parts=PlayerLoadout::fromBuild(*d,items,BattleGeometry::phone());drawParts(f,parts.assembly,p,scale,true);}
+        else if(const auto* parts=models.machine(d->machine))drawParts(f,*parts,p,scale,true);
     }
     void drawReward(Frame& f,const StageReward& reward,Vec2 p,float scale){
         if(!reward.build.empty()){drawUnit(f,reward.build,p,scale);return;}
         if(reward.attack.empty())return;
-        auto attacks=table(resources,"SpAttackList");auto row=attacks.findRow(levelName(reward.attack,0));if(!row)return;
-        auto item=attacks.integer(*row,"ItemId");if(!item)return;
+        const int item=attacks.definition({reward.attack,0,0,false}).itemId;
         // DlgSummary uses the attack's ItemId, not ItemInfo.Icon (atlas ID).
-        char name[40];std::snprintf(name,sizeof name,"Icon%05d.png",int(*item));auto size=resources.imageSize(name);
+        char name[40];std::snprintf(name,sizeof name,"Icon%05d.png",item);auto size=resources.imageSize(name);
         for(unsigned i=0;i<reward.attackCount;++i){Sprite s;s.image=name;const float x=p.x+(float(i)*80-float(reward.attackCount-1)*40)*scale;s.destination={x-size.x*scale*.5f,p.y-size.y*scale*.5f,size.x*scale,size.y*scale};f.sprites.push_back(s);}
     }
     bool persist(){pendingSave=!host.writeSave(save.encode());if(!pendingSave)return true;message="Could not save progress.";return false;}
@@ -228,7 +232,7 @@ struct GameSession::State {
         if(!message.empty()){
             Sprite shade;shade.destination={0,0,320,480};shade.color={0,0,0,.7f};frame.sprites.push_back(shade);
             Sprite box;box.image="MessageBox.png";box.destination={32,208,256,64};frame.sprites.push_back(box);
-            auto b=resources.read("Generated/TrebuchetMS-Bold-48.tsv");SpriteFont font({reinterpret_cast<const char*>(b.data()),b.size()});font.draw(frame,message,{160-font.width(message,10)/2,235},10);
+            messageFont.draw(frame,message,{160-messageFont.width(message,10)/2,235},10);
             Sprite ok;ok.image="Common_Btn_OK.png";auto size=resources.imageSize(ok.image);ok.sourcePx=Rect{0,messageOK.pressed()?size.y/4:0,size.x,size.y/4};ok.destination=messageOK.bounds;frame.sprites.push_back(ok);
         }
         transition.append(frame);

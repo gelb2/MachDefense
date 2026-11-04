@@ -17,6 +17,7 @@
 - [skills](skills.md)
 - [source-provenance](source-provenance.md)
 - [stage-transition-contract](stage-transition-contract.md)
+- [트러블슈팅](troubleshooting.md)
 - [usability-todo](usability-todo.md)
 - [validation-plan](validation-plan.md)
 - [weapon-validation-procedure](weapon-validation-procedure.md)
