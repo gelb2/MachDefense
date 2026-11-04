@@ -12,7 +12,7 @@
 #include "../../../Modules/ThirdParty/stb/stb_image.h"
 
 namespace {
-struct Texture { GLuint id=0; int width=0,height=0; };
+struct Texture { GLuint id=0; int width=0,height=0,storageWidth=0,storageHeight=0; };
 bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::isfinite(r.width)&&std::isfinite(r.height);}
 }
 @implementation MDRenderer {
@@ -53,16 +53,25 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
     NSURL* url=name.starts_with("Generated/")?[_root URLByAppendingPathComponent:relative]:[[_root URLByAppendingPathComponent:@"Images"] URLByAppendingPathComponent:relative];
     if(!url)return nullptr;
     Texture t;int channels=0;
+    stbi_convert_iphone_png_to_rgb_thread(1);stbi_set_unpremultiply_on_load_thread(1);
     unsigned char* pixels=stbi_load(url.fileSystemRepresentation,&t.width,&t.height,&channels,4);
     if(!pixels){_failedTextures.insert(name);[self fail:[NSString stringWithFormat:@"Cannot decode %@",relative]];return nullptr;}
     GLint maximum=0;glGetIntegerv(GL_MAX_TEXTURE_SIZE,&maximum);
     if(t.width<=0||t.height<=0||t.width>maximum||t.height>maximum){stbi_image_free(pixels);[self fail:@"Texture exceeds GPU limit"];return nullptr;}
     _imageSizes[name]={float(t.width),float(t.height)};
-    if(premultiplied)for(std::size_t i=0;i<std::size_t(t.width)*t.height;++i){auto* p=pixels+i*4;for(int channel=0;channel<3;++channel)p[channel]=static_cast<unsigned char>((unsigned(p[channel])*p[3]+127)/255);}
+    if(premultiplied)for(std::size_t i=0;i<std::size_t(t.width)*t.height;++i){auto* p=pixels+i*4;for(int channel=0;channel<3;++channel)p[channel]=static_cast<unsigned char>(float(p[channel])*(float(p[3])/255.f));}
+    // Texture2D(Image)::initWithImage 0x4b590 pads to powers of two and
+    // uploads cleared pixels outside the original image. Preserve its edge sampling.
+    t.storageWidth=1;t.storageHeight=1;
+    while(t.storageWidth<t.width)t.storageWidth*=2;
+    while(t.storageHeight<t.height)t.storageHeight*=2;
+    if(t.storageWidth>maximum||t.storageHeight>maximum){stbi_image_free(pixels);[self fail:@"Padded texture exceeds GPU limit"];return nullptr;}
+    std::vector<unsigned char> padded(std::size_t(t.storageWidth)*t.storageHeight*4,0);
+    for(int y=0;y<t.height;++y)std::copy_n(pixels+std::size_t(y)*t.width*4,std::size_t(t.width)*4,padded.data()+std::size_t(y)*t.storageWidth*4);
     glGenTextures(1,&t.id);glBindTexture(GL_TEXTURE_2D,t.id);glPixelStorei(GL_UNPACK_ALIGNMENT,1);
     glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_S,GL_CLAMP_TO_EDGE);glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_T,GL_CLAMP_TO_EDGE);
-    glTexImage2D(GL_TEXTURE_2D,0,GL_RGBA,t.width,t.height,0,GL_RGBA,GL_UNSIGNED_BYTE,pixels);
+    glTexImage2D(GL_TEXTURE_2D,0,GL_RGBA,t.storageWidth,t.storageHeight,0,GL_RGBA,GL_UNSIGNED_BYTE,padded.data());
     stbi_image_free(pixels);
     if(glGetError()!=GL_NO_ERROR){glDeleteTextures(1,&t.id);[self fail:@"Texture upload failed"];return nullptr;}
     ++_textureUploads;return &_textures.emplace(key,t).first->second;
@@ -118,6 +127,7 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
         glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);glTexEnvi(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
         if(mesh.blend==md::Blend::opaque)glDisable(GL_BLEND);else{glEnable(GL_BLEND);glBlendFunc(premultiplied?GL_ONE:GL_SRC_ALPHA,mesh.blend==md::Blend::additive?GL_ONE:GL_ONE_MINUS_SRC_ALPHA);}
         std::vector<md::MeshVertex> vertices=mesh.vertices;
+        for(auto& v:vertices){v.uv.x*=float(texture->width)/texture->storageWidth;v.uv.y*=float(texture->height)/texture->storageHeight;}
         if(premultiplied)for(auto& v:vertices){v.color.r*=v.color.a;v.color.g*=v.color.a;v.color.b*=v.color.a;}
         glLoadIdentity();glEnableClientState(GL_COLOR_ARRAY);
         glVertexPointer(2,GL_FLOAT,sizeof(md::MeshVertex),&vertices.front().position.x);
@@ -156,7 +166,7 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
             glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,s.nearest?GL_NEAREST:GL_LINEAR);glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,s.nearest?GL_NEAREST:GL_LINEAR);
             glTexEnvi(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
             md::Rect r=s.sourcePx.value_or(md::Rect{0,0,float(t->width),float(t->height)});if(!validRect(r))continue;
-            float l=r.x/t->width,rr=(r.x+r.width)/t->width,top=r.y/t->height,b=(r.y+r.height)/t->height;
+            float l=r.x/t->storageWidth,rr=(r.x+r.width)/t->storageWidth,top=r.y/t->storageHeight,b=(r.y+r.height)/t->storageHeight;
             if(s.flipX)std::swap(l,rr);if(s.flipY)std::swap(top,b);
             uv[0]=l;uv[1]=top;uv[2]=rr;uv[3]=top;uv[4]=l;uv[5]=b;uv[6]=rr;uv[7]=b;
         }else glDisable(GL_TEXTURE_2D);
