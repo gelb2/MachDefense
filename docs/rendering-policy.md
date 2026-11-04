@@ -2,7 +2,7 @@
 
 원본 텍스처 크롭·알파·필터·레이어·부품 조립·애니메이션·버튼 상태를 분석한다. 게임이 실행된 뒤 버튼은 원작 에셋과 게임 렌더·입력 방식으로 구현한다. UIKit/Android View/DOM으로 게임 버튼을 분리하지 않는다. 텍스트 입력 등 원작이 해결하지 못한 OS 기능만 플랫폼 경계에 둔다. GPU context 소실 때 자원을 복원하며 게임 세션을 초기화하지 않는다.
 
-포팅판 원본 분석과 실행 검증을 진행 중이다. 소스 재개발은 아직 시작하지 않았다.
+현재 소스판은 [World](../Sources/Core/World.cpp)의 부품·투사체·효과와 [GameHUD](../Sources/Core/GameHUD.cpp)의 원본 UI 에셋을 공용 Frame으로 모은다. [Apple 렌더러](../Sources/Platform/Apple/MDRenderer.mm)가 GPU에 제출한다. 텍스처는 재사용한다. 처음 쓰는 자원 준비 지연은 [성능 후속 과제](usability-todo.md)에 남아 있다. 원본과의 레이어·방향·레이더 대조 결과는 [비교 기록](evidence/port-source-parity-20261104.md)에 추가한다.
 
 현재 포팅판의 적·아군 유닛 자글거림은 [MD-ART-01](port-observations-20261104.md)로 추적한다. 판본별 에셋·기기 선택·합성 해상도·필터를 대조한 뒤 재개발 렌더 기준을 확정한다.
 

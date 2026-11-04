@@ -24,7 +24,10 @@
       "docs/source-reimplementation-plan.md",
       "docs/evidence/source-analysis-20261104.md",
       "docs/evidence/menu-layout-20261104.md",
-      "docs/evidence/source-session-validation-20261104.md"
+      "docs/evidence/source-session-validation-20261104.md",
+      "docs/troubleshooting.md",
+      "docs/evidence/source-cheat-campaign-20261104.md",
+      "docs/evidence/port-source-parity-20261104.md"
     ],
     "rendering": [
       "docs/rendering-policy.md",
@@ -33,14 +36,20 @@
       "docs/port-observations-20261104.md",
       "docs/universal-assets-plan.md",
       "Resources/README.md",
-      "docs/evidence/menu-layout-20261104.md"
+      "docs/evidence/menu-layout-20261104.md",
+      "docs/troubleshooting.md",
+      "docs/evidence/source-cheat-campaign-20261104.md",
+      "docs/evidence/port-source-parity-20261104.md"
     ],
     "combat": [
       "docs/game-calculation-policy.md",
       "docs/weapon-validation-procedure.md",
       "docs/source-reimplementation-plan.md",
       "docs/evidence/source-analysis-20261104.md",
-      "docs/evidence/source-session-validation-20261104.md"
+      "docs/evidence/source-session-validation-20261104.md",
+      "docs/troubleshooting.md",
+      "docs/evidence/source-cheat-campaign-20261104.md",
+      "docs/evidence/port-source-parity-20261104.md"
     ],
     "lifecycle": [
       "docs/runtime-policy.md",
@@ -56,7 +65,10 @@
       "docs/source-reimplementation-plan.md",
       "Apple/README.md",
       "Modules/README.md",
-      "docs/evidence/source-session-validation-20261104.md"
+      "docs/evidence/source-session-validation-20261104.md",
+      "docs/troubleshooting.md",
+      "docs/evidence/source-cheat-campaign-20261104.md",
+      "docs/evidence/port-source-parity-20261104.md"
     ],
     "android": [
       "docs/design.md",

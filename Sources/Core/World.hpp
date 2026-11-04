@@ -73,6 +73,7 @@ public:
     Vec2 screenToWorld(Vec2)const;
     float cameraY()const{return actualCamera_;}
     float cameraTargetY()const{return camera_;}
+    Vec2 cameraVisibleY()const{return {camera_-height()*.5f+bottomMargin(),camera_+height()*.5f};}
     void prepareDraw();
     void appendSprites(Frame&)const;
     const std::vector<std::unique_ptr<WorldActor>>& actors()const{return actors_;}

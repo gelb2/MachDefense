@@ -20,6 +20,7 @@ struct SpecialAttackRow {
     bool upgradeAvailable=false;
 };
 struct ProductionQueueRow { std::string machine; float progress=0; };
+struct RadarMark { Vec2 worldPosition; unsigned tile=0; };
 struct GameHUDState {
     unsigned score=0, credits=0, missionNumber=1, minerals=0, maximumMinerals=0;
     unsigned cellUpgradeLevel=0,cellUpgradeCost=0;
@@ -31,6 +32,8 @@ struct GameHUDState {
     std::vector<ProductionRow> production;
     std::vector<ProductionQueueRow> queue;
     std::vector<SpecialAttackRow> attacks; // Installed entries, in original saved order.
+    std::vector<RadarMark> radarMarks;
+    std::optional<Vec2> radarCamera; // World-space bottom and top.
     std::optional<std::size_t> selectedAttack,selectedFormation;
 };
 struct HUDAction {

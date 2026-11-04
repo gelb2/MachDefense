@@ -41,3 +41,7 @@
 로컬 측정 자료: `.local/ipad-source-audit/cheat-physical-cpu.trace`, `cpu-samples.xml`, `audio-fixed-frames.csv`, `audio-fixed-summary.json`. 원본 실행 파일과 분석 덤프는 저장소 밖에 보관한다.
 
 후속 검사는 [TODO](usability-todo.md#전체-무기-프레임-검사--2026-11-04-사용자-지시)와 [검증 계획](validation-plan.md)에 기록한다. 이 문서는 GitHub에 올릴 개발 기록으로 유지한다.
+
+## 포팅판에는 있고 소스판에 빠진 점수·레이더
+
+동일 저장으로 기지 강화 6종을 대조하면서 전투 HUD의 누적 점수와 레이더 표식 누락을 발견했다. GameSession은 누적 점수 대신 이번 전투의 점수를 넘겼고, GameHUD는 레이더 배경만 그렸다. 원본 슬롯 점수와 RaderMark·MovePath 표시를 연결했다. 원본 함수 주소, 같은 조건의 저장 비교와 검사 결과는 [대조 기록](evidence/port-source-parity-20261104.md)에 있다.

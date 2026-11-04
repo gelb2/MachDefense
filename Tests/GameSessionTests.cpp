@@ -11,6 +11,9 @@ int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];Host h
         if(b.x>272&&b.x+b.width<318&&b.y>35&&b.y+b.height<70&&std::abs(sprite.rotationDegrees+90)<.001f)++previewParts;
     }
     assert(previewParts>0);
+    // The original radar draws both bases before any production or combat.
+    assert(has(s.frame(),"RaderMark.png"));
+    assert(std::count_if(s.frame().meshes.begin(),s.frame().meshes.end(),[](const auto& m){return m.image=="MovePath.png";})==4);
     const auto initial=world->actors().size();tap(s,292,52);ticks(s,220);assert(world->actors().size()>initial);assert(h.writes==2);
     // Menu pause, inactive transition and resume all stop world time.
     tap(s,284,435);assert(world->paused());const auto time=world->time();ticks(s,20);assert(world->time()==time);
@@ -29,5 +32,13 @@ int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];Host h
     std::optional<Vec2> next;for(const auto& sprite:s.frame().sprites)if(sprite.image.find("NEXT")!=std::string::npos)next=Vec2{sprite.destination.x+sprite.destination.width/2,sprite.destination.y+sprite.destination.height/2};
     if(!next){for(const auto& sprite:s.frame().sprites)if(sprite.image.find("Next")!=std::string::npos)next=Vec2{sprite.destination.x+sprite.destination.width/2,sprite.destination.y+sprite.destination.height/2};}
     assert(next);tap(s,next->x,next->y);ticks(s);assert(s.validationWorld()->stage()==1);assert(h.writes==3);
+    // A returning profile keeps its accumulated score visible in combat.
+    Host returning;auto progress=SaveData::empty(123);progress.createProfile("RETURN",1);
+    progress.writeWord(SaveData::slotStart+0x2054,274);progress.writeWord(SaveData::slotStart+0xc,5);returning.saved=progress.encode();
+    GameSession resumed(r,returning,true);tap(resumed,160,240);ticks(resumed);tap(resumed,160,140);ticks(resumed);tap(resumed,240,450);ticks(resumed);
+    std::string score;const auto digitWidth=r.imageSize("NumSet_Cr.png").x/16;
+    for(const auto& glyph:resumed.frame().sprites)if(glyph.image=="NumSet_Cr.png"&&glyph.destination.y<430&&glyph.destination.y>415)
+        score+=char('0'+std::lround(glyph.sourcePx->x/digitWidth));
+    assert(score=="274");assert(returning.writes==1);
     std::cout<<"GameSession: original menu/door/profile/help/production/pause/upgrade/result/next-stage, exact save points passed\n";
 }

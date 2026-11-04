@@ -32,6 +32,19 @@ int main(int argc,char** argv){
     const auto& gauge=find(f,"BuildGauge.png");assert(gauge.destination.width==8&&gauge.destination.x==212&&gauge.destination.y==63);
     const auto& hp=find(f,"EnemyGauge.png");assert(hp.destination.x==31.5f&&hp.destination.width==40.5f);
     const auto& panel=find(f,"GameUI_MachSlot.png");assert(panel.destination.x==192&&panel.destination.y==-28);
+    // Radar keeps world positions at 1/8 scale, including units outside the
+    // current camera. The original +/-128 map cutoff is independent of it.
+    state.radarMarks={{{0,-470},2},{{0,487},3},{{80,0},1},{{0,1025},1}};
+    state.radarCamera=Vec2{-512,-92};h.setState(state);Frame radar;h.append(radar);
+    unsigned marks=0;for(const auto& s:radar.sprites)if(s.image=="RaderMark.png"){
+        ++marks;assert(s.destination.width==8&&s.destination.height==8);
+        if(s.sourcePx->x==16){assert(s.destination.x==14);assert(s.destination.y==136.75f);}
+    }
+    assert(marks==3&&radar.meshes.size()==4);
+    const auto initialTop=radar.meshes[1].vertices[0].position.y;
+    state.radarCamera=Vec2{-212,208};h.setState(state);radar={};h.append(radar);
+    assert(radar.meshes[1].vertices[0].position.y<initialTop);
+    state.radarCamera.reset();state.radarMarks.clear();h.setState(state);
     // Production price 137 is present, with the original 14px text reduced to 7px.
     std::vector<unsigned> priceCodes;
     for(const auto& s:f.sprites)if(s.image.starts_with("Generated/")&&s.destination.y<40&&s.destination.y>30){const auto crop=*s.sourcePx;priceCodes.push_back(unsigned(crop.y/80)*16+unsigned(crop.x/80)+32);assert(std::abs(s.destination.width-80*7.f/48)<.0001f);}

@@ -2,7 +2,7 @@
 
 위치: `/Users/sokol/Git/ProjectGameDev-Hub/MachDefense`. 독립 비공개 저장소 `gelb2/MachDefense`다. 시작 문서는 AGENTS.md와 docs/canonical.md이며 현재 결과는 docs/current-status.md에 있다.
 
-현재 브랜치는 `feat/source-reimplementation`이다. 위메이드 1.0.3 기준 C++ 재개발 앱의 메뉴·생산·전투·저장 연결을 검증 중이다. `docs/current-status.md`와 `docs/evidence/source-session-validation-20261104.md`를 먼저 읽는다. 아래 포팅판 기록은 이전 단계다. Mesabloo 포크 기반 개발이 아니다.
+현재 브랜치는 `feat/source-reimplementation`이다. 위메이드 1.0.3 기준 C++ 재개발 앱의 메뉴·생산·전투·저장 연결을 검증 중이다. `docs/current-status.md`와 `docs/evidence/source-session-validation-20261104.md`를 먼저 읽는다. 현재 작업 순서는 [TODO 맨 위](docs/usability-todo.md#현재-작업-순서--2026-11-04-ipad-수정본-기준)를 따른다. 아래 포팅판 기록은 이전 단계다. Mesabloo 포크 기반 개발이 아니다.
 
 IPA 19개는 저장소 밖 원본 보관소에 있다. 파일을 저장소·원격·보고 사이트에 복사하지 않는다. `.local/originals.json`은 보관 경로만 담고 Git 제외다. 실제 스킬은 `.agents/skills`, HeavyMach 1 원본은 `docs/reference/heavymach1`에 있다.
 
@@ -10,10 +10,10 @@ IPA 19개는 저장소 밖 원본 보관소에 있다. 파일을 저장소·원�
 
 HeavyMach 1·2·MachDefense 모두 광고를 표시하거나 요청하지 않는다. 호환판에도 적용한다. 원본 IPA는 수정하지 않고 광고 API는 로컬 실행기에서 비표시 처리한다.
 
-## 호환판 구현·검사 인계
+## 이전 단계 — 호환판 구현·검사 인계
 
 - 브랜치: `feat/ios-compatibility`. develop·main 병합과 원격 push는 수행하지 않는다.
-- 원본: Mach Defense 1.0.5의 ARMv7 실행 파일을 touchHLE 인터프리터로 구동한다. 소스 재구현은 아직 시작하지 않았다.
+- 원본: Mach Defense 1.0.5의 ARMv7 실행 파일을 touchHLE 인터프리터로 구동한다. 이 기록 당시에는 소스 재구현을 시작하기 전이었다.
 - 완료: 시뮬레이터 슬롯 생성·Stage 1 진입·유닛 생산/이동, iPhone Air 무선 설치·타이틀/슬롯 화면 확인. 슬롯 생성 때 종료되던 빈 이미지 처리와 Xcode 서명 문제는 재발 후 실행 파일 생성 의존 관계를 다시 고쳤고 두 번의 증분 빌드를 확인했다.
 - 사용자의 후속 지시와 잠금 해제 뒤 아이폰 수정본을 직접 검사했다. 기지·네 유닛 강화 상세의 증감값 표시·닫기와 생산·교전·저장·재실행을 확인했다. 최신 근거는 docs/evidence/ios-compatibility-upgrade-error-20261104.md다. 실제 강화 구매는 남았다.
 - 남은 문제: 이름 입력칸 포커스 후 위치 이동. 구버전 API/키보드 알림 문제라는 사용자 추정과 합성 경로 전환을 함께 조사한다. 아직 원인을 확정하지 않았다.
@@ -60,11 +60,11 @@ HeavyMach 1·2·MachDefense 모두 광고를 표시하거나 요청하지 않는
 
 새 일반/치트 앱 모두 두 시뮬레이터에 설치했다. 직접 검사의 상세와 캡처 위치는 `.local/source-simulator-validation-20261104.md`에 있다. 사용자의 실기기 포팅 앱·저장은 보존했고 시험 시뮬레이터를 종료했다. 마지막 iPad HUD 레이어 수정본의 직접 검사는 Mac 잠금으로 남았다. iPhone 최종 화면과 공통 HUD 회귀검사는 통과했다.
 
-다음에는 치트 검증 화면을 먼저 준비한다. 원작 기능·진형·전투 연출을 완성하면서80개 미션의 진행·보상·저장을 검사한다. 그다음 전체 회귀·장시간 성능을 검증하고, 이후 iPhone·iPad 화면을 확장한 뒤 재검사한다. 최신 순서는 docs/source-reimplementation-plan.md를 따른다. 새 소스판 전체 완료로 보고하지 않는다.
+이 보고서 게시 당시에는 치트 검증 화면을 다음 작업으로 정했다. 이후 구현 결과는 아래 치트 앱·80개 캠페인 절에 있다. 당시 계획은 다음과 같았다: 원작 기능·진형·전투 연출을 완성하면서80개 미션의 진행·보상·저장을 검사한다. 그다음 전체 회귀·장시간 성능을 검증하고, 이후 iPhone·iPad 화면을 확장한 뒤 재검사한다. 최신 순서는 docs/source-reimplementation-plan.md를 따른다. 새 소스판 전체 완료로 보고하지 않는다.
 
 보고 사이트는 256MiB에 가까워졌다. 이번 archive는 macOS xattr·AppleDouble을 제외한 ustar로268406272바이트다. `.local/site-tar-bin/tar`를 PATH 앞에 두고 Sites source helper로 포장했다. 게임 자료와 캡처의 픽셀을 삭제·변경하지 않았다. 다음 이미지 추가 전에는 사이트 용량을 재정리해야 한다. 원본 IPA/바이너리는 계속 반출 금지다.
 
-## 검증 순서 수정과 작업 보존 — 2026-11-04
+## 이전 순서와 작업 보존 — 2026-11-04
 
 사용자가 치트앱 계획 기록과 지금까지 작업의 커밋을 지시했다. `feat/source-reimplementation`에서 커밋하며 develop/main 병합·원격 push는 포함하지 않는다. 치트앱 준비 → 원작 기능 및80개 미션 진행·저장 검사 → 전체 검증 → iPhone/iPad 화면 대응 → 재검사 순서로 정본·계획·검증·TODO를 맞췄다. 통합 보고 원고에도 같은 순서를 반영했다. 이 순서 수정분은 로컬 원고이며 사이트에는 아직 재게시하지 않았다.
 
@@ -83,3 +83,13 @@ HeavyMach 1·2·MachDefense 모두 광고를 표시하거나 요청하지 않는
 오디오 XCTest 2개와 관련 코어 회귀 7개가 통과했다. iPad 치트 앱의 수정 후 248.82초·14,912프레임 측정과 사용자 개선 확인은 `docs/troubleshooting.md`에 있다. `docs/usability-todo.md` 맨 위의 현재 작업 순서를 따른다. 전체 무기·오디오 중단 복귀·메모리 판정·일반 앱·전체 UI 및 실제 회전 재검사는 남았다. 화면 확장은 그 뒤다.
 
 Xcode GUI가 바꾼 개인 서명 팀과 공유 스킴 형식 3개 파일은 로컬에서 보존하고 이번 기능 커밋에서 제외한다. `Apple/iOS/project.yml`과 두 Info.plist의 방향 수정은 커밋 대상이다. develop/main 병합은 하지 않는다. 원본 IPA·실행 바이너리·로컬 측정 원본은 Git에 넣지 않는다.
+
+## 최신 사용자 작업 순서
+
+포팅판 대조 → 인게임 일러스트 앱 아이콘 제작 → 아이콘 방향·가격·회전 재검사 → 치트앱 전체 기능 연속 검사 → 성능·음향·메모리·생명주기 검사 → iPhone·iPad 화면 확장 계획 수립 순서로 변경했다. 직전 답변 번호는 4 → 6 → 2 → 1 → 3, 그다음 5의 계획 수립이다. 6은 앱 아이콘 제작이며 웹·PWA·Tauri 착수를 앞당기는 지시가 아니다. 다음 작업은 위메이드 1.0.3 포팅판 대조부터 시작한다.
+
+## 포팅판 동일 조건 대조 진행
+
+기지 강화 6종을 두 앱에서 실제 구매하고 저장을 비교했다. 차감 7,800Cr·저장 단계·누적 점수가 일치했다. 대조에서 발견한 누적 점수 표시와 레이더 누락을 수정했고 관련 검사 4개 및 시뮬레이터 화면을 확인했다. [근거와 남은 대조](docs/evidence/port-source-parity-20261104.md). 아직 전체 대조 완료는 아니다.
+
+유닛 4종 구매는 소스 앱 화면에서 Lv.2·987,250Cr까지 확인했다. `.local/parity-20261104/source-units-level2.png` 보존. Mac 잠금으로 저장·포팅판 동일 구매 대조는 중단된 상태다. 시뮬레이터 iPhone Air `97CA5646-36BB-47A9-919A-D78DD632A439`, 소스 번들 `com.gelb2.machdefense.source.cheat`, 포팅판 `com.gelb2.machdefense.audit.wemade103`. 소스 앱을 종료하기 전에 Save & Exit 후 시험 저장을 보존한다. 새 설치 후 컨테이너 경로는 simctl로 다시 조회한다. 실기기 사용자 저장은 변경하지 않는다.

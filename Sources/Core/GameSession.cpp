@@ -102,7 +102,11 @@ struct GameSession::State {
     }
     void refreshHUD(){
         if(!world)return;
-        GameHUDState s;s.score=world->score();s.credits=unsigned(std::max(0,save.credits(slot)));s.missionNumber=world->stage()+1;
+        // GuiGame::tick 0x276c4 reads the accumulated slot score at +0x2054.
+        GameHUDState s;s.score=save.readWord(offset()+0x2054);s.credits=unsigned(std::max(0,save.credits(slot)));s.missionNumber=world->stage()+1;
+        s.radarCamera=world->cameraVisibleY();
+        for(const auto& a:world->actors())if(!a->removed)
+            s.radarMarks.push_back({a->position,unsigned(a->player?0:1)+unsigned(a->base?2:0)});
         s.minerals=unsigned(std::max(0.f,world->cells()));s.maximumMinerals=unsigned(world->cellCapacity());s.musicVolume=host.music;s.effectsVolume=host.effects;
         s.paused=paused;s.selectedPanel=panel;s.productionVisible=true;s.mainPanelOffsetY=panelOffset;s.selectedAttack=selectedAttack;
         s.upgradeMode=upgradeState.kind!=UpgradeDialogState::Kind::hidden;

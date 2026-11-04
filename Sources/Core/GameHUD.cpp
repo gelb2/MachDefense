@@ -60,6 +60,33 @@ void GameHUD::append(Frame& f)const{
     image(f,"GameUI_BtmL.png",{32,-130});image(f,"GameUI_BtmR.png",{224,-130});
     for(auto i=panelStart;i<f.sprites.size();++i)f.sprites[i].destination.y-=state_.mainPanelOffsetY;
     image(f,"RaderBG.png",{18,398.5f});
+    // DlgRadar 0x23fec/0x24634: original map scale, four marker tiles,
+    // and QobLine camera bounds using MovePath.png (0x24310/0x41dc4).
+    for(const auto& mark:state_.radarMarks){
+        const float y=mark.worldPosition.y*.125f;
+        if(y>=-128&&y<=128)image(f,"RaderMark.png",{18+mark.worldPosition.x*.125f,398+y},8,1,mark.tile,{2,2});
+    }
+    if(state_.radarCamera){
+        auto line=[&](Vec2 from,Vec2 to){
+            const float dx=to.x-from.x,dy=to.y-from.y,length=std::hypot(dx,dy);
+            if(length==0)return;
+            TextureMesh mesh;mesh.image="MovePath.png";mesh.blend=Blend::additive;mesh.beforeSpriteIndex=f.sprites.size();
+            const Vec2 normal{-dy/length,dx/length};
+            const unsigned blocks=unsigned(length/16);
+            for(unsigned i=0;i<=blocks+1;++i){
+                const float distance=std::min(float(i)*16,length);
+                const float remainder=std::fmod(length,16.f)/16.f;
+                const float v=i==blocks+1?(i%2?1-remainder:remainder):(i%2?0.f:1.f);
+                const Vec2 p{18+from.x+dx*distance/length,398+from.y+dy*distance/length};
+                mesh.vertices.push_back({{p.x+normal.x,480-(p.y+normal.y)},{0,v},{}});
+                mesh.vertices.push_back({{p.x-normal.x,480-(p.y-normal.y)},{1,v},{}});
+            }
+            f.meshes.push_back(std::move(mesh));
+        };
+        const float bottom=float(int(state_.radarCamera->x*.125f+1)),top=float(int(state_.radarCamera->y*.125f+1));
+        line({-16,bottom},{16,bottom});line({-16,top},{16,top});
+        line({-16,top},{-16,bottom});line({16,top},{16,bottom});
+    }
     image(f,"GameUI_HpGauge.png",{58,471},2,1,0);image(f,"GameUI_HpGauge.png",{192,471},2,1,1);
     const float my=ratio(state_.playerBaseHealth),enemy=ratio(state_.enemyBaseHealth);
     image(f,"EnemyGauge.png",{31.5f+40.5f*my,473.5f},1,2,0,{my,1});
