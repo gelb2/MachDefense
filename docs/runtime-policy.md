@@ -15,3 +15,7 @@
 AVAudioSession 설정·활성화·비활성화는 Apple 어댑터의 직렬 큐에서 비동기로 실행한다. 게임 입력·렌더링·OpenAL 객체는 메인 스레드에서 유지한다. 오래된 세션 완료가 최신 비활성 상태를 덮지 않게 요청 세대 번호를 대조한다. [실기기 검사](evidence/audio-session-20261105.md).
 
 효과음의 백그라운드/복귀는 OpenAL Soft 장치의 pause/resume으로 처리한다. 컨텍스트 suspend/process는 출력 장치 재시작을 대신하지 않는다. OS 세션 활성화 완료 후 장치를 재개하고, 재생 호출 횟수와 실제 샘플 진행을 함께 검사한다. [복귀 후 효과음 소실 수정](evidence/effects-resume-20261105.md).
+
+## Android 실행기
+
+게임/렌더 작업은 하나의 HandlerThread에서 실행한다. Surface와 EGL context가 사라져도 GameSession과 진행 상태를 유지한다. Activity 재생성·백그라운드 복귀는 게임을 일시정지하며 사용자가 게임 메뉴에서 재개한다. 효과음은 공통 Audio/OpenAL Soft의 OpenSL ES 출력을, 음악은 MediaPlayer를 쓴다. 파일 저장은 GameSession 요청 때만 임시 파일·fsync·rename으로 교체한다. [검사 결과](evidence/android-native-20261106.md).

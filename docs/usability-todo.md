@@ -1,5 +1,9 @@
 # TODO
 
+## 최신 우선순위 — 2026-11-06 Android
+
+사용자 지시로 Android 개발을 먼저 수행했다. `feat/android-native`에서 일반·치트 APK, Galaxy/에뮬레이터 검사와 아이폰 저장 이전을 진행했다. [완료 범위와 후속 검사](evidence/android-native-20261106.md). 기존 Apple·게임 기능 과제는 유지한다. 아래 긴급지원 브랜치 상태는 당시 기록이다. 최신 develop 기준은 `5bc233e`다.
+
 ## 모듈화 현황 — 2026-11-05 긴급지원 확인 후
 
 공용 코어의 데이터·전투·진행/저장·화면·검증 분리와 OpenAL Soft 효과음 모듈 연결은 완료했다. 원본 오디오·텍스처 대조 수정, C++ 34개 검사, 160조건·144,000틱 분리 전후 대조, iPhone/iPad 시뮬레이터 검사, 실제 iPad 27개 검사와 10분 전투를 수행했다. [모듈 작업](evidence/module-work-20261105.md), [iPad 검사](evidence/module-ipad-device-20261105.md).

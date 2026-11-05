@@ -12,3 +12,7 @@
 - [작업 환경 설정](docs/development.md) · [저장소 규칙](docs/repository-management.md)
 
 원본 IPA는 이 저장소와 GitHub에 포함하지 않는다. 비공개 상태는 별도 공개 지시까지 유지한다.
+
+## Android
+
+Android 일반·치트 앱을 Galaxy와 에뮬레이터에서 실행했다. 기존 C++ 게임 코드·자원을 공유한다. [빌드와 설치 파일](Android/README.md), [실행·성능·아이폰 저장 이전 검사](docs/evidence/android-native-20261106.md).

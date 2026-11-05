@@ -34,3 +34,7 @@ full은 모든 짧은 XCTest, soak는 10분 전투·20회 진입 검사다. quic
 ## 원본 분석
 
 REA/Ghidra 분석 파일은 저장소 밖에 보존한다. 원본 경로는 Git에서 제외한 `.local/originals.json`으로 관리한다. `tools/verify_originals.py`는 원본 읽기·해시 검사에만 사용한다. [출처](source-provenance.md), [빌드·모듈 구조](../Modules/README.md), [최근 검사](evidence/module-work-20261105.md).
+
+## Android
+
+[Android 프로젝트](../Android/README.md)를 Android Studio에서 연다. CLI는 Android/의 Gradle wrapper를 사용한다. 게임 코어와 자원을 같은 저장소에서 읽으며 Apple 프로젝트를 생성하거나 수정하지 않는다. [기기 검사](evidence/android-native-20261106.md).
