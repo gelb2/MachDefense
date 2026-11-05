@@ -45,3 +45,14 @@ MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지�
 - Sites 응답: succeeded. 기존 소유자 전용 공개 범위를 유지했다.
 - 최초 업로드는 용량 제한으로 거절됐다. 새 PNG 두 장을 무손실 WebP로 바꾸고 RGBA 픽셀 일치를 확인한 뒤 재게시했다. 기존 보고서·게임 자원은 삭제하지 않았다.
 - 최종 HTML 문구·이미지 연결을 확인했다. 이 게시 직전에는 Mac 창과 브라우저가 도구에 나타나지 않아 최종 브라우저 화면 검사는 하지 못했다.
+
+## 최근 갱신 — 2026-11-05 오른쪽 HUD·타이틀
+
+[오른쪽 HUD·타이틀 수정](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#hud-title-20261105)을 기존 페이지에 추가했다. iPhone·iPad 수정 전후 8장, develop 병합, 시뮬레이터·픽셀 대조 결과, 트러블슈팅과 한 줄 복원 코드 TODO를 담았다.
+
+- 제품 코드: `eff4ca3`, 브랜치 `fix/hud-title-presentation`. 원격 push 완료. develop의 모듈화·오디오·지원 통합은 `5bc233e`다. 화면 수정은 아직 develop/main에 병합하지 않았다.
+- 사이트 소스: `205ee31001a3e8ebb3ff12cc5cb3460efd1ba10e`.
+- Sites 버전: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_8dedd636ecb48191853a901ef9c2285d`.
+- 배포: `appgdep_6aec875dbf9c8191b8f563a01d1a003d`, 상태 `succeeded`. 소유자 전용 접근 유지.
+- 다른 세션이 추가한 HeavyMach 후속 보고를 병합해 보존했다. 첫 업로드는 256MiB 한도로 실패했고, 새 미리보기 WebP 8장의 압축률을 높여 재게시했다. 제품 자원과 원본 PNG 캡처는 변경하지 않았다.
+- 추가 앵커·이미지·다운로드 파일을 검사했다. Mac UI 도구에 창·브라우저가 나타나지 않아 브라우저 직접 확인은 하지 못했다. 게시 성공은 Sites 응답으로 확인했다.

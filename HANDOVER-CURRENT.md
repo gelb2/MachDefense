@@ -1,6 +1,6 @@
 # MachDefense 인계 — 2026-11-05
 
-현재 작업: `fix/hud-title-presentation`. 모듈화·오디오 수정·긴급지원은 `develop / 5bc233e`에 병합하고 원격에 반영했다. main은 변경하지 않았다. 오른쪽 HUD·타이틀 수정과 트러블슈팅 정리를 별도 브랜치에서 진행했다. C++ 3개, 5개 화면 조건 GPU·입력·전투 상태 검사, 정식 Release 시뮬레이터 빌드를 통과했다. [최신 화면·검사 기록](docs/evidence/hud-title-20261105.md). 이번 화면 수정본의 실기기 설치는 하지 않았다.
+현재 작업: `fix/hud-title-presentation`. 모듈화·오디오 수정·긴급지원은 `develop / 5bc233e`에 병합하고 원격에 반영했다. main은 변경하지 않았다. 오른쪽 HUD·타이틀 수정과 트러블슈팅 정리를 별도 브랜치에서 진행했다. C++ 3개, 5개 화면 조건 GPU·입력·전투 상태 검사, 정식 Release 시뮬레이터 빌드를 통과했다. [최신 화면·검사 기록](docs/evidence/hud-title-20261105.md). 이번 화면 수정본의 실기기 설치는 하지 않았다. 코드 `eff4ca3`을 원격 브랜치에 push했고 [통합 보고서](docs/report-site.md#최근-갱신--2026-11-05-오른쪽-hud타이틀) 게시도 성공했다.
 
 [한 줄 복원 코드 TODO](docs/usability-todo.md#md-save-code-01--한-줄-복원-코드)를 추가했다. 원본 슬롯을 사용하고, 화면·버튼·입력판에 iOS/Android/웹 UI를 쓰지 않는다. 화면 밖 적 반격은 보류한다. 이동 정체·생산 HUD 개수·원본 출력음 대조 등은 TODO에 남아 있다.
 
