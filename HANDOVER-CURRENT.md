@@ -1,3 +1,9 @@
+# 2026-11-06 iPhone HUD 상단 후속
+
+현재 수정은 `fix/iphone-hud-top`이며 develop `0835b5a`에서 분기했다. 원본 HUD의 상단 조각으로 iPhone의 노출 영역만 덮는다. iPad 화면을 바꾸지 않는 조건이다. 시뮬레이터 화면·터치 검사와 iPad HUD 픽셀 대조를 마쳤고 iPhone Release 정식 앱을 설치했다. 저장은 설치 전후 바이트가 같다. Device Hub의 게임 화면 입력이 진입으로 이어지지 않아 실기기 직접 생산·메뉴 검사는 남았다. [검사 기록](docs/evidence/iphone-hud-top-20261106.md), [남은 월드 표시 과제](docs/usability-todo.md#iphone-우측-hud-상단--2026-11-06).
+
+main의 v0.1은 `08b5380`이다. 별도 `chore/post-release-hygiene`의 타이틀·문서 변경과 원래 checkout의 미커밋 작업은 유지했다. 아래는 이전 단계 기록이다.
+
 # MachDefense 인계 — 2026-11-05
 
 # MachDefense 인계 — 2026-11-06
