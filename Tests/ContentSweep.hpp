@@ -1,6 +1,6 @@
 #pragma once
-#include "../Sources/Core/World.hpp"
-#include "../Sources/Core/Economy.hpp"
+#include "Core/Simulation/World.hpp"
+#include "Core/Simulation/Economy.hpp"
 #include <cmath>
 #include <cstdio>
 #include <functional>

@@ -1,4 +1,4 @@
-#include "../Sources/Core/Battle.hpp"
+#include "Core/Simulation/Battle.hpp"
 #include <cassert>
 #include <cmath>
 #include <filesystem>

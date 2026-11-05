@@ -1,4 +1,4 @@
-#include "Trail.hpp"
+#include "Core/Simulation/Trail.hpp"
 #include <cassert>
 #include <cmath>
 #include <iostream>

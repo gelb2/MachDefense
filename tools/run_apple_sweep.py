@@ -22,6 +22,7 @@ TESTS = [
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--simulator', required=True, help='Simulator UDID; never selects a physical device')
+    p.add_argument('--mode', choices=['full', 'quick', 'soak'], default='full', help='full: all short tests; quick: six sweeps; soak: ten-minute lifecycle test')
     a = p.parse_args()
     devices = json.loads(subprocess.check_output(['xcrun', 'simctl', 'list', 'devices', 'available', '-j']))
     if not any(d['udid'] == a.simulator for group in devices['devices'].values() for d in group):
@@ -35,20 +36,26 @@ def main():
                '-derivedDataPath', str(ROOT / '.local' / 'parity-derived'),
                '-resultBundlePath', str(output / 'result.xcresult'),
                'CODE_SIGNING_ALLOWED=NO', 'test']
-    command += [f'-only-testing:MachDefenseRendererTests/MenuRenderTests/{name}' for name in TESTS]
+    if a.mode == 'quick':
+        command += [f'-only-testing:MachDefenseRendererTests/MenuRenderTests/{name}' for name in TESTS]
+    elif a.mode == 'soak':
+        command += ['-only-testing:MachDefenseRendererTests/MenuRenderTests/testTenMinuteBattleLifecycleSoak']
+    else:
+        command += ['-skip-testing:MachDefenseRendererTests/MenuRenderTests/testTenMinuteBattleLifecycleSoak']
     start = time.monotonic()
-    print(f'Running {len(TESTS)} sweeps; evidence: {output}', flush=True)
+    print(f'Running {a.mode} tests; evidence: {output}', flush=True)
     with (output / 'xcodebuild.log').open('w') as log:
         result = subprocess.run(command, cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
     text = (output / 'xcodebuild.log').read_text(errors='replace')
-    passed = [name for name in TESTS if re.search(r"Test Case '-\[MenuRenderTests " + name + r"\]' passed", text)]
+    passed = re.findall(r"Test Case '-\[([^]]+)\]' passed", text)
+    failed = re.findall(r"Test Case '-\[([^]]+)\]' failed", text)
     report = dict(simulator=a.simulator, exit_code=result.returncode,
                   build_and_test_seconds=round(time.monotonic()-start, 3),
-                  expected=TESTS, passed=passed,
-                  counters=[line for line in text.splitlines() if re.search(r'MD_(PORT_PURCHASE|CAMPAIGN|CONTENT|UPGRADE|WEAPON|PERFORMANCE)_SWEEP ', line)])
+                  mode=a.mode, passed=passed, failed=failed,
+                  counters=[line for line in text.splitlines() if re.search(r'MD_(?:[A-Z_]+_SWEEP|SOAK_RESULT) ', line)])
     (output / 'summary.json').write_text(json.dumps(report, indent=2)+'\n')
     print(json.dumps(report, indent=2))
-    return 0 if result.returncode == 0 and len(passed) == len(TESTS) else 1
+    return 0 if result.returncode == 0 and bool(passed) and not failed else 1
 
 if __name__ == '__main__':
     sys.exit(main())

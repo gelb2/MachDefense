@@ -1,5 +1,5 @@
 #include "SessionTestSupport.hpp"
-#include "ValidationTools.hpp"
+#include "Core/Validation/ValidationTools.hpp"
 int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];Host h;GameSession ordinary(r,h,false);
     assert(!ordinary.applyValidationCommand(unsigned(ValidationCommand::newProfile)));assert(!ordinary.validationSave());assert(h.writes==0);
     GameSession s(r,h,true);auto command=[&](ValidationCommand c){assert(s.applyValidationCommand(unsigned(c)));};

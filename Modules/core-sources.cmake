@@ -1,0 +1,44 @@
+# Shared by desktop tests and future NDK/Emscripten builds.
+set(MACHDEFENSE_CORE_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Data/Chunk.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Data/DataTable.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Presentation/GameHUD.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Presentation/MachineSprites.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Presentation/Menu.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Presentation/SummaryDialog.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Presentation/Transition.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Presentation/UpgradeDialog.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Presentation/WorldPresentation.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Session/GameSession.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Session/SaveData.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Session/Settlement.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/BattleClock.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Bipod.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Combat.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/EmergencySupport.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Presentation/SupportDialog.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Economy.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Formation.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Loot.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/MachineModels.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Movement.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/PlayerParts.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Production.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Projectile.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Spawning.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/SpecialAttack.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Targeting.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Terrain.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Trail.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/WeaponController.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/World.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/WorldCombat.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/WorldEconomy.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/WorldEffects.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/WorldMovement.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/WorldTargeting.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/WorldTerrain.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Validation/ValidationPanel.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Validation/ValidationTools.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Validation/WorldValidation.cpp
+)

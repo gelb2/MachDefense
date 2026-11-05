@@ -3,10 +3,13 @@
 - (instancetype)initWithResourceRoot:(NSURL*)root;
 - (BOOL)prepareSounds;
 - (void)play:(NSString*)name gain:(float)gain pan:(float)pan;
+- (void)play:(NSString*)name gain:(float)gain x:(float)x y:(float)y;
 - (void)playMusic:(NSString*)name gain:(float)gain;
 - (void)stopMusic;
+- (float)effectPlaybackTime:(NSString*)name;
 - (void)stopEffects;
 - (void)setActive:(BOOL)active;
+@property(nonatomic,readonly) NSUInteger currentContextIdentity;
 @property(nonatomic,readonly) NSUInteger playCount;
 @property(nonatomic,readonly) NSUInteger loadedSounds;
 @property(nonatomic,readonly) NSString* lastError;

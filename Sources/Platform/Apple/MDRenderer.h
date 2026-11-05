@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
-#include "../../Core/RenderTypes.hpp"
+#include "Core/Contracts/RenderTypes.hpp"
 
 struct MDRenderMetrics {
     NSUInteger sprites=0,drawCalls=0,textureBinds=0,filterChanges=0,blendChanges=0,clipChanges=0;

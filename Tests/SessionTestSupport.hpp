@@ -1,6 +1,6 @@
 #pragma once
-#include "GameSession.hpp"
-#include "World.hpp"
+#include "Core/Session/GameSession.hpp"
+#include "Core/Simulation/World.hpp"
 #include <cassert>
 #include <filesystem>
 #include <fstream>

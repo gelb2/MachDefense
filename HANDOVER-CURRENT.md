@@ -1,16 +1,20 @@
-# MachDefense 인계 — 2026-11-04
+# MachDefense 인계 — 2026-11-05
 
-2026-11-05 최신 검증 계획: [모듈화 전후 치트앱 검사](docs/module-validation-plan.md). 원작 대조 수정과 기준점 검증을 먼저 하고 모듈 분리 전후를 비교한다. 기존 6개 선택 실행 외 렌더·음향·지형·표적·저장·장시간·일반 앱 검사를 포함한다. 이번 변경은 계획 작성이며 모듈화·새 검사는 아직 실행하지 않았다.
+현재 작업: `feat/emergency-resupply` (`95a865a`에서 분기). 승인된 반복 지원을 공통 Core와 원작 에셋 UI로 구현했다. 최신 결과·설치·남은 범위는 [긴급지원 기록](docs/evidence/emergency-resupply-20261105.md). 이후 아래 모듈화 인계는 기반 작업 기록이다. iPhone·iPad 정식·치트 설치, 양쪽 치트 자동 검사와 iPad 직접 수령을 마쳤다. iPhone 정식 앱은 사용 중인 최신 진행도를 보존했다. 지원 창 프레임 p99 16.67ms·25ms 초과0회. 보고서 게시 성공. 남은 직접 검사와 난이도 비교는 실행 기록을 따른다. develop/main에는 병합하지 않았다.
 
-위치: `/Users/sokol/Git/ProjectGameDev-Hub/MachDefense`. 독립 비공개 저장소 `gelb2/MachDefense`다. 시작 문서는 AGENTS.md와 docs/canonical.md이며 현재 결과는 docs/current-status.md에 있다.
+최신 후속: 사용자가 복귀 후 효과음 소실을 발견했다. OpenAL Soft 장치 pause/resume 누락을 iPad에서 재현·수정했고 샘플 진행을 포함한 오디오·전투 검사 6개가 통과했다. [효과음 복귀 수정](docs/evidence/effects-resume-20261105.md).
 
-현재 브랜치는 `feat/source-reimplementation`이다. 위메이드 1.0.3 기준 C++ 재개발 앱의 메뉴·생산·전투·저장 연결을 검증 중이다. `docs/current-status.md`와 `docs/evidence/source-session-validation-20261104.md`를 먼저 읽는다. 현재 작업 순서는 [TODO 맨 위](docs/usability-todo.md#현재-작업-순서--2026-11-04-ipad-수정본-기준)를 따른다. 아래 포팅판 기록은 이전 단계다. Mesabloo 포크 기반 개발이 아니다.
+현재 브랜치는 `refactor/shared-core-audio`다. 기존 재개발·계획을 `0243083`에 보존하고 로컬 develop의 `8109ae6`에서 분기했다. 원본 오디오·텍스처 대조 수정은 `f623eba`에 커밋했다. 이후 공용 Core·Audio 분리와 검사 결과를 `193ed2f`에 커밋했다. 최신 결과는 [모듈화 실행 기록](docs/evidence/module-work-20261105.md), 남은 과제는 [TODO](docs/usability-todo.md)를 따른다. 원격 push·main 병합·제품 배포는 하지 않았다. [통합 보고서](docs/report-site.md#최근-갱신--2026-11-05-모듈-구현검사)는 게시했다.
 
-IPA 19개는 저장소 밖 원본 보관소에 있다. 파일을 저장소·원격·보고 사이트에 복사하지 않는다. `.local/originals.json`은 보관 경로만 담고 Git 제외다. 실제 스킬은 `.agents/skills`, HeavyMach 1 원본은 `docs/reference/heavymach1`에 있다.
+2026-11-05 06:08 iPhone 정식 앱도 최신 모듈·오디오 수정본으로 빌드·설치했다. 기존 Stage 17·Lv.65 저장 불러오기, 전투·생산·메뉴 재개를 확인했다. 검사 후 저장을 원래 바이트로 복원하고 앱을 종료했다. [기기 검사 기록](docs/evidence/module-ipad-device-20261105.md).
 
-새 clone에서는 tools/setup.py로 훅을 설치한다. docs/repository-management.md의 브랜치·반출 규칙을 따른다. HeavyMach 1·Unity·기존 hm-defense와 사용자 저장을 보존한다. 자동 새 세션 전환이나 별도 인계 승인을 요구하지 않는다.
+Core는 Contracts·Data·Simulation·Session·Presentation·Validation로 나뉘고 효과음은 Audio 모듈을 사용한다. 게임 갱신·난수 순서를 보존했다. 원본 IPA와 실행 바이너리는 저장소 밖에서 분석에만 사용한다. 새 checkout에 들어가는 소스와 Resources만으로 일반 앱 Release 빌드를 확인했다.
 
-HeavyMach 1·2·MachDefense 모두 광고를 표시하거나 요청하지 않는다. 호환판에도 적용한다. 원본 IPA는 수정하지 않고 광고 API는 로컬 실행기에서 비표시 처리한다.
+C++ 34개와 분리 전후 160조건·144,000틱 비교, iPhone 시뮬레이터 26개 검사는 통과했다. iPad 25개와 재실행 1개, 10분 전투·20회 월드 시작, 일반/치트 직접 조작·저장 재실행도 확인했다. 실제 iPad 최신 일반·치트 설치, 자동검사 27개, 10분 전투, 직접 버튼·저장·복귀 검사도 마쳤다. [실기기 결과](docs/evidence/module-ipad-device-20261105.md). 원작 출력음 녹음 대조는 남아 있다. 오디오 세션 경고 2건은 후속 수정으로 iPad 검사 6개·실행 경고 0개를 확인했다. [수정 결과](docs/evidence/audio-session-20261105.md). 테스트 성공을 기존 길찾기·화면 밖 표적·HUD 그림 과제의 해결로 해석하지 않는다. 해당 문제는 TODO에 남아 있다.
+
+HeavyMach 1 저장소는 읽기만 했다. 사용자의 iPhone을 조작하지 않는다. 일반/치트 저장과 원본·실패 로그를 보존한다. 원본·디컴파일 출력은 Git·보고 사이트에 넣지 않는다. 현행 정책은 AGENTS.md·docs/canonical.md와 문서 연결표를 따른다.
+
+아래는 이전 단계의 기록이다. 현재 브랜치·결과는 위 문서와 최신 실행 기록을 우선한다.
 
 ## 이전 단계 — 호환판 구현·검사 인계
 
@@ -207,3 +211,8 @@ MD-AUDIO-BACKEND-01을 모듈화 단계에 포함한다. 원본 IPA는 Apple Ope
 보고서 게시 완료: Sites 판본 159, 배포 `appgdep_6aeb7a6e77e081918c6035d55590ac21` succeeded. [게시 기록](docs/report-site.md). 로컬 화면은 확인했고 운영 Chrome은 네트워크 오류로 직접 확인이 남았다.
 
 긴급지원 조달은 MD-RESUPPLY-01로 등록했다. 기존 인앱결제 버튼을 대체하고 30·45·60초 활성화, 크레딧/셀/혼합 지급, J·B·P의 영문 격려문, 원작 글꼴·타이핑·스킬 글로우를 사용한다. 규칙·수령 상태·중복 지급 방지는 공통 C++에 둔다. 게임 시간과 기존 자원 갱신을 사용하고 플랫폼별 UI·타이머·지급 코드를 만들지 않는다. 지급량·반복 수령·재진입 정책은 미확정이다. 구현은 아직 시작하지 않았다.
+
+
+## 2026-11-05 생산 HUD·Base Upgrade 후속
+
+생산 HUD 7개 제한 원본 대조·세로 스크롤·순서 편집 연구를 MD-PRODUCTION-HUD-01로 등록했다. Base Upgrade 6종의 단계별 비율과 원본 자료형·주기는 [증거](docs/evidence/base-upgrade-rates-20261105.md)에 정리했다. 현재 강화 표·연산에서 차이를 발견하지 못했고, 10단계 × 61분 가속 검사에서 생산 감소가 없었다. 실제 포팅판 영상 대조는 남았다. 게임 코드는 이번 조사에서 변경하지 않았다.

@@ -1,4 +1,4 @@
-#include "GameHUD.hpp"
+#include "Core/Presentation/GameHUD.hpp"
 #include <algorithm>
 #include <cassert>
 #include <cmath>

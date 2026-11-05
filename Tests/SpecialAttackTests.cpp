@@ -1,4 +1,4 @@
-#include "SpecialAttack.hpp"
+#include "Core/Simulation/SpecialAttack.hpp"
 #include <cassert>
 #include <cmath>
 #include <iostream>

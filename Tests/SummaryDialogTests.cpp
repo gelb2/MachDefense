@@ -1,4 +1,4 @@
-#include "SummaryDialog.hpp"
+#include "Core/Presentation/SummaryDialog.hpp"
 #include <cassert>
 #include <filesystem>
 #include <fstream>

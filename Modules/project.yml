@@ -4,7 +4,9 @@ options:
     iOS: '15.0'
 settings:
   base:
+    ARCHS: arm64
     CLANG_CXX_LANGUAGE_STANDARD: c++20
+    HEADER_SEARCH_PATHS: [$(inherited), $(SRCROOT)/../Sources]
     CLANG_ENABLE_OBJC_ARC: 'YES'
     SUPPORTS_MACCATALYST: 'NO'
     GENERATE_INFOPLIST_FILE: 'YES'
@@ -18,6 +20,15 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.gelb2.machdefense.core
+        SKIP_INSTALL: 'YES'
+  MachDefenseAudio:
+    type: library.static
+    platform: iOS
+    sources:
+      - path: ../Sources/Audio
+    settings:
+      base:
+        HEADER_SEARCH_PATHS: [$(inherited), $(SRCROOT)/../Sources, $(SRCROOT)/ThirdParty/openal-soft/include]
         SKIP_INSTALL: 'YES'
   MachDefenseAssets:
     type: bundle

@@ -1,5 +1,7 @@
 # MachDefense 공용 모듈 진단과 플랫폼 확장 계획
 
+이 문서는 분리 전 진단이다. 실제 변경과 검사 결과는 [모듈화 작업 기록](evidence/module-work-20261105.md)에 있다.
+
 2026-11-05 · 조사 기준: `feat/source-reimplementation`, `eb8b334cc9d5f69784175abe0e782a586b436771`. 이후 미커밋 변경은 문서다. 이번 작업은 코드·빌드 구성·HeavyMach 이력의 정적 조사이며, 게임 코드나 설치 앱을 변경하지 않았다.
 
 ## 1. 판단과 최종 목표
@@ -216,64 +218,64 @@ Tauri는 웹 게임의 정적 산출물을 포장할 수 있다. 같은 웹 코�
 
 | 현재 파일 | 줄 수 | 1차 폴더 | 현재 내부 헤더 의존성 |
 |---|---:|---|---|
-| [Battle.cpp](../Sources/Core/Battle.cpp) | 378 | `Simulation` | `Battle.hpp` |
-| [Battle.hpp](../Sources/Core/Battle.hpp) | 165 | `Simulation` | `Chunk.hpp`, `DarwinRandom.hpp`, `DataTable.hpp`, `RenderTypes.hpp` |
-| [Bipod.cpp](../Sources/Core/Bipod.cpp) | 136 | `Simulation` | `Bipod.hpp` |
-| [Bipod.hpp](../Sources/Core/Bipod.hpp) | 45 | `Simulation` | `Battle.hpp` |
-| [Button.hpp](../Sources/Core/Button.hpp) | 36 | `Presentation` | `RenderTypes.hpp` |
-| [Chunk.cpp](../Sources/Core/Chunk.cpp) | 39 | `Data` | `Chunk.hpp` |
-| [Chunk.hpp](../Sources/Core/Chunk.hpp) | 21 | `Data` | 없음 |
-| [Combat.cpp](../Sources/Core/Combat.cpp) | 49 | `Simulation` | `Combat.hpp` |
-| [Combat.hpp](../Sources/Core/Combat.hpp) | 30 | `Simulation` | `DataTable.hpp` |
-| [DarwinRandom.hpp](../Sources/Core/DarwinRandom.hpp) | 31 | `Contracts` | 없음 |
-| [DataTable.cpp](../Sources/Core/DataTable.cpp) | 105 | `Data` | `DataTable.hpp` |
-| [DataTable.hpp](../Sources/Core/DataTable.hpp) | 33 | `Data` | 없음 |
-| [Economy.cpp](../Sources/Core/Economy.cpp) | 58 | `Simulation` | `Economy.hpp` |
-| [Economy.hpp](../Sources/Core/Economy.hpp) | 33 | `Simulation` | `DataTable.hpp`, `SaveData.hpp` |
-| [Formation.cpp](../Sources/Core/Formation.cpp) | 8 | `Simulation` | `Formation.hpp` |
-| [Formation.hpp](../Sources/Core/Formation.hpp) | 9 | `Simulation` | `RenderTypes.hpp` |
-| [FrameLayout.hpp](../Sources/Core/FrameLayout.hpp) | 25 | `Contracts` | `RenderTypes.hpp` |
-| [Game.hpp](../Sources/Core/Game.hpp) | 46 | `Contracts` | `RenderTypes.hpp` |
-| [GameHUD.cpp](../Sources/Core/GameHUD.cpp) | 270 | `Presentation` | `GameHUD.hpp` |
-| [GameHUD.hpp](../Sources/Core/GameHUD.hpp) | 80 | `Presentation` | `Button.hpp`, `Game.hpp`, `SpriteFont.hpp`, `FrameLayout.hpp` |
-| [GameSession.cpp](../Sources/Core/GameSession.cpp) | 330 | `Session` | `GameSession.hpp`, `Help.hpp`, `Menu.hpp`, `SummaryDialog.hpp`, `Transition.hpp`, `UpgradeDialog.hpp`, `World.hpp`, `ValidationTools.hpp` |
-| [GameSession.hpp](../Sources/Core/GameSession.hpp) | 22 | `Session` | `Game.hpp`, `SaveData.hpp` |
-| [Help.hpp](../Sources/Core/Help.hpp) | 29 | `Presentation` | `Game.hpp` |
-| [Loot.cpp](../Sources/Core/Loot.cpp) | 89 | `Simulation` | `Loot.hpp` |
-| [Loot.hpp](../Sources/Core/Loot.hpp) | 40 | `Simulation` | `DarwinRandom.hpp`, `DataTable.hpp`, `RenderTypes.hpp` |
-| [Menu.cpp](../Sources/Core/Menu.cpp) | 289 | `Presentation` | `Menu.hpp` |
-| [Menu.hpp](../Sources/Core/Menu.hpp) | 67 | `Presentation` | `Game.hpp`, `SaveData.hpp`, `SpriteFont.hpp`, `Button.hpp`, `DarwinRandom.hpp`, `FrameLayout.hpp` |
-| [PlayerParts.cpp](../Sources/Core/PlayerParts.cpp) | 39 | `Simulation` | `PlayerParts.hpp` |
-| [PlayerParts.hpp](../Sources/Core/PlayerParts.hpp) | 16 | `Simulation` | `Battle.hpp`, `Economy.hpp`, `Production.hpp` |
-| [Production.cpp](../Sources/Core/Production.cpp) | 50 | `Simulation` | `Production.hpp` |
-| [Production.hpp](../Sources/Core/Production.hpp) | 40 | `Simulation` | `Battle.hpp` |
-| [Projectile.cpp](../Sources/Core/Projectile.cpp) | 226 | `Simulation` | `Projectile.hpp` |
-| [Projectile.hpp](../Sources/Core/Projectile.hpp) | 98 | `Simulation` | `Combat.hpp`, `DarwinRandom.hpp`, `RenderTypes.hpp` |
-| [RenderTypes.hpp](../Sources/Core/RenderTypes.hpp) | 41 | `Contracts` | 없음 |
-| [SaveData.cpp](../Sources/Core/SaveData.cpp) | 158 | `Session` | `SaveData.hpp`, `DarwinRandom.hpp` |
-| [SaveData.hpp](../Sources/Core/SaveData.hpp) | 48 | `Session` | 없음 |
-| [Settlement.cpp](../Sources/Core/Settlement.cpp) | 77 | `Session` | `Settlement.hpp` |
-| [Settlement.hpp](../Sources/Core/Settlement.hpp) | 23 | `Session` | `Production.hpp`, `SaveData.hpp` |
-| [SpecialAttack.cpp](../Sources/Core/SpecialAttack.cpp) | 76 | `Simulation` | `SpecialAttack.hpp` |
-| [SpecialAttack.hpp](../Sources/Core/SpecialAttack.hpp) | 31 | `Simulation` | `Projectile.hpp` |
-| [SpriteFont.hpp](../Sources/Core/SpriteFont.hpp) | 42 | `Presentation` | `DataTable.hpp`, `RenderTypes.hpp` |
-| [SummaryDialog.cpp](../Sources/Core/SummaryDialog.cpp) | 51 | `Presentation` | `SummaryDialog.hpp` |
-| [SummaryDialog.hpp](../Sources/Core/SummaryDialog.hpp) | 28 | `Presentation` | `GameHUD.hpp`, `Settlement.hpp` |
-| [Trail.cpp](../Sources/Core/Trail.cpp) | 76 | `Simulation` | `Trail.hpp` |
-| [Trail.hpp](../Sources/Core/Trail.hpp) | 27 | `Simulation` | `Combat.hpp`, `DarwinRandom.hpp`, `RenderTypes.hpp` |
-| [Transition.cpp](../Sources/Core/Transition.cpp) | 70 | `Presentation` | `Transition.hpp` |
-| [Transition.hpp](../Sources/Core/Transition.hpp) | 32 | `Presentation` | `Game.hpp` |
-| [UpgradeDialog.cpp](../Sources/Core/UpgradeDialog.cpp) | 142 | `Presentation` | `UpgradeDialog.hpp` |
-| [UpgradeDialog.hpp](../Sources/Core/UpgradeDialog.hpp) | 52 | `Presentation` | `GameHUD.hpp` |
-| [ValidationPanel.cpp](../Sources/Core/ValidationPanel.cpp) | 91 | `Validation` | `ValidationPanel.hpp` |
-| [ValidationPanel.hpp](../Sources/Core/ValidationPanel.hpp) | 44 | `Validation` | `Button.hpp`, `Game.hpp`, `SpriteFont.hpp` |
-| [ValidationTools.cpp](../Sources/Core/ValidationTools.cpp) | 118 | `Validation` | `ValidationTools.hpp`, `World.hpp` |
-| [ValidationTools.hpp](../Sources/Core/ValidationTools.hpp) | 35 | `Validation` | `Game.hpp`, `Economy.hpp`, `Production.hpp`, `ValidationPanel.hpp` |
-| [WeaponController.cpp](../Sources/Core/WeaponController.cpp) | 69 | `Simulation` | `WeaponController.hpp` |
-| [WeaponController.hpp](../Sources/Core/WeaponController.hpp) | 48 | `Simulation` | `Combat.hpp`, `DarwinRandom.hpp`, `RenderTypes.hpp` |
-| [World.cpp](../Sources/Core/World.cpp) | 565 | `Simulation` | `World.hpp`, `Formation.hpp` |
-| [World.hpp](../Sources/Core/World.hpp) | 144 | `Simulation` | `Bipod.hpp`, `Game.hpp`, `PlayerParts.hpp`, `Loot.hpp`, `Projectile.hpp`, `SpecialAttack.hpp`, `Trail.hpp`, `WeaponController.hpp` |
-| [WorldEffects.cpp](../Sources/Core/WorldEffects.cpp) | 41 | `Simulation` | `World.hpp` |
+| [Battle.cpp](../Sources/Core/Simulation/Spawning.cpp) | 378 | `Simulation` | `Battle.hpp` |
+| [Battle.hpp](../Sources/Core/Simulation/Battle.hpp) | 165 | `Simulation` | `Chunk.hpp`, `DarwinRandom.hpp`, `DataTable.hpp`, `RenderTypes.hpp` |
+| [Bipod.cpp](../Sources/Core/Simulation/Bipod.cpp) | 136 | `Simulation` | `Bipod.hpp` |
+| [Bipod.hpp](../Sources/Core/Simulation/Bipod.hpp) | 45 | `Simulation` | `Battle.hpp` |
+| [Button.hpp](../Sources/Core/Presentation/Button.hpp) | 36 | `Presentation` | `RenderTypes.hpp` |
+| [Chunk.cpp](../Sources/Core/Data/Chunk.cpp) | 39 | `Data` | `Chunk.hpp` |
+| [Chunk.hpp](../Sources/Core/Data/Chunk.hpp) | 21 | `Data` | 없음 |
+| [Combat.cpp](../Sources/Core/Simulation/Combat.cpp) | 49 | `Simulation` | `Combat.hpp` |
+| [Combat.hpp](../Sources/Core/Simulation/Combat.hpp) | 30 | `Simulation` | `DataTable.hpp` |
+| [DarwinRandom.hpp](../Sources/Core/Contracts/DarwinRandom.hpp) | 31 | `Contracts` | 없음 |
+| [DataTable.cpp](../Sources/Core/Data/DataTable.cpp) | 105 | `Data` | `DataTable.hpp` |
+| [DataTable.hpp](../Sources/Core/Data/DataTable.hpp) | 33 | `Data` | 없음 |
+| [Economy.cpp](../Sources/Core/Simulation/Economy.cpp) | 58 | `Simulation` | `Economy.hpp` |
+| [Economy.hpp](../Sources/Core/Simulation/Economy.hpp) | 33 | `Simulation` | `DataTable.hpp`, `SaveData.hpp` |
+| [Formation.cpp](../Sources/Core/Simulation/Formation.cpp) | 8 | `Simulation` | `Formation.hpp` |
+| [Formation.hpp](../Sources/Core/Simulation/Formation.hpp) | 9 | `Simulation` | `RenderTypes.hpp` |
+| [FrameLayout.hpp](../Sources/Core/Contracts/FrameLayout.hpp) | 25 | `Contracts` | `RenderTypes.hpp` |
+| [Game.hpp](../Sources/Core/Contracts/Game.hpp) | 46 | `Contracts` | `RenderTypes.hpp` |
+| [GameHUD.cpp](../Sources/Core/Presentation/GameHUD.cpp) | 270 | `Presentation` | `GameHUD.hpp` |
+| [GameHUD.hpp](../Sources/Core/Presentation/GameHUD.hpp) | 80 | `Presentation` | `Button.hpp`, `Game.hpp`, `SpriteFont.hpp`, `FrameLayout.hpp` |
+| [GameSession.cpp](../Sources/Core/Session/GameSession.cpp) | 330 | `Session` | `GameSession.hpp`, `Help.hpp`, `Menu.hpp`, `SummaryDialog.hpp`, `Transition.hpp`, `UpgradeDialog.hpp`, `World.hpp`, `ValidationTools.hpp` |
+| [GameSession.hpp](../Sources/Core/Session/GameSession.hpp) | 22 | `Session` | `Game.hpp`, `SaveData.hpp` |
+| [Help.hpp](../Sources/Core/Presentation/Help.hpp) | 29 | `Presentation` | `Game.hpp` |
+| [Loot.cpp](../Sources/Core/Simulation/Loot.cpp) | 89 | `Simulation` | `Loot.hpp` |
+| [Loot.hpp](../Sources/Core/Simulation/Loot.hpp) | 40 | `Simulation` | `DarwinRandom.hpp`, `DataTable.hpp`, `RenderTypes.hpp` |
+| [Menu.cpp](../Sources/Core/Presentation/Menu.cpp) | 289 | `Presentation` | `Menu.hpp` |
+| [Menu.hpp](../Sources/Core/Presentation/Menu.hpp) | 67 | `Presentation` | `Game.hpp`, `SaveData.hpp`, `SpriteFont.hpp`, `Button.hpp`, `DarwinRandom.hpp`, `FrameLayout.hpp` |
+| [PlayerParts.cpp](../Sources/Core/Simulation/PlayerParts.cpp) | 39 | `Simulation` | `PlayerParts.hpp` |
+| [PlayerParts.hpp](../Sources/Core/Simulation/PlayerParts.hpp) | 16 | `Simulation` | `Battle.hpp`, `Economy.hpp`, `Production.hpp` |
+| [Production.cpp](../Sources/Core/Simulation/Production.cpp) | 50 | `Simulation` | `Production.hpp` |
+| [Production.hpp](../Sources/Core/Simulation/Production.hpp) | 40 | `Simulation` | `Battle.hpp` |
+| [Projectile.cpp](../Sources/Core/Simulation/Projectile.cpp) | 226 | `Simulation` | `Projectile.hpp` |
+| [Projectile.hpp](../Sources/Core/Simulation/Projectile.hpp) | 98 | `Simulation` | `Combat.hpp`, `DarwinRandom.hpp`, `RenderTypes.hpp` |
+| [RenderTypes.hpp](../Sources/Core/Contracts/RenderTypes.hpp) | 41 | `Contracts` | 없음 |
+| [SaveData.cpp](../Sources/Core/Session/SaveData.cpp) | 158 | `Session` | `SaveData.hpp`, `DarwinRandom.hpp` |
+| [SaveData.hpp](../Sources/Core/Session/SaveData.hpp) | 48 | `Session` | 없음 |
+| [Settlement.cpp](../Sources/Core/Session/Settlement.cpp) | 77 | `Session` | `Settlement.hpp` |
+| [Settlement.hpp](../Sources/Core/Session/Settlement.hpp) | 23 | `Session` | `Production.hpp`, `SaveData.hpp` |
+| [SpecialAttack.cpp](../Sources/Core/Simulation/SpecialAttack.cpp) | 76 | `Simulation` | `SpecialAttack.hpp` |
+| [SpecialAttack.hpp](../Sources/Core/Simulation/SpecialAttack.hpp) | 31 | `Simulation` | `Projectile.hpp` |
+| [SpriteFont.hpp](../Sources/Core/Presentation/SpriteFont.hpp) | 42 | `Presentation` | `DataTable.hpp`, `RenderTypes.hpp` |
+| [SummaryDialog.cpp](../Sources/Core/Presentation/SummaryDialog.cpp) | 51 | `Presentation` | `SummaryDialog.hpp` |
+| [SummaryDialog.hpp](../Sources/Core/Presentation/SummaryDialog.hpp) | 28 | `Presentation` | `GameHUD.hpp`, `Settlement.hpp` |
+| [Trail.cpp](../Sources/Core/Simulation/Trail.cpp) | 76 | `Simulation` | `Trail.hpp` |
+| [Trail.hpp](../Sources/Core/Simulation/Trail.hpp) | 27 | `Simulation` | `Combat.hpp`, `DarwinRandom.hpp`, `RenderTypes.hpp` |
+| [Transition.cpp](../Sources/Core/Presentation/Transition.cpp) | 70 | `Presentation` | `Transition.hpp` |
+| [Transition.hpp](../Sources/Core/Presentation/Transition.hpp) | 32 | `Presentation` | `Game.hpp` |
+| [UpgradeDialog.cpp](../Sources/Core/Presentation/UpgradeDialog.cpp) | 142 | `Presentation` | `UpgradeDialog.hpp` |
+| [UpgradeDialog.hpp](../Sources/Core/Presentation/UpgradeDialog.hpp) | 52 | `Presentation` | `GameHUD.hpp` |
+| [ValidationPanel.cpp](../Sources/Core/Validation/ValidationPanel.cpp) | 91 | `Validation` | `ValidationPanel.hpp` |
+| [ValidationPanel.hpp](../Sources/Core/Validation/ValidationPanel.hpp) | 44 | `Validation` | `Button.hpp`, `Game.hpp`, `SpriteFont.hpp` |
+| [ValidationTools.cpp](../Sources/Core/Validation/ValidationTools.cpp) | 118 | `Validation` | `ValidationTools.hpp`, `World.hpp` |
+| [ValidationTools.hpp](../Sources/Core/Validation/ValidationTools.hpp) | 35 | `Validation` | `Game.hpp`, `Economy.hpp`, `Production.hpp`, `ValidationPanel.hpp` |
+| [WeaponController.cpp](../Sources/Core/Simulation/WeaponController.cpp) | 69 | `Simulation` | `WeaponController.hpp` |
+| [WeaponController.hpp](../Sources/Core/Simulation/WeaponController.hpp) | 48 | `Simulation` | `Combat.hpp`, `DarwinRandom.hpp`, `RenderTypes.hpp` |
+| [World.cpp](../Sources/Core/Simulation/World.cpp) | 565 | `Simulation` | `World.hpp`, `Formation.hpp` |
+| [World.hpp](../Sources/Core/Simulation/World.hpp) | 144 | `Simulation` | `Bipod.hpp`, `Game.hpp`, `PlayerParts.hpp`, `Loot.hpp`, `Projectile.hpp`, `SpecialAttack.hpp`, `Trail.hpp`, `WeaponController.hpp` |
+| [WorldEffects.cpp](../Sources/Core/Simulation/WorldEffects.cpp) | 41 | `Simulation` | `World.hpp` |
 
 ## 13. 후속 기능: 긴급지원 조달의 모듈 배치
 
@@ -294,3 +296,5 @@ Tauri는 웹 게임의 정적 산출물을 포장할 수 있다. 같은 웹 코�
 지급량, 수령 후 재활성화 여부, 재도전·저장 후 재진입 시 타이머/수령 상태의 수명은 아직 확정하지 않았다. 시간 계산은 일시정지 때 멈추는 기존 전투 시간을 사용하는 안을 우선한다. 신규 상태가 저장에 필요해지면 기존 저장 슬롯의 빈 바이트에 임의로 끼워 넣지 않고 별도 확장 포맷과 복구 절차를 설계한다.
 
 검사는 30·45·60초 직전/도달/직후, 지원창을 닫고 다시 열기, 빠른 중복 터치, 여러 항목 수령, 크레딧·셀 변화, 글로우 켜짐/꺼짐, 정지·복귀·재진입을 포함한다. 지원 기능 전후 같은 동시 사격 조건의 프레임 시간·메모리 할당·파일 접근을 비교한다. 타이머 갱신만으로 게임 저장 쓰기가 발생하지 않아야 한다.
+
+2026-11-05 사용자 정정: 긴급지원은30·45·60초마다 반복 제공한다. 미션별1회 지급 제한을 두지 않는다. [현행 반복 지원 계획](emergency-resupply-plan.md)의 금액·수령·저장 정책이 위 미확정안을 구체화한다.

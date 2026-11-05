@@ -1,4 +1,4 @@
-#include "../Sources/Core/WeaponController.hpp"
+#include "Core/Simulation/WeaponController.hpp"
 #include <cassert>
 #include <cmath>
 #include <iostream>

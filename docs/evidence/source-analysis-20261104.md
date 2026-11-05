@@ -16,7 +16,7 @@
 
 | 원본 메서드 | 확인한 규칙 | 새 코드 |
 |---|---|---|
-| `QChunk::loadChunkWithFp:` 0x45c04 | size/type/dataSize, 데이터, 자식 수, 자식의 재귀 구조. 선언 size는 탐색에 쓰지 않는다. | [Chunk.cpp](../../Sources/Core/Chunk.cpp) |
+| `QChunk::loadChunkWithFp:` 0x45c04 | size/type/dataSize, 데이터, 자식 수, 자식의 재귀 구조. 선언 size는 탐색에 쓰지 않는다. | [Chunk.cpp](../../Sources/Core/Data/Chunk.cpp) |
 | `GlobalInfo::readPartsChunk:Pos:` 0x1bdf8 | 이름 24바이트, type/tileCount/socketCount 각 1바이트. 소켓은 offset 27부터 float 쌍. | `BattleModels::parse` |
 | `GobHvMach::decodeChunk:Data:Pos:` 0x14984 | 타입 4의 이름 24바이트 뒤 parentSocket/zOrder 각 1바이트. 자식 파츠 재귀 조립. | `BattleModels::parse` |
 | `PartsInfo::setSocket:X:Y:` 0x1fab0 | 소켓 좌표를 정수로 절삭한 뒤 폰은 0.5배, 패드는 1배. | `PartDefinition::socket` |
@@ -33,7 +33,7 @@
 | `GobHvM_Enemy::processAI_Attack` 0xdb20 | 살아 있는 아군 중 사거리 안의 가장 가까운 대상 선택. 동일 거리면 먼저 찾은 대상을 유지. | `nearestLivingTarget` |
 | `GobHvMach::onDamage:From:` 0x13fd0 | HP에서 피해량을 빼고 0 이하를 0으로 처리. 사망 연출과 보상은 별도 절차. | `hpAfterDamage` |
 
-추가로 [WeaponController.cpp](../../Sources/Core/WeaponController.cpp)에 원본 `PartsController_Weapon::tick`(0x211a8), `PartsController_WeaponAI::tick`(0x22b9c), `setReload`(0x22adc)의 재장전·연사·사거리·조준·반동 계산을 옮겼다. `shotDelay > 0`이면 한 틱에 최대 한 발을 처리하고, 0이면 남은 묶음을 같은 총구와 조준점으로 발사한다. 총과 저격총은 표적에 직접 피해를 주는 분기로 표시하고 나머지는 탄환 생성에 전달한다. World에 총구 섬광, 직격선, 탄피 생성도 연결했다.
+추가로 [WeaponController.cpp](../../Sources/Core/Simulation/WeaponController.cpp)에 원본 `PartsController_Weapon::tick`(0x211a8), `PartsController_WeaponAI::tick`(0x22b9c), `setReload`(0x22adc)의 재장전·연사·사거리·조준·반동 계산을 옮겼다. `shotDelay > 0`이면 한 틱에 최대 한 발을 처리하고, 0이면 남은 묶음을 같은 총구와 조준점으로 발사한다. 총과 저격총은 표적에 직접 피해를 주는 분기로 표시하고 나머지는 탄환 생성에 전달한다. World에 총구 섬광, 직격선, 탄피 생성도 연결했다.
 
 `StageSpawnPlan`은 80개 ESpawn 표의 시간 지정·난이도 가중 배치와 MapInfo의 고정 배치·충돌 다각형을 읽는다. `appendGeneratedWaves`는 `GobWorld::openMap:`(0x18d88)의 일곱 차례 추가 웨이브를 HP 예산으로 생성한다. `EnemyDirector`는 `processEnemyGen`(0x1596c)의 두 위상·난이도 증가·가중 선택·재생성 간격을 처리한다. 고정 배치 유닛을 먼저 생성한 뒤 추가 웨이브를 계산해야 원본의 공유 난수 소비 순서를 유지한다.
 
@@ -43,7 +43,7 @@
 
 ## 탄환과 동적 파츠
 
-[Projectile.cpp](../../Sources/Core/Projectile.cpp)는 `GobBullet::setFire`(0x8bbc), `tick`(0x9558), `setCollide`(0xa568), `set2ndDamage`(0x9f80), `setSpDamage`(0x9da4)를 옮겼다.
+[Projectile.cpp](../../Sources/Core/Simulation/Projectile.cpp)는 `GobBullet::setFire`(0x8bbc), `tick`(0x9558), `setCollide`(0xa568), `set2ndDamage`(0x9f80), `setSpDamage`(0x9da4)를 옮겼다.
 
 - 최초 탄속은 원본 속도의 ±10% 난수다. 미사일은 여기서 0.05배를 가속 벡터로 쓰며 틱마다 속도에 더한다.
 - 일반 이동은 속도를 0.0166으로 나눈 값을 위치에 더한다. 추적 미사일의 가속 방향은 15, 속도 방향은 20으로 나눠 목표 방향에 접근한다.
@@ -82,9 +82,9 @@
 
 `ParticlePool`은 원본처럼 256개다. 초기화 때 입자마다 난수 한 개를 소비하고, 재할당 때도 한 개를 소비한다. 풀이 가득 차면 추가 난수를 소비하지 않는다. `QobParticle::tick`은 수명이 있는 입자의 크기 변화를 한 틱에 두 번 적용한다. 이 동작과 수명 없는 입자의 별도 분기를 그대로 옮겼다.
 
-[Loot.cpp](../../Sources/Core/Loot.cpp)는 원본 `GobHvM_Enemy::onCrash`, `GobItem`의 생성·수집·소멸 절차를 구현한다. 적 파괴 즉시 크레딧을 더하지 않는다. 원본 Coin 값과 확률로 광물·크레딧 아이템을 만들고, 아이템을 수집할 때 셀과 크레딧을 반영한다. 수집 대상은 범위 안에서 처음 찾은 살아 있는 type 0 아군이다. 탐색 범위는 0.5초마다 커지며, 180초가 지나도 수집 대상을 찾지 못하면 사라진다. 광물은 셀 용량까지 채운다. 아이콘과 빛 효과도 원본 시트·타일을 사용한다.
+[Loot.cpp](../../Sources/Core/Simulation/Loot.cpp)는 원본 `GobHvM_Enemy::onCrash`, `GobItem`의 생성·수집·소멸 절차를 구현한다. 적 파괴 즉시 크레딧을 더하지 않는다. 원본 Coin 값과 확률로 광물·크레딧 아이템을 만들고, 아이템을 수집할 때 셀과 크레딧을 반영한다. 수집 대상은 범위 안에서 처음 찾은 살아 있는 type 0 아군이다. 탐색 범위는 0.5초마다 커지며, 180초가 지나도 수집 대상을 찾지 못하면 사라진다. 광물은 셀 용량까지 채운다. 아이콘과 빛 효과도 원본 시트·타일을 사용한다.
 
-[SpecialAttack.cpp](../../Sources/Core/SpecialAttack.cpp)는 Crossfire와 AirStrike를 구현한다. Crossfire는 기체 위치에서 짝수·홀수 탄의 초기 각도를 반대 방향으로 벌리고, 터치점 주위 ±15에 추적탄을 발사한다. AirStrike는 목표에서 1,200×기기 배율만큼 떨어져 출발하며 속도가 틱마다 1% 증가한다. 원본 지연 후 0.3/발사 수 간격으로 폭탄을 떨어뜨린다. `Airplane.png`와 `Target.png`를 사용한다. 표적 효과의 크기·회전·수명도 원본 값이다.
+[SpecialAttack.cpp](../../Sources/Core/Simulation/SpecialAttack.cpp)는 Crossfire와 AirStrike를 구현한다. Crossfire는 기체 위치에서 짝수·홀수 탄의 초기 각도를 반대 방향으로 벌리고, 터치점 주위 ±15에 추적탄을 발사한다. AirStrike는 목표에서 1,200×기기 배율만큼 떨어져 출발하며 속도가 틱마다 1% 증가한다. 원본 지연 후 0.3/발사 수 간격으로 폭탄을 떨어뜨린다. `Airplane.png`와 `Target.png`를 사용한다. 표적 효과의 크기·회전·수명도 원본 값이다.
 
 `GobHvM_Bot`의 방어·수리 전용 AI 함수는 실행 파일에서 즉시 반환한다. 이를 근거 없이 확장하지 않았다. 같은 클래스의 5초당 HP 1 회복과 `GobHvM_Player::aiBot`의 도착 후 설치 유닛 변환 조건을 각각 구현했다.
 
@@ -108,21 +108,21 @@
 
 ## 진형과 후퇴 입력
 
-`GobWorld::setOrder:`(0x17418)는 명령 0만 처리한다. 살아 있는 type 0 아군 중 선두와의 y 차이가 120 미만인 기체를 후퇴시킨다. x는 유지하고 y는 `(top - 80) + (top - y) × -0.8`로 계산한다. [Formation.cpp](../../Sources/Core/Formation.cpp)와 `FormationTests`에 이 조건과 경계값을 옮겼다.
+`GobWorld::setOrder:`(0x17418)는 명령 0만 처리한다. 살아 있는 type 0 아군 중 선두와의 y 차이가 120 미만인 기체를 후퇴시킨다. x는 유지하고 y는 `(top - 80) + (top - y) × -0.8`로 계산한다. [Formation.cpp](../../Sources/Core/Simulation/Formation.cpp)와 `FormationTests`에 이 조건과 경계값을 옮겼다.
 
 진형창은 다섯 아이콘을 만들지만 `DlgFormation::handleButton:`(0x3e11c)은 상태와 이름을 확인한 뒤 반환한다. 원본에서 선택 결과를 전투 명령으로 전달하는 분기가 없다. GuiGame은 ID `0x3fc`를 누르기 시작할 때 후퇴를 호출하지만, 내보낸 전체 1,232개 메서드에서 해당 ID의 버튼 생성은 찾지 못했다. 새 앱에 임의의 진형 명령이나 후퇴 버튼을 추가하지 않았다.
 
 ## 전투 효과 연결
 
-[World.cpp](../../Sources/Core/World.cpp)에 `PartsController_Weapon::tick`의 총구 섬광·직격선·탄피와 `GobBullet::setCollide`의 충돌 폭발을 연결했다. 총과 저격총의 탄피 수명·속도·크기, 왼쪽 무기의 방출 방향, 폰에서 일반 총의 속도를 절반으로 줄이는 분기를 구분한다. 탄피는 `BulletShell.png`, 직격선은 `Efx_BulletTrail.png`를 사용한다. 총구 섬광은 `Efx_Fire.png`의 4×4 시트 중 원본의 첫 12개 타일을 선택한다. effectType 1·2·8은 탄환에 붙은 이미지를 표시하고, 2는 매 틱 점멸한다. 레이저의 2차 피해 뒤에는 `Efx_Lightning.png`의 2×4 애니메이션으로 두 점을 잇고, 해당 적 위치에 원래 폭발 크기의 0.8배 효과를 만든다.
+[World.cpp](../../Sources/Core/Simulation/World.cpp)에 `PartsController_Weapon::tick`의 총구 섬광·직격선·탄피와 `GobBullet::setCollide`의 충돌 폭발을 연결했다. 총과 저격총의 탄피 수명·속도·크기, 왼쪽 무기의 방출 방향, 폰에서 일반 총의 속도를 절반으로 줄이는 분기를 구분한다. 탄피는 `BulletShell.png`, 직격선은 `Efx_BulletTrail.png`를 사용한다. 총구 섬광은 `Efx_Fire.png`의 4×4 시트 중 원본의 첫 12개 타일을 선택한다. effectType 1·2·8은 탄환에 붙은 이미지를 표시하고, 2는 매 틱 점멸한다. 레이저의 2차 피해 뒤에는 `Efx_Lightning.png`의 2×4 애니메이션으로 두 점을 잇고, 해당 적 위치에 원래 폭발 크기의 0.8배 효과를 만든다.
 
-[Trail.cpp](../../Sources/Core/Trail.cpp)는 `GobTrailEffect`의 설정(0x23320), 점 추가(0x234e8·0x23a18), 갱신(0x23b70), 그리기(0x23e90)를 구현한다. effectType 5·6·7의 너비·간격·확산·바람·감쇠 값을 각각 유지한다. 탄환이 사라져도 궤적은 남은 수명 동안 표시된다. `Frame::meshes`는 스프라이트 사이의 그리기 위치를 보관한다. Apple OpenGL ES 렌더러가 해당 위치에 triangle strip을 그린다.
+[Trail.cpp](../../Sources/Core/Simulation/Trail.cpp)는 `GobTrailEffect`의 설정(0x23320), 점 추가(0x234e8·0x23a18), 갱신(0x23b70), 그리기(0x23e90)를 구현한다. effectType 5·6·7의 너비·간격·확산·바람·감쇠 값을 각각 유지한다. 탄환이 사라져도 궤적은 남은 수명 동안 표시된다. `Frame::meshes`는 스프라이트 사이의 그리기 위치를 보관한다. Apple OpenGL ES 렌더러가 해당 위치에 triangle strip을 그린다.
 
 원본의 궤적 좌표 배열 할당은 `blockCount × 20 | 1`바이트이며, 끝점 쓰기와 겹치는 메모리 복사가 있다. C++에서는 끝점 저장 공간을 충분히 확보하고 순서대로 이동한다. 연속한 두 점이 같아 원본 계산이 0/0이 되는 경우에는 직전 법선을 유지한다. 이 두 부분은 정의되지 않은 메모리·부동소수점 결과를 재현하지 않도록 바꿨다.
 
 원본 `QobManager::drawVisual`(0x42534)의 레이어 순서를 적용했다. 그림자는 0, 적 차체·부품은 1·2, 아군은 3·4, 입자는 5, 공습기는 7이다. 기지는 별도 원본 레이어를 유지한다. 일반 탄환·집중사격 탄환·공습 탄환의 궤적도 각각 탄환과 같은 레이어를 사용하며 먼저 그린다.
 
-[WorldEffects.cpp](../../Sources/Core/WorldEffects.cpp)는 원본 `onCrash`(0x1422c), `processCrash`(0x1151c), `onDestroy`(0x143e0)의 파괴 절차를 연결한다. 파츠를 비산시키는 새 효과를 만들지 않았다. 원본처럼 무기·상부 파츠를 제거하고 차체를 3~5초 남긴다. 그동안 20분의 1 확률로 연기를 만들고, 시간이 지나면 `Efx_ExplodeNPC.png`를 재생하며 잔해를 지운다. 생존 중 HP가 80% 아래일 때의 연기도 원본 확률·크기·속도로 생성한다.
+[WorldEffects.cpp](../../Sources/Core/Simulation/WorldEffects.cpp)는 원본 `onCrash`(0x1422c), `processCrash`(0x1151c), `onDestroy`(0x143e0)의 파괴 절차를 연결한다. 파츠를 비산시키는 새 효과를 만들지 않았다. 원본처럼 무기·상부 파츠를 제거하고 차체를 3~5초 남긴다. 그동안 20분의 1 확률로 연기를 만들고, 시간이 지나면 `Efx_ExplodeNPC.png`를 재생하며 잔해를 지운다. 생존 중 HP가 80% 아래일 때의 연기도 원본 확률·크기·속도로 생성한다.
 
 ### 원본에 없는 EMP 이미지
 

@@ -94,4 +94,20 @@
     [self assertPixel:data x:40 y:40 red:255 green:0 blue:0];[self assertPixel:data x:280 y:40 red:0 green:0 blue:255];
     XCTAssertEqual([_renderer lastFrameMetrics].drawCalls,3u);
 }
+- (void)testNonPowerOfTwoImageAndMeshKeepOriginalPixelCoordinates {
+    const unsigned char pixels[]={255,0,0,255,0,255,0,255,0,0,255,255,255,0,0,255,0,255,0,255,0,0,255,255};
+    CGColorSpaceRef color=CGColorSpaceCreateDeviceRGB();CGDataProviderRef provider=CGDataProviderCreateWithData(nullptr,pixels,sizeof(pixels),nullptr);
+    CGImageRef image=CGImageCreate(3,2,8,32,12,color,kCGBitmapByteOrder32Big|kCGImageAlphaLast,provider,nullptr,false,kCGRenderingIntentDefault);
+    NSURL* path=[[_root URLByAppendingPathComponent:@"Images"] URLByAppendingPathComponent:@"three.png"];
+    CGImageDestinationRef out=CGImageDestinationCreateWithURL((__bridge CFURLRef)path,CFSTR("public.png"),1,nullptr);
+    CGImageDestinationAddImage(out,image,nullptr);XCTAssertTrue(CGImageDestinationFinalize(out));CFRelease(out);CGImageRelease(image);CGDataProviderRelease(provider);CGColorSpaceRelease(color);
+    XCTAssertEqual([_renderer imageSize:std::string("three.png")].x,3);
+    md::Frame f;md::Sprite sprite;sprite.image="three.png";sprite.destination={0,0,300,480};sprite.nearest=true;sprite.blend=md::Blend::opaque;f.sprites.push_back(sprite);
+    XCTAssertTrue([_renderer drawFrame:f toLayer:(CAEAGLLayer*)_surface.layer]);NSData* data=[_renderer readFramebufferRGBA];
+    [self assertPixel:data x:50 y:240 red:255 green:0 blue:0];[self assertPixel:data x:150 y:240 red:0 green:255 blue:0];[self assertPixel:data x:250 y:240 red:0 green:0 blue:255];
+    f.sprites.clear();md::TextureMesh mesh;mesh.image="three.png";mesh.blend=md::Blend::opaque;
+    mesh.vertices={{{0,0},{2.5f/3,.5f},{1,1,1,1}},{{320,0},{2.5f/3,.5f},{1,1,1,1}},{{0,480},{2.5f/3,.5f},{1,1,1,1}},{{320,480},{2.5f/3,.5f},{1,1,1,1}}};f.meshes.push_back(mesh);
+    XCTAssertTrue([_renderer drawFrame:f toLayer:(CAEAGLLayer*)_surface.layer]);[self assertPixel:[_renderer readFramebufferRGBA] x:160 y:240 red:0 green:0 blue:255];
+    XCTAssertEqual(_renderer.textureUploads,1u);
+}
 @end
