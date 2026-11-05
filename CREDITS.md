@@ -16,6 +16,6 @@ HeavyMach1에서 사용한 복원 절차와 스킬, 공통 코드·플랫폼 실
 
 ## 라이브러리
 
-OpenAL Soft는 효과음 재생, stb는 이미지 디코딩에 사용한다. 각 라이브러리의 소스와 라이선스는 `Modules/ThirdParty/`에 있다. 
+OpenAL Soft는 효과음 재생, stb는 이미지 디코딩에 사용한다. 각 라이브러리의 소스와 라이선스는 `Modules/ThirdParty/`에 있다.
 
 [게임 소개](README.md) · [문서 목차](docs/public/README.md)

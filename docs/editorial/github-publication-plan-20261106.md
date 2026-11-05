@@ -4,7 +4,7 @@
 
 ## 확인한 상태
 
-README와 설치·아키텍처·검사 안내는 v0.1의 Apple·Android 상태를 설명한다. 개발 브랜치에서는 웹·PWA가 실행되지만 README에는 미구현으로 남아 있다. 현재 개발자의 변은 구매 경험과 복원 과정을 짧게 기록한 초안이다.
+README와 설치·아키텍처·검사 안내는 v0.1의 Apple·Android 상태를 설명한다. 개발 브랜치에서는 웹·PWA가 실행되지만 README에는 미구현으로 남아 있다. 개발자의 변은 인터뷰와 사용자 정정을 반영한 전문으로 갱신했다.
 
 Chrome·WebKit의 실제 게임 실행에서 생산·전투·실패·재도전·승리·다음 미션과 저장 복원을 검사했다. 승패 조건은 치트 기능으로 만들어 검사했고 메뉴 입력도 실행했다. Safari 정식 웹판에서는 타이틀·슬롯·복원 버튼을 직접 눌렀다. Mac Chrome 설치형 PWA의 실행·종료도 확인했다. 실제 iPhone·iPad·Galaxy 설치형 PWA 검사는 남아 있다. [검사 근거](../evidence/web-pwa-20261106.md).
 
@@ -12,7 +12,7 @@ Chrome·WebKit의 실제 게임 실행에서 생산·전투·실패·재도전·
 
 [인터뷰 원문](developer-interview-20261106.md)에 후속 답변을 모은다. 첫 답변에서 시리즈 전체 복원이 처음 목표였고, HeavyMach2의 복원 범위를 고려해 MachDefense를 먼저 택했다고 설명했다. 원고의 도입에 이 순서를 반영한다.
 
-본문은 [docs/RESTORATION.md](../RESTORATION.md)에 쓴다. HeavyMach 1의 개발자의 변을 바탕으로 개인적 배경과 화자의 어조를 이어 쓰고, 게임별 경험과 개발 내역을 MachDefense에 맞게 바꾼다. 새 원고를 여러 파일로 나누지 않는다.
+본문은 [docs/RESTORATION.md](../RESTORATION.md)에 쓴다. HeavyMach 1의 개발자의 변을 바탕으로 개인적 배경과 화자의 어조를 이어 쓰고, 게임별 경험과 개발 내역을 MachDefense에 맞게 바꾼다. 개발자의 변 전문은 이 파일 하나에 둔다.
 
 참고본은 HeavyMach 1의 원격 main에서 확인한 [개발자의 변](https://github.com/gelb2/HeavyMach/blob/main/docs/RESTORATION.md)이다. 2026-11-06 fetch 후 이 파일의 마지막 변경은 `1360e657`이다. 오래된 작업 폴더의 수정본으로 덮어쓰지 않는다. 집필 직전에 원격 수정 여부를 다시 확인한다.
 
