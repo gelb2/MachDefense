@@ -34,3 +34,7 @@
 ## 원본 수정과 모듈화 — 2026-11-05
 
 사용자 지시 순서는 원본·포팅판의 검증된 절차로 차이를 수정하고, 수정본을 검증·커밋한 뒤 공통 코드를 분리하는 것이다. [모듈 구조](../Modules/README.md), [실행 근거](evidence/module-work-20261105.md)를 따른다. 게임 규칙과 인게임 UI를 공용 Core에 둔다. 후속 Android·웹/PWA·Tauri 실행기는 플랫폼 연결만 구현한다. 긴급지원은 기존 게임 시간·자원·버튼·글꼴로 구현했다. [지급 산식](emergency-resupply-economy.md)과 [실행 검사](evidence/emergency-resupply-20261105.md)를 따른다.
+
+## Android — 2026-11-06
+
+Android 실행기는 기존 Core·Audio·자원을 그대로 사용한다. 게임 UI도 공통 Frame으로 그린다. 플랫폼 연결은 Android/에 둔다. Apple·기존 공통 코드·자원 수정은 이번 과제에 포함하지 않는다. [구현·검사](evidence/android-native-20261106.md), [빌드](../Android/README.md).

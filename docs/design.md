@@ -1,6 +1,6 @@
 # 설계
 
-원본 비교 실행기는 Compatibility/ios에 있다. 아래 Android·Web·Desktop·Distribution 및 native macOS 경로 설명은 예정 책임이며 현재 앱 구현 완료를 뜻하지 않는다. 소스 재개발판은 C++20 코어·공용 자원 번들·Objective-C++ Apple 실행기로 작성 중이다. Apple/MachDefense.xcworkspace에 일반·치트 앱과 Modules 프로젝트를 연결했다. GameSession에 메뉴·전투·강화·보상·저장을 연결했다. 현재 위메이드 1.0.3 포팅판과 기능·표시를 대조하고 실기기 검증을 진행한다. 전체 완료 범위는 [현재 상태](current-status.md), 작업 순서는 [소스 재개발 계획](source-reimplementation-plan.md)을 따른다.
+원본 비교 실행기는 Compatibility/ios에 있다. Web·Desktop·Distribution 및 native macOS 경로는 예정 책임이다. Android는 2026-11-06 일반·치트 APK를 구현하고 Galaxy와 에뮬레이터에서 검사했다. [Android 책임과 실행 근거](evidence/android-native-20261106.md)를 따른다. 소스 재개발판은 C++20 코어·공용 자원 번들·Objective-C++ Apple 실행기로 작성 중이다. Apple/MachDefense.xcworkspace에 일반·치트 앱과 Modules 프로젝트를 연결했다. GameSession에 메뉴·전투·강화·보상·저장을 연결했다. 현재 위메이드 1.0.3 포팅판과 기능·표시를 대조하고 실기기 검증을 진행한다. 전체 완료 범위는 [현재 상태](current-status.md), 작업 순서는 [소스 재개발 계획](source-reimplementation-plan.md)을 따른다.
 
 | 경로 | 책임 |
 |---|---|

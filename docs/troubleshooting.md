@@ -81,3 +81,7 @@ OpenAL Soft 컨텍스트 처리 함수를 오디오 출력 장치 재시작으�
 교체 중 XCTest에 OpenAL을 이중 연결해 서로 다른 컨텍스트 전역 상태를 읽는 문제가 나왔다. 테스트는 앱의 MDAudio를 통해 같은 컨텍스트를 확인하도록 고쳤다. 음악을 분리한 뒤 효과음 개수 기대값도 80에서 77로 수정했다.
 
 이후 Core의 함수와 Audio 출력 모듈을 분리했다. [변경 근거·검사 결과](evidence/module-work-20261105.md), [모듈 구조](../Modules/README.md).
+
+## Android 첫 실행·오디오 재개·선택적 이미지 — 2026-11-06
+
+DecorView 생성 전 insetsController 접근, OpenSL ES의 재개 시 해제된 ring buffer 접근, 화면에 그리지 않는 DummyParts 연결점의 이미지 부재 처리 차이를 Android 어댑터에서 수정했다. 공통 코어·Apple 코드는 변경하지 않았다. 환경별 앱 검사 13개와 실제 오디오 샘플 진행, 80미션 렌더·저장 이전 결과는 [Android 기록](evidence/android-native-20261106.md)에 있다.

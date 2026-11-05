@@ -74,7 +74,9 @@
       "docs/design.md",
       "docs/runtime-policy.md",
       ".agents/skills/port-machdefense-android/SKILL.md",
-      ".agents/skills/debug-machdefense-android/SKILL.md"
+      ".agents/skills/debug-machdefense-android/SKILL.md",
+      "Android/README.md",
+      "docs/evidence/android-native-20261106.md"
     ],
     "writing": [
       "docs/report-site.md",
