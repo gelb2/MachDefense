@@ -23,3 +23,7 @@
 ## 2026-11-05 공용 모듈·음향·후속 플랫폼 계획
 
 [공용 모듈 진단과 플랫폼 확장 계획](module-audit-20261105.md)에 현재 파일별 책임, HeavyMach 분기·병합 이력, OpenAL 구현 차이, 예정 폴더·빌드 대상과 분리 전후 검사를 정리했다. 목표 플랫폼은 iPhone/iPad·Android 네이티브·웹/PWA·Tauri Mac이다. 원본 음향·텍스처 대조 수정은 `f623eba`, Core·Audio 분리는 `193ed2f`에서 완료했다. 분리 전후 비교와 기기별 결과는 [모듈화 실행 기록](evidence/module-work-20261105.md)을 따른다.
+
+## 긴급지원 모듈 — 2026-11-05
+
+`Simulation/EmergencySupport`는 전투 시간과 현재 셀 용량·연구값을 받아 30/45/60초 반복 지원을 계산한다. `Session/GameSession`은 수령액을 기존 슬롯 크레딧과 World의 셀에 반영한다. `Presentation/SupportDialog`는 원작 CommonUI·SysMenu_Btn·Common_Btn_CLOSE·SpriteFont·Button으로 창을 그리고 입력을 처리한다. Apple 전용 UI나 새 저장 파일은 없다. 지원 상태는 전투가 끝나면 사라지며 수령한 크레딧은 기존 저장 지점에서 보존한다. [산식](emergency-resupply-economy.md) · [검사](evidence/emergency-resupply-20261105.md).

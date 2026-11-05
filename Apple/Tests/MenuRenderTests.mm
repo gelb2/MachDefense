@@ -11,6 +11,7 @@
 #include "../../Tests/BaseUpgradeEffectSweep.hpp"
 #include "../../Tests/DamageAudioSweep.hpp"
 #include "../../Tests/ViewportSweep.hpp"
+#include "../../Tests/EmergencySupportSweep.hpp"
 #import "../../Sources/Platform/Apple/MDAudio.h"
 #include <algorithm>
 #include <stdexcept>
@@ -111,6 +112,25 @@ public:
 @end
 @interface MenuRenderTests:XCTestCase @end
 @implementation MenuRenderTests
+- (void)testEmergencySupportRecurringClaims {
+    NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
+    UIWindow* window=[[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];window.rootViewController=[UIViewController new];
+    MDMenuSurface* surface=[[MDMenuSurface alloc]initWithFrame:window.bounds];surface.contentScaleFactor=1;surface.layer.contentsScale=1;
+    CAEAGLLayer* layer=(CAEAGLLayer*)surface.layer;layer.opaque=YES;layer.drawableProperties=@{kEAGLDrawablePropertyRetainedBacking:@YES,kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8};
+    [window.rootViewController.view addSubview:surface];[window makeKeyAndVisible];
+    MDRenderer* renderer=[[MDRenderer alloc]initWithResourceRoot:root];MenuResources resources(root,renderer);
+    try {
+        auto report=md::validation::runEmergencySupportSweep(resources,[&](const md::Frame& f,std::string_view name){
+            [renderer discardDrawable];surface.frame=CGRectMake(0,0,std::ceil(f.logicalWidth),std::ceil(f.logicalHeight));[surface layoutIfNeeded];[CATransaction flush];
+            XCTAssertTrue([renderer drawFrame:f toLayer:layer],@"%@",renderer.lastError);
+            md::Vec2 mapped;XCTAssertTrue([renderer logicalPoint:CGPointMake(f.logicalWidth-1,f.logicalHeight-1) result:&mapped]);
+            XCTAssertEqualWithAccuracy(mapped.x,f.logicalWidth-1,1);XCTAssertEqualWithAccuracy(mapped.y,f.logicalHeight-1,1);
+            [self capture:[NSString stringWithUTF8String:std::string(name).c_str()] renderer:renderer];
+        });
+        NSLog(@"MD_SUPPORT_SWEEP %s",report.c_str());
+    }catch(const std::exception& e){XCTFail(@"Support: %s",e.what());}
+    [renderer finish];window.hidden=YES;
+}
 - (void)testExpandedViewportAndInputs {
     NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
     UIWindow* window=[[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];window.rootViewController=[UIViewController new];
@@ -583,6 +603,45 @@ public:
 
     [audio stopMusic];[audio setActive:NO];[renderer finish];window.hidden=YES;
     XCTAssertTrue([NSFileManager.defaultManager removeItemAtURL:directory error:nil]);
+}
+
+- (void)testEmergencySupportRealtimeFrames {
+    NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
+    UIWindow* window=[[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];window.rootViewController=[UIViewController new];
+    MDMenuSurface* surface=[[MDMenuSurface alloc]initWithFrame:window.bounds];surface.contentScaleFactor=UIScreen.mainScreen.scale;surface.layer.contentsScale=surface.contentScaleFactor;
+    CAEAGLLayer* layer=(CAEAGLLayer*)surface.layer;layer.opaque=YES;layer.drawableProperties=@{kEAGLDrawablePropertyRetainedBacking:@YES,kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8};
+    [window.rootViewController.view addSubview:surface];[window makeKeyAndVisible];
+    MDRenderer* renderer=[[MDRenderer alloc]initWithResourceRoot:root];MenuResources resources(root,renderer);MenuHost host;
+    auto save=md::SaveData::empty(123);save.createProfile("CADENCE",1);save.writeWord(md::SaveData::slotStart+0xc,5);save.setCredits(0,123);host.saved=save.encode();
+    md::GameSession game(resources,host,true);sweepTap(game,160,240);sweepTicks(game);sweepTap(game,160,140);sweepTicks(game);sweepTap(game,240,450);sweepTicks(game);
+    auto* world=game.validationWorld();XCTAssertNotEqual(world,nullptr);if(!world)return;
+    for(const auto& actor:world->actors())if(actor->base)world->setValidationHealth(actor->id,100000000);
+    while(world->time()-world->startTime()<59)game.tick();
+    const auto writes=host.saves;const int credits=game.validationSave()->credits(0);
+    struct Sample{double interval,cpu;unsigned phase;};std::vector<Sample> samples;samples.reserve(1200);unsigned frames=0;double previous=0;
+    auto done=[self expectationWithDescription:@"Support delivery, claim and typing frame cadence"];
+    MDSweepDisplay* observer=[MDSweepDisplay new];
+    std::function<void(CADisplayLink*)> run=[&](CADisplayLink* link){@autoreleasepool{
+        const double begin=CACurrentMediaTime();
+        if(frames==300){world->setValidationCells(0);sweepTap(game,208.5f,443);}
+        if(frames==360){sweepTap(game,160,152);sweepTap(game,160,222);sweepTap(game,160,292);}
+        if(frames==600)sweepTap(game,160,418);
+        game.tick();XCTAssertTrue([renderer drawFrame:game.frame() toLayer:layer],@"%@",renderer.lastError);
+        samples.push_back({previous?(link.timestamp-previous)*1000:0,(CACurrentMediaTime()-begin)*1000,frames>=300&&frames<600?1u:0u});previous=link.timestamp;
+        if(++frames==1200){[link invalidate];[done fulfill];}
+    }};
+    observer.onFrame=^(CADisplayLink* link){run(link);};CADisplayLink* display=[CADisplayLink displayLinkWithTarget:observer selector:@selector(frame:)];display.preferredFramesPerSecond=60;[display addToRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
+    [self waitForExpectations:@[done] timeout:90];[display invalidate];observer.onFrame=nil;
+    XCTAssertEqual(frames,1200u);XCTAssertEqual(host.saves,writes);XCTAssertEqual(game.validationSave()->credits(0),credits+50);XCTAssertFalse(world->paused());
+    NSMutableArray* rows=[NSMutableArray array];
+    for(unsigned phase=0;phase<2;++phase){std::vector<double> cadence,cpu;unsigned over=0;for(const auto& s:samples)if(s.phase==phase&&s.interval>0){cadence.push_back(s.interval);cpu.push_back(s.cpu);over+=s.interval>25;}
+        std::sort(cadence.begin(),cadence.end());std::sort(cpu.begin(),cpu.end());if(cadence.empty())continue;
+        auto percentile=[](const auto& a,double fraction){return a[std::size_t(fraction*(a.size()-1))];};
+        NSDictionary* row=@{@"phase":@(phase),@"frames":@(cadence.size()),@"p95_ms":@(percentile(cadence,.95)),@"p99_ms":@(percentile(cadence,.99)),@"over25ms":@(over),@"cpu_p95_ms":@(percentile(cpu,.95)),@"cpu_max_ms":@(cpu.back())};[rows addObject:row];NSLog(@"MD_SUPPORT_PERFORMANCE %@",row);
+    }
+    for(std::size_t i=0;i<samples.size();++i)if(samples[i].interval>25||samples[i].cpu>16.7)NSLog(@"MD_SUPPORT_SLOW frame=%lu phase=%u interval=%.3f cpu=%.3f",i,samples[i].phase,samples[i].interval,samples[i].cpu);
+    NSData* json=[NSJSONSerialization dataWithJSONObject:rows options:NSJSONWritingPrettyPrinted error:nil];XCTAttachment* result=[XCTAttachment attachmentWithData:json uniformTypeIdentifier:@"public.json"];result.name=@"support-realtime-performance.json";result.lifetime=XCTAttachmentLifetimeKeepAlways;[self addAttachment:result];
+    [renderer finish];window.hidden=YES;
 }
 
 - (void)testShortRealtimeBattlePerformance {

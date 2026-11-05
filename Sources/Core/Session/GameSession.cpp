@@ -1,5 +1,7 @@
 #include "Core/Session/GameSession.hpp"
 #include "Core/Presentation/Help.hpp"
+#include "Core/Presentation/SupportDialog.hpp"
+#include <limits>
 #include "Core/Presentation/Menu.hpp"
 #include "Core/Presentation/SummaryDialog.hpp"
 #include "Core/Presentation/Transition.hpp"
@@ -37,6 +39,7 @@ struct GameSession::State {
     DataTable items,machines,descriptions;SpriteFont messageFont;
     BuildCatalog builds;WeaponCatalog weapons;BaseUpgradeCatalog baseUpgrades;AttackCatalog attacks;Settlement settlement;BattleModels models;
     Menu menu;Transition transition;GameHUD hud;UpgradeDialog upgrades;SummaryDialog summary;
+    EmergencySupport support;SupportDialog supportDialog;
     UpgradeDialogState upgradeState;SummaryState summaryState;
     std::unique_ptr<World> world;std::optional<Help> help;
     std::unique_ptr<ValidationTools> validationTools;std::unique_ptr<ValidationPanel> validationPanel;bool validationOpen=false;
@@ -56,7 +59,7 @@ struct GameSession::State {
       menu(r,host,save,true),transition(r,host),hud(r,[this](Frame& f,std::string_view n,Vec2 p,float s){drawUnit(f,n,p,s);}),
       upgrades(r,[this](Frame& f,const UpgradeUnit& u,bool next,Vec2 p,float s){drawUnit(f,levelName(u.name,u.level+(next?1:0)),p,s);},
                  [this](Frame& f,const auto&,Vec2 p,float s){auto parts=PlayerLoadout::forBase(save,slot,baseUpgrades,BattleGeometry::phone());drawParts(f,parts.assembly,p,s);}),
-      summary(r,[this](Frame& f,const StageReward& reward,Vec2 p,float s){drawReward(f,reward,p,s);}),validation(v){
+      summary(r,[this](Frame& f,const StageReward& reward,Vec2 p,float s){drawReward(f,reward,p,s);}),supportDialog(r),validation(v){
         models.configureTiles(table(r,"PartsList"),table(r,"TileList"));
         messageOK.bounds={128,279,64,32};if(validation){validationTools=std::make_unique<ValidationTools>(r);validationPanel=std::make_unique<ValidationPanel>(r);}rebuild();
     }
@@ -84,7 +87,7 @@ struct GameSession::State {
         for(unsigned i=0;i<reward.attackCount;++i){Sprite s;s.image=name;const float x=p.x+(float(i)*80-float(reward.attackCount-1)*40)*scale;s.destination={x-size.x*scale*.5f,p.y-size.y*scale*.5f,size.x*scale,size.y*scale};f.sprites.push_back(s);}
     }
     bool persist(){pendingSave=!host.writeSave(save.encode());if(!pendingSave)return true;message="Could not save progress.";return false;}
-    void updatePause(){if(world)world->setPaused(mapLoadingStep<5||paused||validationOpen||help.has_value()||upgradeState.kind!=UpgradeDialogState::Kind::hidden||!message.empty()||!active);}
+    void updatePause(){if(world)world->setPaused(mapLoadingStep<5||paused||validationOpen||supportDialog.visible()||help.has_value()||upgradeState.kind!=UpgradeDialogState::Kind::hidden||!message.empty()||!active);}
     void requestScreen(unsigned target){if(transition.request(target))updatePause();}
     void openMission(MissionRequest request){mission=request;requestScreen(4);}
     void loadNextMission(unsigned next){
@@ -105,18 +108,32 @@ struct GameSession::State {
         }
     }
     void changeScreen(unsigned target){
-        screen=target;summaryState={};summary.setState(summaryState);help.reset();placement.reset();selectedAttack.reset();upgradeState={};upgrades.setState(upgradeState);panelOffset=0;paused=false;panel=1;
+        screen=target;supportDialog.close();support.reset(1);summaryState={};summary.setState(summaryState);help.reset();placement.reset();selectedAttack.reset();upgradeState={};upgrades.setState(upgradeState);panelOffset=0;paused=false;panel=1;
         if(target==4){
             if(!mission)throw std::logic_error("Missing mission selection");slot=mission->slot;
             host.music=std::bit_cast<float>(save.readWord(offset()+0x2058));host.effects=std::bit_cast<float>(save.readWord(offset()+0x205c));
             if(!world){world=std::make_unique<World>(resources,host,save,slot,BattleGeometry::phone(),save.readWord(0));world->setFinishHandler([this](WorldState state){finish(state);});}
             world->setViewport(layout.width,layout.height,layout.top);world->setUIMargin(62+layout.bottom);
-            world->start(mission->mission);host.playMusic("GamePlay.mp3");
+            world->start(mission->mission);support.reset(mission->mission+1);host.playMusic("GamePlay.mp3");
             if(save.readWord(offset()+0xc)<5){help.emplace();save.writeWord(offset()+0xc,save.readWord(offset()+0xc)+5);}
             updatePause();
         }else{
             world.reset();menu.applyScreen(target==1?Menu::Screen::title:target==2?Menu::Screen::profiles:Menu::Screen::missions);
         }
+    }
+    std::int64_t creditRoom()const{return std::int64_t(std::numeric_limits<std::int32_t>::max())-save.credits(slot);}
+    std::int64_t cellRoom()const{return world?std::int64_t(std::max(0.,std::floor(double(world->cellCapacity())-world->cells()))):0;}
+    void refreshSupport(){supportDialog.update(support,creditRoom(),cellRoom());}
+    void claimSupport(unsigned row){
+        if(row==3){supportDialog.close();}
+        else if(world&&world->state()==WorldState::running){
+            const auto amount=support.claim(row,creditRoom(),cellRoom());
+            if(!amount.empty()){
+                save.setCredits(slot,std::int32_t(save.credits(slot)+amount.credits));
+                world->receiveSupportCells(unsigned(amount.cells));supportDialog.received(row);
+            }
+        }
+        host.playSound("UI_Click.wav");refreshSupport();updatePause();refreshHUD();
     }
     void refreshHUD(){
         if(!world)return;
@@ -130,6 +147,7 @@ struct GameSession::State {
         s.upgradeMode=upgradeState.kind!=UpgradeDialogState::Kind::hidden;
         s.baseUpgradeOpen=upgradeState.kind==UpgradeDialogState::Kind::base;
         s.gameTime=world->time();
+        for(unsigned i=0;i<3;++i)if(!support.available(i,creditRoom(),cellRoom()).empty())s.supportAvailable=true;
         if(placement){if(auto row=descriptions.findRow("TapToTurretPos"))s.instruction=descriptions.value(*row,"Value");}
         s.cellUpgradeAvailable=world->cellLevel()<5;s.cellUpgradeCost=world->cellUpgradeCost();s.cellUpgradeLevel=world->cellLevel();
         for(const auto& a:world->actors())if(a->base){const float hp=std::max(0,a->hp)/float(a->maxHP);if(a->player)s.playerBaseHealth=hp;else s.enemyBaseHealth=hp;}
@@ -190,7 +208,7 @@ struct GameSession::State {
         case 0x409:actionSound="UIType_BuildMach.wav";panel=1;placement.reset();selectedAttack.reset();if(upgradeState.kind==UpgradeDialogState::Kind::attacks){upgradeState.kind=UpgradeDialogState::Kind::units;upgradeState.selectedUnit.reset();refreshUpgrades();}break;
         case 0x40b:actionSound="UIType_SpAttack.wav";panel=2;placement.reset();if(upgradeState.kind==UpgradeDialogState::Kind::units){upgradeState.kind=UpgradeDialogState::Kind::attacks;upgradeState.selectedAttack.reset();refreshUpgrades();}break;
         case 0x40a:actionSound="UIType_Formation.wav";panel=3;break;
-        case 0x40c:actionSound={};message="Purchases are unavailable.";break;
+        case 0x40c:placement.reset();selectedAttack.reset();supportDialog.open();refreshSupport();break;
         case 0x3fe:upgradeState.kind=upgradeState.kind==UpgradeDialogState::Kind::hidden?(panel==2?UpgradeDialogState::Kind::attacks:UpgradeDialogState::Kind::units):UpgradeDialogState::Kind::hidden;refreshUpgrades();break;
         case 0x3fd:actionSound={};world->upgradeCells();break;
         case 0x40d:{std::vector<OwnedBuild> visible;for(auto b:save.builds(slot))if(b.onSlot)visible.push_back(b);
@@ -227,7 +245,7 @@ struct GameSession::State {
     }
     Vec2 upgradeOffset()const{return upgradeState.kind==UpgradeDialogState::Kind::base?layout.bottomRight():layout.center();}
     void cancelGameTouches(){
-        for(const auto& [id,position]:activeTouches){Touch t{id,TouchPhase::cancelled,position};menu.touch(t);hud.touch(t);const auto modal=translatedTouch(t,layout.center());upgrades.touch(translatedTouch(t,upgradeOffset()));summary.touch(modal);if(validationPanel)validationPanel->touch(modal);if(world)world->touch(t);}
+        for(const auto& [id,position]:activeTouches){Touch t{id,TouchPhase::cancelled,position};menu.touch(t);hud.touch(t);const auto modal=translatedTouch(t,layout.center());upgrades.touch(translatedTouch(t,upgradeOffset()));summary.touch(modal);supportDialog.touch(modal);if(validationPanel)validationPanel->touch(modal);if(world)world->touch(t);}
     }
     bool validationAction(unsigned command){
         if(!validationTools)return false;
@@ -249,6 +267,11 @@ struct GameSession::State {
         if(screen<4){menu.tick();if(auto req=menu.takeScreenRequest())requestScreen(unsigned(*req)+1);if(auto req=menu.takeMissionRequest())openMission(*req);}
         else if(world){
             world->tick();world->takeEvents();
+            if(world->state()==WorldState::running){
+                const float research=baseUpgrades.level(BaseUpgrade::cellResearch,save.baseUpgrade(slot,unsigned(BaseUpgrade::cellResearch))).parameter.value_or(1);
+                support.advance(world->time()-world->startTime(),world->cellCapacity(),research);
+            }
+            if(supportDialog.visible()){refreshSupport();supportDialog.tick();}
             const float destination=upgradeState.kind==UpgradeDialogState::Kind::base?260:0;
             panelOffset=std::abs(destination-panelOffset)>.1f?panelOffset+(destination-panelOffset)/5:destination;
             world->setUIMargin(62+panelOffset+layout.bottom);
@@ -269,6 +292,7 @@ struct GameSession::State {
         }
         const Vec2 modalOffset=layout.center();
         const auto overlayStart=frame.sprites.size(),overlayMeshes=frame.meshes.size();
+        supportDialog.append(frame);
         if(validationPanel){validationPanel->setState(validationTools->panel(save,world.get(),validationOpen));validationPanel->append(frame);}
         if(!message.empty()){
             Sprite shade;shade.destination={0,0,320,480};shade.color={0,0,0,.7f};frame.sprites.push_back(shade);
@@ -300,6 +324,7 @@ struct GameSession::State {
         else if(world){
             if(help){if(help->touch(modal)){help.reset();updatePause();}}
             else if(summaryState.visible){summary.touch(modal);for(auto a:summary.takeActions())action(a);}
+            else if(supportDialog.visible()){supportDialog.touch(modal);for(auto row:supportDialog.takeActions())claimSupport(row);}
             else if(upgradeState.kind!=UpgradeDialogState::Kind::hidden){const bool consumed=upgrades.touch(translatedTouch(t,upgradeOffset()));for(auto a:upgrades.takeActions())action(a);if(!consumed){hud.touch(t);for(auto a:hud.takeActions())action(a);}}
             else if(hud.touch(t)){for(auto a:hud.takeActions())action(a);}
             else if(auto point=world->touch(t)){
@@ -315,7 +340,7 @@ GameSession::~GameSession()=default;
 const Frame& GameSession::frame()const{return state_->frame;}
 void GameSession::tick(){state_->tick();}
 void GameSession::touch(const Touch& t){state_->touch(t);}
-void GameSession::setActive(bool active){state_->active=active;if(!active&&state_->world)state_->paused=true;state_->updatePause();state_->refreshHUD();state_->rebuild();}
+void GameSession::setActive(bool active){if(!active){state_->cancelGameTouches();state_->activeTouches.clear();}state_->active=active;if(!active&&state_->world)state_->paused=true;state_->updatePause();state_->refreshHUD();state_->rebuild();}
 void GameSession::resize(float w,float h,float top,float bottom){
     auto& s=*state_;auto next=s.layout;next.resize(w,h,top,bottom);
     if(next.width==s.layout.width&&next.height==s.layout.height&&next.top==s.layout.top&&next.bottom==s.layout.bottom)return;

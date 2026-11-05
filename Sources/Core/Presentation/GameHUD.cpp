@@ -198,7 +198,7 @@ void GameHUD::append(Frame& f)const{
     for(auto i=buttonStart;i<f.sprites.size();++i)f.sprites[i].destination.x-=layout_.width-320;
     image(f,"MachButton.png",{115.5f,37},2,4,pressed(0x409)||state_.selectedPanel==1?1:0);
     image(f,"MachButton.png",{161,37},2,4,pressed(0x40b)||state_.selectedPanel==2?3:2);
-    image(f,"MachButton.png",{208.5f,37},2,4,pressed(0x40c)||state_.selectedPanel==3?7:6);
+    image(f,"MachButton.png",{208.5f,37},2,4,pressed(0x40c)||state_.supportAvailable?7:6);
     image(f,"iPon_QuickBtn@2x.png",{284,34},2,2,pressed(0x415)?1:0);
     image(f,"iPon_QuickBtn@2x.png",{284,11},2,2,pressed(0x413)?3:2);
     for(auto i=buttonStart;i<f.sprites.size();++i)f.sprites[i].destination.y-=state_.mainPanelOffsetY;

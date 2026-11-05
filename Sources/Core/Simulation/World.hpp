@@ -54,6 +54,7 @@ public:
     const WorldStatistics& statistics()const{return statistics_;}
     float cells()const{return clock_.cells();}
     float cellCapacity()const{return capacity_;}
+    void receiveSupportCells(unsigned amount);
     int score()const{return statistics_.score;}
     const std::vector<LootState>& loot()const{return loot_;}
     std::size_t productionCount()const{return production_.size();}

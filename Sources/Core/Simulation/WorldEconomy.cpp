@@ -36,6 +36,9 @@ void World::refreshBaseUpgrades(){
         replaceGuns(replaceGuns,a->assembly);configureWeapons(*a);
     }
 }
+void World::receiveSupportCells(unsigned amount){
+    if(state_==WorldState::running&&amount)clock_.setCells(std::min(capacity_,clock_.cells()+float(amount)));
+}
 bool World::upgradeCells(){
     if(!started_||paused_||state_!=WorldState::running||cellLevel_>=5)return false;
     const int cost=cellUpgradeCost();if(clock_.cells()<float(cost))return false;
