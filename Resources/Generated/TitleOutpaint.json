@@ -1,6 +1,6 @@
 {
   "asset": "Generated/TitleOutpaint.png",
-  "sha256": "ceaf32b429670e474e5a3103e7a340813b79ec13ed4bb4b275d4a9b71f90e0f6",
+  "sha256": "c2a42a0ca0c1c0b6979d2d7a573100668fe21e9ef38bb3de8092c842e7a1c266",
   "size": [
     1024,
     1536
@@ -9,15 +9,16 @@
   "date": "2026-11-05",
   "source": "Images/Title.jpg",
   "source_sha256": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696",
-  "reference": "Game renderer capture of a 512x768 canvas with unchanged original title at (96,144,320,480), plus candidate outside landscape",
-  "use": "Only outside margins are drawn. The central generated rectangle (192,288,640,960), including generated lettering, is never drawn.",
+  "reference": "Original Resources/Images/Title.jpg; second generated outpaint candidate, selected to remove the rectangular join retained in the third candidate",
+  "use": "Outside landscape plus overlap within 32 logical pixels of the top/bottom and 8 pixels of the sides. Original title interior, lettering and button remain original.",
   "consumer": "Sources/Core/Presentation/Menu.cpp::expandFrame",
   "registration": [
-    192,
-    288,
-    640,
-    960
+    144,
+    243,
+    745,
+    1118
   ],
-  "join": "Outside original only: alpha fade of original edge colour up to 24 logical pixels vertically and 4 horizontally. No mirrored artwork.",
-  "prompt": "Use case: precise-object-edit. Repair only the OUTER MARGINS of this stitched game title illustration. Input is 512x768; output the same full composition at 1024x1536 (exactly 2x). The central original rectangle input x96..415,y144..623 (output x192..831,y288..1247) MUST remain in exactly the same place and same size, with its tanks, plane, clouds, logo and dark canyon UNCHANGED. The outer margins currently have obvious seams: bright blue strip above, bright orange fire below, incompatible side cliffs. Repaint ONLY OUTSIDE that central rectangle so clouds, rocks and darkness CONTINUE PERFECTLY from the edges of the original central picture. In particular bottom margin must stay very dark and smoky matching the almost black lower edge, NOT add a new bright fire. Top margin must continue the original cloudy white upper-left and original blue cloudy upper-right, NOT a detached new bright cloud. Match the colors on all four seams precisely. This is edge continuity repair, NOT recomposition. Do not resize or move anything in the central rectangle, do not change the logo, do not add any text, vehicles, borders, mirrored or repeated parts. Keep the full framing exactly as input."
+  "join": "Actual adjacent outpaint pixels with smooth opacity over the original edge. No constant-row/column extension or mirror.",
+  "prompt": "Use case: precise-object-edit. Outpaint this EXACT existing 640x960 game illustration into a 1024x1536 canvas. Place the original unchanged at x=192,y=288, with its original 640x960 size; absolutely no resizing, recentering of objects, repainting, reconstruction, or moving of the original image and lettering. This is a canvas enlargement only. Fill only the new margins with continuous landscape in the identical painterly style: clouds above; rocky canyon on left and right; dark burning canyon below. Original clipped tanks must continue naturally into side margins. The original first row must be at output y288; logo first row around output y984; original bottom at output y1248. Preserve the exact shapes, locations and pixels of the central original, even if that leaves the composition asymmetrical. No new aircraft, tanks, text, borders, mirror reflections, tiling, stretching or UI. All four joins must be visually seamless. The game engine overlays the original unchanged in that exact central rectangle, so any change to its registration or edge pixels will create an obvious seam.",
+  "registration_note": "Generation did not retain the requested placement. Actual registration was measured against the original; original opaque interior is drawn separately."
 }

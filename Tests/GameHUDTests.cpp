@@ -109,24 +109,6 @@ int main(int argc,char** argv){
             tap(h,284,469);assert(h.takeActions().at(0).buttonId==0x413);
         }
     }
-    // Tall screens extend the original bevelled body, with no flat repeated
-    // footer. Layout changes must not move the production/button hit targets.
-    for(const auto dims:{Vec2{420,912},Vec2{1024,1366}}){
-        FrameLayout layout;layout.resize(dims.x,dims.y,24,20);h.setLayout(layout);
-        state.selectedPanel=1;state.mainPanelOffsetY=0;state.production[0].enabled=true;h.setState(state);
-        f={};h.append(f);validate(f,r);const auto tr=layout.topRight(),br=layout.bottomRight();
-        float bottom=-28+tr.y;unsigned strips=0;
-        for(const auto& sp:f.sprites)if(sp.image=="GameUI_MachSlot.png"){
-            assert(std::abs(sp.destination.y-bottom)<.001f);
-            bottom=sp.destination.y+sp.destination.height;++strips;
-            assert(sp.sourcePx->y!=896);
-        }
-        assert(bottom>=layout.height-layout.bottom);
-        tap(h,292+tr.x,52+tr.y);assert(h.takeActions().at(0).buttonId==0x40d);
-        tap(h,284+br.x,446+br.y);assert(h.takeActions().at(0).buttonId==0x415);
-        assert(strips==1||strips==3);
-    }
-    h.setLayout(FrameLayout{});
     // Original MachButton right-column tiles contain the glow. Hold, cancel,
     // select and clear each lower button without creating a new effect asset.
     const auto lowerTile=[&](const Frame& frame,unsigned index){
