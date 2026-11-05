@@ -70,14 +70,20 @@ void GameHUD::append(Frame& f)const{
     // GuiGame::init 0x25748 gives baseBuildSlot layer 5. The gameUI
     // background and its QuickBtn children inherit GuiGame layer 9 through
     // QobBase::addChild 0x3f274. Draw the slot background before that HUD.
-    if(state_.productionVisible&&state_.selectedPanel>=1&&state_.selectedPanel<=3)
+    if(state_.productionVisible&&state_.selectedPanel>=1&&state_.selectedPanel<=3){
+        const float extra=std::max(0.f,layout_.height-layout_.top-layout_.bottom-480);
         image(f,"GameUI_MachSlot.png",{256,252});
-    // Extend only the blank metal tail of the original sidebar, at its native
-    // pixel scale. The gameplay background and terrain are never repeated.
-    if(state_.productionVisible&&layout_.height-layout_.bottom>480+layout_.top){
-        for(float y=484;y<layout_.height-layout_.bottom-layout_.top;y+=64){
-            const float h=std::min(64.f,layout_.height-layout_.bottom-layout_.top-y);
-            Sprite tail;tail.image="GameUI_MachSlot.png";tail.sourcePx=Rect{0,896,256,h*2};tail.destination={192,y,128,h};f.sprites.push_back(tail);
+        if(extra>0){
+            // Keep the resource header and lower join at their original size.
+            // Lengthen the detailed metal body, not its flat bottom pixels.
+            const auto original=f.sprites.back();f.sprites.pop_back();
+            auto section=[&](float sourceY,float sourceH,float y,float h){
+                auto sprite=original;sprite.sourcePx=Rect{0,sourceY,256,sourceH};
+                sprite.destination={192,y,128,h};f.sprites.push_back(std::move(sprite));
+            };
+            section(0,240,-28,120);
+            section(240,496,92,248+extra);
+            section(736,288,340+extra,144);
         }
     }
     move(layout_.topRight());

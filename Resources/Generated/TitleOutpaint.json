@@ -1,0 +1,23 @@
+{
+  "asset": "Generated/TitleOutpaint.png",
+  "sha256": "ceaf32b429670e474e5a3103e7a340813b79ec13ed4bb4b275d4a9b71f90e0f6",
+  "size": [
+    1024,
+    1536
+  ],
+  "tool": "built-in image_gen.imagegen",
+  "date": "2026-11-05",
+  "source": "Images/Title.jpg",
+  "source_sha256": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696",
+  "reference": "Game renderer capture of a 512x768 canvas with unchanged original title at (96,144,320,480), plus candidate outside landscape",
+  "use": "Only outside margins are drawn. The central generated rectangle (192,288,640,960), including generated lettering, is never drawn.",
+  "consumer": "Sources/Core/Presentation/Menu.cpp::expandFrame",
+  "registration": [
+    192,
+    288,
+    640,
+    960
+  ],
+  "join": "Outside original only: alpha fade of original edge colour up to 24 logical pixels vertically and 4 horizontally. No mirrored artwork.",
+  "prompt": "Use case: precise-object-edit. Repair only the OUTER MARGINS of this stitched game title illustration. Input is 512x768; output the same full composition at 1024x1536 (exactly 2x). The central original rectangle input x96..415,y144..623 (output x192..831,y288..1247) MUST remain in exactly the same place and same size, with its tanks, plane, clouds, logo and dark canyon UNCHANGED. The outer margins currently have obvious seams: bright blue strip above, bright orange fire below, incompatible side cliffs. Repaint ONLY OUTSIDE that central rectangle so clouds, rocks and darkness CONTINUE PERFECTLY from the edges of the original central picture. In particular bottom margin must stay very dark and smoky matching the almost black lower edge, NOT add a new bright fire. Top margin must continue the original cloudy white upper-left and original blue cloudy upper-right, NOT a detached new bright cloud. Match the colors on all four seams precisely. This is edge continuity repair, NOT recomposition. Do not resize or move anything in the central rectangle, do not change the logo, do not add any text, vehicles, borders, mirrored or repeated parts. Keep the full framing exactly as input."
+}

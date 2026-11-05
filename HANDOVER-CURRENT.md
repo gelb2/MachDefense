@@ -1,10 +1,14 @@
 # MachDefense 인계 — 2026-11-05
 
-현재 작업: `feat/emergency-resupply` (`95a865a`에서 분기). 승인된 반복 지원을 공통 Core와 원작 에셋 UI로 구현했다. 최신 결과·설치·남은 범위는 [긴급지원 기록](docs/evidence/emergency-resupply-20261105.md). 이후 아래 모듈화 인계는 기반 작업 기록이다. iPhone·iPad 정식·치트 설치, 양쪽 치트 자동 검사와 iPad 직접 수령을 마쳤다. iPhone 정식 앱은 사용 중인 최신 진행도를 보존했다. 지원 창 프레임 p99 16.67ms·25ms 초과0회. 보고서 게시 성공. 남은 직접 검사와 난이도 비교는 실행 기록을 따른다. develop/main에는 병합하지 않았다.
+현재 작업: `fix/hud-title-presentation`. 모듈화·오디오 수정·긴급지원은 `develop / 5bc233e`에 병합하고 원격에 반영했다. main은 변경하지 않았다. 오른쪽 HUD·타이틀 수정과 트러블슈팅 정리를 별도 브랜치에서 진행했다. C++ 3개, 5개 화면 조건 GPU·입력·전투 상태 검사, 정식 Release 시뮬레이터 빌드를 통과했다. [최신 화면·검사 기록](docs/evidence/hud-title-20261105.md). 이번 화면 수정본의 실기기 설치는 하지 않았다.
+
+[한 줄 복원 코드 TODO](docs/usability-todo.md#md-save-code-01--한-줄-복원-코드)를 추가했다. 원본 슬롯을 사용하고, 화면·버튼·입력판에 iOS/Android/웹 UI를 쓰지 않는다. 화면 밖 적 반격은 보류한다. 이동 정체·생산 HUD 개수·원본 출력음 대조 등은 TODO에 남아 있다.
+
+아래 모듈화·설치 내용은 이전 단계 기록이다. 설치된 정식·치트 앱은 긴급지원 구현본이며 사용자가 지급 동작을 확인했다.
 
 최신 후속: 사용자가 복귀 후 효과음 소실을 발견했다. OpenAL Soft 장치 pause/resume 누락을 iPad에서 재현·수정했고 샘플 진행을 포함한 오디오·전투 검사 6개가 통과했다. [효과음 복귀 수정](docs/evidence/effects-resume-20261105.md).
 
-현재 브랜치는 `refactor/shared-core-audio`다. 기존 재개발·계획을 `0243083`에 보존하고 로컬 develop의 `8109ae6`에서 분기했다. 원본 오디오·텍스처 대조 수정은 `f623eba`에 커밋했다. 이후 공용 Core·Audio 분리와 검사 결과를 `193ed2f`에 커밋했다. 최신 결과는 [모듈화 실행 기록](docs/evidence/module-work-20261105.md), 남은 과제는 [TODO](docs/usability-todo.md)를 따른다. 원격 push·main 병합·제품 배포는 하지 않았다. [통합 보고서](docs/report-site.md#최근-갱신--2026-11-05-모듈-구현검사)는 게시했다.
+모듈화 당시 브랜치는 `refactor/shared-core-audio`였다. 기존 재개발·계획을 `0243083`에 보존하고 로컬 develop의 `8109ae6`에서 분기했다. 원본 오디오·텍스처 대조 수정은 `f623eba`에 커밋했다. 이후 공용 Core·Audio 분리와 검사 결과를 `193ed2f`에 커밋했다. 최신 결과는 [모듈화 실행 기록](docs/evidence/module-work-20261105.md), 남은 과제는 [TODO](docs/usability-todo.md)를 따른다. 원격 push·main 병합·제품 배포는 하지 않았다. [통합 보고서](docs/report-site.md#최근-갱신--2026-11-05-모듈-구현검사)는 게시했다.
 
 2026-11-05 06:08 iPhone 정식 앱도 최신 모듈·오디오 수정본으로 빌드·설치했다. 기존 Stage 17·Lv.65 저장 불러오기, 전투·생산·메뉴 재개를 확인했다. 검사 후 저장을 원래 바이트로 복원하고 앱을 종료했다. [기기 검사 기록](docs/evidence/module-ipad-device-20261105.md).
 
