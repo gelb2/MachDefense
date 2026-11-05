@@ -27,6 +27,6 @@ git clone https://github.com/gelb2/MachDefense.git
 cd MachDefense
 ```
 
-게임 코드와 이미지·음원·맵을 함께 받는다. 저장소 접근 권한이 필요하다. 웹판을 직접 빌드하려면 [웹 개발 문서](../../Web/README.md)를 따른다.
+게임 코드와 이미지·음원·맵을 함께 받는다. 웹판을 직접 빌드하려면 [웹 개발 문서](../../Web/README.md)를 따른다.
 
 [게임 소개](../../README.md) · [문서 목차](README.md)

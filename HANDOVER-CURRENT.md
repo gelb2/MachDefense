@@ -1,6 +1,6 @@
-# PWA 배포 준비 — 2026-11-06
+# 웹·PWA 공개 — 2026-11-06
 
-작업 경로는 `.local/worktrees/pwa-release`, 브랜치는 `release/pwa-20261106`이다. 원격 Pages 생성이 비공개 저장소 요금제 제한(422)으로 거절됐다. 공개 전환 여부를 사용자에게 요청했다. [현재 상태](docs/current-status.md)와 [검사·다음 작업](docs/evidence/pwa-release-20261106.md)을 따른다. 아래는 이전 단계 기록이다.
+사용자 지시로 GitHub를 공개하고 [MachDefense 웹·PWA](https://gelb2.github.io/MachDefense/)를 배포했다. 작업은 `release/pwa-20261106`에서 정리해 develop→main으로 병합한다. 버전은 v0.2다. PWA 설치 식별 주소를 수정했고 운영 설치·오프라인 재실행·저장·복원 검사를 통과했다. [현재 상태](docs/current-status.md), [검사·Tauri 착수 조건](docs/evidence/pwa-release-20261106.md), [남은 과제](docs/usability-todo.md)를 따른다. 아래는 이전 단계 기록이다.
 
 # 2026-11-06 GitHub 문서 갱신
 

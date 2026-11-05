@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Private remote and protected branch checks. Called before Git transfers objects."""
+"""Approved remote and protected branch checks. Called before Git transfers objects."""
 import json, subprocess, sys
 from original_guard import ROOT, git
 
@@ -9,8 +9,8 @@ def main():
     if len(sys.argv) != 3 or sys.argv[2] not in expected:
         raise SystemExit('BLOCKED: unexpected push destination')
     info = json.loads(subprocess.check_output(['gh','repo','view','gelb2/MachDefense','--json','visibility'],cwd=ROOT))
-    if info['visibility'] != 'PRIVATE':
-        raise SystemExit('BLOCKED: repository must remain private')
+    if info['visibility'] != 'PUBLIC':
+        raise SystemExit('BLOCKED: repository visibility differs from the approved public release')
     for line in sys.stdin:
         _, sha, remote_ref, _ = line.split()
         if set(sha) == {'0'}:
@@ -21,7 +21,7 @@ def main():
             dev = git('rev-parse','develop').decode().strip()
             if len(parents) != 2 or parents[1] != dev:
                 raise SystemExit('BLOCKED: main must merge current develop')
-    print('PASS: private destination and branch flow')
+    print('PASS: approved public destination and branch flow')
 
 
 if __name__ == '__main__':

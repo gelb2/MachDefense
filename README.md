@@ -1,6 +1,6 @@
 # MachDefense
 
-[![Release v0.1](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.1)
+[![Release v0.2](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.2)
 [![iOS, iPadOS, Android, Web, PWA](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript](docs/public/media/badges/code.svg)](docs/public/architecture.md)

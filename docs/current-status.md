@@ -1,6 +1,8 @@
-# PWA 배포 준비 — 2026-11-06
+# 웹·PWA 공개 — 2026-11-06
 
-`release/pwa-20261106`에서 최신 문서와 검증한 웹 코드를 통합했다. 정식 빌드·Chrome 설치형 PWA·Chrome/WebKit 저장 및 복원 검사를 마쳤다. GitHub Pages는 비공개 저장소에 대한 요금제 제한으로 생성되지 않았으며 공개 범위 답변을 기다린다. main 병합·운영 배포·운영 재검사는 아직 하지 않았다. [실행 결과·Tauri 착수 조건](evidence/pwa-release-20261106.md).
+MachDefense 저장소를 공개하고 [웹·PWA](https://gelb2.github.io/MachDefense/)를 배포했다. 정식 빌드는 `4662f418410f8fdb`다. Mac Chrome 설치형 PWA의 설치·독립 창·오프라인 재실행, Chrome·WebKit의 저장·복원·미션 진입 검사를 통과했다. [실행 결과·Tauri 착수 조건](evidence/pwa-release-20261106.md).
+
+v0.2는 웹·PWA 첫 릴리스다. iOS·iPadOS·Android의 배포 앱은 v0.1을 유지한다. 실제 모바일 PWA 검사, Tauri Mac 파일 저장·종료 구현, Apple·Android 복원 메뉴 연결은 남았다. 아래 기록은 각 작업 당시 상태다.
 
 ## 이전 문서 갱신 기록
 

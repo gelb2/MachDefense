@@ -1,6 +1,6 @@
 # PWA 배포 검사 — 2026-11-06
 
-정식 게임 빌드: `753d96288ca122ee`. 소스는 `release/pwa-20261106`에서 기존 웹 구현과 최신 main 문서를 통합했다. 원본 패키지와 사용자 저장은 배포 입력에 없다.
+정식 게임 빌드: `4662f418410f8fdb`. 소스는 `release/pwa-20261106`에서 기존 웹 구현과 최신 main 문서를 통합했다. 원본 패키지와 사용자 저장은 배포 입력에 없다.
 
 ## 완료한 로컬 검사
 
@@ -18,7 +18,21 @@ Safari에서도 PLAY IN BROWSER를 직접 눌러 정식 게임의 타이틀 진�
 
 HeavyMach1과 같은 독립 `gh-pages` 브랜치에 정식 WebAssembly·자원·웹 실행 파일만 올린다. `Web/tools/publish.py`가 파일 허용 목록과 SHA-256을 검사한다. 원본 패키지·개인 저장·개발 문서는 이 브랜치에 포함하지 않는다.
 
-GitHub는 현재 비공개 저장소에서 Pages 생성 요청을 HTTP 422로 거절했다. 저장소 공개 또는 별도 웹 배포 저장소 선택을 사용자에게 요청했다. 운영 주소 검사와 운영 설치 검사는 아직 실행하지 않았다.
+최초 Pages 생성은 비공개 저장소 요금제 제한으로 HTTP 422를 반환했다. 사용자 공개 지시 뒤 저장소를 public으로 전환하고 gh-pages 루트를 배포했다. 운영 주소는 https://gelb2.github.io/MachDefense/ 이다.
+
+첫 운영 설치 검사에서 manifest의 `id: "./"`가 사이트 원점으로 해석돼 MachDefense 하위 경로와 달랐다. 명시 id를 제거해 브라우저가 올바른 start_url을 설치 식별자로 사용하도록 수정했다. 최초 실패 로그를 보존했다. 게임 코드·저장소 이름·저장 형식은 바꾸지 않았다. 수정 후 운영 설치 검사에서 설치 오류 0개, 독립 창·슬롯 화면·오프라인 재실행을 확인했다.
+
+## 운영 주소 검사
+
+- GitHub Pages `dfee4ab4144b8fba622e731f32a9965783e3533f` 배포 성공. 정식 빌드 `4662f418410f8fdb`.
+- 배포된 11개 파일의 크기와 SHA-256이 로컬 산출물과 모두 같다.
+- Mac Chrome 설치형 PWA: 실제 설치·독립 창·타이틀·프로필 선택·오프라인 재실행 통과.
+- Chrome 운영 정식판: 복원 취소·42,496바이트 복원·코드 재출력·잘못된 코드 거부·Stage 36 전투·복귀·GPU 재생성·오프라인 재실행·중복 창 충돌·DB 실패 보존 통과. 페이지 오류 0개.
+- WebKit도 같은 운영 게임 코드에서 위 기능 검사를 통과했다. 이후 수정은 manifest의 설치 식별자뿐이며 게임 실행 파일과 저장 코드는 같다.
+
+로컬 로그는 `.local/release-check/installed-production/installed.json`, `.local/release-check/production-final/browser-regression-chromium-normal.json`, `.local/release-check/production/browser-regression-webkit-normal.json`, `.local/release-check/production-final/deployed-files.json`이다. 사용자 저장 복사본과 복원 코드는 이 로컬 검사 폴더에만 둔다.
+
+iPhone·iPad·Galaxy의 홈 화면 설치와 실제 터치·음향·장시간 검사는 후속 과제다.
 
 ## Tauri Mac 착수 조건
 
