@@ -34,3 +34,14 @@ MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지�
 - 배포: `appgdep_6aeb8ed1a4448191983376cd23fac27b`, 상태 `succeeded`. 기존 소유자 전용 접근 유지.
 - 로컬 Chrome에서 최종 본문·표를 확인했다. 운영 주소의 Chrome은 기존 `ERR_INTERNET_DISCONNECTED`가 지속됐다. 게시 완료는 Sites의 성공 응답으로 확인했다.
 - 첫 업로드는 확장 용량 제한으로 거절됐다. macOS 부가 메타데이터를 제외한 ustar로 다시 포장해 성공했다. 최종 확장 크기는 267,757,568바이트다. 기존 페이지·자료를 보존했다.
+
+## 긴급지원 구현과 실기기 검사 — 2026-11-05
+
+[긴급지원 보고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#emergency-resupply-20261105)에 반복 지급 산식, 공통 코드, 실제 GPU 캡처, iPhone·iPad 프레임 수치, 직접 수령·저장 보존 결과와 남은 검사를 추가했다.
+
+- 사이트 소스: `7e02d5b4e2a4f85e3dc900bf1a20e11bac0b0e9d`
+- 배포: `appgdep_6aebd9a67af4819190b881f074f61b43`
+- 버전: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_1124e23f1df48191ba02a78157d7c82f`
+- Sites 응답: succeeded. 기존 소유자 전용 공개 범위를 유지했다.
+- 최초 업로드는 용량 제한으로 거절됐다. 새 PNG 두 장을 무손실 WebP로 바꾸고 RGBA 픽셀 일치를 확인한 뒤 재게시했다. 기존 보고서·게임 자원은 삭제하지 않았다.
+- 최종 HTML 문구·이미지 연결을 확인했다. 이 게시 직전에는 Mac 창과 브라우저가 도구에 나타나지 않아 최종 브라우저 화면 검사는 하지 못했다.

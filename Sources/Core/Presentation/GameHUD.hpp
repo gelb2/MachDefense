@@ -28,6 +28,7 @@ struct GameHUDState {
     float mainPanelOffsetY=0; // 0 normal, 260 at original phone base-upgrade endpoint.
     float playerBaseHealth=1, enemyBaseHealth=1, musicVolume=.8f, effectsVolume=.8f;
     bool paused=false, productionVisible=true, upgradeMode=false, cellUpgradeAvailable=false;
+    bool supportAvailable=false;
     bool baseUpgradeOpen=false; // Original turnOffButtons(0x413).
     unsigned selectedPanel=1; // GuiGame::setUiType: 1 build, 2 special, 3 formation
     std::vector<ProductionRow> production;

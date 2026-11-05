@@ -15,6 +15,8 @@ set(MACHDEFENSE_CORE_SOURCES
     ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/BattleClock.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Bipod.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Combat.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/EmergencySupport.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Presentation/SupportDialog.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Economy.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Formation.cpp
     ${CMAKE_CURRENT_LIST_DIR}/../Sources/Core/Simulation/Loot.cpp
