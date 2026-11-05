@@ -1,3 +1,7 @@
+# 2026-11-06 GitHub 문서 갱신
+
+작업 브랜치 `docs/public-manuscripts-20261106`는 develop `ae08521`에서 분기했다. README와 개발자의 변, 기능·기술·설치·검사·트러블슈팅·크레딧을 사용자 정정에 맞춰 작성했다. 게임 소스·자원·빌드 설정은 수정하지 않았다. 웹·PWA 구현은 별도 `feat/web-pwa`이며 이 문서 병합에 포함하지 않는다. [방문자 문서](docs/public/README.md), [Sass 집필 자료](docs/editorial/sass-publication-guide.md), [전체 원고](docs/editorial/github-manuscripts-20261106.md).
+
 # 2026-11-06 iPhone HUD 상단 후속
 
 현재 수정은 `fix/iphone-hud-top`이며 develop `0835b5a`에서 분기했다. 원본 HUD의 상단 조각으로 iPhone의 노출 영역만 덮는다. iPad 화면을 바꾸지 않는 조건이다. 시뮬레이터 화면·터치 검사와 iPad HUD 픽셀 대조를 마쳤고 iPhone Release 정식 앱을 설치했다. 저장은 설치 전후 바이트가 같다. Device Hub의 게임 화면 입력이 진입으로 이어지지 않아 실기기 직접 생산·메뉴 검사는 남았다. [검사 기록](docs/evidence/iphone-hud-top-20261106.md), [남은 월드 표시 과제](docs/usability-todo.md#iphone-우측-hud-상단--2026-11-06). 사용자가 iPhone 설치본의 덮임을 확인하고 develop 병합을 지시했다. 현재 남은 작업은 TODO 최상단 요약을 따른다.

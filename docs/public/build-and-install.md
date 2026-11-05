@@ -1,38 +1,37 @@
 # 설치와 실행
 
-Xcode나 Android Studio에서 프로젝트를 열고 실행할 수 있다. 터미널 빌드가 익숙하지 않다면 IDE에서 기기와 실행 대상을 선택한다.
+v0.1과 main의 앱은 iOS·iPadOS·Android용이다. 아래 웹·PWA와 복원 코드 설명은 `feat/web-pwa` 개발 브랜치의 구현을 다룬다.
+
+Xcode나 Android Studio에서 프로젝트를 열고 실행할 수 있다. IDE에서 기기와 실행 대상을 선택하면 된다.
 
 ## 소스 받기
 
 ```sh
 git clone https://github.com/gelb2/MachDefense.git
 cd MachDefense
-git switch --detach v0.1
 ```
 
-이 저장소는 현재 비공개다. 접근 권한이 있는 계정으로 clone한다. 게임에 필요한 코드·이미지·음원·맵을 저장소에 포함했다. Git LFS와 원본 게임 패키지는 이 버전의 빌드에 필요하지 않다.
+현재 저장소는 비공개이므로 접근 권한이 있는 계정으로 받는다. v0.1은 Apple·Android 릴리스다. 웹·PWA는 `feat/web-pwa` 브랜치에 있다. 게임 코드와 이미지·음원·맵을 함께 받는다.
 
 ## iPhone·iPad
 
-Apple Silicon Mac과 Xcode를 사용한다. 프로젝트의 최소 배포 대상은 iOS·iPadOS 15.0이다.
-
-1. `Apple/MachDefense.xcworkspace`를 연다.
-2. 일반 앱은 `MachDefense`, 치트 앱은 `MachDefenseCheat` 스킴을 고른다.
-3. 시뮬레이터 또는 연결된 iPhone·iPad를 고른다.
-4. 실기기는 Signing & Capabilities에서 자신의 개발 팀을 설정하고 실행한다.
-
-일반·치트 앱의 저장은 각각 보존된다. 개발자 신뢰나 개발자 모드를 요구하면 기기 설정에서 처리한다. 워크스페이스 재생성 등 상세 빌드 절차는 [개발 환경](../development.md)에 있다.
+Apple Silicon Mac의 Xcode에서 `Apple/MachDefense.xcworkspace`를 연다. 일반 앱은 `MachDefense`, 치트 앱은 `MachDefenseCheat` 스킴을 선택한다. 시뮬레이터나 연결한 기기를 고른다. 실기기에서는 자신의 개발 팀으로 서명한다. 최소 배포 대상은 iOS·iPadOS 15.0이다.
 
 ## Android
 
-Android 8(API 26) 이상 arm64를 대상으로 한다. 실제 검사한 기기는 Galaxy SM-S731N과 API 36 arm64 에뮬레이터다.
+[Releases](https://github.com/gelb2/MachDefense/releases/tag/v0.1)의 APK를 설치하거나 Android Studio에서 `Android/`를 연다. 빌드 환경은 SDK36·NDK26.3.11579264·CMake3.22.1·JDK17이다. `normalDebug` 또는 `cheatDebug`와 연결한 기기를 선택한다. Android8(API26) 이상 arm64를 대상으로 한다.
 
-**[v0.1 다운로드](https://github.com/gelb2/MachDefense/releases/tag/v0.1)**에서 일반 APK 또는 치트 APK를 받는다. 기기에서 파일을 열고, 사용한 브라우저나 파일 앱의 설치 허용을 켠 뒤 설치한다. 두 앱은 개발용 서명본이다.
+## 웹·PWA
 
-직접 빌드하려면 Android Studio에서 저장소의 `Android/` 폴더를 연다. SDK 36·NDK 26.3.11579264·CMake 3.22.1·JDK 17을 사용한다. `normalDebug` 또는 `cheatDebug` 변형과 기기를 선택해 실행한다. [Gradle 명령과 파일 경로](../../Android/README.md).
+`feat/web-pwa`에서 Emscripten6.0.13 SDK 환경을 불러온 뒤 실행한다.
 
-## 저장
+```sh
+emcmake cmake -S Web -B build/web-normal -DMD_WEB_CHEAT=OFF -DCMAKE_BUILD_TYPE=Release
+cmake --build build/web-normal -j6
+python3 Web/tools/package.py build/web-normal/dist
+python3 -m http.server 8941 --bind 127.0.0.1 --directory build/web-normal/dist
+```
 
-프로필 슬롯에 미션 진행·크레딧·누적 점수·장비·강화·특수기술 잔량을 저장한다. Apple과 Android는 같은 저장 형식을 쓴다. 아이폰 저장을 Galaxy 일반 앱으로 옮겨 재실행까지 확인했다. 현재 이전은 개발 도구로 수행하며, 플레이어가 코드 한 줄로 옮기는 기능은 후속 과제다.
+Mac 브라우저에서 `http://127.0.0.1:8941/`를 연다. 자원 다운로드가 끝나면 PLAY IN BROWSER로 시작한다. 다른 기기에서 PWA로 설치하려면 그 기기에서 접속할 수 있는 HTTPS 배포 주소가 필요하다. 공개 게임 배포는 아직 하지 않았다. [웹 빌드와 검사](https://github.com/gelb2/MachDefense/blob/feat/web-pwa/Web/README.md)
 
-[게임 조작](gameplay.md) · [검사 결과](validation.md) · [README](../../README.md)
+[게임 소개](../../README.md) · [문서 목차](README.md)

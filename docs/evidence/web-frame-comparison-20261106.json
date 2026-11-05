@@ -1,0 +1,17 @@
+{
+  "frames": 144000,
+  "floatValues": 161445233,
+  "changedValues": 2162,
+  "differentFrames": 728,
+  "nonFloatMetadataEqual": true,
+  "maxAbsoluteDifference": 6.103515625e-05,
+  "maxDifferenceAt": {
+    "frame": 34459,
+    "condition": 38,
+    "tick": 259,
+    "field": 393,
+    "native": -523.1083984375,
+    "wasm": -523.1083374023438
+  },
+  "nonFiniteDifferences": 0
+}

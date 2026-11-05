@@ -1,5 +1,7 @@
 # 문서 목차
 
+[방문자용 문서 전체](public/README.md) · [추가 기능과 기획](public/features.md) · [개발 과정](public/development-history.md) · [트러블슈팅 원고](public/troubleshooting.md)
+
 ## 게임을 보러 온 독자
 
 - [게임 소개](../README.md)
