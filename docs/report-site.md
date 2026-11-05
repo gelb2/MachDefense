@@ -1,5 +1,10 @@
 # 보고와 Sass 전달
 
+## 저장소 원고와 운영 사이트의 차이 — 2026-11-06
+
+이번 문서 위생점검은 저장소 문서·원고를 수정했다. 운영 사이트는 재배포하지 않았다. 다음 게시 때 타이틀 경계 미해결, HUD 에셋 보류, 월드 누락·생산 목록·10레벨 확장 TODO와 [문서 점검 결과](evidence/project-hygiene-20261106.md)를 같은 MachDefense 페이지 및 다운로드에 반영한다. 아래 배포 기록은 각 게시 당시 결과다.
+
+
 MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지를 계속 갱신한다.
 
 - 사이트: https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site

@@ -1,4 +1,27 @@
-# MachDefense 인계 — 2026-11-05
+# MachDefense 인계 — 2026-11-06
+
+## 다음 작업
+
+[현재 상태](docs/current-status.md), [TODO](docs/usability-todo.md), [정본](docs/canonical.md), [코드 대조표](docs/code-document-map.md)를 읽는다. 최신 사용자 지시가 과거 인계보다 우선한다.
+
+- HUD 에셋은 현재 설치 모습으로 유지한다. iPhone 셀 표시 위 월드 누락과 전체 해금 유닛 생산 접근·스크롤·순서 저장을 조사한다. 사용자 기억상 iPad에는 위쪽 깨짐이 없다. 시뮬레이터 동일 조건 비교는 미실행이다.
+- 타이틀은 희미한 흰 선이 남았다는 후속 지적이 있으므로 미완료다. 기존 자동검사 통과로 시각적 결함을 닫지 않는다.
+- 기지·포탑·필살기 10레벨 확장, 그 후 외형·음향·효과 연구와 한 줄 복원 코드는 TODO다. 개발자의 변 글감은 TODO의 원문을 보존한다. 11월6일 추가 문장과 소련 무명용사 위령비 참고도 기록했다.
+- 사용자가 iOS/iPadOS 업데이트 중이다. 기기 앱·저장을 조작하지 않는다. 이후 재검사에는 업데이트 후 OS 버전을 기록한다.
+
+## Android 준비 점검 — 후속
+
+[Android 준비 점검](docs/android-readiness-20261106.md)을 읽는다. Core·Audio 수정 없이 Android NDK 컴파일과 OpenAL Soft 전체 링크를 통과했다. Apple·공용 소스·자원 등 2,978개 보호 파일 변경은 0개다. Android 앱은 미구현이며 이번에는 브랜치를 만들거나 기기를 조작하지 않았다. 기존 동기 저장 계약은 Android에서도 유지한다. 웹 비동기 저장을 이유로 Apple API를 미리 바꾸지 않는다.
+
+## Git·배포
+
+감사 시작 HEAD `410fdb8`, 브랜치 `fix/hud-title-presentation`. 로컬 develop 및 origin/develop `5bc233e`, 로컬 main `6b3ad5a`. 문서 감사 이후 브랜치 확인에서 fetch했고 작업 브랜치·develop·main은 각각 원격 추적 브랜치와 일치했다. 병합·태그·push·사이트 재게시를 하지 않았다. 마지막 기기 설치는 긴급지원 구현본이다. 현재 작업 브랜치의 타이틀 변경은 미설치다.
+
+`Apple/iOS/MachDefense.xcodeproj/xcshareddata/xcschemes/MachDefense.xcscheme`의 기존 GUI 형식 변경은 보존했다. 문서 감사 수정과 섞어 커밋하지 않는다. [감사 결과](docs/evidence/project-hygiene-20261106.md)에 검사 범위와 남은 일을 기록한다.
+
+## 이전 작업 기록
+
+아래 기록은 당시 상태와 근거를 보존한 것이다. 현재 작업 순서·설치 상태는 위 문서가 소유한다.
 
 현재 작업: `fix/hud-title-presentation`. 모듈화·오디오 수정·긴급지원은 `develop / 5bc233e`에 병합·push했다. main은 변경하지 않았다. **사용자의 후속 지시로 HUD 세로 늘리기 시안을 철회했다.** GameHUD와 관련 검사는 `5bc233e`로 되돌렸으며 HUD는 재작업 투두다. 타이틀 그림의 직선 경계는 수정했고 C++ 3개·5개 화면 조건의 GPU·입력 검사를 통과했다. [작업 기록](docs/evidence/hud-title-20261105.md). 이번 수정은 `c494b28`에 커밋·push했다. [보고서의 HUD 상태와 타이틀 화면](docs/report-site.md#후속-갱신--2026-11-05-hud-롤백타이틀-경계-제거)도 갱신·게시했다. 이번 수정본은 아직 실기기에 설치하지 않았다.
 

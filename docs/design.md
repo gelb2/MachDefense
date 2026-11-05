@@ -8,7 +8,7 @@
 | Modules | C++ 코어 라이브러리·공용 에셋 번들·외부 라이브러리 |
 | Resources | 패키지에서 분리해 준비한 에셋·데이터와 명세 |
 | Compatibility | 원본 비교 실행 도구. IPA·실행 바이너리는 외부에 보관 |
-| Apple | 하나의 workspace와 하위 iOS/iPadOS·native macOS 프로젝트. Catalyst 제외 |
+| Apple | 현재 iPhone/iPad 유니버설 앱과 Modules 프로젝트를 연결한 workspace. native macOS 앱 미구현, Catalyst 제외 |
 | Android | Gradle·NDK·Kotlin OS 연결과 플랫폼 생명주기 |
 | Web | 웹 런타임·저장·입력·GPU 복구 |
 | Desktop/Tauri | 웹 빌드를 소비하는 데스크톱 실행기 |
@@ -27,3 +27,7 @@
 ## 긴급지원 모듈 — 2026-11-05
 
 `Simulation/EmergencySupport`는 전투 시간과 현재 셀 용량·연구값을 받아 30/45/60초 반복 지원을 계산한다. `Session/GameSession`은 수령액을 기존 슬롯 크레딧과 World의 셀에 반영한다. `Presentation/SupportDialog`는 원작 CommonUI·SysMenu_Btn·Common_Btn_CLOSE·SpriteFont·Button으로 창을 그리고 입력을 처리한다. Apple 전용 UI나 새 저장 파일은 없다. 지원 상태는 전투가 끝나면 사라지며 수령한 크레딧은 기존 저장 지점에서 보존한다. [산식](emergency-resupply-economy.md) · [검사](evidence/emergency-resupply-20261105.md).
+
+## Android 착수 경계 — 2026-11-06
+
+기존 Core·Audio의 NDK 컴파일과 OpenAL Soft 링크를 통과했다. Android 실행기·렌더러·오디오 출력·저장·생명주기는 `Android/`에 추가한다. Apple·공용 소스·자원·루트 빌드 파일을 변경하지 않는 조건으로 진행한다. [HeavyMach 비교와 실제 검사](android-readiness-20261106.md).

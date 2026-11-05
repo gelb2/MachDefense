@@ -2,7 +2,7 @@
 
 원본 텍스처 크롭·알파·필터·레이어·부품 조립·애니메이션·버튼 상태를 분석한다. 게임이 실행된 뒤 버튼은 원작 에셋과 게임 렌더·입력 방식으로 구현한다. UIKit/Android View/DOM으로 게임 버튼을 분리하지 않는다. 텍스트 입력 등 원작이 해결하지 못한 OS 기능만 플랫폼 경계에 둔다. GPU context 소실 때 자원을 복원하며 게임 세션을 초기화하지 않는다.
 
-현재 소스판은 [World](../Sources/Core/Simulation/World.cpp)의 부품·투사체·효과와 [GameHUD](../Sources/Core/Presentation/GameHUD.cpp)의 원본 UI 에셋을 공용 Frame으로 모은다. [Apple 렌더러](../Sources/Platform/Apple/MDRenderer.mm)가 GPU에 제출한다. 텍스처는 재사용한다. 처음 쓰는 자원 준비 지연은 [성능 후속 과제](usability-todo.md)에 남아 있다. 원본과의 레이어·방향·레이더 대조 결과는 [비교 기록](evidence/port-source-parity-20261104.md)에 추가한다.
+현재 소스판은 [WorldPresentation](../Sources/Core/Presentation/WorldPresentation.cpp)의 부품·투사체·효과와 [GameHUD](../Sources/Core/Presentation/GameHUD.cpp)의 원본 UI 에셋을 공용 Frame으로 모은다. [Apple 렌더러](../Sources/Platform/Apple/MDRenderer.mm)가 GPU에 제출한다. 텍스처는 재사용한다. 처음 쓰는 자원 준비 지연은 [성능 후속 과제](usability-todo.md)에 남아 있다. 원본과의 레이어·방향·레이더 대조 결과는 [비교 기록](evidence/port-source-parity-20261104.md)에 추가한다.
 
 현재 포팅판의 적·아군 유닛 자글거림은 [MD-ART-01](port-observations-20261104.md)로 추적한다. 판본별 에셋·기기 선택·합성 해상도·필터를 대조한 뒤 재개발 렌더 기준을 확정한다.
 
@@ -14,4 +14,4 @@
 
 ## HUD·타이틀 확장 — 2026-11-05
 
-오른쪽 HUD의 금속 몸통을 세로로 늘린 안은 사용자 지시로 철회했다. GameHUD는 `5bc233e` 상태이며 재작업 과제다. 타이틀 원본 파일·로고·버튼은 보존한다. 바깥 그림을 연결할 때 한 픽셀 가장자리를 늘려 선처럼 만들지 않는다. 접합부는 실제 인접 그림을 겹쳐 합성하고 시뮬레이터 화면에서 경계를 확인한다. [작업·후속 검사](evidence/hud-title-20261105.md).
+오른쪽 HUD의 금속 몸통을 세로로 늘린 안은 사용자 지시로 철회했다. GameHUD는 `5bc233e` 상태이며 에셋 재작업은 보류했다. 생산 목록 접근 개선과 HUD 위 월드 누락 조사를 우선한다. 사용자가 타이틀의 희미한 흰 경계를 확인했으므로 타이틀은 미해결이다. 타이틀 원본 파일·로고·버튼은 보존한다. 바깥 그림을 연결할 때 한 픽셀 가장자리를 늘려 선처럼 만들지 않는다. 접합부는 실제 인접 그림을 겹쳐 합성하고 시뮬레이터 화면에서 경계를 확인한다. [작업·후속 검사](evidence/hud-title-20261105.md).

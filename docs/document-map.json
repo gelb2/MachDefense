@@ -7,7 +7,9 @@
     "docs/restoration-contract.md",
     "docs/design.md",
     "docs/current-status.md",
-    "docs/port-observations-20261104.md"
+    "docs/port-observations-20261104.md",
+    "docs/usability-todo.md",
+    "docs/code-document-map.md"
   ],
   "domains": {
     "restoration": [
@@ -39,7 +41,9 @@
       "docs/evidence/menu-layout-20261104.md",
       "docs/troubleshooting.md",
       "docs/evidence/source-cheat-campaign-20261104.md",
-      "docs/evidence/port-source-parity-20261104.md"
+      "docs/evidence/port-source-parity-20261104.md",
+      "docs/evidence/viewport-20261105.md",
+      "docs/evidence/hud-title-20261105.md"
     ],
     "combat": [
       "docs/game-calculation-policy.md",
@@ -49,11 +53,15 @@
       "docs/evidence/source-session-validation-20261104.md",
       "docs/troubleshooting.md",
       "docs/evidence/source-cheat-campaign-20261104.md",
-      "docs/evidence/port-source-parity-20261104.md"
+      "docs/evidence/port-source-parity-20261104.md",
+      "docs/emergency-resupply-economy.md",
+      "docs/evidence/base-upgrade-rates-20261105.md"
     ],
     "lifecycle": [
       "docs/runtime-policy.md",
-      "docs/stage-transition-contract.md"
+      "docs/stage-transition-contract.md",
+      "docs/evidence/audio-session-20261105.md",
+      "docs/evidence/effects-resume-20261105.md"
     ],
     "apple": [
       "docs/design.md",
@@ -76,7 +84,8 @@
       ".agents/skills/port-machdefense-android/SKILL.md",
       ".agents/skills/debug-machdefense-android/SKILL.md",
       "Android/README.md",
-      "docs/evidence/android-native-20261106.md"
+      "docs/evidence/android-native-20261106.md",
+      "docs/android-readiness-20261106.md"
     ],
     "writing": [
       "docs/report-site.md",
@@ -107,6 +116,33 @@
       "docs/evidence/module-work-20261105.md",
       "Modules/README.md",
       "docs/development.md"
+    ],
+    "hygiene": [
+      "docs/README.md",
+      "docs/development.md",
+      "docs/repository-management.md",
+      "Modules/README.md",
+      "Apple/README.md",
+      "tools/document_contract.py",
+      "tools/check_modules.py",
+      "docs/evidence/project-hygiene-20261106.md"
+    ],
+    "production": [
+      "docs/game-calculation-policy.md",
+      "docs/coordinate-policy.md",
+      "docs/rendering-policy.md",
+      "Sources/Core/Presentation/GameHUD.cpp",
+      "Sources/Core/Session/GameSession.cpp",
+      "Tests/GameHUDTests.cpp",
+      "docs/evidence/base-upgrade-rates-20261105.md"
+    ],
+    "progress": [
+      "docs/game-calculation-policy.md",
+      "docs/runtime-policy.md",
+      "Sources/Core/Session/SaveData.hpp",
+      "Sources/Core/Session/SaveData.cpp",
+      "Tests/SaveDataTests.cpp",
+      "Tests/SaveFailureTests.cpp"
     ]
   }
 }

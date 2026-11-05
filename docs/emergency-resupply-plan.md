@@ -1,6 +1,6 @@
 # 긴급지원 구현 계획 — 2026-11-05
 
-상태: 사용자 승인 금액으로 `feat/emergency-resupply`에서 구현했다. `refactor/shared-core-audio`의 `95a865a`에서 분기했다. [지급 산식](emergency-resupply-economy.md)과 [실행 검사](evidence/emergency-resupply-20261105.md)를 함께 읽는다. 모듈화 브랜치에 검증 후 합치고 develop 병합 후보를 만든다. develop/main에서 직접 구현하지 않는다.
+상태: 사용자 승인 금액으로 `feat/emergency-resupply`에서 구현했다. `refactor/shared-core-audio`의 `95a865a`에서 분기했다. [지급 산식](emergency-resupply-economy.md)과 [실행 검사](evidence/emergency-resupply-20261105.md)를 함께 읽는다. 모듈화 브랜치를 거쳐 `develop / 5bc233e`에 병합·push했다. main에는 아직 병합하지 않았다. develop/main에서 직접 구현하지 않는다.
 
 ## 게임 규칙 — 반복 지원
 

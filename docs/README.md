@@ -13,6 +13,8 @@
 
 ## 개발 문서
 
+처음에는 [현재 상태](current-status.md) → [정본·우선순위](canonical.md) → [TODO](usability-todo.md)를 읽는다. 구현 작업에는 [문서와 코드 대조](code-document-map.md)를 사용한다. [최근 문서 감사](evidence/project-hygiene-20261106.md).
+
 - [canonical](canonical.md)
 - [coordinate-policy](coordinate-policy.md)
 - [current-status](current-status.md)

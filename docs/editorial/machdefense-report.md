@@ -1,5 +1,12 @@
 # MachDefense 판본 비교와 복원 진행
 
+## 2026-11-06 후속 상태
+
+HUD 세로 늘리기는 철회했으며 현재 설치된 HUD 그림은 유지한다. 타이틀에는 사용자가 희미한 흰 경계를 확인해 추가 수정이 남았다. iPhone 셀 표시 위 월드 누락과 생산 HUD 전체 유닛 접근을 다음 과제로 조사한다. 기지·포탑·필살기 10레벨 확장과 한 줄 복원 코드는 미구현이다. [현재 TODO](../usability-todo.md) · [문서 점검](../evidence/project-hygiene-20261106.md).
+
+이 절과 최신 TODO는 저장소 원고에 반영했다. 이번 위생점검에서 운영 보고 사이트를 재배포하지 않았다. 아래는 각 작업 당시의 보고 기록이다.
+
+
 2026-11-04 · 위메이드판 비교와 C++ 소스 재개발
 
 ## 정식 앱 피드백 수정과 iPad 검사 {#feedback-20261104}
@@ -85,7 +92,7 @@ HeavyMach 1과 오류 개수를 같은 범위로 집계한 자료는 없다. 현
 - iPhone 정식 앱에 후속 수정본을 반영하고 같은 행동을 확인한다.
 - 화면 확장은 원본 기능 대조 뒤 진행한다. 현재 레터박스는 남아 있다.
 
-[원본 대조와 검사 절차 점검 전문](machdefense-process-audit.md) · [핵폭탄 계산 기록](machdefense-nuclear-damage.md) · [지형·이동 대조 기록](machdefense-terrain-audit.md)
+[원본 대조와 검사 절차 점검 전문](../evidence/restoration-process-audit-20261104.md) · [핵폭탄 계산 기록](../evidence/nuclear-damage-20261104.md) · [지형·이동 대조 기록](../evidence/terrain-motion-audit-20261104.md)
 
 ## 소스 재개발 진행
 
