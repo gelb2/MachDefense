@@ -104,7 +104,36 @@ int main(int argc,char** argv){
         Host resizedHost;auto resizedSave=SaveData::empty(789);Menu resized(r,resizedHost,resizedSave);
         FrameLayout layout;layout.resize(dims.x,dims.y,24,20);resized.setLayout(layout);
         const auto c=layout.center();const float buttonY=layout.height-layout.bottom-30;
-        tap(resized,layout.width/2,layout.height/2);
+        // Expanded art must never replace, mirror or stretch the original title.
+        unsigned titles=0,extensions=0;
+        for(const auto& sp:resized.frame().sprites){
+            if(sp.image=="Title.jpg"){
+                ++titles;assert(!sp.flipX&&!sp.flipY);
+                assert(sp.destination.x==c.x&&sp.destination.y==c.y);
+                assert(sp.destination.width==320&&sp.destination.height==480);
+                assert(sp.sourcePx->width==640&&sp.sourcePx->height==960);
+            }else if(sp.image=="Generated/TitleOutpaint.png"){
+                ++extensions;const auto d=sp.destination;
+                assert(d.x+d.width<=c.x||d.x>=c.x+320||d.y+d.height<=c.y||d.y>=c.y+480);
+                const auto crop=*sp.sourcePx;
+                assert(crop.width>1&&crop.height>1&&!sp.flipX&&!sp.flipY);
+                assert(crop.x>=0&&crop.y>=0&&crop.x+crop.width<=1024&&crop.y+crop.height<=1536);
+            }
+        }
+        assert(titles==1&&extensions>0);
+        const auto meshCount=resized.frame().meshes.size();
+        for(int tick=0;tick<120;++tick)resized.tick();
+        assert(resized.frame().meshes.size()==meshCount); // No per-frame mesh accumulation.
+        for(const auto& mesh:resized.frame().meshes)for(const auto& v:mesh.vertices)
+            assert(v.position.x<=c.x||v.position.x>=c.x+320||v.position.y<=c.y||v.position.y>=c.y+480);
+
+        for(float y=0;y<layout.height;y+=8)for(float x=0;x<layout.width;x+=8){
+            bool covered=false;for(const auto& sp:resized.frame().sprites){const auto d=sp.destination;
+                covered|=x>=d.x&&x<d.x+d.width&&y>=d.y&&y<d.y+d.height;}
+            assert(covered);
+        }
+
+        tap(resized,layout.width/2,layout.height/2);assert(resized.frame().meshes.empty());
         tap(resized,240+c.x,buttonY);assert(resizedSave.active(0)&&resizedHost.writes==1);
         tap(resized,160+c.x,buttonY);tap(resized,208+c.x,295+c.y);assert(resizedSave.active(0));
         tap(resized,160+c.x,140+c.y);assert(resized.screen()==Menu::Screen::missions);

@@ -139,7 +139,7 @@ void Menu::drawDialog(){
     if(confirm){dialogButtons_[1].bounds=centered({208,185},64,32);sprite("Common_Btn_NO.png",{208,185},64,32,dialogButtons_[1].pressed()?1:0,2);}
 }
 void Menu::rebuild(){
-    frame_.sprites.clear();frame_.logicalWidth=320;frame_.logicalHeight=480;
+    frame_.sprites.clear();frame_.meshes.clear();frame_.logicalWidth=320;frame_.logicalHeight=480;
     if(screen_==Screen::title){
         sprite("Title.jpg",{160,240},320,480);
         if(titleVisible_)sprite("Main_TapToStart.png",{160,208},128,32);
@@ -197,38 +197,56 @@ void Menu::expandFrame(){
     auto original=std::move(frame_.sprites);frame_.sprites.clear();
     frame_.logicalWidth=layout_.width;frame_.logicalHeight=layout_.height;
     auto piece=[&](const Sprite& src,Rect pixels,Rect dest){auto s=src;s.sourcePx=pixels;s.destination=dest;frame_.sprites.push_back(std::move(s));};
-    // Nine-slice only the existing background. Labels and buttons retain their
-    // original proportions. No OS view or replacement artwork is introduced.
-    auto panel=[&](const Sprite& src,bool title){
+    // Original menu labels and buttons retain their proportions.
+    auto panel=[&](const Sprite& src){
         const auto sz=resources_.imageSize(src.image);
-        const float x=title?center.x:top.x,y=title?center.y:top.y;
-        const float end=title?y+480:layout_.height-layout_.bottom;
+        const float x=top.x,y=top.y,end=layout_.height-layout_.bottom;
         const float xs[]={0,x,x+320,layout_.width};
-        if(title){
-            for(int col=0;col<3;++col){if(xs[col+1]<=xs[col])continue;
-                const float sx=col==2?sz.x-1:0,sw=col==1?sz.x:1;
-                auto edge=src;edge.flipX=col!=1;edge.flipY=true;
-                // Reflect cloud/fire edge regions, never the baked-in title lettering.
-                piece(edge,{sx,0,sw,64},{xs[col],0,xs[col+1]-xs[col],y});
-                edge.flipY=false;piece(edge,{sx,0,sw,sz.y},{xs[col],y,xs[col+1]-xs[col],480});
-                edge.flipY=true;piece(edge,{sx,sz.y-120,sw,120},{xs[col],end,xs[col+1]-xs[col],layout_.height-end});
-            }
-        }else{
-            // Header and footer keep their height; extend the unlabelled metal body.
-            const float ys[]={0,y,y+106,end-78,end,layout_.height};
-            const float sy[]={0,0,212,804,sz.y,sz.y};
-            for(int col=0;col<3;++col)for(int row=0;row<5;++row){
-                if(xs[col+1]<=xs[col]||ys[row+1]<=ys[row])continue;
-                const float sx=col==0?0:col==1?0:sz.x-1,sw=col==1?sz.x:1;
-                const float sourceY=row==0?0:row==4?sz.y-1:sy[row];
-                const float sourceH=(row==0||row==4)?1:sy[row+1]-sy[row];
-                piece(src,{sx,sourceY,sw,sourceH},{xs[col],ys[row],xs[col+1]-xs[col],ys[row+1]-ys[row]});
-            }
+        // Header and footer keep their height; extend the unlabelled metal body.
+        const float ys[]={0,y,y+106,end-78,end,layout_.height};
+        const float sy[]={0,0,212,804,sz.y,sz.y};
+        for(int col=0;col<3;++col)for(int row=0;row<5;++row){
+            if(xs[col+1]<=xs[col]||ys[row+1]<=ys[row])continue;
+            const float sx=col==0?0:col==1?0:sz.x-1,sw=col==1?sz.x:1;
+            const float sourceY=row==0?0:row==4?sz.y-1:sy[row];
+            const float sourceH=(row==0||row==4)?1:sy[row+1]-sy[row];
+            piece(src,{sx,sourceY,sw,sourceH},{xs[col],ys[row],xs[col+1]-xs[col],ys[row+1]-ys[row]});
         }
     };
     for(auto s:original){
-        if(s.image=="Title.jpg"){panel(s,true);continue;}
-        if(s.image=="iPon_SelSlot_BG@2x.jpg"||s.image=="iPon_SelStage_Fore@2x.png"){panel(s,false);continue;}
+        if(s.image=="Title.jpg"){
+            // The generated canvas supplies only the outside landscape. The
+            // original 640x960 title, including its logo, is drawn unchanged.
+            // Registration is measured against the original; see provenance.
+            const float sx[]={192-std::min(192.f,center.x*2),192,832,832+std::min(192.f,(layout_.width-center.x-320)*2)};
+            const float sy[]={288-std::min(288.f,center.y*2),288,1248,1248+std::min(288.f,(layout_.height-center.y-480)*2)};
+            const float dx[]={0,center.x,center.x+320,layout_.width};
+            const float dy[]={0,center.y,center.y+480,layout_.height};
+            auto edge=s;edge.image="Generated/TitleOutpaint.png";
+            for(int row=0;row<3;++row)for(int col=0;col<3;++col){
+                if((row==1&&col==1)||dx[col+1]<=dx[col]||dy[row+1]<=dy[row])continue;
+                piece(edge,{sx[col],sy[row],sx[col+1]-sx[col],sy[row+1]-sy[row]},
+                           {dx[col],dy[row],dx[col+1]-dx[col],dy[row+1]-dy[row]});
+            }
+            // Fade the original edge colour into the outpaint outside the
+            // original rectangle. This avoids a hard exposure seam without
+            // repainting the original illustration or repeating its objects.
+            auto join=[&](Vec2 a,Vec2 b,Vec2 outward,Vec2 uvA,Vec2 uvB){
+                if(outward.x==0&&outward.y==0)return;
+                TextureMesh mesh;mesh.image="Title.jpg";mesh.beforeSpriteIndex=frame_.sprites.size();
+                mesh.vertices={{{a.x+outward.x,a.y+outward.y},uvA,{1,1,1,0}},
+                               {{b.x+outward.x,b.y+outward.y},uvB,{1,1,1,0}},
+                               {a,uvA,{1,1,1,1}},{b,uvB,{1,1,1,1}}};
+                frame_.meshes.push_back(std::move(mesh));
+            };
+            const float left=center.x,right=center.x+320,topY=center.y,bottomY=center.y+480;
+            join({left,topY},{right,topY},{0,-std::min(24.f,topY)},{0,.5f/960},{1,.5f/960});
+            join({left,bottomY},{right,bottomY},{0,std::min(24.f,layout_.height-bottomY)},{0,959.5f/960},{1,959.5f/960});
+            join({left,topY},{left,bottomY},{-std::min(4.f,left),0},{.5f/640,0},{.5f/640,1});
+            join({right,topY},{right,bottomY},{std::min(4.f,layout_.width-right),0},{639.5f/640,0},{639.5f/640,1});
+            piece(s,{0,0,640,960},{center.x,center.y,320,480});continue;
+        }
+        if(s.image=="iPon_SelSlot_BG@2x.jpg"||s.image=="iPon_SelStage_Fore@2x.png"){panel(s);continue;}
         if(s.image.empty()){s.destination={0,0,layout_.width,layout_.height};frame_.sprites.push_back(std::move(s));continue;}
         const bool bottomButton=s.image=="Common_Btn_BACK.png"||s.image=="Common_Btn_DEL.png"||s.image=="Common_Btn_NEW.png"||s.image=="Support.png"||(s.image=="Common_Btn_OK.png"&&s.destination.y==434);
         const auto d=bottomButton?bottom:center;s.destination.x+=d.x;s.destination.y+=d.y;
