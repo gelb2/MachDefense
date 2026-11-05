@@ -1,5 +1,7 @@
 # 문서·코드 위생점검 — 2026-11-06
 
+이 문서는 Android 착수 전 점검 기록이다. 이후 구현·기기 검사와 v0.1 배포는 [Android 실행 기록](android-native-20261106.md)과 릴리스 노트에 정리했다.
+
 대상은 MachDefense의 `fix/hud-title-presentation`, 감사 시작 커밋 `410fdb8`이다. 업데이트 중인 iPhone·iPad는 조작하지 않았다. 게임 코드·에셋·저장·Xcode 설정은 변경하지 않았다. 기존 공유 스킴의 GUI 변경은 그대로 보존했다.
 
 ## 발견과 수정

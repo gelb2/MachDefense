@@ -1,5 +1,7 @@
 # Android 개발 준비 점검 — 2026-11-06
 
+이 문서는 Android 착수 전 점검 기록이다. 이후 구현·기기 검사와 v0.1 배포는 [Android 실행 기록](evidence/android-native-20261106.md)과 릴리스 노트에 정리했다.
+
 현재 구조로 Android 개발을 시작할 수 있다. Apple 소스와 공용 코어를 바꾸지 않고 Android NDK로 Core·Audio를 컴파일하고, OpenAL Soft와 함께 네이티브 공유 라이브러리로 링크했다. Android 앱 실행기와 출력 어댑터는 아직 만들어야 한다.
 
 ## HeavyMach 1 당시와 비교

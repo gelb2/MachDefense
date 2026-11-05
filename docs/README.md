@@ -10,6 +10,7 @@
 - [개발자의 변](RESTORATION.md)
 - [릴리스 노트](../CHANGELOG.md)
 - [릴리스 절차](release-process.md)
+- [v0.1 게시·후속 정리 검사](evidence/release-v0.1-20261106.md)
 
 ## 개발 문서
 

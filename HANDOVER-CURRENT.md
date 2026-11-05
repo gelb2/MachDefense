@@ -1,25 +1,28 @@
 # MachDefense 인계 — 2026-11-06
 
+## 릴리스와 작업 위치
+
+iOS·iPadOS·Android 첫 릴리스 [v0.1](https://github.com/gelb2/MachDefense/releases/tag/v0.1)을 게시했다. main은 `08b5380`, develop은 `0835b5a`이며 두 브랜치의 파일 내용은 같다. 일반·치트 Android APK와 SHA-256을 첨부했다. 저장소는 비공개다.
+
+Android 구현은 `639ca43`, 릴리스 문서는 `f0df3d0`이다. Apple·공용 코드·자원 2,978개 파일은 Android 착수 기준 `5bc233e`와 같다. [Android 구현·기기 검사·아이폰 저장 이전](docs/evidence/android-native-20261106.md), [설치](docs/public/build-and-install.md), [릴리스 노트](CHANGELOG.md)를 읽는다.
+
+후속 브랜치는 `chore/post-release-hygiene`, 작업 사본은 `.local/worktrees/release-followup`이다. 기존 타이틀 브랜치와 미커밋 문서·TODO·검사 도구를 보존한 뒤 main으로 리베이스했다. 기존 checkout의 변경과 Xcode 스킴 메타데이터는 그대로 남겼다. 이 후속 브랜치의 타이틀 수정은 v0.1에 포함되지 않았으며 기기 설치도 하지 않았다.
+
+[병합·태그·첨부 파일·리베이스 검사 기록](docs/evidence/release-v0.1-20261106.md).
+
 ## 다음 작업
 
-[현재 상태](docs/current-status.md), [TODO](docs/usability-todo.md), [정본](docs/canonical.md), [코드 대조표](docs/code-document-map.md)를 읽는다. 최신 사용자 지시가 과거 인계보다 우선한다.
+[현재 상태](docs/current-status.md), [TODO](docs/usability-todo.md), [정본](docs/canonical.md), [코드 대조표](docs/code-document-map.md)를 읽는다.
 
-- HUD 에셋은 현재 설치 모습으로 유지한다. iPhone 셀 표시 위 월드 누락과 전체 해금 유닛 생산 접근·스크롤·순서 저장을 조사한다. 사용자 기억상 iPad에는 위쪽 깨짐이 없다. 시뮬레이터 동일 조건 비교는 미실행이다.
-- 타이틀은 희미한 흰 선이 남았다는 후속 지적이 있으므로 미완료다. 기존 자동검사 통과로 시각적 결함을 닫지 않는다.
-- 기지·포탑·필살기 10레벨 확장, 그 후 외형·음향·효과 연구와 한 줄 복원 코드는 TODO다. 개발자의 변 글감은 TODO의 원문을 보존한다. 11월6일 추가 문장과 소련 무명용사 위령비 참고도 기록했다.
-- 사용자가 iOS/iPadOS 업데이트 중이다. 기기 앱·저장을 조작하지 않는다. 이후 재검사에는 업데이트 후 OS 버전을 기록한다.
-
-## Android 준비 점검 — 후속
-
-[Android 준비 점검](docs/android-readiness-20261106.md)을 읽는다. Core·Audio 수정 없이 Android NDK 컴파일과 OpenAL Soft 전체 링크를 통과했다. Apple·공용 소스·자원 등 2,978개 보호 파일 변경은 0개다. Android 앱은 미구현이며 이번에는 브랜치를 만들거나 기기를 조작하지 않았다. 기존 동기 저장 계약은 Android에서도 유지한다. 웹 비동기 저장을 이유로 Apple API를 미리 바꾸지 않는다.
-
-## Git·배포
-
-감사 시작 HEAD `410fdb8`, 브랜치 `fix/hud-title-presentation`. 로컬 develop 및 origin/develop `5bc233e`, 로컬 main `6b3ad5a`. 문서 감사 이후 브랜치 확인에서 fetch했고 작업 브랜치·develop·main은 각각 원격 추적 브랜치와 일치했다. 병합·태그·push·사이트 재게시를 하지 않았다. 마지막 기기 설치는 긴급지원 구현본이다. 현재 작업 브랜치의 타이틀 변경은 미설치다.
-
-`Apple/iOS/MachDefense.xcodeproj/xcshareddata/xcschemes/MachDefense.xcscheme`의 기존 GUI 형식 변경은 보존했다. 문서 감사 수정과 섞어 커밋하지 않는다. [감사 결과](docs/evidence/project-hygiene-20261106.md)에 검사 범위와 남은 일을 기록한다.
+- HUD 에셋은 현재 설치 모습을 유지한다. iPhone 셀 표시 위 월드 누락과 전체 해금 유닛 생산 접근·스크롤·순서 저장을 조사한다. 사용자 기억상 iPad에는 위쪽 깨짐이 없다. 같은 조건의 시뮬레이터 비교는 남아 있다.
+- 타이틀의 희미한 흰 선, 지형 주변 이동 정체는 미해결이다. 화면 밖 적 반격은 보류한다.
+- 기지·포탑·필살기 10레벨 확장과 추가 외형·음향·효과, 한 줄 복원 코드, 웹/PWA·Tauri Mac은 후속 과제다.
+- [개발자의 변](docs/RESTORATION.md) 초안을 게시했다. 추가 원문과 인용 후보는 TODO에 보존했다.
+- Galaxy USB·에뮬레이터 검사는 끝났고 무선 연결·장시간 발열·추가 기기 검사가 남았다. 아이폰 원래 저장은 이전 검사 전후 해시가 같다.
 
 ## 이전 작업 기록
+
+아래는 각 작업 당시의 브랜치·설치·검사 기록이다.
 
 아래 기록은 당시 상태와 근거를 보존한 것이다. 현재 작업 순서·설치 상태는 위 문서가 소유한다.
 

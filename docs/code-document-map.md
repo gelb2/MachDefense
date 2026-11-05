@@ -4,7 +4,8 @@
 
 | 기능 | 요구·정책 | 구현 | 검사·실행 근거 | 남은 일 |
 |---|---|---|---|---|
-| Core·Audio 분리 | [설계](design.md), [모듈](../Modules/README.md) | [Core 목록](../Modules/core-sources.cmake), [모듈 빌드](../Modules/project.yml) | [분리 전후](evidence/module-work-20261105.md), `tools/check_modules.py` | Android·웹/PWA·Tauri 실행기 미구현 |
+| Core·Audio 분리 | [설계](design.md), [모듈](../Modules/README.md) | [Core 목록](../Modules/core-sources.cmake), [모듈 빌드](../Modules/project.yml) | [분리 전후](evidence/module-work-20261105.md), `tools/check_modules.py` | 웹/PWA·Tauri 실행기 미구현 |
+| Android 연결 | [설계](design.md), [빌드](../Android/README.md) | [실행기](../Android/app/src/main/cpp/Runtime.cpp), [Activity](../Android/app/src/main/java/com/gelb2/machdefense/GameActivity.kt) | [기기·저장·프레임 검사](evidence/android-native-20261106.md) | 무선·장시간 발열·추가 OS 기기 |
 | 월드·HUD 표시 | [좌표](coordinate-policy.md), [렌더](rendering-policy.md) | [WorldPresentation](../Sources/Core/Presentation/WorldPresentation.cpp), [GameHUD](../Sources/Core/Presentation/GameHUD.cpp), [FrameLayout](../Sources/Core/Contracts/FrameLayout.hpp) | [ViewportSweep](../Tests/ViewportSweep.hpp), [화면 확장](evidence/viewport-20261105.md) | HUD 위 월드 누락, 7개 생산 제한 원본 대조. 그림 변경 보류 |
 | 타이틀 | [렌더](rendering-policy.md) | [Menu](../Sources/Core/Presentation/Menu.cpp), [자원 출처](../Resources/Generated/TitleOutpaint.json) | [MenuTests](../Tests/MenuTests.cpp), [수정 이력](evidence/hud-title-20261105.md) | 후속 사용자 확인에서 흰 선 잔존 |
 | 피해·이동·표적 | [계산 정책](game-calculation-policy.md) | [WorldCombat](../Sources/Core/Simulation/WorldCombat.cpp), [WorldMovement](../Sources/Core/Simulation/WorldMovement.cpp), [WorldTargeting](../Sources/Core/Simulation/WorldTargeting.cpp), [WorldTerrain](../Sources/Core/Simulation/WorldTerrain.cpp) | [핵폭탄](evidence/nuclear-damage-20261104.md), [지형](evidence/terrain-motion-audit-20261104.md) | 이동 정체·미션3 설치 대조, 화면 밖 반격 보류 |

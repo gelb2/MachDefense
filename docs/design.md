@@ -30,4 +30,4 @@
 
 ## Android 착수 경계 — 2026-11-06
 
-기존 Core·Audio의 NDK 컴파일과 OpenAL Soft 링크를 통과했다. Android 실행기·렌더러·오디오 출력·저장·생명주기는 `Android/`에 추가한다. Apple·공용 소스·자원·루트 빌드 파일을 변경하지 않는 조건으로 진행한다. [HeavyMach 비교와 실제 검사](android-readiness-20261106.md).
+기존 Core·Audio의 NDK 컴파일과 OpenAL Soft 링크를 통과했다. Android 실행기·렌더러·오디오 출력·저장·생명주기를 `Android/`에 추가했다. Apple·공용 소스·자원·루트 빌드 파일은 보존했다. [구현 결과](evidence/android-native-20261106.md). [HeavyMach 비교와 실제 검사](android-readiness-20261106.md).
