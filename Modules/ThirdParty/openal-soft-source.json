@@ -1,0 +1,1275 @@
+{
+  "version": "1.22.2",
+  "source": "MachDefense verified touchHLE host vendor/openal-soft",
+  "upstream": "https://github.com/kcat/openal-soft",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "78754b8ddf57e3da89e8322568058252ce6c3b6bb65a913eca5cc71cbb42d63f"
+    },
+    {
+      "path": ".github/workflows/makemhr.yml",
+      "sha256": "9232a0c203d2c8b29604604ceb327296f082eebcde331a96cc44d299ccb0d567"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "cbed3770d0246b5c87bfd2b26887fb0ee4d181c9fe2cd70f2b9620716870ec50"
+    },
+    {
+      "path": ".travis.yml",
+      "sha256": "73cb50bfd720dcecb23cc70d2a516625101c20e659f4d18d1cf6aa1365c12fbf"
+    },
+    {
+      "path": "BSD-3Clause",
+      "sha256": "b5a08cf98996dd83aa906a72c163600f6cb17a65ce546a553815a1267abd43ff"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "35db7ffa89ba301e94165cdd10a78cf8b6f88588e22d132415bc393d5188b619"
+    },
+    {
+      "path": "COPYING",
+      "sha256": "d808ce217e5b611854da622b57ec29fe545584c48bc5352fae72a4b6e5074a15"
+    },
+    {
+      "path": "ChangeLog",
+      "sha256": "2b7212ba61bac5554d0a6a9624cd1c3e040e3e6a8a982b45930873e09390dfbd"
+    },
+    {
+      "path": "OpenALConfig.cmake.in",
+      "sha256": "3648b9d4ff8961f976cb2b167ef2ef709a382289df0bb2b616406479883b6929"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f697046d8b83ea881835265115c05e0de460c63033ac0a5b7c99f3443e7a2a6c"
+    },
+    {
+      "path": "XCompile-Android.txt",
+      "sha256": "bea874a5dfb53ebdb4ebc98c68d6a1f64e41ecc2c7b49fe7bd42df4c00b5a184"
+    },
+    {
+      "path": "XCompile.txt",
+      "sha256": "a83eda95f1219740c9cd404b71ea849316ce3a63988387d2ae50e7c217107346"
+    },
+    {
+      "path": "al/auxeffectslot.cpp",
+      "sha256": "9ae3b146297f50f1899087af6bc733ec6ee1f8ab8d890d5ecbdf4dc60821c340"
+    },
+    {
+      "path": "al/auxeffectslot.h",
+      "sha256": "0b51cc7a936577ea5b2c7c298ceaf2bfc293a71baff5f7060cd4f957789a1e72"
+    },
+    {
+      "path": "al/buffer.cpp",
+      "sha256": "b35d42ba2638ead3145d78199f21b065ce65ca0507b9f28cce11cd4acb415901"
+    },
+    {
+      "path": "al/buffer.h",
+      "sha256": "3ab856537bbc18dd7981bec6f464521d1ba156686b3be559eb85688b513644fd"
+    },
+    {
+      "path": "al/eax/api.cpp",
+      "sha256": "4a1b9e29851d77d231fba7dc898f7b49cb973248f2f1d95ec55c1ac3cfafa1a7"
+    },
+    {
+      "path": "al/eax/api.h",
+      "sha256": "12215f7dff8abffe2a447abc837c12b092d7863885840d1c3edc5050cc71617f"
+    },
+    {
+      "path": "al/eax/call.cpp",
+      "sha256": "a9fc0c5eb4aa5c0acb80e13d3490595440886f243704ae51c047ba74164333c4"
+    },
+    {
+      "path": "al/eax/call.h",
+      "sha256": "6fbf24e310f963b605a04b1f4b48c66748178361b655b8ccd99b37d3094fb6c2"
+    },
+    {
+      "path": "al/eax/effect.h",
+      "sha256": "12ca6989c2eb3486833903f47a3f27d670c5256813b73755c77ed258a8b35f7a"
+    },
+    {
+      "path": "al/eax/exception.cpp",
+      "sha256": "6d187a0471bbdcdd570072685707ef3d11b2203bdaf859344419dc40562e4a8d"
+    },
+    {
+      "path": "al/eax/exception.h",
+      "sha256": "5ba0e5484c2b40aa9e0a216ee71d290c195312e0a5c6afe6dd9a913055f6671f"
+    },
+    {
+      "path": "al/eax/fx_slot_index.cpp",
+      "sha256": "9bf4c3d4002f3989137df27c860873340109c248d5a8cb973b30ce5f4d40246f"
+    },
+    {
+      "path": "al/eax/fx_slot_index.h",
+      "sha256": "a57502692e68d20e0c2f356ebe2b5c59a6dfd6bc262ddcaad8907b10a04af16e"
+    },
+    {
+      "path": "al/eax/fx_slots.cpp",
+      "sha256": "54273e979a549121934f0bf979997a5ba81abee5f2eb508d7c8bef647ab8a308"
+    },
+    {
+      "path": "al/eax/fx_slots.h",
+      "sha256": "19950d3e15577c6164a3c01ff7adbec1201afc59b98fdc7d419daa11611d1d7d"
+    },
+    {
+      "path": "al/eax/globals.cpp",
+      "sha256": "6a13ba20c383b8edf61075d0add8646008526b3fbed0aed6eeef4fcd4fe63b85"
+    },
+    {
+      "path": "al/eax/globals.h",
+      "sha256": "93767617aa58dceb43c26937e8bf4ee815b3ee9a2b8330a0038f286e027a7350"
+    },
+    {
+      "path": "al/eax/utils.cpp",
+      "sha256": "5785b90dffc4707a32e4f0468e3ee51ef1b605cf7d1bff926fa57b0dec081e87"
+    },
+    {
+      "path": "al/eax/utils.h",
+      "sha256": "aa9334799b42bdb9150b51cfbbc0e2a1d5504235d4b8f391c966ee2aee76fd99"
+    },
+    {
+      "path": "al/eax/x_ram.h",
+      "sha256": "2d97e53757eb8df670308c55b0c7203e6c9b2f47a42bf8a58d98719579cec0e1"
+    },
+    {
+      "path": "al/effect.cpp",
+      "sha256": "9bc790bae4d1232d05c75b68a2edbd1def4ef9ff354f54b4bfdb34da00e4020b"
+    },
+    {
+      "path": "al/effect.h",
+      "sha256": "f0f80187911a2be428a39267505883b3979bfcfd09366452afc569bf9336c9c2"
+    },
+    {
+      "path": "al/effects/autowah.cpp",
+      "sha256": "3bf92cb8978991cdef312a8c17b06a42c91ed224ec217d37a1d86eb528d2380f"
+    },
+    {
+      "path": "al/effects/chorus.cpp",
+      "sha256": "f361850928ad59e3f1fa3b0b5d655e42c3e594b61d153f758facdfbac45549b3"
+    },
+    {
+      "path": "al/effects/compressor.cpp",
+      "sha256": "006540276ecfabc6f6eada436bb0a4b76d30f3c354a497fcd0292379877b0881"
+    },
+    {
+      "path": "al/effects/convolution.cpp",
+      "sha256": "f54b16597942d3020cdadf6e6dd44cade95cd2a2b4c3ea3305d37e3c6bb08122"
+    },
+    {
+      "path": "al/effects/dedicated.cpp",
+      "sha256": "44234231b3bbad4e32a053bb95dcbd6b45341a31a1e493d502e61f82f7253966"
+    },
+    {
+      "path": "al/effects/distortion.cpp",
+      "sha256": "2ff867d891f696dbfb36d3e070eae592cc6335b1c5fc4db215d3c2e20423c6a7"
+    },
+    {
+      "path": "al/effects/echo.cpp",
+      "sha256": "59c55afc162195dc83848048a8f4fb76d8c0ef7e97187ba1ca2dc4c8dfe32579"
+    },
+    {
+      "path": "al/effects/effects.cpp",
+      "sha256": "3d6bc1187988676fef43653ef9e5e791acd011aafb430472e7123f0f219aa2d9"
+    },
+    {
+      "path": "al/effects/effects.h",
+      "sha256": "a8845694c4ccdf58bdc6f86dfb906f0490c20f6e092d198668188a270b2f44c8"
+    },
+    {
+      "path": "al/effects/equalizer.cpp",
+      "sha256": "344db6b89944744abb2000e95c21f8cba59cfd3b0ec87b20e630b91d101c79c2"
+    },
+    {
+      "path": "al/effects/fshifter.cpp",
+      "sha256": "c8d17391630437d424cf7514b60caf97a12c85031e368480b827d61fa4919cc5"
+    },
+    {
+      "path": "al/effects/modulator.cpp",
+      "sha256": "91bd9cee43348d8049c65965716a68ded00425577abc42887043bba04fa10423"
+    },
+    {
+      "path": "al/effects/null.cpp",
+      "sha256": "a961de0e41a88787bf98b2653bcedae90b0a9429f9ad6ef602579f54a09d048c"
+    },
+    {
+      "path": "al/effects/pshifter.cpp",
+      "sha256": "b03e269dc1bc8092ce5b6a13f0bd5dcb7b1a5eb4a6b9cb870940f641e72351c2"
+    },
+    {
+      "path": "al/effects/reverb.cpp",
+      "sha256": "cb03da3c51542ca3eeb1ed4a0440b68ed244ec8fa629363dc8567977b7617dab"
+    },
+    {
+      "path": "al/effects/vmorpher.cpp",
+      "sha256": "2fd1c4e0cb2b0a4af839819b1a2de3ed03255d6b8337267dada22fa61811465f"
+    },
+    {
+      "path": "al/error.cpp",
+      "sha256": "5c66df884c1330d3eca81f97b6c36f2345dc454c7e32e4f545ecba62684e3742"
+    },
+    {
+      "path": "al/event.cpp",
+      "sha256": "555c4a20bf6842632a90b32fc1c9d07da1139a2c055852d0c031410accb9392d"
+    },
+    {
+      "path": "al/event.h",
+      "sha256": "62d6bf880f3fe7ed00e9048413557dea68f9c324a9703fada38fd391f5ac033d"
+    },
+    {
+      "path": "al/extension.cpp",
+      "sha256": "9b29d684a3c629f28663483cf7b171302ab87366c77f9691ba58e07d498dce15"
+    },
+    {
+      "path": "al/filter.cpp",
+      "sha256": "286c4658804e539a57622492633b3c29fadbdbf5a07bdd1312f413aa3bb6fd56"
+    },
+    {
+      "path": "al/filter.h",
+      "sha256": "fc2d5ea99940091d41090b94aea8bc0c93001d7009f1f85bc83e726077ba2b09"
+    },
+    {
+      "path": "al/listener.cpp",
+      "sha256": "8c500578a87492d4cacfc3354feee0b87dc793e7c968821fa9e8f088dbcb5753"
+    },
+    {
+      "path": "al/listener.h",
+      "sha256": "3c18989c8a0e6b6d95dc6c2ad27c14c99671457503effc24235b3ab5f3e6b9fe"
+    },
+    {
+      "path": "al/source.cpp",
+      "sha256": "9b2d7f4b2d983200430530d31b0194b4ba46a40f6c058c74160c10bf5eea8aed"
+    },
+    {
+      "path": "al/source.h",
+      "sha256": "f4cf1cc68ed86bdb77021fbca742b4b2fc7bcfe12bd75de6ec3d233fb2c2d2d7"
+    },
+    {
+      "path": "al/state.cpp",
+      "sha256": "950e00f0b97959fed586d73768a7c640896841d4d8e7e8cfbbd0313707cfa147"
+    },
+    {
+      "path": "alc/alc.cpp",
+      "sha256": "1df2ccc22342bfcf93a31779362089494b86edfe8096e4b850040e041682b808"
+    },
+    {
+      "path": "alc/alconfig.cpp",
+      "sha256": "3a745d62b00d4550bd66762afd3096c099d8f20d329197cdda38f9098b8c983e"
+    },
+    {
+      "path": "alc/alconfig.h",
+      "sha256": "a1af09858ffa93d6c2a6dfc70b8d065204dcacc5c7ee1d77936f8165e71a7077"
+    },
+    {
+      "path": "alc/alu.cpp",
+      "sha256": "7e3674b1463d86b01ad09fc81ba1a1004665d06fe1df0c4ece0cd800d3a3d4ab"
+    },
+    {
+      "path": "alc/alu.h",
+      "sha256": "30bbd1b31fae8d59b727c1d00b1f8d7d25ca3a5a0764a1dadd1bce1076b8854d"
+    },
+    {
+      "path": "alc/backends/alsa.cpp",
+      "sha256": "a58b68c8156e44aacef6ac434dfb19e736c2ae186dbca5f153287fb34108e23b"
+    },
+    {
+      "path": "alc/backends/alsa.h",
+      "sha256": "f28fd6e1c4b16b36785ab6ed5efdbca84557f040527759604aa1c79cfc8053a8"
+    },
+    {
+      "path": "alc/backends/base.cpp",
+      "sha256": "e7d995e973f6a951883cf6667653453aa1a4fd17b798b1246fbb4fd059fa1db4"
+    },
+    {
+      "path": "alc/backends/base.h",
+      "sha256": "0dd851f37b4cdff370c1fe2b84493bf9fc0035cdb5a57694de4eac6ce207cc07"
+    },
+    {
+      "path": "alc/backends/coreaudio.cpp",
+      "sha256": "dd01187ef93695b341ccb0fa4d3276b8f26b6e8871a7dbc852881d741e0239f1"
+    },
+    {
+      "path": "alc/backends/coreaudio.h",
+      "sha256": "3ee9734734f639852242bbd19fb696edd6ad5b2d409535c0ae34bf986f919352"
+    },
+    {
+      "path": "alc/backends/dsound.cpp",
+      "sha256": "883339bdd19a080822b172c277ef6e8309b33d87190de7339d973c17eca56007"
+    },
+    {
+      "path": "alc/backends/dsound.h",
+      "sha256": "594fc19b0c8cb9efb5769ba61db156b01278e380de48170d81ab94914d4e341a"
+    },
+    {
+      "path": "alc/backends/jack.cpp",
+      "sha256": "129890729f5f1fd79353e68ecccbf652f213deee7a6f14bb7ad54b1ed831f1e7"
+    },
+    {
+      "path": "alc/backends/jack.h",
+      "sha256": "3121819d4514cee165ad29febc6176752a02c6353d91d5b102a72a33b2a734a9"
+    },
+    {
+      "path": "alc/backends/loopback.cpp",
+      "sha256": "bab997b24a9071d89d4f5e865ac82311e13046b5c5eedc8b1974542002433eb1"
+    },
+    {
+      "path": "alc/backends/loopback.h",
+      "sha256": "d286895a379681846175955c298f27ba9f4aee452a4797bc5be49499ca27c539"
+    },
+    {
+      "path": "alc/backends/null.cpp",
+      "sha256": "4d8c02f9d8508d668a0e2d9ec87a4644dc3bba546623295f9da0d275e7708cf5"
+    },
+    {
+      "path": "alc/backends/null.h",
+      "sha256": "238da7a169a2eb8a716f6b34523bed11c6ed5cac1a89a42de8739c4d204d8e50"
+    },
+    {
+      "path": "alc/backends/oboe.cpp",
+      "sha256": "25b65fb27bda2ab9a9c07bc44ac8f923fe2a2364a1c5210a71070e0902812b2c"
+    },
+    {
+      "path": "alc/backends/oboe.h",
+      "sha256": "dab17bcf0b5a6b90b0b86ddf363c867521463010c7cd5a096548fa5221f6d16f"
+    },
+    {
+      "path": "alc/backends/opensl.cpp",
+      "sha256": "ecb13bda3baf76c64ab3e00bf5b7c40d3aa4d9f2bda5a9058ff023f53bc80f36"
+    },
+    {
+      "path": "alc/backends/opensl.h",
+      "sha256": "972030bc35999888a292b05d24707518094f9b5d16aa0afe03979bf64d6f6c4c"
+    },
+    {
+      "path": "alc/backends/oss.cpp",
+      "sha256": "af2ac4130011aa543143b509951ce25e01646b13d10d512514d1409a2c15fc97"
+    },
+    {
+      "path": "alc/backends/oss.h",
+      "sha256": "5df8e718d17f5a0a9aec9747d106d59d6e4c031a33cd217ac4df7030dcbe8a4f"
+    },
+    {
+      "path": "alc/backends/pipewire.cpp",
+      "sha256": "2987ae6c5b0eecf9e585c9f644bd545373b69725eda69c08fd0471aafda2b5cf"
+    },
+    {
+      "path": "alc/backends/pipewire.h",
+      "sha256": "205a446d2e99cdcb35492187ef9b4d83b6aabfe26c7af117a72ea24207fcb086"
+    },
+    {
+      "path": "alc/backends/portaudio.cpp",
+      "sha256": "956a1e9043909ce28f93b41df411d1212c226c95f7859505d8a48ead69bd1151"
+    },
+    {
+      "path": "alc/backends/portaudio.h",
+      "sha256": "13e9492a863d76e3b7667634189b2f9f1542866594ae2dadf5614c55022a20d4"
+    },
+    {
+      "path": "alc/backends/pulseaudio.cpp",
+      "sha256": "b7cccb6b7f1dda49da2d197e04cfaeff776a7b951c97104a48e2558d04ae3f74"
+    },
+    {
+      "path": "alc/backends/pulseaudio.h",
+      "sha256": "e5a9797d621032d8b6b1c93e79030dd99a1e6337bf33d30025a976e8d02df2a1"
+    },
+    {
+      "path": "alc/backends/sdl2.cpp",
+      "sha256": "96309f70a29d481d047b1e34d2c17bc36184150b36540b4bacdeed2186614490"
+    },
+    {
+      "path": "alc/backends/sdl2.h",
+      "sha256": "21484e3dd60202620e344b7dd7c7e9b3582dac9fb97f10d3cc43c2cdb6afb361"
+    },
+    {
+      "path": "alc/backends/sndio.cpp",
+      "sha256": "65f184f33ae97bfa3e911b0aff31b84de37f8403ce86bc2f942d5bd4d6731998"
+    },
+    {
+      "path": "alc/backends/sndio.h",
+      "sha256": "85837215d6ef517a71a836cb51a3f175b43e6673b64cbe56c3e258f8a1bac45e"
+    },
+    {
+      "path": "alc/backends/solaris.cpp",
+      "sha256": "c96fd9d86549d366d0fea6d1d8af1ad88f080296beed7eaef7077f77ee3190fe"
+    },
+    {
+      "path": "alc/backends/solaris.h",
+      "sha256": "e2d5bede4803728a22af608ff29395515e0b230c6a6cfde1f2b06ce2abc0e7aa"
+    },
+    {
+      "path": "alc/backends/wasapi.cpp",
+      "sha256": "8cad34c23010f1741be76bdb45fdab4def0e29befc9b4acd6ed2f9b3fe5fc075"
+    },
+    {
+      "path": "alc/backends/wasapi.h",
+      "sha256": "8984df9be85ef4ff74cb0ed6f7ef8ae5b40f0fead2f4c7d27f6cc76186c44c1d"
+    },
+    {
+      "path": "alc/backends/wave.cpp",
+      "sha256": "24dc6a443b190442815cb5ec9ac624ae9ff7069e56f14257d8b6b18ae308e9c3"
+    },
+    {
+      "path": "alc/backends/wave.h",
+      "sha256": "f9cd0986c15fc1531b12bbdb9e9db3cddb4e146916d0d17f5c3eaab964f437cd"
+    },
+    {
+      "path": "alc/backends/winmm.cpp",
+      "sha256": "febc85540373880f2872b2df2dd11954b31fc0d748fdd8fc9ebbc7efb9340d66"
+    },
+    {
+      "path": "alc/backends/winmm.h",
+      "sha256": "95d66e958b5fdc90db65d3ec691dca0ef613a80f9307febd9879a3c7b7113703"
+    },
+    {
+      "path": "alc/context.cpp",
+      "sha256": "9780f6d45d55e61a97e16632e92572a8cd55c447d41fb918253e4e7767ca9782"
+    },
+    {
+      "path": "alc/context.h",
+      "sha256": "cb83d40e5bab1a3d1ed41a26e2ead87437d7ffecd286cfd16e89ed990bb0be4b"
+    },
+    {
+      "path": "alc/device.cpp",
+      "sha256": "13d52731cb2bce2c2ce6ffa3a1bf208dbf7e3ac187ad0e1576ac6d99ef4828fb"
+    },
+    {
+      "path": "alc/device.h",
+      "sha256": "d25db0c7ac543b2ccde847deeee98b0d8f8c3fa16d2504ee941c7f392fbefd02"
+    },
+    {
+      "path": "alc/effects/autowah.cpp",
+      "sha256": "6fa10cb81ad928842a10b6c478255a6b6f719b53dd53ebb7363e31b405bf6d7e"
+    },
+    {
+      "path": "alc/effects/base.h",
+      "sha256": "a0005ca1de5ea8f829ca6ad5ac5477d0794bb82f8c424e57cebed55b3d93e679"
+    },
+    {
+      "path": "alc/effects/chorus.cpp",
+      "sha256": "07ae88a7ace362e93b92ee6838b93f9d8b7ad9f311f3fb78b8997616cdb99d86"
+    },
+    {
+      "path": "alc/effects/compressor.cpp",
+      "sha256": "704fea23b700bfa3595f7f6cb0b9f55e029b6704c55c13e2e90ff50c12a58aa6"
+    },
+    {
+      "path": "alc/effects/convolution.cpp",
+      "sha256": "8bc3ab6ff241e6f5fad42d46271e7c637e4369c8f63684b0dd7445c0dd8931e8"
+    },
+    {
+      "path": "alc/effects/dedicated.cpp",
+      "sha256": "09ad11c68cb12c1035c1eab5b989a412657d0203bd1fa470cf004f4e13e0db7a"
+    },
+    {
+      "path": "alc/effects/distortion.cpp",
+      "sha256": "e0db1d81e2b7711217bea2cb4a1cf4573cdea6639f5c89ffcc5cd2fc9e88824c"
+    },
+    {
+      "path": "alc/effects/echo.cpp",
+      "sha256": "f31edb708e54d85cec1b9037bd0cb4693e3e579f6457a00fab2fc2054e5e1a10"
+    },
+    {
+      "path": "alc/effects/equalizer.cpp",
+      "sha256": "80bce09e8a4d49a5c05328bb48efd64b8e7af75a3749f73e8fdc4b647c48aea8"
+    },
+    {
+      "path": "alc/effects/fshifter.cpp",
+      "sha256": "0cdc8d01fd460f4c6edeb845cdba0e22cb9ffa2af2362405a3751c5f85fa278e"
+    },
+    {
+      "path": "alc/effects/modulator.cpp",
+      "sha256": "b570f9fbfc649ca0848f830c5aac4534f89b102cc3a40c194786bfbde8c35709"
+    },
+    {
+      "path": "alc/effects/null.cpp",
+      "sha256": "2b4487b195215894e2169e18ba1ff156e40854b1b6591babc8f3d2024ae507f1"
+    },
+    {
+      "path": "alc/effects/pshifter.cpp",
+      "sha256": "707e8aefbb3e7adc3a89447dbe012092d8912a8d0f9d2462d1522e8229307a8f"
+    },
+    {
+      "path": "alc/effects/reverb.cpp",
+      "sha256": "f34a8b34f5713e18e7c2e08646d088d610c1121435455d86ff6d40886e505d30"
+    },
+    {
+      "path": "alc/effects/vmorpher.cpp",
+      "sha256": "287104c78898fd4487be9bf2dba742a9247e78a767c8e8a6e6824626657543a6"
+    },
+    {
+      "path": "alc/inprogext.h",
+      "sha256": "ac4b78f0bc094bf0bb5003b9935a07a4e48cf9acb41a26fd6d18132dc4df0115"
+    },
+    {
+      "path": "alc/panning.cpp",
+      "sha256": "64245ee5614de15f4ac0d6140c372ffb5c96eafd7d79d0130ce73649e2f07fc4"
+    },
+    {
+      "path": "alsoftrc.sample",
+      "sha256": "c0ff84ea754016c95ade2fbd10ecb1a610fe7104ffabfc440920b72f39dabfe6"
+    },
+    {
+      "path": "appveyor.yml",
+      "sha256": "654b9b1e02daf292686570c3cc6158ac167a31a1628b34d3047f0359ad0d1a44"
+    },
+    {
+      "path": "cmake/FindALSA.cmake",
+      "sha256": "da919297fca59aaef113c194f769737c91c3bf6c890af9c06d71adee606aee18"
+    },
+    {
+      "path": "cmake/FindAudioIO.cmake",
+      "sha256": "e9d2783a139731e9e241b215b85bfbe7fea9ca180ff9fd4a8a83816c9e9aa023"
+    },
+    {
+      "path": "cmake/FindFFmpeg.cmake",
+      "sha256": "6e21ed9e2ae1ee7542061bb9e0810f4839543b6574470bba32fcf6e8e301bb52"
+    },
+    {
+      "path": "cmake/FindJACK.cmake",
+      "sha256": "be99c3b6728a32602ec2503b613bf652f6ba4050738c49e2213e7d7097876086"
+    },
+    {
+      "path": "cmake/FindMySOFA.cmake",
+      "sha256": "ef19a62ecceac3b4dff51c97765105ab08958a40f9bd46ea3ebd47ab7474ae69"
+    },
+    {
+      "path": "cmake/FindOSS.cmake",
+      "sha256": "96e3911a54c17984971107ee97cce503b7a9b9ad12e72d63da14d0cba9737177"
+    },
+    {
+      "path": "cmake/FindOboe.cmake",
+      "sha256": "99b60b975a2a93f101075c73007ce85d6a70d974e80b009baf4459886b2d40ec"
+    },
+    {
+      "path": "cmake/FindOpenSL.cmake",
+      "sha256": "60d1584d1760f459bf22f329d1eabcf9fa7d356a637f8765c09ed22d66bde385"
+    },
+    {
+      "path": "cmake/FindPortAudio.cmake",
+      "sha256": "879f1af3b6eaf2c9c5658c9c3adc25b2f40b05304f5426df600de91ab67749b9"
+    },
+    {
+      "path": "cmake/FindPulseAudio.cmake",
+      "sha256": "951f50190cf74de1ac95e4defa6dcafb7243c897c14a3061c880689d1e32a7eb"
+    },
+    {
+      "path": "cmake/FindSndFile.cmake",
+      "sha256": "46da9b171975406ea6f076f2fdffdf9241ac597bfc9857cfb56050a02c4ebc0a"
+    },
+    {
+      "path": "cmake/FindSoundIO.cmake",
+      "sha256": "1736417f9cf66f2e780bb765bf835429485c9e383281af92253a2a5e4da8b7b2"
+    },
+    {
+      "path": "cmake/bin2h.script.cmake",
+      "sha256": "c0a2741fc1c2ac4b0518b3ea36380909636a53de3d57a44560c2b67a04b5b642"
+    },
+    {
+      "path": "common/albit.h",
+      "sha256": "93c9af0fde71f20d4e4e95dce9d554f64f4d68b4325d1f45aa4f03e008750984"
+    },
+    {
+      "path": "common/albyte.h",
+      "sha256": "6708f376f456c3a942316f417fa1baf307ff67ba3f41c2c6dfea2d75a35af04c"
+    },
+    {
+      "path": "common/alcomplex.cpp",
+      "sha256": "ee9cc4b76f46e88e0cf264c8c87af66db25b61553e562fc1de91edd82a0d3894"
+    },
+    {
+      "path": "common/alcomplex.h",
+      "sha256": "36d026404a709bdf956261320d78effdbd47426e8bbee7483c73f75507e9e1c2"
+    },
+    {
+      "path": "common/aldeque.h",
+      "sha256": "8cbfc190330787dc4264db3dc3d70ce78dce297b6f573e7d2ec9dfa708825daa"
+    },
+    {
+      "path": "common/alfstream.cpp",
+      "sha256": "096635d765ffc4be9d9d6653a41ea30eca351f3bbc76608af1e7c56bc87c1a1e"
+    },
+    {
+      "path": "common/alfstream.h",
+      "sha256": "3404695c9ebc11d48014dba480c5034153a4a042d288aaa326fac4314c96cdce"
+    },
+    {
+      "path": "common/almalloc.cpp",
+      "sha256": "df5fc36946a34cb05a26d6070187249800c038928a8346cdecefce3cafb93edb"
+    },
+    {
+      "path": "common/almalloc.h",
+      "sha256": "c2437f68328a130dbb525aa71133823b4b04ec94267cc43f2fd6d9c52cc0314c"
+    },
+    {
+      "path": "common/alnumbers.h",
+      "sha256": "f073c84b50b0448f1c6fc890851680491d87c3c4fcfe53e5c1ef3bda1698dc0a"
+    },
+    {
+      "path": "common/alnumeric.h",
+      "sha256": "33360ad18e17526f76c30badba9a4c9415ae321419ec87a0bfd42a4b51be0261"
+    },
+    {
+      "path": "common/aloptional.h",
+      "sha256": "d3c11b0767e9cc9796e9bae8c03ef05fb69cbe84b1b1b94565a324b4817f3261"
+    },
+    {
+      "path": "common/alspan.h",
+      "sha256": "b1350312404409f2a7191dc60aa5c16c82376cdd655f76800872dbe5a82108e1"
+    },
+    {
+      "path": "common/alstring.cpp",
+      "sha256": "450cec6ad5706c2f55619f03831189d68396b2cb1f58459a646ba476c5d23f96"
+    },
+    {
+      "path": "common/alstring.h",
+      "sha256": "433d5ebebaece89c5e19b6634dc0fe75efa6dff69707360821262b74e633e9b6"
+    },
+    {
+      "path": "common/atomic.h",
+      "sha256": "69f120d7dd86b2e4830afad9aecb4069983e6ce578c7d11fa7a2f8e00ca62b2e"
+    },
+    {
+      "path": "common/comptr.h",
+      "sha256": "7d7251cdf8acf94dce19d584a1f95673c9589011591710769f77293c6743e0d5"
+    },
+    {
+      "path": "common/dynload.cpp",
+      "sha256": "2bf205dea149948c91114dd370eefb1338c62d62b82f762d71d344daee653556"
+    },
+    {
+      "path": "common/dynload.h",
+      "sha256": "217d8194da0c26737d1de4d746f07261afb784f9cc839cfbf82fad692037b25e"
+    },
+    {
+      "path": "common/intrusive_ptr.h",
+      "sha256": "1d268129c05b0ede7adf0e035a3d9793f94d2499186481801bfaeedd39e7bf59"
+    },
+    {
+      "path": "common/opthelpers.h",
+      "sha256": "9a2d0f1b9b38f1bbee1067d6abb99d55593defdea5ab35778be9cc6ef49d585d"
+    },
+    {
+      "path": "common/phase_shifter.h",
+      "sha256": "b29c7895b229ec468352ee81e7df66722740092c30f3a0928112d6f4d8001f22"
+    },
+    {
+      "path": "common/polyphase_resampler.cpp",
+      "sha256": "5b1fd6619e745fd6cb1c71b7e35150da2be867f158808758c7f8c16ee58f6dd3"
+    },
+    {
+      "path": "common/polyphase_resampler.h",
+      "sha256": "4d4fb352259c7baf637a6417d1f7e13117aadff0b912434448a679469429b00a"
+    },
+    {
+      "path": "common/pragmadefs.h",
+      "sha256": "e9a6646a0c21e3da1fe0e9049c92cba361103fe777a308384d3424d6c0a90372"
+    },
+    {
+      "path": "common/ringbuffer.cpp",
+      "sha256": "1fcf359ad83468ffacba5f3dc870bbbb5b5d39515c9534cd215c7b8b95cb8892"
+    },
+    {
+      "path": "common/ringbuffer.h",
+      "sha256": "1ea6dc39e6aa09309e13ee31adc8bcfa8055270034f23f66ac081a3064070fd9"
+    },
+    {
+      "path": "common/strutils.cpp",
+      "sha256": "d3d250f357006adcad3a46ba9c044ae35c3f5d3c5bdb0d2629f55c07b5ef60e4"
+    },
+    {
+      "path": "common/strutils.h",
+      "sha256": "3a9be769ec5069dd133b797b4e8c5db42f2b4b1c982b81d476012cae2c640e93"
+    },
+    {
+      "path": "common/threads.cpp",
+      "sha256": "b7c90e595312a315914166e2226bb76c0998de157da5d0544f0866df32122de4"
+    },
+    {
+      "path": "common/threads.h",
+      "sha256": "515bcd5e35ee8391c46b50b7b0b5b9f7d9c894ee903ac1ad68ef51f2b1981fe1"
+    },
+    {
+      "path": "common/vecmat.h",
+      "sha256": "ce42a558c44d1a8be0c88977fb4e7ba3446a8a1b20cc278b88a8df5c27ec9a0f"
+    },
+    {
+      "path": "common/vector.h",
+      "sha256": "dc9f6467bfa47317d59c7cbec84b0fe3ddd6be10358c960445a3e87b1ba0c035"
+    },
+    {
+      "path": "common/win_main_utf8.h",
+      "sha256": "25947472d0dbb9fdb51eac4bb3f93a38ada595eaa5acdb509621f435d83ae925"
+    },
+    {
+      "path": "config.h.in",
+      "sha256": "405eece550f2168290ce3a6206cf9c991fd541c48ea7c166294a9ffaa12aaeb0"
+    },
+    {
+      "path": "core/ambdec.cpp",
+      "sha256": "d5a266d2bfa0347e6e88494e7af9baee7472d1834015ea6f75304340c0093986"
+    },
+    {
+      "path": "core/ambdec.h",
+      "sha256": "a1ba9ee08879754fc2d4f0c34c733acb6ac73fbc2e0da6a9de86cb19b7d96036"
+    },
+    {
+      "path": "core/ambidefs.cpp",
+      "sha256": "7db2a664cfe2b756dd1ba2b557f3caee573893e02a5ece1ab25318759ff3de8c"
+    },
+    {
+      "path": "core/ambidefs.h",
+      "sha256": "a1cf51f66fbe6e9222bff3da3d8a994d77c5f227288316612ad39daa7def132e"
+    },
+    {
+      "path": "core/async_event.h",
+      "sha256": "62d9014317ba696bad4ed260d4282bf77ed4c425a3c5aaf12548140b7ede9b5b"
+    },
+    {
+      "path": "core/bformatdec.cpp",
+      "sha256": "cd60b776a71cb443f21423fd46b442bf8662e68c1fcc36a23afd4bdfcffd21df"
+    },
+    {
+      "path": "core/bformatdec.h",
+      "sha256": "8cbe3d19c446962af841ef3b95534881617834d5ac55d0df7ec6025d1acad456"
+    },
+    {
+      "path": "core/bs2b.cpp",
+      "sha256": "d363bd65b62e7c1c97b0557699b495cc4337afa2c786a53c721ae3b64ef3ee28"
+    },
+    {
+      "path": "core/bs2b.h",
+      "sha256": "66429b8a4041c2a5ad4c5f96dcbfa3661360ddac0ae61b1f94125a2bfc526c20"
+    },
+    {
+      "path": "core/bsinc_defs.h",
+      "sha256": "79ef0ff84708c1d5ac40e17f4a56a9801afbfe719f28fa1566100d2d3f882811"
+    },
+    {
+      "path": "core/bsinc_tables.cpp",
+      "sha256": "1e36646d591168acb98556258b4f94f92f6411b2f5b11135df73d28bd867bead"
+    },
+    {
+      "path": "core/bsinc_tables.h",
+      "sha256": "fcc9e0ee68a73947aed578eabc692dc456d31ff47c93ef491e53564d2858503f"
+    },
+    {
+      "path": "core/buffer_storage.cpp",
+      "sha256": "5c55a3a3b389cbce51c656b1a8af42c72402d41882221194089cee02118fec8a"
+    },
+    {
+      "path": "core/buffer_storage.h",
+      "sha256": "1ba52f9968c3e990e4ce9274b887cad1c7000d8277fba1148e25647927afeff2"
+    },
+    {
+      "path": "core/bufferline.h",
+      "sha256": "5a7519f661af1c6453dc047fe189e2fba3049b65dca391b73199d1da688446b4"
+    },
+    {
+      "path": "core/context.cpp",
+      "sha256": "6aadf8359853d15a7d66e6013281e7bc07d67dd69dcc6fe8a6afc07c399ec96c"
+    },
+    {
+      "path": "core/context.h",
+      "sha256": "6132fe147e42e4f632f5c99ff2e0da92da2eff84c6929e7e50f79e33c9264260"
+    },
+    {
+      "path": "core/converter.cpp",
+      "sha256": "c172d075b8c9a5f9b034edc10bdbf9c511e2576144b243fd21e2959169cc4b2c"
+    },
+    {
+      "path": "core/converter.h",
+      "sha256": "33bce789240729f8b1243d196641f5f8265d262a7148a7861c3a4fbcddc3ee15"
+    },
+    {
+      "path": "core/cpu_caps.cpp",
+      "sha256": "9269f34b3fb577b319b2202931f01e08d28c6041d4189b3bae016a5720aea132"
+    },
+    {
+      "path": "core/cpu_caps.h",
+      "sha256": "3c08cb1a9667a656cf62e0394a44276548ea2d625a42aa9b2b33b1141ae15b09"
+    },
+    {
+      "path": "core/dbus_wrap.cpp",
+      "sha256": "622f4fb89963cba7a6c87c305ecbeabe0ab54c0f30835dec25fb7335aefb03f5"
+    },
+    {
+      "path": "core/dbus_wrap.h",
+      "sha256": "992e270788b85e5cbc8e9270c64b43cd3dc24200851fca1590e0aab95e181981"
+    },
+    {
+      "path": "core/devformat.cpp",
+      "sha256": "3fd019e53b3834122acb4799a7e18b7ee3dffd33e5d657b820260a86c219e379"
+    },
+    {
+      "path": "core/devformat.h",
+      "sha256": "b059234fcb1dda6dd037817d74aa77ab660be6074fecfb6722f8c29cff12f165"
+    },
+    {
+      "path": "core/device.cpp",
+      "sha256": "0a276b941663bb70591d184e52cbdaa852a7a678171beae5daf41e2dc639b68a"
+    },
+    {
+      "path": "core/device.h",
+      "sha256": "80df36a544fce347c10c736cae8f8291031856742a58b135829a25c38e79e5c0"
+    },
+    {
+      "path": "core/effects/base.h",
+      "sha256": "44a65e81f2fb2dd02f5828b54918d8111283ac853b4ac6875fa8c0cc52d2a4d6"
+    },
+    {
+      "path": "core/effectslot.cpp",
+      "sha256": "d32c76044d24e5e7891eaa770f2e11e7b32e3fae845cac0c0a3b56a05e96f1df"
+    },
+    {
+      "path": "core/effectslot.h",
+      "sha256": "cff52ca59e706d8e6b60dc5d6c32b3759bbb64350213d3b8afcd2cd8ced530e1"
+    },
+    {
+      "path": "core/except.cpp",
+      "sha256": "3db09366379230c9043a6a25e0f9c6512f103ce20ac533dc6ddbc88998ca5579"
+    },
+    {
+      "path": "core/except.h",
+      "sha256": "be178b43e0dd204971a5d75f696c4543190ee120de06048af32c2e79618f838d"
+    },
+    {
+      "path": "core/filters/biquad.cpp",
+      "sha256": "0b965dbbaee34552b44ee4095c5adf57c3293078113912c3d396e61c8f47cb58"
+    },
+    {
+      "path": "core/filters/biquad.h",
+      "sha256": "7ef3c1cc5d2bfdc75f55bc385e5cca9898d97482196b1be79d1b8e1017afb115"
+    },
+    {
+      "path": "core/filters/nfc.cpp",
+      "sha256": "8eec433200208216d6876c967fe20e7ff63111ffae062c56dbd3528fc7571860"
+    },
+    {
+      "path": "core/filters/nfc.h",
+      "sha256": "e216168bc87d969f97899a579c134e2f2a237272a19cc8be6ff9408f261e4065"
+    },
+    {
+      "path": "core/filters/splitter.cpp",
+      "sha256": "0bf0cf1e35ee454add0671cf2d0af14bc8e02ac70319a9deced5a903d9efb253"
+    },
+    {
+      "path": "core/filters/splitter.h",
+      "sha256": "d8734c2ed0c729288bbdbc376162b5eecb5480ccb422ca85c0fdd95ac4fe63b0"
+    },
+    {
+      "path": "core/fmt_traits.cpp",
+      "sha256": "22ef6a3dde79f21484f7a28ad5663a1507899e2c7813709cc93f493db6441e5c"
+    },
+    {
+      "path": "core/fmt_traits.h",
+      "sha256": "b88b474e0f0063ba1ec9279751f832085ea124d42dbe60959b6af888dcc6544c"
+    },
+    {
+      "path": "core/fpu_ctrl.cpp",
+      "sha256": "09e19b44c8e9d2d0b4ca4ce93d4dbda44cd67f6c4c33ec286af08017365a230e"
+    },
+    {
+      "path": "core/fpu_ctrl.h",
+      "sha256": "281e033fa49390e7559ca968467568c53a62c1c75a3621b5a383bcbc9fc699cd"
+    },
+    {
+      "path": "core/front_stablizer.h",
+      "sha256": "134d36df1a9a47756d99d294f273a9d9b1e436cc52732d2b8a1ee442820ef0f7"
+    },
+    {
+      "path": "core/helpers.cpp",
+      "sha256": "30fec932041ad0b8e407e5911c51242bbd6a2c329f0384b73bb5a46d5909172a"
+    },
+    {
+      "path": "core/helpers.h",
+      "sha256": "25ab2bba79d6f43583843081fe8bb87e07c1eb2ededa1812c87b670b42624254"
+    },
+    {
+      "path": "core/hrtf.cpp",
+      "sha256": "fcc3a3d337804ea5f036f9154fbf2a23e42239e3bd986a91dd1d9041336a9e11"
+    },
+    {
+      "path": "core/hrtf.h",
+      "sha256": "bbcfca7bb95b8e7680b358c9e4cb92648b43a5f9552a0e4aeaa0af0b5c237635"
+    },
+    {
+      "path": "core/logging.cpp",
+      "sha256": "6e7e495cba0fe57ee46921391a9a3eae7214d863d36278d7c77fe1dcba379d97"
+    },
+    {
+      "path": "core/logging.h",
+      "sha256": "bc6e69072464863b65aba805b6bd63867f19d8aca8797ff796928347b3cde4e0"
+    },
+    {
+      "path": "core/mastering.cpp",
+      "sha256": "9abd30942ac1482b40434d2fe792191a1a266bbd3ec676d2b78440fbdb2a44d9"
+    },
+    {
+      "path": "core/mastering.h",
+      "sha256": "85db1c31f02172179434e01bb04e27a26767f763d7fe38e0906a690050606966"
+    },
+    {
+      "path": "core/mixer/defs.h",
+      "sha256": "5da6245c6cd9c42f915d7394667def4156f9caae5274862abf81a92677520072"
+    },
+    {
+      "path": "core/mixer/hrtfbase.h",
+      "sha256": "55c2bd317b730ef2ae149e829f5f43364bcdb0fe0b96a9d0cfc389e96a2c86fd"
+    },
+    {
+      "path": "core/mixer/hrtfdefs.h",
+      "sha256": "4b9277e47a72383d5c3f12c5c1a11a152123c4630918c927cb06a3cb33cec257"
+    },
+    {
+      "path": "core/mixer/mixer_c.cpp",
+      "sha256": "f00231703b7200d516987d454cc192afe1b450f495fdf4e05f48c62a4be5b57f"
+    },
+    {
+      "path": "core/mixer/mixer_neon.cpp",
+      "sha256": "6c399f99315ea6a9193917229647eb4bb63008e1ac9157d1ff049da849eef970"
+    },
+    {
+      "path": "core/mixer/mixer_sse.cpp",
+      "sha256": "ac5804139b0b17e4e0e7f343b25fcc9cb7a43ee1cff2e1a6339e422a6e4de907"
+    },
+    {
+      "path": "core/mixer/mixer_sse2.cpp",
+      "sha256": "5aba5fa5d1d1b1d67731917f3e76ffdd6a3da6dbf7cdba4f17f84f65972237f4"
+    },
+    {
+      "path": "core/mixer/mixer_sse3.cpp",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "core/mixer/mixer_sse41.cpp",
+      "sha256": "bfc1bde66c4d98937a8dc263e0fe22e7bd4d6480c6a5c0460688dcb5d28a6ce3"
+    },
+    {
+      "path": "core/mixer.cpp",
+      "sha256": "3336c1522fd0f8f2ad6d82731a5075e62d2dd9803894a479b666eb53b14ff7a2"
+    },
+    {
+      "path": "core/mixer.h",
+      "sha256": "564388c76e4db527698f58564289db21f3570ebc02c4203fd4d0ebecafe6fd64"
+    },
+    {
+      "path": "core/resampler_limits.h",
+      "sha256": "ef2f4419709621b3eb9533ec35e041861306507a056e504061f61185b2f2c881"
+    },
+    {
+      "path": "core/rtkit.cpp",
+      "sha256": "03ab0687d52aaadd09d4d524fe30a909b79a0c1e21ac3d248efa6d8774810e1f"
+    },
+    {
+      "path": "core/rtkit.h",
+      "sha256": "ca1246f49f8755601e65d859aca8285bb640d8324a65f1896f996e2425eecf50"
+    },
+    {
+      "path": "core/uhjfilter.cpp",
+      "sha256": "451c130704a602d35373d57e6b9d3b913dd6449fc2a80d549cd9fdfc738faaba"
+    },
+    {
+      "path": "core/uhjfilter.h",
+      "sha256": "ef02b5ff345042bb9024e1fed6d4cd97d4424c7184b370b1d2cd83bb90468582"
+    },
+    {
+      "path": "core/uiddefs.cpp",
+      "sha256": "0e5410162ea6f1d7ecd8fc56dd624a84631937edd5f77eced5529e7c58b00c58"
+    },
+    {
+      "path": "core/voice.cpp",
+      "sha256": "4e531b39330408a220ab1c9722cc68811bf1eaba18fa90738694ac8cf2276597"
+    },
+    {
+      "path": "core/voice.h",
+      "sha256": "6b935ea7af8f718d9508d11127d00e1049f5b20099b717e7920ce51d9b9fdc1d"
+    },
+    {
+      "path": "core/voice_change.h",
+      "sha256": "3734be5629a15e6a2fbe3e8ce4c2674bbe9bea6b44a0db99e39e87079fe7b508"
+    },
+    {
+      "path": "docs/3D7.1.txt",
+      "sha256": "c23c6a099b423d22de60723f20be88e4fbb72fd48bde391e6e8a4999246e2981"
+    },
+    {
+      "path": "docs/ambdec.txt",
+      "sha256": "99589930de432ce76cdfb0d2ad553cbe2fe1607f13720e88253bd0f8c093a8dd"
+    },
+    {
+      "path": "docs/ambisonics.txt",
+      "sha256": "e15c6ecd297495487bc1309424374ce1f44b04721df1890f2cffd682e32b2cc7"
+    },
+    {
+      "path": "docs/env-vars.txt",
+      "sha256": "12922d979fa3ba70ede3d64f001a4002d7f6de37a8605177338e66d66c27ad3e"
+    },
+    {
+      "path": "docs/hrtf.txt",
+      "sha256": "4426a27b7e180caa8821514e06be6e61ade441cf40877c1486073509c8d69649"
+    },
+    {
+      "path": "examples/alconvolve.c",
+      "sha256": "d311c4cd664b7a2ffb5674fa7808aa78abc715dc3056a05c5f1c64eae98be86e"
+    },
+    {
+      "path": "examples/alffplay.cpp",
+      "sha256": "7e7f5ba8b33d03abc67da31267995d6f200078864d8d0fac6bdc84bb727b1ff7"
+    },
+    {
+      "path": "examples/alhrtf.c",
+      "sha256": "f39546e12d2d8b21f652548c8f5b8b38bb05087ab6cd340cf1a0790898df27d8"
+    },
+    {
+      "path": "examples/allatency.c",
+      "sha256": "010cc7959da6447af7ea27787db80d9682c4eec46001193c95882d6e415495d3"
+    },
+    {
+      "path": "examples/alloopback.c",
+      "sha256": "9a124d40e40725984ee32dd59d1c62ad01145302ccf1fc5b5757b726c6cd3218"
+    },
+    {
+      "path": "examples/almultireverb.c",
+      "sha256": "48a84886fc6789980ac4e1ff07b04d3e32dfecc1d94033548da3671ad59fd226"
+    },
+    {
+      "path": "examples/alplay.c",
+      "sha256": "aba65a3e57aac4a388a57091bf25adbd1452aacfdec52a70cc71819c01c94980"
+    },
+    {
+      "path": "examples/alrecord.c",
+      "sha256": "651f2160b92d4528d215a81f5edfc90f752b0ab1599fde28dd8e7fc4c28c4e9f"
+    },
+    {
+      "path": "examples/alreverb.c",
+      "sha256": "1d66d517826645d5d51614b057f21421aea5849469b415221791bd59b5774ca4"
+    },
+    {
+      "path": "examples/alstream.c",
+      "sha256": "bc4b2eff869e170df5a7df7be270f27d4a9e28afd66e8fb321d5293f1cd5e002"
+    },
+    {
+      "path": "examples/alstreamcb.cpp",
+      "sha256": "f5de0c377a84e2cef3ad03f04defe5f99dfc681a3bbdf6c5fc8416d1217de9c9"
+    },
+    {
+      "path": "examples/altonegen.c",
+      "sha256": "441a9db93ffecdad1c1da2aff0ed10342085f2ffe6e62b191ad27758dcfd0268"
+    },
+    {
+      "path": "examples/common/alhelpers.c",
+      "sha256": "bedef391f53b5793df71f00e495120d2e0335dfd1815873cf464eee441642f0f"
+    },
+    {
+      "path": "examples/common/alhelpers.h",
+      "sha256": "f4757dba6e2492498ea40a50d19751cfe57856f9bb63933d02082a2d9e1a042f"
+    },
+    {
+      "path": "hrtf/Default HRTF.mhr",
+      "sha256": "0b2f09f4d9167dec4e977e7e1a8c78df17e87da06fb0871b9896fadaa473a440"
+    },
+    {
+      "path": "include/AL/al.h",
+      "sha256": "6128e5c05515ed41338b2fe42cdf95a214ebe6101bd346974aa561b32ac8d82d"
+    },
+    {
+      "path": "include/AL/alc.h",
+      "sha256": "a6b83342cbd83c288bca5fa150703a1a18f6e4d64b526affda30258091c6cb1b"
+    },
+    {
+      "path": "include/AL/alext.h",
+      "sha256": "4a86d0137ee9ec6b5f0897dc334c26c419b6847781787a833de759ca45018008"
+    },
+    {
+      "path": "include/AL/efx-creative.h",
+      "sha256": "572bab7fc8c7df1a4519cf0f01acbd6a55b5c75dc5d815f4f85bd46ff0a789e0"
+    },
+    {
+      "path": "include/AL/efx-presets.h",
+      "sha256": "d50d15c4d6ed4c2eb990d75cc2f8fd019168fdc5dba0ba36712371e1aefd9796"
+    },
+    {
+      "path": "include/AL/efx.h",
+      "sha256": "0b32529ec1e016b2e4da818b50102b90650901e3c2a8c5d1a7e37d93fcf5387b"
+    },
+    {
+      "path": "openal.pc.in",
+      "sha256": "582a6eb1ea878e762805085ff62e98fd2dcaf3b3498312e48e58ae23cedcca61"
+    },
+    {
+      "path": "presets/3D7.1.ambdec",
+      "sha256": "df7822ea93ecfc9929d52db5c3343824df7988c0a2e11d677f4f2ae8d91349aa"
+    },
+    {
+      "path": "presets/hex-quad.ambdec",
+      "sha256": "1df9c4ba1377c371d77ba2b482399898eaca99b4c7f3a149fb98fca0d4f72eae"
+    },
+    {
+      "path": "presets/hexagon.ambdec",
+      "sha256": "edd9c426789879f7a9ff861638cb5c1999697593693576849bca85a4ea6d24fc"
+    },
+    {
+      "path": "presets/itu5.1-nocenter.ambdec",
+      "sha256": "42475444be88b3cfee15d37e34cb73749a17bbf0bb5e5ead5b70c70a0c159791"
+    },
+    {
+      "path": "presets/itu5.1.ambdec",
+      "sha256": "b1ffc1bd144bff58e4c8a5be9838db78b462c23a52a4bbd92da3224f3dafd58f"
+    },
+    {
+      "path": "presets/presets.txt",
+      "sha256": "2777bd97f563bd8474107c61e21680a28d16c5764b332f37ef25a025b4ce7ff2"
+    },
+    {
+      "path": "presets/rectangle.ambdec",
+      "sha256": "15cf6d48319fd75fce1d78785ee0c2e3fe856dc66838422db8ea58c4a6f27521"
+    },
+    {
+      "path": "presets/square.ambdec",
+      "sha256": "84a3957e550af86177ccddecec41c32f5bb4a3dfa6b407ee86e67c719b3b5d68"
+    },
+    {
+      "path": "resources/openal32.rc",
+      "sha256": "b74425a565623336627e90f61a89fbe403222ed79e45f527e28304463026d0a8"
+    },
+    {
+      "path": "resources/resource.h",
+      "sha256": "89e74b7419a81147a2e8fc50dfddf86d9efe7eb6edffda10859228efb7208b7f"
+    },
+    {
+      "path": "resources/router.rc",
+      "sha256": "eaaebd61c51f316273aa42d8ca0138ba97d1dda23f8444a6207faedf779980a2"
+    },
+    {
+      "path": "resources/soft_oal.rc",
+      "sha256": "908a7e55acca077fb65cd6484478c76a35c1c36588328d9b18e9e149991d8d20"
+    },
+    {
+      "path": "router/al.cpp",
+      "sha256": "3cdf94898986160d98fa1537403ea7e1a9c4e885275dcb788cb24cbcf46fb544"
+    },
+    {
+      "path": "router/alc.cpp",
+      "sha256": "60548b5a6cabf513bcedf227099ad56f46544fd8220d052a9f68df6ad119da9a"
+    },
+    {
+      "path": "router/router.cpp",
+      "sha256": "4b9f78e1979e9bae1cf2a8d0feed5550d19c4de86c79218e5d4a8155da78197e"
+    },
+    {
+      "path": "router/router.h",
+      "sha256": "cd1373b98726bd92a3f61cc586411efdd2a76933ecb823271fee40cb37654c97"
+    },
+    {
+      "path": "utils/CIAIR.def",
+      "sha256": "8cc6820c8f39b2e155fccb0589a165132f2c833a7b6f71ded2e1e06a8f58a053"
+    },
+    {
+      "path": "utils/IRC_1005.def",
+      "sha256": "8e654d497c13c944d77f16b3782b7289a013762424d63b94722debd6075b9afc"
+    },
+    {
+      "path": "utils/MIT_KEMAR.def",
+      "sha256": "c9b3f90b1b1cf7a793a32f76ff7ca39ac7312cdd69e38a5717bd15e76afe5b77"
+    },
+    {
+      "path": "utils/MIT_KEMAR_sofa.def",
+      "sha256": "1e128f21ea7cb863971e4c38de3e7d7cb8a5713153dc61a2ea3b94d37117581a"
+    },
+    {
+      "path": "utils/SCUT_KEMAR.def",
+      "sha256": "225bb33a11ff22c205c33379bc5164dd5b9cba51bd9a8e290e10175740a0186c"
+    },
+    {
+      "path": "utils/alsoft-config/CMakeLists.txt",
+      "sha256": "43a85d1a8b83de2fb0272a5cc81b5e194ef873d70c1d9edf5bb20fc6431917a9"
+    },
+    {
+      "path": "utils/alsoft-config/main.cpp",
+      "sha256": "5704ec3db35f0a1947c435aca43873318b80cce1489d44e6a6a2d35fb4baaa93"
+    },
+    {
+      "path": "utils/alsoft-config/mainwindow.cpp",
+      "sha256": "0126983f213ac1bff6d44e7c44685ce58fe795db3a2e28c29fd837b14323c56c"
+    },
+    {
+      "path": "utils/alsoft-config/mainwindow.h",
+      "sha256": "f6dec29cfa7ceb6086e73c53b1b3c92d7d45f8985153a31835013145fb9a78ce"
+    },
+    {
+      "path": "utils/alsoft-config/mainwindow.ui",
+      "sha256": "7824b270c10a9f7674407f6d0a7f0eead721af6a84df8517b24bde8c2efa9d57"
+    },
+    {
+      "path": "utils/alsoft-config/verstr.cpp",
+      "sha256": "e2a24ef46e11d54ab5611104f48f08a1031cd6a58f1389c065c8cf8f5fc8ea66"
+    },
+    {
+      "path": "utils/alsoft-config/verstr.h",
+      "sha256": "9caeb9ff4e45146d728f47dfcec7080824f32576ab6b7263deaf887c5bf412d7"
+    },
+    {
+      "path": "utils/getopt.c",
+      "sha256": "0e105e2ebbcd1758929fa00d163dcf3afa1dd3aa125ad156882fb6568284d5f9"
+    },
+    {
+      "path": "utils/getopt.h",
+      "sha256": "a93509209fd7c0ae70fd465635191723bb10a99e061bfa78e02809b9b8048d00"
+    },
+    {
+      "path": "utils/makemhr/loaddef.cpp",
+      "sha256": "52c90412d3dcbb95352d36eaff857d6bffc51402c19155a8d201ab128133e533"
+    },
+    {
+      "path": "utils/makemhr/loaddef.h",
+      "sha256": "d19f3dbaf9cff8168b003d0cfc3d88320d8a25b95e70ce960d4040bf8c843f67"
+    },
+    {
+      "path": "utils/makemhr/loadsofa.cpp",
+      "sha256": "c86e5bd2469eacd64415b388852c3f75cdfc6af7b8c87275a9feca4a0f1c507e"
+    },
+    {
+      "path": "utils/makemhr/loadsofa.h",
+      "sha256": "a3c6657abd485d3c89ea3f017f274a01a997f490754a77914fc5d52a44bb3694"
+    },
+    {
+      "path": "utils/makemhr/makemhr.cpp",
+      "sha256": "2ad986f1ac38bb12c65a423497c12208f0e9100aefa339ecc184de0c83ada3a0"
+    },
+    {
+      "path": "utils/makemhr/makemhr.h",
+      "sha256": "2c8b88041469dc605cb4ea72e740503833516ec7bbe32f69db4fbd2f529432e6"
+    },
+    {
+      "path": "utils/openal-info.c",
+      "sha256": "db5d4f8c20fe4c41b88cf94dcaee10eb6ba563fb2d6b144cfbdb85d059952a64"
+    },
+    {
+      "path": "utils/sofa-info.cpp",
+      "sha256": "a9faf190a9a1c215e6e1cd64bc4f5e133eefeafe74e07770d781d671a2d0b749"
+    },
+    {
+      "path": "utils/sofa-support.cpp",
+      "sha256": "3256f0dcbb50d333d883bec05349a37f754be78a74f74d6f4c8a86450d227fce"
+    },
+    {
+      "path": "utils/sofa-support.h",
+      "sha256": "380994f51365fca1aa24dad7065a0c537ae9a1a6fbc5e998e82436aae3543abf"
+    },
+    {
+      "path": "utils/uhjdecoder.cpp",
+      "sha256": "184ad29640f4e0b928660e9169f2209fceab4f84e2e44b91ed83d1bc1d1a4f99"
+    },
+    {
+      "path": "utils/uhjencoder.cpp",
+      "sha256": "a1d570916dfd94d6a1e61cf531beffa0aa074c78db28efe96ad0d413bc50a2b7"
+    },
+    {
+      "path": "version.cmake",
+      "sha256": "e4ecd6d9f5351d4e1766948507ed7315d43c652375a4f24965b68e4bfb067176"
+    },
+    {
+      "path": "version.h.in",
+      "sha256": "af88be98020f9b925243d516d366984e4266283db3352dc9b8bfc514a5b3f4f1"
+    }
+  ]
+}

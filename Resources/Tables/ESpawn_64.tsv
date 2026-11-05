@@ -1,0 +1,35 @@
+Dif	MachName	Rte	Cnt	Dly
+// 난이도 1
+1	E_Tank_17	70	16	2
+1	E_Tank_18	90	13	2
+1	E_Tank_19	10	11	6
+1	E_Tank_28	99	3	6
+1	E_Tank_09	120	11	1
+1	E_Tank_01	100	5	2
+
+// 난이도 2
+2	E_Tank_16	120	15	2
+2	E_Tank_17	90	15	2
+2	E_Tank_19	10	7	6
+2	E_Tank_32	99	2	6
+2	E_Tank_10	120	10	1
+
+// 난이도 3
+3	E_Tank_17	50	15	2
+3	E_Tank_18	80	13	2
+3	E_Tank_19	70	7	6
+3	E_Tank_18	10	3	2
+3	E_Tank_29	99	3	6
+
+// 난이도 4
+4	E_Tank_17	50	13	2
+4	E_Tank_16	80	10	2
+4	E_Tank_19	70	7	6
+4	E_Tank_18	10	7	2
+4	E_Tank_22	99	3	6
+
+// 난이도 5
+5	E_Tank_19	80	9	2
+5	E_Tank_17	90	15	2
+5	E_Tank_19	10	7	2
+5	E_Tank_27	99	3	6

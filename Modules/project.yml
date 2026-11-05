@@ -1,0 +1,56 @@
+name: MachDefenseModules
+options:
+  deploymentTarget:
+    iOS: '15.0'
+settings:
+  base:
+    ARCHS: arm64
+    CLANG_CXX_LANGUAGE_STANDARD: c++20
+    HEADER_SEARCH_PATHS: [$(inherited), $(SRCROOT)/../Sources]
+    CLANG_ENABLE_OBJC_ARC: 'YES'
+    SUPPORTS_MACCATALYST: 'NO'
+    GENERATE_INFOPLIST_FILE: 'YES'
+    OTHER_CPLUSPLUSFLAGS: [$(inherited), -ffp-contract=off, -fno-fast-math]
+targets:
+  MachDefenseCore:
+    type: library.static
+    platform: iOS
+    sources:
+      - path: ../Sources/Core
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.gelb2.machdefense.core
+        SKIP_INSTALL: 'YES'
+  MachDefenseAudio:
+    type: library.static
+    platform: iOS
+    sources:
+      - path: ../Sources/Audio
+    settings:
+      base:
+        HEADER_SEARCH_PATHS: [$(inherited), $(SRCROOT)/../Sources, $(SRCROOT)/ThirdParty/openal-soft/include]
+        SKIP_INSTALL: 'YES'
+  MachDefenseAssets:
+    type: bundle
+    platform: iOS
+    sources:
+      - path: ../Resources/Images
+        type: folder
+        buildPhase: resources
+      - path: ../Resources/Audio
+        type: folder
+        buildPhase: resources
+      - path: ../Resources/RawData
+        type: folder
+        buildPhase: resources
+      - path: ../Resources/Tables
+        type: folder
+        buildPhase: resources
+      - path: ../Resources/Generated
+        type: folder
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.gelb2.machdefense.assets
+        SKIP_INSTALL: 'YES'
+        CODE_SIGNING_ALLOWED: 'NO'

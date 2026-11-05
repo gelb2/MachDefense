@@ -1,0 +1,314 @@
+Code	Icon	Type	Attr	Param1	Param2	Param3	strParam      	Name
+00001	32009	Coin	-   	1   	0   	0   	none          	Coin 1
+00002	32010	Coin	-   	100  	0   	0   	none          	Coin 5
+00003	32011	Coin	-   	300 	0   	0   	none          	Coin 10
+00004	32012	Coin	-   	500  	0   	0   	none          	Coin 50
+00005	32013	Coin	-   	1000 	0   	0   	none          	Coin 100
+00101	32001	Mineral	-   	1   	0   	0   	none          	Mineral 1
+00102	32002	Mineral	-   	100   	0   	0   	none          	Mineral 1
+00103	32003	Mineral	-   	300   	0   	0   	none          	Mineral 1
+00104	32004	Mineral	-   	500   	0   	0   	none          	Mineral 1
+00105	32005	Mineral	-   	1000   	0   	0   	none          	Mineral 1
+//
+02001	64001	SpAtk	BSQC	1   	1.5   	0   	AS_BOMB       	Air-strike Bomb
+02002	64002	SpAtk	BSQC	2   	1.5   	0   	AS_BOMB       	Air-strike Bomb
+02003	64003	SpAtk	BSQC	3   	1.5   	0   	AS_BOMB       	Air-strike Bomb
+02004	64004	SpAtk	BSQC	4   	1.5   	0   	AS_BOMB       	Air-strike Bomb
+02005	64005	SpAtk	BSQC	5   	1.5   	0   	AS_BOMB       	Air-strike Bomb
+02011	64011	SpAtk	BSQC	1   	1.0   	0   	AS_MISSILE   	Air-strike Missile
+02012	64012	SpAtk	BSQC	2   	1.0   	0   	AS_MISSILE   	Air-strike Missile
+02013	64013	SpAtk	BSQC	3   	1.0   	0   	AS_MISSILE   	Air-strike Missile
+02014	64014	SpAtk	BSQC	4   	1.0   	0   	AS_MISSILE   	Air-strike Missile
+02015	64015	SpAtk	BSQC	5   	1.0   	0   	AS_MISSILE   	Air-strike Missile
+02021	64021	SpAtk	BSQC	1   	2.0 	0   	AS_NUCLEAR   	Air-strike Nuclear
+02022	64022	SpAtk	BSQC	2   	2.0 	0   	AS_NUCLEAR   	Air-strike Nuclear
+02023	64023	SpAtk	BSQC	3   	2.0 	0   	AS_NUCLEAR   	Air-strike Nuclear
+02024	64024	SpAtk	BSQC	4   	2.0 	0   	AS_NUCLEAR   	Air-strike Nuclear
+02025	64025	SpAtk	BSQC	5   	2.0 	0   	AS_NUCLEAR   	Air-strike Nuclear
+02031	64031	SpAtk	BSQC	1   	2.0   	0   	AS_EMP      	Air-strike EMP Shock
+02032	64032	SpAtk	BSQC	2   	2.0   	0   	AS_EMP      	Air-strike EMP Shock
+02033	64033	SpAtk	BSQC	3   	2.0   	0   	AS_EMP      	Air-strike EMP Shock
+02034	64034	SpAtk	BSQC	4   	2.0   	0   	AS_EMP      	Air-strike EMP Shock
+02041	64041	SpAtk	BSQC	1   	1.0   	0   	AS_LASER      	Air-strike Laser
+02042	64042	SpAtk	BSQC	2   	1.0   	0   	AS_LASER      	Air-strike Laser
+02043	64043	SpAtk	BSQC	3   	1.0   	0   	AS_LASER      	Air-strike Laser
+02044	64044	SpAtk	BSQC	4   	1.0   	0   	AS_LASER      	Air-strike Laser
+02101	64101	SpAtk	BSQC	1   	1.0   	0   	CF_MISSILE  	Crossfire Missile
+02102	64102	SpAtk	BSQC	2   	1.0   	0   	CF_MISSILE  	Crossfire Missile
+02103	64103	SpAtk	BSQC	3   	1.0   	0   	CF_MISSILE  	Crossfire Missile
+02104	64104	SpAtk	BSQC	4   	1.0   	0   	CF_MISSILE  	Crossfire Missile
+02105	64105	SpAtk	BSQC	5   	1.0   	0   	CF_MISSILE  	Crossfire Missile
+02106	64106	SpAtk	BSQC	6   	1.0   	0   	CF_MISSILE  	Crossfire Missile
+02107	64107	SpAtk	BSQC	7   	1.0   	0   	CF_MISSILE  	Crossfire Missile
+02108	64108	SpAtk	BSQC	8   	1.0   	0   	CF_MISSILE  	Crossfire Missile
+02111	64111	SpAtk	BSQC	1   	1.0   	0   	CF_FLAME    	Crossfire Flame
+02112	64112	SpAtk	BSQC	2   	1.0   	0   	CF_FLAME    	Crossfire Flame
+02113	64113	SpAtk	BSQC	3   	1.0   	0   	CF_FLAME    	Crossfire Flame
+02114	64114	SpAtk	BSQC	4   	1.0   	0   	CF_FLAME    	Crossfire Flame
+02115	64115	SpAtk	BSQC	5   	1.0   	0   	CF_FLAME    	Crossfire Flame
+//
+04001	04001	Bot 	BSC 	0   	0   	0   	Bot_A01       	Attacker A1
+04002	04002	Bot 	BSC 	0   	0   	0   	Bot_A02      	Attacker A2
+04003	04003	Bot 	BSC 	0   	0   	0   	Bot_A03      	Attacker A3
+//04101	04101	Bot 	BSC 	0   	0   	0   	Bot_D01      	Defender
+//04102	04102	Bot 	BSC 	0   	0   	0   	Bot_D02      	Defender
+04201	04201	Bot 	BSC 	0   	0   	0   	Bot_P01       	Item Picker A
+04202	04202	Bot 	BSC 	0   	0   	0   	Bot_P02       	Item Picker B
+04203	04203	Bot 	BSC 	0   	0   	0   	Bot_P03       	Item Picker C
+// Light Machine-Gun
+10041	10041	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_401	MG-16e
+10011	10011	PtWpn	S   	0    	0    	0   	P_Wpn_Gun_101	MG-16
+10042	10042	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_402	MG-20s
+10012	10012	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_102	MG-20
+10013	10013	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_103	MG-21
+10047	10047	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_407	MG-200
+10014	10014	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_104	MG-30
+10043	10043	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_403	MG-21k
+10015	10015	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_105	MG-40
+10016	10016	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_106	MG-47
+// Heavy Machine-Gun
+10032	10032	PtWpn	BS  	0    	0    	0   	P_Wpn_HMG_01	MG-20k
+10024	10024	PtWpn	BS  	0    	0    	0   	P_Wpn_HMG_02	MG-30i
+10033	10033	PtWpn	BS  	0    	0    	0   	P_Wpn_HMG_03	MG-21s
+10044	10044	PtWpn	BS  	0    	0    	0   	P_Wpn_HMG_04	MG-30e
+10025	10025	PtWpn	BS  	0    	0    	0   	P_Wpn_HMG_05	MG-40e
+10045	10045	PtWpn	BS  	0    	0    	0   	P_Wpn_HMG_06	MG-40 mk3
+10034	10034	PtWpn	BS  	0    	0    	0   	P_Wpn_HMG_07	MG-30r
+10035	10035	PtWpn	BS  	0    	0    	0   	P_Wpn_HMG_08	MG-40 mk2
+10046	10046	PtWpn	BS  	0    	0    	0   	P_Wpn_HMG_09	MG-47.e
+10026	10026	PtWpn	BS  	0    	0    	0   	P_Wpn_HMG_10	MG-47.k
+// Light Missile
+10111	10111	PtWpn	S   	0    	0    	0   	P_Wpn_Msl_101	ML-1
+10118	10118	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_108	ML-E4
+10112	10112	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_102	ML-K2
+10115	10115	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_105	ML-603
+10116	10116	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_106	ML-E1
+10132	10132	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_302	ML-1 mk2
+10133	10133	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_303	ML-60
+10134	10134	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_304	ML-1 mk3
+10135	10135	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_305	ML-604
+10137	10137	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_307	ML-100
+// Heavy Missile
+10126	10126	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_206	ML-T3
+10128	10128	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_208	ML-U300
+10127	10127	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_207	ML-U200
+10143	10143	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_403	ML_T2
+10140	10140	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_310	ML-200
+10129	10129	PtWpn	BS  	0   	0    	0   	P_Wpn_Msl_209	ML-903
+10144	10144	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_404	ML-T2 mk2
+10130	10130	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_210	ML-TU
+10131	10131	PtWpn	BS  	0   	0    	0   	P_Wpn_Msl_301	ML-TU.2
+10145	10145	PtWpn	S   	0    	0    	0   	P_Wpn_Msl_405	ML-901
+// Shot-Gun
+10211	10211	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_101	SG-1
+10215	10215	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_105	SG-7
+10218	10218	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_108	SG-45 m2
+10212	10212	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_102	SG-1e
+10226	10226	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_206	SG-9
+10221	10221	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_201	SG-60
+10228	10228	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_208	SG-X2
+10224	10224	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_204	SG-603
+10230	10230	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_210	SG-X10
+10223	10223	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_203	SG-UX
+// Laser-Gun
+10311	10311	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_101	LS-D
+10312	10312	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_102	LS-102
+10313	10313	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_103	LS-103
+10316	10316	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_106	LS-103D
+10317	10317	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_107	LS-L20
+10318	10318	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_108	LS-L21
+10319	10319	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_109	LS-X100
+10321	10321	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_111	LS-L30
+10340	10340	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_210	LS-K102
+10320	10320	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_110	LS-UL1
+// Plasma-Gun
+10416	10416	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_106	RG-16
+10417	10417	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_107	RG-C1
+10418	10418	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_108	RG-C2
+10419	10419	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_109	RG-35
+10420	10420	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_110	RG-DM1
+10421	10421	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_201	RG-DM2
+10422	10422	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_202	RG-UD
+10423	10423	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_203	RG-TR500
+10428	10428	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_208	RG-Ak2
+10429	10429	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_209	RG-Ak3
+// Unused
+//10021	10021	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_201	MG-16d
+//10314	10314	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_104	LS-D2
+//10031	10031	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_301	MG-16s
+//10315	10315	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_105	LS-10
+//10411	10411	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_101	RG-k1
+//10213	10213	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_103	SG-2
+//10113	10113	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_103	ML-K3
+//10214	10214	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_104	SG-5
+//10146	10146	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_406	ML-106
+//10022	10022	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_202	MG-20d
+//10147	10147	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_407	ML-109
+//10148	10148	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_408	ML-K4
+//10216	10216	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_106	SG-7e
+//10149	10149	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_409	ML-6
+//10412	10412	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_102	RG-Type2
+//10114	10114	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_104	ML-602
+//10023	10023	PtWpn	BS  	0    	0    	0   	P_Wpn_Gun_203	MG-21d
+//10217	10217	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_107	SG-45
+//10413	10413	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_103	RG-Type3
+//10117	10117	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_107	ML-E2
+//10424	10424	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_204	RG-N20
+//10331	10331	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_201	LS-27
+//10119	10119	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_109	ML-E6
+//10425	10425	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_205	RG-N21
+//10120	10120	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_110	ML-1 mk4
+//10332	10332	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_202	LS-27s
+//10219	10219	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_109	SG-45 m3
+//10121	10121	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_201	ML-16k
+//10414	10414	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_104	RG-30
+//10220	10220	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_110	SG-50
+//10333	10333	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_203	LS-B1
+//10122	10122	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_202	ML-27
+//10123	10123	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_203	ML-27 mk2
+//10124	10124	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_204	ML-27 mk3
+//10334	10334	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_204	LS-47
+//10125	10125	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_205	ML-27 mk4
+//10222	10222	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_202	SG-601
+//10335	10335	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_205	LS-47 mk2
+//10136	10136	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_306	ML-605e
+//10336	10336	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_206	LS-S20
+//10225	10225	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_205	SG-8
+//10415	10415	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_105	RG-DM3
+//10138	10138	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_308	ML-101
+//10337	10337	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_207	LS-S21
+//10227	10227	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_207	SG-X
+//10139	10139	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_309	ML-102u
+//10427	10427	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_207	RG-E64
+//10338	10338	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_208	LS-S100
+//10426	10426	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_206	RG-E64 mk2
+//10339	10339	PtWpn	BS  	0    	0    	0   	P_Wpn_Lsr_209	LS-K100
+//10229	10229	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_209	SG-X3
+//10142	10142	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_402	ML-207
+//10430	10430	PtWpn	BS  	0    	0    	0   	P_Wpn_Rlg_210	RG-PK1
+//10231	10231	PtWpn	BS  	0    	0    	0   	P_Wpn_Shg_301	SG-X2
+//10141	10141	PtWpn	BS  	0    	0    	0   	P_Wpn_Msl_401	ML-900
+//10048	10048	PtWpn	BS   	0    	0    	0   	P_Wpn_Gun_408	MG-201k
+//10431	10431	PtWpn	BS  	0   	0    	0   	P_Wpn_Rlg_301	RG-1903
+//10501	10501	PtWpn	S   	0    	0    	0   	P_Wpn_Sni_101	Sn-IGn
+//10502	10502	PtWpn	S   	0    	0    	0   	P_Wpn_Sni_102	Sn-Eagle
+//10503	10503	PtWpn	S    	0    	0    	0   	P_Wpn_Sni_103	Sn-Hawk
+//10504	10504	PtWpn	S   	0   	0    	0   	P_Wpn_Sni_104	Sn-HawkEye
+// Heavy Armor					HP
+//11001	11001	PtBody	S   	250   	0    	0   	P_Body_01   	Default Body
+//11013	11013	PtBody	BS   	300   	14    	0   	P_Body_13   	BDP-D2
+//11010	11010	PtBody	BS   	350   	16    	0   	P_Body_10   	BDP-D3
+//11014	11014	PtBody	BS   	600   	22    	0   	P_Body_14   	BDP-D-Dr
+//11020	11020	PtBody	BS   	1200   	32    	0   	P_Body_20   	BDU-W1
+//11023	11023	PtBody	BS   	1500   	50    	0   	P_Body_23   	BD-EGX
+// LMG Armor					HP
+11001	11001	PtBody	BS   	300   	2    	0   	P_Body_02   	BD-p-Dr
+11002	11002	PtBody	BS   	330   	10    	0   	P_Body_05   	BD-p-Pl
+11003	11003	PtBody	BS   	370   	5    	0   	P_Body_03   	BD-p-Jg
+11004	11004	PtBody	BS  	420   	7    	0   	P_Body_04   	BD-p-Mt
+11005	11005	PtBody	BS   	480   	12    	0   	P_Body_06   	BDP-Nasl
+11006	11006	PtBody	BS   	540   	18    	0   	P_Body_11   	BDP-D4
+11007	11007	PtBody	BS   	620   	20    	0   	P_Body_12   	BDP-D5
+11008	11008	PtBody	BS   	700   	26    	0   	P_Body_16   	BDP-D-Jg2
+11009	11009	PtBody	BS   	800  	27    	0   	P_Body_17   	BDE-F1
+11010	11010	PtBody	BS   	920   	30    	0   	P_Body_18   	BDE-F2
+// HMG Armor					HP
+11011	11001	PtBody	BS   	500   	2    	0   	PB_HMG_01   	BD-p-Dr
+11012	11002	PtBody	BS   	550   	10    	0   	PB_HMG_02   	BD-p-Pl
+11013	11003	PtBody	BS   	620   	5    	0   	PB_HMG_03   	BD-p-Jg
+11014	11004	PtBody	BS  	710   	7    	0   	PB_HMG_04   	BD-p-Mt
+11015	11005	PtBody	BS   	800   	12    	0   	PB_HMG_05   	BDP-Nasl
+11016	11006	PtBody	BS   	900   	18    	0   	PB_HMG_06   	BDP-D4
+11017	11007	PtBody	BS   	1000   	20    	0   	PB_HMG_07   	BDP-D5
+11018	11008	PtBody	BS   	1100   	26    	0   	PB_HMG_08   	BDP-D-Jg2
+11019	11009	PtBody	BS   	1250  	27    	0   	PB_HMG_09   	BDE-F1
+11020	11010	PtBody	BS   	1500   	30    	0   	PB_HMG_10   	BDE-F2
+// Missile Armor				HP
+11021	11001	PtBody	BS   	350   	2    	0   	PB_Missile_01  	BD-p-Dr
+11022	11002	PtBody	BS   	420   	10    	0   	PB_Missile_02  	BD-p-Pl
+11023	11003	PtBody	BS   	500   	5    	0   	PB_Missile_03  	BD-p-Jg
+11024	11004	PtBody	BS  	600   	7    	0   	PB_Missile_04  	BD-p-Mt
+11025	11005	PtBody	BS   	750   	12    	0   	PB_Missile_05  	BDP-Nasl
+11026	11006	PtBody	BS   	900   	18    	0   	PB_Missile_06  	BDP-D4
+11027	11007	PtBody	BS   	1100   	20    	0   	PB_Missile_07  	BDP-D5
+11028	11008	PtBody	BS   	1300   	26    	0   	PB_Missile_08  	BDP-D-Jg2
+11029	11009	PtBody	BS   	1500  	27    	0   	PB_Missile_09  	BDE-F1
+11030	11010	PtBody	BS   	1700   	30    	0   	PB_Missile_10  	BDE-F2
+// Heavy Missile Armor			HP
+11031	11001	PtBody	BS   	1000   	2    	0   	PB_HMsl_01   	BD-p-Dr
+11032	11002	PtBody	BS   	1100   	10    	0   	PB_HMsl_02   	BD-p-Pl
+11033	11003	PtBody	BS   	1200   	5    	0   	PB_HMsl_03   	BD-p-Jg
+11034	11004	PtBody	BS  	1300   	7    	0   	PB_HMsl_04   	BD-p-Mt
+11035	11005	PtBody	BS   	1500   	12    	0   	PB_HMsl_05   	BDP-Nasl
+11036	11006	PtBody	BS   	1700   	18    	0   	PB_HMsl_06   	BDP-D4
+11037	11007	PtBody	BS   	2000   	20    	0   	PB_HMsl_07   	BDP-D5
+11038	11008	PtBody	BS   	2300   	26    	0   	PB_HMsl_08   	BDP-D-Jg2
+11039	11009	PtBody	BS   	2600  	27    	0   	PB_HMsl_09   	BDE-F1
+11040	11010	PtBody	BS   	3000   	30    	0   	PB_HMsl_10   	BDE-F2
+// Tanker Armor	-> MachList
+// Shotgun Armor					HP
+11051	11001	PtBody	BS   	400   	2    	0   	PB_Shg_01   	BD-p-Dr
+11052	11002	PtBody	BS   	500   	10    	0   	PB_Shg_02   	BD-p-Pl
+11053	11003	PtBody	BS   	800   	5    	0   	PB_Shg_03   	BD-p-Jg
+11054	11004	PtBody	BS  	1100   	7    	0   	PB_Shg_04   	BD-p-Mt
+11055	11005	PtBody	BS   	1400   	12    	0   	PB_Shg_05   	BDP-Nasl
+11056	11006	PtBody	BS   	1700   	18    	0   	PB_Shg_06   	BDP-D4
+11057	11007	PtBody	BS   	2000   	20    	0   	PB_Shg_07   	BDP-D5
+11058	11008	PtBody	BS   	2400   	26    	0   	PB_Shg_08   	BDP-D-Jg2
+11059	11009	PtBody	BS   	2800  	27    	0   	PB_Shg_09   	BDE-F1
+11060	11010	PtBody	BS   	3300   	30    	0   	PB_Shg_10   	BDE-F2
+// Plasma Armor					HP
+11061	11001	PtBody	BS   	1000   	2    	0   	PB_Plasma_01   	BD-p-Dr
+11062	11002	PtBody	BS   	1100   	10    	0   	PB_Plasma_02   	BD-p-Pl
+11063	11003	PtBody	BS   	1250   	5    	0   	PB_Plasma_03   	BD-p-Jg
+11064	11004	PtBody	BS  	1400   	7    	0   	PB_Plasma_04   	BD-p-Mt
+11065	11005	PtBody	BS   	1600   	12    	0   	PB_Plasma_05   	BDP-Nasl
+11066	11006	PtBody	BS   	1800   	18    	0   	PB_Plasma_06   	BDP-D4
+11067	11007	PtBody	BS   	2000   	20    	0   	PB_Plasma_07   	BDP-D5
+11068	11008	PtBody	BS   	2300   	26    	0   	PB_Plasma_08   	BDP-D-Jg2
+11069	11009	PtBody	BS   	2600  	27    	0   	PB_Plasma_09   	BDE-F1
+11070	11010	PtBody	BS   	3000   	30    	0   	PB_Plasma_10   	BDE-F2
+// Ion Armor					HP
+11071	11001	PtBody	BS   	1000   	2    	0   	PB_Ion_01   	BD-p-Dr
+11072	11002	PtBody	BS   	1200   	10    	0   	PB_Ion_02   	BD-p-Pl
+11073	11003	PtBody	BS   	1400   	5    	0   	PB_Ion_03   	BD-p-Jg
+11074	11004	PtBody	BS  	1600   	7    	0   	PB_Ion_04   	BD-p-Mt
+11075	11005	PtBody	BS   	1800   	12    	0   	PB_Ion_05   	BDP-Nasl
+11076	11006	PtBody	BS   	2000   	18    	0   	PB_Ion_06   	BDP-D4
+11077	11007	PtBody	BS   	2300   	20    	0   	PB_Ion_07   	BDP-D5
+11078	11008	PtBody	BS   	2600   	26    	0   	PB_Ion_08   	BDP-D-Jg2
+11079	11009	PtBody	BS   	3000  	27    	0   	PB_Ion_09   	BDE-F1
+11080	11010	PtBody	BS   	3400   	30    	0   	PB_Ion_10   	BDE-F2
+//11015	11015	PtBody	BS   	400   	24    	0   	P_Body_15   	BDP-D-Jg
+//11021	11021	PtBody	BS   	500   	40    	0   	P_Body_21   	BD-EG201
+//11022	11022	PtBody	BS   	550   	45    	0   	P_Body_22   	BD-EG301
+//11033	11033	PtBody	BS   	600   	60    	0   	P_Body_33   	BD-X10
+//11034	11034	PtBody	BS   	700   	70    	0   	P_Body_34   	BD-XE300
+// Plane
+//11030	11030	PtBody	BS   	600   	34    	0   	P_Body_30   	BD-C-34
+//11031	11031	PtBody	BS   	650   	36    	0   	P_Body_31   	BD-C-35
+//11032	11032	PtBody	BS   	700   	38    	0   	P_Body_32   	BD-C-500
+//								step		
+12001	12001	PtBtm	S   	10  	1.0  	20   	P_Foot_01   	Default Foot
+12002	12002	PtBtm	BS  	11  	1.1  	20   	P_Foot_02   	Ft-D2
+12003	12003	PtBtm	BS  	12   	1.2  	22   	P_Foot_03   	Ft-D3
+12004	12004	PtBtm	BS  	13   	1.3  	22   	P_Foot_04   	Ft-D4
+12005	12005	PtBtm	BS  	14  	1.4  	22   	P_Foot_05   	Ft-D5
+12006	12006	PtBtm	BS  	15  	1.4  	24   	P_Foot_06   	Ft-E6
+12007	12007	PtBtm	BS  	16  	1.5  	24   	P_Foot_07   	Ft-E6.m2
+12008	12008	PtBtm	BS  	17  	1.5  	24   	P_Foot_08   	Ft-Sp1
+12009	12009	PtBtm	BS  	18  	1.6  	24   	P_Foot_09   	Ft-Sp2.2
+12010	12010	PtBtm	BS  	19  	1.6  	26   	P_Foot_10   	Ft-Sp3
+12011	12011	PtBtm	BS  	20  	1.7  	26   	P_Foot_11   	Ft-Sp3.5
+12012	12012	PtBtm	BS  	21  	1.7  	27   	P_Foot_12   	Ft-Sp3.E
+12013	12013	PtBtm	BS  	22  	1.8  	27   	P_Foot_13   	Ft-EM45
+12014	12014	PtBtm	BS  	23  	1.8  	28   	P_Foot_14   	Ft-EM47
+12015	12015	PtBtm	BS  	24  	1.9  	28   	P_Foot_15   	Ft-EM1000
+12016	12016	PtBtm	BS  	25  	1.9  	28   	P_Foot_16   	Ft-Sp700
+12017	12017	PtBtm	BS  	26  	2.0  	28   	P_Foot_17   	Ft-Sp720
+12018	12018	PtBtm	BS  	27  	2.1  	32   	P_Foot_18   	Ft-Sp800k
+12019	12019	PtBtm	BS  	28  	2.2  	32   	P_Foot_19   	Ft-N45
+12020	12020	PtBtm	BS  	29  	2.2  	32   	P_Foot_20   	Ft-N48
+12021	12021	PtBtm	BS  	30  	2.3 	33  	P_Foot_21   	Ft-ESM.11
+12022	12022	PtBtm	BS  	31  	2.4 	34   	P_Foot_22   	Ft-ESM.20
+12023	12023	PtBtm	BS  	32  	2.5 	35   	P_Foot_23   	Ft-ESM.X
