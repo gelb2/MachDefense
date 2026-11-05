@@ -1,6 +1,6 @@
 # 설계
 
-원본 비교 실행기는 Compatibility/ios에 있다. Web·Desktop·Distribution 및 native macOS 경로는 예정 책임이다. Android는 2026-11-06 일반·치트 APK를 구현하고 Galaxy와 에뮬레이터에서 검사했다. [Android 책임과 실행 근거](evidence/android-native-20261106.md)를 따른다. 소스 재개발판은 C++20 코어·공용 자원 번들·Objective-C++ Apple 실행기로 작성 중이다. Apple/MachDefense.xcworkspace에 일반·치트 앱과 Modules 프로젝트를 연결했다. GameSession에 메뉴·전투·강화·보상·저장을 연결했다. 현재 위메이드 1.0.3 포팅판과 기능·표시를 대조하고 실기기 검증을 진행한다. 전체 완료 범위는 [현재 상태](current-status.md), 작업 순서는 [소스 재개발 계획](source-reimplementation-plan.md)을 따른다.
+원본 비교 실행기는 Compatibility/ios에 있다. Web·Distribution/Web은 구현했다. Desktop/Tauri와 native macOS 경로는 예정 책임이다. Android는 2026-11-06 일반·치트 APK를 구현하고 Galaxy와 에뮬레이터에서 검사했다. [Android 책임과 실행 근거](evidence/android-native-20261106.md)를 따른다. 소스 재개발판은 C++20 코어·공용 자원 번들·Objective-C++ Apple 실행기로 작성 중이다. Apple/MachDefense.xcworkspace에 일반·치트 앱과 Modules 프로젝트를 연결했다. GameSession에 메뉴·전투·강화·보상·저장을 연결했다. 현재 위메이드 1.0.3 포팅판과 기능·표시를 대조하고 실기기 검증을 진행한다. 전체 완료 범위는 [현재 상태](current-status.md), 작업 순서는 [소스 재개발 계획](source-reimplementation-plan.md)을 따른다.
 
 | 경로 | 책임 |
 |---|---|
@@ -27,3 +27,7 @@
 ## 긴급지원 모듈 — 2026-11-05
 
 `Simulation/EmergencySupport`는 전투 시간과 현재 셀 용량·연구값을 받아 30/45/60초 반복 지원을 계산한다. `Session/GameSession`은 수령액을 기존 슬롯 크레딧과 World의 셀에 반영한다. `Presentation/SupportDialog`는 원작 CommonUI·SysMenu_Btn·Common_Btn_CLOSE·SpriteFont·Button으로 창을 그리고 입력을 처리한다. Apple 전용 UI나 새 저장 파일은 없다. 지원 상태는 전투가 끝나면 사라지며 수령한 크레딧은 기존 저장 지점에서 보존한다. [산식](emergency-resupply-economy.md) · [검사](evidence/emergency-resupply-20261105.md).
+
+## 복원 코드·웹·PWA·Tauri — 2026-11-06 계획
+
+[세부 설계와 검사 순서](save-transfer-web-tauri-plan.md)에 공용 SaveTransfer, 원본 5슬롯 보존, Core의 복원 UI, 단일 Web 실행기와 플랫폼별 저장 서비스를 정리했다. 먼저 웹 실행기를 검증하고 같은 산출물을 설치형 PWA와 Tauri Mac에 연결한다. 기존 플랫폼의 OS 연결은 유지한다. 웹 저장은 Asyncify로 IndexedDB 트랜잭션 완료를 기다린 뒤 기존 bool 결과를 반환한다. 공용 복원 연결 4파일 외 Apple·Android 실행기·기존 계산·음향·자원은 보존했다. 현재 전체 5슬롯 복원과 웹/PWA를 구현했고 Tauri는 남았다. [검사와 파일 목록](evidence/web-pwa-20261106.md).

@@ -19,3 +19,7 @@ AVAudioSession 설정·활성화·비활성화는 Apple 어댑터의 직렬 큐�
 ## Android 실행기
 
 게임/렌더 작업은 하나의 HandlerThread에서 실행한다. Surface와 EGL context가 사라져도 GameSession과 진행 상태를 유지한다. Activity 재생성·백그라운드 복귀는 게임을 일시정지하며 사용자가 게임 메뉴에서 재개한다. 효과음은 공통 Audio/OpenAL Soft의 OpenSL ES 출력을, 음악은 MediaPlayer를 쓴다. 파일 저장은 GameSession 요청 때만 임시 파일·fsync·rename으로 교체한다. [검사 결과](evidence/android-native-20261106.md).
+
+## 복원 코드와 웹 저장 후속 계획
+
+[공용 복원 모듈 계획](save-transfer-web-tauri-plan.md)에 원본 5슬롯, 확장 데이터 버전, 슬롯 화면 진입, 중단 복구와 저장 완료 검사를 정리했다. 기존 일반 저장 시점은 유지한다. 웹에서 메모리 복사를 영구 기록 성공으로 처리하지 않는다. Web은 Asyncify를 사용해 IndexedDB 트랜잭션 완료 후 성공을 반환한다. 일반/치트 DB와 자원 캐시를 분리하며, 저장 revision으로 오래된 창의 쓰기를 거부한다. HostServices에 선택적 복원 서비스를 추가했고 Apple·Android의 기본 지원 값은 false다. [구현·검사](evidence/web-pwa-20261106.md).

@@ -106,7 +106,28 @@
       "docs/usability-todo.md",
       "docs/evidence/module-work-20261105.md",
       "Modules/README.md",
-      "docs/development.md"
+      "docs/development.md",
+      "docs/save-transfer-web-tauri-plan.md"
+    ],
+    "save_transfer": [
+      "docs/save-transfer-web-tauri-plan.md",
+      "docs/runtime-policy.md",
+      "docs/design.md",
+      "docs/usability-todo.md",
+      "Sources/Core/Session/SaveData.hpp",
+      "Sources/Core/Session/SaveData.cpp",
+      "Sources/Core/Contracts/Game.hpp"
+    ],
+    "web": [
+      "docs/save-transfer-web-tauri-plan.md",
+      "docs/rendering-policy.md",
+      "docs/coordinate-policy.md",
+      "docs/runtime-policy.md",
+      "docs/module-audit-20261105.md",
+      "Web/README.md",
+      "Distribution/README.md",
+      "docs/evidence/web-pwa-20261106.md",
+      "Modules/SaveTransfer/README.md"
     ]
   }
 }
