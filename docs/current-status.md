@@ -1,8 +1,12 @@
 # 현재 상태 — 2026-11-05
 
+## 2026-11-06 iPhone HUD 상단 사용자 확인
+
+`fix/iphone-hud-top`에서 원본 HUD 상단 금속판으로 iPhone의 노출 부분을 덮었다. 셀·생산 버튼 위치와 iPad HUD를 유지했다. 6개 배치의 HUD·입력 검사, 5개 배치의 GPU·전투·저장 검사를 통과했다. iPad 2종의 우측 HUD는 수정 전후 픽셀이 같다. iPhone에 Release 정식 앱을 설치했고 저장 바이트 보존과 타이틀 실행을 확인했다. Device Hub의 게임 화면 터치가 전달되지 않아 실기기 직접 조작 검사는 남았다. 사용자가 설치본의 상단 덮임을 확인했다. 월드 표시 범위 문제는 TODO로 유지한다. 다음 기능 과제는 생산 HUD의 전체 유닛 접근·순서다. [검증 기록](evidence/iphone-hud-top-20261106.md).
+
 ## 2026-11-06 Android
 
-Android 일반·치트 앱을 Galaxy와 에뮬레이터에 설치했다. 환경별 C++ 35개와 앱 실행 13개, EGL/Activity 복구, 에뮬레이터 80미션 렌더 검사가 통과했다. 아이폰 저장을 Galaxy 일반 앱에 복사해 Stage 33·생산 유닛 12종·자금 1,739Cr와 재실행 보존을 확인했다. [구현·측정·저장 이전 기록](evidence/android-native-20261106.md). Apple·공용 소스·자원은 변경하지 않았다. Android 구현은 develop에 병합했다. [v0.1 릴리스 노트](../CHANGELOG.md)에 iOS·iPadOS·Android의 기능·검사·남은 과제를 함께 정리했다.
+Android 일반·치트 앱을 Galaxy와 에뮬레이터에 설치했다. 환경별 C++ 35개와 앱 실행 13개, EGL/Activity 복구, 에뮬레이터 80미션 렌더 검사가 통과했다. 아이폰 저장을 Galaxy 일반 앱에 복사해 Stage 33·생산 유닛 12종·자금 1,739Cr와 재실행 보존을 확인했다. [구현·측정·저장 이전 기록](evidence/android-native-20261106.md). Apple·공용 소스·자원은 변경하지 않았다. Android 구현은 develop을 거쳐 main v0.1에 병합했다. [v0.1 릴리스 노트](../CHANGELOG.md)에 iOS·iPadOS·Android의 기능·검사·남은 과제를 함께 정리했다.
 
 ## 이전 단계 — Apple 설치와 긴급지원
 

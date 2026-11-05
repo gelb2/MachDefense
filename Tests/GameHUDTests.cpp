@@ -1,3 +1,4 @@
+#include <array>
 #include "Core/Presentation/GameHUD.hpp"
 #include <algorithm>
 #include <cassert>
@@ -128,5 +129,31 @@ int main(int argc,char** argv){
     state.selectedPanel=2;h.setState(state);f={};h.append(f);assert(lowerTile(f,0)==0&&lowerTile(f,1)==3);
     h.touch({110,TouchPhase::began,{115.5f,443}});f={};h.append(f);assert(lowerTile(f,0)==1);
     h.touch({110,TouchPhase::ended,{115.5f,443}});actions=h.takeActions();assert(actions.size()==1&&actions[0].buttonId==0x409);
+    // Keep the original cells, production buttons and touch anchors inside
+    // the safe area while covering the decorative sidebar up to screen y=0.
+    for(const auto dimensions:std::vector<std::array<float,4>>{
+        {420,912,62,34},{390,844,59,34},{1024,1366,24,20},
+        {768,1024,24,20},{360,780,24,0},{320,480,0,0}}){
+        FrameLayout layout;layout.resize(dimensions[0],dimensions[1],dimensions[2],dimensions[3]);
+        h.setLayout(layout);state.paused=false;state.upgradeMode=false;
+        state.baseUpgradeOpen=false;state.productionVisible=true;
+        state.mainPanelOffsetY=0;state.selectedPanel=1;h.setState(state);
+        f={};h.append(f);validate(f,r);
+        const Vec2 topPoint{layout.width-8,1};
+        bool covered=false,topExtended=false;
+        for(const auto& sprite:f.sprites)if(sprite.image=="GameUI_MachSlot.png"){
+            const auto d=sprite.destination;
+            topExtended|=sprite.sourcePx&&sprite.sourcePx->height==2&&std::abs(d.y)<.001f;
+            covered|=topPoint.x>=d.x&&topPoint.x<d.x+d.width&&topPoint.y>=d.y&&topPoint.y<d.y+d.height;
+        }
+        assert(covered&&"Original HUD must cover the exposed top-right strip");
+        assert(topExtended==(layout.top>28)); // iPad/reference/Galaxy keep their original draw commands.
+        const auto& button=find(f,"Btn_BuildMachBG.png");
+        assert(std::abs(button.destination.y+button.destination.height/2-(52+layout.top))<.001f);
+        tap(h,292+layout.topRight().x,52+layout.top);
+        actions=h.takeActions();assert(actions.size()==1&&actions[0].buttonId==0x40d&&actions[0].row==0);
+        tap(h,287+layout.topRight().x,15+layout.top);
+        actions=h.takeActions();assert(actions.size()==1&&actions[0].buttonId==0x3fd);
+    }
     std::cout<<"GameHUD original assets, prices, gauges, production touch, pause, lower glow tiles and special push checks passed\n";
 }
