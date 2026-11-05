@@ -1,3 +1,15 @@
-# docs/public
+# 문서 목차
 
-공개 전환 후 안내할 기능·설치·검증 문서를 준비할 위치다. 현재 저장소는 비공개다.
+- [게임 소개](../../README.md)
+- [개발자의 변](../RESTORATION.md)
+- [내가 추가한 기능과 기획 의도](features.md)
+- [복원과 개발 과정](development-history.md)
+- [조작과 저장](gameplay.md)
+- [설치와 실행](build-and-install.md)
+- [기술 구조](architecture.md)
+- [트러블슈팅](troubleshooting.md)
+- [검사 결과](validation.md)
+- [릴리스 이력](../../CHANGELOG.md)
+- [다음 웹·PWA 릴리스 원고](web-pwa-release-draft.md)
+- [크레딧](../../CREDITS.md)
+- [남은 과제](../usability-todo.md)

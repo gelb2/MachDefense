@@ -2,6 +2,12 @@
 
 2026-11-04 · 위메이드판 비교와 C++ 소스 재개발
 
+## GitHub 문서 — 2026-11-06
+
+[README와 연결 문서 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#md-copy-readme) · [실제 방문자 문서 목차](../public/README.md) · [원고 전문](github-manuscripts-20261106.md).
+
+긴급지원 기획 주체·mesabloo·원본 출처·자동검사를 보강했다. 오디오 제목을 짧게 고쳤고, REA 소개와 Sass 집필 안내는 방문자 원고에서 뺐다.
+
 ## 정식 앱 피드백 수정과 iPad 검사 {#feedback-20261104}
 
 2026-11-04 23:40 기준. 생산 안내·생산 불가 표시·효과음·미션 전환·완료 표시의 누락과 잘못된 연결을 수정했다. 실제 iPad 치트 앱에서 화면 검사 4개와 강화·핵폭탄·오디오 복구 검사 3개가 통과했다. iPhone 정식 앱은 사용자가 플레이 중이므로 이번 후속 수정본을 설치하지 않았다.
