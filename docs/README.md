@@ -1,5 +1,18 @@
 # 문서 목차
 
+## 게임을 보러 온 독자
+
+- [게임 소개](../README.md)
+- [설치와 실행](public/build-and-install.md)
+- [조작과 기능](public/gameplay.md)
+- [기술 구성](public/architecture.md)
+- [기기별 검사](public/validation.md)
+- [개발자의 변](RESTORATION.md)
+- [릴리스 노트](../CHANGELOG.md)
+- [릴리스 절차](release-process.md)
+
+## 개발 문서
+
 - [canonical](canonical.md)
 - [coordinate-policy](coordinate-policy.md)
 - [current-status](current-status.md)
