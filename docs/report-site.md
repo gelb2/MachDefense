@@ -45,3 +45,13 @@ MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지�
 - Sites 응답: succeeded. 기존 소유자 전용 공개 범위를 유지했다.
 - 최초 업로드는 용량 제한으로 거절됐다. 새 PNG 두 장을 무손실 WebP로 바꾸고 RGBA 픽셀 일치를 확인한 뒤 재게시했다. 기존 보고서·게임 자원은 삭제하지 않았다.
 - 최종 HTML 문구·이미지 연결을 확인했다. 이 게시 직전에는 Mac 창과 브라우저가 도구에 나타나지 않아 최종 브라우저 화면 검사는 하지 못했다.
+
+## GitHub 문서 수정 — 2026-11-06
+
+[수정한 README와 연결 문서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#md-copy-readme)를 게시했다. 긴급지원 기획 주체·mesabloo의 영향·Internet Archive 출처·자동 실행과 치트 검사·오디오 문제를 보강했다. 판본 선택과 후속 마무리 문장은 본문에서 제외했다. 방문자 원고에서 REA 소개와 Sass 집필 자료를 빼고, README 뒤에 연결 문서 전문을 배치했다. 해당 작업 자료는 개발 문서에서 보존한다.
+
+- 사이트 소스: `13746ae48ef438dadfd6f2f06d19664d92efb8d2`.
+- 배포: `appgdep_6aed099ad4388191b41390902c25a251`, `succeeded`.
+- 버전: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_f927d8452ac081918d102942ddf4d529`.
+- 기존 소유자 전용 접근을 유지했다. 실제 Safari에서 수정 문구·제목·문서 구분을 확인했다.
+- macOS 부가 메타데이터를 제외한 묶음의 파일 내용 SHA를 대조했다. 확장 크기 268,369,920바이트.

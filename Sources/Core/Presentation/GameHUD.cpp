@@ -70,8 +70,19 @@ void GameHUD::append(Frame& f)const{
     // GuiGame::init 0x25748 gives baseBuildSlot layer 5. The gameUI
     // background and its QuickBtn children inherit GuiGame layer 9 through
     // QobBase::addChild 0x3f274. Draw the slot background before that HUD.
-    if(state_.productionVisible&&state_.selectedPanel>=1&&state_.selectedPanel<=3)
+    if(state_.productionVisible&&state_.selectedPanel>=1&&state_.selectedPanel<=3){
         image(f,"GameUI_MachSlot.png",{256,252});
+        const auto original=f.sprites.back();
+        const float gap=original.destination.y+layout_.top;
+        if(gap>0){
+            // Continue only the original unlabelled top metal into the safe
+            // area. The cells window, artwork below it and input stay put.
+            auto top=original;
+            top.sourcePx=Rect{0,0,resources_.imageSize(top.image).x,2};
+            top.destination.y=-layout_.top;top.destination.height=gap;
+            f.sprites.push_back(std::move(top));
+        }
+    }
     // Extend only the blank metal tail of the original sidebar, at its native
     // pixel scale. The gameplay background and terrain are never repeated.
     if(state_.productionVisible&&layout_.height-layout_.bottom>480+layout_.top){

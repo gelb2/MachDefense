@@ -1,17 +1,33 @@
-# 기술 구성
+# 기술 구조
 
-| 영역 | 구현 |
-|---|---|
-| 게임 규칙·저장·게임 UI | C++20, `Sources/Core/` |
-| 공용 효과음 | C++·OpenAL Soft, `Sources/Audio/`와 `Modules/ThirdParty/` |
-| iOS·iPadOS 실행기 | Objective-C++, Xcode 워크스페이스, OpenGL ES 1 fixed-function |
-| Android 실행기 | Kotlin·JNI·C++·EGL/OpenGL ES 1.1, Gradle·CMake·NDK |
-| 음악 | Apple 음악 재생 연결, Android MediaPlayer |
-| 자원 | 공용 이미지·음원·맵·표, `Resources/` |
-| 검사·개발 도구 | C++ 검사, Apple XCTest, Python·ADB |
+v0.1과 main의 앱은 iOS·iPadOS·Android용이다. 아래 웹·PWA와 복원 코드 설명은 `feat/web-pwa` 개발 브랜치의 구현을 다룬다.
 
-Core에는 피해·이동·생산·경제·강화·미션 진행과 메뉴·HUD가 들어 있다. 플랫폼 실행기는 같은 Frame을 받아 그리며 터치를 게임 좌표로 변환한다. 이름 입력 같은 OS 기능은 각 플랫폼에서 연결한다.
+## 공통 게임 코드와 플랫폼 실행기
 
-Android 추가 때 기존 Apple·Core·Audio·자원·검사 파일 2,978개를 변경하지 않았다. OpenAL Soft의 Android 출력 재개 오류는 Android 빌드용 사본에서만 보정했다. [원인과 검사](../evidence/android-native-20261106.md).
+| 영역 | 소스 위치 | 하는 일 |
+|---|---|---|
+| Core | `Sources/Core/` | 피해·이동·사거리·생산·경제·강화·미션·저장·게임 메뉴와 HUD |
+| Audio | `Sources/Audio/` | 효과음 버퍼·재생 소스·컨텍스트 재사용 |
+| SaveTransfer | `Modules/SaveTransfer/` | 복원 코드 생성·해석·검증 |
+| 자원 | `Resources/` | 이미지·음원·맵·표 |
+| Apple | `Apple/`, `Sources/Platform/Apple/` | 워크스페이스·렌더링·입력·오디오 세션·저장 경로 |
+| Android | `Android/` | Kotlin·JNI·EGL·오디오 출력·앱 생명주기 |
+| 웹 | `Web/`, `Distribution/Web/` | Wasm·WebGL2·브라우저 입력·음향·IndexedDB·시작 화면·PWA |
 
-Apple 앱은 `Apple/MachDefense.xcworkspace`, Android 앱은 `Android/`에서 연다. 플랫폼 구현 파일은 각 폴더에 둔다. [모듈 구조](../../Modules/README.md) · [상세 설계](../design.md).
+Core는 플랫폼 SDK를 직접 부르지 않는다. `ResourceAccess`와 `HostServices`를 통해 자원 읽기·저장·음향·텍스트 입력을 요청한다. 게임 화면은 Core가 만든 `Frame`을 각 실행기가 그린다. 메뉴와 HUD 버튼도 이 경로를 쓴다.
+
+## 렌더링과 음향
+
+Apple은 OpenGL ES 1 fixed-function, Android는 EGL/OpenGL ES 1.1, 웹은 WebGL2로 화면을 출력한다. 텍스처를 업로드해 재사용하며 발사마다 이미지를 새로 만들지 않는다.
+
+Apple의 효과음은 OpenAL Soft, 음악은 AudioFile·AudioQueue로 재생한다. Android 음악은 MediaPlayer를 사용한다. 웹 효과음은 기존 코드의 Emscripten OpenAL 연결, 음악은 Web Audio 출력으로 처리한다. 어떤 소리를 언제 재생할지는 게임 코드가 결정한다.
+
+## 저장과 복원
+
+기준 판본의 저장은 5슬롯·42,496바이트다. 복원 코드는 버전·길이·CRC32를 검사하고 PackBits와 Base64url로 데이터를 옮긴다. 손상되거나 지원하지 않는 코드는 적용하지 않는다.
+
+웹은 게임 저장을 IndexedDB에 기록하고 트랜잭션 완료 뒤 성공을 반환한다. 자원은 Cache Storage에 둔다. 자원 캐시를 다시 받아도 진행 데이터는 유지된다. 두 창에서 같은 진행을 열었을 때 오래된 창이 최신 저장을 덮지 않도록 저장 버전을 대조한다. 사용자가 사이트 데이터를 삭제하면 복원 코드로 진행을 다시 가져올 수 있다.
+
+복원 적용 전에는 기존 저장의 백업을 남긴다. 현재 메뉴는 전체 5슬롯을 교체한다. 단일 슬롯 선택과 Apple·Android의 복원 UI 연결은 후속 작업이다.
+
+[게임 소개](../../README.md) · [문서 목차](README.md)
