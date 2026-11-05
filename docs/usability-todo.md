@@ -1,5 +1,15 @@
 # TODO
 
+## PWA 배포 후 확인 — 2026-11-06
+
+- [x] 정식 Release 재빌드·Chrome 설치형 PWA와 오프라인 재실행.
+- [x] Chrome·WebKit 정식판 복원·저장·Stage 36·생명주기·GPU 회귀.
+- [ ] Pages 공개 범위 확정, main 병합과 운영 배포.
+- [ ] 운영 주소에서 설치·오프라인·저장·복원 재검사.
+- [ ] 실제 모바일 PWA 검사 및 Tauri 파일 저장·종료 구현.
+
+[배포 검사와 Tauri 조건](evidence/pwa-release-20261106.md)
+
 ## GitHub 문서·후속 집필 — 2026-11-06
 
 - [x] README와 개발자의 변, 기능·기술·설치·검사·트러블슈팅 원고 작성.

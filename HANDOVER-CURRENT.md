@@ -1,3 +1,7 @@
+# PWA 배포 준비 — 2026-11-06
+
+작업 경로는 `.local/worktrees/pwa-release`, 브랜치는 `release/pwa-20261106`이다. 원격 Pages 생성이 비공개 저장소 요금제 제한(422)으로 거절됐다. 공개 전환 여부를 사용자에게 요청했다. [현재 상태](docs/current-status.md)와 [검사·다음 작업](docs/evidence/pwa-release-20261106.md)을 따른다. 아래는 이전 단계 기록이다.
+
 # 2026-11-06 GitHub 문서 갱신
 
 작업 브랜치 `docs/public-manuscripts-20261106`는 develop `ae08521`에서 분기했다. README와 개발자의 변, 기능·기술·설치·검사·트러블슈팅·크레딧을 사용자 정정에 맞춰 작성했다. 게임 소스·자원·빌드 설정은 수정하지 않았다. 웹·PWA 구현은 별도 `feat/web-pwa`이며 이 문서 병합에 포함하지 않는다. [방문자 문서](docs/public/README.md), [Sass 집필 자료](docs/editorial/sass-publication-guide.md), [전체 원고](docs/editorial/github-manuscripts-20261106.md).

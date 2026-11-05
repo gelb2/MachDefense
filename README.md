@@ -1,9 +1,9 @@
 # MachDefense
 
 [![Release v0.1](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.1)
-[![iOS, iPadOS, Android](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
-[![arm64](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
-[![C++20, Objective-C++, Kotlin](docs/public/media/badges/code.svg)](docs/public/architecture.md)
+[![iOS, iPadOS, Android, Web, PWA](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
+[![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
+[![C++20, Objective-C++, Kotlin, JavaScript](docs/public/media/badges/code.svg)](docs/public/architecture.md)
 
 ## MachDefense를 다시 만든 이유
 
@@ -11,11 +11,17 @@
 
 이 복원판을 접한 사람이 개발자의 변을 읽었으면 한다. 왜 이 시리즈를 다시 만들었는지, 무엇을 보존하고 무엇을 더하려 했는지 적었다.
 
+나는 이것으로 돈을 벌 생각이 없다. 돈은 이승에서나 필요한 것이다.
+
 [개발자의 변 전문](docs/RESTORATION.md)
 
 ## Quick Play
 
-웹·PWA는 현재 개발 브랜치에서 실행할 수 있다. 공개 게임 주소는 아직 없다. [웹 실행 방법](docs/public/build-and-install.md)에 따라 로컬 서버를 열면 브라우저로 플레이할 수 있다. iPhone·iPad 앱은 Xcode, Android 앱은 Android Studio로 빌드한다. Android v0.1 APK는 [Releases](https://github.com/gelb2/MachDefense/releases/tag/v0.1)에서 받는다.
+[**MachDefense 플레이·PWA 설치**](https://gelb2.github.io/MachDefense/)
+
+위 주소를 열어 게임을 설치하거나 브라우저에서 바로 플레이한다. iPhone·iPad는 Safari의 공유 메뉴에서 **홈 화면에 추가**, Android·Mac은 **INSTALL GAME**을 누른다. 자원 다운로드가 끝나면 인터넷 없이도 플레이할 수 있다.
+
+Xcode나 Android Studio로 빌드하기 어렵다면 PWA를 이용하면 된다. [설치와 실행](docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
 
 ## 원작의 전투와 성장
 
@@ -46,8 +52,8 @@ MachDefense는 메크와 포탑을 생산해 적 기지를 공격하는 세로 �
 |---|---|---|
 | iPhone·iPad | Xcode 워크스페이스 | v0.1 출시. 실제 기기에서 일반·치트 앱 검사 |
 | Android | Android Studio 또는 APK | v0.1 출시. Galaxy·에뮬레이터 검사 |
-| 웹 | 브라우저 | 개발 브랜치 구현. Mac Chrome·Safari·WebKit 검사 |
-| PWA | 브라우저에서 설치 | Mac Chrome 설치·실행 확인. 모바일 설치 검사 예정 |
+| 웹 | 브라우저 | GitHub Pages 배포. Mac Chrome·Safari·WebKit 검사 |
+| PWA | 브라우저에서 설치 | 설치·오프라인 실행 지원. 기기별 검사 결과는 검사 문서 참고 |
 | Tauri Mac | 데스크톱 앱 | 개발 예정 |
 
 ## 고친 문제와 남은 일

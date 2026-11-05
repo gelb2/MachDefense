@@ -1,6 +1,6 @@
 # 기술 구조
 
-v0.1과 main의 앱은 iOS·iPadOS·Android용이다. 아래 웹·PWA와 복원 코드 설명은 `feat/web-pwa` 개발 브랜치의 구현을 다룬다.
+iOS·iPadOS·Android 네이티브 앱과 웹·PWA가 같은 C++ 게임 코드를 사용한다.
 
 ## 공통 게임 코드와 플랫폼 실행기
 

@@ -1,5 +1,7 @@
 # MachDefense Web / PWA
 
+[플레이·PWA 설치](https://gelb2.github.io/MachDefense/) · [사용자 설치 안내](../docs/public/build-and-install.md)
+
 같은 C++20 Core·효과음·자원을 Emscripten으로 빌드한다. WebGL2 출력과 브라우저 입력은 `src/`, 시작 화면·IndexedDB·service worker는 `../Distribution/Web/`에 있다. 게임 메뉴·HUD·복원 버튼은 공용 C++에서 그린다. Tauri 실행기는 아직 없다.
 
 [현재 검사 결과](../docs/evidence/web-pwa-20261106.md) · [개발 계획](../docs/save-transfer-web-tauri-plan.md).
@@ -17,7 +19,7 @@ python3 Web/tools/package.py build/web-normal/dist
 python3 -m http.server 8941 --bind 127.0.0.1 --directory build/web-normal/dist
 ```
 
-Mac 브라우저에서 `http://127.0.0.1:8941/`를 연다. 다운로드가 끝나면 PLAY IN BROWSER로 시작하거나 설치 버튼을 사용한다. 모바일 PWA 설치에는 기기에서 접근할 수 있는 HTTPS 주소가 필요하다. 현재 MachDefense의 공개 게임 주소는 없다.
+Mac 브라우저에서 `http://127.0.0.1:8941/`를 연다. 다운로드가 끝나면 PLAY IN BROWSER로 시작하거나 설치 버튼을 사용한다. 모바일 PWA 설치에는 기기에서 접근할 수 있는 HTTPS 주소가 필요하다. 공개 주소는 https://gelb2.github.io/MachDefense/ 이다.
 
 치트판은 별도 빌드 폴더와 포트를 쓴다. 일반판과 치트판은 IndexedDB 이름도 다르다.
 
