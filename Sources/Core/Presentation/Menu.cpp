@@ -218,8 +218,12 @@ void Menu::expandFrame(){
             // The generated canvas supplies only the outside landscape. The
             // original 640x960 title, including its logo, is drawn unchanged.
             // Registration is measured against the original; see provenance.
-            const float sx[]={192-std::min(192.f,center.x*2),192,832,832+std::min(192.f,(layout_.width-center.x-320)*2)};
-            const float sy[]={288-std::min(288.f,center.y*2),288,1248,1248+std::min(288.f,(layout_.height-center.y-480)*2)};
+            constexpr float artX=144,artY=243,artWidth=745,artHeight=1118;
+            constexpr float scaleX=artWidth/320,scaleY=artHeight/480;
+            const float sx[]={artX-std::min(artX,center.x*scaleX),artX,artX+artWidth,
+                artX+artWidth+std::min(1024-artX-artWidth,(layout_.width-center.x-320)*scaleX)};
+            const float sy[]={artY-std::min(artY,center.y*scaleY),artY,artY+artHeight,
+                artY+artHeight+std::min(1536-artY-artHeight,(layout_.height-center.y-480)*scaleY)};
             const float dx[]={0,center.x,center.x+320,layout_.width};
             const float dy[]={0,center.y,center.y+480,layout_.height};
             auto edge=s;edge.image="Generated/TitleOutpaint.png";
@@ -228,23 +232,31 @@ void Menu::expandFrame(){
                 piece(edge,{sx[col],sy[row],sx[col+1]-sx[col],sy[row+1]-sy[row]},
                            {dx[col],dy[row],dx[col+1]-dx[col],dy[row+1]-dy[row]});
             }
-            // Fade the original edge colour into the outpaint outside the
-            // original rectangle. This avoids a hard exposure seam without
-            // repainting the original illustration or repeating its objects.
-            auto join=[&](Vec2 a,Vec2 b,Vec2 outward,Vec2 uvA,Vec2 uvB){
-                if(outward.x==0&&outward.y==0)return;
-                TextureMesh mesh;mesh.image="Title.jpg";mesh.beforeSpriteIndex=frame_.sprites.size();
-                mesh.vertices={{{a.x+outward.x,a.y+outward.y},uvA,{1,1,1,0}},
-                               {{b.x+outward.x,b.y+outward.y},uvB,{1,1,1,0}},
-                               {a,uvA,{1,1,1,1}},{b,uvB,{1,1,1,1}}};
+            piece(s,{0,0,640,960},{center.x,center.y,320,480});
+            // Overlap the outpaint with the original edge using its actual
+            // neighbouring pixels. Do not stretch a single original pixel row
+            // into a strip: that leaves a visible straight band.
+            auto overlap=[&](Rect rect,bool horizontal,bool reverse){
+                TextureMesh mesh;mesh.image="Generated/TitleOutpaint.png";
+                mesh.beforeSpriteIndex=frame_.sprites.size();
+                // Smooth opacity progression, including at both ends.
+                for(unsigned i=0;i<=8;++i){
+                    const float t=float(i)/8,fade=t*t*(3-2*t);
+                    const float alpha=reverse?fade:1-fade;
+                    for(unsigned side=0;side<2;++side){
+                        const float x=rect.x+rect.width*(horizontal?float(side):t);
+                        const float y=rect.y+rect.height*(horizontal?t:float(side));
+                        mesh.vertices.push_back({{center.x+x,center.y+y},
+                            {(artX+x*scaleX)/1024,(artY+y*scaleY)/1536},{1,1,1,alpha}});
+                    }
+                }
                 frame_.meshes.push_back(std::move(mesh));
             };
-            const float left=center.x,right=center.x+320,topY=center.y,bottomY=center.y+480;
-            join({left,topY},{right,topY},{0,-std::min(24.f,topY)},{0,.5f/960},{1,.5f/960});
-            join({left,bottomY},{right,bottomY},{0,std::min(24.f,layout_.height-bottomY)},{0,959.5f/960},{1,959.5f/960});
-            join({left,topY},{left,bottomY},{-std::min(4.f,left),0},{.5f/640,0},{.5f/640,1});
-            join({right,topY},{right,bottomY},{std::min(4.f,layout_.width-right),0},{639.5f/640,0},{639.5f/640,1});
-            piece(s,{0,0,640,960},{center.x,center.y,320,480});continue;
+            if(center.y>0)overlap({0,0,320,32},true,false);
+            if(center.y+480<layout_.height)overlap({0,448,320,32},true,true);
+            if(center.x>0)overlap({0,0,8,480},false,false);
+            if(center.x+320<layout_.width)overlap({312,0,8,480},false,true);
+            continue;
         }
         if(s.image=="iPon_SelSlot_BG@2x.jpg"||s.image=="iPon_SelStage_Fore@2x.png"){panel(s);continue;}
         if(s.image.empty()){s.destination={0,0,layout_.width,layout_.height};frame_.sprites.push_back(std::move(s));continue;}

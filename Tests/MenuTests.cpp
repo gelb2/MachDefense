@@ -124,8 +124,15 @@ int main(int argc,char** argv){
         const auto meshCount=resized.frame().meshes.size();
         for(int tick=0;tick<120;++tick)resized.tick();
         assert(resized.frame().meshes.size()==meshCount); // No per-frame mesh accumulation.
-        for(const auto& mesh:resized.frame().meshes)for(const auto& v:mesh.vertices)
-            assert(v.position.x<=c.x||v.position.x>=c.x+320||v.position.y<=c.y||v.position.y>=c.y+480);
+        for(const auto& mesh:resized.frame().meshes){
+            assert(mesh.image=="Generated/TitleOutpaint.png");
+            for(const auto& v:mesh.vertices){
+                const float x=v.position.x-c.x,y=v.position.y-c.y;
+                assert(x<=8||x>=312||y<=32||y>=448);
+                assert(std::abs(v.uv.x-(144+x*(745.f/320))/1024)<.00001f&&std::abs(v.uv.y-(243+y*(1118.f/480))/1536)<.00001f);
+                assert(v.color.a>=0&&v.color.a<=1);
+            }
+        }
 
         for(float y=0;y<layout.height;y+=8)for(float x=0;x<layout.width;x+=8){
             bool covered=false;for(const auto& sp:resized.frame().sprites){const auto d=sp.destination;
