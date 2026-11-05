@@ -1,6 +1,6 @@
 # MachDefense 인계 — 2026-11-05
 
-현재 작업: `fix/hud-title-presentation`. 모듈화·오디오 수정·긴급지원은 `develop / 5bc233e`에 병합·push했다. main은 변경하지 않았다. **사용자의 후속 지시로 HUD 세로 늘리기 시안을 철회했다.** GameHUD와 관련 검사는 `5bc233e`로 되돌렸으며 HUD는 재작업 투두다. 타이틀 그림의 직선 경계는 수정했고 C++ 3개·5개 화면 조건의 GPU·입력 검사를 통과했다. [작업 기록](docs/evidence/hud-title-20261105.md). 이번 수정본은 아직 실기기에 설치하지 않았다.
+현재 작업: `fix/hud-title-presentation`. 모듈화·오디오 수정·긴급지원은 `develop / 5bc233e`에 병합·push했다. main은 변경하지 않았다. **사용자의 후속 지시로 HUD 세로 늘리기 시안을 철회했다.** GameHUD와 관련 검사는 `5bc233e`로 되돌렸으며 HUD는 재작업 투두다. 타이틀 그림의 직선 경계는 수정했고 C++ 3개·5개 화면 조건의 GPU·입력 검사를 통과했다. [작업 기록](docs/evidence/hud-title-20261105.md). 이번 수정은 `c494b28`에 커밋·push했다. [보고서의 HUD 상태와 타이틀 화면](docs/report-site.md#후속-갱신--2026-11-05-hud-롤백타이틀-경계-제거)도 갱신·게시했다. 이번 수정본은 아직 실기기에 설치하지 않았다.
 
 [한 줄 복원 코드 TODO](docs/usability-todo.md#md-save-code-01--한-줄-복원-코드)를 추가했다. 원본 슬롯을 사용하고, 화면·버튼·입력판에 iOS/Android/웹 UI를 쓰지 않는다. 화면 밖 적 반격은 보류한다. 이동 정체·생산 HUD 개수·원본 출력음 대조 등은 TODO에 남아 있다.
 

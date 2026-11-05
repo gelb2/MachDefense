@@ -56,3 +56,13 @@ MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지�
 - 배포: `appgdep_6aec875dbf9c8191b8f563a01d1a003d`, 상태 `succeeded`. 소유자 전용 접근 유지.
 - 다른 세션이 추가한 HeavyMach 후속 보고를 병합해 보존했다. 첫 업로드는 256MiB 한도로 실패했고, 새 미리보기 WebP 8장의 압축률을 높여 재게시했다. 제품 자원과 원본 PNG 캡처는 변경하지 않았다.
 - 추가 앵커·이미지·다운로드 파일을 검사했다. Mac UI 도구에 창·브라우저가 나타나지 않아 브라우저 직접 확인은 하지 못했다. 게시 성공은 Sites 응답으로 확인했다.
+
+## 후속 갱신 — 2026-11-05 HUD 롤백·타이틀 경계 제거
+
+[같은 보고서 절](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#hud-title-20261105)을 갱신했다. 이전 HUD 늘리기 시안은 철회 표시하고 재작업 투두를 연결했다. 타이틀은 선이 남은 이전 화면과 경계 제거 후 iPhone·iPad 캡처를 비교한다.
+
+- 제품 커밋 `c494b28`, 브랜치 `fix/hud-title-presentation`. HUD 코드·검사는 `5bc233e`와 동일하다. main/develop 추가 병합과 실기기 설치는 하지 않았다.
+- 사이트 소스 `e8fc32f872540802a1bb5f7162ec61fa4692381a`.
+- 버전 `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_164b5eee74d08191867b3a7d1c183ce2`.
+- 배포 `appgdep_6aec8c7f225881918f31c62cc3217197`, 상태 `succeeded`. 기존 소유자 전용 접근을 유지했다.
+- 새 이미지·링크·HUD 철회 문구를 검사했다. 창·브라우저가 UI 도구에 나타나지 않아 운영 페이지를 직접 열어 확인하지는 못했다. 시뮬레이터 GPU 캡처와 Sites 성공 응답을 확인했다.
