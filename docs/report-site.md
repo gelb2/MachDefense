@@ -55,3 +55,24 @@ MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지�
 - 버전: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_f927d8452ac081918d102942ddf4d529`.
 - 기존 소유자 전용 접근을 유지했다. 실제 Safari에서 수정 문구·제목·문서 구분을 확인했다.
 - macOS 부가 메타데이터를 제외한 묶음의 파일 내용 SHA를 대조했다. 확장 크기 268,369,920바이트.
+
+## PWA·Tauri Mac 개발과 모듈 수정 계획 — 2026-11-06
+
+[계획 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#save-web-tauri-plan-20261106)를 기존 MachDefense 페이지에 추가했다. 첫 화면 목차와 전체 보고서 목록에서도 연결한다. 공용 복원 모듈, 단일 웹 실행기, PWA/Tauri 저장, 문제 분류·수정 위치·브랜치·기존 플랫폼 회귀와 단계별 완료 기준을 담았다. 전체 계획·TODO 다운로드를 함께 갱신했다.
+
+- 사이트 소스: `cf6b659813ef1df2cb26fde652d44e3cb4ad007b`.
+- 배포: `appgdep_6aece1b85d44819197cc1fe84e28e518`, `succeeded`.
+- 버전: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_0c0d963f54748191af80987a9c795c16`.
+- 기존 소유자 전용 접근을 유지했다. 제품 소스·앱·에셋은 변경하지 않았다. 계획은 `docs/shared-save-web-plan`에 있다.
+- 로컬 Chrome에서 새 절·구조도·본문을 확인했다. 새 다운로드 파일과 앵커, 문서 연결 검사가 통과했다. 게시 후 운영 주소를 여는 단계는 CUA native pipe 종료로 실패했다. 게시 성공은 Sites 응답으로 확인했다.
+- 첫 업로드는 확장 크기 제한으로 거절됐다. 기존 JSON 두 파일의 공백만 줄였고 값 동일성을 검사했다. macOS 메타데이터를 제외하고 USTAR로 포장해 파일 내용의 SHA 동일성을 확인했다. 최종 tar 확장 크기는 268,328,960바이트다. 이미지·영상·이전 보고서는 보존했다.
+
+## Web·PWA 구현과 검사 — 2026-11-06
+
+[통합 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#web-pwa-20261106)에 실제 구현·검사 결과를 추가했다. 아이폰 Stage 36 복원, 기존 플랫폼 파일 대조, 37개 검사, 160조건의 게임 상태 및 전체 화면 수치 비교, 오프라인·업데이트·음향·GPU·저장 실패와 남은 모바일 실기기 검사를 담았다. 계획·TODO·검사 원고 다운로드도 갱신했다. 이전 HUD·타이틀 기록은 보존했다.
+
+- 사이트 소스: `4fa9b4cc250a347bc635939fa414926a3e31c795`.
+- 버전: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_4c631ebdf48c8191b0d90d49ed076a0d`.
+- 배포: `appgdep_6aecf43711488191b93f78be356b8ee4`, `succeeded`.
+- 기존 소유자 전용 접근을 유지했다. 보고서 게시이며 게임 공개 배포는 아니다.
+- 로컬 Safari에서 새 본문·표·링크를 확인했다. USTAR 포장 전후 파일 내용 SHA가 같고 확장 크기는 268,342,784바이트다.

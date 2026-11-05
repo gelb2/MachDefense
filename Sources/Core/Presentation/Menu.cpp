@@ -1,3 +1,4 @@
+#include "../../../Modules/SaveTransfer/Validate.hpp"
 #include "Core/Presentation/Menu.hpp"
 #include <algorithm>
 #include <cmath>
@@ -30,7 +31,7 @@ void Menu::applyScreen(Screen screen){
 void Menu::setLayout(const FrameLayout& layout){layout_=layout;resetInput();rebuild();}
 void Menu::resetInput(){
     for(auto& b:profiles_)b.reset();for(auto& b:stages_)b.reset();
-    for(auto& b:bottom_)b.reset();for(auto& b:dialogButtons_)b.reset();
+    for(auto& b:transfer_)b.reset();for(auto& b:bottom_)b.reset();for(auto& b:dialogButtons_)b.reset();
     dragId_.reset();velocity_=0;
 }
 void Menu::showProfiles(){
@@ -130,10 +131,13 @@ void Menu::drawDialog(){
     case Dialog::saveFailed:a="Could not save progress.";b="Please try again.";break;
     case Dialog::support:a="Support email is unavailable";b="in this build.";break;
     case Dialog::invalidName:a="Incorrect name.";b="Enter 1 to 10 English characters.";break;
+    case Dialog::restoreConfirm:a="Replace all five profiles?";b="Your previous save will be backed up.";break;
+    case Dialog::restoreError:a="Could not read recovery code.";b="Check the complete code and retry.";break;
+    case Dialog::restored:a="Progress restored.";b="Choose a profile to continue.";break;
     case Dialog::none:return;
     }
     text(a,{160,250},240,16,12,{},1);text(b,{160,230},240,16,10,{},1);
-    const bool confirm=dialog_==Dialog::deleteProfile;
+    const bool confirm=dialog_==Dialog::deleteProfile||dialog_==Dialog::restoreConfirm;
     dialogButtons_[0].bounds=centered({confirm?112.f:160.f,185},64,32);
     sprite(confirm?"Common_Btn_YES.png":"Common_Btn_OK.png",{confirm?112.f:160.f,185},64,32,dialogButtons_[0].pressed()?1:0,confirm?2:4);
     if(confirm){dialogButtons_[1].bounds=centered({208,185},64,32);sprite("Common_Btn_NO.png",{208,185},64,32,dialogButtons_[1].pressed()?1:0,2);}
@@ -161,6 +165,11 @@ void Menu::rebuild(){
             sprite(country+".png",{60,y+23},16,16);
             number(date(save_.readWord(at)),{70,y-2});number(date(save_.readWord(at+4)),{70,y-20});
             number(std::to_string(save_.stage(i)+1),{234,y-1},true);number(std::to_string(save_.credits(i)),{248,y-21},true);
+        }
+        if(host_.supportsSaveTransfer())for(unsigned i=0;i<2;++i){
+            auto& b=transfer_[i];b.bounds=centered({85.f+150*i,408},140,26);
+            sprite("SysMenu_Btn.png",{85.f+150*i,408},140,26,b.pressed()?1:0,2);
+            text(i?"ENTER CODE":"GET CODE",{85.f+150*i,408},132,14,12,{},1);
         }
         bottom(0,"Common_Btn_BACK.png");bottom(1,"Common_Btn_DEL.png");bottom(2,"Common_Btn_NEW.png");
     }else{
@@ -190,6 +199,7 @@ void Menu::expandFrame(){
     const Vec2 bottom{center.x,layout_.height-480-layout_.bottom};
     const Vec2 top{center.x,layout_.top};
     auto moveBounds=[](Button& b,Vec2 d){b.bounds.x+=d.x;b.bounds.y+=d.y;};
+    for(auto& b:transfer_)moveBounds(b,center);
     for(auto& b:profiles_)moveBounds(b,center);
     for(auto& b:stages_)moveBounds(b,center);
     for(auto& b:bottom_)moveBounds(b,bottom);
@@ -235,18 +245,33 @@ void Menu::expandFrame(){
         frame_.sprites.push_back(std::move(s));
     }
 }
+void Menu::beginTransfer(bool exporting){
+    namePending_=true;
+    host_.transferText(exporting?transfer::encode(save_):"",exporting,[this,exporting](std::optional<std::string> code){
+        namePending_=false;if(exporting||!code){rebuild();return;}
+        try{restoreCandidate_=transfer::decode(*code);transfer::validate(*restoreCandidate_,resources_);dialog_=Dialog::restoreConfirm;}
+        catch(const std::exception& e){transferError_=e.what();dialog_=Dialog::restoreError;}
+        rebuild();
+    });
+}
 void Menu::touch(const Touch& t){
     if(namePending_)return;
     if(dialog_!=Dialog::none){
-        const auto count=dialog_==Dialog::deleteProfile?2u:1u;
+        const auto count=(dialog_==Dialog::deleteProfile||dialog_==Dialog::restoreConfirm)?2u:1u;
         for(unsigned i=0;i<count;++i)if(dialogButtons_[i].touch(t).action==ButtonAction::pop){
             if(i==0&&dialog_==Dialog::deleteProfile){const auto before=save_;save_.deleteProfile(slot_);dialog_=Dialog::none;if(!persist())save_=before;}
-            else dialog_=Dialog::none;
+            else if(i==0&&dialog_==Dialog::restoreConfirm&&restoreCandidate_){
+                if(host_.restoreSave(restoreCandidate_->encode())){save_=*restoreCandidate_;dialog_=Dialog::restored;}else dialog_=Dialog::saveFailed;
+                restoreCandidate_.reset();
+            }else {dialog_=Dialog::none;restoreCandidate_.reset();}
             for(auto& b:dialogButtons_)b.reset();rebuild();return;
         }
         rebuild();return;
     }
     if(screen_==Screen::title){if(t.phase==TouchPhase::ended){showProfiles();}return;}
+    if(screen_==Screen::profiles&&host_.supportsSaveTransfer())for(unsigned i=0;i<2;++i){
+        if(transfer_[i].touch(t).action==ButtonAction::pop){host_.playSound("UI_Btn_OK.wav");beginTransfer(i==0);rebuild();return;}
+    }
     for(unsigned i=0;i<3;++i){
         const auto result=bottom_[i].touch(t);
         if(result.action==ButtonAction::pop){

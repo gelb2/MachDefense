@@ -2,6 +2,16 @@
 
 작업 브랜치 `docs/public-manuscripts-20261106`는 develop `ae08521`에서 분기했다. README와 개발자의 변, 기능·기술·설치·검사·트러블슈팅·크레딧을 사용자 정정에 맞춰 작성했다. 게임 소스·자원·빌드 설정은 수정하지 않았다. 웹·PWA 구현은 별도 `feat/web-pwa`이며 이 문서 병합에 포함하지 않는다. [방문자 문서](docs/public/README.md), [Sass 집필 자료](docs/editorial/sass-publication-guide.md), [전체 원고](docs/editorial/github-manuscripts-20261106.md).
 
+# 현행 작업 — Web·PWA
+
+## 2026-11-06 Web·PWA 구현과 검사
+
+`feat/web-pwa`에서 일반·치트 웹판, 5슬롯 공용 복원 코드, IndexedDB 저장과 오프라인·업데이트를 구현했다. 네이티브/Wasm 각각 37개 검사, 160조건의 게임 상태 대조, Chrome·WebKit 복원·재실행·음향·GPU·저장 실패 검사가 통과했다. 아이폰 Stage 36 저장 복사본을 웹에서 복원했고 아이폰 원본 바이트는 유지했다. Apple·Android 실행기와 기존 계산·음향·자원 파일은 변경하지 않았다. 공용 복원 연결 4파일은 추가 변경했다. [파일별 변경·검사·남은 범위](docs/evidence/web-pwa-20261106.md).
+
+실제 모바일 PWA 설치, 120Hz·장시간 성능과 Tauri Mac은 남았다. develop/main 병합과 게임 공개 배포는 하지 않았다.
+
+작업 사본: `.local/worktrees/iphone-hud-top`, 브랜치 `feat/web-pwa`. main v0.1과 다른 worktree의 기존 변경은 유지한다. 아이폰 저장은 `.local/pwa-20261106/iphone/`에만 보존한다. 아래는 이전 작업 기록이다.
+
 # 2026-11-06 iPhone HUD 상단 후속
 
 현재 수정은 `fix/iphone-hud-top`이며 develop `0835b5a`에서 분기했다. 원본 HUD의 상단 조각으로 iPhone의 노출 영역만 덮는다. iPad 화면을 바꾸지 않는 조건이다. 시뮬레이터 화면·터치 검사와 iPad HUD 픽셀 대조를 마쳤고 iPhone Release 정식 앱을 설치했다. 저장은 설치 전후 바이트가 같다. Device Hub의 게임 화면 입력이 진입으로 이어지지 않아 실기기 직접 생산·메뉴 검사는 남았다. [검사 기록](docs/evidence/iphone-hud-top-20261106.md), [남은 월드 표시 과제](docs/usability-todo.md#iphone-우측-hud-상단--2026-11-06). 사용자가 iPhone 설치본의 덮임을 확인하고 develop 병합을 지시했다. 현재 남은 작업은 TODO 최상단 요약을 따른다.
