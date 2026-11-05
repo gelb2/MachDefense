@@ -2,9 +2,11 @@
 
 ## 2026-11-06 Android
 
-Android 일반·치트 앱을 Galaxy와 에뮬레이터에 설치했다. 환경별 C++ 35개와 앱 실행 13개, EGL/Activity 복구, 에뮬레이터 80미션 렌더 검사가 통과했다. 아이폰 저장을 Galaxy 일반 앱에 복사해 Stage 33·생산 유닛 12종·자금 1,739Cr와 재실행 보존을 확인했다. [구현·측정·저장 이전 기록](evidence/android-native-20261106.md). Apple·공용 소스·자원은 변경하지 않았다. 이번 브랜치는 feat/android-native이며 아직 병합하지 않았다.
+Android 일반·치트 앱을 Galaxy와 에뮬레이터에 설치했다. 환경별 C++ 35개와 앱 실행 13개, EGL/Activity 복구, 에뮬레이터 80미션 렌더 검사가 통과했다. 아이폰 저장을 Galaxy 일반 앱에 복사해 Stage 33·생산 유닛 12종·자금 1,739Cr와 재실행 보존을 확인했다. [구현·측정·저장 이전 기록](evidence/android-native-20261106.md). Apple·공용 소스·자원은 변경하지 않았다. Android 구현은 develop에 병합했다. [v0.1 릴리스 노트](../CHANGELOG.md)에 iOS·iPadOS·Android의 기능·검사·남은 과제를 함께 정리했다.
 
-## 최신 설치와 남은 작업
+## 이전 단계 — Apple 설치와 긴급지원
+
+
 
 사용자가 긴급지원 동작을 확인했다. 현재 코드 커밋은 `41161dc`, 브랜치는 `feat/emergency-resupply`다.
 

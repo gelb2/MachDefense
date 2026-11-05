@@ -2,7 +2,7 @@
 
 # MachDefense 인계 — 2026-11-06
 
-현재 작업은 `feat/android-native`다. develop `5bc233e`에서 별도 worktree로 분기했다. Android 일반·치트 앱을 빌드하고 Galaxy USB와 에뮬레이터에서 검사했다. 아이폰 저장을 Galaxy 일반 앱에 옮겨 Stage 33 진입·장비·강화·자금·재실행 보존을 확인했다. [구현·검사·경로·남은 일](docs/evidence/android-native-20261106.md), [빌드](Android/README.md)를 따른다. Apple·공통 코드·자원 2,978개 파일은 SHA가 같다. 기존 fix/hud-title-presentation checkout의 미커밋 작업은 보존했다. 병합·push는 하지 않았다.
+Android 구현 커밋은 `639ca43`이며 develop에 병합했다. 현재 릴리스 문서는 `docs/first-release`에서 작성했다. develop `5bc233e`에서 별도 worktree로 분기했다. Android 일반·치트 앱을 빌드하고 Galaxy USB와 에뮬레이터에서 검사했다. 아이폰 저장을 Galaxy 일반 앱에 옮겨 Stage 33 진입·장비·강화·자금·재실행 보존을 확인했다. [구현·검사·경로·남은 일](docs/evidence/android-native-20261106.md), [빌드](Android/README.md)를 따른다. Apple·공통 코드·자원 2,978개 파일은 SHA가 같다. 기존 fix/hud-title-presentation checkout의 미커밋 작업은 보존했다. 이번 v0.1은 develop→main 순서로 병합한다. 원격 게시 결과는 Git 태그와 GitHub Release에서 확인한다.
 
 현재 작업: `feat/emergency-resupply` (`95a865a`에서 분기). 승인된 반복 지원을 공통 Core와 원작 에셋 UI로 구현했다. 최신 결과·설치·남은 범위는 [긴급지원 기록](docs/evidence/emergency-resupply-20261105.md). 이후 아래 모듈화 인계는 기반 작업 기록이다. iPhone·iPad 정식·치트 설치, 양쪽 치트 자동 검사와 iPad 직접 수령을 마쳤다. iPhone 정식 앱은 사용 중인 최신 진행도를 보존했다. 지원 창 프레임 p99 16.67ms·25ms 초과0회. 보고서 게시 성공. 남은 직접 검사와 난이도 비교는 실행 기록을 따른다. develop/main에는 병합하지 않았다.
 

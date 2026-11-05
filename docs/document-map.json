@@ -82,13 +82,19 @@
       "docs/report-site.md",
       ".agents/skills/write-project-text/SKILL.md",
       ".agents/skills/present-game-artifacts/SKILL.md",
-      "docs/editorial/machdefense-report.md"
+      "docs/editorial/machdefense-report.md",
+      "docs/RESTORATION.md",
+      "docs/public/gameplay.md",
+      "docs/public/architecture.md",
+      "docs/public/validation.md"
     ],
     "repository": [
       "docs/repository-management.md",
       "docs/development.md",
       "tools/original_guard.py",
-      "tools/setup.py"
+      "tools/setup.py",
+      "docs/release-process.md",
+      "CHANGELOG.md"
     ],
     "modules": [
       "docs/design.md",
