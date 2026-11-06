@@ -55,3 +55,8 @@
 몸체 5개도 built-in image_gen으로 원작 Lv.3·4·5를 참조해 생성했다. [전체 프롬프트·참조·출력 해시](body-prompts.json), [조립 설정](body-composition.json), [미리보기 좌표 측정](body-preview-calibration.json), [보고서 렌더 스크립트](body-composition-preview.js)를 보존했다.
 
 미리보기는 원작 Lv.5의 캔버스와 연결점을 사용한다. 생성 그림의 장착 링 위치를 지정하고 균등 배율로 원작의 그림 범위 안에 놓았다. 높이·너비를 따로 늘리지 않았다. 35개 신규 그림의 범위 검사, 36개 조립 화면, 무장 선택·몸체 단독·45도 회전·초기화, 393px 모바일 표시를 Chrome에서 확인했다. 무장 파일명과 보고서 WebP 이름이 달라 처음 로딩이 실패한 부분은 경로를 고쳐 재검사했다. 실제 게임 연결·미세 도트 보정·사격 검사는 후속 단계다.
+
+
+## 2026-11-07 게임 연결
+
+44개 PNG를 Resources/Images에 추가했다. 벌컨은 두 포신의 간격을 원작에 맞춘 `vulcan-geometry-v4.png`를 사용한다. `runtime-art.json`에 원본·선택 시안·출력의 해시와 치수, 배율, 위치를 기록했다. 원작 캔버스·총구·회전 중심을 보존했다. [실기기 검사](../../../docs/evidence/level10-art-integration-20261107.md).

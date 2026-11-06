@@ -20,3 +20,5 @@ HeavyMach 1 프로젝트 스킬 11개 전체를 `reference/heavymach1/skills`에
 imagegen, Sites, repair-computer-use는 환경 제공 스킬이다. 필요한 시점에 세션의 현행 위치와 사용 가능한 도구를 확인한다. 공급자별 인증 설정·키·개인 계정 파일은 복사하지 않는다. 게임 소스나 원본 IPA를 스킬 꾸러미에 넣지 않았다.
 
 추가 레벨 외형에는 [extend-machdefense-art](../.agents/skills/extend-machdefense-art/SKILL.md)를 쓴다. HeavyMach1의 실제 소비 자원 추적·임의 재해석 방지·게임 크기 대조를 MachDefense 부품에 적용한다.
+
+세 작품의 미술 비교와 새 유닛 제작에는 [mach-series-art](../.agents/skills/mach-series-art/SKILL.md)를 적용한다. [화풍 분석과 원본 비교](../.agents/skills/mach-series-art/references/style-study.md), [표본 출처](research/mach-series-art/sources.json), [픽셀 측정](research/mach-series-art/pixel-observations.json)을 연결했다.

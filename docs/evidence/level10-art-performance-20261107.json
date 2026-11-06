@@ -1,0 +1,41 @@
+{
+  "writes" : 0,
+  "sounds" : 1851,
+  "installed_units" : 14,
+  "texture_uploads" : 5,
+  "phases" : [
+    {
+      "p99_ms" : 16.667125004460104,
+      "cpu_p99_ms" : 5.5992083362070844,
+      "draw_calls_max" : 456,
+      "phase" : "battle-with-full-hud",
+      "p50_ms" : 16.667125004460104,
+      "cpu_p95_ms" : 5.2920416637789458,
+      "memory_max" : 214844472,
+      "cpu_max_ms" : 7.39604166301433,
+      "frames" : 299,
+      "p95_ms" : 16.667125004460104,
+      "over25ms" : 0,
+      "sprites_max" : 440,
+      "cpu_p50_ms" : 4.8125416651600972,
+      "memory_min" : 145982496
+    },
+    {
+      "p99_ms" : 16.667125004460104,
+      "cpu_p99_ms" : 7.799083337886259,
+      "draw_calls_max" : 451,
+      "phase" : "battle-and-hud-scroll",
+      "p50_ms" : 16.667125004460104,
+      "cpu_p95_ms" : 5.5261666711885482,
+      "memory_max" : 146326560,
+      "cpu_max_ms" : 9.5425000035902485,
+      "frames" : 300,
+      "p95_ms" : 16.667125004460104,
+      "over25ms" : 0,
+      "sprites_max" : 439,
+      "cpu_p50_ms" : 4.7913333401083946,
+      "memory_min" : 146064416
+    }
+  ],
+  "frames" : 600
+}
