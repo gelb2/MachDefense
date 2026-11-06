@@ -1,0 +1,1 @@
+{"name":"machdefense-web-tests","private":true,"type":"module","dependencies":{"puppeteer-core":"25.16.0"},"devDependencies":{"playwright":"^1.65.0"}}

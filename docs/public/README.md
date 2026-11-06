@@ -10,6 +10,6 @@
 - [트러블슈팅](troubleshooting.md)
 - [검사 결과](validation.md)
 - [릴리스 이력](../../CHANGELOG.md)
-- [다음 웹·PWA 릴리스 원고](web-pwa-release-draft.md)
+- [웹·PWA 첫 릴리스](web-pwa-release-draft.md)
 - [크레딧](../../CREDITS.md)
 - [남은 과제](../usability-todo.md)

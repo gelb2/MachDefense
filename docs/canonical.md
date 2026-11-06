@@ -38,3 +38,11 @@
 ## Android — 2026-11-06
 
 Android 실행기는 기존 Core·Audio·자원을 그대로 사용한다. 게임 UI도 공통 Frame으로 그린다. 플랫폼 연결은 Android/에 둔다. Apple·기존 공통 코드·자원 수정은 이번 과제에 포함하지 않는다. [구현·검사](evidence/android-native-20261106.md), [빌드](../Android/README.md).
+
+## 복원 코드·웹/PWA·Tauri 계획 — 2026-11-06
+
+[공용 복원 모듈과 웹 실행기 계획](save-transfer-web-tauri-plan.md)을 따른다. 복원 형식·검증·절차와 인게임 UI는 공용으로 두고, 웹·PWA·Tauri는 하나의 웹 실행 코드를 사용한다. Web·PWA는 `feat/web-pwa`에서 구현·로컬 검사했다. Apple·Android 기존 동작을 보존하며, 모바일 PWA 실기기와 Tauri는 남았다. [실행 근거](evidence/web-pwa-20261106.md).
+
+## 웹·PWA 공개 — 2026-11-06
+
+사용자가 저장소 공개와 PWA 운영 배포를 지시했다. 게임 주소는 https://gelb2.github.io/MachDefense/ 이며 독립 gh-pages 브랜치의 정식 산출물을 사용한다. [배포 검사](evidence/pwa-release-20261106.md)에서 실제 확인 범위와 Tauri 착수 조건을 확인한다.

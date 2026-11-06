@@ -30,6 +30,10 @@ public:
     virtual void playSoundAt(std::string_view name,Vec2 /*position*/,float gain=1){playSound(name,gain,0);}
     virtual void playMusic(std::string_view name,float gain=1)=0;
     virtual void stopMusic()=0;
+    virtual bool restoreSave(std::span<const std::uint8_t> bytes){return writeSave(bytes);}
+    virtual bool supportsSaveTransfer() const {return false;}
+    // Text entry/clipboard only. The common game owns buttons and confirmation.
+    virtual void transferText(std::string,bool,std::function<void(std::optional<std::string>)> completion){completion({});}
     virtual void requestName(std::string initial,std::size_t maximumBytes,
                              std::function<void(std::optional<std::string>)> completion)=0;
 };

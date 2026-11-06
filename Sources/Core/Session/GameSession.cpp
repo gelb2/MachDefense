@@ -31,6 +31,9 @@ public:
     void playMusic(std::string_view n,float gain=1)override{song=n;host.playMusic(n,gain*music);}
     void stopMusic()override{song.clear();host.stopMusic();}
     void requestName(std::string n,std::size_t max,std::function<void(std::optional<std::string>)> cb)override{host.requestName(std::move(n),max,std::move(cb));}
+    bool restoreSave(std::span<const std::uint8_t> bytes)override{return host.restoreSave(bytes);}
+    bool supportsSaveTransfer()const override{return host.supportsSaveTransfer();}
+    void transferText(std::string s,bool exporting,std::function<void(std::optional<std::string>)> cb)override{host.transferText(std::move(s),exporting,std::move(cb));}
     void refreshMusic(){if(!song.empty())host.playMusic(song,music);}
 };
 }
