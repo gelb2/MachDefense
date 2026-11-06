@@ -15,13 +15,17 @@
 
 [개발자의 변 전문](docs/RESTORATION.md)
 
-## Quick Play
+## Quick Play — PWA
 
 [**MachDefense 플레이·PWA 설치**](https://gelb2.github.io/MachDefense/)
 
 위 주소를 열어 게임을 설치하거나 브라우저에서 바로 플레이한다. iPhone·iPad는 Safari의 공유 메뉴에서 **홈 화면에 추가**, Android·Mac은 **INSTALL GAME**을 누른다. 자원 다운로드가 끝나면 인터넷 없이도 플레이할 수 있다.
 
 Xcode나 Android Studio로 빌드하기 어렵다면 PWA를 이용하면 된다. [설치와 실행](docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
+
+### 레벨업이 힘든 사람을 위한 방법
+
+내 아이폰 네이티브 앱에서 직접 플레이한 진행도의 복원 코드를 공유한다. **Stage 42·보유 유닛 12종·20,329Cr** 상태에서 이어서 플레이할 수 있다. **[복원 코드와 적용 방법](docs/public/quick-play.md#레벨업이-힘든-사람을-위한-방법)**.
 
 ## 원작의 전투와 성장
 

@@ -18,6 +18,7 @@
 - [x] 긴급지원 기획 주체, mesabloo의 영향, Internet Archive 출처와 치트 검증 기록 반영.
 - [ ] 개발자의 변 마지막 단락: 사용자가 제공할 문장 또는 시를 별도 단락으로 추가.
 - [x] 게임 배포 후 공개 주소·설치 안내·실행 상태 갱신.
+- [x] HeavyMach1과 같은 README 위치에 Quick Play·PWA 안내·공유 복원 코드 작성. 현재 iPhone 정식 저장의 Stage 42·유닛 12종·20,329Cr 코드를 생성하고 왕복 검사했다. [원고](public/quick-play.md). 기능 브랜치에 작성했으며 main 반영은 남았다.
 - [ ] 실제 모바일 PWA 설치와 실행 검사.
 
 [원고 전문](editorial/github-manuscripts-20261106.md) · [Sass 집필 자료](editorial/sass-publication-guide.md) · [웹 개발 브랜치 검사](evidence/web-pwa-20261106.md)
@@ -35,7 +36,10 @@
 - [ ] 120Hz 표시 주기·장시간 메모리/발열과 실제 음향 출력 검사를 마친다.
 - [x] 기존 플랫폼 회귀: 기준 2,972파일 중 복원 연결 4파일만 변경. 네이티브 수정 전후 160조건 추적 일치, iOS 시뮬레이터·Android 일반/치트 빌드 성공.
 - [ ] MD-TAURI-MAC-01: 검증한 웹 산출물을 포함하고 OS 파일 저장·복원 중단·창·종료를 연결한다.
-- [ ] 실제 Galaxy·모바일 설치형 PWA에서 복원 재검사. Apple 시뮬레이터·Android 에뮬레이터·Chrome·WebKit 검사 결과는 [교차 검사](evidence/save-transfer-all-platforms-20261106.md)에 기록했다.
+- [x] 실제 Galaxy 정식·치트 앱 복원 검사. iPhone 원본 42,496바이트 일치와 정식 저장 보존을 확인했다. [교차 검사](evidence/save-transfer-all-platforms-20261106.md).
+- [x] Galaxy Chrome·설치형 PWA의 코드 생성·입력·복원. iPhone 저장 전체 바이트 일치.
+- [x] 사용자 확인: iPhone 코드 → iPad PWA 복원·미션 클리어 → 새 코드 → iPhone 재복원·스테이지 진입.
+- [ ] iPhone 설치형 PWA 직접 검사. Galaxy PWA 오프라인 전투·재실행은 통과했다.
 
 ## 남은 과제 요약 — 2026-11-06 HUD 사용자 확인 후
 
@@ -46,13 +50,13 @@
 | 다음 기능 | 생산 HUD 전체 유닛·순서 | 원작의 7개 제한 여부를 확인한다. 기존 외형을 유지하면서 전체 해금 목록의 세로 스크롤, 순서 편집·저장, 스크롤 중 생산 오입력을 설계한다. MD-PRODUCTION-HUD-01. |
 | 게임 오류 | 미션 4·10·11 길찾기, 터렛 밀집 정체 | 10·11 메크 단독 정체는 재현했다. 포팅판의 충돌·우회 처리와 대조한다. 미션 3 구멍 위 포탑 설치도 원본과 비교한다. |
 | 별도 조사 | 월드와 HUD의 표시 범위 | iPhone 상단 덮개는 완료했다. 배경 밖에 유닛이 표시되는 범위와 원본 경계는 MD-WORLD-HUD-TOP-01로 남긴다. |
-| 기능 추가 | 한 줄 복원 코드 | 원본 5슬롯 저장을 기준으로 생성·복원 공통 모듈과 슬롯 선택 화면 UI를 만든다. 게임 UI는 원작 에셋·렌더 절차를 사용한다. MD-SAVE-CODE-01. |
+| 복원 후속 검사 | 한 줄 복원 코드 | 공용 모듈과 Apple·Android·Web 연결은 완료했다. Galaxy 앱·Chrome·설치형 PWA 복원은 통과했다. 사용자가 iPhone↔iPad PWA 왕복과 미션 플레이를 확인했다. Galaxy PWA 오프라인 전투·재실행도 통과했다. iPhone 설치형 PWA 직접 검사는 남았다. MD-SAVE-CODE-01. |
 | 기능 확장 | 기지·포탑·필살기 10레벨 | 원본 상한·가격·성능을 대조한 뒤 확장안을 만든다. 추가 단계의 외형·사운드·효과는 그다음 연구한다. MD-UPGRADE-LEVEL10-01. |
-| 시각 후속 | 타이틀 경계와 메뉴 확장 | iPhone 하단, iPad 좌·우·하단의 희미한 선을 개선한다. 오른쪽 HUD의 에셋 재설계는 보류한다. |
+| 시각 후속 | iPad 스플래시 좌우 왜곡 | 현재 좌우 확대·반사 처리와 HeavyMach1의 이미지 제작 스킬·채택 과정을 비교한다. MD-TITLE-IPAD-02. 오른쪽 HUD 에셋 재설계는 보류한다. |
 | 계산 대조 | Base Upgrade·긴급지원 | 기지 강화 표·가속 계산은 일치했다. 포팅판과 같은 강화 상태의 실제 셀 생산량 대조, 미션별 반복 지원의 난이도 비교가 남았다. |
 | 검사 | 음향·프레임·저장·UI | 원작 출력음 녹음, 실제 전화·알람·사진 촬영·잠금 복귀, 같은 조건의 기준/후보 성능 반복, 저장 경계값, 전체 UI·회전 대조를 마친다. 기기별 직접 조작 미완료 범위는 아래 검사 목록을 따른다. |
 | Android 후속 | 무선 설치·장시간 검사 | Galaxy 무선 ADB, 장시간 발열·메모리, 추가 OS/기기, 두 세로 방향, 실제 오디오 중단과 배포용 서명을 확인한다. 현재 설치·검사는 USB 기준이다. |
-| 후속 플랫폼 | 웹·PWA·Tauri | 기존 공통 모듈을 연결하는 실행기·렌더·입력·음향·저장·생명주기를 설계하고 구현한다. Android는 이미 v0.1에 포함됐다. |
+| 후속 플랫폼 | Tauri Mac | 웹·PWA는 배포했다. 같은 웹 실행기를 Tauri에 포함하고 OS 파일 저장·창·종료·오프라인 실행을 구현한다. MD-TAURI-MAC-01. |
 | 문서 | 개발자의 변·트러블슈팅 | 게시한 초안에 제공 글감을 반영하고, 판본·모듈화·오디오·HUD·Android 결과를 정리한다. 별도 문서 정리 브랜치와 원래 checkout의 미커밋 작업은 보존한다. |
 | 사용자 보류 | 화면 밖 적에 대한 포탑 반격 | 사용자 지시로 착수하지 않는다. MD-TARGET-OFFSCREEN-01. |
 
@@ -631,8 +635,12 @@ Info.plist·프로젝트 생성 설정·ViewController를 두 세로 방향으�
 - [x] C++ 복원 패널과 Apple·Android·Web 텍스트 필드 연결. 복사·검사·취소·확인은 게임 버튼이다.
 - [x] 현재 iPhone 정식 앱 저장 백업과 Android 에뮬레이터·Web 복원 후 42,496바이트 대조.
 - [x] 공용 38개 검사, Apple 두 시뮬레이터, Web Chrome·WebKit 입력/저장 회귀.
-- [ ] 실제 Galaxy 및 모바일 설치형 PWA 입력·복원 확인.
-- [ ] FileStore rename 뒤 fsync 실패·rollback 실패 직접 주입 검사.
+- [x] 실제 Galaxy 정식·치트 앱의 입력·복원·재실행과 기존 정식 저장 보존.
+- [x] Galaxy Chrome·설치형 PWA 입력·복원 확인.
+- [x] 사용자 확인: iPhone↔iPad PWA 코드 왕복, iPad 미션 클리어, iPhone 스테이지 진입.
+- [ ] iPhone 설치형 PWA 직접 검사.
+- [x] Galaxy PWA 오프라인 새 실행·전투·재실행과 저장 바이트 보존.
+- [x] FileStore rename 뒤 fsync 실패·rollback 실패 직접 주입 검사. 합성 저장과 실제 iPhone 저장 복사본에서 6개 추가 실패 조건을 통과했다.
 
 [구현·검사 결과](evidence/save-transfer-all-platforms-20261106.md).
 

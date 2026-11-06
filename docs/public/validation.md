@@ -16,10 +16,18 @@ iOS·iPadOS·Android 네이티브 앱과 웹·PWA가 같은 C++ 게임 코드를
 | 아이폰→웹 | Stage36 저장 복사본의 전체42,496바이트 복원·전투·재실행. 아이폰 원본 전후 일치 |
 | Mac 직접 조작 | Safari 타이틀·슬롯·복원 버튼, Chrome 설치형 PWA 실행·종료 |
 
-실제 iPhone·iPad·Galaxy의 설치형 PWA, 120Hz와 장시간 성능, 원작 출력음 녹음 대조는 남아 있다. [Apple 검사](validation.md) · [웹 검사](../evidence/web-pwa-20261106.md)
+iPhone 설치형 PWA의 직접 검사, 120Hz와 장시간 성능, 원작 출력음 녹음 대조는 남아 있다. [플랫폼별 복원 검사](../evidence/save-transfer-all-platforms-20261106.md) · [웹 검사](../evidence/web-pwa-20261106.md)
 
 [게임 소개](../../README.md) · [문서 목차](README.md)
 
 ## PWA 배포 후보 검사
 
 2026-11-06 정식 빌드에서 Chrome 설치형 PWA의 독립 창·오프라인 재실행을 확인했다. Chrome·WebKit에서 코드 복원·Stage 36 진입·저장 재실행·GPU 복구·저장 실패 검사를 통과했다. [배포 검사와 Tauri 착수 조건](../evidence/pwa-release-20261106.md).
+
+## 복원 코드 기기 간 이전
+
+2026년 11월 6일 iPhone 저장을 iPad 치트 앱과 Galaxy 치트 앱에 복원하고 전체 42,496바이트를 대조했다. Galaxy 정식 앱은 코드 생성·복사·입력·취소 후 기존 저장이 유지됐다. Galaxy Chrome과 설치형 PWA에서도 같은 코드의 생성·복원을 확인했다. Galaxy PWA는 오프라인 새 실행·전투·재실행 후 저장 전체 바이트가 유지됐다.
+
+나는 아이폰에서 만든 코드로 아이패드 PWA를 복원해 한 미션을 클리어했다. 아이패드 PWA에서 새 코드를 만들고 아이폰에 재복원한 뒤 스테이지에 들어가는 것까지 직접 확인했다.
+
+[자동검사·실기기 결과](../evidence/save-transfer-all-platforms-20261106.md) · [공유 복원 코드](quick-play.md#레벨업이-힘든-사람을-위한-방법)

@@ -1,6 +1,7 @@
 # 문서 목차
 
 - [게임 소개](../../README.md)
+- [Quick Play — PWA와 공유 복원 코드](quick-play.md)
 - [개발자의 변](../RESTORATION.md)
 - [내가 추가한 기능과 기획 의도](features.md)
 - [복원과 개발 과정](development-history.md)

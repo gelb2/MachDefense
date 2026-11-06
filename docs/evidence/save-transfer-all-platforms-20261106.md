@@ -39,7 +39,9 @@ iPad 치트 앱에서 같은 코드를 실제 복원했다. 결과 파일 42,496
 
 iPhone·iPad 정식 앱에 최종 공용 메뉴 수정본을 설치했다. iPad 정식 앱은 기존 저장을 백업한 뒤 GET CODE·CLOSE를 검사했고 설치 전후 파일 전체가 일치했다. iPhone·iPad 검사 앱을 종료하고 홈 화면으로 돌아왔다.
 
-Galaxy는 현재 ADB 목록에 없어 에뮬레이터에서 검사했다. 복원한 진행으로 미션 진입·유닛 생산·사운드 호출과 재실행을 확인했다. WebKit 데스크톱 검사는 iPhone Safari 실기기 검사와 구분한다. 운영 PWA 배포 결과는 아래에 추가한다.
+Galaxy SM-S731N(Android 17)을 USB로 연결해 최신 정식·치트 앱을 설치했다. 기존 두 앱의 저장을 먼저 백업했다. 치트 앱의 9개 복원 조건을 통과했고, 복원 직후 파일 42,496바이트가 iPhone 원본과 일치했다. 복원한 Stage 41에서 유닛 생산 1회·음향 호출 248회·강화창 표시를 확인했다. 정식 앱은 기존 Galaxy 저장으로 GET CODE·COPY·ENTER CODE·CANCEL을 검사했고 저장 SHA-256이 유지됐다.
+
+모바일 PWA의 직접 검사는 아래 운영 배포 결과에 기록한다. WebKit 데스크톱 검사와 iPhone/iPad Safari 실기기 결과는 구분한다.
 
 ## 검사 중 수정
 
@@ -58,7 +60,14 @@ Android 에뮬레이터에서 새 복원 화면의 단색 덮개가 기존 슬�
 - Android: `Android/tools/save_transfer_smoke.py`
 - Apple: `Apple/Tests/SaveTransferAdapterTests.mm`
 
-FileStore의 rename 직후 디렉터리 fsync 실패와 rollback 실패를 직접 주입하는 검사는 남았다. 기존 실패·중단 검사 결과와 구분한다.
+FileStore의 추가 실패 검사를 마쳤다. macOS의 임시 디렉터리에서 테스트 파일의 POSIX 호출을 가로채 오류를 만들었다. 제품 모듈에는 검사 코드를 추가하지 않았다. 합성 저장과 실제 iPhone 저장 복사본에서 아래 결과가 같았다.
+
+- pending·실제 저장·commit 파일의 rename 직후 디렉터리 fsync 실패 3조건: 기존 저장으로 되돌리고 실패를 반환했다.
+- 저장 교체 후 rollback의 rename도 실패: 예외를 반환하고 백업·pending을 유지했다. 재실행 시 새 저장을 완성했다.
+- 성공 후 pending 삭제 실패: 이후 게임 저장이 생겨도 다음 실행이 그 진행을 덮지 않았다.
+- 첫 설치에서 복원 도중 실패: 원래처럼 저장 파일이 없는 상태로 되돌렸다.
+
+검사 근거는 `.local/save-transfer/file-store-followup-test.log`, `file-store-iphone-faults.log`다. 검사 전후 iPhone 백업의 SHA-256도 같았다.
 
 [설계](../save-transfer-native-plan-20261106.md) · [사용법](../public/gameplay.md) · [남은 과제](../usability-todo.md)
 
@@ -70,6 +79,23 @@ FileStore의 rename 직후 디렉터리 fsync 실패와 rollback 실패를 직�
 - GitHub Pages 상태 `built`, 운영 build.json도 같은 빌드 번호로 확인했다.
 - 운영 Chrome·WebKit에서 iPhone 저장 복원·재출력·미션 진입·오프라인 재실행·저장 충돌/실패 검사를 통과했다.
 - Mac Chrome에서 새 PWA 설치·독립 창 실행·슬롯 화면·오프라인 재실행을 확인했다.
+- Galaxy Chrome 운영 주소에서 ENTER CODE·CHECK·YES를 눌러 iPhone 저장 전체를 복원했다. INSTALL GAME의 Android 설치 절차를 완료하고 독립 PWA 창(`standalone=true`)에서 같은 저장을 확인했다.
+- Galaxy PWA 안에서도 GET CODE 결과가 원본 코드와 같았고 ENTER CODE·CHECK·YES로 다시 복원한 42,496바이트가 일치했다.
+- Galaxy 증거는 `.local/save-transfer/galaxy-device/`의 `smoke.log`, `chrome-restore.json`, `pwa-restore.json`과 화면 캡처에 보존한다. iPhone 설치형 PWA의 직접 복원 결과는 아직 확정하지 않았다.
 - 개인 복원 코드는 브라우저 로컬 저장 검사에만 사용했다. 배포 파일 허용 목록에 개인 저장·코드는 없으며 원본 패키지 검사도 통과했다.
 
 게임 소스는 기능 브랜치에 보존한다. 이번 작업에서 develop·main 병합과 새 버전 태그는 만들지 않았다.
+
+## 사용자 확인 — iPhone와 iPad PWA 왕복
+
+사용자가 iPhone 정식 앱에서 생성한 코드를 iPad 설치형 PWA에 입력해 복원한 뒤 한 미션을 클리어했다. 이어서 iPad PWA에서 새 코드를 생성하고 iPhone 앱에 재복원한 다음 스테이지 진입을 확인했다. 이 결과는 사용자의 직접 플레이 확인이다. 위 자동검사와 별도로 기록한다.
+
+Galaxy PWA의 오프라인 새 실행·전투·재실행 검사를 마쳤다. 독립 창에서 42,496바이트를 읽고 전투 HUD·생산 버튼 7개를 확인했다. 전투 중 ticks는 545→702, 음향 호출은 13→67로 증가했고 저장 횟수는 1회로 유지됐다. 오프라인 재로딩 뒤 전체 저장 바이트가 같았다. Wi-Fi·모바일 데이터·비행기 모드는 검사 전 상태로 복구했다. 근거는 `galaxy-device/pwa-offline.json`과 전투·재실행 캡처다.
+
+중간 검사에서 잠금 화면을 확인했다. 잠금 해제 뒤에도 검사기가 정식 빌드에 없는 치트 전용 `time` 필드를 요구해 실패했다. 정식 빌드가 제공하는 ticks·음향 호출 증가와 실제 전투 화면으로 검사 조건을 고쳤다. 제품 코드는 변경하지 않았다.
+
+## 공개용 Quick Play 코드
+
+사용자가 자신의 iPhone 진행도 코드를 GitHub에 공유하도록 지시했다. 2026년 11월 6일 10:39 KST에 정식 앱 저장을 새로 읽었다. Stage 42 진입 가능, 20,329Cr, 보유 유닛 12종이다. 최신 저장으로 만든 1,443문자 코드를 재해석한 42,496바이트가 원본과 일치했다.
+
+공개 파일은 `docs/public/saves/iphone-stage42.txt`이며 [Quick Play](../public/quick-play.md)에서 사용법과 함께 안내한다. 원본 저장 파일과 검사 복사본은 `.local/save-transfer/iphone-quickplay-20261106/`에 보존한다.
