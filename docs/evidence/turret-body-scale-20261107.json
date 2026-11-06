@@ -1,0 +1,2234 @@
+{
+  "date": "2026-11-07",
+  "original_parts": [
+    {
+      "name": "Turret_b_01",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        7,
+        12,
+        61,
+        55
+      ],
+      "visible_size": [
+        54,
+        43
+      ],
+      "part_type": 0,
+      "tiles": 1,
+      "sockets": [
+        [
+          6.0,
+          0.5
+        ],
+        [
+          6.0,
+          0.5
+        ]
+      ],
+      "sha256": "a4a1bcdfe70ae823c543c0c905d55492613aeff55fb3a7a3c7c9b781eb0d121e"
+    },
+    {
+      "name": "Turret_b_02",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        5,
+        10,
+        57,
+        57
+      ],
+      "visible_size": [
+        52,
+        47
+      ],
+      "part_type": 0,
+      "tiles": 1,
+      "sockets": [
+        [
+          6.5,
+          1.0
+        ],
+        [
+          6.5,
+          1.0
+        ]
+      ],
+      "sha256": "c7dea9d63e9d2b1eb3b7458de27c6f467739a3c1e9905ae5f5b9ed166a35e327"
+    },
+    {
+      "name": "Turret_b_03",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        2,
+        2,
+        55,
+        62
+      ],
+      "visible_size": [
+        53,
+        60
+      ],
+      "part_type": 0,
+      "tiles": 1,
+      "sockets": [
+        [
+          4.5,
+          1.5
+        ],
+        [
+          4.5,
+          1.5
+        ]
+      ],
+      "sha256": "bdededb5cb6338c3b148669ed74c224d48b0494354cbebe4936077f48fd7cd6a"
+    },
+    {
+      "name": "Turret_b_04",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        2,
+        2,
+        55,
+        62
+      ],
+      "visible_size": [
+        53,
+        60
+      ],
+      "part_type": 0,
+      "tiles": 1,
+      "sockets": [
+        [
+          4.5,
+          1.5
+        ],
+        [
+          4.5,
+          1.5
+        ]
+      ],
+      "sha256": "a2cbf5d4331bf850f9c0f9f1be71e1824d34eab41050f66e31afc664f3bd42ac"
+    },
+    {
+      "name": "Turret_b_05",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        3,
+        2,
+        56,
+        62
+      ],
+      "visible_size": [
+        53,
+        60
+      ],
+      "part_type": 0,
+      "tiles": 1,
+      "sockets": [
+        [
+          6.0,
+          1.5
+        ],
+        [
+          6.0,
+          1.5
+        ]
+      ],
+      "sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927"
+    },
+    {
+      "name": "Turret_gun_01",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        15,
+        15,
+        57,
+        48
+      ],
+      "visible_size": [
+        42,
+        33
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -6.0,
+          0.0
+        ],
+        [
+          23.5,
+          12.5
+        ],
+        [
+          24.0,
+          -11.5
+        ]
+      ],
+      "sha256": "0473c926e45f0f04ce0f94411cada9946773523cc1c282c9a877f107ef921459"
+    },
+    {
+      "name": "Turret_gun_02",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        12,
+        12,
+        56,
+        50
+      ],
+      "visible_size": [
+        44,
+        38
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -3.0,
+          0.5
+        ],
+        [
+          23.0,
+          12.5
+        ],
+        [
+          23.0,
+          -11.5
+        ]
+      ],
+      "sha256": "c5163a57811128dc673a5c1b7cd0feb83c701a76392a548db30768bad1c964b2"
+    },
+    {
+      "name": "Turret_gun_03",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        11,
+        10,
+        56,
+        53
+      ],
+      "visible_size": [
+        45,
+        43
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -6.5,
+          0.5
+        ],
+        [
+          22.0,
+          12.5
+        ],
+        [
+          22.0,
+          -12.0
+        ]
+      ],
+      "sha256": "c28d3533f5a2c43105e84838a9d094381d75f39f2685feb24eaa77215fadaf7a"
+    },
+    {
+      "name": "Turret_gun_04",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        5,
+        11,
+        60,
+        52
+      ],
+      "visible_size": [
+        55,
+        41
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -6.5,
+          0.5
+        ],
+        [
+          27.0,
+          12.5
+        ],
+        [
+          27.0,
+          -12.0
+        ]
+      ],
+      "sha256": "6ccaad8a90d40a530418afdb9c4d95e79c9570ee1fc2d222e42a8e5c1df27a49"
+    },
+    {
+      "name": "Turret_gun_05",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        1,
+        10,
+        62,
+        53
+      ],
+      "visible_size": [
+        61,
+        43
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -8.5,
+          0.5
+        ],
+        [
+          28.5,
+          13.5
+        ],
+        [
+          29.0,
+          -12.5
+        ]
+      ],
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9"
+    },
+    {
+      "name": "Turret_msl_01",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        7,
+        17,
+        56,
+        45
+      ],
+      "visible_size": [
+        49,
+        28
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -1.5,
+          0.5
+        ],
+        [
+          22.5,
+          12.0
+        ],
+        [
+          22.0,
+          -10.0
+        ]
+      ],
+      "sha256": "1f16cf2b37305b03e85abd7d54ef2561d8436d0bd7faa049f51d28ab02bc6d98"
+    },
+    {
+      "name": "Turret_msl_02",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        19,
+        15,
+        57,
+        47
+      ],
+      "visible_size": [
+        38,
+        32
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          1.0,
+          0.5
+        ],
+        [
+          22.0,
+          12.5
+        ],
+        [
+          22.5,
+          -10.5
+        ]
+      ],
+      "sha256": "f6eca8044be25b87a032cebb036ebb4e472a5e87829adc0354ed1559d22e513f"
+    },
+    {
+      "name": "Turret_msl_03",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        10,
+        11,
+        58,
+        52
+      ],
+      "visible_size": [
+        48,
+        41
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          1.5,
+          0.5
+        ],
+        [
+          25.0,
+          14.5
+        ],
+        [
+          24.5,
+          -13.0
+        ]
+      ],
+      "sha256": "60cf1af8c6d791703541c65144a61cbb05864c3f65fc48c251ddf74f87bbe9cb"
+    },
+    {
+      "name": "Turret_msl_04",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        11,
+        12,
+        56,
+        50
+      ],
+      "visible_size": [
+        45,
+        38
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          1.5,
+          0.5
+        ],
+        [
+          22.0,
+          14.5
+        ],
+        [
+          22.0,
+          -13.0
+        ]
+      ],
+      "sha256": "87adac311929df1906c229a6f7a6b5584e86d768768f5f0ed465144af5c27396"
+    },
+    {
+      "name": "Turret_msl_05",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        9,
+        10,
+        61,
+        53
+      ],
+      "visible_size": [
+        52,
+        43
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          0.0,
+          0.5
+        ],
+        [
+          27.0,
+          11.5
+        ],
+        [
+          27.5,
+          -9.5
+        ]
+      ],
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08"
+    },
+    {
+      "name": "Turret_mg_01",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        11,
+        10,
+        58,
+        50
+      ],
+      "visible_size": [
+        47,
+        40
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -4.5,
+          0.0
+        ],
+        [
+          24.5,
+          15.0
+        ],
+        [
+          25.0,
+          -13.0
+        ]
+      ],
+      "sha256": "9579005ab48252580db2533174227bdc669bfb44ca26b408ea907c10dca0c78e"
+    },
+    {
+      "name": "Turret_mg_02",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        12,
+        11,
+        60,
+        52
+      ],
+      "visible_size": [
+        48,
+        41
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          0.0,
+          0.5
+        ],
+        [
+          27.0,
+          13.5
+        ],
+        [
+          27.0,
+          -12.5
+        ]
+      ],
+      "sha256": "759703c569daca9315120366ad549fea4505d6f1d4f501847c6b9df900e40b1c"
+    },
+    {
+      "name": "Turret_mg_03",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        3,
+        10,
+        58,
+        53
+      ],
+      "visible_size": [
+        55,
+        43
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -7.5,
+          0.5
+        ],
+        [
+          25.0,
+          14.5
+        ],
+        [
+          25.0,
+          -13.5
+        ]
+      ],
+      "sha256": "18625026b2a674d7df164604e22be3c6436c35d599870e9ba3d5bd4d77e1c288"
+    },
+    {
+      "name": "Turret_mg_04",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        1,
+        10,
+        62,
+        53
+      ],
+      "visible_size": [
+        61,
+        43
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -11.0,
+          0.5
+        ],
+        [
+          28.5,
+          15.0
+        ],
+        [
+          27.5,
+          -14.0
+        ]
+      ],
+      "sha256": "a5235085921c6b14e4db454ad841d3153fc5456f3b9f48c4c47a7eac11b4b4ca"
+    },
+    {
+      "name": "Turret_mg_05",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        40,
+        10,
+        100,
+        53
+      ],
+      "visible_size": [
+        60,
+        43
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -2.5,
+          0.5
+        ],
+        [
+          34.0,
+          14.5
+        ],
+        [
+          33.5,
+          -13.5
+        ]
+      ],
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34"
+    },
+    {
+      "name": "Turret_ion_01",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        6,
+        18,
+        60,
+        43
+      ],
+      "visible_size": [
+        54,
+        25
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -12.5,
+          1.5
+        ],
+        [
+          26.5,
+          1.0
+        ]
+      ],
+      "sha256": "e3c67386767520449c62d85a5d03b98c0db808a76222788c126a93454fd3869a"
+    },
+    {
+      "name": "Turret_ion_02",
+      "png_size": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        0,
+        22,
+        64,
+        39
+      ],
+      "visible_size": [
+        64,
+        17
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -11.5,
+          0.0
+        ],
+        [
+          30.0,
+          0.5
+        ]
+      ],
+      "sha256": "522ecee3fe2023bdad86685813079a879a5e3beb1bbc87dee8e8f55a2b2a7920"
+    },
+    {
+      "name": "Turret_ion_03",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        44,
+        22,
+        110,
+        42
+      ],
+      "visible_size": [
+        66,
+        20
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          44.0,
+          -0.5
+        ]
+      ],
+      "sha256": "79021e12936176eb6e3bfe50dd60eb9004c8b0fe687acdeeb28d23de32a88d08"
+    },
+    {
+      "name": "Turret_ion_04",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        39,
+        17,
+        108,
+        45
+      ],
+      "visible_size": [
+        69,
+        28
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          42.5,
+          0.5
+        ]
+      ],
+      "sha256": "a12ec43ca95d7fe1668e30aa46ad63a36834d1c5ef34cb1d6d4ded6dd9e2103d"
+    },
+    {
+      "name": "Turret_ion_05",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        41,
+        18,
+        110,
+        44
+      ],
+      "visible_size": [
+        69,
+        26
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          44.0,
+          -0.5
+        ]
+      ],
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6"
+    },
+    {
+      "name": "Turret_lsr_01",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        41,
+        11,
+        99,
+        51
+      ],
+      "visible_size": [
+        58,
+        40
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -3.5,
+          0.5
+        ],
+        [
+          34.5,
+          16.0
+        ],
+        [
+          34.0,
+          -12.5
+        ]
+      ],
+      "sha256": "c15f7ac9888bf7d5c90313de761c93b1e1c9102c5ce95c58bcdc663992059bb3"
+    },
+    {
+      "name": "Turret_lsr_02",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        45,
+        10,
+        105,
+        53
+      ],
+      "visible_size": [
+        60,
+        43
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          39.5,
+          15.5
+        ],
+        [
+          39.5,
+          -15.0
+        ]
+      ],
+      "sha256": "2219ed5b3a404f4c733444cd28b2be0ec50e531336d13c5d8cfc7fac7f037728"
+    },
+    {
+      "name": "Turret_lsr_03",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        38,
+        8,
+        105,
+        54
+      ],
+      "visible_size": [
+        67,
+        46
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -2.5,
+          0.5
+        ],
+        [
+          40.0,
+          15.5
+        ],
+        [
+          40.0,
+          -12.5
+        ]
+      ],
+      "sha256": "8a0fc4f508722ea386e70377eb307763c074468908a074a23c29a8803da624ed"
+    },
+    {
+      "name": "Turret_lsr_04",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        27,
+        2,
+        113,
+        61
+      ],
+      "visible_size": [
+        86,
+        59
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -4.0,
+          0.5
+        ],
+        [
+          48.0,
+          20.0
+        ],
+        [
+          47.5,
+          -18.5
+        ]
+      ],
+      "sha256": "a69f9aba794287084b0a24eeb660f8f66e9816337c90936965a89f59e8d3d444"
+    },
+    {
+      "name": "Turret_lsr_05",
+      "png_size": [
+        128,
+        128
+      ],
+      "visible_bbox": [
+        24,
+        34,
+        119,
+        95
+      ],
+      "visible_size": [
+        95,
+        61
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -5.0,
+          -0.5
+        ],
+        [
+          53.5,
+          20.0
+        ],
+        [
+          53.5,
+          -21.5
+        ]
+      ],
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1"
+    },
+    {
+      "name": "Turret_pla_01",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        38,
+        18,
+        106,
+        44
+      ],
+      "visible_size": [
+        68,
+        26
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          40.0,
+          0.5
+        ]
+      ],
+      "sha256": "c55e86a8376dee3cef390a5c9288ef57239005a507bc53cf62fc247ba1b258f8"
+    },
+    {
+      "name": "Turret_pla_02",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        38,
+        15,
+        113,
+        43
+      ],
+      "visible_size": [
+        75,
+        28
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          48.0,
+          0.0
+        ]
+      ],
+      "sha256": "ed9aed4eeabf017d8470bb92b632c1f2297861c27ad710f19c856ee459fdc647"
+    },
+    {
+      "name": "Turret_pla_03",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        31,
+        19,
+        113,
+        43
+      ],
+      "visible_size": [
+        82,
+        24
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          0.5,
+          1.0
+        ],
+        [
+          49.5,
+          0.5
+        ]
+      ],
+      "sha256": "015c565e332c9ae1d796e342264246a437b23219de959cc9a27b152b23c5ab0c"
+    },
+    {
+      "name": "Turret_pla_04",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        31,
+        19,
+        112,
+        44
+      ],
+      "visible_size": [
+        81,
+        25
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -1.0,
+          0.5
+        ],
+        [
+          48.0,
+          0.5
+        ]
+      ],
+      "sha256": "e266597c60a35de1783d37e7b9d886f705355a685b697b0b5daa8a9409c7ed83"
+    },
+    {
+      "name": "Turret_pla_05",
+      "png_size": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        34,
+        12,
+        111,
+        52
+      ],
+      "visible_size": [
+        77,
+        40
+      ],
+      "part_type": 4,
+      "tiles": 1,
+      "sockets": [
+        [
+          -2.0,
+          1.0
+        ],
+        [
+          46.0,
+          10.0
+        ],
+        [
+          46.0,
+          -7.5
+        ]
+      ],
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc"
+    }
+  ],
+  "assemblies": [
+    {
+      "name": "Tur_Gun_01",
+      "children": [
+        {
+          "name": "Turret_b_01",
+          "children": [
+            {
+              "name": "Turret_gun_01",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Gun_02",
+      "children": [
+        {
+          "name": "Turret_b_02",
+          "children": [
+            {
+              "name": "Turret_gun_02",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Gun_03",
+      "children": [
+        {
+          "name": "Turret_b_03",
+          "children": [
+            {
+              "name": "Turret_gun_03",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Gun_04",
+      "children": [
+        {
+          "name": "Turret_b_04",
+          "children": [
+            {
+              "name": "Turret_gun_04",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Gun_05",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_gun_05",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Gun_06",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_gun_06",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Gun_07",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_gun_07",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Gun_08",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_gun_08",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Gun_09",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_gun_09",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Gun_10",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_gun_10",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Msl_01",
+      "children": [
+        {
+          "name": "Turret_b_01",
+          "children": [
+            {
+              "name": "Turret_msl_01",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Msl_02",
+      "children": [
+        {
+          "name": "Turret_b_02",
+          "children": [
+            {
+              "name": "Turret_msl_02",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Msl_03",
+      "children": [
+        {
+          "name": "Turret_b_03",
+          "children": [
+            {
+              "name": "Turret_msl_03",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Msl_04",
+      "children": [
+        {
+          "name": "Turret_b_04",
+          "children": [
+            {
+              "name": "Turret_msl_04",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Msl_05",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_msl_05",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Msl_06",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_msl_06",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Msl_07",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_msl_07",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Msl_08",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_msl_08",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Msl_09",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_msl_09",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Msl_10",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_msl_10",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_MG_01",
+      "children": [
+        {
+          "name": "Turret_b_01",
+          "children": [
+            {
+              "name": "Turret_mg_01",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_MG_02",
+      "children": [
+        {
+          "name": "Turret_b_02",
+          "children": [
+            {
+              "name": "Turret_mg_02",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_MG_03",
+      "children": [
+        {
+          "name": "Turret_b_03",
+          "children": [
+            {
+              "name": "Turret_mg_03",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_MG_04",
+      "children": [
+        {
+          "name": "Turret_b_04",
+          "children": [
+            {
+              "name": "Turret_mg_04",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_MG_05",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_mg_05",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_MG_06",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_mg_06",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_MG_07",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_mg_07",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_MG_08",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_mg_08",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_MG_09",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_mg_09",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_MG_10",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_mg_10",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Ion_01",
+      "children": [
+        {
+          "name": "Turret_b_01",
+          "children": [
+            {
+              "name": "Turret_ion_01",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Ion_02",
+      "children": [
+        {
+          "name": "Turret_b_02",
+          "children": [
+            {
+              "name": "Turret_ion_02",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Ion_03",
+      "children": [
+        {
+          "name": "Turret_b_03",
+          "children": [
+            {
+              "name": "Turret_ion_03",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Ion_04",
+      "children": [
+        {
+          "name": "Turret_b_04",
+          "children": [
+            {
+              "name": "Turret_ion_04",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Ion_05",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_ion_05",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Ion_06",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_ion_06",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Ion_07",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_ion_07",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Ion_08",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_ion_08",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Ion_09",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_ion_09",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Ion_10",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_ion_10",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Lsr_01",
+      "children": [
+        {
+          "name": "Turret_b_01",
+          "children": [
+            {
+              "name": "Turret_lsr_01",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Lsr_02",
+      "children": [
+        {
+          "name": "Turret_b_02",
+          "children": [
+            {
+              "name": "Turret_lsr_02",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Lsr_03",
+      "children": [
+        {
+          "name": "Turret_b_03",
+          "children": [
+            {
+              "name": "Turret_lsr_03",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Lsr_04",
+      "children": [
+        {
+          "name": "Turret_b_04",
+          "children": [
+            {
+              "name": "Turret_lsr_04",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Lsr_05",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_lsr_05",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Lsr_06",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_lsr_06",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Lsr_07",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_lsr_07",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Lsr_08",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_lsr_08",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Lsr_09",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_lsr_09",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Lsr_10",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_lsr_10",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Pla_01",
+      "children": [
+        {
+          "name": "Turret_b_01",
+          "children": [
+            {
+              "name": "Turret_pla_01",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Pla_02",
+      "children": [
+        {
+          "name": "Turret_b_02",
+          "children": [
+            {
+              "name": "Turret_pla_02",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Pla_03",
+      "children": [
+        {
+          "name": "Turret_b_03",
+          "children": [
+            {
+              "name": "Turret_pla_03",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Pla_04",
+      "children": [
+        {
+          "name": "Turret_b_04",
+          "children": [
+            {
+              "name": "Turret_pla_04",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Pla_05",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_pla_05",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Pla_06",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_pla_06",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Pla_07",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_pla_07",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Pla_08",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_pla_08",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Pla_09",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_pla_09",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    },
+    {
+      "name": "Tur_Pla_10",
+      "children": [
+        {
+          "name": "Turret_b_05",
+          "children": [
+            {
+              "name": "Turret_pla_10",
+              "children": [],
+              "parent_socket": 1,
+              "z_order": 0
+            }
+          ],
+          "parent_socket": 0,
+          "z_order": 0
+        }
+      ]
+    }
+  ],
+  "original_assembly_count": 30,
+  "extended_assembly_count": 30,
+  "original_body_png_size": [
+    64,
+    64
+  ],
+  "new_levels_reuse_body": "Turret_b_05",
+  "input_sha256": {
+    "Resources/RawData/PartsInfo.mcb": "65159d5bf83353672a1a85067df4b43456a40270827f4ac3f0224fe87bf35c33",
+    "Resources/RawData/MachInfo.mcb": "37765a20228a945958dc15cea8561f421a04914c3d57d5ffc3a5ae7ef005e69f",
+    "Resources/RawData/Level10Machines.mcb": "c0ead5302a6ec2804687777293f3e5ad60018276e2d75bfcd2cdf6a65a749193"
+  },
+  "scope": "Original decoded data and current source; no new original-runtime capture."
+}

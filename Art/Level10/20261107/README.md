@@ -1,6 +1,8 @@
 # 추가 레벨 외형 시안
 
-포탑 6종 Lv.6–10과 기지 몸체·기관총·레이더 Lv.8–10, 총 39개 부품이다. built-in image_gen으로 원작 PNG를 참조해 만들었다. 원본 이미지는 수정하지 않았다. 게임 연결 전 시안이며 현재 Resources는 기존 최종 레벨 그림을 쓴다.
+포탑 무장 6종 Lv.6–10과 기지 몸체·기관총·레이더 Lv.8–10, 총 39개 부품이다. built-in image_gen으로 원작 PNG를 참조해 만들었다. 원본 이미지는 수정하지 않았다. 게임 연결 전 시안이며 현재 Resources는 기존 최종 레벨 그림을 쓴다.
+
+**2026-11-07 추가 대조:** 공용 포탑 몸체·받침 Lv.6–10 5개가 빠졌다. 전체 대상은 44개이며 제작된 시안은 39개다. 업그레이드에 따른 크기 증가는 허용하지 않는다. 기존 시안도 원작의 몸체·무장 비율과 연결점을 적용한 조립 비교가 필요하다. [몸체·크기 대조](../../../docs/evidence/turret-body-scale-20261107.md).
 
 [통합 비교 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#level10-effects-art-20261107) · [프롬프트·출처·해시](prompts.json) · [제작 스킬](../../../.agents/skills/extend-machdefense-art/SKILL.md)
 
