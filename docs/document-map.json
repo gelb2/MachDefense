@@ -116,7 +116,8 @@
       "docs/usability-todo.md",
       "Sources/Core/Session/SaveData.hpp",
       "Sources/Core/Session/SaveData.cpp",
-      "Sources/Core/Contracts/Game.hpp"
+      "Sources/Core/Contracts/Game.hpp",
+      "docs/save-transfer-native-plan-20261106.md"
     ],
     "web": [
       "docs/save-transfer-web-tauri-plan.md",

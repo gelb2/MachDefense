@@ -41,3 +41,6 @@
 
 - [공용 모듈 진단과 플랫폼 확장 계획](module-audit-20261105.md)
 - [모듈화 전후 치트앱 검증 계획](module-validation-plan.md)
+
+- [복원 코드 iPhone·iPad·Android 동시 연결 계획](save-transfer-native-plan-20261106.md)
+- [작은 행성 전등지기 조사](research/lamplighter-20261106.md)

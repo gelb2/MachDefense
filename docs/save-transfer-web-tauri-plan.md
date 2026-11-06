@@ -2,6 +2,8 @@
 
 2026-11-06. 계획 작성 기준은 develop `ae08521`이다. 계획은 `docs/shared-save-web-plan`에서 작성했다. 후속 PWA 우선 개발 지시에 따라 `feat/web-pwa`를 분기해 웹 실행기·5슬롯 복원·PWA를 구현했다. [현재 결과와 미완료 검사](evidence/web-pwa-20261106.md)를 먼저 읽는다. 아래 전체/단일 슬롯·확장 설정·네이티브 UI·Tauri 항목에는 후속 계획도 포함된다.
 
+2026-11-06 후속: Apple·Android 연결과 저장 중단 복구의 구체적인 작업은 [3플랫폼 복원 코드 계획](save-transfer-native-plan-20261106.md)을 따른다. iPhone·iPad·Android를 함께 완료하며 PWA의 입력 완료·취소 버튼도 공용 게임 UI로 맞춘다.
+
 ## 목표와 기존 구현
 
 복원 코드 생성·해석·검증·적용 절차를 별도 C++ 모듈로 만든다. 같은 코드를 Apple·Android에서는 네이티브 라이브러리로, 웹에서는 WebAssembly로 빌드한다. 웹·설치형 PWA·Tauri Mac은 웹 실행 코드와 게임 산출물을 함께 사용한다. Mac의 PWA는 브라우저가 설치한 웹앱이며 Tauri Mac과 구분한다. 별도 AppKit 네이티브 Mac 개발은 이번 범위에 넣지 않는다.

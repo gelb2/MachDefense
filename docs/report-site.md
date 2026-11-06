@@ -85,3 +85,13 @@ MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지�
 - 배포: `appgdep_6aed18960394819188c5366362c01d19`, succeeded.
 - 버전: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_c67aa55b827c81919a5fc24b61691c42`.
 - 기존 소유자 전용 보고서 접근은 유지했다. 게임 저장소와 Pages만 공개했다.
+
+## 작은 행성 조사·복원 코드 3플랫폼 계획 — 2026-11-06
+
+[작은 행성 전등지기 조사](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#lamplighter-20261106)와 [iPhone·iPad·Android 복원 코드 연결 계획](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#save-native-20261106)을 같은 페이지에 게시했다. 기존 목차와 본문은 보존했고 새 원고 다운로드를 연결했다.
+
+- Sites source: `4ea77b06858611ad28a8416dc2b3eada073cebee`.
+- Deployment: `appgdep_6aed203cf8608191b6e6fc135e441609`, `succeeded`.
+- Version: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_6391b898d0fc8191b6d8b152ebc89a3c`.
+- Safari에서 보고서 본문·표를 확인했다. 문서 연결 검사 통과. 사이트 용량을 맞추기 위해 기존 JSON 8개는 공백만 줄였으며 파싱한 값이 이전 게시본과 같은지 대조했다.
+- 게임 소스·에셋·앱 빌드는 바꾸지 않았다. [REA·브라우저 근거](evidence/lamplighter-research-20261106.json).

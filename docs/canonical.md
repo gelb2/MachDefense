@@ -46,3 +46,7 @@ Android 실행기는 기존 Core·Audio·자원을 그대로 사용한다. 게�
 ## 웹·PWA 공개 — 2026-11-06
 
 사용자가 저장소 공개와 PWA 운영 배포를 지시했다. 게임 주소는 https://gelb2.github.io/MachDefense/ 이며 독립 gh-pages 브랜치의 정식 산출물을 사용한다. [배포 검사](evidence/pwa-release-20261106.md)에서 실제 확인 범위와 Tauri 착수 조건을 확인한다.
+
+## 복원 코드 3플랫폼 연결 조사 — 2026-11-06
+
+[동시 연결 계획](save-transfer-native-plan-20261106.md)에 현재 공용 코덱·네이티브 미연결·백업 복구·게임 버튼 보강과 검사 순서를 기록했다. [외부 웹 공간 조사](research/lamplighter-20261106.md)는 참고 자료이며 게임 요구나 기술 스택을 변경하지 않는다.

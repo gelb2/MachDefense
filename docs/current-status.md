@@ -1,5 +1,8 @@
 # 웹·PWA 공개 — 2026-11-06
 
+2026-11-06 후속 조사: [작은 행성 전등지기](research/lamplighter-20261106.md)와 [복원 코드 3플랫폼 연결 계획](save-transfer-native-plan-20261106.md)을 추가했다. 이번 변경은 문서만이며 네이티브 복원 UI는 아직 연결하지 않았다.
+
+
 MachDefense 저장소를 공개하고 [웹·PWA](https://gelb2.github.io/MachDefense/)를 배포했다. 정식 빌드는 `4662f418410f8fdb`다. Mac Chrome 설치형 PWA의 설치·독립 창·오프라인 재실행, Chrome·WebKit의 저장·복원·미션 진입 검사를 통과했다. [실행 결과·Tauri 착수 조건](evidence/pwa-release-20261106.md).
 
 v0.2는 웹·PWA 첫 릴리스다. iOS·iPadOS·Android의 배포 앱은 v0.1을 유지한다. 실제 모바일 PWA 검사, Tauri Mac 파일 저장·종료 구현, Apple·Android 복원 메뉴 연결은 남았다. 아래 기록은 각 작업 당시 상태다.
