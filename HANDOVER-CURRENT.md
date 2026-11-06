@@ -1,3 +1,7 @@
+# 2026-11-07 추가 레벨 효과·외형
+
+작업 사본은 `.local/worktrees/save-transfer`, 브랜치는 `feat/level10-effects-art`다. develop `55d9d2b`에서 분기했다. [현재 상태](docs/current-status.md), [효과 수정 검사](docs/evidence/level10-effects-20261107.md), [39개 외형 시안](Art/Level10/20261107/README.md)을 먼저 읽는다. 원작 무기 211행과 기존 게임 소스·클라이언트·저장을 유지했다. 효과 수치 수정은 작업 브랜치에 있으며 게임 운영 배포·기기 설치는 하지 않았다. 락온 처치는 아직 TODO다.
+
 # 2026-11-07 사거리·공격력 후속
 
 포탑 6종과 기지 기관총의 추가 단계 사거리를 수정했다. [전수 점검과 수정 결과](docs/evidence/level10-range-damage-20261107.md), [10레벨·HUD 검사](docs/evidence/level10-hud-20261107.md)를 먼저 읽는다. CTest 40개, Chrome·WebKit 치트 검사, 최신 iPad 검사 2개가 통과했다. v0.4 정식·치트 앱 4개 설치, develop→main 병합, 태그·릴리스와 PWA 배포를 마쳤다. [운영 검사](docs/evidence/v04-release-20261107.md)도 읽는다. 기존 캐시의 첫 탭 재열기에서는 구버전 런타임이 남았고 브라우저 완전 재실행 후 최신 데이터·저장 보존·오프라인 실행을 확인했다. 업데이트 안내 개선은 TODO다. 이온 주변 피해 반경·플라즈마 지속 피해 조사는 TODO다. 아래 미구현 기록은 당시 상태다.

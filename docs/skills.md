@@ -18,3 +18,5 @@ HeavyMach 1 프로젝트 스킬 11개 전체를 `reference/heavymach1/skills`에
 [출처와 SHA](skill-source-manifest.json)에 복사본 해시를 기록했다. REA는 당시 사용한 v42 스킬이다. 원본 분석 기록은 reference/heavymach1/policies/public/rea-restoration-method-20261025.md에 있다. 스킬만으로 서버와 분석 엔진이 설치되거나 연결되지는 않는다.
 
 imagegen, Sites, repair-computer-use는 환경 제공 스킬이다. 필요한 시점에 세션의 현행 위치와 사용 가능한 도구를 확인한다. 공급자별 인증 설정·키·개인 계정 파일은 복사하지 않는다. 게임 소스나 원본 IPA를 스킬 꾸러미에 넣지 않았다.
+
+추가 레벨 외형에는 [extend-machdefense-art](../.agents/skills/extend-machdefense-art/SKILL.md)를 쓴다. HeavyMach1의 실제 소비 자원 추적·임의 재해석 방지·게임 크기 대조를 MachDefense 부품에 적용한다.

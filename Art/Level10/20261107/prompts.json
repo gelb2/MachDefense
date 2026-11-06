@@ -1,0 +1,346 @@
+{
+  "tool": "image_gen",
+  "status": "concept-not-runtime",
+  "jobs": [
+    {
+      "id": "rifle",
+      "prefix": "Turret_gun_",
+      "levels": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "refs": [
+        3,
+        4,
+        5
+      ],
+      "detail": "RifleTurret. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve the circular center mount and upper/lower gun arrangement. Incrementally reinforced receivers and armor with restrained pixel highlights.",
+      "prompt": "Use case: precise-object-edit. Create a game upgrade concept sprite sheet, using the attached ORIGINAL MachDefense sprites as strict style and geometry references. These are tiny 2009-2011 pre-rendered pixel sprites, top-down oblique mechanical parts facing RIGHT, with hand-tuned pixel edges and muted grey/olive metal, sparse worn highlights. Do NOT turn them into side-view tanks, modern clean vector icons, glossy 3D renders, painterly art or a new sci-fi aesthetic. Retain their exact perspective, gun orientation, component arrangement, pivot and approximate silhouette dimensions. NO ground/base pedestal or extra chassis if not in reference, NO labels, NO level numbers, NO captions, NO gradients behind the sprite. Transparent background. Maintain crisp discrete pixel clusters comparable to the original's 60–120-pixel sprite resolution even though the sheet is larger. Each cell must contain a COMPLETE isolated sprite with generous transparent space and identical scale. Progress by small plausible armor/mechanical details within the original design language; do not simply enlarge or change hue. The originals remain unchanged. This is an upgrade concept sheet, not replacement code.\nRifleTurret. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve the circular center mount and upper/lower gun arrangement. Incrementally reinforced receivers and armor with restrained pixel highlights.",
+      "transparent_background": true,
+      "output": "Art/Level10/20261107/rifle-v1.png",
+      "output_sha256": "c2887d954584068536b1c0ece1145212322644c1c0729d3b1f73371e2aa631ca",
+      "references": [
+        {
+          "path": "Resources/Images/Turret_gun_03.png",
+          "sha256": "c28d3533f5a2c43105e84838a9d094381d75f39f2685feb24eaa77215fadaf7a"
+        },
+        {
+          "path": "Resources/Images/Turret_gun_04.png",
+          "sha256": "6ccaad8a90d40a530418afdb9c4d95e79c9570ee1fc2d222e42a8e5c1df27a49"
+        },
+        {
+          "path": "Resources/Images/Turret_gun_05.png",
+          "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9"
+        }
+      ],
+      "comparison_size": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "missile",
+      "prefix": "Turret_msl_",
+      "levels": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "refs": [
+        3,
+        4,
+        5
+      ],
+      "detail": "MissileTurret. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve circular central pivot and two parallel box-shaped missile racks. Carefully grow modular rack/armor details in the original rectangular industrial style.",
+      "prompt": "Use case: precise-object-edit. Create a game upgrade concept sprite sheet, using the attached ORIGINAL MachDefense sprites as strict style and geometry references. These are tiny 2009-2011 pre-rendered pixel sprites, top-down oblique mechanical parts facing RIGHT, with hand-tuned pixel edges and muted grey/olive metal, sparse worn highlights. Do NOT turn them into side-view tanks, modern clean vector icons, glossy 3D renders, painterly art or a new sci-fi aesthetic. Retain their exact perspective, gun orientation, component arrangement, pivot and approximate silhouette dimensions. NO ground/base pedestal or extra chassis if not in reference, NO labels, NO level numbers, NO captions, NO gradients behind the sprite. Transparent background. Maintain crisp discrete pixel clusters comparable to the original's 60–120-pixel sprite resolution even though the sheet is larger. Each cell must contain a COMPLETE isolated sprite with generous transparent space and identical scale. Progress by small plausible armor/mechanical details within the original design language; do not simply enlarge or change hue. The originals remain unchanged. This is an upgrade concept sheet, not replacement code.\nMissileTurret. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve circular central pivot and two parallel box-shaped missile racks. Carefully grow modular rack/armor details in the original rectangular industrial style.",
+      "transparent_background": true,
+      "output": "Art/Level10/20261107/missile-v1.png",
+      "output_sha256": "3e18952d96fb60d59aa063b1ade88dad1d456f1f20bc989e449bddd803b1834b",
+      "references": [
+        {
+          "path": "Resources/Images/Turret_msl_03.png",
+          "sha256": "60cf1af8c6d791703541c65144a61cbb05864c3f65fc48c251ddf74f87bbe9cb"
+        },
+        {
+          "path": "Resources/Images/Turret_msl_04.png",
+          "sha256": "87adac311929df1906c229a6f7a6b5584e86d768768f5f0ed465144af5c27396"
+        },
+        {
+          "path": "Resources/Images/Turret_msl_05.png",
+          "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08"
+        }
+      ],
+      "comparison_size": [
+        64,
+        64
+      ]
+    },
+    {
+      "id": "vulcan",
+      "prefix": "Turret_mg_",
+      "levels": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "refs": [
+        3,
+        4,
+        5
+      ],
+      "detail": "Vulcan turret. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve central circular bearing and twin upper/lower multi-barrel guns facing right. Reinforce ammo feeds/receiver shrouds gradually without lengthening the overall gun footprint.",
+      "prompt": "Use case: precise-object-edit. Create a game upgrade concept sprite sheet, using the attached ORIGINAL MachDefense sprites as strict style and geometry references. These are tiny 2009-2011 pre-rendered pixel sprites, top-down oblique mechanical parts facing RIGHT, with hand-tuned pixel edges and muted grey/olive metal, sparse worn highlights. Do NOT turn them into side-view tanks, modern clean vector icons, glossy 3D renders, painterly art or a new sci-fi aesthetic. Retain their exact perspective, gun orientation, component arrangement, pivot and approximate silhouette dimensions. NO ground/base pedestal or extra chassis if not in reference, NO labels, NO level numbers, NO captions, NO gradients behind the sprite. Transparent background. Maintain crisp discrete pixel clusters comparable to the original's 60–120-pixel sprite resolution even though the sheet is larger. Each cell must contain a COMPLETE isolated sprite with generous transparent space and identical scale. Progress by small plausible armor/mechanical details within the original design language; do not simply enlarge or change hue. The originals remain unchanged. This is an upgrade concept sheet, not replacement code.\nVulcan turret. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve central circular bearing and twin upper/lower multi-barrel guns facing right. Reinforce ammo feeds/receiver shrouds gradually without lengthening the overall gun footprint.",
+      "transparent_background": true,
+      "output": "Art/Level10/20261107/vulcan-v1.png",
+      "output_sha256": "a59181128bd8f049ce5813e6bea50d23b6868fe1ac2dc42c6540c48099559baa",
+      "references": [
+        {
+          "path": "Resources/Images/Turret_mg_03.png",
+          "sha256": "18625026b2a674d7df164604e22be3c6436c35d599870e9ba3d5bd4d77e1c288"
+        },
+        {
+          "path": "Resources/Images/Turret_mg_04.png",
+          "sha256": "a5235085921c6b14e4db454ad841d3153fc5456f3b9f48c4c47a7eac11b4b4ca"
+        },
+        {
+          "path": "Resources/Images/Turret_mg_05.png",
+          "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34"
+        }
+      ],
+      "comparison_size": [
+        128,
+        64
+      ]
+    },
+    {
+      "id": "ion",
+      "prefix": "Turret_ion_",
+      "levels": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "refs": [
+        3,
+        4,
+        5
+      ],
+      "detail": "IonCannon. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve compact single central emitter facing right, circular pivot and pale yellow/off-white capacitors; progressively layered mechanical housing, no oversized neon glow.",
+      "prompt": "Use case: precise-object-edit. Create a game upgrade concept sprite sheet, using the attached ORIGINAL MachDefense sprites as strict style and geometry references. These are tiny 2009-2011 pre-rendered pixel sprites, top-down oblique mechanical parts facing RIGHT, with hand-tuned pixel edges and muted grey/olive metal, sparse worn highlights. Do NOT turn them into side-view tanks, modern clean vector icons, glossy 3D renders, painterly art or a new sci-fi aesthetic. Retain their exact perspective, gun orientation, component arrangement, pivot and approximate silhouette dimensions. NO ground/base pedestal or extra chassis if not in reference, NO labels, NO level numbers, NO captions, NO gradients behind the sprite. Transparent background. Maintain crisp discrete pixel clusters comparable to the original's 60–120-pixel sprite resolution even though the sheet is larger. Each cell must contain a COMPLETE isolated sprite with generous transparent space and identical scale. Progress by small plausible armor/mechanical details within the original design language; do not simply enlarge or change hue. The originals remain unchanged. This is an upgrade concept sheet, not replacement code.\nIonCannon. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve compact single central emitter facing right, circular pivot and pale yellow/off-white capacitors; progressively layered mechanical housing, no oversized neon glow.",
+      "transparent_background": true,
+      "output": "Art/Level10/20261107/ion-v1.png",
+      "output_sha256": "96abef50b592bd340d45bdc8167545ca785d337d8015e2c90565e587cbcb8856",
+      "references": [
+        {
+          "path": "Resources/Images/Turret_ion_03.png",
+          "sha256": "79021e12936176eb6e3bfe50dd60eb9004c8b0fe687acdeeb28d23de32a88d08"
+        },
+        {
+          "path": "Resources/Images/Turret_ion_04.png",
+          "sha256": "a12ec43ca95d7fe1668e30aa46ad63a36834d1c5ef34cb1d6d4ded6dd9e2103d"
+        },
+        {
+          "path": "Resources/Images/Turret_ion_05.png",
+          "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6"
+        }
+      ],
+      "comparison_size": [
+        128,
+        64
+      ]
+    },
+    {
+      "id": "laser",
+      "prefix": "Turret_lsr_",
+      "levels": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "refs": [
+        3,
+        4,
+        5
+      ],
+      "detail": "LaserTurret. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve circular central pivot, upper and lower long narrow laser rails, muted cyan only in the same locations as reference. Reinforce rail housings gradually, keep length and separation.",
+      "prompt": "Use case: precise-object-edit. Create a game upgrade concept sprite sheet, using the attached ORIGINAL MachDefense sprites as strict style and geometry references. These are tiny 2009-2011 pre-rendered pixel sprites, top-down oblique mechanical parts facing RIGHT, with hand-tuned pixel edges and muted grey/olive metal, sparse worn highlights. Do NOT turn them into side-view tanks, modern clean vector icons, glossy 3D renders, painterly art or a new sci-fi aesthetic. Retain their exact perspective, gun orientation, component arrangement, pivot and approximate silhouette dimensions. NO ground/base pedestal or extra chassis if not in reference, NO labels, NO level numbers, NO captions, NO gradients behind the sprite. Transparent background. Maintain crisp discrete pixel clusters comparable to the original's 60–120-pixel sprite resolution even though the sheet is larger. Each cell must contain a COMPLETE isolated sprite with generous transparent space and identical scale. Progress by small plausible armor/mechanical details within the original design language; do not simply enlarge or change hue. The originals remain unchanged. This is an upgrade concept sheet, not replacement code.\nLaserTurret. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve circular central pivot, upper and lower long narrow laser rails, muted cyan only in the same locations as reference. Reinforce rail housings gradually, keep length and separation.\nUse ONLY this level 5 sprite. IMPORTANT preserve the LONG THIN parallel rail strips protruding to the right in both upper and lower weapons, and the rectangular cyan-blue receiver blocks near the left of each rail. Do NOT turn the slender rails into a single short fat round gun barrel. Retain exact original width/height ratio and the grey circular bearing between upper/lower rails. Add small armored edge plates at receiver end only; same blue accents, same tiny rail thickness, no new round cylinder.",
+      "transparent_background": true,
+      "output": "Art/Level10/20261107/laser-v2.png",
+      "output_sha256": "2b5d3984b39df2d58195675b7425563448474b9a2e798480b53609569519af2f",
+      "references": [
+        {
+          "path": "Resources/Images/Turret_lsr_05.png",
+          "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1"
+        }
+      ],
+      "comparison_size": [
+        128,
+        128
+      ],
+      "rejected": {
+        "output": "Art/Level10/20261107/laser-v1.png",
+        "reason": "레이저 레일 형상·레이더 색 비중을 원본 최종 단계와 재대조해 수정"
+      }
+    },
+    {
+      "id": "plasma",
+      "prefix": "Turret_pla_",
+      "levels": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "refs": [
+        3,
+        4,
+        5
+      ],
+      "detail": "PlasmaCannon. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve the twin upper/lower barrel shrouds and green energy bands facing right. Gradually reinforce dark armor and mechanical cooling segments without extra luminous effects.",
+      "prompt": "Use case: precise-object-edit. Create a game upgrade concept sprite sheet, using the attached ORIGINAL MachDefense sprites as strict style and geometry references. These are tiny 2009-2011 pre-rendered pixel sprites, top-down oblique mechanical parts facing RIGHT, with hand-tuned pixel edges and muted grey/olive metal, sparse worn highlights. Do NOT turn them into side-view tanks, modern clean vector icons, glossy 3D renders, painterly art or a new sci-fi aesthetic. Retain their exact perspective, gun orientation, component arrangement, pivot and approximate silhouette dimensions. NO ground/base pedestal or extra chassis if not in reference, NO labels, NO level numbers, NO captions, NO gradients behind the sprite. Transparent background. Maintain crisp discrete pixel clusters comparable to the original's 60–120-pixel sprite resolution even though the sheet is larger. Each cell must contain a COMPLETE isolated sprite with generous transparent space and identical scale. Progress by small plausible armor/mechanical details within the original design language; do not simply enlarge or change hue. The originals remain unchanged. This is an upgrade concept sheet, not replacement code.\nPlasmaCannon. FIVE evenly spaced columns for levels 6,7,8,9,10. Preserve the twin upper/lower barrel shrouds and green energy bands facing right. Gradually reinforce dark armor and mechanical cooling segments without extra luminous effects.",
+      "transparent_background": true,
+      "output": "Art/Level10/20261107/plasma-v1.png",
+      "output_sha256": "729752097b1898ec4a7eabb24c8f8126d1cc531a1def2858bc22115de5afefc1",
+      "references": [
+        {
+          "path": "Resources/Images/Turret_pla_03.png",
+          "sha256": "015c565e332c9ae1d796e342264246a437b23219de959cc9a27b152b23c5ab0c"
+        },
+        {
+          "path": "Resources/Images/Turret_pla_04.png",
+          "sha256": "e266597c60a35de1783d37e7b9d886f705355a685b697b0b5daa8a9409c7ed83"
+        },
+        {
+          "path": "Resources/Images/Turret_pla_05.png",
+          "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc"
+        }
+      ],
+      "comparison_size": [
+        128,
+        64
+      ]
+    },
+    {
+      "id": "base-body",
+      "prefix": "Base",
+      "levels": [
+        8,
+        9,
+        10
+      ],
+      "refs": [
+        5,
+        6,
+        7
+      ],
+      "detail": "Base defensive body only. THREE evenly spaced columns for levels 8,9,10. Preserve the exact vertical rectangular base, right-hand circular helipad H marking, top and bottom horizontal decks, grey industrial armor, sparse yellow hazard stripes, all openings and attached structures. No gun or radar added. Gradually reinforce armor in existing panel locations, not enlarge the base.",
+      "prompt": "Use case: precise-object-edit. Create a game upgrade concept sprite sheet, using the attached ORIGINAL MachDefense sprites as strict style and geometry references. These are tiny 2009-2011 pre-rendered pixel sprites, top-down oblique mechanical parts facing RIGHT, with hand-tuned pixel edges and muted grey/olive metal, sparse worn highlights. Do NOT turn them into side-view tanks, modern clean vector icons, glossy 3D renders, painterly art or a new sci-fi aesthetic. Retain their exact perspective, gun orientation, component arrangement, pivot and approximate silhouette dimensions. NO ground/base pedestal or extra chassis if not in reference, NO labels, NO level numbers, NO captions, NO gradients behind the sprite. Transparent background. Maintain crisp discrete pixel clusters comparable to the original's 60–120-pixel sprite resolution even though the sheet is larger. Each cell must contain a COMPLETE isolated sprite with generous transparent space and identical scale. Progress by small plausible armor/mechanical details within the original design language; do not simply enlarge or change hue. The originals remain unchanged. This is an upgrade concept sheet, not replacement code.\nBase defensive body only. THREE evenly spaced columns for levels 8,9,10. Preserve the exact vertical rectangular base, right-hand circular helipad H marking, top and bottom horizontal decks, grey industrial armor, sparse yellow hazard stripes, all openings and attached structures. No gun or radar added. Gradually reinforce armor in existing panel locations, not enlarge the base.\nCRITICAL: reference Base07 has TWO separate circular helipad emblems on the RIGHT side: an UPPER RED circle with white sideways H in the upper-middle, AND a LOWER GREY circle with white sideways H near the bottom. Preserve BOTH and their precise relative positions in ALL three variants. Preserve the three long vertical rails/corridors and all original black circular sockets. Do not remove ANY existing feature. Only add small armor plates to existing solid panels. Absolutely NO scenery, background, gradient, shadow halo or colored opaque fill outside the silhouette. True transparent alpha. Three columns, same footprint, identical two helipad positions in each. Match the final reference Base07 most closely; prior references are style context.",
+      "transparent_background": true,
+      "output": "Art/Level10/20261107/base-body-v2.png",
+      "output_sha256": "a390f1a00cb7ee21e7de45188ceb32bfc2c47fc9c6b3ddd0e10398eea7f32856",
+      "references": [
+        {
+          "path": "Resources/Images/Base05.png",
+          "sha256": "2146092f1e9af52997b18d4beb321db2d4a07654e15840b5010045768b353f9d"
+        },
+        {
+          "path": "Resources/Images/Base06.png",
+          "sha256": "76d020c657b65aa853072bb1effc6feee806a03fde0f65c39f5a1844f43bf5db"
+        },
+        {
+          "path": "Resources/Images/Base07.png",
+          "sha256": "128154d66b9eb3bd2e6d0c89a533a1f170d60bfb978c7ac890dc8e10c05793ff"
+        }
+      ],
+      "rejected": {
+        "output": "Art/Level10/20261107/base-body-v1.png",
+        "reason": "상단 빨간 착륙 표식 누락과 불투명 배경"
+      },
+      "comparison_size": [
+        128,
+        256
+      ]
+    },
+    {
+      "id": "base-gun",
+      "prefix": "BaseWpn",
+      "levels": [
+        8,
+        9,
+        10
+      ],
+      "refs": [
+        5,
+        6,
+        7
+      ],
+      "detail": "Base mounted cannon part only. THREE evenly spaced columns for levels 8,9,10. Preserve the central pale grey rectangular mounting housing, paired upper/lower barrels facing right, small red details. Gradual receiver/armor upgrades keeping the footprint and attachment points.",
+      "prompt": "Use case: precise-object-edit. Create a game upgrade concept sprite sheet, using the attached ORIGINAL MachDefense sprites as strict style and geometry references. These are tiny 2009-2011 pre-rendered pixel sprites, top-down oblique mechanical parts facing RIGHT, with hand-tuned pixel edges and muted grey/olive metal, sparse worn highlights. Do NOT turn them into side-view tanks, modern clean vector icons, glossy 3D renders, painterly art or a new sci-fi aesthetic. Retain their exact perspective, gun orientation, component arrangement, pivot and approximate silhouette dimensions. NO ground/base pedestal or extra chassis if not in reference, NO labels, NO level numbers, NO captions, NO gradients behind the sprite. Transparent background. Maintain crisp discrete pixel clusters comparable to the original's 60–120-pixel sprite resolution even though the sheet is larger. Each cell must contain a COMPLETE isolated sprite with generous transparent space and identical scale. Progress by small plausible armor/mechanical details within the original design language; do not simply enlarge or change hue. The originals remain unchanged. This is an upgrade concept sheet, not replacement code.\nBase mounted cannon part only. THREE evenly spaced columns for levels 8,9,10. Preserve the central pale grey rectangular mounting housing, paired upper/lower barrels facing right, small red details. Gradual receiver/armor upgrades keeping the footprint and attachment points.",
+      "transparent_background": true,
+      "output": "Art/Level10/20261107/base-gun-v1.png",
+      "output_sha256": "f746b69b04966a581f53b326b82d3089877dc31bd4799db0959db52fb9a01357",
+      "references": [
+        {
+          "path": "Resources/Images/BaseWpn05.png",
+          "sha256": "62c2cf5614d4a0d2ed044cf5544e7d02a42d426d4da9806efd263bfe64e8eddd"
+        },
+        {
+          "path": "Resources/Images/BaseWpn06.png",
+          "sha256": "1eb36bfc8d4873dd73a7fd8cc470b6f1c853e710c5f9a36c47d5fae7be331269"
+        },
+        {
+          "path": "Resources/Images/BaseWpn07.png",
+          "sha256": "ddfc0bdcd878ca8b1d038880077e1015f7da009695b4c6cffe256e630278d688"
+        }
+      ],
+      "comparison_size": [
+        68,
+        45
+      ]
+    },
+    {
+      "id": "base-radar",
+      "prefix": "Base",
+      "suffix": "_Rader",
+      "levels": [
+        8,
+        9,
+        10
+      ],
+      "refs": [
+        7
+      ],
+      "detail": "Base radar part only. THREE evenly spaced columns for levels 8,9,10. Preserve the compact skeletal yellow-grey crosswise antenna and central rotary mounting structure. Gradually strengthen antenna/braces with a small number of pixel details. This is an independently rotating radar, not a weapon or a turret body.",
+      "prompt": "Use case: precise-object-edit. Create a game upgrade concept sprite sheet, using the attached ORIGINAL MachDefense sprites as strict style and geometry references. These are tiny 2009-2011 pre-rendered pixel sprites, top-down oblique mechanical parts facing RIGHT, with hand-tuned pixel edges and muted grey/olive metal, sparse worn highlights. Do NOT turn them into side-view tanks, modern clean vector icons, glossy 3D renders, painterly art or a new sci-fi aesthetic. Retain their exact perspective, gun orientation, component arrangement, pivot and approximate silhouette dimensions. NO ground/base pedestal or extra chassis if not in reference, NO labels, NO level numbers, NO captions, NO gradients behind the sprite. Transparent background. Maintain crisp discrete pixel clusters comparable to the original's 60–120-pixel sprite resolution even though the sheet is larger. Each cell must contain a COMPLETE isolated sprite with generous transparent space and identical scale. Progress by small plausible armor/mechanical details within the original design language; do not simply enlarge or change hue. The originals remain unchanged. This is an upgrade concept sheet, not replacement code.\nBase radar part only. THREE evenly spaced columns for levels 8,9,10. Preserve the compact skeletal yellow-grey crosswise antenna and central rotary mounting structure. Gradually strengthen antenna/braces with a small number of pixel details. This is an independently rotating radar, not a weapon or a turret body.\nUse ONLY this radar sprite. Preserve the GREY/OFF-WHITE skeletal cross-shaped structure, small yellow details, and the thin antenna. Do NOT replace the radar with a thick golden crescent. Keep original brightness and muted white/grey dominant palette, original geometry and narrow arms, same cross-shaped brackets. Small changes in reinforcement joints at levels 8,9,10 only.",
+      "transparent_background": true,
+      "output": "Art/Level10/20261107/base-radar-v2.png",
+      "output_sha256": "85804f94fd8edad79d077d0e5c469e4500fdbfcccc7cd01e4434a27289561bab",
+      "references": [
+        {
+          "path": "Resources/Images/Base07_Rader.png",
+          "sha256": "e2aa1ed63702369323f2dc846c4292ca7c9b593e7d699da1622d0f809ebdc85b"
+        }
+      ],
+      "comparison_size": [
+        46,
+        23
+      ],
+      "rejected": {
+        "output": "Art/Level10/20261107/base-radar-v1.png",
+        "reason": "레이저 레일 형상·레이더 색 비중을 원본 최종 단계와 재대조해 수정"
+      }
+    }
+  ]
+}
