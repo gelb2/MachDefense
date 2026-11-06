@@ -1,6 +1,8 @@
 # 2026-11-07 사거리·공격력 후속
 
-포탑 6종과 기지 기관총의 추가 단계 사거리를 수정했다. [전수 점검과 수정 결과](docs/evidence/level10-range-damage-20261107.md), [10레벨·HUD 검사](docs/evidence/level10-hud-20261107.md)를 먼저 읽는다. CTest 40개, Chrome·WebKit 치트 검사, 최신 iPad 검사 2개가 통과했다. v0.4 앱 설치와 develop→main 병합·PWA 배포를 진행한다. 이온 주변 피해 반경·플라즈마 지속 피해 조사는 TODO다. 아래 미구현 기록은 당시 상태다.
+포탑 6종과 기지 기관총의 추가 단계 사거리를 수정했다. [전수 점검과 수정 결과](docs/evidence/level10-range-damage-20261107.md), [10레벨·HUD 검사](docs/evidence/level10-hud-20261107.md)를 먼저 읽는다. CTest 40개, Chrome·WebKit 치트 검사, 최신 iPad 검사 2개가 통과했다. v0.4 정식·치트 앱 4개 설치, develop→main 병합, 태그·릴리스와 PWA 배포를 마쳤다. [운영 검사](docs/evidence/v04-release-20261107.md)도 읽는다. 기존 캐시의 첫 탭 재열기에서는 구버전 런타임이 남았고 브라우저 완전 재실행 후 최신 데이터·저장 보존·오프라인 실행을 확인했다. 업데이트 안내 개선은 TODO다. 이온 주변 피해 반경·플라즈마 지속 피해 조사는 TODO다. 아래 미구현 기록은 당시 상태다.
+
+추가 사용자 요청으로 [10레벨 복원 코드](docs/evidence/level10-recovery-20261107.md)를 전수 점검했다. 게임·복원 코드는 그대로이며 검사와 안내만 보강했다.
 
 # 현재 작업 — 타이틀·HUD·원작 대조
 
