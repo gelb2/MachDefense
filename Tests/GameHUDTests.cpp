@@ -155,5 +155,111 @@ int main(int argc,char** argv){
         tap(h,287+layout.topRight().x,15+layout.top);
         actions=h.takeActions();assert(actions.size()==1&&actions[0].buttonId==0x3fd);
     }
+    // Every installed row is reachable. Its frame, unit, text, price, dim and
+    // selection sprites share the list clip; the metal HUD itself never moves.
+    {
+        unsigned drawn=0;
+        GameHUD scroll(r,[&](Frame& frame,std::string_view,Vec2 center,float scale){
+            assert(scale==.5f);++drawn;Sprite unit;unit.image="FormationIcon_01.png";
+            unit.destination={center.x-10,center.y-10,20,20};frame.sprites.push_back(unit);
+        });
+        GameHUDState many;
+        for(unsigned i=0;i<12;++i)many.production.push_back({"Unit"+std::to_string(i),"Unit "+std::to_string(i),100+i,1000+i,i%10,10,2,1,true,false});
+        scroll.setState(many);
+        const auto rectEqual=[](Rect a,Rect b){return a.x==b.x&&a.y==b.y&&a.width==b.width&&a.height==b.height;};
+        for(const auto dimensions:std::vector<std::array<float,4>>{{320,480,0,0},{420,912,62,34},{1024,1366,24,20},{1280,800,0,0}}){
+            FrameLayout layout;layout.resize(dimensions[0],dimensions[1],dimensions[2],dimensions[3]);scroll.setLayout(layout);
+            auto area=scroll.productionViewport();const Vec2 inside{area.x+55,area.y+80};
+            assert(scroll.scrollProduction(inside,-100000));assert(scroll.productionScrollOffset()==0);
+            drawn=0;Frame before;scroll.append(before);validate(before,r);
+            assert(drawn<12);
+            const auto fixedSlot=find(before,"GameUI_MachSlot.png");
+            const auto fixedBottom=find(before,"iPon_GameUI_BG@2x.png");
+            assert(!fixedSlot.clip&&!fixedBottom.clip);
+            assert(scroll.touch({200,TouchPhase::began,inside}));
+            const Vec2 end{inside.x,inside.y-160};
+            assert(scroll.touch({200,TouchPhase::moved,end}));
+            assert(scroll.touch({200,TouchPhase::ended,end}));
+            assert(scroll.takeActions().empty());assert(scroll.productionScrollOffset()==std::min(160.f,scroll.maximumProductionScroll()));
+            Frame moved;scroll.append(moved);
+            assert(rectEqual(find(moved,"GameUI_MachSlot.png").destination,fixedSlot.destination));
+            assert(rectEqual(find(moved,"iPon_GameUI_BG@2x.png").destination,fixedBottom.destination));
+            bool rowSeen=false;
+            for(const auto& sprite:moved.sprites){
+                if(sprite.image=="Btn_BuildMachBG.png")rowSeen=true;
+                if(sprite.image=="Btn_UpgradeEquip.png")rowSeen=false;
+                if(rowSeen)assert(sprite.clip&&rectEqual(*sprite.clip,area));
+            }
+            assert(scroll.scrollProduction(inside,100000));assert(scroll.productionScrollOffset()==scroll.maximumProductionScroll());
+            Frame last;scroll.append(last);validate(last,r);
+            const auto lastCenter=52+51.f*11-scroll.productionScrollOffset()+layout.top;
+            tap(scroll,292+layout.topRight().x,lastCenter);
+            const auto a=scroll.takeActions();assert(a.size()==1&&a[0].row==11&&a[0].machine=="Unit11");
+            bool bottomFrame=false;for(const auto& sprite:last.sprites)if(sprite.image=="Btn_BuildMach.png"){
+                assert(sprite.clip);bottomFrame|=std::abs(sprite.destination.y+sprite.destination.height-area.y-area.height)<.001f;
+            }assert(bottomFrame);
+            assert(!scroll.scrollProduction({20,100},100));
+            assert(!scroll.scrollProduction(inside,std::nanf("")));
+            // Dragging through the boundary never forwards the end to the world.
+            assert(scroll.touch({201,TouchPhase::began,inside}));
+            assert(scroll.touch({201,TouchPhase::moved,{20,inside.y-100}}));
+            assert(scroll.touch({201,TouchPhase::ended,{20,inside.y-100}}));assert(scroll.takeActions().empty());
+        }
+        scroll.setLayout(FrameLayout{});const Vec2 p{292,52};
+        scroll.scrollProduction(p,-100000);
+        scroll.touch({300,TouchPhase::began,p});Frame held;scroll.append(held);
+        assert(find(held,"SelMach.png").clip);
+        // A second finger cannot scroll or produce while the list owns a gesture.
+        assert(scroll.touch({301,TouchPhase::began,p}));
+        assert(scroll.touch({301,TouchPhase::moved,{292,200}}));
+        assert(scroll.touch({301,TouchPhase::ended,{292,200}}));
+        assert(scroll.productionScrollOffset()==0&&scroll.takeActions().empty());
+        scroll.touch({300,TouchPhase::ended,p});assert(scroll.takeActions().size()==1);
+        // Same count, different identities must cancel a held production tap.
+        scroll.touch({302,TouchPhase::began,p});std::swap(many.production[0],many.production[1]);scroll.setState(many);
+        assert(scroll.touch({302,TouchPhase::ended,p}));assert(scroll.takeActions().empty());
+        tap(scroll,p.x,p.y);auto changed=scroll.takeActions();assert(changed.size()==1&&changed[0].machine=="Unit1");
+        scroll.touch({303,TouchPhase::began,p});many.production[0].level++;scroll.setState(many);
+        assert(scroll.touch({303,TouchPhase::ended,p}));assert(scroll.takeActions().empty());
+        scroll.touch({304,TouchPhase::began,p});many.production[0].enabled=false;scroll.setState(many);
+        Frame disabled;scroll.append(disabled);assert(find(disabled,"BuildMach_Cover.png").clip);
+        assert(std::none_of(disabled.sprites.begin(),disabled.sprites.end(),[](const auto& s){return s.image=="SelMach.png";}));
+        assert(scroll.touch({304,TouchPhase::ended,p}));assert(scroll.takeActions().empty());
+        many.production[0].enabled=true;scroll.setState(many);
+        scroll.touch({305,TouchPhase::began,p});many.paused=true;scroll.setState(many);
+        assert(scroll.touch({305,TouchPhase::ended,p}));assert(scroll.takeActions().empty());
+        many.paused=false;scroll.setState(many);
+        scroll.touch({306,TouchPhase::began,p});scroll.setLayout(FrameLayout{});
+        assert(scroll.touch({306,TouchPhase::ended,p}));assert(scroll.takeActions().empty());
+        scroll.touch({307,TouchPhase::began,p});scroll.touch({307,TouchPhase::ended,{292,72}});assert(scroll.takeActions().empty());
+        scroll.touch({308,TouchPhase::began,p});scroll.touch({308,TouchPhase::cancelled,p});assert(scroll.takeActions().empty());
+        // refreshHUD runs between real pointer moves. Disabled rows (not enough
+        // cells or a full seven-job queue) must still own and scroll the list.
+        for(bool initiallyEnabled:{false,true}){
+            many.production.resize(12);
+            for(unsigned i=0;i<12;++i)many.production[i]={"Unit"+std::to_string(i),"Unit",100,1000,0,10,2,initiallyEnabled?0u:2u,initiallyEnabled,false};
+            scroll.setState(many);scroll.scrollProduction(p,-100000);
+            scroll.touch({400,TouchPhase::began,{292,250}});
+            for(unsigned tick=1;tick<=12;++tick){
+                many.gameTime+=1./60;
+                for(auto& row:many.production){row.enabled=false;row.occupied=row.capacity;}
+                scroll.setState(many);
+                assert(scroll.touch({400,TouchPhase::moved,{292,250-10.f*tick}}));
+            }
+            assert(scroll.touch({400,TouchPhase::ended,{292,130}}));
+            assert(scroll.productionScrollOffset()==120&&scroll.takeActions().empty());
+            // Re-enabling a row under a held disabled tap must not produce it.
+            scroll.scrollProduction(p,-100000);scroll.touch({401,TouchPhase::began,p});
+            many.gameTime+=1./60;for(auto& row:many.production)row.enabled=true;scroll.setState(many);
+            scroll.touch({401,TouchPhase::ended,p});assert(scroll.takeActions().empty());
+        }
+        // A world touch that moves into the panel does not become a list gesture.
+        assert(!scroll.touch({309,TouchPhase::began,{100,200}}));
+        assert(!scroll.touch({309,TouchPhase::moved,p}));assert(!scroll.touch({309,TouchPhase::ended,p}));
+        assert(scroll.takeActions().empty());
+        many.production.resize(1);scroll.setState(many);assert(scroll.maximumProductionScroll()==0&&scroll.productionScrollOffset()==0);
+        many.production.clear();scroll.setState(many);Frame empty;scroll.append(empty);
+        assert(std::none_of(empty.sprites.begin(),empty.sprites.end(),[](const auto& s){return s.image=="Btn_BuildMach.png";}));
+    }
     std::cout<<"GameHUD original assets, prices, gauges, production touch, pause, lower glow tiles and special push checks passed\n";
 }

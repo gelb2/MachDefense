@@ -14,7 +14,7 @@ std::vector<ActorId> live(const World* w){std::vector<ActorId> result;if(w)for(c
 ValidationTools::ValidationTools(ResourceAccess& r):builds_(BuildCatalog::load(table(r,"MachBuild_Parts"),table(r,"MachBuild_Name"))),bases_(table(r,"BaseUpgrade")),attacks_(table(r,"SpAttackList")){
     for(auto file:{"MachBuild_Parts","MachBuild_Name"}){auto source=table(r,file);for(const auto& row:source.rows())if(row[0].ends_with("_01"))buildNames_.push_back(row[0].substr(0,row[0].size()-3));}
     auto attackTable=table(r,"SpAttackList");for(const auto& row:attackTable.rows())if(row[0].ends_with("_01"))attackNames_.push_back(row[0].substr(0,row[0].size()-3));
-    auto models=BattleModels::parse(Chunk::parse(r.read("RawData/PartsInfo.mcb")),Chunk::parse(r.read("RawData/MachInfo.mcb")));
+    auto models=BattleModels::load(r);
     auto machineTable=table(r,"MachList");for(const auto& row:machineTable.rows())if(models.machine(row[0]))machineNames_.push_back(row[0]);
 }
 ValidationPanelState ValidationTools::panel(const SaveData& s,const World* w,bool open)const{
@@ -89,7 +89,7 @@ ValidationResult ValidationTools::apply(unsigned raw,SaveData& s,World* w){
         if(i!=list.end()){
             if(c==ValidationCommand::buildLevelMinus&&i->level)--i->level;
             if(c==ValidationCommand::buildLevelPlus&&builds_.find(levelName(name,i->level+1)))++i->level;
-            if(c==ValidationCommand::buildInstall&&(i->onSlot||std::count_if(list.begin(),list.end(),[](const auto& a){return a.onSlot;})<7))i->onSlot=!i->onSlot;
+            if(c==ValidationCommand::buildInstall)i->onSlot=!i->onSlot;
             s.setBuilds(slot_,list);result.changed=true;
         }
     }

@@ -7,6 +7,11 @@ namespace md {
 namespace {
 std::string metrics(ResourceAccess& r){auto b=r.read("Generated/TrebuchetMS-Bold-48.tsv");return {b.begin(),b.end()};}
 Rect bounds(Vec2 yUp,float w,float h){return {yUp.x-w/2,480-yUp.y-h/2,w,h};}
+bool contains(Rect r,Vec2 p){return p.x>r.x&&p.x<=r.x+r.width&&p.y>r.y&&p.y<=r.y+r.height;}
+Rect intersection(Rect a,Rect b){
+    const float x=std::max(a.x,b.x),y=std::max(a.y,b.y);
+    return {x,y,std::max(0.f,std::min(a.x+a.width,b.x+b.width)-x),std::max(0.f,std::min(a.y+a.height,b.y+b.height)-y)};
+}
 float ratio(float x){return std::isfinite(x)?std::clamp(x,0.f,1.f):0.f;}
 }
 GameHUD::GameHUD(ResourceAccess& r,DrawMachine draw):resources_(r),font_(metrics(r)),machine_(std::move(draw)){configure();}
@@ -20,12 +25,49 @@ void GameHUD::setState(GameHUDState s){
         if(instructionScale_.y>.1f)instructionScale_.y=std::max(.1f,instructionScale_.y+(.09f-instructionScale_.y)*.25f);
         else {instructionScale_.x+=(.04f-instructionScale_.x)*.25f;if(instructionScale_.x<=.05f)instruction_.clear();}
     }
-    const bool changed=s.paused!=state_.paused||s.baseUpgradeOpen!=state_.baseUpgradeOpen||s.productionVisible!=state_.productionVisible||s.upgradeMode!=state_.upgradeMode||s.production.size()!=state_.production.size()||s.attacks.size()!=state_.attacks.size()||s.selectedPanel!=state_.selectedPanel||s.mainPanelOffsetY!=state_.mainPanelOffsetY;
+    const bool rowsChanged=s.production.size()!=state_.production.size()||
+        !std::equal(s.production.begin(),s.production.end(),state_.production.begin(),state_.production.end(),
+            [](const auto& a,const auto& b){return a.machine==b.machine&&a.level==b.level;});
+    const bool changed=rowsChanged||s.paused!=state_.paused||s.baseUpgradeOpen!=state_.baseUpgradeOpen||s.productionVisible!=state_.productionVisible||s.upgradeMode!=state_.upgradeMode||s.production.size()!=state_.production.size()||s.attacks.size()!=state_.attacks.size()||s.selectedPanel!=state_.selectedPanel||s.mainPanelOffsetY!=state_.mainPanelOffsetY;
     state_=std::move(s);
-    if(changed){slider_.reset();configure();}
-    else for(auto& c:controls_)if(c.id==0x40d)c.button.enabled=c.row<state_.production.size()&&state_.production[c.row].enabled&&!state_.baseUpgradeOpen;
+    if(changed){slider_.reset();cancelProductionGesture();productionScroll_=std::clamp(productionScroll_,0.f,maximumProductionScroll());configure();}
+    else for(auto& c:controls_)if(c.id==0x40d){
+        c.button.enabled=c.row<state_.production.size()&&state_.production[c.row].enabled&&!state_.baseUpgradeOpen;
+        if(!c.button.enabled){
+            c.button.reset();
+            if(productionGesture_&&productionGesture_->row==c.row)productionGesture_->tapAllowed=false;
+        }
+    }
 }
-void GameHUD::setLayout(FrameLayout value){layout_=value;slider_.reset();configure();}
+void GameHUD::setLayout(FrameLayout value){
+    layout_=value;slider_.reset();cancelProductionGesture();
+    productionScroll_=std::clamp(productionScroll_,0.f,maximumProductionScroll());configure();
+}
+Rect GameHUD::productionViewport()const{
+    const auto top=layout_.topRight(),bottom=layout_.bottomRight();
+    return {237.5f+top.x,28.5f+top.y,82.5f,std::max(0.f,390.f+bottom.y-28.5f-top.y)};
+}
+float GameHUD::maximumProductionScroll()const{
+    const float content=state_.production.empty()?0.f:64.f+51.f*float(state_.production.size()-1);
+    return std::max(0.f,content-productionViewport().height);
+}
+bool GameHUD::productionInteractive()const{
+    return !state_.paused&&!state_.baseUpgradeOpen&&state_.mainPanelOffsetY==0&&state_.productionVisible&&state_.selectedPanel==1;
+}
+void GameHUD::cancelProductionGesture(){
+    if(productionGesture_)productionGesture_->cancelled=true;
+    for(auto& c:controls_)if(c.id==0x40d)c.button.reset();
+}
+void GameHUD::setProductionScroll(float value){
+    if(!std::isfinite(value))return;
+    const float next=std::clamp(value,0.f,maximumProductionScroll()),delta=next-productionScroll_;
+    productionScroll_=next;
+    for(auto& c:controls_)if(c.id==0x40d)c.button.bounds.y-=delta;
+}
+bool GameHUD::scrollProduction(Vec2 p,float deltaY){
+    if(!productionInteractive()||!contains(productionViewport(),p)||!std::isfinite(deltaY))return false;
+    cancelProductionGesture();setProductionScroll(productionScroll_+deltaY);return true;
+}
 Vec2 GameHUD::controlOffset(unsigned id)const{
     if(state_.paused)return layout_.center();
     if(id==0x415||id==0x413||id==0x409||id==0x40b||id==0x40c||id==0x3fe)return layout_.bottomRight();
@@ -45,7 +87,7 @@ void GameHUD::configure(){
     add(0x409,{115.5f,37+shift},32,32,0,!state_.baseUpgradeOpen);add(0x40b,{161,37+shift},32,32,0,!state_.baseUpgradeOpen);add(0x40c,{208.5f,37+shift},32,32,0,!state_.baseUpgradeOpen);
     add(0x3fd,{287,465},69,32,0,!state_.baseUpgradeOpen);
     if(state_.selectedPanel!=3){const auto size=resources_.imageSize("Btn_UpgradeEquip.png");add(0x3fe,{293,74},size.x*.5f,size.y*.125f,0,!state_.baseUpgradeOpen);}
-    if(state_.productionVisible&&state_.selectedPanel==1)for(std::size_t i=0;i<std::min<std::size_t>(7,state_.production.size());++i)add(0x40d,{292,428-51.f*i},90,48,i,state_.production[i].enabled&&!state_.baseUpgradeOpen);
+    if(state_.productionVisible&&state_.selectedPanel==1)for(std::size_t i=0;i<state_.production.size();++i)add(0x40d,{292,428-51.f*i+productionScroll_},90,48,i,state_.production[i].enabled&&!state_.baseUpgradeOpen);
     if(state_.productionVisible&&state_.selectedPanel==2)for(std::size_t i=0;i<state_.attacks.size();++i){auto size=resources_.imageSize(state_.attacks[i].icon);add(0x40e,{292,428-51.f*i},size.x*.5f,size.y*.5f,i,!state_.baseUpgradeOpen);}
     if(state_.productionVisible&&state_.selectedPanel==3)for(std::size_t i=0;i<5;++i){auto size=resources_.imageSize("FormationIcon_0"+std::to_string(i+1)+".png");add(0x40e,{292,428-51.f*i},size.x*.5f,size.y*.5f,i,!state_.baseUpgradeOpen);}
 }
@@ -96,8 +138,14 @@ void GameHUD::append(Frame& f)const{
     // below the layer-9 game HUD and its sliding base drawer. The equipment
     // button is constructed before the layer-9 main panel (GuiGame::init).
     if(state_.productionVisible&&state_.selectedPanel==1){
-        for(std::size_t i=0;i<std::min<std::size_t>(7,state_.production.size());++i){
-            const auto& row=state_.production[i];const float y=428-51.f*i;
+        const auto viewport=productionViewport();
+        const auto delta=layout_.topRight();
+        const Rect clip{viewport.x-delta.x,viewport.y-delta.y,viewport.width,viewport.height};
+        for(std::size_t i=0;i<state_.production.size();++i){
+            const float rowTop=28.5f+51.f*i-productionScroll_;
+            if(rowTop+64<=clip.y||rowTop>=clip.y+clip.height)continue;
+            const auto rowStart=f.sprites.size();
+            const auto& row=state_.production[i];const float y=428-51.f*i+productionScroll_;
             image(f,"Btn_BuildMachBG.png",{292,y});image(f,"Btn_BuildMach.png",{282.5f,y-8.5f});
             if(machine_)machine_(f,row.machine,{292,480-y},.5f);
             // ImageAttacher::attachText uses 14px in a half-scale composite.
@@ -115,6 +163,7 @@ void GameHUD::append(Frame& f)const{
             if(row.upgrading)image(f,"Btn_BuildMachUpgradeOn.png",{256,y-1.5f});
             if(pressed(0x40d,i)){image(f,"SelMach.png",{292,y});f.sprites.back().blend=Blend::additive;}
             if(!state_.upgradeMode&&!row.enabled)image(f,"BuildMach_Cover.png",{282.5f,y-8.5f});
+            for(auto n=rowStart;n<f.sprites.size();++n){auto& sprite=f.sprites[n];sprite.clip=sprite.clip?intersection(*sprite.clip,clip):clip;}
         }
     }
     // DlgSpecialAttack::refreshButtonsWithType 0x30de0 and
@@ -254,6 +303,47 @@ void GameHUD::pause(Frame& f)const{
     image(f,"Common_Btn_CLOSE.png",{198,200},1,2,pressed(0x416,1)?1:0);
 }
 bool GameHUD::touch(const Touch& t){
+    // A gesture that began in the list owns its complete lifetime, including
+    // leaving the panel or cancelling after a pause/list/layout change.
+    const bool finished=t.phase==TouchPhase::ended||t.phase==TouchPhase::cancelled;
+    auto ignored=std::find(ignoredProductionTouches_.begin(),ignoredProductionTouches_.end(),t.id);
+    if(ignored!=ignoredProductionTouches_.end()){
+        if(t.phase==TouchPhase::began)ignoredProductionTouches_.erase(ignored);
+        else {if(finished)ignoredProductionTouches_.erase(ignored);return true;}
+    }
+    if(productionGesture_&&productionGesture_->id==t.id&&t.phase!=TouchPhase::began){
+        auto& gesture=*productionGesture_;
+        const float dx=t.position.x-gesture.origin.x,dy=t.position.y-gesture.origin.y;
+        if(!gesture.cancelled&&t.phase==TouchPhase::moved){
+            if(!gesture.dragged&&std::hypot(dx,dy)>6){
+                gesture.dragged=true;for(auto& c:controls_)if(c.id==0x40d)c.button.reset();
+            }
+            if(gesture.dragged)setProductionScroll(gesture.initialScroll-dy);
+            else if(gesture.row)for(auto& c:controls_)if(c.id==0x40d&&c.row==*gesture.row)c.button.touch(t);
+        }
+        if(finished){
+            if(t.phase==TouchPhase::ended&&!gesture.cancelled&&!gesture.dragged&&gesture.tapAllowed&&std::hypot(dx,dy)<=6&&
+               productionInteractive()&&contains(productionViewport(),t.position)&&gesture.row&&*gesture.row<state_.production.size()){
+                const auto& row=state_.production[*gesture.row];
+                if(row.machine==gesture.machine&&row.level==gesture.level&&row.enabled)
+                    for(auto& c:controls_)if(c.id==0x40d&&c.row==*gesture.row&&c.button.contains(t.position)){
+                        actions_.push_back({0x40d,c.row,0,row.machine});break;
+                    }
+            }
+            cancelProductionGesture();productionGesture_.reset();
+        }
+        return true;
+    }
+    if(t.phase==TouchPhase::began&&productionInteractive()&&contains(productionViewport(),t.position)){
+        if(productionGesture_&&!productionGesture_->cancelled){ignoredProductionTouches_.push_back(t.id);return true;}
+        if(productionGesture_&&productionGesture_->id!=t.id)ignoredProductionTouches_.push_back(productionGesture_->id);
+        productionGesture_=ProductionGesture{t.id,t.position,productionScroll_,std::nullopt,{},0,false,false,true};
+        for(auto i=controls_.rbegin();i!=controls_.rend();++i)if(i->id==0x40d&&i->button.contains(t.position)){
+            productionGesture_->row=i->row;productionGesture_->machine=state_.production[i->row].machine;
+            productionGesture_->level=state_.production[i->row].level;productionGesture_->tapAllowed=i->button.enabled;i->button.touch(t);break;
+        }
+        return true;
+    }
     if(state_.paused){
         const auto local=translatedTouch(t,layout_.center());
         if(t.phase==TouchPhase::began){
@@ -267,7 +357,9 @@ bool GameHUD::touch(const Touch& t){
         }
     }
     // Child hit priority is reverse insertion order, as QobBase dispatches it.
-    for(auto i=controls_.rbegin();i!=controls_.rend();++i){const auto result=i->button.touch(t);
+    for(auto i=controls_.rbegin();i!=controls_.rend();++i){
+        if(i->id==0x40d)continue; // Production input is clipped and gesture-owned above.
+        const auto result=i->button.touch(t);
         // DlgSpecialAttack::handleButton 0x320a0 selects on PushButton.
         // Production and the lower panel buttons keep their PopButton action.
         const bool selectOnPush=i->id==0x40e&&state_.selectedPanel==2;

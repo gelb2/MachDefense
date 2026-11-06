@@ -26,7 +26,7 @@ public:
     explicit AttackCatalog(const DataTable&);
     const AttackDefinition& definition(const OwnedAttack&)const;
     unsigned maximumLevel(std::string_view name)const;
-    int upgradeCost(const OwnedAttack&)const;
+    std::int64_t upgradeCost(const OwnedAttack&)const;
     bool purchase(SaveData&,std::size_t slot,std::size_t index,bool upgrade)const;
 private:std::vector<AttackDefinition> definitions_;
 };

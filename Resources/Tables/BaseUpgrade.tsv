@@ -5,14 +5,14 @@ BaseCannon_03	2400 	-
 BaseCannon_04	4800 	-
 BaseCannon_05	9600 	-
 BaseCannon_06	19200 	-
-BaseCannon_07	0 	-
+BaseCannon_07	38400	-
 BaseDefense_01	600 	10000
 BaseDefense_02	1200 	15000
 BaseDefense_03	2400 	20000
 BaseDefense_04	4800 	30000
 BaseDefense_05	9600 	50000
 BaseDefense_06	19200 	70000
-BaseDefense_07	0   	100000
+BaseDefense_07	38400	100000
 BuildTime_01	700 	1
 BuildTime_02	1400	0.96
 BuildTime_03	2800	0.92
@@ -53,3 +53,9 @@ CellStorage_07	44800 	2900
 CellStorage_08	89600 	3400
 CellStorage_09	179200 	4000
 CellStorage_10	0   	4700
+BaseCannon_08	76800	-
+BaseCannon_09	153600	-
+BaseCannon_10	0	-
+BaseDefense_08	76800	130000
+BaseDefense_09	153600	160000
+BaseDefense_10	0	190000

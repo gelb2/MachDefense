@@ -12,6 +12,7 @@
 #include "../../Tests/DamageAudioSweep.hpp"
 #include "../../Tests/ViewportSweep.hpp"
 #include "../../Tests/EmergencySupportSweep.hpp"
+#include "../../Tests/Level10HUDSweep.hpp"
 #import "../../Sources/Platform/Apple/MDAudio.h"
 #include <algorithm>
 #include <stdexcept>
@@ -467,12 +468,49 @@ public:
             // Inspect every generated frame; submit representative GPU frames.
             if(frames++%16==0){XCTAssertTrue([renderer drawFrame:frame toLayer:layer],@"%@",renderer.lastError);++renders;}
         });
-        XCTAssertEqual(result.builds,220u);XCTAssertEqual(result.placements,60u);XCTAssertEqual(result.attacks,54u);
+        auto readTable=[&](const char* name){auto bytes=resources.read(std::string("Tables/")+name+".tsv");return md::DataTable::parse({reinterpret_cast<const char*>(bytes.data()),bytes.size()});};
+        const auto parts=readTable("MachBuild_Parts"),named=readTable("MachBuild_Name"),specials=readTable("SpAttackList");
+        const auto catalog=md::BuildCatalog::load(parts,named);unsigned placements=0;
+        for(std::size_t row=0;row<named.rowCount();++row)if(catalog.find(named.value(row,"MachName"))->placementType)++placements;
+        XCTAssertEqual(result.builds,2*catalog.size());XCTAssertEqual(result.placements,2*placements);XCTAssertEqual(result.attacks,2*specials.rowCount());
         XCTAssertEqual(host.writes,0u);XCTAssertFalse(host.readSave().has_value());XCTAssertGreaterThan(audio.playCount,0u);
         NSLog(@"MD_CONTENT_SWEEP builds=%u placements=%u specials=%u frames=%u renders=%u soundCalls=%lu seconds=%.3f",result.builds,result.placements,result.attacks,frames,renders,(unsigned long)audio.playCount,CFAbsoluteTimeGetCurrent()-start);
     }catch(const std::exception& e){XCTFail(@"Content sweep: %s",e.what());}
     [audio stopMusic];[audio setActive:NO];[renderer finish];window.hidden=YES;
     XCTAssertTrue([NSFileManager.defaultManager removeItemAtURL:directory error:nil]);
+}
+
+- (void)testLevel10AndScrollableProductionHUD {
+    NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
+    XCTAssertNotNil(root);if(!root)return;
+    UIWindow* window=[[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];window.rootViewController=[UIViewController new];
+    MDMenuSurface* surface=[[MDMenuSurface alloc]initWithFrame:window.bounds];surface.contentScaleFactor=UIScreen.mainScreen.scale;surface.layer.contentsScale=surface.contentScaleFactor;
+    CAEAGLLayer* layer=(CAEAGLLayer*)surface.layer;layer.opaque=YES;layer.drawableProperties=@{kEAGLDrawablePropertyRetainedBacking:@YES,kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8};
+    [window.rootViewController.view addSubview:surface];[window makeKeyAndVisible];
+    MDRenderer* renderer=[[MDRenderer alloc]initWithResourceRoot:root];MDAudio* audio=[[MDAudio alloc]initWithResourceRoot:root];XCTAssertTrue([audio prepareSounds]);
+    MenuResources resources(root,renderer);
+    const auto start=CFAbsoluteTimeGetCurrent();unsigned rendered=0;
+    try{
+        // Storage stays inside the sweep's memory host. Audio and GPU are the
+        // same implementations as the installed cheat application.
+        class Sounds final:public md::HostServices {MDAudio* audio_;public:
+            explicit Sounds(MDAudio* audio):audio_(audio){}
+            std::optional<md::Bytes> readSave()override{return {};}
+            bool writeSave(std::span<const uint8_t>)override{throw std::runtime_error("Unexpected external sweep write");}
+            void playSound(std::string_view name,float gain,float pan)override{NSString* n=[[NSString alloc]initWithBytes:name.data() length:name.size() encoding:NSUTF8StringEncoding];[audio_ play:n gain:gain*.05f pan:pan];}
+            void playMusic(std::string_view,float)override{}void stopMusic()override{}
+            void requestName(std::string,std::size_t,std::function<void(std::optional<std::string>)>)override{throw std::runtime_error("Unexpected external name");}
+        } output(audio);
+        const auto result=md::validation::runLevel10HUDSweep(resources,&output,[&](const md::Frame& frame,std::string_view name){
+            XCTAssertTrue([renderer drawFrame:frame toLayer:layer],@"%@",renderer.lastError);++rendered;
+            if(name.starts_with("hud-bottom-")||name=="AirStrike-Missile Lv.10 funded"||name=="BaseCannon Lv.10 funded"){
+                NSString* label=[[NSString alloc]initWithBytes:name.data() length:name.size() encoding:NSUTF8StringEncoding];[self capture:label renderer:renderer];
+            }
+        });
+        NSLog(@"MD_LEVEL10_HUD_SWEEP %s rendered=%u seconds=%.3f",result.c_str(),rendered,CFAbsoluteTimeGetCurrent()-start);
+        XCTAssertEqual(rendered,133u);
+    }catch(const std::exception& e){XCTFail(@"Level10/HUD: %s",e.what());}
+    [audio stopMusic];[audio setActive:NO];[renderer finish];window.hidden=YES;
 }
 
 - (void)testProductionAvailabilityAndPlacementPrompt {
@@ -644,6 +682,82 @@ public:
     [renderer finish];window.hidden=YES;
 }
 
+- (void)testLevel10HUDRealtimePerformance {
+    NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
+    XCTAssertNotNil(root);if(!root)return;
+    UIWindow* window=[[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];window.rootViewController=[UIViewController new];
+    MDMenuSurface* surface=[[MDMenuSurface alloc]initWithFrame:window.bounds];surface.contentScaleFactor=UIScreen.mainScreen.scale;surface.layer.contentsScale=surface.contentScaleFactor;
+    CAEAGLLayer* layer=(CAEAGLLayer*)surface.layer;layer.opaque=YES;layer.drawableProperties=@{kEAGLDrawablePropertyRetainedBacking:@YES,kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8};
+    [window.rootViewController.view addSubview:surface];[window makeKeyAndVisible];
+    MDRenderer* renderer=[[MDRenderer alloc]initWithResourceRoot:root];MDAudio* audio=[[MDAudio alloc]initWithResourceRoot:root];XCTAssertTrue([audio prepareSounds]);
+    MenuResources resources(root,renderer);
+    NSURL* directory=[NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:NSUUID.UUID.UUIDString] isDirectory:YES];
+    XCTAssertTrue([NSFileManager.defaultManager createDirectoryAtURL:directory withIntermediateDirectories:YES attributes:nil error:nil]);
+    SweepHost host([directory URLByAppendingPathComponent:@"MachDefense.sav"],audio);
+    auto table=[&](const char* name){auto b=resources.read(std::string("Tables/")+name+".tsv");return md::DataTable::parse({reinterpret_cast<const char*>(b.data()),b.size()});};
+    const auto parts=table("MachBuild_Parts"),named=table("MachBuild_Name");
+    auto save=md::SaveData::empty(123);save.createProfile("PERF10",1);save.writeWord(md::SaveData::slotStart+0xc,5);save.setCredits(0,10000000);
+    for(unsigned category:{0u,1u,5u})save.setBaseUpgrade(0,category,9);
+    std::vector<md::OwnedBuild> owned;std::set<std::string> names;
+    for(const auto* t:{&parts,&named})for(std::size_t row=0;row<t->rowCount();++row){auto name=std::string(t->value(row,"MachName"));name=name.substr(0,name.rfind('_'));if(names.insert(name).second)owned.push_back({name,9,true});}
+    XCTAssertGreaterThan(owned.size(),7u);save.setBuilds(0,owned);XCTAssertTrue(host.writeSave(save.encode()));host.writes=0;
+    md::GameSession game(resources,host,true);md::FrameLayout layout;
+    layout.resize(surface.bounds.size.width,surface.bounds.size.height);game.resize(surface.bounds.size.width,surface.bounds.size.height);
+    const auto c=layout.center(),br=layout.bottomRight(),tr=layout.topRight();
+    sweepTap(game,160+c.x,240+c.y);sweepTicks(game);sweepTap(game,160+c.x,140+c.y);sweepTicks(game);XCTAssertTrue(sweepPress(game,"Common_Btn_OK.png"));
+    auto* world=game.validationWorld();XCTAssertNotEqual(world,nullptr);
+    if(world){
+        md::WorldActor* base=nullptr;for(const auto& actor:world->actors())if(actor->base&&actor->player)base=actor.get();
+        XCTAssertNotEqual(base,nullptr);
+        if(base){
+            XCTAssertFalse(base->weapons.empty());if(!base->weapons.empty())XCTAssertEqual(base->weapons.front().name,std::string("BaseWpn10"));
+            world->setValidationCells(100000);XCTAssertTrue(world->enqueueBuild("MachineGun"));XCTAssertTrue(world->enqueueBuild("Missile"));
+            // Finish the original production timers before the timed interval.
+            for(unsigned tick=0;tick<900;++tick){md::validation::keepBasesAlive(*world);game.tick();}
+            for(unsigned i=0;i<6;++i){const auto id=world->validationSpawn(i%2?"Tur_Msl_10":"Tur_MG_10",i<3,{base->position.x+float(i%3)*45-45,base->position.y+90+float(i/3)*80});auto* actor=world->actor(id);actor->hp=actor->maxHP=100000000;}
+            for(const auto& actor:world->actors())actor->hp=actor->maxHP=100000000;
+            for(unsigned tick=0;tick<90;++tick){game.tick();XCTAssertTrue([renderer drawFrame:game.frame() toLayer:layer],@"%@",renderer.lastError);}
+            [self capture:@"level10-full-hud-before-scroll" renderer:renderer];
+            const auto initialWrites=host.writes;const auto initialSounds=audio.playCount;const auto initialProduction=world->productionCount();
+            XCTAssertEqual(initialProduction,0u);unsigned producedLevel10=0;for(const auto& actor:world->actors())if(actor->player&&!actor->base&&(actor->name=="MachineGun_10"||actor->name=="Missile_10"))++producedLevel10;XCTAssertGreaterThanOrEqual(producedLevel10,2u);
+            const auto uploadsBefore=renderer.textureUploads;
+            struct Sample {unsigned phase;double interval,cpu;NSUInteger sprites,drawCalls;std::uint64_t footprint;};
+            std::vector<Sample> samples;samples.reserve(600);unsigned frames=0;double previous=0;
+            auto done=[self expectationWithDescription:@"600-frame level10 full-session HUD battle"];
+            MDSweepDisplay* observer=[MDSweepDisplay new];
+            std::function<void(CADisplayLink*)> run=[&](CADisplayLink* link){@autoreleasepool{
+                const double start=CACurrentMediaTime();
+                if(frames>=300){const unsigned step=(frames-300)%50;const md::Vec2 down{292+tr.x,350+br.y},up{292+tr.x,65+tr.y};
+                    if(step==0)game.touch({93,md::TouchPhase::began,down});
+                    else if(step<=30)game.touch({93,md::TouchPhase::moved,{down.x,down.y+(up.y-down.y)*float(step)/30}});
+                    else if(step==31)game.touch({93,md::TouchPhase::ended,up});
+                }
+                md::validation::keepBasesAlive(*world);game.tick();const auto& frame=game.frame();
+                XCTAssertTrue([renderer drawFrame:frame toLayer:layer],@"%@",renderer.lastError);
+                const double cpu=(CACurrentMediaTime()-start)*1000;const auto metrics=renderer.lastFrameMetrics;
+                task_vm_info_data_t info{};mach_msg_type_number_t count=TASK_VM_INFO_COUNT;task_info(mach_task_self(),TASK_VM_INFO,reinterpret_cast<task_info_t>(&info),&count);
+                samples.push_back({frames/300,previous?(link.timestamp-previous)*1000:0,cpu,frame.sprites.size(),metrics.drawCalls,info.phys_footprint});previous=link.timestamp;
+                if(++frames==600){[link invalidate];[done fulfill];}
+            }};
+            observer.onFrame=^(CADisplayLink* link){run(link);};CADisplayLink* display=[CADisplayLink displayLinkWithTarget:observer selector:@selector(frame:)];display.preferredFramesPerSecond=60;
+            [display addToRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];[self waitForExpectations:@[done] timeout:45];[display invalidate];observer.onFrame=nil;
+            XCTAssertEqual(frames,600u);XCTAssertEqual(host.writes,initialWrites);XCTAssertGreaterThan(audio.playCount,initialSounds);XCTAssertEqual(world->productionCount(),initialProduction);XCTAssertEqual(world->state(),md::WorldState::running);
+            [self capture:@"level10-full-hud-after-scroll" renderer:renderer];
+            NSMutableArray* phases=[NSMutableArray array];
+            for(unsigned phase=0;phase<2;++phase){std::vector<double> cadence,cpu;std::uint64_t low=UINT64_MAX,high=0;NSUInteger sprites=0,drawCalls=0;unsigned over=0;
+                for(const auto& sample:samples)if(sample.phase==phase&&sample.interval>0){cadence.push_back(sample.interval);cpu.push_back(sample.cpu);over+=sample.interval>25;low=std::min(low,sample.footprint);high=std::max(high,sample.footprint);sprites=std::max(sprites,sample.sprites);drawCalls=std::max(drawCalls,sample.drawCalls);}
+                std::sort(cadence.begin(),cadence.end());std::sort(cpu.begin(),cpu.end());if(cadence.empty())continue;
+                auto percentile=[](const auto& v,double p){return v[std::min(v.size()-1,std::size_t(p*(v.size()-1)))];};
+                NSDictionary* row=@{@"phase":phase?@"battle-and-hud-scroll":@"battle-with-full-hud",@"frames":@(cadence.size()),@"p50_ms":@(percentile(cadence,.5)),@"p95_ms":@(percentile(cadence,.95)),@"p99_ms":@(percentile(cadence,.99)),@"cpu_p50_ms":@(percentile(cpu,.5)),@"cpu_p95_ms":@(percentile(cpu,.95)),@"cpu_p99_ms":@(percentile(cpu,.99)),@"cpu_max_ms":@(cpu.back()),@"over25ms":@(over),@"memory_min":@(low),@"memory_max":@(high),@"sprites_max":@(sprites),@"draw_calls_max":@(drawCalls)};
+                [phases addObject:row];NSLog(@"MD_LEVEL10_HUD_PERF_PHASE %@",row);
+            }
+            NSDictionary* report=@{@"frames":@(frames),@"installed_units":@(owned.size()),@"sounds":@(audio.playCount-initialSounds),@"writes":@(host.writes-initialWrites),@"texture_uploads":@(renderer.textureUploads-uploadsBefore),@"phases":phases};
+            NSData* json=[NSJSONSerialization dataWithJSONObject:report options:NSJSONWritingPrettyPrinted error:nil];XCTAttachment* result=[XCTAttachment attachmentWithData:json uniformTypeIdentifier:@"public.json"];result.name=@"level10-hud-realtime-performance.json";result.lifetime=XCTAttachmentLifetimeKeepAlways;[self addAttachment:result];
+            NSLog(@"MD_LEVEL10_HUD_PERFORMANCE %@",report);
+        }
+    }
+    [audio stopMusic];[audio setActive:NO];[renderer finish];window.hidden=YES;XCTAssertTrue([NSFileManager.defaultManager removeItemAtURL:directory error:nil]);
+}
 - (void)testShortRealtimeBattlePerformance {
 
     NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
@@ -675,8 +789,8 @@ public:
         @autoreleasepool{
         const unsigned phase=frames/450;
         if(frames==450){friendly->weapons=originalGun;hostile->position={friendly->position.x,friendly->position.y+60};friendly->target=hostile->id;}
-        if(frames==900){friendly->weapons.front().name="BaseWpn07";}
-        if(frames==1350){for(int i=0;i<6;++i){auto id=world.validationSpawn("Tanker_10",i%2==0,{float(i%3)*35-35,friendly->position.y+float(i/3)*100+80});auto* a=world.actor(id);a->hp=a->maxHP=100000000;}}
+        if(frames==900){friendly->weapons.front().name="BaseWpn10";}
+        if(frames==1350){for(int i=0;i<6;++i){auto id=world.validationSpawn(i%2==0?"Tur_MG_10":"Tur_Msl_10",i%2==0,{float(i%3)*35-35,friendly->position.y+float(i/3)*100+80});auto* a=world.actor(id);a->hp=a->maxHP=100000000;}}
         md::validation::keepBasesAlive(world);
         const double start=CACurrentMediaTime();world.tick();world.prepareDraw();md::Frame frame;world.appendSprites(frame);
         XCTAssertTrue([renderer drawFrame:frame toLayer:layer],@"%@",renderer.lastError);

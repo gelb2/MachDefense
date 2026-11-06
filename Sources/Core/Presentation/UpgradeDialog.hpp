@@ -15,7 +15,8 @@ struct UpgradeUnit {
 };
 struct UpgradeAttack {
     std::string name,icon,nextIcon;
-    unsigned level=0,maximumLevel=0,count=0,buyCost=0,upgradeCost=0;
+    unsigned level=0,maximumLevel=0,count=0,buyCost=0;
+    std::uint64_t upgradeCost=0;
     bool installed=false,canUpgrade=false,canBuy=false,canInstall=false,hasNext=false;
 };
 struct UpgradeDialogState {

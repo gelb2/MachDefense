@@ -11,7 +11,7 @@ android {
     ndkVersion = "26.3.11579264"
     defaultConfig {
         applicationId = "com.gelb2.machdefense.restored"
-        minSdk = 26; targetSdk = 36; versionCode = 1; versionName = "0.1-android-dev"
+        minSdk = 26; targetSdk = 36; versionCode = 4; versionName = "0.4"
         ndk { abiFilters += listOf("arm64-v8a") }
         externalNativeBuild { cmake {
             arguments += listOf("-DANDROID_STL=c++_static")

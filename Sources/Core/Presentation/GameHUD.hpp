@@ -17,7 +17,8 @@ struct ProductionRow {
 };
 struct SpecialAttackRow {
     std::string name,icon;
-    unsigned level=0,maximumLevel=0,count=0,upgradeCost=0;
+    unsigned level=0,maximumLevel=0,count=0;
+    std::uint64_t upgradeCost=0;
     bool upgradeAvailable=false;
 };
 struct ProductionQueueRow { std::string machine; float progress=0; };
@@ -44,6 +45,7 @@ struct HUDAction {
     unsigned buttonId=0; // Original notification ID, never a platform UI action.
     std::size_t row=0;
     float value=0;
+    std::string machine{}; // Production identity at touch-up; session verifies it.
 };
 class GameHUD {
 public:
@@ -55,6 +57,10 @@ public:
     void setLayout(FrameLayout);
     void append(Frame&) const;
     bool touch(const Touch&);
+    bool scrollProduction(Vec2 position,float deltaY);
+    [[nodiscard]] float productionScrollOffset() const { return productionScroll_; }
+    [[nodiscard]] float maximumProductionScroll() const;
+    [[nodiscard]] Rect productionViewport() const;
     std::vector<HUDAction> takeActions();
 private:
     FrameLayout layout_;
@@ -71,6 +77,21 @@ private:
     std::vector<Control> controls_;
     std::vector<HUDAction> actions_;
     std::optional<std::pair<std::uint64_t,unsigned>> slider_;
+    float productionScroll_=0;
+    struct ProductionGesture {
+        std::uint64_t id=0;
+        Vec2 origin;
+        float initialScroll=0;
+        std::optional<std::size_t> row;
+        std::string machine;
+        unsigned level=0;
+        bool dragged=false,cancelled=false,tapAllowed=true;
+    };
+    std::optional<ProductionGesture> productionGesture_;
+    std::vector<std::uint64_t> ignoredProductionTouches_;
+    void cancelProductionGesture();
+    void setProductionScroll(float);
+    bool productionInteractive() const;
     void configure();
     bool pressed(unsigned,std::size_t=0) const;
     void image(Frame&,std::string_view,Vec2,unsigned columns=1,unsigned rows=1,unsigned tile=0,Vec2 scale={1,1}) const;

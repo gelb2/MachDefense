@@ -144,7 +144,7 @@ void Menu::drawDialog(){
     if(confirm){dialogButtons_[1].bounds=centered({208,185},64,32);sprite("Common_Btn_NO.png",{208,185},64,32,dialogButtons_[1].pressed()?1:0,2);}
 }
 void Menu::rebuild(){
-    frame_.sprites.clear();frame_.logicalWidth=320;frame_.logicalHeight=480;
+    frame_.sprites.clear();frame_.meshes.clear();frame_.logicalWidth=320;frame_.logicalHeight=480;
     if(transferOpen_){frame_.logicalWidth=layout_.width;frame_.logicalHeight=layout_.height;drawTransfer();return;}
     if(screen_==Screen::title){
         sprite("Title.jpg",{160,240},320,480);

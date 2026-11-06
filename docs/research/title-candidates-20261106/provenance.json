@@ -1,0 +1,33 @@
+{
+  "purpose": "Title surroundings; original center remains Resources/Images/Title.jpg",
+  "original": {
+    "path": "Resources/Images/Title.jpg",
+    "sha256": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696"
+  },
+  "generator": "OpenAI image_gen built-in",
+  "date": "2026-11-06",
+  "assets": [
+    {
+      "file": "Wide.png",
+      "size": [
+        1586,
+        992
+      ],
+      "sha256": "a351b2cbc36c1d750f4180cb50365db3b10adb46c34a488657731c399368b853",
+      "generated_source": "exec-9f1993fb-9bfa-41c1-bb98-01e45f65d956.png",
+      "crop": "outer margins only; generated central lettering and units are not drawn"
+    },
+    {
+      "file": "Tall.png",
+      "size": [
+        852,
+        1846
+      ],
+      "sha256": "31cb50226db0acbbb9c199d06d591ed202c007eb9457582570cd884672e49dc2",
+      "generated_source": "exec-c8c4913f-15d4-4f1a-9911-0e5611861d57.png",
+      "crop": "outer margins only; generated central lettering and units are not drawn"
+    }
+  ],
+  "consumer": "Sources/Core/Presentation/TitleBackdrop.hpp",
+  "status": "review candidate; not deployed"
+}

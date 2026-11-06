@@ -31,7 +31,8 @@ ContentCounts runContentSweep(ResourceAccess& resources,Host& host,const std::fu
     const auto specials=table("SpAttackList.tsv");
     const auto items=table("ItemInfo.tsv");
     const auto buildCatalog=BuildCatalog::load(parts,named);const AttackCatalog attacks(specials);
-    require(buildCatalog.size()==110&&specials.rowCount()==27,"Original active content count changed");
+    require(buildCatalog.size()==parts.rowCount()+named.rowCount(),"Active build table coverage mismatch");
+    unsigned placementRows=0;for(std::size_t row=0;row<named.rowCount();++row){const auto* d=buildCatalog.find(named.value(row,"MachName"));if(d&&d->placementType)++placementRows;}
     unsigned buildChecks=0,placementChecks=0,attackChecks=0;
     for(const auto geometry:{BattleGeometry::phone(),BattleGeometry::pad()}){
         auto save=SaveData::empty(1);save.createProfile("CONTENT",1);World world(resources,host,save,0,geometry,123);
@@ -112,7 +113,7 @@ ContentCounts runContentSweep(ResourceAccess& resources,Host& host,const std::fu
             require(host.writes==0,full+" attack wrote save file");++attackChecks;
         }
     }
-    require(buildChecks==220&&placementChecks==60&&attackChecks==54,"Coverage mismatch");
+    require(buildChecks==2*buildCatalog.size()&&placementChecks==2*placementRows&&attackChecks==2*specials.rowCount(),"Coverage mismatch");
     return {buildChecks,placementChecks,attackChecks};
 }
 } // namespace md::validation

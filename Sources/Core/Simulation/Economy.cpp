@@ -41,18 +41,18 @@ const AttackDefinition& AttackCatalog::definition(const OwnedAttack& a)const{
 unsigned AttackCatalog::maximumLevel(std::string_view name)const{
     unsigned result=0;for(const auto& d:definitions_)if(d.name.starts_with(std::string(name)+"_"))++result;return result;
 }
-int AttackCatalog::upgradeCost(const OwnedAttack& a)const{
+std::int64_t AttackCatalog::upgradeCost(const OwnedAttack& a)const{
     if(a.level+1>=maximumLevel(a.name))return 0;
     const auto& current=definition(a);auto next=a;++next.level;
     // DlgUpgradeItem::initWithAttackSet 0x39f64 charges the increase in
     // value of all existing charges in addition to the level upgrade.
-    return current.upgradeCost+int(a.count)*(definition(next).cost-current.cost);
+    return std::int64_t(current.upgradeCost)+std::int64_t(a.count)*(std::int64_t(definition(next).cost)-current.cost);
 }
 bool AttackCatalog::purchase(SaveData& save,std::size_t slot,std::size_t index,bool upgrade)const{
     auto owned=save.attacks(slot);if(index>=owned.size())return false;auto& a=owned[index];
-    const int cost=upgrade?upgradeCost(a):definition(a).cost;
-    if((upgrade&&cost==0)||save.credits(slot)<cost)return false;
+    const auto cost=upgrade?upgradeCost(a):std::int64_t(definition(a).cost);
+    if(cost<0||(upgrade&&cost==0)||save.credits(slot)<cost)return false;
     if(upgrade)++a.level;else ++a.count;
-    save.setCredits(slot,save.credits(slot)-cost);save.setAttacks(slot,owned);return true;
+    save.setCredits(slot,save.credits(slot)-int(cost));save.setAttacks(slot,owned);return true;
 }
 }

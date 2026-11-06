@@ -30,3 +30,11 @@ PNG 변환은 BGRA 채널, premultiplied alpha, Adam7 인터레이스를 처리�
 스폰 표 80개의 한글 주석은 CP949이며 UTF-8로 변환했다. 영어 설명 표는 `Description_us.tsv`다. 이 주석 변환은 미션·무기·생산 수치를 바꾸지 않는다.
 
 글리프 아틀라스는 WeMade ARMv7의 CFString `0x6aaac`에서 읽은 `TrebuchetMS-Bold`를 사용한다. 설치된 동일 PostScript 이름을 확인해 오프라인으로 생성했다. 폰트 파일을 복사하거나 게임 실행 중 글자 이미지를 생성하지 않는다. 원작의 숫자 이미지 폰트도 `Images/`에 유지한다.
+
+## 10레벨 확장 자원
+
+`tools/apply_level10.py`는 검토한 `docs/research/level10/proposal.json`을 읽어 레벨 행과 참조를 추가한다. 원본 `PartsInfo.mcb`·`MachInfo.mcb`는 변경하지 않는다. `RawData/Level10Parts.mcb`와 `Level10Machines.mcb`는 같은 Chunk 형식으로 생성한 추가 정의다. 원작 최종 단계의 이미지와 연결점·음원을 재사용한다.
+
+`inventory.json`, `tables.json`, `preparation-validation.json`은 최초 원본 추출 기록이다. 확장 후 TSV의 파일 해시와 행 수는 `level10-extension.json`에 따로 기록한다. 원본 표의 값은 상한 단계 8행의 다음 강화 가격만 변경하며, 그 외 기존 행은 그대로다. `Tests/level10_tables_test.py`가 원본 암호화 표와 현재 TSV를 대조한다.
+
+원본 자원을 재준비한 뒤에는 `python3 tools/apply_level10.py`를 실행한다. 이 도구도 앱 실행·빌드 중에는 호출하지 않는다.
