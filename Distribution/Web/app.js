@@ -16,7 +16,34 @@ function frame(now){requestAnimationFrame(frame);if(!running||busy||document.hid
 for(const [event,phase] of [['pointerdown',0],['pointermove',1],['pointerup',2],['pointercancel',3]])canvas.addEventListener(event,e=>{if(!running)return;if(phase===0){canvas.setPointerCapture(e.pointerId);MDAudio.context?.resume();}if(phase===1&&!canvas.hasPointerCapture(e.pointerId))return;const r=canvas.getBoundingClientRect();call('md_touch',['number','number','number','number'],[e.pointerId,phase,(e.clientX-r.left)/r.width,(e.clientY-r.top)/r.height]);e.preventDefault();});
 canvas.addEventListener('contextmenu',e=>e.preventDefault());canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();running=false;call('md_context',['number'],[0]);MDAudio.setActive(false);});canvas.addEventListener('webglcontextrestored',async()=>{await call('md_context',['number'],[1]);await resize();await activity(true);running=true;});
 addEventListener('resize',()=>{if(module)resize();});document.addEventListener('visibilitychange',()=>activity(!document.hidden));addEventListener('pagehide',()=>activity(false));addEventListener('pageshow',()=>{if(running)activity(true);});
-addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;$('install').hidden=false;});$('install').onclick=async()=>{if(installPrompt){await installPrompt.prompt();installPrompt=null;}else $('installHelp').textContent='Open the browser menu or Share, then choose Add to Home Screen or Install.';};
+const standalone=matchMedia('(display-mode: standalone)');let installed=false;
+function installHelp(){
+ const ua=navigator.userAgent,ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
+ if(ios)return 'In Safari, tap Share → Add to Home Screen. Open MachDefense from its new icon.';
+ if(/Macintosh/.test(ua)&&/Safari/.test(ua)&&!/Chrome|Chromium|Edg/.test(ua))return 'In Safari, choose File → Add to Dock. Open MachDefense from the Dock.';
+ if(/Android/.test(ua))return 'Open the browser menu → Add to Home screen or Install app. If already installed, open the MachDefense icon.';
+ if(/Chrome|Chromium/.test(ua)&&!/Edg/.test(ua))return 'In Chrome, choose ⋮ → Cast, save, and share → Install page as app. If already installed, open MachDefense from your apps.';
+ if(/Edg/.test(ua))return 'In Edge, open the menu → Apps → Install this site as an app.';
+ return 'Open the browser menu to install this site, or choose PLAY IN BROWSER below.';
+}
+function updateInstall(){
+ const app=standalone.matches||navigator.standalone===true;
+ $('install').hidden=preparing||app||installed;
+ $('install').textContent=installPrompt?'INSTALL GAME':'HOW TO INSTALL';
+ $('installHelp').textContent=app?'Ready to play offline.':installed?'Installed. Open MachDefense from your apps, or play in this browser.':installPrompt?'Install MachDefense to open it from your apps and play offline.':installHelp();
+ $('play').textContent=app?'PLAY':'PLAY IN BROWSER';
+}
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;updateInstall();});
+addEventListener('appinstalled',()=>{installed=true;installPrompt=null;updateInstall();});
+standalone.addEventListener('change',updateInstall);
+$('install').onclick=async()=>{
+ if(!installPrompt){updateInstall();$('installHelp').focus();return;}
+ const prompt=installPrompt;installPrompt=null;$('install').disabled=true;
+ try{await prompt.prompt();const choice=await prompt.userChoice;if(choice.outcome==='accepted')installed=true;}
+ catch(e){$('installHelp').textContent=installHelp();}
+ finally{$('install').disabled=false;updateInstall();}
+};
+updateInstall();
 async function prepare(){try{
  build=await(await fetch('build.json',{cache:'no-store'})).json();await MDStore.open(build.cheat);
  if(!('serviceWorker'in navigator))throw Error('Open this game over HTTPS to enable offline play.');
@@ -30,7 +57,7 @@ async function prepare(){try{
   worker.addEventListener('statechange',check);check();
  });
  if(!navigator.serviceWorker.controller)await new Promise(resolve=>navigator.serviceWorker.addEventListener('controllerchange',resolve,{once:true}));await new Promise((resolve,reject)=>{const channel=new MessageChannel();const timer=setTimeout(()=>reject(Error('Resource check timed out.')),180000);channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();e.data.ok?resolve():reject(Error(e.data.error));};navigator.serviceWorker.controller.postMessage({kind:'prepare'},[channel.port2]);});reg.update().catch(()=>{});
- preparing=false;$('progress').value=100;$('status').textContent='Ready for offline play';$('play').disabled=false;$('install').hidden=matchMedia('(display-mode: standalone)').matches;$('play').textContent=matchMedia('(display-mode: standalone)').matches?'PLAY':'PLAY IN BROWSER';
+ preparing=false;$('progress').value=100;$('status').textContent='Ready for offline play';$('play').disabled=false;updateInstall();
 }catch(e){MDError('Cannot prepare game: '+e.message);$('status').textContent='Reload to retry.';}}
 $('play').onclick=async()=>{try{$('play').disabled=true;$('status').textContent='Loading game…';await navigator.storage?.persist?.();await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='game.js';s.onload=resolve;s.onerror=reject;document.body.append(s);});module=await createMachDefense({canvas,printErr:console.error});window.MDModule=module;await MDAudio.prepare(module);await MDAudio.context.resume();canvas.hidden=false;const ok=await call('md_start',[],[],'number');if(!ok)throw Error('Cannot start game renderer or audio');await resize();$('launcher').hidden=true;running=true;requestAnimationFrame(frame);canvas.focus();}catch(e){MDError(String(e));}};
 window.MDTest={call,async advance(n){window.MD_TEST_PAUSE=true;for(let i=0;i<n;i++)await call('md_tick');},async tap(x,y){await call('md_touch',['number','number','number','number'],[1,0,x,y]);await call('md_touch',['number','number','number','number'],[1,2,x,y]);},async state(){return JSON.parse(await call('md_debug',[],[],'string'));},async sprites(){return JSON.parse(await call('md_ui',[],[],'string'));},async save(){return JSON.parse(await call('md_save_info',[],[],'string'));},activity};

@@ -7,8 +7,11 @@
 주소를 열고 자원 다운로드를 마치면 **PLAY IN BROWSER**로 바로 플레이한다. PWA로 설치하면 별도 앱 창에서 열고 오프라인으로도 실행할 수 있다.
 
 - iPhone·iPad: Safari에서 주소를 열고 공유 → 홈 화면에 추가를 선택한다.
-- Android: Chrome에서 **INSTALL GAME**을 누른다. 버튼 대신 설치 안내가 나오면 브라우저 메뉴의 앱 설치 또는 홈 화면에 추가를 선택한다.
-- Mac: Chrome에서 **INSTALL GAME**을 누르거나 Safari의 파일 → Dock에 추가를 선택한다.
+- Android: Chrome에서 **INSTALL GAME**을 누른다. **HOW TO INSTALL**이 표시되면 브라우저 메뉴의 앱 설치 또는 홈 화면에 추가를 선택한다.
+- Mac Chrome: **INSTALL GAME**이 표시되면 설치 창을 연다. **HOW TO INSTALL**이면 Chrome 메뉴 → 전송, 저장, 공유 → 페이지를 앱으로 설치를 선택한다. 이미 설치했다면 기존 앱 아이콘으로 연다.
+- Mac Safari: 파일 → Dock에 추가를 선택한다. **HOW TO INSTALL**은 이 경로를 안내한다.
+
+설치 없이 실행하려면 **PLAY IN BROWSER**를 누른다. 설치 창을 취소해도 브라우저 플레이는 가능하다.
 
 설치한 앱을 열어 다운로드가 완료됐는지 확인한다. 게임 진행은 기기에 저장한다. 다른 기기로 옮길 때는 슬롯 화면의 **GET CODE**로 코드를 받고 **ENTER CODE**에 입력한다. 전체 5슬롯을 교체한다. 사이트 데이터를 지우기 전에는 코드를 보관한다.
 
