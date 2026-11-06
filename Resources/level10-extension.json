@@ -1,13 +1,13 @@
 {
   "source_proposal": "docs/research/level10/proposal.json",
-  "source_proposal_sha256": "323d4ce55e7077f5ad812871f1c46b686eef9229a9c6108a5e51375a29dc703e",
+  "source_proposal_sha256": "f560ca5dabb7b6aca0de57a8c16c5cbf4746b0f1c6132b6151d47f90c9478fde",
   "generator": "tools/apply_level10.py",
   "original_mcb_preserved": true,
   "files": [
     {
       "path": "Tables/WeaponInfo.tsv",
-      "sha256": "0d44b764be865408b98186f58962a16da4d32f442cb19af5c5ffe670d10d175f",
-      "bytes": 37444
+      "sha256": "e931f1d4780604af595e2ee5ab7db923e68e723e464710094242bd57c64b3d73",
+      "bytes": 37447
     },
     {
       "path": "Tables/MachBuild_Name.tsv",

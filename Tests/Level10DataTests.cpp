@@ -25,6 +25,31 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];Host ho
  bool duplicate=false;try{models.append(md::Chunk::parse(r.read("RawData/Level10Parts.mcb")),md::Chunk::parse(r.read("RawData/Level10Machines.mcb")));}catch(const std::runtime_error&){duplicate=true;}assert(duplicate);
  const std::array names{"RifleTurret","MissileTurret","Vulcan","IonCannon","LaserTurret","PlasmaCannon"};
  const std::array special{"AirStrike-Bomb","AirStrike-Missile","AirStrike-Nuclear","AirStrike-EMP","Crossfire-Missile"};
+ // Extra-level damage effects: hit the annulus newly reached by each level,
+ // check exact exclusion at the boundary, and run the real status controller.
+ for(bool phone:{true,false})for(unsigned level=6;level<=10;++level){
+  auto load=[&](const char* prefix,unsigned l){auto n=std::string(prefix)+(l<10?"0":"")+std::to_string(l);return md::WeaponDefinition::fromTable(weaponTable,*weaponTable.findRow(n),phone);};
+  auto missile=load("Turret_msl_",level),oldMissile=load("Turret_msl_",level-1);
+  const int raw=74+4*int(level-5);assert(missile.damageRange==(phone?raw/2:raw));
+  std::vector<md::ProjectileTarget> empty;
+  const float middle=(missile.damageRange+oldMissile.damageRange)*.5f;
+  std::vector<md::ProjectileTarget> targets={{{middle,0},100000,1},{{float(missile.damageRange),0},100000,1}};
+  assert(md::projectileCollide(oldMissile,{0,0},false,0,targets,empty).empty());
+  auto hits=md::projectileCollide(missile,{0,0},false,0,targets,empty);
+  assert(hits.size()==1&&hits[0].damage>0&&targets[1].hp==100000);
+  auto ion=load("Turret_ion_",level),oldIon=load("Turret_ion_",level-1);
+  assert(ion.special1==280+20*int(level-5)&&ion.special2==3);
+  const float radius=(oldIon.special1+ion.special1)*.5f;
+  targets={{{0,0},100000,1},{{radius,0},100000,1},{{ion.special1,0},100000,1}};
+  assert(md::projectileCollide(oldIon,{0,0},false,0,targets,empty).size()==1);
+  hits=md::projectileCollide(ion,{0,0},false,0,targets,empty);
+  assert(hits.size()==2&&hits[1].secondary&&hits[1].damage==ion.damage/2&&targets[2].hp==100000);
+  auto plasma=load("Turret_pla_",level),oldPlasma=load("Turret_pla_",level-1);
+  assert(plasma.special1==70+10*int(level-5)&&plasma.special2==120+20*int(level-5));
+  auto effect=md::projectileSpecialDamage(plasma,0);assert(effect&&effect->endTime==plasma.special1&&effect->damage==plasma.special2&&effect->delay==1);
+  auto total=[&](const md::WeaponDefinition& w){md::SpecialDamageController state;state.add(*md::projectileSpecialDamage(w,0));md::DarwinRandom random(1);int damage=0;bool later=false;for(unsigned tick=1;tick<=unsigned((w.special1+1)*60);++tick){const double time=double(tick)/60;state.tick(time,random,[](){return false;},[&](const auto& event){if(event.dealsDamage){assert(event.damage==int(w.special2));assert(time<=w.special1);damage+=event.damage;if(time>oldPlasma.special1)later=true;}});}assert(state.orderedEntries().empty());return std::pair{damage,later};};
+  const auto now=total(plasma),before=total(oldPlasma);assert(now.first>before.first&&now.second);
+ }
  // Extended ranges must continue the original final step. Exercise the real
  // firing boundary between consecutive levels, not only the table lookup.
  const std::array prefixes{"Turret_gun_","Turret_msl_","Turret_mg_","Turret_ion_","Turret_lsr_","Turret_pla_","BaseWpn"};
