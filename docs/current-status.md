@@ -1,5 +1,7 @@
 # v0.3 — 복원 코드와 Quick Play
 
+공개 v0.3의 새 익명 클론에서 iOS·Android 빌드와 자원 포함을 검사했다. [검사 결과](evidence/clean-clone-build-20261106.md). iOS 설치 문서에 CMake·Python 3 준비를 추가했다.
+
 공용 복원 연결·Galaxy 검사·Quick Play 문서를 `feat/save-transfer-all-platforms → develop → main` 순서로 반영하는 릴리스다. [v0.3 변경 이력](../CHANGELOG.md#v03--기기-간-복원-코드와-quick-play)과 [공유 코드](public/quick-play.md)를 따른다. 운영 PWA는 검사한 `d679d7b1061097b5`를 유지한다.
 
 # 웹·PWA 공개 — 2026-11-06
