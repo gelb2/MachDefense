@@ -16,7 +16,11 @@
 
 ## iPhone·iPad
 
-Apple Silicon Mac의 Xcode에서 `Apple/MachDefense.xcworkspace`를 연다. 일반 앱은 `MachDefense`, 치트 앱은 `MachDefenseCheat` 스킴을 선택한다. 시뮬레이터나 연결한 기기를 고른다. 실기기에서는 자신의 개발 팀으로 서명한다. 최소 배포 대상은 iOS·iPadOS 15.0이다.
+Apple Silicon Mac에 Xcode와 iOS Simulator, Python 3, CMake 3.20 이상을 설치한다. Homebrew를 쓴다면 `brew install cmake`로 CMake를 설치할 수 있다. 첫 빌드에서 저장소에 포함된 OpenAL Soft 소스를 CMake로 컴파일한다.
+
+`Apple/MachDefense.xcworkspace`를 열고 일반 앱은 `MachDefense`, 치트 앱은 `MachDefenseCheat` 스킴을 선택한다. iPhone 또는 iPad 시뮬레이터를 선택한 뒤 Run을 누른다. 실기기에서는 자신의 개발 팀으로 서명한다. 최소 배포 대상은 iOS·iPadOS 15.0이다.
+
+워크스페이스와 프로젝트 파일은 저장소에 들어 있다. XcodeGen은 프로젝트를 재생성할 때만 필요하다.
 
 ## Android
 
@@ -29,6 +33,6 @@ git clone https://github.com/gelb2/MachDefense.git
 cd MachDefense
 ```
 
-게임 코드와 이미지·음원·맵을 함께 받는다. 웹판을 직접 빌드하려면 [웹 개발 문서](../../Web/README.md)를 따른다.
+게임 코드와 이미지·음원·맵·글꼴 아틀라스·외부 라이브러리 소스를 함께 받는다. 일반 Git 파일이므로 Git LFS 다운로드 단계는 없다. 원본 IPA나 `prepare_resources.py` 실행 없이 받은 파일로 빌드한다. 웹판을 직접 빌드하려면 [웹 개발 문서](../../Web/README.md)를 따른다.
 
 [게임 소개](../../README.md) · [문서 목차](README.md)

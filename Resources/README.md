@@ -14,7 +14,9 @@
 
 `inventory.json`은 원본 자원과 준비한 파일의 SHA-256을 연결한다. `images.json`에는 크기·알파·변환 경로가 있고 `tables.json`에는 표별 헤더·행 수가 있다. `preparation-validation.json`은 자원 검사 결과다.
 
-준비 명령:
+이미지·음원·표·글꼴 아틀라스는 변환된 파일을 Git에서 함께 받는다. clone 후 앱을 빌드할 때는 아래 도구를 실행하지 않는다.
+
+원본 자원을 다시 변환할 때 사용하는 명령:
 
 ```sh
 python3 tools/prepare_resources.py --source /outside/repository/MachDefense.ipa
