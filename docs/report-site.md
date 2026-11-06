@@ -183,3 +183,9 @@ Chrome에서 신규 부품 35개의 길이와 비율 보존·텍스처 잘림, �
 [세 작품 비교·화풍·스킬](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#mach-series-art-20261107), [실제 iPad 렌더 캡처·기능 검사](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#level10-art-integration-20261107).
 
 사이트 소스 `a6337c9d5140b508791bf5cd2c43ba35145652e3`, 게시 `appgdep_6aee45a38a3881919966fb37991827b6` 성공. 기존 접근 범위를 유지했다. 데스크톱·모바일 레이아웃과 새 이미지 11개 로딩을 검사했다. 기존 보고서의 스크린샷 한 장과 새 미리보기의 압축 크기를 줄였다. 원본 캡처는 로컬 검사 폴더에 보존했다.
+
+## 2026-11-07 레이저 해금·포탑 색조 대조
+
+기존 보고 페이지에 [레이저 해금](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#laser-unlock-20261107)과 [원작·신규 포탑 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-art-review-20261107)를 추가했다. 70개 부품 측정값·같은 배율의 비교 그림·기존 저장 지급·C++ 및 Chrome/WebKit 검사 결과를 담았다. 데스크톱 1280px·모바일 390px에서 이미지와 새 절 표시, JS 오류 0건을 확인했다.
+
+게시 소스 `e7f8285a61d977697d155102f478a63c82a1eb83`, 배포 `appgdep_6aee4bd1ccc8819188b12ec263b3a31f`는 succeeded다. 기존 본인 전용 접근을 유지했다. 게임 main·운영 PWA·기기 앱의 배포와 별개다.
