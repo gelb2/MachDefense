@@ -1,3 +1,9 @@
+# 2026-11-07 레이저 앱 설치와 재시안
+
+`feat/level10-effects-art`에서 iPhone/iPad 정식·치트 4개 설치·실행, iPhone 기존 저장 지급과 사용자 확인을 마쳤다. [결과와 시안 35개](docs/evidence/turret-redraw-20261107.md). 새 그림은 `Art/Level10/20261107/pixel-v4/`이며 Resources는 교체하지 않았다. 사용자 후속 지적은 표면 텍스처가 원작보다 매끈하다는 것이다. 질감 재작업이 우선이며 현재 시안을 승인본으로 취급하지 않는다. 일부 폭·단계별 차이 보강과 사용자 검토, iPad 직접 터치·음향 확인이 남는다. main·develop·운영 PWA는 그대로다.
+
+아래는 이전 시점의 기록이다.
+
 # 2026-11-07 레이저 해금 구현·화풍 대조
 
 `feat/level10-effects-art`에서 발칸 보유 + 30미션 클리어 레이저 지급, 기존 저장의 프로필 선택 시 소급 지급을 구현했다. [정책·검사](docs/evidence/laser-turret-unlock-20261107.md). 기기 앱 설치와 운영 배포는 남았다. [신규 포탑 색·도트 대조](docs/research/turret-art-review-20261107/README.md)에서 어두운 색조·두꺼운 포신·넓은 음영을 확인했다. 그림은 그대로이며 수정 시안이 다음 과제다.
