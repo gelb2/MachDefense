@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ion",
+    "prompt": "Edit this sprite sheet: remove ALL the grey dirty smoke, background texture, scattered pixels, colored edge artifacts and shadows surrounding the five guns. Only the five solid metallic ion weapon sprites should remain on a completely transparent clean background. Preserve exactly the FIVE guns geometry, size, alignment, details, barrel length, orientation and spacing. Do not redraw or resize any gun. Make empty space above and below and between the weapons fully transparent. No smoke, no glow, no backdrop. This is isolated pixel-art game sprite cleanup, not a new scene.",
+    "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-bcd58fcc-6a2f-40df-89a1-e45bf7deaac6.png",
+    "file": "ion-geometry-v3.png",
+    "output_sha256": "30d7bcf21346932a3746e8747713f522bf83f0b878a7b5414fd30de291d7c8bf"
+  },
+  {
+    "id": "laser",
+    "prompt": "Edit the FIVE sprites in the attached sprite sheet, retaining five equal cells, transparency, style, horizontal barrel length and central mounting hub alignment. The second image is the original game weapon and its physical proportions are mandatory. Your previous sprites are too broad vertically compared with that original. Total visible sprite height must be 61/95 (0.6421) times the visible width, currently it is about 0.745. Move the two barrel assemblies closer together and reduce the excess vertical bulk of their outer housing; keep the horizontal length. The circular hub can be smaller to match the original. Do NOT squash/stretch the entire picture. Adjust component arrangement and remove excess protrusions while retaining natural circular circles and mechanical details. All five must have SAME full width AND SAME full height. Changes between upgrades occur INSIDE this same outline. Original low resolution painted pixel aesthetic, grey/olive colors. No background or shadow or glow or noise. Keep the exact five distinct upgrade panel designs.",
+    "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-6d98a621-6eff-4987-940d-2c23c16a96d9.png",
+    "file": "laser-geometry-v3.png",
+    "output_sha256": "d2f387132730ed5397f4bf9553c70f6c02e8049e899afef8daed8a70517f943b"
+  },
+  {
+    "id": "vulcan",
+    "prompt": "Edit the FIVE sprites in the attached sprite sheet, retaining five equal cells, transparency, style, horizontal barrel length and central mounting hub alignment. The second image is the original game weapon and its physical proportions are mandatory. Your previous sprites are too broad vertically compared with that original. Total visible sprite height must be 43/60 (0.7167) times the visible width. Stages 8–10 have excessively large top and bottom armor protrusions: redesign those armor plates INSIDE the original outline, keep the same vertical silhouette as stage 6. Do not add bulk at later levels. Do NOT squash/stretch the entire picture. Adjust component arrangement and remove excess protrusions while retaining natural circular circles and mechanical details. All five must have SAME full width AND SAME full height. Changes between upgrades occur INSIDE this same outline. Original low resolution painted pixel aesthetic, grey/olive colors. No background or shadow or glow or noise. Keep the exact five distinct upgrade panel designs.",
+    "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-6ec315e7-3a6b-47ba-a692-ec796be01fa2.png",
+    "file": "vulcan-geometry-v3.png",
+    "output_sha256": "18755e87f479554fcc949f6ef57f870549dc75d6f4205e047ac0da64b5992dde"
+  }
+]

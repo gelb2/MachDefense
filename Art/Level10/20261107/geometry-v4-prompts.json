@@ -1,0 +1,9 @@
+{
+  "tool": "image_gen",
+  "reference": "Resources/Images/Turret_mg_05.png",
+  "output": "Art/Level10/20261107/vulcan-geometry-v4.png",
+  "output_sha256": "00a2deeab04a0d36a01125b32f982a8625a03bc8c52cb6ba36a3f1cb81ea7a25",
+  "purpose": "Preserve original twin-barrel spacing and outer proportions; upgrade interior panels only.",
+  "selected": true,
+  "prompt": "Make one transparent sprite sheet with exactly five identical-size copies of the reference Vulcan turret, left to right. Preserve the complete outline, barrel spacing, circular pivot, camera and 60:43 visible aspect ratio of the reference exactly. Make each copy a different upgrade only by repainting INTERNAL armor panel seams and vents inside the existing shapes. Do NOT add armor bulges or exterior parts. Do NOT grow or shrink later stages. Copy the same silhouette to all five. Keep original grey-green painted low resolution pixel-art with tiny blue details. Original source is 128x64 canvas, actual visible artwork 60x43, pivot at source (62,32). Each of five cells has same canvas and same position. No labels, no background, no shadows, no text. Strict top-down, barrels face right. Treat this as an internal texture edit, not redesign of proportions. Preserve every external contour and gun tip."
+}

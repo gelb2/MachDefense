@@ -1,13 +1,13 @@
 {
   "source_proposal": "docs/research/level10/proposal.json",
-  "source_proposal_sha256": "323d4ce55e7077f5ad812871f1c46b686eef9229a9c6108a5e51375a29dc703e",
+  "source_proposal_sha256": "f560ca5dabb7b6aca0de57a8c16c5cbf4746b0f1c6132b6151d47f90c9478fde",
   "generator": "tools/apply_level10.py",
   "original_mcb_preserved": true,
   "files": [
     {
       "path": "Tables/WeaponInfo.tsv",
-      "sha256": "0d44b764be865408b98186f58962a16da4d32f442cb19af5c5ffe670d10d175f",
-      "bytes": 37444
+      "sha256": "e931f1d4780604af595e2ee5ab7db923e68e723e464710094242bd57c64b3d73",
+      "bytes": 37447
     },
     {
       "path": "Tables/MachBuild_Name.tsv",
@@ -36,22 +36,22 @@
     },
     {
       "path": "Tables/PartsList.tsv",
-      "sha256": "ffb498932e30e74e4ae84211a542fabac28de6ab43759b1b25d1015522d3aeb1",
-      "bytes": 12253
+      "sha256": "994825d33b5209449f5225ebd99f5972c5d41cfde3af25eb77f18bd3f69a2ec9",
+      "bytes": 12408
     },
     {
       "path": "Tables/TileList.tsv",
-      "sha256": "4266caf60c3ab60f1a084e7459fde6ce9628b6a237582d55dde1462601e485a6",
-      "bytes": 227
+      "sha256": "9d18753197630bed1a01c64da1f48d353b42b067444e4c8b56eb8f72fc198cd7",
+      "bytes": 1144
     },
     {
       "path": "RawData/Level10Parts.mcb",
-      "sha256": "aece05b8f3daf2dc0751715d12deb856112e76bc8739538f2a1c63d8d32f135b",
-      "bytes": 2565
+      "sha256": "a18c06348cff0c3b4291cf81efe75d2080f9b847f7e8aa99971d07830e30fa00",
+      "bytes": 2860
     },
     {
       "path": "RawData/Level10Machines.mcb",
-      "sha256": "c0ead5302a6ec2804687777293f3e5ad60018276e2d75bfcd2cdf6a65a749193",
+      "sha256": "f51f634b04ecbc7e4d78806b51b5aa64e773d58dcd1b539fc0061963102d925f",
       "bytes": 4405
     }
   ]

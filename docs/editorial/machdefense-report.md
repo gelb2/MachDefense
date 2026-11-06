@@ -469,3 +469,10 @@ MachDefense 저장소는 비공개다. 로컬/비공개 검증으로 시작한�
 ## Web·PWA 구현과 검사 — 2026-11-06
 
 일반·치트 웹판과 전체 5슬롯 복원 코드를 구현했다. 아이폰 Stage 36 저장 복사본으로 브라우저 복원·전투·재실행을 검사했다. [파일별 수정·실행 결과·남은 검사](../evidence/web-pwa-20261106.md). 기존 Apple·Android 실행기·계산·자원은 유지하며 공용 복원 연결 4파일을 추가했다. 실제 모바일 PWA 설치와 Tauri Mac은 남았다.
+
+
+## 추가 레벨 부품과 Mach 시리즈의 미술 — 2026-11-07
+
+44개 그림을 게임에 연결했다. 원작 캔버스·회전축·총구·표시 배율을 유지했고 iPhone·iPad에서 검증했다. [기능·성능·설치 결과](../evidence/level10-art-integration-20261107.md).
+
+HeavyMach1·HeavyMach2·MachDefense의 원본 30개를 비교했다. 군용 기계의 구조와 재질, 작은 래스터의 명암, 일러스트의 공간 표현을 제작 규칙으로 정리했다. [분석 전문과 비교 그림](../../.agents/skills/mach-series-art/references/style-study.md), [제작 스킬](../../.agents/skills/mach-series-art/SKILL.md).

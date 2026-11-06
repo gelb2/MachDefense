@@ -17,7 +17,9 @@ struct Host:md::HostServices {unsigned writes=0;std::optional<md::Bytes>readSave
 std::string key(std::string_view n,unsigned l){return std::string(n)+(l<10?"_0":"_")+std::to_string(l);}
 void samePose(const std::vector<md::PartPose>& a,const std::vector<md::PartPose>& b,Resources&r){
  assert(a.size()==b.size());
- for(size_t i=0;i<a.size();++i){auto& x=a[i];auto& y=b[i];assert(x.definition->image==y.definition->image);if(x.definition->name!="DummyParts" && x.definition->name!="DummyWeapon" && x.definition->tileCount){if(r.imageSize(x.definition->image).x<=0)std::cerr<<"missing image "<<x.definition->image<<" type "<<unsigned(x.definition->type)<<"\n";assert(r.imageSize(x.definition->image).x>0);}assert(x.definition->type==y.definition->type);assert(x.definition->splitX==y.definition->splitX&&x.definition->splitY==y.definition->splitY);assert(x.localCenter.x==y.localCenter.x&&x.localCenter.y==y.localCenter.y&&x.angle==y.angle&&x.visualScale==y.visualScale&&x.reverse==y.reverse);assert(x.definition->sockets.size()==y.definition->sockets.size());for(unsigned j=1;j<x.definition->sockets.size();++j){auto u=x.muzzle(j),v=y.muzzle(j);assert(u&&v&&u->x==v->x&&u->y==v->y);}}
+ for(size_t i=0;i<a.size();++i){auto& x=a[i];auto& y=b[i];if(x.definition->name==y.definition->name)assert(x.definition->image==y.definition->image);
+ else {assert(x.definition->image==x.definition->name+".png");assert(x.definition->image!=y.definition->image);auto xs=r.imageSize(x.definition->image),ys=r.imageSize(y.definition->image);assert(xs.x==ys.x&&xs.y==ys.y);}
+ if(x.definition->name!="DummyParts" && x.definition->name!="DummyWeapon" && x.definition->tileCount){if(r.imageSize(x.definition->image).x<=0)std::cerr<<"missing image "<<x.definition->image<<" type "<<unsigned(x.definition->type)<<"\n";assert(r.imageSize(x.definition->image).x>0);}assert(x.definition->type==y.definition->type);assert(x.definition->splitX==y.definition->splitX&&x.definition->splitY==y.definition->splitY);assert(x.localCenter.x==y.localCenter.x&&x.localCenter.y==y.localCenter.y&&x.angle==y.angle&&x.visualScale==y.visualScale&&x.reverse==y.reverse);assert(x.definition->sockets.size()==y.definition->sockets.size());for(unsigned j=1;j<x.definition->sockets.size();++j){auto u=x.muzzle(j),v=y.muzzle(j);assert(u&&v&&u->x==v->x&&u->y==v->y);}}
 }
 int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];Host host;
  auto builds=md::BuildCatalog::load(r.table("MachBuild_Parts"),r.table("MachBuild_Name"));md::Settlement settlement(builds,r.table("MachRegen"));md::BaseUpgradeCatalog bases(r.table("BaseUpgrade"));md::AttackCatalog attacks(r.table("SpAttackList"));auto models=md::BattleModels::load(r);auto machineTable=r.table("MachList"),weaponTable=r.table("WeaponInfo"),items=r.table("ItemInfo");
@@ -25,6 +27,31 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];Host ho
  bool duplicate=false;try{models.append(md::Chunk::parse(r.read("RawData/Level10Parts.mcb")),md::Chunk::parse(r.read("RawData/Level10Machines.mcb")));}catch(const std::runtime_error&){duplicate=true;}assert(duplicate);
  const std::array names{"RifleTurret","MissileTurret","Vulcan","IonCannon","LaserTurret","PlasmaCannon"};
  const std::array special{"AirStrike-Bomb","AirStrike-Missile","AirStrike-Nuclear","AirStrike-EMP","Crossfire-Missile"};
+ // Extra-level damage effects: hit the annulus newly reached by each level,
+ // check exact exclusion at the boundary, and run the real status controller.
+ for(bool phone:{true,false})for(unsigned level=6;level<=10;++level){
+  auto load=[&](const char* prefix,unsigned l){auto n=std::string(prefix)+(l<10?"0":"")+std::to_string(l);return md::WeaponDefinition::fromTable(weaponTable,*weaponTable.findRow(n),phone);};
+  auto missile=load("Turret_msl_",level),oldMissile=load("Turret_msl_",level-1);
+  const int raw=74+4*int(level-5);assert(missile.damageRange==(phone?raw/2:raw));
+  std::vector<md::ProjectileTarget> empty;
+  const float middle=(missile.damageRange+oldMissile.damageRange)*.5f;
+  std::vector<md::ProjectileTarget> targets={{{middle,0},100000,1},{{float(missile.damageRange),0},100000,1}};
+  assert(md::projectileCollide(oldMissile,{0,0},false,0,targets,empty).empty());
+  auto hits=md::projectileCollide(missile,{0,0},false,0,targets,empty);
+  assert(hits.size()==1&&hits[0].damage>0&&targets[1].hp==100000);
+  auto ion=load("Turret_ion_",level),oldIon=load("Turret_ion_",level-1);
+  assert(ion.special1==280+20*int(level-5)&&ion.special2==3);
+  const float radius=(oldIon.special1+ion.special1)*.5f;
+  targets={{{0,0},100000,1},{{radius,0},100000,1},{{ion.special1,0},100000,1}};
+  assert(md::projectileCollide(oldIon,{0,0},false,0,targets,empty).size()==1);
+  hits=md::projectileCollide(ion,{0,0},false,0,targets,empty);
+  assert(hits.size()==2&&hits[1].secondary&&hits[1].damage==ion.damage/2&&targets[2].hp==100000);
+  auto plasma=load("Turret_pla_",level),oldPlasma=load("Turret_pla_",level-1);
+  assert(plasma.special1==70+10*int(level-5)&&plasma.special2==120+20*int(level-5));
+  auto effect=md::projectileSpecialDamage(plasma,0);assert(effect&&effect->endTime==plasma.special1&&effect->damage==plasma.special2&&effect->delay==1);
+  auto total=[&](const md::WeaponDefinition& w){md::SpecialDamageController state;state.add(*md::projectileSpecialDamage(w,0));md::DarwinRandom random(1);int damage=0;bool later=false;for(unsigned tick=1;tick<=unsigned((w.special1+1)*60);++tick){const double time=double(tick)/60;state.tick(time,random,[](){return false;},[&](const auto& event){if(event.dealsDamage){assert(event.damage==int(w.special2));assert(time<=w.special1);damage+=event.damage;if(time>oldPlasma.special1)later=true;}});}assert(state.orderedEntries().empty());return std::pair{damage,later};};
+  const auto now=total(plasma),before=total(oldPlasma);assert(now.first>before.first&&now.second);
+ }
  // Extended ranges must continue the original final step. Exercise the real
  // firing boundary between consecutive levels, not only the table lookup.
  const std::array prefixes{"Turret_gun_","Turret_msl_","Turret_mg_","Turret_ion_","Turret_lsr_","Turret_pla_","BaseWpn"};

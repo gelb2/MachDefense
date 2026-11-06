@@ -1,3 +1,20 @@
+# 2026-11-07 승인 부품 연결·화풍 스킬
+
+작업 브랜치 `feat/level10-effects-art`. 승인 부품 44개 연결과 실기기 검사, iPhone/iPad 일반·치트 앱 4개 설치를 마쳤다. 저장 4개는 설치 전후 동일하다. [검사](docs/evidence/level10-art-integration-20261107.md), [화풍 스킬](.agents/skills/mach-series-art/SKILL.md). develop까지 병합할 범위이며 main·태그·운영 PWA는 이번 배포 대상이 아니다.
+
+아래는 이전 시점의 기록이다.
+
+# 2026-11-07 추가 레벨 효과·외형
+
+2026-11-07 후속: 원본 세 판본 포탑 Lv.1~5는 몸체·무장 참조가 모두 바뀐다. 몸체 3→4는 변화가 작다. 이전 조립 시안의 min-fit 축소 오류를 발견해 길이 고정 계산으로 바꾸고 몸체·무장 35개를 다시 그렸다. 일부 폭 차이와 도트·피벗 수정은 남았다. 게임 코드는 변경하지 않았다. [근거](docs/evidence/turret-original-stage-change-20261107.md).
+
+
+후속 시안: 공용 포탑 몸체 Lv.6–10 5개를 추가해 전체 44개 부품 시안을 마련했다. 원작 크기·연결점으로 6종×6단계를 비교하는 [몸체·무장 조립 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-body-concepts-20261107)를 게시했다. 게임 코드는 변경하지 않았다. [시안·프롬프트](Art/Level10/20261107/README.md).
+
+2026-11-07 후속: 원작 포탑 몸체 5단계·무장 30개와 원작/추가 조립 60개를 대조했다. 39개 시안에서 공용 몸체 Lv.6–10 5개가 빠졌다. 강화에 따른 크기 확대 금지와 원작 부품 비례·연결점 기준을 스킬·TODO에 추가했다. 길찾기 사진은 바탕화면에서 확보했다. [대조](docs/evidence/turret-body-scale-20261107.md).
+
+작업 사본은 `.local/worktrees/save-transfer`, 브랜치는 `feat/level10-effects-art`다. develop `55d9d2b`에서 분기했다. [현재 상태](docs/current-status.md), [효과 수정 검사](docs/evidence/level10-effects-20261107.md), [39개 외형 시안](Art/Level10/20261107/README.md)을 먼저 읽는다. 원작 무기 211행과 기존 게임 소스·클라이언트·저장을 유지했다. 효과 수치 수정은 작업 브랜치에 있으며 게임 운영 배포·기기 설치는 하지 않았다. 락온 처치는 아직 TODO다.
+
 # 2026-11-07 사거리·공격력 후속
 
 포탑 6종과 기지 기관총의 추가 단계 사거리를 수정했다. [전수 점검과 수정 결과](docs/evidence/level10-range-damage-20261107.md), [10레벨·HUD 검사](docs/evidence/level10-hud-20261107.md)를 먼저 읽는다. CTest 40개, Chrome·WebKit 치트 검사, 최신 iPad 검사 2개가 통과했다. v0.4 정식·치트 앱 4개 설치, develop→main 병합, 태그·릴리스와 PWA 배포를 마쳤다. [운영 검사](docs/evidence/v04-release-20261107.md)도 읽는다. 기존 캐시의 첫 탭 재열기에서는 구버전 런타임이 남았고 브라우저 완전 재실행 후 최신 데이터·저장 보존·오프라인 실행을 확인했다. 업데이트 안내 개선은 TODO다. 이온 주변 피해 반경·플라즈마 지속 피해 조사는 TODO다. 아래 미구현 기록은 당시 상태다.

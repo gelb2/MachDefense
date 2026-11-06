@@ -1,0 +1,1899 @@
+{
+  "packages": [
+    {
+      "name": "Mach_Defense v1.0.3 - (kr.indieapps.MachDefense).ipa",
+      "sha256": "c7ee8f88fdf63bc4eb4b6c7ed3e497a9edd092e567a5143862bf8c103c1a78e2",
+      "assemblies": [
+        {
+          "kind": 3,
+          "name": "Tur_Gun_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "original_png_sha256": {
+        "Turret_b_01.png": "e7fc1e3f6f3e8e1555a668d3ac5362c73168f4b1c9b1a9a8c7e25b98ebf0f599",
+        "Turret_b_02.png": "8c2d961043e247c4de27f6537243687abcdb3a1ddf8f2f2bc7a4ccdf593c496b",
+        "Turret_b_03.png": "78bc0ea8b52d56124f06113f062817ddb22d48ce1fe79092c9561776c1bcdc67",
+        "Turret_b_04.png": "e83d33ba824fc50f5021dcdf8b84e92924456af264fe5cbe39c913987de4e318",
+        "Turret_b_05.png": "88632715bb2f00b9db27505a0455dead34bac10f41a87cc23ebfc9fd656467b5",
+        "Turret_gun_01.png": "26561b78d891386154bd80ba0695c7fced57cd0d69e862fe3b6013fe558bcf5c",
+        "Turret_gun_02.png": "919141acd5a2a24849871645866b1fdd90117a277a10b3690f1f85241004504c",
+        "Turret_gun_03.png": "b808d13b0a49055f2520585096c2305c4951fd0442442094c698bb38cb4d0d4d",
+        "Turret_gun_04.png": "0c0749cef4ee06650c502f2d0d4e1bfbb60a217c27c5658b89f3d27c31b2f548",
+        "Turret_gun_05.png": "d198417b9bd15432d1707ea6145e19ff20be46c7e4a95b5d020dc0983c566193",
+        "Turret_msl_01.png": "74678ff56e1de50625ba34a4a2dd9e6815adf4c44080e792d98583ed47b65304",
+        "Turret_msl_02.png": "1a082ac4025308740da4873710158090e4ec3404463948f8dbc08c26208c07e0",
+        "Turret_msl_03.png": "13f54e84792f7b598c03484900cdecfb5a441b79cbda9aea013b8899163ca757",
+        "Turret_msl_04.png": "75af97bd9bd1aae8fd20477092a679ff422a741d4645d1e60fe2675af02a04e8",
+        "Turret_msl_05.png": "659a2ca04f039ee5baa82ac71858f04aa6ad609af30cdbf1f619a8d5c92a71e0",
+        "Turret_mg_01.png": "40a7c49aa9f81c627b2c649b7b09ce8481d6473a8c1b6634262cc73d4036054b",
+        "Turret_mg_02.png": "35625e592184b217da30f0e244d19df418dac9ab3423c15651699d7e35129a57",
+        "Turret_mg_03.png": "b40d48ed4b0970c2dccf4609f5d8ccca755bd2079d1ce92c385677848a392f3e",
+        "Turret_mg_04.png": "3440c558331e563f527275c82a40e8f2c729d39a9f97ad2d2c51da0ece9efe63",
+        "Turret_mg_05.png": "d7e0323b48b258ffe0f13de92a091c76aca5c0914bd906d22b64eb4229b22f05",
+        "Turret_ion_01.png": "9cce68a87a57fd36510df0ff2483919c2122d776bffb114d62314ed70bbf2ff7",
+        "Turret_ion_02.png": "6b2537c12a731ec36acce82d1de5e9bb0ace9613e5034ff7f910b70e44726cc4",
+        "Turret_ion_03.png": "b28d75f84f9795c97d3319b67bc29da4ee9c433ad995ff018aa4852186cc7849",
+        "Turret_ion_04.png": "d923c00006b5f53b80553b6ee8a45036b581d5edf0f3373ce2196700f8eb9209",
+        "Turret_ion_05.png": "ee2da5fab3ae46421f00f6173a35ccf40299053923f6448764bcb95abe6ff817",
+        "Turret_lsr_01.png": "bf310ac0b94752d86fb13406aa76daf674f9a7700749ee2c2dc9a1145a639e4f",
+        "Turret_lsr_02.png": "d1104d5ed1ebd274e6bbbccdb87215e4924030b68acd6a6cbb658ea3b04d1bc0",
+        "Turret_lsr_03.png": "6caaecd539809cddb14861707595da2ab582dccac2c5116cfb7d812681b96c03",
+        "Turret_lsr_04.png": "efcb63495c3ce1c2f1c57ac207b2db2595f2ebeb27b681780ce0183c153d67a0",
+        "Turret_lsr_05.png": "d563aaa822bb0f2a41096656c65cf953f5904c219390d9fbfd2d324cc4776ef4",
+        "Turret_pla_01.png": "6a62f6cff49f7e425356aa8400c7db23b42739523928a761e97fae3b7e59ffe3",
+        "Turret_pla_02.png": "999a41d28f52b06d8ecad4ff897b21aebe43781d62c495cba36041635fe41176",
+        "Turret_pla_03.png": "89c77c369fd063522f0e4aee7469c4f186c327529174d24f93ff36761e4e60e9",
+        "Turret_pla_04.png": "e7cbc53ff62ca3eb3a596e7231ba4b27971177959473fb29a99183d8f4debaad",
+        "Turret_pla_05.png": "5263b9e934b1e43839bedec1a6f437facfce80f2445920489249214c503d2b3e"
+      },
+      "machinfo_sha256": "37765a20228a945958dc15cea8561f421a04914c3d57d5ffc3a5ae7ef005e69f",
+      "matches_prepared_machinfo": true,
+      "matching_original_pngs": 35
+    },
+    {
+      "name": "Mach_Defense v1.0.5 - (kr.indieapps.MachDefense).ipa",
+      "sha256": "2c3e9aba0d249827da95c557f905762e3e2df08f79602f5404f93aa8f4c3d052",
+      "assemblies": [
+        {
+          "kind": 3,
+          "name": "Tur_Gun_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "original_png_sha256": {
+        "Turret_b_01.png": "e7fc1e3f6f3e8e1555a668d3ac5362c73168f4b1c9b1a9a8c7e25b98ebf0f599",
+        "Turret_b_02.png": "8c2d961043e247c4de27f6537243687abcdb3a1ddf8f2f2bc7a4ccdf593c496b",
+        "Turret_b_03.png": "78bc0ea8b52d56124f06113f062817ddb22d48ce1fe79092c9561776c1bcdc67",
+        "Turret_b_04.png": "e83d33ba824fc50f5021dcdf8b84e92924456af264fe5cbe39c913987de4e318",
+        "Turret_b_05.png": "88632715bb2f00b9db27505a0455dead34bac10f41a87cc23ebfc9fd656467b5",
+        "Turret_gun_01.png": "26561b78d891386154bd80ba0695c7fced57cd0d69e862fe3b6013fe558bcf5c",
+        "Turret_gun_02.png": "919141acd5a2a24849871645866b1fdd90117a277a10b3690f1f85241004504c",
+        "Turret_gun_03.png": "b808d13b0a49055f2520585096c2305c4951fd0442442094c698bb38cb4d0d4d",
+        "Turret_gun_04.png": "0c0749cef4ee06650c502f2d0d4e1bfbb60a217c27c5658b89f3d27c31b2f548",
+        "Turret_gun_05.png": "d198417b9bd15432d1707ea6145e19ff20be46c7e4a95b5d020dc0983c566193",
+        "Turret_msl_01.png": "74678ff56e1de50625ba34a4a2dd9e6815adf4c44080e792d98583ed47b65304",
+        "Turret_msl_02.png": "1a082ac4025308740da4873710158090e4ec3404463948f8dbc08c26208c07e0",
+        "Turret_msl_03.png": "13f54e84792f7b598c03484900cdecfb5a441b79cbda9aea013b8899163ca757",
+        "Turret_msl_04.png": "75af97bd9bd1aae8fd20477092a679ff422a741d4645d1e60fe2675af02a04e8",
+        "Turret_msl_05.png": "659a2ca04f039ee5baa82ac71858f04aa6ad609af30cdbf1f619a8d5c92a71e0",
+        "Turret_mg_01.png": "40a7c49aa9f81c627b2c649b7b09ce8481d6473a8c1b6634262cc73d4036054b",
+        "Turret_mg_02.png": "35625e592184b217da30f0e244d19df418dac9ab3423c15651699d7e35129a57",
+        "Turret_mg_03.png": "b40d48ed4b0970c2dccf4609f5d8ccca755bd2079d1ce92c385677848a392f3e",
+        "Turret_mg_04.png": "3440c558331e563f527275c82a40e8f2c729d39a9f97ad2d2c51da0ece9efe63",
+        "Turret_mg_05.png": "d7e0323b48b258ffe0f13de92a091c76aca5c0914bd906d22b64eb4229b22f05",
+        "Turret_ion_01.png": "9cce68a87a57fd36510df0ff2483919c2122d776bffb114d62314ed70bbf2ff7",
+        "Turret_ion_02.png": "6b2537c12a731ec36acce82d1de5e9bb0ace9613e5034ff7f910b70e44726cc4",
+        "Turret_ion_03.png": "b28d75f84f9795c97d3319b67bc29da4ee9c433ad995ff018aa4852186cc7849",
+        "Turret_ion_04.png": "d923c00006b5f53b80553b6ee8a45036b581d5edf0f3373ce2196700f8eb9209",
+        "Turret_ion_05.png": "ee2da5fab3ae46421f00f6173a35ccf40299053923f6448764bcb95abe6ff817",
+        "Turret_lsr_01.png": "bf310ac0b94752d86fb13406aa76daf674f9a7700749ee2c2dc9a1145a639e4f",
+        "Turret_lsr_02.png": "d1104d5ed1ebd274e6bbbccdb87215e4924030b68acd6a6cbb658ea3b04d1bc0",
+        "Turret_lsr_03.png": "6caaecd539809cddb14861707595da2ab582dccac2c5116cfb7d812681b96c03",
+        "Turret_lsr_04.png": "efcb63495c3ce1c2f1c57ac207b2db2595f2ebeb27b681780ce0183c153d67a0",
+        "Turret_lsr_05.png": "d563aaa822bb0f2a41096656c65cf953f5904c219390d9fbfd2d324cc4776ef4",
+        "Turret_pla_01.png": "6a62f6cff49f7e425356aa8400c7db23b42739523928a761e97fae3b7e59ffe3",
+        "Turret_pla_02.png": "999a41d28f52b06d8ecad4ff897b21aebe43781d62c495cba36041635fe41176",
+        "Turret_pla_03.png": "89c77c369fd063522f0e4aee7469c4f186c327529174d24f93ff36761e4e60e9",
+        "Turret_pla_04.png": "e7cbc53ff62ca3eb3a596e7231ba4b27971177959473fb29a99183d8f4debaad",
+        "Turret_pla_05.png": "5263b9e934b1e43839bedec1a6f437facfce80f2445920489249214c503d2b3e"
+      },
+      "machinfo_sha256": "37765a20228a945958dc15cea8561f421a04914c3d57d5ffc3a5ae7ef005e69f",
+      "matches_prepared_machinfo": true,
+      "matching_original_pngs": 35
+    },
+    {
+      "name": "MachDefense v1.0.3 - (com.wemadeent.HeavyMachDefence).ipa",
+      "sha256": "882fe8efa9a0c3d51c23da190ee3d30376a1b6766e16cc6b87daf09b98dc92b1",
+      "assemblies": [
+        {
+          "kind": 3,
+          "name": "Tur_Gun_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Gun_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_gun_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Msl_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_msl_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_MG_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_mg_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Ion_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_ion_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Lsr_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_lsr_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_01",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_01",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_01",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_02",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_02",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_02",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_03",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_03",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_03",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_04",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_04",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_04",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": 3,
+          "name": "Tur_Pla_05",
+          "children": [
+            {
+              "kind": 4,
+              "name": "Turret_b_05",
+              "children": [
+                {
+                  "kind": 4,
+                  "name": "Turret_pla_05",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "original_png_sha256": {
+        "Turret_b_01.png": "e7fc1e3f6f3e8e1555a668d3ac5362c73168f4b1c9b1a9a8c7e25b98ebf0f599",
+        "Turret_b_02.png": "8c2d961043e247c4de27f6537243687abcdb3a1ddf8f2f2bc7a4ccdf593c496b",
+        "Turret_b_03.png": "78bc0ea8b52d56124f06113f062817ddb22d48ce1fe79092c9561776c1bcdc67",
+        "Turret_b_04.png": "e83d33ba824fc50f5021dcdf8b84e92924456af264fe5cbe39c913987de4e318",
+        "Turret_b_05.png": "88632715bb2f00b9db27505a0455dead34bac10f41a87cc23ebfc9fd656467b5",
+        "Turret_gun_01.png": "26561b78d891386154bd80ba0695c7fced57cd0d69e862fe3b6013fe558bcf5c",
+        "Turret_gun_02.png": "919141acd5a2a24849871645866b1fdd90117a277a10b3690f1f85241004504c",
+        "Turret_gun_03.png": "b808d13b0a49055f2520585096c2305c4951fd0442442094c698bb38cb4d0d4d",
+        "Turret_gun_04.png": "0c0749cef4ee06650c502f2d0d4e1bfbb60a217c27c5658b89f3d27c31b2f548",
+        "Turret_gun_05.png": "d198417b9bd15432d1707ea6145e19ff20be46c7e4a95b5d020dc0983c566193",
+        "Turret_msl_01.png": "74678ff56e1de50625ba34a4a2dd9e6815adf4c44080e792d98583ed47b65304",
+        "Turret_msl_02.png": "1a082ac4025308740da4873710158090e4ec3404463948f8dbc08c26208c07e0",
+        "Turret_msl_03.png": "13f54e84792f7b598c03484900cdecfb5a441b79cbda9aea013b8899163ca757",
+        "Turret_msl_04.png": "75af97bd9bd1aae8fd20477092a679ff422a741d4645d1e60fe2675af02a04e8",
+        "Turret_msl_05.png": "659a2ca04f039ee5baa82ac71858f04aa6ad609af30cdbf1f619a8d5c92a71e0",
+        "Turret_mg_01.png": "40a7c49aa9f81c627b2c649b7b09ce8481d6473a8c1b6634262cc73d4036054b",
+        "Turret_mg_02.png": "35625e592184b217da30f0e244d19df418dac9ab3423c15651699d7e35129a57",
+        "Turret_mg_03.png": "b40d48ed4b0970c2dccf4609f5d8ccca755bd2079d1ce92c385677848a392f3e",
+        "Turret_mg_04.png": "3440c558331e563f527275c82a40e8f2c729d39a9f97ad2d2c51da0ece9efe63",
+        "Turret_mg_05.png": "d7e0323b48b258ffe0f13de92a091c76aca5c0914bd906d22b64eb4229b22f05",
+        "Turret_ion_01.png": "9cce68a87a57fd36510df0ff2483919c2122d776bffb114d62314ed70bbf2ff7",
+        "Turret_ion_02.png": "6b2537c12a731ec36acce82d1de5e9bb0ace9613e5034ff7f910b70e44726cc4",
+        "Turret_ion_03.png": "b28d75f84f9795c97d3319b67bc29da4ee9c433ad995ff018aa4852186cc7849",
+        "Turret_ion_04.png": "d923c00006b5f53b80553b6ee8a45036b581d5edf0f3373ce2196700f8eb9209",
+        "Turret_ion_05.png": "ee2da5fab3ae46421f00f6173a35ccf40299053923f6448764bcb95abe6ff817",
+        "Turret_lsr_01.png": "bf310ac0b94752d86fb13406aa76daf674f9a7700749ee2c2dc9a1145a639e4f",
+        "Turret_lsr_02.png": "d1104d5ed1ebd274e6bbbccdb87215e4924030b68acd6a6cbb658ea3b04d1bc0",
+        "Turret_lsr_03.png": "6caaecd539809cddb14861707595da2ab582dccac2c5116cfb7d812681b96c03",
+        "Turret_lsr_04.png": "efcb63495c3ce1c2f1c57ac207b2db2595f2ebeb27b681780ce0183c153d67a0",
+        "Turret_lsr_05.png": "d563aaa822bb0f2a41096656c65cf953f5904c219390d9fbfd2d324cc4776ef4",
+        "Turret_pla_01.png": "6a62f6cff49f7e425356aa8400c7db23b42739523928a761e97fae3b7e59ffe3",
+        "Turret_pla_02.png": "999a41d28f52b06d8ecad4ff897b21aebe43781d62c495cba36041635fe41176",
+        "Turret_pla_03.png": "89c77c369fd063522f0e4aee7469c4f186c327529174d24f93ff36761e4e60e9",
+        "Turret_pla_04.png": "e7cbc53ff62ca3eb3a596e7231ba4b27971177959473fb29a99183d8f4debaad",
+        "Turret_pla_05.png": "5263b9e934b1e43839bedec1a6f437facfce80f2445920489249214c503d2b3e"
+      },
+      "machinfo_sha256": "37765a20228a945958dc15cea8561f421a04914c3d57d5ffc3a5ae7ef005e69f",
+      "matches_prepared_machinfo": true,
+      "matching_original_pngs": 35
+    }
+  ],
+  "pixel_differences": [
+    {
+      "family": "b",
+      "from_level": 1,
+      "to_level": 2,
+      "changed_visible_pixels": 1640,
+      "visible_union": 1781,
+      "changed_percent": 92.08
+    },
+    {
+      "family": "b",
+      "from_level": 2,
+      "to_level": 3,
+      "changed_visible_pixels": 1919,
+      "visible_union": 2044,
+      "changed_percent": 93.88
+    },
+    {
+      "family": "b",
+      "from_level": 3,
+      "to_level": 4,
+      "changed_visible_pixels": 157,
+      "visible_union": 2025,
+      "changed_percent": 7.75
+    },
+    {
+      "family": "b",
+      "from_level": 4,
+      "to_level": 5,
+      "changed_visible_pixels": 2068,
+      "visible_union": 2245,
+      "changed_percent": 92.12
+    },
+    {
+      "family": "gun",
+      "from_level": 1,
+      "to_level": 2,
+      "changed_visible_pixels": 935,
+      "visible_union": 935,
+      "changed_percent": 100.0
+    },
+    {
+      "family": "gun",
+      "from_level": 2,
+      "to_level": 3,
+      "changed_visible_pixels": 1035,
+      "visible_union": 1035,
+      "changed_percent": 100.0
+    },
+    {
+      "family": "gun",
+      "from_level": 3,
+      "to_level": 4,
+      "changed_visible_pixels": 1119,
+      "visible_union": 1136,
+      "changed_percent": 98.5
+    },
+    {
+      "family": "gun",
+      "from_level": 4,
+      "to_level": 5,
+      "changed_visible_pixels": 1316,
+      "visible_union": 1317,
+      "changed_percent": 99.92
+    },
+    {
+      "family": "msl",
+      "from_level": 1,
+      "to_level": 2,
+      "changed_visible_pixels": 992,
+      "visible_union": 992,
+      "changed_percent": 100.0
+    },
+    {
+      "family": "msl",
+      "from_level": 2,
+      "to_level": 3,
+      "changed_visible_pixels": 1223,
+      "visible_union": 1239,
+      "changed_percent": 98.71
+    },
+    {
+      "family": "msl",
+      "from_level": 3,
+      "to_level": 4,
+      "changed_visible_pixels": 1193,
+      "visible_union": 1214,
+      "changed_percent": 98.27
+    },
+    {
+      "family": "msl",
+      "from_level": 4,
+      "to_level": 5,
+      "changed_visible_pixels": 1438,
+      "visible_union": 1439,
+      "changed_percent": 99.93
+    },
+    {
+      "family": "mg",
+      "from_level": 1,
+      "to_level": 2,
+      "changed_visible_pixels": 1321,
+      "visible_union": 1321,
+      "changed_percent": 100.0
+    },
+    {
+      "family": "mg",
+      "from_level": 2,
+      "to_level": 3,
+      "changed_visible_pixels": 1434,
+      "visible_union": 1435,
+      "changed_percent": 99.93
+    },
+    {
+      "family": "mg",
+      "from_level": 3,
+      "to_level": 4,
+      "changed_visible_pixels": 1407,
+      "visible_union": 1413,
+      "changed_percent": 99.58
+    },
+    {
+      "family": "mg",
+      "from_level": 4,
+      "to_level": 5,
+      "changed_visible_pixels": 1630,
+      "visible_union": 1630,
+      "changed_percent": 100.0
+    },
+    {
+      "family": "ion",
+      "from_level": 1,
+      "to_level": 2,
+      "changed_visible_pixels": 953,
+      "visible_union": 955,
+      "changed_percent": 99.79
+    },
+    {
+      "family": "ion",
+      "from_level": 2,
+      "to_level": 3,
+      "changed_visible_pixels": 858,
+      "visible_union": 858,
+      "changed_percent": 100.0
+    },
+    {
+      "family": "ion",
+      "from_level": 3,
+      "to_level": 4,
+      "changed_visible_pixels": 968,
+      "visible_union": 972,
+      "changed_percent": 99.59
+    },
+    {
+      "family": "ion",
+      "from_level": 4,
+      "to_level": 5,
+      "changed_visible_pixels": 1068,
+      "visible_union": 1073,
+      "changed_percent": 99.53
+    },
+    {
+      "family": "lsr",
+      "from_level": 1,
+      "to_level": 2,
+      "changed_visible_pixels": 1362,
+      "visible_union": 1362,
+      "changed_percent": 100.0
+    },
+    {
+      "family": "lsr",
+      "from_level": 2,
+      "to_level": 3,
+      "changed_visible_pixels": 1480,
+      "visible_union": 1493,
+      "changed_percent": 99.13
+    },
+    {
+      "family": "lsr",
+      "from_level": 3,
+      "to_level": 4,
+      "changed_visible_pixels": 2639,
+      "visible_union": 2640,
+      "changed_percent": 99.96
+    },
+    {
+      "family": "lsr",
+      "from_level": 4,
+      "to_level": 5,
+      "changed_visible_pixels": 2861,
+      "visible_union": 2861,
+      "changed_percent": 100.0
+    },
+    {
+      "family": "pla",
+      "from_level": 1,
+      "to_level": 2,
+      "changed_visible_pixels": 1189,
+      "visible_union": 1200,
+      "changed_percent": 99.08
+    },
+    {
+      "family": "pla",
+      "from_level": 2,
+      "to_level": 3,
+      "changed_visible_pixels": 1365,
+      "visible_union": 1368,
+      "changed_percent": 99.78
+    },
+    {
+      "family": "pla",
+      "from_level": 3,
+      "to_level": 4,
+      "changed_visible_pixels": 1289,
+      "visible_union": 1301,
+      "changed_percent": 99.08
+    },
+    {
+      "family": "pla",
+      "from_level": 4,
+      "to_level": 5,
+      "changed_visible_pixels": 2458,
+      "visible_union": 2458,
+      "changed_percent": 100.0
+    }
+  ],
+  "source": "Local original package resources; no binary execution in this audit."
+}
