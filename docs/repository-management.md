@@ -2,7 +2,7 @@
 
 2026-11-06 사용자 지시로 GitHub 저장소를 공개 전환했다. 기존 HeavyMach 1·Unity·hm-defense를 덮거나 이력을 가져오지 않는다.
 
-초기 빈 main에서 develop을 만들고 작업 브랜치에서 설정한다. 작업 브랜치→develop→main 순서를 유지한다. 실제 개발은 develop에서 새 브랜치를 만든다. main의 사용자 직접 수정은 병합 전에 fetch·본문 대조한다. 기여자의 커밋·작성자 기록을 보존한다.
+초기 빈 main에서 develop을 만들고 작업 브랜치에서 설정한다. 작업 브랜치→develop→main 순서를 유지한다. 실제 개발은 develop에서 새 브랜치를 만든다. main의 사용자 직접 수정은 병합 전에 fetch·본문 대조한다. 기여자의 커밋·작성자 기록을 보존한다. 2026-11-06 사용자 지시에 따라 push 직전에도 origin/main·origin/develop을 fetch하고 문서 변경을 다시 대조한다. 사용자 웹 편집을 보존하며 충돌을 파일 전체 덮어쓰기로 해소하지 않는다. 원격이 검토 이후 다시 바뀌면 push를 중단하고 새 변경을 병합한다.
 
 `python3 tools/setup.py`는 core.hooksPath를 설치한다. pre-commit은 staged blob, pre-push는 도달 가능한 전체 커밋의 blob을 검사한다. IPA 경로·확장자, 원본 SHA, 원본 실행 바이너리 SHA, LFS 원본 포인터, ZIP 내부 Payload/*.app 및 중첩 IPA를 거절한다. 손상되거나 깊이 제한을 넘는 ZIP도 거절한다. gzip·bzip2·xz·7z·RAR·tar는 준비 단계에서 추적을 거절하며, 필요해지면 로컬 내용 검사부터 추가한다. 개인키는 gitleaks로 검사한다. 푸시 때 사용자가 승인한 GitHub public 상태와 main 병합 부모를 확인한다.
 

@@ -95,3 +95,12 @@ MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지�
 - Version: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_6391b898d0fc8191b6d8b152ebc89a3c`.
 - Safari에서 보고서 본문·표를 확인했다. 문서 연결 검사 통과. 사이트 용량을 맞추기 위해 기존 JSON 8개는 공백만 줄였으며 파싱한 값이 이전 게시본과 같은지 대조했다.
 - 게임 소스·에셋·앱 빌드는 바꾸지 않았다. [REA·브라우저 근거](evidence/lamplighter-research-20261106.json).
+
+## 개발자의 변 글감과 README 재배치 — 2026-11-06
+
+[글감 원문](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#developer-notes-20261106)에 후보 4개와 인터뷰 답변 원문 5개를 함께 실었다. 기존 보고서의 README·개발자의 변 전문과 다운로드도 갱신했다. 관전하는 재미와 긴급지원 기획은 README로 옮겼다.
+
+- 소스 `e0f542e0ac57215c5c5d783d4d123eea55846954`.
+- 배포 `appgdep_6aedcab7bc24819188febdd75691919d`, `succeeded`. 소유자 전용 접근 유지.
+- 원문 5개·후보 4개·119개 앵커·다운로드 일치를 검사했다. Safari 직접 확인은 사용자 창 변경으로 도구가 중단해 완료하지 못했다.
+- 최초 업로드의 256MiB 제한은 JSON 3개의 공백과 macOS 부가 메타데이터 제거로 해결했다. JSON 값과 기존 이미지·원고를 보존했고 배포 묶음의 파일 해시를 소스와 대조했다.

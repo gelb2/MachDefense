@@ -1,15 +1,15 @@
 # MachDefense GitHub 원고
 
-2026-11-06. [공개 저장소](https://github.com/gelb2/MachDefense)와 [웹·PWA](https://gelb2.github.io/MachDefense/)의 문서 전문이다. v0.2는 웹·PWA 첫 릴리스이며 네이티브 앱은 v0.1이다.
+2026-11-06. [공개 저장소](https://github.com/gelb2/MachDefense)와 [웹·PWA](https://gelb2.github.io/MachDefense/)의 문서 전문이다. README와 개발자의 변은 v0.3 원고를 반영했다.
 
 ## 1. README
 
 ### MachDefense
 
-[![Release v0.2](../public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.2)
-[![iOS, iPadOS, Android, Web, PWA](../public/media/badges/platforms.svg)](docs/public/build-and-install.md)
-[![arm64, WebAssembly](../public/media/badges/arch.svg)](docs/public/architecture.md)
-[![C++20, Objective-C++, Kotlin, JavaScript](../public/media/badges/code.svg)](docs/public/architecture.md)
+[![Release v0.3](https://github.com/gelb2/MachDefense/blob/main/docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.3)
+[![iOS, iPadOS, Android, Web, PWA](https://github.com/gelb2/MachDefense/blob/main/docs/public/media/badges/platforms.svg)](https://github.com/gelb2/MachDefense/blob/main/docs/public/build-and-install.md)
+[![arm64, WebAssembly](https://github.com/gelb2/MachDefense/blob/main/docs/public/media/badges/arch.svg)](https://github.com/gelb2/MachDefense/blob/main/docs/public/architecture.md)
+[![C++20, Objective-C++, Kotlin, JavaScript](https://github.com/gelb2/MachDefense/blob/main/docs/public/media/badges/code.svg)](https://github.com/gelb2/MachDefense/blob/main/docs/public/architecture.md)
 
 #### MachDefense를 다시 만든 이유
 
@@ -19,58 +19,76 @@
 
 나는 이것으로 돈을 벌 생각이 없다. 돈은 이승에서나 필요한 것이다.
 
-[개발자의 변 전문](../RESTORATION.md)
+[개발자의 변 전문](https://github.com/gelb2/MachDefense/blob/main/docs/RESTORATION.md)
 
-#### Quick Play
+#### Quick Play — PWA
 
 [**MachDefense 플레이·PWA 설치**](https://gelb2.github.io/MachDefense/)
 
 위 주소를 열어 게임을 설치하거나 브라우저에서 바로 플레이한다. iPhone·iPad는 Safari의 공유 메뉴에서 **홈 화면에 추가**, Android·Mac은 **INSTALL GAME**을 누른다. 자원 다운로드가 끝나면 인터넷 없이도 플레이할 수 있다.
 
-Xcode나 Android Studio로 빌드하기 어렵다면 PWA를 이용하면 된다. [설치와 실행](../public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
+Xcode나 Android Studio로 빌드하기 어렵다면 PWA를 이용하면 된다. [설치와 실행](https://github.com/gelb2/MachDefense/blob/main/docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
+
+##### 레벨업이 힘든 사람을 위한 방법
+
+내 아이폰 네이티브 앱에서 직접 플레이한 진행도의 복원 코드를 공유한다. **Stage 42·보유 유닛 12종·20,329Cr** 상태에서 이어서 플레이할 수 있다. **[복원 코드와 적용 방법](https://github.com/gelb2/MachDefense/blob/main/docs/public/quick-play.md#레벨업이-힘든-사람을-위한-방법)**.
 
 #### 원작의 전투와 성장
 
 MachDefense는 메크와 포탑을 생산해 적 기지를 공격하는 세로 화면 전략 게임이다. 유닛은 전장으로 나가 이동하고 교전한다. 플레이어는 생산과 포탑 배치, 강화와 특수기술 사용을 결정한다. 원작의 80개 미션과 이미지·음원·유닛 데이터를 사용한다.
 
-![Android 정식 앱의 Stage 33](../evidence/images/android-20261106/normal-iphone-stage33.png)
+나는 타워디펜스를 자주 하던 사람이 아니었다. MachDefense에 손이 간 이유도 “그 사람들 후속작인가? 신기하니 해봐야겠다”는 마음이었다. 캐나다와 미국 앱스토어 계정으로 구매했고, 내가 플레이한 게임의 유닛 이름과 화면은 영어였다.
+
+HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛을 생산하고 교전을 지켜봤다. 폭음과 폭발이라는 전투의 기본을 관전하는 재미가 있었다. 나는 사용자의 개입을 줄이면서 교전의 화려함을 보여주는 것이 이 장르의 재미라고 생각한다.
+
+![Android 정식 앱의 Stage 33](https://github.com/gelb2/MachDefense/blob/main/docs/evidence/images/android-20261106/normal-iphone-stage33.png)
 
 오른쪽 목록에서 유닛을 고르면 셀을 사용해 생산한다. 크레딧으로 기지와 장비를 강화하고 특수기술을 보충한다. 프로필에는 미션 진행·장비·강화·자금·특수기술 잔량을 저장한다.
 
-![보유 장비와 강화 단계](../evidence/images/android-20261106/normal-iphone-upgrades.png)
+![보유 장비와 강화 단계](https://github.com/gelb2/MachDefense/blob/main/docs/evidence/images/android-20261106/normal-iphone-upgrades.png)
 
 #### 내가 기획해 추가한 기능
 
-긴급지원은 원작 복원과 별개로 내가 구상한 기능이다. 결제 없이 난관을 넘을 수 있도록 크레딧과 셀을 일정 간격으로 지원하게 했다. 지급 간격·반복 수령·자원 용량을 고려한 계산을 지시했고, Codex가 공통 C++ 코드와 원작 에셋으로 구현했다.
+긴급지원은 원작 복원과 별개로 내가 구상한 기능이다. 타워디펜스의 난관이 결국 결제로 산 아이템을 써야 넘어갈 수 있는 것으로 바뀌는 것이 마음에 걸렸다. 작동하지 않는 인앱결제 버튼을 긴급지원 창으로 바꾼 이유다.
+
+한 번 받고 끝내는 지원을 원한 것은 아니었다. 게임 시간에 따라 소량의 크레딧과 셀을 반복해서 받도록 했다. 사용자가 결제 없이 난관을 돌파할 수 있게 하고 싶었다. 지급량은 현재 셀 용량과 생산량, 미션 보상을 기준으로 계산했다. 지급 간격·반복 수령·자원 용량을 고려한 계산을 지시했고, Codex가 공통 C++ 코드와 원작 에셋으로 구현했다.
 
 #### 화면·플랫폼 확장과 검증 도구
 
 - iPhone·iPad 화면에 맞춘 전장·메뉴·HUD 표시 영역.
 - 같은 C++ 게임 코드와 자원을 사용하는 Android·웹 실행기.
-- 웹판에서 전체 프로필 5개를 한 줄 코드로 내보내고 복원하는 기능.
+- iPhone·iPad·Android·웹/PWA 사이에서 전체 프로필 5개를 한 줄 코드로 옮기는 기능. [사용법](https://github.com/gelb2/MachDefense/blob/main/docs/public/gameplay.md).
 - 저장을 분리한 일반 앱과 치트 검증 앱.
 
-[추가 기능과 기획 의도](../public/features.md) · [조작과 저장](../public/gameplay.md)
+[추가 기능과 기획 의도](https://github.com/gelb2/MachDefense/blob/main/docs/public/features.md) · [조작과 저장](https://github.com/gelb2/MachDefense/blob/main/docs/public/gameplay.md)
 
 #### 플랫폼과 실행 상태
 
 | 플랫폼 | 실행 | 현재 상태 |
 |---|---|---|
-| iPhone·iPad | Xcode 워크스페이스 | v0.1 출시. 실제 기기에서 일반·치트 앱 검사 |
-| Android | Android Studio 또는 APK | v0.1 출시. Galaxy·에뮬레이터 검사 |
+| iPhone·iPad | Xcode 워크스페이스 | v0.3 소스. 실제 일반·치트 앱의 코드 복원 검사 |
+| Android | Android Studio 또는 APK | [v0.3 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.3). Galaxy·에뮬레이터 복원 검사 |
 | 웹 | 브라우저 | GitHub Pages 배포. Mac Chrome·Safari·WebKit 검사 |
 | PWA | 브라우저에서 설치 | 설치·오프라인 실행 지원. 기기별 검사 결과는 검사 문서 참고 |
 | Tauri Mac | 데스크톱 앱 | 개발 예정 |
 
 #### 고친 문제와 남은 일
 
-Codex는 원작에서 유지하던 오디오 컨텍스트를 발사 때마다 연결·해제했고, 오디오 세션 설정도 메인 스레드에서 호출했다. 내가 예상하지 못한 구현이었고, 기지 기관총 발사 때 화면이 끊기는 원인이 됐다. 나는 원작과 포팅판의 동작을 대조하고 Instruments로 측정하라고 지시했다. 복귀 뒤 효과음 소실과 가격·안내·아이콘 누락도 직접 발견해 수정을 요구했다.
+이번에도 목표는 원작자의 의도와 기획, 기능과 성능을 되살리는 것이었다. 포팅판과 재개발판을 직접 플레이하며 차이를 찾았다. 기지 기관총이 발사될 때 화면이 끊기고, 생산 완료음이 빠지고, 백그라운드에서 돌아오면 효과음이 사라졌다. 원작에서 보던 가격과 안내, 선택 효과도 빠져 있었다. 그런 차이를 지적하며 수정을 시켰다.
 
-[트러블슈팅](../public/troubleshooting.md) · [검사 결과](../public/validation.md)
+Codex는 원작에서 유지하던 오디오 컨텍스트를 발사 때마다 연결·해제했고, 오디오 세션 설정도 메인 스레드에서 호출했다. 내가 예상하지 못한 구현이었고, 기지 기관총 발사 때 화면이 끊기는 원인이 됐다. 나는 원작과 포팅판의 동작을 대조하고 Instruments로 측정하라고 지시했다.
 
-원형 구조물과 포탑 밀집 구간의 길찾기, 생산 HUD 전체 유닛 목록과 순서 편집, 강화 상한 확장, 새 락온 기능은 남은 과제다. [전체 TODO](../usability-todo.md) · [기술 구조](../public/architecture.md) · [개발 과정](../public/development-history.md) · [크레딧](../../CREDITS.md)
+개발자의 변을 쓸 때 나는 내 생각을 쭉 쓰는 한편, Codex에게 나를 인터뷰해 보라고 하는 방법도 택한다. Codex가 복원한 게임에서 어떤 장면이 예전 기억을 되살렸느냐고 물었다. 내 답은 “모든 것”이다.
 
-[문서 목차](../public/README.md) · [변경 이력](../../CHANGELOG.md) · [크레딧](../../CREDITS.md)
+[트러블슈팅](https://github.com/gelb2/MachDefense/blob/main/docs/public/troubleshooting.md) · [검사 결과](https://github.com/gelb2/MachDefense/blob/main/docs/public/validation.md)
+
+새 락온 기능도 생각하고 있다. 일정 시간이나 무작위 조건으로 적을 락온하고, 사용자가 그 적을 터치하면 일격에 처치하는 방식이다. HeavyMach1에 넣은 자동조준을 보고 지인이 “아 이거라도 있으니 게임 쉽게 할 수 있다. 어깨 빠지는 줄 알았네”라고 했던 기억이 있다.
+
+MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행동을 바꾸지 않으면서 화면을 보고 판단할 기회를 더하려는 구상이다. 기존 크로스파이어의 에셋과 조준·사거리 로직을 쓰되, 크로스파이어 자체는 그대로 둘 생각이다.
+
+원형 구조물과 포탑 밀집 구간의 길찾기, 생산 HUD 전체 유닛 목록과 순서 편집, 강화 상한 확장, 새 락온 기능은 남은 과제다. [전체 TODO](https://github.com/gelb2/MachDefense/blob/main/docs/usability-todo.md) · [기술 구조](https://github.com/gelb2/MachDefense/blob/main/docs/public/architecture.md) · [개발 과정](https://github.com/gelb2/MachDefense/blob/main/docs/public/development-history.md) · [크레딧](https://github.com/gelb2/MachDefense/blob/main/CREDITS.md)
+
+[문서 목차](https://github.com/gelb2/MachDefense/blob/main/docs/public/README.md) · [변경 이력](https://github.com/gelb2/MachDefense/blob/main/CHANGELOG.md) · [크레딧](https://github.com/gelb2/MachDefense/blob/main/CREDITS.md)
 
 ## 2. 개발자의 변
 
@@ -94,33 +112,13 @@ Codex는 원작에서 유지하던 오디오 컨텍스트를 발사 때마다 �
 
 나에게 MachDefense는 Mach 시리즈의 황혼기 격 작품이다. 그런데 나보다 먼저 MachDefense 복원을 시도한 [mesabloo](https://github.com/Mesabloo/hm-defense)에게는 어린 시절을 장식한 게임이었다고 알고 있다. 그의 시도는 내가 HeavyMach1과 MachDefense를 복원하는 데 큰 영향을 주었다. 그가 HeavyMach1과 2도 알았는지는 모른다.
 
-#### 폭음과 폭발을 관전하는 재미
-
-나는 타워디펜스를 자주 하던 사람이 아니었다. MachDefense에 손이 간 이유도 “그 사람들 후속작인가? 신기하니 해봐야겠다”는 마음이었다. 캐나다와 미국 앱스토어 계정으로 구매했고, 내가 플레이한 게임의 유닛 이름과 화면은 영어였다.
-
-HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛을 생산하고 교전을 지켜봤다. 폭음과 폭발이라는 전투의 기본을 관전하는 재미가 있었다. 나는 사용자의 개입을 줄이면서 교전의 화려함을 보여주는 것이 이 장르의 재미라고 생각한다.
-
-이번에도 목표는 원작자의 의도와 기획, 기능과 성능을 되살리는 것이었다. 포팅판과 재개발판을 직접 플레이하며 차이를 찾았다. 기지 기관총이 발사될 때 화면이 끊기고, 생산 완료음이 빠지고, 백그라운드에서 돌아오면 효과음이 사라졌다. 원작에서 보던 가격과 안내, 선택 효과도 빠져 있었다. 그런 차이를 지적하며 수정을 시켰다.
-
-개발자의 변을 쓸 때 나는 내 생각을 쭉 쓰는 한편, Codex에게 나를 인터뷰해 보라고 하는 방법도 택한다. Codex가 복원한 게임에서 어떤 장면이 예전 기억을 되살렸느냐고 물었다. 내 답은 “모든 것”이다.
-
-#### 결제 대신 긴급지원
-
-타워디펜스의 난관이 결국 결제로 산 아이템을 써야 넘어갈 수 있는 것으로 바뀌는 것이 마음에 걸렸다. 작동하지 않는 인앱결제 버튼을 긴급지원 창으로 바꾼 이유다.
-
-한 번 받고 끝내는 지원을 원한 것은 아니었다. 게임 시간에 따라 소량의 크레딧과 셀을 반복해서 받도록 했다. 사용자가 결제 없이 난관을 돌파할 수 있게 하고 싶었다. 지급량은 현재 셀 용량과 생산량, 미션 보상을 기준으로 계산했다.
-
-새 락온 기능도 생각하고 있다. 일정 시간이나 무작위 조건으로 적을 락온하고, 사용자가 그 적을 터치하면 일격에 처치하는 방식이다. HeavyMach1에 넣은 자동조준을 보고 지인이 “아 이거라도 있으니 게임 쉽게 할 수 있다. 어깨 빠지는 줄 알았네”라고 했던 기억이 있다.
-
-MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행동을 바꾸지 않으면서 화면을 보고 판단할 기회를 더하려는 구상이다. 기존 크로스파이어의 에셋과 조준·사거리 로직을 쓰되, 크로스파이어 자체는 그대로 둘 생각이다.
-
 #### 이 복원판으로 돈을 벌 생각은 없다
 
 나에겐 시간이 얼마 없다. 나는 이것으로 돈을 벌 생각이 없다. 이해관계자가 연락한다면, 이 레포지토리는 미련없이 내릴 것이다.
 
 이 프로젝트로 돈을 벌 생각을 한다면, 나에게 개발자의 길이라는 새로운 길을 알려준 소프트웨어와 그것을 제작한 개발자와 일러스트레이터의 업을 능멸하는 꼴이 된다. 그러므로 이것으로 돈을 벌 생각은 더더욱 하면 안 된다.
 
-[게임 소개](../../README.md) · [문서 목차](../public/README.md)
+[게임 소개](https://github.com/gelb2/MachDefense/blob/main/README.md) · [문서 목차](https://github.com/gelb2/MachDefense/blob/main/docs/public/README.md)
 
 ## 3. 추가 기능과 기획 의도
 
