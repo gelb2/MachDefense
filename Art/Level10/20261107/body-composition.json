@@ -37,12 +37,12 @@
       590
     ]
   },
-  "render_rule": "Uniform fit around mounting pivot within original Lv5 alpha extents; original body/gun socket offsets and sprite canvas retained; source PNGs unchanged. Manual ring landmarks are preview calibration, not finalized asset pivots.",
+  "render_rule": "Uniform scale by original visible longitudinal length; no per-level min-fit or independent X/Y stretching. Source aspect is preserved and measured widths are shown. Draft pivot landmarks require runtime validation.",
   "families": [
     {
       "id": "gun",
       "name": "Rifle",
-      "sheet": "rifle-v1",
+      "sheet": "v2/rifle.webp",
       "sheet_cell_ring_x_fraction": 0.44,
       "sheet_ring_y_fraction": 0.5,
       "original": {
@@ -78,12 +78,16 @@
           ]
         ],
         "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9"
-      }
+      },
+      "source_ring_fraction": [
+        0.375,
+        0.5
+      ]
     },
     {
       "id": "msl",
       "name": "Missile",
-      "sheet": "missile-v1",
+      "sheet": "v2/missile.webp",
       "sheet_cell_ring_x_fraction": 0.49,
       "sheet_ring_y_fraction": 0.5,
       "original": {
@@ -119,12 +123,16 @@
           ]
         ],
         "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08"
-      }
+      },
+      "source_ring_fraction": [
+        0.435,
+        0.49
+      ]
     },
     {
       "id": "mg",
       "name": "Vulcan",
-      "sheet": "vulcan-v1",
+      "sheet": "v2/vulcan.webp",
       "sheet_cell_ring_x_fraction": 0.45,
       "sheet_ring_y_fraction": 0.5,
       "original": {
@@ -160,12 +168,16 @@
           ]
         ],
         "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34"
-      }
+      },
+      "source_ring_fraction": [
+        0.38,
+        0.5
+      ]
     },
     {
       "id": "ion",
       "name": "Ion",
-      "sheet": "ion-v1",
+      "sheet": "v2/ion.webp",
       "sheet_cell_ring_x_fraction": 0.47,
       "sheet_ring_y_fraction": 0.5,
       "original": {
@@ -197,12 +209,16 @@
           ]
         ],
         "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6"
-      }
+      },
+      "source_ring_fraction": [
+        0.42,
+        0.5
+      ]
     },
     {
       "id": "lsr",
       "name": "Laser",
-      "sheet": "laser-v2",
+      "sheet": "v2/laser.webp",
       "sheet_cell_ring_x_fraction": 0.41,
       "sheet_ring_y_fraction": 0.5,
       "original": {
@@ -238,12 +254,16 @@
           ]
         ],
         "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1"
-      }
+      },
+      "source_ring_fraction": [
+        0.44,
+        0.5
+      ]
     },
     {
       "id": "pla",
       "name": "Plasma",
-      "sheet": "plasma-v1",
+      "sheet": "v2/plasma.webp",
       "sheet_cell_ring_x_fraction": 0.44,
       "sheet_ring_y_fraction": 0.5,
       "original": {
@@ -279,7 +299,17 @@
           ]
         ],
         "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc"
-      }
+      },
+      "source_ring_fraction": [
+        0.37,
+        0.5
+      ]
     }
+  ],
+  "revision": 2,
+  "body_sheet": "v2/body.webp",
+  "body_ring_fraction": [
+    0.655,
+    0.49
   ]
 }

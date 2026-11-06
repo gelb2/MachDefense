@@ -1,5 +1,23 @@
 # 추가 레벨 외형 시안
 
+## 2026-11-07 크기·몸체 수정
+
+이전 미리보기는 원작 경계 안에 넣는 배율 때문에 무장이 단계마다 줄었다. 몸체 변화도 무장 아래에 가려졌다. [원본 세 판본의 교체 규칙과 수정 근거](../../../docs/evidence/turret-original-stage-change-20261107.md)를 추가했다.
+
+새 몸체는 측면 장갑·뒤쪽 기계부·통풍구·보강대를 바꿨다. 무장 6종도 원작 최종 부품을 직접 참조해 다시 그렸다. 미리보기는 계열별 포신 길이를 원작과 같게 고정하며, 원본 비율을 유지한 실제 폭도 표시한다. Vulcan 등 일부 폭 차이와 도트 정리는 게임 연결 전에 더 수정해야 한다. 운영 자원은 변경하지 않았다.
+
+| 부품 | 현행 시안 |
+| --- | --- |
+| 공용 몸체 Lv.6–10 | [몸체](body-geometry-v2.png) |
+| Rifle | [무장](rifle-geometry-v2.png) |
+| Missile | [무장](missile-geometry-v2.png) |
+| Vulcan | [무장](vulcan-geometry-v2.png) |
+| Ion | [무장](ion-geometry-v3.png) |
+| Laser | [무장](laser-geometry-v3.png) |
+| Plasma | [무장](plasma-geometry-v2.png) |
+
+[생성 프롬프트·해시](geometry-v2-prompts.json), [배경·형태 수정](geometry-v3-prompts.json), [현행 조립 설정](body-composition.json), [현행 측정값](body-preview-calibration.json). 이온 v2는 배경 잔상이 있어 v3로 수정했다. Vulcan v3는 폭이 지나치게 좁아 사용하지 않는다. 아래는 이전 시안 제작 기록이다.
+
 포탑 무장 6종 Lv.6–10과 기지 몸체·기관총·레이더 Lv.8–10, 39개 부품에 공용 포탑 몸체 Lv.6–10 5개를 더해 총 44개 부품 시안을 만들었다. built-in image_gen으로 원작 PNG를 참조해 만들었다. 원본 이미지는 수정하지 않았다. 게임 연결 전 시안이며 현재 Resources는 기존 최종 레벨 그림을 쓴다.
 
 **2026-11-07 몸체 추가:** 누락됐던 공용 몸체 Lv.6–10 5개를 제작했다. [몸체와 무장 조립 시안](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-body-concepts-20261107)에는 원작 Lv.5와 신규 5단계를 6종별로 나란히 표시했다. 원작 무장·신규 무장·몸체 단독 전환과 무장 회전을 제공한다. 게임 자원은 변경하지 않았다. [원작 대조](../../../docs/evidence/turret-body-scale-20261107.md).
