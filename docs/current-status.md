@@ -1,8 +1,22 @@
+# 웹·PWA 공개 — 2026-11-06
+
+MachDefense 저장소를 공개하고 [웹·PWA](https://gelb2.github.io/MachDefense/)를 배포했다. 정식 빌드는 `4662f418410f8fdb`다. Mac Chrome 설치형 PWA의 설치·독립 창·오프라인 재실행, Chrome·WebKit의 저장·복원·미션 진입 검사를 통과했다. [실행 결과·Tauri 착수 조건](evidence/pwa-release-20261106.md).
+
+v0.2는 웹·PWA 첫 릴리스다. iOS·iPadOS·Android의 배포 앱은 v0.1을 유지한다. 실제 모바일 PWA 검사, Tauri Mac 파일 저장·종료 구현, Apple·Android 복원 메뉴 연결은 남았다. 아래 기록은 각 작업 당시 상태다.
+
+## 이전 문서 갱신 기록
+
 # 2026-11-06 문서 갱신
 
 방문자 문서는 [문서 목차](public/README.md)에서 읽는다. 웹·PWA 구현과 검사 결과는 개발 브랜치 기록이며 현재 main의 실행 코드에 포함되지 않는다. [웹 검사](evidence/web-pwa-20261106.md). 문서 갱신은 앱 버전이나 기기 설치본을 바꾸지 않는다.
 
 # 현재 상태 — 2026-11-05
+
+## 2026-11-06 Web·PWA 구현과 검사
+
+`feat/web-pwa`에서 일반·치트 웹판, 5슬롯 공용 복원 코드, IndexedDB 저장과 오프라인·업데이트를 구현했다. 네이티브/Wasm 각각 37개 검사, 160조건의 게임 상태 대조, Chrome·WebKit 복원·재실행·음향·GPU·저장 실패 검사가 통과했다. 아이폰 Stage 36 저장 복사본을 웹에서 복원했고 아이폰 원본 바이트는 유지했다. Apple·Android 실행기와 기존 계산·음향·자원 파일은 변경하지 않았다. 공용 복원 연결 4파일은 추가 변경했다. [파일별 변경·검사·남은 범위](evidence/web-pwa-20261106.md).
+
+실제 모바일 PWA 설치, 120Hz·장시간 성능과 Tauri Mac은 남았다. develop/main 병합과 게임 공개 배포는 하지 않았다.
 
 ## 2026-11-06 iPhone HUD 상단 사용자 확인
 

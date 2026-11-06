@@ -1,5 +1,18 @@
 # 변경 이력
 
+## v0.2 — 웹·PWA 첫 릴리스
+
+2026-11-06. [플레이·설치](https://gelb2.github.io/MachDefense/) · [설치 안내](docs/public/build-and-install.md)
+
+- 같은 C++ 게임과 자원을 WebAssembly로 빌드하고 WebGL2·브라우저 입력·음향을 연결했다.
+- 설치형 PWA, 자원 다운로드 표시, 오프라인 실행과 업데이트를 제공한다.
+- 진행은 IndexedDB에 저장한다. 슬롯 화면의 GET CODE와 ENTER CODE로 전체 5슬롯을 다른 웹판에 복원한다.
+- README에 웹·PWA 실행 링크와 설치 방법을 추가하고 플랫폼·언어 칩을 갱신했다.
+- Apple·Android 실행기와 기존 전투 계산은 유지했다. 공용 파일 4개에 선택적 복원 서비스와 메뉴 연결을 추가했다.
+
+네이티브 앱 설치본은 v0.1을 유지한다. Tauri Mac, Apple·Android 복원 메뉴, 실제 모바일 PWA의 추가 검사는 후속 과제다. [웹 릴리스 설명](docs/public/web-pwa-release-draft.md) · [배포 검사](docs/evidence/pwa-release-20261106.md).
+
+
 ## 2026-11-06 문서 갱신
 
 README·개발자의 변·기능·개발 과정·기술 구조·설치·검사·트러블슈팅·크레딧을 갱신했다. 긴급지원은 작성자가 기획한 추가 기능으로 구분하고, 자동 실행과 치트 앱의 검사 절차를 설명했다. 원본 출처와 mesabloo의 선행 복원 시도도 연결했다.

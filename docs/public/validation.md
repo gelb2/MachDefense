@@ -1,6 +1,6 @@
 # 검사 결과
 
-v0.1과 main의 앱은 iOS·iPadOS·Android용이다. 아래 웹·PWA와 복원 코드 설명은 `feat/web-pwa` 개발 브랜치의 구현을 다룬다.
+iOS·iPadOS·Android 네이티브 앱과 웹·PWA가 같은 C++ 게임 코드를 사용한다.
 
 일반 앱과 별도 저장을 쓰는 치트 앱으로 조건을 만든다. 전체 유닛·강화·무장·미션을 자동 검사하고, 실제 버튼 입력과 기기의 중단·복귀를 함께 확인한다.
 
@@ -19,3 +19,7 @@ v0.1과 main의 앱은 iOS·iPadOS·Android용이다. 아래 웹·PWA와 복원 
 실제 iPhone·iPad·Galaxy의 설치형 PWA, 120Hz와 장시간 성능, 원작 출력음 녹음 대조는 남아 있다. [Apple 검사](validation.md) · [웹 검사](../evidence/web-pwa-20261106.md)
 
 [게임 소개](../../README.md) · [문서 목차](README.md)
+
+## PWA 배포 후보 검사
+
+2026-11-06 정식 빌드에서 Chrome 설치형 PWA의 독립 창·오프라인 재실행을 확인했다. Chrome·WebKit에서 코드 복원·Stage 36 진입·저장 재실행·GPU 복구·저장 실패 검사를 통과했다. [배포 검사와 Tauri 착수 조건](../evidence/pwa-release-20261106.md).

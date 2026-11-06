@@ -1,13 +1,41 @@
 # TODO
 
+## PWA 배포 후 확인 — 2026-11-06
+
+- [x] 정식 Release 재빌드·Chrome 설치형 PWA와 오프라인 재실행.
+- [x] Chrome·WebKit 정식판 복원·저장·Stage 36·생명주기·GPU 회귀.
+- [x] 사용자 지시에 따른 저장소 공개와 Pages 운영 배포.
+소스 릴리스는 `release/pwa-20261106→develop→main` 순서로 병합하며 [v0.2](https://github.com/gelb2/MachDefense/releases/tag/v0.2)에서 확인한다.
+- [x] 운영 주소에서 Mac Chrome PWA 설치·오프라인·저장·복원 재검사.
+- [ ] 실제 모바일 PWA 검사 및 Tauri 파일 저장·종료 구현.
+- [ ] 데스크톱의 넓은 가로 창에서 타이틀·문 배경의 좌우 늘어짐과 메뉴 크기를 검토한다. Safari 운영 화면에서 관측했다.
+
+[배포 검사와 Tauri 조건](evidence/pwa-release-20261106.md)
+
 ## GitHub 문서·후속 집필 — 2026-11-06
 
 - [x] README와 개발자의 변, 기능·기술·설치·검사·트러블슈팅 원고 작성.
 - [x] 긴급지원 기획 주체, mesabloo의 영향, Internet Archive 출처와 치트 검증 기록 반영.
 - [ ] 개발자의 변 마지막 단락: 사용자가 제공할 문장 또는 시를 별도 단락으로 추가.
-- [ ] 웹·PWA 모바일 검사·게임 배포 후 공개 주소와 실행 상태 갱신.
+- [x] 게임 배포 후 공개 주소·설치 안내·실행 상태 갱신.
+- [ ] 실제 모바일 PWA 설치와 실행 검사.
 
 [원고 전문](editorial/github-manuscripts-20261106.md) · [Sass 집필 자료](editorial/sass-publication-guide.md) · [웹 개발 브랜치 검사](evidence/web-pwa-20261106.md)
+
+## 복원 코드·웹·PWA·Tauri — 2026-11-06
+
+[상세 계획](save-transfer-web-tauri-plan.md) · [구현·검사](evidence/web-pwa-20261106.md). 기존 생산 HUD·길찾기·레벨10 과제는 유지한다.
+
+- [x] MD-SAVE-CODE-01: 원본 전체 5슬롯 코덱·검증·원작 에셋 공용 버튼을 구현했다. 네이티브/Wasm 왕복과 실제 아이폰 저장의 웹 복원을 확인했다.
+- [ ] 단일 슬롯·확장 설정과 Apple/Android 복원 UI 서비스 연결. 현재 기본값은 비활성이다.
+- [x] MD-WEB-01: 같은 Core·Audio를 쓰는 WebGL2 실행기, Asyncify 저장 완료, 입력·음향·GPU 복구를 구현하고 Chrome/WebKit에서 검사했다.
+- [x] MD-PWA-01 로컬: 자원 다운로드·해시·설치 안내·오프라인·업데이트·캐시 복구와 저장 보존. Mac Chrome 설치형 PWA 실행·종료 확인.
+- [ ] MD-PWA-DEVICE-01: 공개 Pages 주소에서 iPhone/iPad/Galaxy 설치·실제 터치·잠금 복귀·음향·장시간 성능을 검사한다. 운영 주소는 https://gelb2.github.io/MachDefense/ 이다.
+- [x] MD-WEB-FRAME-01: 160조건의 전투·음향·저장 일치. 144,000프레임의 비실수 메타데이터도 일치. 실수 값 차이의 최대값은 0.00006103515625이며 원래 게임 소스는 변경하지 않았다.
+- [ ] 120Hz 표시 주기·장시간 메모리/발열과 실제 음향 출력 검사를 마친다.
+- [x] 기존 플랫폼 회귀: 기준 2,972파일 중 복원 연결 4파일만 변경. 네이티브 수정 전후 160조건 추적 일치, iOS 시뮬레이터·Android 일반/치트 빌드 성공.
+- [ ] MD-TAURI-MAC-01: 검증한 웹 산출물을 포함하고 OS 파일 저장·복원 중단·창·종료를 연결한다.
+- [ ] Apple·Android 복원 UI 연결 후 각 플랫폼 교차 복원 검사.
 
 ## 남은 과제 요약 — 2026-11-06 HUD 사용자 확인 후
 
