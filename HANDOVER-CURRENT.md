@@ -1,5 +1,7 @@
 # 현재 작업 — 타이틀·HUD·원작 대조
 
+2026-11-06 사용자 검수: 1280×800 가로창 후보는 메크·탱크 왜곡으로 기각됐다. 해당 Wide.png를 채택하거나 다음 앱·운영 배포에 포함하지 않는다. 원본 기체의 형태·부품·비율을 보존하는 외곽으로 다시 작업한다. 다른 비율 시안도 승인된 것으로 취급하지 않는다. 생산 HUD는 INSTALL·UNINSTALL을 보존하고 설치된 전체 목록만 스크롤한다. 상세 조건은 [HUD 설계](docs/research/production-hud-scroll-20261106.md)를 따른다.
+
 작업 사본은 `.local/worktrees/save-transfer`, 브랜치는 `feat/title-hud-original-audit`다. 원격 develop `22024dd`에서 분기했다. [TODO](docs/usability-todo.md) 최상단과 [현재 상태](docs/current-status.md)를 먼저 읽는다. 원본 비교와 생산 HUD 설계·강화/생산량 조사 문서는 과제별로 커밋했다.
 
 타이틀 후보는 C++ 4개·Chrome/WebKit 10개 화면 조건을 통과했다. 이미지 연결부 검수와 기기 설치는 남았다. main·develop 병합과 게임 운영 배포를 하지 않았다. 사용자 개발자의 변 최종 원문은 main `40d3fd1` 그대로 보존한다.
