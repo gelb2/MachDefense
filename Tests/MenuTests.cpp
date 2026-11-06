@@ -100,6 +100,39 @@ int main(int argc,char** argv){
         assert(selectedRequest&&selectedRequest->mission==std::min(progress,79u));
         assert(paritySave.stage(0)==progress&&parityHost.writes==0);
     }
+    // Expanded title art covers the whole viewport, preserves one original
+    // center, and does not accumulate meshes or writes while blinking.
+    for(const auto dims:{Vec2{320,480},Vec2{390,844},Vec2{820,1180},Vec2{1280,800},Vec2{1600,900}}){
+        Host titleHost;auto titleSave=SaveData::empty(790);Menu titleMenu(r,titleHost,titleSave);
+        FrameLayout layout;layout.resize(dims.x,dims.y);titleMenu.setLayout(layout);
+        for(unsigned step=0;step<80;++step)titleMenu.tick();
+        const auto& frame=titleMenu.frame();unsigned originals=0;
+        for(const auto& sprite:frame.sprites){
+            if(sprite.image=="Title.jpg"){
+                ++originals;assert(sprite.destination.width==320&&sprite.destination.height==480);
+                assert(!sprite.flipX&&!sprite.flipY);
+            }
+            if(sprite.image.starts_with("Generated/Title/")){
+                assert(std::filesystem::exists(r.root/sprite.image));
+                assert(sprite.sourcePx&&sprite.sourcePx->width>0&&sprite.sourcePx->height>0);
+                const bool wide=sprite.image.ends_with("Wide.png");
+                assert(sprite.sourcePx->x>=0&&sprite.sourcePx->y>=0);
+                assert(sprite.sourcePx->x+sprite.sourcePx->width<=(wide?1586:852));
+                assert(sprite.sourcePx->y+sprite.sourcePx->height<=(wide?992:1846));
+            }
+        }
+        assert(originals==1&&titleHost.writes==0);
+        assert(frame.meshes.size()==(dims.x==320&&dims.y==480?0:8));
+        for(float y=.25f;y<layout.height;y+=4)for(float x=.25f;x<layout.width;x+=4){
+            assert(std::any_of(frame.sprites.begin(),frame.sprites.end(),[&](const Sprite& sprite){
+                if(sprite.image!="Title.jpg"&&!sprite.image.starts_with("Generated/Title/"))return false;
+                auto d=sprite.destination;return x>=d.x&&y>=d.y&&x<d.x+d.width&&y<d.y+d.height;
+            }));
+        }
+        tap(titleMenu,layout.width/2,layout.height/2);
+        assert(titleMenu.screen()==Menu::Screen::profiles&&titleHost.writes==0);
+        assert(titleMenu.frame().meshes.empty()&&!hasImage(titleMenu.frame(),"Title.jpg"));
+    }
     for(const auto dims: {Vec2{420,912},Vec2{1024,1366}}){
         Host resizedHost;auto resizedSave=SaveData::empty(789);Menu resized(r,resizedHost,resizedSave);
         FrameLayout layout;layout.resize(dims.x,dims.y,24,20);resized.setLayout(layout);
