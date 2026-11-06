@@ -6,6 +6,7 @@
 #include "Core/Contracts/DarwinRandom.hpp"
 #include "Core/Contracts/FrameLayout.hpp"
 #include <array>
+#include <functional>
 #include <optional>
 
 namespace md {
@@ -14,6 +15,7 @@ class Menu {
 public:
     enum class Screen { title, profiles, missions };
     Menu(ResourceAccess&,HostServices&,SaveData&,bool deferredTransitions=false);
+    void setProfilePreparation(std::function<void(std::size_t)> prepare){prepareProfile_=std::move(prepare);}
     void tick();
     void setLayout(const FrameLayout&);
     void touch(const Touch&);
@@ -30,6 +32,7 @@ private:
     ResourceAccess& resources_;
     HostServices& host_;
     SaveData& save_;
+    std::function<void(std::size_t)> prepareProfile_;
     SpriteFont font_;
     DataTable maps_;
     Frame frame_;

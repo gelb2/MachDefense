@@ -55,6 +55,7 @@ bool Menu::persist(){
 }
 void Menu::selectProfile(std::size_t index){
     const auto before=save_;save_.selectProfile(index,now());
+    if(prepareProfile_)prepareProfile_(index);
     if(!persist()){save_=before;return;}showMissions(index);
 }
 void Menu::newProfile(){
