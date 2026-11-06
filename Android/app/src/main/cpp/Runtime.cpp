@@ -1,4 +1,5 @@
 #include "Runtime.hpp"
+#include "../../../../../Modules/SaveTransfer/FileStore.hpp"
 #include "Core/Simulation/World.hpp"
 #include <android/log.h>
 #include <algorithm>
@@ -49,7 +50,7 @@ void Runtime::surface(ANativeWindow* window){
     eglSwapInterval(display_,1);eglQuerySurface(display_,surface_,EGL_WIDTH,&width_);eglQuerySurface(display_,surface_,EGL_HEIGHT,&height_);++contexts_;resize();
 }
 void Runtime::insets(int top,int bottom,float density){top_=std::max(0,top);bottom_=std::max(0,bottom);density_=std::max(1.f,density);resize();}
-void Runtime::resize(){if(game_&&width_>0&&height_>0)game_->resize(width_/density_,height_/density_,top_/density_,bottom_/density_);}
+void Runtime::resize(){if(game_&&width_>0&&height_>0){game_->resize(width_/density_,height_/density_,top_/density_,bottom_/density_);if(transferVisible_)layoutTransferField(transferBounds_);}}
 void Runtime::cancelTouches(){auto old=std::move(touches_);touches_.clear();if(game_)for(auto [id,t]:old){t.phase=TouchPhase::cancelled;game_->touch(t);}}
 void Runtime::updateAudio(){effects_.setActive(active_&&audioFocus_);callbacks_.musicActive(active_&&audioFocus_);}
 void Runtime::active(bool on){active_=on;previousTime_=0;if(!on)cancelTouches();if(game_)game_->setActive(on);updateAudio();}
@@ -74,12 +75,15 @@ void Runtime::touch(unsigned id,int phase,float x,float y){
         if(t.phase==TouchPhase::ended||t.phase==TouchPhase::cancelled)touches_.erase(found);else found->second=t;game_->touch(t);}
 }
 std::optional<Bytes> Runtime::readSave(){
+    if(!transfer::FileStore(directory_+"/MachDefense.sav").recover())throw std::runtime_error("Cannot finish save recovery");
+    restoreBlocked_=false;
     ++reads_;auto path=directory_+"/MachDefense.sav";FILE* file=fopen(path.c_str(),"rb");if(!file){if(errno==ENOENT)return {};throw std::runtime_error("Cannot read save");}
     struct Close{FILE*p;~Close(){fclose(p);}} close{file};
     if(fseek(file,0,SEEK_END))throw std::runtime_error("Cannot seek save");auto length=ftell(file);if(length<0||length>1024*1024)throw std::runtime_error("Invalid save size");rewind(file);
     Bytes bytes(static_cast<std::size_t>(length));if(fread(bytes.data(),1,bytes.size(),file)!=bytes.size())throw std::runtime_error("Cannot read complete save");return bytes;
 }
 bool Runtime::writeSave(std::span<const std::uint8_t> bytes){
+    if(restoreBlocked_)return false;
     if(bytes.empty())return false;auto dest=directory_+"/MachDefense.sav",temp=dest+".tmp";
     int fd=open(temp.c_str(),O_WRONLY|O_CREAT|O_TRUNC|O_CLOEXEC,0600);if(fd<0)return false;
     bool ok=true;std::size_t pos=0;while(pos<bytes.size()){auto n=write(fd,bytes.data()+pos,bytes.size()-pos);if(n<0&&errno==EINTR)continue;if(n<=0){ok=false;break;}pos+=n;}
@@ -92,6 +96,38 @@ void Runtime::playSoundAt(std::string_view name,Vec2 p,float gain){effects_.play
 void Runtime::playMusic(std::string_view name,float gain){callbacks_.music(std::string(name),gain);}
 void Runtime::stopMusic(){callbacks_.music("",0);}
 void Runtime::requestName(std::string name,std::size_t max,std::function<void(std::optional<std::string>)> cb){cancelTouches();nameCompletion_=std::move(cb);callbacks_.name(std::move(name),unsigned(max),++nameGeneration_);}
+Rect Runtime::transferPixelBounds()const{
+    const auto& frame=game_->frame();
+    const float scale=std::min(width_/frame.logicalWidth,height_/frame.logicalHeight);
+    const float w=std::round(frame.logicalWidth*scale),h=std::round(frame.logicalHeight*scale);
+    const float sx=w/frame.logicalWidth,sy=h/frame.logicalHeight;
+    return {(width_-w)/2+transferBounds_.x*sx,(height_-h)/2+transferBounds_.y*sy,transferBounds_.width*sx,transferBounds_.height*sy};
+}
+void Runtime::openTransferField(std::string value,bool readOnly,Rect bounds){
+    cancelTouches();transferText_=std::move(value);transferReadOnly_=readOnly;transferBounds_=bounds;transferVisible_=true;
+    if(callbacks_.transferOpen)callbacks_.transferOpen(transferText_,readOnly,transferPixelBounds(),++transferGeneration_);
+}
+void Runtime::layoutTransferField(Rect bounds){
+    transferBounds_=bounds;
+    if(transferVisible_&&callbacks_.transferLayout)callbacks_.transferLayout(transferPixelBounds(),transferGeneration_);
+}
+void Runtime::closeTransferField(){
+    if(!transferVisible_)return;
+    transferVisible_=false;transferText_.clear();
+    if(callbacks_.transferClose)callbacks_.transferClose(transferGeneration_);
+    ++transferGeneration_;
+}
+void Runtime::transferTextChanged(std::uint64_t generation,std::string value){
+    if(!transferVisible_||transferReadOnly_||generation!=transferGeneration_)return;
+    // Reject the newly entered value; never leave an older valid code cached.
+    transferText_=value.size()<=120000?std::move(value):std::string{};
+}
+void Runtime::copyTransferCode(std::string value){if(callbacks_.transferCopy)callbacks_.transferCopy(std::move(value));}
+bool Runtime::restoreSave(std::span<const std::uint8_t> bytes){
+    if(restoreBlocked_)throw std::runtime_error("Close and reopen the app to finish save recovery.");
+    try{return transfer::FileStore(directory_+"/MachDefense.sav").restore(bytes);}
+    catch(...){restoreBlocked_=true;throw;}
+}
 void Runtime::nameResult(std::uint64_t generation,std::optional<std::string> value){if(!nameCompletion_||generation!=nameGeneration_)return;auto cb=std::move(nameCompletion_);nameCompletion_={};cb(std::move(value));}
 void Runtime::command(const std::string& name,int a,int b){
 #if MD_VALIDATION
@@ -113,6 +149,7 @@ void Runtime::command(const std::string& name,int a,int b){
 }
 std::string Runtime::status(bool sprites){
     std::ostringstream out;out<<"{\"error\":"<<jsonString(error)<<",\"frames\":"<<frames_<<",\"contexts\":"<<contexts_<<",\"uploads\":"<<renderer_.textureUploads<<",\"audioBuffers\":"<<effects_.loaded()<<",\"sounds\":"<<effects_.playCount()<<",\"audioError\":"<<jsonString(effects_.error())<<",\"reads\":"<<reads_<<",\"writes\":"<<writes_<<",\"active\":"<<(active_?"true":"false")<<",\"focus\":"<<(audioFocus_?"true":"false");
+    out<<",\"transferVisible\":"<<(transferVisible_?"true":"false")<<",\"transferReadOnly\":"<<(transferReadOnly_?"true":"false")<<",\"transferLength\":"<<transferText_.size()<<",\"transferGeneration\":"<<transferGeneration_;
     if(game_){const auto& f=game_->frame();out<<",\"width\":"<<f.logicalWidth<<",\"height\":"<<f.logicalHeight<<",\"pixelWidth\":"<<width_<<",\"pixelHeight\":"<<height_;
 #if MD_VALIDATION
         out<<",\"probeSeconds\":"<<effects_.playbackTime("HMG09.wav");

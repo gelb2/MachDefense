@@ -12,13 +12,15 @@
 
 설치한 앱을 열어 다운로드가 완료됐는지 확인한다. 게임 진행은 기기에 저장한다. 다른 기기로 옮길 때는 슬롯 화면의 **GET CODE**로 코드를 받고 **ENTER CODE**에 입력한다. 전체 5슬롯을 교체한다. 사이트 데이터를 지우기 전에는 코드를 보관한다.
 
+[PWA 안내와 공유 복원 코드](quick-play.md)
+
 ## iPhone·iPad
 
 Apple Silicon Mac의 Xcode에서 `Apple/MachDefense.xcworkspace`를 연다. 일반 앱은 `MachDefense`, 치트 앱은 `MachDefenseCheat` 스킴을 선택한다. 시뮬레이터나 연결한 기기를 고른다. 실기기에서는 자신의 개발 팀으로 서명한다. 최소 배포 대상은 iOS·iPadOS 15.0이다.
 
 ## Android
 
-[Releases](https://github.com/gelb2/MachDefense/releases/tag/v0.1)의 APK를 설치하거나 Android Studio에서 `Android/`를 연다. 빌드 환경은 SDK36·NDK26.3.11579264·CMake3.22.1·JDK17이다. `normalDebug` 또는 `cheatDebug`와 연결한 기기를 선택한다. Android8(API26) 이상 arm64를 대상으로 한다.
+[Releases](https://github.com/gelb2/MachDefense/releases/tag/v0.3)의 일반·치트 APK를 설치하거나 Android Studio에서 `Android/`를 연다. 빌드 환경은 SDK36·NDK26.3.11579264·CMake3.22.1·JDK17이다. `normalDebug` 또는 `cheatDebug`와 연결한 기기를 선택한다. Android8(API26) 이상 arm64를 대상으로 한다.
 
 ## 소스에서 빌드
 

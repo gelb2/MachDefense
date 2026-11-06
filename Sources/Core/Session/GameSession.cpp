@@ -33,7 +33,11 @@ public:
     void requestName(std::string n,std::size_t max,std::function<void(std::optional<std::string>)> cb)override{host.requestName(std::move(n),max,std::move(cb));}
     bool restoreSave(std::span<const std::uint8_t> bytes)override{return host.restoreSave(bytes);}
     bool supportsSaveTransfer()const override{return host.supportsSaveTransfer();}
-    void transferText(std::string s,bool exporting,std::function<void(std::optional<std::string>)> cb)override{host.transferText(std::move(s),exporting,std::move(cb));}
+    void openTransferField(std::string s,bool ro,Rect r)override{host.openTransferField(std::move(s),ro,r);}
+    void layoutTransferField(Rect r)override{host.layoutTransferField(r);}
+    std::string transferFieldText()const override{return host.transferFieldText();}
+    void closeTransferField()override{host.closeTransferField();}
+    void copyTransferCode(std::string s)override{host.copyTransferCode(std::move(s));}
     void refreshMusic(){if(!song.empty())host.playMusic(song,music);}
 };
 }

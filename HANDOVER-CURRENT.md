@@ -1,4 +1,11 @@
+# v0.3 릴리스 — 2026-11-06
+
+공용 복원 연결과 Quick Play·아이폰 공유 코드를 기능 브랜치→develop→main 순서로 반영한다. Galaxy 정식 저장 보존, 치트 9조건, PWA 오프라인 전투·재실행을 확인했다. 사용자는 iPhone↔iPad PWA 왕복과 미션 클리어를 확인했다. [현재 상태](docs/current-status.md), [v0.3 변경 이력](CHANGELOG.md), [검사 근거](docs/evidence/save-transfer-all-platforms-20261106.md)를 먼저 읽는다. 아래는 이전 단계 기록이다.
+
 # 웹·PWA 공개 — 2026-11-06
+
+2026-11-06 `feat/save-transfer-all-platforms`: 슬롯 화면의 공용 코드 복원 UI와 Apple·Android·Web 연결을 구현했다. 사용자 iPhone 원본은 읽기 전용 백업으로 보존하고 검사에 복사본을 쓴다. PWA 빌드 `d679d7b1061097b5`를 gh-pages `86cef6e`로 배포하고 운영 주소에서 재검사했다. [최신 검사 결과와 남은 실기기 범위](docs/evidence/save-transfer-all-platforms-20261106.md)를 먼저 읽는다. 아래는 이전 배포 기록이다.
+
 
 사용자 지시로 GitHub를 공개하고 [MachDefense 웹·PWA](https://gelb2.github.io/MachDefense/)를 배포했다. 작업은 `release/pwa-20261106`에서 정리해 develop→main으로 병합한다. 버전은 v0.2다. PWA 설치 식별 주소를 수정했고 운영 설치·오프라인 재실행·저장·복원 검사를 통과했다. [현재 상태](docs/current-status.md), [검사·Tauri 착수 조건](docs/evidence/pwa-release-20261106.md), [남은 과제](docs/usability-todo.md)를 따른다. 아래는 이전 단계 기록이다.
 

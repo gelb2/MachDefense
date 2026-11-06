@@ -3,11 +3,13 @@
 #import "MDRenderer.h"
 #import "MDAudio.h"
 #include "Core/Contracts/Game.hpp"
+#include "../../../Modules/SaveTransfer/FileStore.hpp"
 #include <algorithm>
 #include <map>
 #include <stdexcept>
 #include <vector>
 #include <cstdio>
+#include <cmath>
 
 #ifndef MD_VALIDATION
 #define MD_VALIDATION 0
@@ -38,16 +40,20 @@ public:
     md::Vec2 imageSize(std::string_view name) override{return [renderer_ imageSize:std::string(name)];}
 };
 }
-@interface MDGameView:UIView
+@interface MDGameView:UIView<UITextViewDelegate>
 - (instancetype)initWithFrame:(CGRect)frame saveDirectory:(NSURL*)directory;
 - (void)setApplicationActive:(BOOL)active;
 - (void)shutdown;
+- (void)openTransferField:(std::string)initial readOnly:(BOOL)readOnly bounds:(md::Rect)bounds;
+- (void)layoutTransferField:(md::Rect)bounds;
+- (std::string)transferFieldText;
+- (void)closeTransferField;
 - (void)requestName:(std::string)initial maximum:(std::size_t)maximum completion:(std::function<void(std::optional<std::string>)>)completion;
 @end
 namespace {
 class Services final:public md::HostServices {
     MDGameView* __weak view_;MDAudio* __strong audio_;NSURL* __strong saveURL_;
-    std::string music_;float musicGain_=1;
+    std::string music_;float musicGain_=1;bool restoreWriteBlocked_=false;
 public:
     bool audit=false;unsigned auditSounds=0,auditWrites=0;double auditAudioMs=0;
 private:
@@ -60,15 +66,30 @@ public:
         saveURL_=[root URLByAppendingPathComponent:@"MachDefense.sav"];
     }
     std::optional<md::Bytes> readSave() override {
+        if(!md::transfer::FileStore(saveURL_.fileSystemRepresentation).recover())throw std::runtime_error("Cannot complete save recovery");
+        restoreWriteBlocked_=false;
         NSError* error=nil;NSData* data=[NSData dataWithContentsOfURL:saveURL_ options:0 error:&error];
         if(!data){if(error.code==NSFileReadNoSuchFileError)return {};throw std::runtime_error("Cannot read save file");}
         const auto* b=static_cast<const std::uint8_t*>(data.bytes);return md::Bytes(b,b+data.length);
     }
     bool writeSave(std::span<const std::uint8_t> bytes) override {
-        if(bytes.empty())return false;
+        if(restoreWriteBlocked_||bytes.empty())return false;
         if(audit)++auditWrites;
         NSError* error=nil;BOOL ok=[[NSData dataWithBytes:bytes.data() length:bytes.size()] writeToURL:saveURL_ options:NSDataWritingAtomic error:&error];
         if(!ok)NSLog(@"MachDefense save failed: %@",error);return ok;
+    }
+    bool restoreSave(std::span<const std::uint8_t> bytes) override {
+        if(restoreWriteBlocked_)throw std::runtime_error("Close and reopen the app to finish save recovery");
+        try{return md::transfer::FileStore(saveURL_.fileSystemRepresentation).restore(bytes);}
+        catch(...){restoreWriteBlocked_=true;throw;}
+    }
+    bool supportsSaveTransfer() const override{return true;}
+    void openTransferField(std::string initial,bool readOnly,md::Rect bounds) override {[view_ openTransferField:std::move(initial) readOnly:readOnly bounds:bounds];}
+    void layoutTransferField(md::Rect bounds) override {[view_ layoutTransferField:bounds];}
+    std::string transferFieldText() const override {MDGameView* view=view_;return view?[view transferFieldText]:std::string{};}
+    void closeTransferField() override {[view_ closeTransferField];}
+    void copyTransferCode(std::string text) override {
+        UIPasteboard.generalPasteboard.string=[[NSString alloc] initWithBytes:text.data() length:text.size() encoding:NSUTF8StringEncoding];
     }
     void playSound(std::string_view name,float gain,float pan) override {
         const double start=audit?CACurrentMediaTime():0;
@@ -93,6 +114,8 @@ public:
 };
 }
 @implementation MDGameView {
+    UITextView* _transferField;
+    md::Rect _transferBounds;
     MDRenderer* _renderer;
     MDAudio* _audio;
     CADisplayLink* _displayLink;
@@ -136,6 +159,7 @@ public:
 - (void)dealloc {[_displayLink invalidate];[NSNotificationCenter.defaultCenter removeObserver:self];}
 - (void)shutdown {
     if(_shutdown)return;_shutdown=YES;++_nameRequestGeneration;_nameInputPending=NO;
+    [self closeTransferField];
     [self setApplicationActive:NO];[_displayLink invalidate];_displayLink=nil;
     [self.window.rootViewController dismissViewControllerAnimated:NO completion:nil];
     [NSNotificationCenter.defaultCenter removeObserver:self];
@@ -143,6 +167,52 @@ public:
 - (void)layoutSubviews {
     [super layoutSubviews];self.contentScaleFactor=self.window.screen.scale?:UIScreen.mainScreen.scale;self.layer.contentsScale=self.contentScaleFactor;
     if(_game){_game->resize(float(self.bounds.size.width),float(self.bounds.size.height),float(self.safeAreaInsets.top),float(self.safeAreaInsets.bottom));if(_active)[_renderer drawFrame:_game->frame() toLayer:(CAEAGLLayer*)self.layer];}
+    if(_transferField)[self layoutTransferField:_transferBounds];
+}
+- (void)openTransferField:(std::string)initial readOnly:(BOOL)readOnly bounds:(md::Rect)bounds {
+    [self closeTransferField];if(_shutdown)return;
+    _transferField=[[UITextView alloc] initWithFrame:CGRectZero];
+    _transferField.accessibilityIdentifier=@"MDRecoveryCode";
+    _transferField.backgroundColor=UIColor.clearColor;
+    _transferField.textColor=UIColor.whiteColor;
+    _transferField.font=[UIFont monospacedSystemFontOfSize:12 weight:UIFontWeightRegular];
+    _transferField.textContainerInset=UIEdgeInsetsMake(4,4,4,4);
+    _transferField.editable=!readOnly;_transferField.selectable=YES;
+    _transferField.keyboardType=UIKeyboardTypeASCIICapable;
+    _transferField.autocapitalizationType=UITextAutocapitalizationTypeNone;
+    _transferField.autocorrectionType=UITextAutocorrectionTypeNo;
+    _transferField.spellCheckingType=UITextSpellCheckingTypeNo;
+    _transferField.smartQuotesType=UITextSmartQuotesTypeNo;
+    _transferField.smartDashesType=UITextSmartDashesTypeNo;
+    _transferField.smartInsertDeleteType=UITextSmartInsertDeleteTypeNo;
+    _transferField.inputAssistantItem.leadingBarButtonGroups=@[];
+    _transferField.inputAssistantItem.trailingBarButtonGroups=@[];
+    _transferField.delegate=self;
+    _transferField.text=[[NSString alloc] initWithBytes:initial.data() length:initial.size() encoding:NSUTF8StringEncoding]?:@"";
+    [self addSubview:_transferField];[self layoutTransferField:bounds];
+    if(!readOnly)[_transferField becomeFirstResponder];
+}
+- (void)layoutTransferField:(md::Rect)bounds {
+    _transferBounds=bounds;if(!_transferField||!_game)return;
+    const auto& frame=_game->frame();if(frame.logicalWidth<=0||frame.logicalHeight<=0)return;
+    const CGFloat scale=self.contentScaleFactor?:1;
+    const CGFloat pixelWidth=self.bounds.size.width*scale,pixelHeight=self.bounds.size.height*scale;
+    const CGFloat factor=std::min(pixelWidth/frame.logicalWidth,pixelHeight/frame.logicalHeight);
+    const CGFloat width=std::round(frame.logicalWidth*factor),height=std::round(frame.logicalHeight*factor);
+    const CGFloat x=(pixelWidth-width)/2,y=(pixelHeight-height)/2;
+    _transferField.frame=CGRectMake((x+bounds.x*width/frame.logicalWidth)/scale,(y+bounds.y*height/frame.logicalHeight)/scale,
+                                  bounds.width*width/frame.logicalWidth/scale,bounds.height*height/frame.logicalHeight/scale);
+}
+- (std::string)transferFieldText {
+    NSString* value=_transferField.text;return value.UTF8String?std::string(value.UTF8String):std::string{};
+}
+- (void)closeTransferField {
+    [_transferField resignFirstResponder];_transferField.delegate=nil;[_transferField removeFromSuperview];_transferField=nil;
+}
+- (BOOL)textView:(UITextView*)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString*)text {
+    if(textView!=_transferField)return YES;
+    NSString* next=[textView.text stringByReplacingCharactersInRange:range withString:text];
+    return [next lengthOfBytesUsingEncoding:NSUTF8StringEncoding]<=120000;
 }
 - (void)display:(CADisplayLink*)link {
     if(!_active||_nameInputPending||!_game)return;
@@ -197,6 +267,7 @@ public:
     });
 }
 - (void)setApplicationActive:(BOOL)active {
+    if(!active)[_transferField resignFirstResponder];
     _sceneActive=active;
     _audioSessionReady=NO;
     [self updateActivity]; // Pause players before requesting session deactivation.

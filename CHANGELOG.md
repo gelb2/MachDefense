@@ -1,5 +1,29 @@
 # 변경 이력
 
+## v0.3 — 기기 간 복원 코드와 Quick Play
+
+2026-11-06. [플레이·PWA 설치](https://gelb2.github.io/MachDefense/) · [Quick Play·공유 코드](docs/public/quick-play.md)
+
+- iPhone·iPad·Android·웹/PWA가 같은 MD1 코드로 전체 프로필 5개를 옮긴다.
+- 슬롯 화면의 GET CODE·COPY·ENTER CODE·CHECK·YES/NO는 공용 게임 버튼으로 처리한다. 플랫폼은 텍스트 입력·키보드·클립보드를 연결한다.
+- 네이티브 복원에 백업·중단 복구·원자적 교체·완료 기록을 연결했다. 복원 이후의 새 진행도 유지한다.
+- 80개 미션을 모두 완료한 저장을 복원할 수 있다.
+- README에 PWA 안내와 Stage 42·유닛 12종·20,329Cr 공유 코드를 배치했다.
+
+### 확인한 동작
+
+- 공용 C++ 38개 검사, iPhone·iPad 시뮬레이터, Android 에뮬레이터, Chrome·WebKit 회귀 검사 통과.
+- 실제 iPhone·iPad·Galaxy에서 코드 생성·복원과 저장을 검사했다. iPad·Galaxy 치트 앱 복원 후 iPhone 원본 42,496바이트가 일치했다.
+- Galaxy 정식 앱 저장을 보존했고, Galaxy PWA 오프라인 전투·재실행 후에도 저장이 유지됐다.
+- 나는 iPhone 코드로 iPad PWA를 복원해 미션을 클리어한 뒤, PWA의 새 코드로 iPhone에 재복원하고 스테이지 진입을 확인했다.
+- 파일 교체·디스크 동기화·롤백·정리 실패를 주입해 기존 저장과 재실행 복구를 검사했다.
+
+### 설치 파일
+
+Android 일반·치트 APK를 제공한다. Galaxy에서 검사한 개발용 서명본이며 앱 내부 버전은 `0.1-android-dev`다. Apple 앱 내부 버전은 `0.1`이며 Xcode로 빌드·서명한다. 소스 릴리스는 `v0.3`, 운영 PWA 빌드는 `d679d7b1061097b5`다. APK SHA-256은 Release의 `SHA256SUMS.txt`에 있다.
+
+전투·경제·이동·무기 계산·음향·게임 자원은 이번 복원 연결에서 변경하지 않았다. iPhone 설치형 PWA 직접 검사, 장시간 성능과 Tauri Mac은 남았다. [검사 결과](docs/evidence/save-transfer-all-platforms-20261106.md) · [전체 TODO](docs/usability-todo.md)
+
 ## v0.2 — 웹·PWA 첫 릴리스
 
 2026-11-06. [플레이·설치](https://gelb2.github.io/MachDefense/) · [설치 안내](docs/public/build-and-install.md)

@@ -22,4 +22,6 @@ AVAudioSession 설정·활성화·비활성화는 Apple 어댑터의 직렬 큐�
 
 ## 복원 코드와 웹 저장 후속 계획
 
-[공용 복원 모듈 계획](save-transfer-web-tauri-plan.md)에 원본 5슬롯, 확장 데이터 버전, 슬롯 화면 진입, 중단 복구와 저장 완료 검사를 정리했다. 기존 일반 저장 시점은 유지한다. 웹에서 메모리 복사를 영구 기록 성공으로 처리하지 않는다. Web은 Asyncify를 사용해 IndexedDB 트랜잭션 완료 후 성공을 반환한다. 일반/치트 DB와 자원 캐시를 분리하며, 저장 revision으로 오래된 창의 쓰기를 거부한다. HostServices에 선택적 복원 서비스를 추가했고 Apple·Android의 기본 지원 값은 false다. [구현·검사](evidence/web-pwa-20261106.md).
+[공용 복원 모듈 계획](save-transfer-web-tauri-plan.md)에 원본 5슬롯, 확장 데이터 버전, 슬롯 화면 진입, 중단 복구와 저장 완료 검사를 정리했다. 기존 일반 저장 시점은 유지한다. 웹에서 메모리 복사를 영구 기록 성공으로 처리하지 않는다. Web은 Asyncify를 사용해 IndexedDB 트랜잭션 완료 후 성공을 반환한다. 일반/치트 DB와 자원 캐시를 분리하며, 저장 revision으로 오래된 창의 쓰기를 거부한다. Apple·Android·Web은 공용 Menu의 복원 필드 요청을 플랫폼 텍스트 입력으로 연결한다. Apple·Android의 복원 쓰기는 공용 FileStore를 쓴다. 미완료 복원은 시작 때 처리하고, 불확정 저장 실패 후에는 추가 쓰기를 차단한다. [구현·검사](evidence/web-pwa-20261106.md).
+
+[플랫폼별 복원 연결과 검사](evidence/save-transfer-all-platforms-20261106.md).

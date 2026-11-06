@@ -46,3 +46,11 @@ Android 실행기는 기존 Core·Audio·자원을 그대로 사용한다. 게�
 ## 웹·PWA 공개 — 2026-11-06
 
 사용자가 저장소 공개와 PWA 운영 배포를 지시했다. 게임 주소는 https://gelb2.github.io/MachDefense/ 이며 독립 gh-pages 브랜치의 정식 산출물을 사용한다. [배포 검사](evidence/pwa-release-20261106.md)에서 실제 확인 범위와 Tauri 착수 조건을 확인한다.
+
+## 복원 코드 3플랫폼 연결 조사 — 2026-11-06
+
+[동시 연결 계획](save-transfer-native-plan-20261106.md)에 현재 공용 코덱·네이티브 미연결·백업 복구·게임 버튼 보강과 검사 순서를 기록했다. [외부 웹 공간 조사](research/lamplighter-20261106.md)는 참고 자료이며 게임 요구나 기술 스택을 변경하지 않는다.
+
+## 복원 코드 연결 완료 — 2026-11-06
+
+iPhone·iPad·Android·Web/PWA는 같은 MD1 코덱과 공용 게임 메뉴를 사용한다. 플랫폼은 코드 텍스트 입력·키보드·클립보드·파일 또는 IndexedDB 저장을 연결한다. 게임 액션은 원작 에셋과 C++ 입력으로 처리한다. [현행 구현·기기별 검사·배포](evidence/save-transfer-all-platforms-20261106.md)를 따른다. 전투 중 복원 작업이나 추가 저장을 실행하지 않는다.

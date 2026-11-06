@@ -1,4 +1,13 @@
+# v0.3 — 복원 코드와 Quick Play
+
+공용 복원 연결·Galaxy 검사·Quick Play 문서를 `feat/save-transfer-all-platforms → develop → main` 순서로 반영하는 릴리스다. [v0.3 변경 이력](../CHANGELOG.md#v03--기기-간-복원-코드와-quick-play)과 [공유 코드](public/quick-play.md)를 따른다. 운영 PWA는 검사한 `d679d7b1061097b5`를 유지한다.
+
 # 웹·PWA 공개 — 2026-11-06
+
+2026-11-06 복원 연결: `feat/save-transfer-all-platforms`에서 Apple·Android·Web의 공용 복원 화면을 연결했다. 현재 iPhone 저장 백업으로 플랫폼 교차 검사를 진행했다. 운영 PWA 빌드는 `d679d7b1061097b5`이며 설치·복원·오프라인 실행을 재검사했다. iPhone·iPad 정식 앱 최종 설치와 iPad 치트 복원도 확인했다. Galaxy USB 정식·치트 검사도 완료했다. iPhone 저장 복원 후 전체 바이트가 일치했고, Galaxy 정식 앱의 기존 저장은 유지했다. Galaxy Chrome·설치형 PWA에서도 같은 저장 복원을 확인했다. 사용자는 iPhone→iPad PWA 복원·미션 클리어 후 새 코드로 iPhone 재복원·스테이지 진입을 확인했다. Galaxy PWA의 오프라인 전투·재실행과 저장 바이트 보존도 확인했다. iPhone 설치형 PWA 직접 검사는 남았다. [구현·검사 결과](evidence/save-transfer-all-platforms-20261106.md).
+
+이전 조사: [작은 행성 전등지기](research/lamplighter-20261106.md)와 [복원 코드 3플랫폼 연결 계획](save-transfer-native-plan-20261106.md)을 추가했다. 이 조사는 구현 착수 전에 작성했다.
+
 
 MachDefense 저장소를 공개하고 [웹·PWA](https://gelb2.github.io/MachDefense/)를 배포했다. 정식 빌드는 `4662f418410f8fdb`다. Mac Chrome 설치형 PWA의 설치·독립 창·오프라인 재실행, Chrome·WebKit의 저장·복원·미션 진입 검사를 통과했다. [실행 결과·Tauri 착수 조건](evidence/pwa-release-20261106.md).
 

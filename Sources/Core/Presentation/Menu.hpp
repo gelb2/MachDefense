@@ -26,7 +26,7 @@ public:
     Screen screen() const { return screen_; }
     std::size_t selectedProfile() const { return slot_; }
 private:
-    enum class Dialog { none, deleteProfile, full, saveFailed, support, invalidName, restoreConfirm, restoreError, restored };
+    enum class Dialog { none, deleteProfile, full, saveFailed, support, invalidName, restoreConfirm, restoreError, restoreInterrupted, restored };
     ResourceAccess& resources_;
     HostServices& host_;
     SaveData& save_;
@@ -55,6 +55,11 @@ private:
     std::optional<SaveData> restoreCandidate_;
     std::string transferError_;
     void beginTransfer(bool exporting);
+    void closeTransfer();
+    void drawTransfer();
+    Rect transferBounds() const;
+    bool transferOpen_=false,transferExport_=false;
+    std::array<Button,2> transferActions_{};
     std::array<Button,2> dialogButtons_{};
     void rebuild();
     void resetInput();

@@ -25,3 +25,5 @@ try{
  await page.waitForFunction(()=>window.MDModule&&document.querySelector('#launcher').hidden,{timeout:120000});
  await page.evaluate(()=>MDTest.advance(60));await page.screenshot({path:out+'/installed-offline.png'});result.steps.push('offline relaunch');result.ok=true;
 }catch(e){result.error=e.stack;process.exitCode=1;await page.screenshot({path:out+'/failure.png'}).catch(()=>{});}finally{await browser.close();await fs.writeFile(out+'/installed.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));}
+
+process.exit(process.exitCode||0);
