@@ -1,0 +1,22 @@
+{
+  "commit": "45d91b9b7911aa7b38215237d74dd979b67b9760",
+  "inventoryEntries": 1287,
+  "categories": {
+    "image": 1109,
+    "data": 98,
+    "audio": 80
+  },
+  "missing": [],
+  "changedFromOriginalPreparation": [],
+  "trackedRuntime": {
+    "Sources": 86,
+    "Modules": 330,
+    "Resources/Images": 1109,
+    "Resources/Audio": 80,
+    "Resources/RawData": 98,
+    "Resources/Tables": 94,
+    "Resources/Generated": 6
+  },
+  "symlinks": [],
+  "unresolvedLfs": []
+}

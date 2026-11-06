@@ -2,6 +2,8 @@
 
 `MachDefense.xcworkspace`는 iPhone·iPad 유니버설 앱과 공용 코어·자원 프로젝트를 연결한다. 일반 앱은 `com.gelb2.machdefense.source`, 검사 앱은 `com.gelb2.machdefense.source.cheat`를 사용한다. 포팅판의 앱·저장과 분리된다.
 
+Apple Silicon Mac, Xcode와 iOS Simulator, Python 3, CMake 3.20 이상을 사용한다. 첫 빌드에서 `tools/build_openal.py`가 포함된 OpenAL Soft 소스를 컴파일한다. Homebrew 사용자는 `brew install cmake`로 준비한다. 기존 프로젝트를 열어 빌드할 때 XcodeGen은 필요하지 않다.
+
 프로젝트 재생성:
 
 ```sh
