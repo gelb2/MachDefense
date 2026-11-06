@@ -13,13 +13,13 @@ int main(int argc,char** argv){
     assert(sum==3900&&save.credits(0)==996100);
     const auto reread=md::SaveData::decode(save.encode());
     for(unsigned i=0;i<6;++i)assert(reread.baseUpgrade(0,i)==1);
-    assert(upgrades.maximumLevel(md::BaseUpgrade::cannon)==6&&upgrades.maximumLevel(md::BaseUpgrade::buildTime)==9);
+    assert(upgrades.maximumLevel(md::BaseUpgrade::cannon)==9&&upgrades.maximumLevel(md::BaseUpgrade::buildTime)==9);
     assert(*upgrades.level(md::BaseUpgrade::defense,1).parameter==15000);
     assert(*upgrades.level(md::BaseUpgrade::cellStorage,1).parameter==700);
-    save.setBaseUpgrade(0,0,6);const auto before=save.encode();
+    save.setBaseUpgrade(0,0,9);const auto before=save.encode();
     assert(!upgrades.purchase(save,0,md::BaseUpgrade::cannon)&&save.encode()==before);
     md::AttackCatalog attacks(md::DataTable::load(std::filesystem::path(argv[1])/"SpAttackList.tsv"));
-    assert(attacks.maximumLevel("AirStrike-Bomb")==5&&attacks.maximumLevel("Crossfire-Missile")==8);
+    assert(attacks.maximumLevel("AirStrike-Bomb")==10&&attacks.maximumLevel("Crossfire-Missile")==10);
     assert(attacks.upgradeCost(save.attacks(0)[0])==600); // 500 + 2 existing bombs * (200-150).
     save.setCredits(0,599);const auto poor=save.encode();assert(!attacks.purchase(save,0,0,true)&&save.encode()==poor);
     save.setCredits(0,800);assert(attacks.purchase(save,0,0,true));assert(save.credits(0)==200&&save.attacks(0)[0].level==1&&save.attacks(0)[0].count==2);

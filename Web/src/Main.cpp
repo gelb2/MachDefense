@@ -5,6 +5,10 @@
 #include "Core/Simulation/World.hpp"
 #include <emscripten.h>
 #include <emscripten/html5.h>
+#if MD_WEB_CHEAT
+#include "../../Tests/Level10HUDSweep.hpp"
+#include "../../Tests/ContentSweep.hpp"
+#endif
 #include <sstream>
 #include <cmath>
 using namespace md;
@@ -45,6 +49,27 @@ extern "C" {
 EMSCRIPTEN_KEEPALIVE int md_start(){try{EmscriptenWebGLContextAttributes attr;emscripten_webgl_init_context_attributes(&attr);attr.majorVersion=2;attr.alpha=false;attr.depth=false;attr.stencil=false;attr.antialias=false;auto ctx=emscripten_webgl_create_context("#game",&attr);if(ctx<=0)throw std::runtime_error("WebGL 2 is unavailable");emscripten_webgl_make_context_current(ctx);renderer.init();effects.prepare(assets);game=std::make_unique<GameSession>(assets,host,MD_WEB_CHEAT);return 1;}catch(const std::exception& e){status=e.what();return 0;}}
 EMSCRIPTEN_KEEPALIVE void md_tick(){if(!game||contextLost)return;game->tick();++ticks;renderer.draw(game->frame(),pw,ph);}
 EMSCRIPTEN_KEEPALIVE void md_touch(int id,int phase,float x,float y){if(game&&!contextLost)game->touch({std::uint64_t(id),TouchPhase(phase),{x*game->frame().logicalWidth,y*game->frame().logicalHeight}});}
+EMSCRIPTEN_KEEPALIVE int md_scroll(float x,float y,float deltaY){return game&&!contextLost&&game->scrollProduction({x*game->frame().logicalWidth,y*game->frame().logicalHeight},deltaY*game->frame().logicalHeight);}
+EMSCRIPTEN_KEEPALIVE const char* md_level10_sweep(){
+#if MD_WEB_CHEAT
+ try { status=validation::runLevel10HUDSweep(assets,&host,[](const Frame& frame,std::string_view){renderer.draw(frame,pw,ph);}); }
+ catch(const std::exception& e){status=std::string("ERROR: ")+e.what();}
+#else
+ status="Unavailable";
+#endif
+ return status.c_str();
+}
+EMSCRIPTEN_KEEPALIVE const char* md_content_sweep(){
+#if MD_WEB_CHEAT
+ try { validation::Level10SweepHost isolated(&host);unsigned frames=0;
+ auto result=validation::runContentSweep(assets,isolated,[&](const Frame& frame){if(frames++%16==0)renderer.draw(frame,pw,ph);});
+ std::ostringstream out;out<<"Content: builds="<<result.builds<<" placements="<<result.placements<<" specials="<<result.attacks<<" frames="<<frames<<" writes="<<isolated.writes;status=out.str(); }
+ catch(const std::exception& e){status=std::string("ERROR: ")+e.what();}
+#else
+ status="Unavailable";
+#endif
+ return status.c_str();
+}
 EMSCRIPTEN_KEEPALIVE void md_resize(int w,int h,int pixelw,int pixelh,float top,float bottom){pw=pixelw;ph=pixelh;if(game){game->resize(w,h,top,bottom);transferViewport(game->frame().logicalWidth,game->frame().logicalHeight);}}
 EMSCRIPTEN_KEEPALIVE void md_active(int active){effects.setActive(active);if(game)game->setActive(active);}
 EMSCRIPTEN_KEEPALIVE void md_context(int restored){contextLost=!restored;if(restored)renderer.init();else renderer.lost();if(game)game->setActive(false);}

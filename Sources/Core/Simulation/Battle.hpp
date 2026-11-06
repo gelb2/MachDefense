@@ -11,6 +11,7 @@
 #include <vector>
 
 namespace md {
+class ResourceAccess;
 // Original GobWorld/GobEnemySpawner/BuildItem rules. Combat controllers are
 // reconstructed separately; this class never substitutes invented combat.
 struct BattleGeometry {
@@ -145,6 +146,8 @@ struct PartPose {
 class BattleModels {
 public:
     static BattleModels parse(const Chunk& parts,const Chunk& machines);
+    static BattleModels load(ResourceAccess& resources);
+    void append(const Chunk& parts,const Chunk& machines);
     void configureTiles(const DataTable& partsList,const DataTable& tilesList);
     [[nodiscard]] std::vector<PartPose> pose(std::string_view machine,float deviceScale,float bodyAngle,float weaponAngle,float radarAngle) const;
     [[nodiscard]] std::vector<PartPose> pose(const std::vector<AssemblyPart>&,float deviceScale,float bodyAngle,float weaponAngle,float radarAngle) const;

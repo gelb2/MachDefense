@@ -312,3 +312,26 @@ Code	Icon	Type	Attr	Param1	Param2	Param3	strParam      	Name
 12021	12021	PtBtm	BS  	30  	2.3 	33  	P_Foot_21   	Ft-ESM.11
 12022	12022	PtBtm	BS  	31  	2.4 	34   	P_Foot_22   	Ft-ESM.20
 12023	12023	PtBtm	BS  	32  	2.5 	35   	P_Foot_23   	Ft-ESM.X
+02006	64005	SpAtk	BSQC	6	1.5	0	AS_BOMB	Air-strike Bomb
+02007	64005	SpAtk	BSQC	7	1.5	0	AS_BOMB	Air-strike Bomb
+02008	64005	SpAtk	BSQC	8	1.5	0	AS_BOMB	Air-strike Bomb
+02009	64005	SpAtk	BSQC	9	1.5	0	AS_BOMB	Air-strike Bomb
+02010	64005	SpAtk	BSQC	10	1.5	0	AS_BOMB	Air-strike Bomb
+02016	64015	SpAtk	BSQC	6	1.0	0	AS_MISSILE	Air-strike Missile
+02017	64015	SpAtk	BSQC	7	1.0	0	AS_MISSILE	Air-strike Missile
+02018	64015	SpAtk	BSQC	8	1.0	0	AS_MISSILE	Air-strike Missile
+02019	64015	SpAtk	BSQC	9	1.0	0	AS_MISSILE	Air-strike Missile
+02020	64015	SpAtk	BSQC	10	1.0	0	AS_MISSILE	Air-strike Missile
+02026	64025	SpAtk	BSQC	6	2.0	0	AS_NUCLEAR	Air-strike Nuclear
+02027	64025	SpAtk	BSQC	7	2.0	0	AS_NUCLEAR	Air-strike Nuclear
+02028	64025	SpAtk	BSQC	8	2.0	0	AS_NUCLEAR	Air-strike Nuclear
+02029	64025	SpAtk	BSQC	9	2.0	0	AS_NUCLEAR	Air-strike Nuclear
+02030	64025	SpAtk	BSQC	10	2.0	0	AS_NUCLEAR	Air-strike Nuclear
+02035	64034	SpAtk	BSQC	5	2.0	0	AS_EMP	Air-strike EMP Shock
+02036	64034	SpAtk	BSQC	6	2.0	0	AS_EMP	Air-strike EMP Shock
+02037	64034	SpAtk	BSQC	7	2.0	0	AS_EMP	Air-strike EMP Shock
+02038	64034	SpAtk	BSQC	8	2.0	0	AS_EMP	Air-strike EMP Shock
+02039	64034	SpAtk	BSQC	9	2.0	0	AS_EMP	Air-strike EMP Shock
+02040	64034	SpAtk	BSQC	10	2.0	0	AS_EMP	Air-strike EMP Shock
+02109	64108	SpAtk	BSQC	9	1.0	0	CF_MISSILE	Crossfire Missile
+02110	64108	SpAtk	BSQC	10	1.0	0	CF_MISSILE	Crossfire Missile

@@ -17,9 +17,9 @@ int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];Host h
     command(ValidationCommand::creditMinus);assert(s.validationSave()->credits(0)==0);
     command(ValidationCommand::creditMinus);assert(s.validationSave()->credits(0)==0);
     for(unsigned category=0;category<6;++category){s.applyValidationCommand(110+category);assert(s.validationSave()->baseUpgrade(0,category)==1);s.applyValidationCommand(100+category);assert(s.validationSave()->baseUpgrade(0,category)==0);}
-    // Select all catalog entries, grant, upgrade, and enforce the seven-slot limit.
+    // Select catalog entries, grant, upgrade, and allow more than seven installed units.
     for(int i=0;i<40;++i){command(ValidationCommand::buildGrant);command(ValidationCommand::buildLevelPlus);command(ValidationCommand::buildInstall);command(ValidationCommand::buildNext);}
-    auto owned=s.validationSave()->builds(0);assert(owned.size()>4);assert(std::count_if(owned.begin(),owned.end(),[](const auto& x){return x.onSlot;})<=7);
+    auto owned=s.validationSave()->builds(0);assert(owned.size()>4);assert(std::count_if(owned.begin(),owned.end(),[](const auto& x){return x.onSlot;})>7);
     for(int i=0;i<5;++i){command(ValidationCommand::attackGrant);command(ValidationCommand::attackLevelPlus);command(ValidationCommand::attackCountPlus);command(ValidationCommand::attackInstall);command(ValidationCommand::attackNext);}
     auto special=s.validationSave()->attacks(0);assert(special.size()==5);
     const auto before=w->actors().size();command(ValidationCommand::spawnMachine);assert(w->actors().size()==before+1);

@@ -1,3 +1,21 @@
+# 2026-11-07 사거리·공격력 후속
+
+포탑 6종과 기지 기관총의 추가 단계 사거리를 수정했다. [전수 점검과 수정 결과](docs/evidence/level10-range-damage-20261107.md), [10레벨·HUD 검사](docs/evidence/level10-hud-20261107.md)를 먼저 읽는다. CTest 40개, Chrome·WebKit 치트 검사, 최신 iPad 검사 2개가 통과했다. v0.4 앱 설치와 develop→main 병합·PWA 배포를 진행한다. 이온 주변 피해 반경·플라즈마 지속 피해 조사는 TODO다. 아래 미구현 기록은 당시 상태다.
+
+# 현재 작업 — 타이틀·HUD·원작 대조
+
+2026-11-07: 모든 영구 강화 상한 Lv.10, 신규 단계는 원작 최종 레벨의 외형·발사체·효과·음원 재사용으로 계획을 확정했다. [13개 항목·59단계 수치 제안과 구조 점검](docs/research/level10-plan-20261107.md)을 작성했다. 수치 검산과 기존 C++ 발사 처리 240조건을 실행했으며 게임 적용·실기기 성능 검사는 아직 하지 않았다.
+
+2026-11-06 사용자 검수: 1280×800 가로창 후보는 메크·탱크 왜곡으로 기각됐다. 해당 Wide.png를 채택하거나 다음 앱·운영 배포에 포함하지 않는다. 원본 기체의 형태·부품·비율을 보존하는 외곽으로 다시 작업한다. 다른 비율 시안도 승인된 것으로 취급하지 않는다. 생산 HUD는 INSTALL·UNINSTALL을 보존하고 설치된 전체 목록만 스크롤한다. 상세 조건은 [HUD 설계](docs/research/production-hud-scroll-20261106.md)를 따른다.
+
+작업 사본은 `.local/worktrees/save-transfer`, 브랜치는 `feat/title-hud-original-audit`다. 원격 develop `22024dd`에서 분기했다. [TODO](docs/usability-todo.md) 최상단과 [현재 상태](docs/current-status.md)를 먼저 읽는다. 원본 비교와 생산 HUD 설계·강화/생산량 조사 문서는 과제별로 커밋했다.
+
+타이틀 후보는 C++ 4개·Chrome/WebKit 10개 화면 조건을 통과했다. 이미지 연결부 검수와 기기 설치는 남았다. main·develop 병합과 게임 운영 배포를 하지 않았다. 사용자 개발자의 변 최종 원문은 main `40d3fd1` 그대로 보존한다.
+
+새 과제 `MD-IPAD-SCALE-01`은 iPad·데스크톱이 폰 화면의 단순 확대처럼 보인다는 사용자 관측이다. 현재 과제 이후 원작 HD 판본·기기별 자원 선택·투영·화면 범위를 조사한다. 지금은 TODO 등록 상태다.
+
+아래는 이전 작업 기록이다.
+
 # v0.3 릴리스 — 2026-11-06
 
 공용 복원 연결과 Quick Play·아이폰 공유 코드를 기능 브랜치→develop→main 순서로 반영한다. Galaxy 정식 저장 보존, 치트 9조건, PWA 오프라인 전투·재실행을 확인했다. 사용자는 iPhone↔iPad PWA 왕복과 미션 클리어를 확인했다. [현재 상태](docs/current-status.md), [v0.3 변경 이력](CHANGELOG.md), [검사 근거](docs/evidence/save-transfer-all-platforms-20261106.md)를 먼저 읽는다. 아래는 이전 단계 기록이다.

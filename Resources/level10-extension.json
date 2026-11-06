@@ -1,0 +1,58 @@
+{
+  "source_proposal": "docs/research/level10/proposal.json",
+  "source_proposal_sha256": "323d4ce55e7077f5ad812871f1c46b686eef9229a9c6108a5e51375a29dc703e",
+  "generator": "tools/apply_level10.py",
+  "original_mcb_preserved": true,
+  "files": [
+    {
+      "path": "Tables/WeaponInfo.tsv",
+      "sha256": "0d44b764be865408b98186f58962a16da4d32f442cb19af5c5ffe670d10d175f",
+      "bytes": 37444
+    },
+    {
+      "path": "Tables/MachBuild_Name.tsv",
+      "sha256": "d2d1b8082e9ec8870dc1190d9ee9d91c80f0b0843c9e25f9a783f5d742082f3c",
+      "bytes": 3903
+    },
+    {
+      "path": "Tables/MachList.tsv",
+      "sha256": "b0736a8a53874877860f2b6dffb74fe7fd5a26b6381f85b446f2d63a48294cae",
+      "bytes": 10200
+    },
+    {
+      "path": "Tables/BaseUpgrade.tsv",
+      "sha256": "8e13de21b46e059d05c87f385f4f321eb15f005db4c44f6b5c2cb5015b3a6d60",
+      "bytes": 1514
+    },
+    {
+      "path": "Tables/SpAttackList.tsv",
+      "sha256": "5ac06d6aad956c854db53e8a8bcd9d9f7cd6c3fdecb5b79d572892ee7af7db73",
+      "bytes": 2078
+    },
+    {
+      "path": "Tables/ItemInfo.tsv",
+      "sha256": "24d29510e5cde475e6dcc209b8052821f8dac24c91ad5919650c3932c7a93b98",
+      "bytes": 20588
+    },
+    {
+      "path": "Tables/PartsList.tsv",
+      "sha256": "ffb498932e30e74e4ae84211a542fabac28de6ab43759b1b25d1015522d3aeb1",
+      "bytes": 12253
+    },
+    {
+      "path": "Tables/TileList.tsv",
+      "sha256": "4266caf60c3ab60f1a084e7459fde6ce9628b6a237582d55dde1462601e485a6",
+      "bytes": 227
+    },
+    {
+      "path": "RawData/Level10Parts.mcb",
+      "sha256": "aece05b8f3daf2dc0751715d12deb856112e76bc8739538f2a1c63d8d32f135b",
+      "bytes": 2565
+    },
+    {
+      "path": "RawData/Level10Machines.mcb",
+      "sha256": "c0ead5302a6ec2804687777293f3e5ad60018276e2d75bfcd2cdf6a65a749193",
+      "bytes": 4405
+    }
+  ]
+}

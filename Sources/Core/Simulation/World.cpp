@@ -12,12 +12,11 @@ using namespace world_detail;
 World::World(ResourceAccess& r,HostServices& h,SaveData& s,std::size_t slot,BattleGeometry g,std::uint32_t seed):
  resources_(r),host_(h),save_(s),slot_(slot),geometry_(g),random_(seed),
  machinesTable_(table(r,"MachList")),itemsTable_(table(r,"ItemInfo")),mapTable_(table(r,"MapList")),maps_(chunk(r,"MapInfo")),
- models_(BattleModels::parse(chunk(r,"PartsInfo"),chunk(r,"MachInfo"))),
+ models_(BattleModels::load(r)),
  weapons_(WeaponCatalog::load(table(r,"WeaponInfo"),g.deviceScale==.5f)),
  builds_(BuildCatalog::load(table(r,"MachBuild_Parts"),table(r,"MachBuild_Name"))),upgrades_(table(r,"BaseUpgrade")),attacks_(table(r,"SpAttackList")){
     uiMargin_=g.deviceScale==.5f?62.f:178.f;
     if(slot>=SaveData::slotCount||!s.active(slot))throw std::invalid_argument("World requires an original active save slot");
-    models_.configureTiles(table(r,"PartsList"),table(r,"TileList"));
     particles_=std::make_unique<ParticlePool>(float(time()),random_);
     for(std::size_t i=0;i<itemsTable_.rowCount();++i){auto d=LootDefinition::fromTable(itemsTable_,i);if(d.type!=LootType::other)lootDefinitions_.emplace(d.code,std::move(d));}
 }
