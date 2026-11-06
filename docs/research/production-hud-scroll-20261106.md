@@ -1,12 +1,12 @@
 # 생산 HUD 전체 목록과 순서 편집 조사
 
-2026-11-06 · MD-PRODUCTION-HUD-01 · 조사·설계 완료, 기능 구현 전
+2026-11-06 · MD-PRODUCTION-HUD-01 · 사용자 계획 승인, 기능 구현 전
 
 [남은 과제](../usability-todo.md) · [공용 모듈](../../Modules/README.md) · [저장 구조](../../Sources/Core/Session/SaveData.hpp) · [복원 코드](../../Modules/SaveTransfer/Codec.hpp)
 
 ## 사용자 확인 — 설치된 유닛 전체를 스크롤
 
-2026-11-06 후속 지시: 기존 INSTALL·UNINSTALL과 설치 상태를 유지한다. HUD에는 `onSlot=true`인 유닛 전체만 표시하고, 스크롤로 찾아 기존 절차대로 생산한다. UNINSTALL한 유닛은 HUD에서 빠지며, 다시 INSTALL하면 목록에 들어온다. 해금됐다는 이유만으로 모든 유닛을 강제로 설치하거나 표시하지 않는다.
+2026-11-06 사용자 승인: “hud는 그 계획대로 간다.” 기존 INSTALL·UNINSTALL과 설치 상태를 유지한다. HUD에는 `onSlot=true`인 유닛 전체만 표시하고, 스크롤로 찾아 기존 절차대로 생산한다. UNINSTALL한 유닛은 HUD에서 빠지며, 다시 INSTALL하면 목록에 들어온다. 해금됐다는 이유만으로 모든 유닛을 강제로 설치하거나 표시하지 않는다.
 
 원작의 설치 개수 7개 상한과 HUD 표시 7개 상한을 풀되, 설치·해제 기능 자체와 생산 대기열 제한은 유지한다. 가격표·아이콘·받침 틀·효과와 터치 영역을 같은 행으로 옮긴다. 순서 편집은 설치 여부를 변경하지 않는다.
 

@@ -1,5 +1,7 @@
 # 현재 작업 — 타이틀·HUD·원작 대조
 
+2026-11-07: 모든 영구 강화 상한 Lv.10, 신규 단계는 원작 최종 레벨의 외형·발사체·효과·음원 재사용으로 계획을 확정했다. [13개 항목·59단계 수치 제안과 구조 점검](docs/research/level10-plan-20261107.md)을 작성했다. 수치 검산과 기존 C++ 발사 처리 240조건을 실행했으며 게임 적용·실기기 성능 검사는 아직 하지 않았다.
+
 2026-11-06 사용자 검수: 1280×800 가로창 후보는 메크·탱크 왜곡으로 기각됐다. 해당 Wide.png를 채택하거나 다음 앱·운영 배포에 포함하지 않는다. 원본 기체의 형태·부품·비율을 보존하는 외곽으로 다시 작업한다. 다른 비율 시안도 승인된 것으로 취급하지 않는다. 생산 HUD는 INSTALL·UNINSTALL을 보존하고 설치된 전체 목록만 스크롤한다. 상세 조건은 [HUD 설계](docs/research/production-hud-scroll-20261106.md)를 따른다.
 
 작업 사본은 `.local/worktrees/save-transfer`, 브랜치는 `feat/title-hud-original-audit`다. 원격 develop `22024dd`에서 분기했다. [TODO](docs/usability-todo.md) 최상단과 [현재 상태](docs/current-status.md)를 먼저 읽는다. 원본 비교와 생산 HUD 설계·강화/생산량 조사 문서는 과제별로 커밋했다.
