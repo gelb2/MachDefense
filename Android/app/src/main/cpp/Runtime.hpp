@@ -9,6 +9,10 @@ struct Callbacks {
     std::function<void(std::string,float)> music;
     std::function<void(bool)> musicActive;
     std::function<void(std::string,unsigned,std::uint64_t)> name;
+    std::function<void(std::string,bool,Rect,std::uint64_t)> transferOpen;
+    std::function<void(Rect,std::uint64_t)> transferLayout;
+    std::function<void(std::uint64_t)> transferClose;
+    std::function<void(std::string)> transferCopy;
 };
 class Runtime final:public HostServices {
     Assets assets_;Renderer renderer_;audio::OpenALEffects effects_;
@@ -18,6 +22,11 @@ class Runtime final:public HostServices {
     bool active_=false,audioFocus_=false;int width_=0,height_=0,top_=0,bottom_=0;float density_=1;
     std::map<unsigned,Touch> touches_;
     std::function<void(std::optional<std::string>)> nameCompletion_;std::uint64_t nameGeneration_=0;
+    std::string transferText_;
+    Rect transferBounds_{};
+    bool transferVisible_=false,transferReadOnly_=false,restoreBlocked_=false;
+    std::uint64_t transferGeneration_=0;
+    Rect transferPixelBounds() const;
     struct Sample{double interval=0,tick=0,draw=0,swap=0;unsigned sprites=0,uploads=0,sounds=0,writes=0;};
     std::vector<Sample> samples_;double previousTime_=0;bool auditing_=false;
     unsigned writes_=0,reads_=0;std::uint64_t frames_=0,contexts_=0;
@@ -30,10 +39,18 @@ public:
     void insets(int,int,float);
     void active(bool);void focus(bool);void frame(double);void touch(unsigned,int,float,float);
     void nameResult(std::uint64_t,std::optional<std::string>);
+    void transferTextChanged(std::uint64_t,std::string);
     void command(const std::string&,int,int);
     std::string status(bool includeSprites=false);
     std::optional<Bytes> readSave()override;
     bool writeSave(std::span<const std::uint8_t>)override;
+    bool supportsSaveTransfer()const override{return true;}
+    bool restoreSave(std::span<const std::uint8_t>)override;
+    void openTransferField(std::string,bool,Rect)override;
+    void layoutTransferField(Rect)override;
+    std::string transferFieldText()const override{return transferText_;}
+    void closeTransferField()override;
+    void copyTransferCode(std::string)override;
     void playSound(std::string_view,float,float)override;
     void playSoundAt(std::string_view,Vec2,float)override;
     void playMusic(std::string_view,float)override;

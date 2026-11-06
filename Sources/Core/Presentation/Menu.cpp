@@ -25,18 +25,18 @@ void Menu::applyScreen(Screen screen){
     const bool managed=deferredTransitions_;deferredTransitions_=false;
     if(screen==Screen::profiles)showProfiles();
     else if(screen==Screen::missions)showMissions(slot_);
-    else {resetInput();screen_=Screen::title;host_.playMusic("Intro.mp3");titleTime_=0;titleVisible_=false;titleCycleSound_=false;rebuild();}
+    else {closeTransfer();resetInput();screen_=Screen::title;host_.playMusic("Intro.mp3");titleTime_=0;titleVisible_=false;titleCycleSound_=false;rebuild();}
     deferredTransitions_=managed;
 }
-void Menu::setLayout(const FrameLayout& layout){layout_=layout;resetInput();rebuild();}
+void Menu::setLayout(const FrameLayout& layout){layout_=layout;resetInput();if(transferOpen_)host_.layoutTransferField(transferBounds());rebuild();}
 void Menu::resetInput(){
     for(auto& b:profiles_)b.reset();for(auto& b:stages_)b.reset();
-    for(auto& b:transfer_)b.reset();for(auto& b:bottom_)b.reset();for(auto& b:dialogButtons_)b.reset();
+    for(auto& b:transferActions_)b.reset();for(auto& b:transfer_)b.reset();for(auto& b:bottom_)b.reset();for(auto& b:dialogButtons_)b.reset();
     dragId_.reset();velocity_=0;
 }
 void Menu::showProfiles(){
     if(deferredTransitions_){requestedScreen_=Screen::profiles;return;}
-    resetInput();screen_=Screen::profiles;dialog_=Dialog::none;host_.playMusic("UI_BGM.mp3");
+    closeTransfer();resetInput();screen_=Screen::profiles;dialog_=Dialog::none;host_.playMusic("UI_BGM.mp3");
     std::uint32_t newest=0;
     for(std::size_t i=0;i<SaveData::slotCount;++i)if(save_.active(i)){
         auto stamp=save_.readWord(SaveData::slotStart+i*SaveData::slotStride+4);
@@ -47,7 +47,7 @@ void Menu::showProfiles(){
 void Menu::showMissions(std::size_t slot){
     if(!save_.active(slot))throw std::invalid_argument("Cannot select an empty profile");
     if(deferredTransitions_){slot_=slot;requestedScreen_=Screen::missions;return;}
-    resetInput();screen_=Screen::missions;dialog_=Dialog::none;slot_=slot;host_.playMusic("UI_BGM.mp3");
+    closeTransfer();resetInput();screen_=Screen::missions;dialog_=Dialog::none;slot_=slot;host_.playMusic("UI_BGM.mp3");
     selectedMission_=std::min(save_.stage(slot),79u);cam_=float(selectedMission_)*32;baseY_=0;rebuild();
 }
 bool Menu::persist(){
@@ -133,6 +133,7 @@ void Menu::drawDialog(){
     case Dialog::invalidName:a="Incorrect name.";b="Enter 1 to 10 English characters.";break;
     case Dialog::restoreConfirm:a="Replace all five profiles?";b="Your previous save will be backed up.";break;
     case Dialog::restoreError:a="Could not read recovery code.";b="Check the complete code and retry.";break;
+    case Dialog::restoreInterrupted:a="Recovery needs to finish.";b="Close and reopen the app.";break;
     case Dialog::restored:a="Progress restored.";b="Choose a profile to continue.";break;
     case Dialog::none:return;
     }
@@ -144,6 +145,7 @@ void Menu::drawDialog(){
 }
 void Menu::rebuild(){
     frame_.sprites.clear();frame_.logicalWidth=320;frame_.logicalHeight=480;
+    if(transferOpen_){frame_.logicalWidth=layout_.width;frame_.logicalHeight=layout_.height;drawTransfer();return;}
     if(screen_==Screen::title){
         sprite("Title.jpg",{160,240},320,480);
         if(titleVisible_)sprite("Main_TapToStart.png",{160,208},128,32);
@@ -245,23 +247,49 @@ void Menu::expandFrame(){
         frame_.sprites.push_back(std::move(s));
     }
 }
+Rect Menu::transferBounds()const{return {layout_.center().x+20,layout_.top+110,280,90};}
+void Menu::closeTransfer(){if(transferOpen_)host_.closeTransferField();transferOpen_=false;for(auto& b:transferActions_)b.reset();}
 void Menu::beginTransfer(bool exporting){
-    namePending_=true;
-    host_.transferText(exporting?transfer::encode(save_):"",exporting,[this,exporting](std::optional<std::string> code){
-        namePending_=false;if(exporting||!code){rebuild();return;}
-        try{restoreCandidate_=transfer::decode(*code);transfer::validate(*restoreCandidate_,resources_);dialog_=Dialog::restoreConfirm;}
-        catch(const std::exception& e){transferError_=e.what();dialog_=Dialog::restoreError;}
-        rebuild();
-    });
+    if(screen_!=Screen::profiles||!host_.supportsSaveTransfer())return;
+    resetInput();transferOpen_=true;transferExport_=exporting;
+    host_.openTransferField(exporting?transfer::encode(save_):"",exporting,transferBounds());
+}
+void Menu::drawTransfer(){
+    // Top anchored controls remain above the software keyboard. Art and hit
+    // rectangles use the same final game coordinates on every platform.
+    const float x=layout_.center().x,top=layout_.top;
+    const auto first=frame_.sprites.size();
+    text(transferExport_?"RECOVERY CODE":"ENTER RECOVERY CODE",{160,450},280,20,16,{},1);
+    for(unsigned i=0;i<2;++i){const float cx=85+150*float(i);
+        transferActions_[i].bounds={x+cx-65,top+55,130,32};
+        sprite("SysMenu_Btn.png",{cx,409},130,32,transferActions_[i].pressed()?1:0,2);
+        text(i?(transferExport_?"CLOSE":"CANCEL"):(transferExport_?"COPY":"CHECK"),{cx,409},124,16,13,{},1);
+    }
+    text(transferExport_?"Keep this code to restore all five profiles.":"Paste the complete MD1 code below.",{160,382},286,16,10,{},1);
+    for(auto i=first;i<frame_.sprites.size();++i){frame_.sprites[i].destination.x+=x;frame_.sprites[i].destination.y+=top;}
 }
 void Menu::touch(const Touch& t){
     if(namePending_)return;
+    if(transferOpen_){
+        for(unsigned i=0;i<2;++i)if(transferActions_[i].touch(t).action==ButtonAction::pop){
+            host_.playSound("UI_Btn_OK.wav");
+            if(i==1)closeTransfer();
+            else if(transferExport_)host_.copyTransferCode(transfer::encode(save_));
+            else {
+                const auto code=host_.transferFieldText();closeTransfer();
+                try{restoreCandidate_=transfer::decode(code);transfer::validate(*restoreCandidate_,resources_);dialog_=Dialog::restoreConfirm;}
+                catch(const std::exception& e){transferError_=e.what();dialog_=Dialog::restoreError;}
+            }
+            rebuild();return;
+        }
+        rebuild();return;
+    }
     if(dialog_!=Dialog::none){
         const auto count=(dialog_==Dialog::deleteProfile||dialog_==Dialog::restoreConfirm)?2u:1u;
         for(unsigned i=0;i<count;++i)if(dialogButtons_[i].touch(t).action==ButtonAction::pop){
             if(i==0&&dialog_==Dialog::deleteProfile){const auto before=save_;save_.deleteProfile(slot_);dialog_=Dialog::none;if(!persist())save_=before;}
             else if(i==0&&dialog_==Dialog::restoreConfirm&&restoreCandidate_){
-                if(host_.restoreSave(restoreCandidate_->encode())){save_=*restoreCandidate_;dialog_=Dialog::restored;}else dialog_=Dialog::saveFailed;
+                try { if(host_.restoreSave(restoreCandidate_->encode())){save_=*restoreCandidate_;dialog_=Dialog::restored;}else dialog_=Dialog::saveFailed; } catch(const std::exception&) { dialog_=Dialog::restoreInterrupted; }
                 restoreCandidate_.reset();
             }else {dialog_=Dialog::none;restoreCandidate_.reset();}
             for(auto& b:dialogButtons_)b.reset();rebuild();return;

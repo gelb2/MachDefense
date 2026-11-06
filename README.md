@@ -41,7 +41,7 @@ MachDefense는 메크와 포탑을 생산해 적 기지를 공격하는 세로 �
 
 - iPhone·iPad 화면에 맞춘 전장·메뉴·HUD 표시 영역.
 - 같은 C++ 게임 코드와 자원을 사용하는 Android·웹 실행기.
-- 웹판에서 전체 프로필 5개를 한 줄 코드로 내보내고 복원하는 기능.
+- iPhone·iPad·Android·웹/PWA 사이에서 전체 프로필 5개를 한 줄 코드로 옮기는 기능. [사용법](docs/public/gameplay.md).
 - 저장을 분리한 일반 앱과 치트 검증 앱.
 
 [추가 기능과 기획 의도](docs/public/features.md) · [조작과 저장](docs/public/gameplay.md)

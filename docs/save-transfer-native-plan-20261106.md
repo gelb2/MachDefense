@@ -1,5 +1,7 @@
 # 복원 코드 — iPhone·iPad·Android 동시 연결 계획
 
+후속 구현은 `feat/save-transfer-all-platforms`에서 진행했다. [현재 구현과 검사 결과](evidence/save-transfer-all-platforms-20261106.md). 아래 표는 착수 전 조사 상태다.
+
 2026-11-06. main `ec628e3`와 같은 트리인 develop `52e1e6c`를 기준으로 조사했다. 작업 브랜치는 `research/web-reference-save-transfer`다. 이번에는 소스 대조와 계획을 작성했다. 앱 기능은 변경하지 않았다.
 
 ## 결론과 현재 상태

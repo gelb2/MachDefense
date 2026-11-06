@@ -11,6 +11,7 @@ internal object Native {
     external fun frame(handle:Long,time:Double)
     external fun touch(handle:Long,id:Int,phase:Int,x:Float,y:Float)
     external fun nameResult(handle:Long,generation:Long,value:String?)
+    external fun transferTextChanged(handle:Long,generation:Long,value:String)
     external fun command(handle:Long,name:String,a:Int,b:Int)
     external fun status(handle:Long):String
 }

@@ -1,6 +1,8 @@
 # 웹·PWA 공개 — 2026-11-06
 
-2026-11-06 후속 조사: [작은 행성 전등지기](research/lamplighter-20261106.md)와 [복원 코드 3플랫폼 연결 계획](save-transfer-native-plan-20261106.md)을 추가했다. 이번 변경은 문서만이며 네이티브 복원 UI는 아직 연결하지 않았다.
+2026-11-06 복원 연결: `feat/save-transfer-all-platforms`에서 Apple·Android·Web의 공용 복원 화면을 연결했다. 현재 iPhone 저장 백업으로 플랫폼 교차 검사를 진행했다. 운영 PWA 빌드는 `d679d7b1061097b5`이며 설치·복원·오프라인 실행을 재검사했다. [구현·검사 결과](evidence/save-transfer-all-platforms-20261106.md).
+
+이전 조사: [작은 행성 전등지기](research/lamplighter-20261106.md)와 [복원 코드 3플랫폼 연결 계획](save-transfer-native-plan-20261106.md)을 추가했다. 이 조사는 구현 착수 전에 작성했다.
 
 
 MachDefense 저장소를 공개하고 [웹·PWA](https://gelb2.github.io/MachDefense/)를 배포했다. 정식 빌드는 `4662f418410f8fdb`다. Mac Chrome 설치형 PWA의 설치·독립 창·오프라인 재실행, Chrome·WebKit의 저장·복원·미션 진입 검사를 통과했다. [실행 결과·Tauri 착수 조건](evidence/pwa-release-20261106.md).

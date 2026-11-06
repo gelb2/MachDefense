@@ -1,5 +1,16 @@
 # 변경 이력
 
+## 2026-11-06 — 복원 코드 플랫폼 연결
+
+- iPhone·iPad·Android·웹/PWA가 같은 MD1 코드로 전체 5슬롯을 옮긴다.
+- 슬롯 화면의 복사·검사·취소·확인은 공용 C++ 게임 버튼으로 처리한다.
+- 네이티브 복원에 백업·중단 복구·원자적 교체와 완료 기록을 연결했다.
+- 현재 iPhone 정식 저장을 Android 에뮬레이터·웹에서 복원하고 전체 바이트를 대조했다.
+- 80개 미션을 모두 완료한 저장의 복원 검증 경계를 수정했다.
+
+작업 브랜치는 `feat/save-transfer-all-platforms`다. 태그 릴리스는 아직 만들지 않았다. [검사 범위와 배포 결과](docs/evidence/save-transfer-all-platforms-20261106.md).
+
+
 ## v0.2 — 웹·PWA 첫 릴리스
 
 2026-11-06. [플레이·설치](https://gelb2.github.io/MachDefense/) · [설치 안내](docs/public/build-and-install.md)

@@ -27,7 +27,7 @@
 [상세 계획](save-transfer-web-tauri-plan.md) · [구현·검사](evidence/web-pwa-20261106.md). 기존 생산 HUD·길찾기·레벨10 과제는 유지한다.
 
 - [x] MD-SAVE-CODE-01: 원본 전체 5슬롯 코덱·검증·원작 에셋 공용 버튼을 구현했다. 네이티브/Wasm 왕복과 실제 아이폰 저장의 웹 복원을 확인했다.
-- [ ] 단일 슬롯·확장 설정과 Apple/Android 복원 UI 서비스 연결. 현재 기본값은 비활성이다.
+- [ ] 단일 슬롯·확장 설정. Apple/Android 복원 UI는 연결했고 [교차 검사](evidence/save-transfer-all-platforms-20261106.md)를 진행했다.
 - [x] MD-WEB-01: 같은 Core·Audio를 쓰는 WebGL2 실행기, Asyncify 저장 완료, 입력·음향·GPU 복구를 구현하고 Chrome/WebKit에서 검사했다.
 - [x] MD-PWA-01 로컬: 자원 다운로드·해시·설치 안내·오프라인·업데이트·캐시 복구와 저장 보존. Mac Chrome 설치형 PWA 실행·종료 확인.
 - [ ] MD-PWA-DEVICE-01: 공개 Pages 주소에서 iPhone/iPad/Galaxy 설치·실제 터치·잠금 복귀·음향·장시간 성능을 검사한다. 운영 주소는 https://gelb2.github.io/MachDefense/ 이다.
@@ -35,7 +35,7 @@
 - [ ] 120Hz 표시 주기·장시간 메모리/발열과 실제 음향 출력 검사를 마친다.
 - [x] 기존 플랫폼 회귀: 기준 2,972파일 중 복원 연결 4파일만 변경. 네이티브 수정 전후 160조건 추적 일치, iOS 시뮬레이터·Android 일반/치트 빌드 성공.
 - [ ] MD-TAURI-MAC-01: 검증한 웹 산출물을 포함하고 OS 파일 저장·복원 중단·창·종료를 연결한다.
-- [ ] Apple·Android 복원 UI 연결 후 각 플랫폼 교차 복원 검사.
+- [ ] 실제 Galaxy·모바일 설치형 PWA에서 복원 재검사. Apple 시뮬레이터·Android 에뮬레이터·Chrome·WebKit 검사 결과는 [교차 검사](evidence/save-transfer-all-platforms-20261106.md)에 기록했다.
 
 ## 남은 과제 요약 — 2026-11-06 HUD 사용자 확인 후
 
@@ -563,10 +563,10 @@ Info.plist·프로젝트 생성 설정·ViewController를 두 세로 방향으�
 
 - [x] HeavyMach1 실제 코덱·FileStore·Apple/Android 연결을 MachDefense 원본 5슬롯과 대조했다.
 - [x] 공용 MD1 생성·검증·게임 복원 메뉴와 PWA 연결을 구현했다. 실제 아이폰 저장 42,496바이트의 웹 복원 근거가 있다.
-- [ ] 공용 백업·pending·교체·재읽기·중단 후 복구를 연결한다. 네이티브의 기본 restoreSave는 현재 백업하지 않는다.
-- [ ] iPhone·iPad 공용 Apple 어댑터와 Android 어댑터에 연결한다. 세 플랫폼은 모두 완료하고 함께 검증한다.
-- [ ] PWA 텍스트 입력창의 DOM CANCEL/OK를 공용 게임 버튼으로 교체한다. 모든 플랫폼에서 게임 액션 버튼은 원작 에셋·글꼴·C++ 렌더/입력을 사용한다. 플랫폼은 텍스트 필드·키보드·클립보드·파일 서비스만 맡는다.
-- [ ] 빈 저장·높은 진행도·5슬롯·잘못된 코드·쓰기 실패·복원 중 종료·재시작을 검사한다. iPhone→iPad→Android→PWA 및 역방향 바이트 대조와 복원 후 실제 전투를 확인한다.
+- [x] 공용 FileStore의 백업·pending·교체·재읽기·commit 기록·중단 복구를 Apple·Android에 연결했다.
+- [x] iPhone·iPad 공용 Apple 어댑터와 Android 어댑터를 구현했다. 기기별 검사 범위는 [검사 기록](evidence/save-transfer-all-platforms-20261106.md)에 구분했다.
+- [x] 복원 입력창의 액션을 공용 COPY/CHECK/CANCEL/CLOSE 버튼으로 연결했다. 원작 에셋·글꼴·C++ 렌더와 입력을 사용한다.
+- [x] 빈 저장·실제 iPhone 저장·5슬롯·잘못된 코드·쓰기 실패·세 지점 중단/재시작 검사. Android 에뮬레이터·Web의 전체 바이트와 코드 왕복 일치. 실제 Galaxy·모바일 PWA 검사는 아래 후속 항목으로 분리했다.
 - [ ] 단일 슬롯 복원과 향후 HUD 순서·확장 설정은 별도 설계한다. 첫 동시 연결 범위는 기존 전체 5슬롯이다.
 
 
@@ -625,3 +625,24 @@ Info.plist·프로젝트 생성 설정·ViewController를 두 세로 방향으�
 - [x] 렌더·충돌·WebSocket·음향·저장 키와 HeavyMach/MachDefense의 차이를 [조사 문서](research/lamplighter-20261106.md)에 기록했다.
 - [x] 기존 MachDefense 통합 보고서에 조사 결과와 복원 코드 동시 연결 계획을 게시했다. 게시 근거는 report-site.md에 기록한다.
 - [ ] 후속 제품 개선 때 짧은 첫 진입 안내와 행동 표시 방식을 검토한다. 현재 게임 UI 기술 교체나 신규 3D 공간 개발은 요청 범위에 없다.
+
+## MD-SAVE-CODE-01 — 플랫폼 연결 검사
+
+- [x] C++ 복원 패널과 Apple·Android·Web 텍스트 필드 연결. 복사·검사·취소·확인은 게임 버튼이다.
+- [x] 현재 iPhone 정식 앱 저장 백업과 Android 에뮬레이터·Web 복원 후 42,496바이트 대조.
+- [x] 공용 38개 검사, Apple 두 시뮬레이터, Web Chrome·WebKit 입력/저장 회귀.
+- [ ] 실제 Galaxy 및 모바일 설치형 PWA 입력·복원 확인.
+- [ ] FileStore rename 뒤 fsync 실패·rollback 실패 직접 주입 검사.
+
+[구현·검사 결과](evidence/save-transfer-all-platforms-20261106.md).
+
+## MD-TITLE-IPAD-02 — iPad 스플래시 좌우 왜곡 조사
+
+2026-11-06 사용자 관측: iPad 스플래시 화면 좌우가 원본 이미지를 늘려 포토샵으로 왜곡한 것처럼 보인다.
+
+- [ ] 현재 스플래시의 원본·추가 이미지·좌우 채움·크롭·확대/반사 코드를 확인하고 실제 iPad 화면과 대조한다.
+- [ ] HeavyMach1 스플래시 복원 때 사용한 이미지 스킬, 채택 이미지, 편집 절차, 연결 코드와 검증 기록을 찾는다.
+- [ ] 같은 복원 작업인데 HeavyMach1 쪽 결과가 더 자연스러웠던 이유를 그림 제작과 화면 배치 처리로 나누어 비교한다.
+- [ ] 비교 근거와 개선안을 기존 MachDefense 통합 보고서에 추가한다. 원본을 늘리거나 가장자리를 복사하는 방식으로 덮지 않는다.
+
+기존 타이틀 경계선 수정 기록과 원본 이미지를 보존한다.
