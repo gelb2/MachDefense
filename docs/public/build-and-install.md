@@ -20,7 +20,7 @@ Apple Silicon Mac의 Xcode에서 `Apple/MachDefense.xcworkspace`를 연다. 일�
 
 ## Android
 
-[Releases](https://github.com/gelb2/MachDefense/releases/tag/v0.1)의 APK를 설치하거나 Android Studio에서 `Android/`를 연다. 빌드 환경은 SDK36·NDK26.3.11579264·CMake3.22.1·JDK17이다. `normalDebug` 또는 `cheatDebug`와 연결한 기기를 선택한다. Android8(API26) 이상 arm64를 대상으로 한다.
+[Releases](https://github.com/gelb2/MachDefense/releases/tag/v0.3)의 일반·치트 APK를 설치하거나 Android Studio에서 `Android/`를 연다. 빌드 환경은 SDK36·NDK26.3.11579264·CMake3.22.1·JDK17이다. `normalDebug` 또는 `cheatDebug`와 연결한 기기를 선택한다. Android8(API26) 이상 arm64를 대상으로 한다.
 
 ## 소스에서 빌드
 

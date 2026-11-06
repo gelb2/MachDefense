@@ -18,7 +18,7 @@
 - [x] 긴급지원 기획 주체, mesabloo의 영향, Internet Archive 출처와 치트 검증 기록 반영.
 - [ ] 개발자의 변 마지막 단락: 사용자가 제공할 문장 또는 시를 별도 단락으로 추가.
 - [x] 게임 배포 후 공개 주소·설치 안내·실행 상태 갱신.
-- [x] HeavyMach1과 같은 README 위치에 Quick Play·PWA 안내·공유 복원 코드 작성. 현재 iPhone 정식 저장의 Stage 42·유닛 12종·20,329Cr 코드를 생성하고 왕복 검사했다. [원고](public/quick-play.md). 기능 브랜치에 작성했으며 main 반영은 남았다.
+- [x] HeavyMach1과 같은 README 위치에 Quick Play·PWA 안내·공유 복원 코드 작성. 현재 iPhone 정식 저장의 Stage 42·유닛 12종·20,329Cr 코드를 생성하고 왕복 검사했다. [원고](public/quick-play.md). v0.3 릴리스에 포함한다.
 - [ ] 실제 모바일 PWA 설치와 실행 검사.
 
 [원고 전문](editorial/github-manuscripts-20261106.md) · [Sass 집필 자료](editorial/sass-publication-guide.md) · [웹 개발 브랜치 검사](evidence/web-pwa-20261106.md)

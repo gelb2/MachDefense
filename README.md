@@ -1,6 +1,6 @@
 # MachDefense
 
-[![Release v0.2](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.2)
+[![Release v0.3](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.3)
 [![iOS, iPadOS, Android, Web, PWA](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript](docs/public/media/badges/code.svg)](docs/public/architecture.md)
@@ -54,8 +54,8 @@ MachDefense는 메크와 포탑을 생산해 적 기지를 공격하는 세로 �
 
 | 플랫폼 | 실행 | 현재 상태 |
 |---|---|---|
-| iPhone·iPad | Xcode 워크스페이스 | v0.1 출시. 실제 기기에서 일반·치트 앱 검사 |
-| Android | Android Studio 또는 APK | v0.1 출시. Galaxy·에뮬레이터 검사 |
+| iPhone·iPad | Xcode 워크스페이스 | v0.3 소스. 실제 일반·치트 앱의 코드 복원 검사 |
+| Android | Android Studio 또는 APK | [v0.3 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.3). Galaxy·에뮬레이터 복원 검사 |
 | 웹 | 브라우저 | GitHub Pages 배포. Mac Chrome·Safari·WebKit 검사 |
 | PWA | 브라우저에서 설치 | 설치·오프라인 실행 지원. 기기별 검사 결과는 검사 문서 참고 |
 | Tauri Mac | 데스크톱 앱 | 개발 예정 |

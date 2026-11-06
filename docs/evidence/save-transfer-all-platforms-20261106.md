@@ -84,7 +84,7 @@ FileStore의 추가 실패 검사를 마쳤다. macOS의 임시 디렉터리에�
 - Galaxy 증거는 `.local/save-transfer/galaxy-device/`의 `smoke.log`, `chrome-restore.json`, `pwa-restore.json`과 화면 캡처에 보존한다. iPhone 설치형 PWA의 직접 복원 결과는 아직 확정하지 않았다.
 - 개인 복원 코드는 브라우저 로컬 저장 검사에만 사용했다. 배포 파일 허용 목록에 개인 저장·코드는 없으며 원본 패키지 검사도 통과했다.
 
-게임 소스는 기능 브랜치에 보존한다. 이번 작업에서 develop·main 병합과 새 버전 태그는 만들지 않았다.
+이 검사 직후에는 기능 브랜치에 보존했다. 후속 사용자 지시로 develop→main 병합과 v0.3 릴리스를 진행한다. [변경 이력](../../CHANGELOG.md).
 
 ## 사용자 확인 — iPhone와 iPad PWA 왕복
 
