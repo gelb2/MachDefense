@@ -66,15 +66,17 @@ def rename(node,mapping):
  node['children']=[rename(c,mapping) for c in node['children']];return node
 def alias(old,new):
  newparts.append(rename(parts[old],{old:new}))
- row=t['PartsList'].get(old);row.update(PartsName=new,No='0',TileName=old);t['PartsList'].put(row)
+ assert (ROOT/f'Resources/Images/{new}.png').is_file(), f'Pack approved art first: {new}'
+ row=t['PartsList'].get(old);row.update(PartsName=new,No='0',TileName=new);t['PartsList'].put(row)
  # Copied parts retain their original socket/type data; only the image lookup
  # uses the existing table alias path. These max-level images are single tiles.
  assert bytes.fromhex(parts[old]['data_hex'])[25]==1
- t['TileList'].put({'TileName':old+'.png','X':'1','Y':'1'})
+ t['TileList'].put({'TileName':new+'.png','X':'1','Y':'1'})
+for l in range(6,11):alias('Turret_b_05',f'Turret_b_{l:02d}')
 for name,(mach,weapon) in configs.items():
  for l in range(6,11):
   old,new=f'{weapon}_05',f'{weapon}_{l:02d}';alias(old,new)
-  newmachines.append(rename(machines[f'{mach}_05'],{f'{mach}_05':f'{mach}_{l:02d}',old:new}))
+  newmachines.append(rename(machines[f'{mach}_05'],{f'{mach}_05':f'{mach}_{l:02d}',old:new,'Turret_b_05':f'Turret_b_{l:02d}'}))
 for l in range(8,11):
  for old,new in [('Base07',f'Base{l:02d}'),('BaseWpn07',f'BaseWpn{l:02d}'),('Base07_Rader',f'Base{l:02d}_Rader')]:alias(old,new)
  newmachines.append(rename(machines['Base07'],{'Base07':f'Base{l:02d}'}))

@@ -480,6 +480,45 @@ public:
     XCTAssertTrue([NSFileManager.defaultManager removeItemAtURL:directory error:nil]);
 }
 
+- (void)testAdditionalLevelArtAssembly {
+    NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
+    UIWindow* window=[[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];window.rootViewController=[UIViewController new];
+    MDMenuSurface* surface=[[MDMenuSurface alloc]initWithFrame:window.bounds];surface.contentScaleFactor=UIScreen.mainScreen.scale;surface.layer.contentsScale=surface.contentScaleFactor;
+    CAEAGLLayer* layer=(CAEAGLLayer*)surface.layer;layer.opaque=YES;layer.drawableProperties=@{kEAGLDrawablePropertyRetainedBacking:@YES,kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8};
+    [window.rootViewController.view addSubview:surface];[window makeKeyAndVisible];
+    MDRenderer* renderer=[[MDRenderer alloc]initWithResourceRoot:root];MenuResources resources(root,renderer);
+    try {
+        auto models=md::BattleModels::load(resources);unsigned poses=0,frames=0;
+        auto imageSize=[&](std::string_view name){return resources.imageSize(name);};
+        const std::array families{"Gun","Msl","MG","Ion","Lsr","Pla"};
+        for(const auto* family:families){
+            md::Frame f;f.logicalWidth=640;f.logicalHeight=480;f.background={.18f,.19f,.17f,1};
+            for(unsigned direction=0;direction<4;++direction)for(unsigned level=5;level<=10;++level){
+                const std::string name=std::string("Tur_")+family+(level<10?"_0":"_")+std::to_string(level);
+                const float angle=direction*1.57079632679f;
+                auto p=models.pose(name,1,0,angle,angle);
+                for(const auto& part:p)if(part.definition->tileCount){auto size=imageSize(part.definition->image);XCTAssertGreaterThan(size.x,0.f);}
+                const auto old=models.pose(std::string("Tur_")+family+"_05",1,0,angle,angle);
+                XCTAssertEqual(p.size(),old.size());
+                for(unsigned i=0;i<p.size();++i){
+                    XCTAssertEqualWithAccuracy(p[i].localCenter.x,old[i].localCenter.x,.001f);XCTAssertEqualWithAccuracy(p[i].localCenter.y,old[i].localCenter.y,.001f);
+                    auto a=imageSize(p[i].definition->image),b=imageSize(old[i].definition->image);XCTAssertEqual(a.x,b.x);XCTAssertEqual(a.y,b.y);
+                    for(unsigned socket=1;socket<p[i].definition->sockets.size();++socket){auto a=p[i].muzzle(socket),b=old[i].muzzle(socket);XCTAssertTrue(a.has_value()&&b.has_value());if(a&&b){XCTAssertEqualWithAccuracy(a->x,b->x,.001f);XCTAssertEqualWithAccuracy(a->y,b->y,.001f);}}
+                }
+                models.appendSprites(f,p,{52.f+106.f*(level-5),64.f+110.f*direction},imageSize);++poses;
+            }
+            XCTAssertTrue([renderer drawFrame:f toLayer:layer],@"%@",renderer.lastError);[self capture:[NSString stringWithFormat:@"art-turret-%s-level5-through10-four-directions",family] renderer:renderer];++frames;
+        }
+        auto bytes=resources.read("Tables/BaseUpgrade.tsv");md::BaseUpgradeCatalog bases(md::DataTable::parse({reinterpret_cast<const char*>(bytes.data()),bytes.size()}));
+        auto save=md::SaveData::empty(1);save.createProfile("ART",1);
+        md::Frame f;f.logicalWidth=640;f.logicalHeight=480;f.background={.18f,.19f,.17f,1};
+        for(unsigned level=7;level<=10;++level){save.setBaseUpgrade(0,0,level-1);save.setBaseUpgrade(0,1,level-1);auto loadout=md::PlayerLoadout::forBase(save,0,bases,md::BattleGeometry::pad());auto p=models.pose(loadout.assembly,1,0,0,.5f);models.appendSprites(f,p,{80.f+160.f*(level-7),240},imageSize);}
+        XCTAssertTrue([renderer drawFrame:f toLayer:layer],@"%@",renderer.lastError);[self capture:@"art-base-level7-through10" renderer:renderer];++frames;
+        NSLog(@"MD_ART_SWEEP poses=%u frames=%u original-canvas/socket/rotation-pass",poses,frames);XCTAssertEqual(poses,144u);XCTAssertEqual(frames,7u);
+    }catch(const std::exception& e){XCTFail(@"Art assembly: %s",e.what());}
+    [renderer finish];window.hidden=YES;
+}
+
 - (void)testLevel10AndScrollableProductionHUD {
     NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
     XCTAssertNotNil(root);if(!root)return;
