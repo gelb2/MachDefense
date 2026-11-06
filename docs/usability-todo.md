@@ -1,9 +1,11 @@
 ## 2026-11-07 세 작품 미술 기준
 
 - [x] 박재철(PaperBlue)의 HeavyMach1·HeavyMach2·MachDefense 원본 유닛·일러스트를 비교하고 제작 스킬로 정리. [스킬과 비교 그림](../.agents/skills/mach-series-art/SKILL.md). 미술 사조에 대한 해석과 공식 자료로 확인된 작업 분야를 구분했다.
-- [x] 추가 레벨 그림 44개 연결·실기기 검사·iPhone/iPad 일반·치트 앱 4개 설치. 저장 보존. [결과](evidence/level10-art-integration-20261107.md). develop 병합을 이어간다.
+- [x] 추가 레벨 그림 44개 연결·실기기 검사·iPhone/iPad 일반·치트 앱 4개 설치. 저장 보존. [결과](evidence/level10-art-integration-20261107.md). develop `1f4dca7`에 병합했다.
 
 # TODO
+
+- [ ] 레이저 포탑의 일반 해금 추가 여부 결정. 원본 3개와 복원판 모두 보상표에서 주석 처리돼 일반 진행으로 얻을 수 없다. 데이터·외형·강화는 존재한다. [조사](evidence/laser-turret-unlock-20261107.md).
 
 ## 추가 지시 — 2026-11-07
 

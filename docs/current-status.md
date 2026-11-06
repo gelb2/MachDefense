@@ -1,6 +1,6 @@
 # 추가 레벨 부품 연결·Mach 시리즈 미술 스킬 — 2026-11-07
 
-승인한 44개 그림을 연결하고 원작 캔버스·회전축·총구를 보존했다. CTest 41개, iPhone 시뮬레이터 2개, 실제 iPad 3개·iPhone 2개 검사를 통과했다. [연결과 검사 결과](evidence/level10-art-integration-20261107.md).
+develop `1f4dca7`에 병합했다. iPhone·iPad 정식·치트 앱 4개를 설치했고 저장을 보존했다. 승인한 44개 그림을 연결하고 원작 캔버스·회전축·총구를 보존했다. CTest 41개, iPhone 시뮬레이터 2개, 실제 iPad 3개·iPhone 2개 검사를 통과했다. [연결과 검사 결과](evidence/level10-art-integration-20261107.md).
 
 세 작품의 원본 30개와 공식 자료를 비교해 [mach-series-art 스킬](../.agents/skills/mach-series-art/SKILL.md)을 만들었다. 프로젝트 스킬과 로컬 공용 스킬에 같은 자료를 두었다.
 
