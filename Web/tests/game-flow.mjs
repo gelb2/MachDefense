@@ -3,7 +3,7 @@ const out=process.argv[2]||'.local/pwa-20261106',browser=await chromium.launch({
 const state=()=>page.evaluate(()=>MDTest.state()),advance=n=>page.evaluate(n=>MDTest.advance(n),n),command=n=>page.evaluate(n=>MDTest.call('md_command',['number'],[n]),n);
 async function sprite(name){const s=await state(),v=(await page.evaluate(()=>MDTest.sprites())).find(b=>b.image===name&&b.w>1);assert(v,'Missing '+name);await page.mouse.click((v.x+v.w/2)/s.width*page.viewportSize().width,(v.y+v.h/2)/s.height*page.viewportSize().height);await advance(1);}
 try{
- await page.goto('http://127.0.0.1:8940/');await page.waitForFunction(()=>!document.querySelector('#play').disabled,null,{timeout:120000});await page.click('#play');await page.waitForFunction(()=>window.MDModule&&document.querySelector('#launcher').hidden);await advance(100);
+ await page.goto(process.argv[3]||'http://127.0.0.1:8940/');await page.waitForFunction(()=>!document.querySelector('#play').disabled,null,{timeout:120000});await page.click('#play');await page.waitForFunction(()=>window.MDModule&&document.querySelector('#launcher').hidden);await advance(100);
  // Cheat creates a disposable profile, starts the real GameSession, and changes only battle state.
  await command(3);await command(6);await advance(240);await page.mouse.click(196,700);await advance(1);await advance(180);await command(12);const a=await state();assert.equal(a.stage,0);
  await command(410);await advance(300);await page.screenshot({path:out+'/web-failure.png'});await sprite('SummaryBtn_Retry.png');await advance(240);assert.equal((await state()).stage,0);

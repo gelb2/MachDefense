@@ -15,7 +15,7 @@
 - 타이틀 프레임을 다시 만들 때 메시도 비운다. 슬롯 화면으로 넘어가면 확장 그림과 메시가 남지 않는다.
 - 생산 HUD·월드·카메라·입력 좌표·전투·저장·오디오 계산은 바꾸지 않았다. 슬롯·미션 메뉴의 기존 금속판 확장은 유지했다.
 
-소비 코드: [TitleBackdrop](../../Sources/Core/Presentation/TitleBackdrop.hpp), [Menu](../../Sources/Core/Presentation/Menu.cpp). 자원 출처·크기·해시는 [명세](../../Resources/Generated/Title/provenance.json)에 있다.
+소비 코드: [TitleBackdrop](../../Sources/Core/Presentation/TitleBackdrop.hpp), [Menu](../../Sources/Core/Presentation/Menu.cpp). 자원 출처·크기·해시는 [명세](../research/title-candidates-20261106/provenance.json)에 있다.
 
 ## 실행 검사
 
@@ -38,3 +38,5 @@ Chrome·WebKit 각각 다음 다섯 화면에서 치트 웹판을 실행했다. 
 정사각 후보는 여백에서 기체가 겹쳐 보여 제외했다. 첫 가로 후보의 추가 포신과 첫 세로 후보의 하단 회색 띠도 다시 생성했다. 현재 후보는 보고서에서 실제 게임 렌더로 비교할 수 있다.
 
 원본과 새 그림의 색·붓질이 만나는 부분은 여전히 눈으로 검토할 대상이다. 특히 넓은 가로 화면의 기체 후방과 세로 화면 하단을 확인한다.
+
+2026-11-07: 미채택 후보 이미지를 조사 문서 폴더로 옮겨 앱 자원에서 제외했다. Menu는 기존 배경 처리로 되돌렸다. 후보 코드는 현재 Menu에서 호출하지 않는다.

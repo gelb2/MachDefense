@@ -1,8 +1,10 @@
 # 생산 HUD 전체 목록과 순서 편집 조사
 
-2026-11-06 · MD-PRODUCTION-HUD-01 · 사용자 계획 승인, 기능 구현 전
+2026-11-06 · MD-PRODUCTION-HUD-01 · 스크롤 구현·웹·iPad 기능 검사 완료, 순서 편집 후속
 
 [남은 과제](../usability-todo.md) · [공용 모듈](../../Modules/README.md) · [저장 구조](../../Sources/Core/Session/SaveData.hpp) · [복원 코드](../../Modules/SaveTransfer/Codec.hpp)
+
+[구현·검사 결과](../evidence/level10-hud-20261107.md)
 
 ## 사용자 확인 — 설치된 유닛 전체를 스크롤
 

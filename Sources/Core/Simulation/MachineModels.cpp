@@ -1,4 +1,5 @@
 #include "Core/Simulation/Battle.hpp"
+#include "Core/Contracts/Game.hpp"
 #include <algorithm>
 #include <bit>
 #include <cmath>
@@ -39,6 +40,18 @@ BattleModels BattleModels::parse(const Chunk& parts,const Chunk& machines) {
         for(const auto& child:c.children) readMachine(child);
     };
     readMachine(machines);return result;
+}
+void BattleModels::append(const Chunk& parts,const Chunk& machines) {
+    auto extra=parse(parts,machines);
+    for(const auto& [name,part]:extra.parts_) if(parts_.contains(name)) throw std::runtime_error("Duplicate additional part: "+name);
+    for(const auto& [name,model]:extra.machines_) if(machines_.contains(name)) throw std::runtime_error("Duplicate additional machine: "+name);
+    parts_.merge(extra.parts_);machines_.merge(extra.machines_);
+}
+BattleModels BattleModels::load(ResourceAccess& r) {
+    auto result=parse(Chunk::parse(r.read("RawData/PartsInfo.mcb")),Chunk::parse(r.read("RawData/MachInfo.mcb")));
+    result.append(Chunk::parse(r.read("RawData/Level10Parts.mcb")),Chunk::parse(r.read("RawData/Level10Machines.mcb")));
+    auto table=[&](const char* name){auto bytes=r.read(std::string("Tables/")+name+".tsv");return DataTable::parse({reinterpret_cast<const char*>(bytes.data()),bytes.size()});};
+    result.configureTiles(table("PartsList"),table("TileList"));return result;
 }
 const PartDefinition* BattleModels::part(std::string_view name) const { auto i=parts_.find(std::string(name));return i==parts_.end()?nullptr:&i->second; }
 const std::vector<AssemblyPart>* BattleModels::machine(std::string_view name) const { auto i=machines_.find(std::string(name));return i==machines_.end()?nullptr:&i->second; }

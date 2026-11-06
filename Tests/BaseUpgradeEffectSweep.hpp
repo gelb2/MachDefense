@@ -96,9 +96,17 @@ inline std::string runBaseUpgradeEffectSweep(ResourceAccess& resources,HostServi
     const BaseUpgradeCatalog catalog(table(resources,"BaseUpgrade"));
     const auto builds=BuildCatalog::load(table(resources,"MachBuild_Parts"),table(resources,"MachBuild_Name"));
     const auto* production=builds.find("MachineGun_01");require(production,"Base effect production definition");
-    constexpr std::array hp{10000,15000,20000,30000,50000,70000,100000};
-    constexpr std::array damage{10,12,14,16,20,25,30};
-    constexpr std::array range{300,340,380,420,460,500,540};
+    // Original levels 1–7 remain the comparison baseline.
+    constexpr std::array originalHP{10000,15000,20000,30000,50000,70000,100000};
+    constexpr std::array originalDamage{10,12,14,16,20,25,30};
+    constexpr std::array originalRange{300,340,380,420,460,500,540};
+    // Approved levels 8–10, independent of the loaded data tables.
+    constexpr std::array extendedHP{130000,160000,190000};
+    constexpr std::array extendedDamage{35,40,45};
+    constexpr std::array extendedRange{580,620,660};
+    const auto expected=[](const auto& original,const auto& extended,unsigned level){
+        return level<original.size()?original.at(level):extended.at(level-original.size());
+    };
     constexpr std::array buildFactor{1.f,.96f,.92f,.88f,.84f,.8f,.76f,.72f,.68f,.64f};
     constexpr std::array creditFactor{1.f,1.2f,1.4f,1.6f,1.8f,2.f,2.2f,2.4f,2.7f,3.f};
     constexpr std::array cellRate{1.f,1.1f,1.2f,1.3f,1.4f,1.5f,1.6f,1.8f,2.f,2.2f};
@@ -107,6 +115,7 @@ inline std::string runBaseUpgradeEffectSweep(ResourceAccess& resources,HostServi
     for(auto geometry:{BattleGeometry::phone(),BattleGeometry::pad()}){
         for(unsigned category=0;category<6;++category){
             const auto type=BaseUpgrade(category);
+            require(catalog.maximumLevel(type)==9,"Base effect expected ten levels");
             for(unsigned level=0;level<=catalog.maximumLevel(type);++level){
                 auto save=profile();World world(resources,host,save,0,geometry,123);world.start(0);
                 if(type==BaseUpgrade::defense)world.damage(base(world).id,123);
@@ -119,21 +128,21 @@ inline std::string runBaseUpgradeEffectSweep(ResourceAccess& resources,HostServi
                     char name[32];std::snprintf(name,sizeof name,"BaseWpn%02u",level+1);
                     require(friendly.weapons.size()==2,context+" two guns");
                     for(const auto& gun:friendly.weapons)require(gun.name==name,context+" weapon binding");
-                    require(friendly.range==int(float(range[level])*1.5f*geometry.deviceScale),context+" range");
+                    require(friendly.range==int(float(expected(originalRange,extendedRange,level))*1.5f*geometry.deviceScale),context+" range");
                     hostile.position={friendly.position.x,friendly.position.y+60};hostile.hp=hostile.maxHP=1000000;
                     friendly.target=hostile.id;
                     unsigned shots=0;
                     for(unsigned i=0;i<400&&shots<4;++i){
                         freeze(world,friendly.id);const int before=hostile.hp;world.tick();const int loss=before-hostile.hp;
-                        require(loss>=0&&loss%damage[level]==0,context+" per-shot damage");shots+=unsigned(loss/damage[level]);
+                        require(loss>=0&&loss%expected(originalDamage,extendedDamage,level)==0,context+" per-shot damage");shots+=unsigned(loss/expected(originalDamage,extendedDamage,level));
                     }
                     require(shots>=4,context+" guns did not fire");
                     world.start(1);appearance(world,0,level,context+" next stage");++appearanceChecks;break;
                 }
                 case BaseUpgrade::defense:{
-                    auto& a=base(world);require(a.maxHP==hp[level],context+" maximum HP");
-                    require(a.hp==hp[level]-(level?0:123),context+" upgrade healing");
-                    world.damage(a.id,321);require(a.hp==hp[level]-(level?0:123)-321,context+" damage after upgrade");
+                    auto& a=base(world);require(a.maxHP==expected(originalHP,extendedHP,level),context+" maximum HP");
+                    require(a.hp==expected(originalHP,extendedHP,level)-(level?0:123),context+" upgrade healing");
+                    world.damage(a.id,321);require(a.hp==expected(originalHP,extendedHP,level)-(level?0:123)-321,context+" damage after upgrade");
                     world.start(1);appearance(world,level,0,context+" next stage");++appearanceChecks;break;
                 }
                 case BaseUpgrade::buildTime:{
@@ -212,7 +221,7 @@ inline std::string runBaseUpgradeEffectSweep(ResourceAccess& resources,HostServi
         world.start(2);appearance(world,3,3,"Combined upgrades next stage");++appearanceChecks;purchases+=6;
         require(host.writes==0,"Combined upgrades unexpected save write");
     }
-    require(checks==108&&creditPickups==40&&cellPickups==40&&capacityClamps==20&&appearanceChecks==30,"Base upgrade effect coverage");
+    require(checks==120&&purchases==552&&creditPickups==40&&cellPickups==40&&capacityClamps==20&&appearanceChecks==42,"Base upgrade effect coverage");
     std::ostringstream out;out<<"Base upgrade effects: "<<checks<<" phone/pad level cases, "<<purchases
         <<" purchases, "<<creditPickups<<" credit pickups, "<<cellPickups<<" mineral pickups, "<<capacityClamps
         <<" capacity clamps, "<<appearanceChecks<<" appearance transitions; no save writes";

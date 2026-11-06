@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Calculate a review proposal only. Never writes runtime Resources or Sources."""
 import csv, hashlib, json, math
+from prepare_resources import decode_table
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'docs/research/level10'
 def table(name):
-    lines=[x for x in (ROOT/'Resources/Tables'/f'{name}.tsv').read_text().splitlines() if x.strip() and not x.startswith('//')]
+    lines=[x for x in decode_table((ROOT/'Resources/RawData'/f'{name}.tble').read_bytes()).decode('utf-8-sig').splitlines() if x.strip() and not x.startswith('//')]
     rows=list(csv.reader(lines,delimiter='\t')); keys=[x.strip() for x in rows[0]]
     return {r[0].strip():dict(zip(keys,[x.strip() for x in r])) for r in rows[1:]}
 W=table('WeaponInfo'); B=table('MachBuild_Name'); M=table('MachList'); A=table('SpAttackList'); BASE=table('BaseUpgrade')
@@ -26,6 +27,8 @@ for name,mach,prefix,hpf,dd,dc in configs:
         n=l-5;w=weapon(prefix+'_',l,5)
         if l>5:
             w['Dmg']=str(int(w['Dmg'])+dd*n)
+            range_step=int(W[f'{prefix}_05']['ShtRng'])-int(W[f'{prefix}_04']['ShtRng'])
+            w['ShtRng']=str(int(w['ShtRng'])+range_step*n)
             if name in ('RifleTurret','LaserTurret'):
                 w['ShtCnt']=str(24+2*n);w['ShtDly']=str(round(.14-.005*n,3));w['RldDly']=str(round(1.9-.05*n,3))
             elif name=='MissileTurret':
@@ -43,7 +46,7 @@ for name,mach,prefix,hpf,dd,dc in configs:
 for category in ('BaseCannon','BaseDefense'):
     for l in range(1,11):
         n=l-7;w=weapon('BaseWpn',l,7) if category=='BaseCannon' else None
-        if w and l>7:w.update(Dmg=str(30+5*n),ShtCnt=str(24+2*n),ShtDly=str(round(.1-.005*n,3)),RldDly=str(round(1.9-.05*n,3)))
+        if w and l>7:w.update(ShtRng=str(540+40*n),Dmg=str(30+5*n),ShtCnt=str(24+2*n),ShtDly=str(round(.1-.005*n,3)),RldDly=str(round(1.9-.05*n,3)))
         hp='' if w else (int(BASE[f'BaseDefense_{l:02d}']['Param']) if l<=7 else 100000+30000*n)
         up=int(BASE[f'{category}_{l:02d}']['UpgCost']) if l<7 else (0 if l==10 else 600*2**(l-1))
         put(category,l,7,w,hp,'',up,min(l,7))
@@ -81,7 +84,7 @@ for r in rows:
 OUT.mkdir(parents=True,exist_ok=True)
 fields=list(rows[0]);
 with (OUT/'levels.csv').open('w') as f:
-    out=csv.DictWriter(f,fieldnames=fields);out.writeheader();out.writerows(rows)
+    out=csv.DictWriter(f,fieldnames=fields,lineterminator="\n");out.writeheader();out.writerows(rows)
 (OUT/'proposal.json').write_text(json.dumps({'status':'proposal-not-runtime','rows':rows,'weapons':weapons},ensure_ascii=False,indent=2)+'\n')
 manifest={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((ROOT/'Resources/Tables').glob('*.tsv'))}
 summary={'objects':13,'levels':len(rows),'new_levels':sum(r['source']=='proposal' for r in rows),'weapon_rows':len(weapons),'max_damage':max(int(x['fields']['Dmg']) for x in weapons),'max_shots':max(int(x['fields']['ShtCnt']) for x in weapons),'resource_table_sha256':manifest,'checks':['existing weapon rows equal','table column layout equal','new special item IDs unused','damage/range int16 and shots uint8 valid','HP/cost/product int32 valid','new visual/audio fields equal original maximum'],'limitations':['proposal arithmetic only; no new game implementation or device performance test']}

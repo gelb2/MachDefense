@@ -10,6 +10,7 @@ public:
     const Frame& frame()const override;
     void tick()override;
     void touch(const Touch&)override;
+    bool scrollProduction(Vec2 point,float delta);
     void setActive(bool)override;
     void resize(float,float,float safeTop=0,float safeBottom=0)override;
     int preferredFramesPerSecond()const override{return 60;}

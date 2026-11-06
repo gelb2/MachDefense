@@ -14,15 +14,15 @@ for(const [name,w,h] of [['reference',320,480],['iphone',390,844],['ipad',820,11
  await page.click('#play');await page.waitForFunction(()=>window.MDModule&&document.querySelector('#launcher').hidden,{timeout:120000});
  await page.evaluate(()=>MDTest.advance(20));
  const state=await page.evaluate(()=>MDTest.state()),sprites=await page.evaluate(()=>MDTest.sprites());
- const titles=sprites.filter(x=>x.image==='Title.jpg');assert.equal(titles.length,1);
- assert.equal(titles[0].w,320);assert.equal(titles[0].h,480);assert.equal(state.writes,0);
- assert.equal(sprites.some(x=>x.image.startsWith('Generated/Title/')),name!=='reference');
+ const titles=sprites.filter(x=>x.image==='Title.jpg');assert(titles.some(x=>x.w===320&&x.h===480));
+ const center=titles.find(x=>x.w===320&&x.h===480);assert.equal(state.writes,0);
+ assert.equal(sprites.some(x=>x.image.startsWith('Generated/Title/')),false);
  await page.screenshot({path:`${out}/${name}-title.png`});
  await page.evaluate(async()=>{await MDTest.tap(.5,.5);await MDTest.advance(160);});
  assert((await page.evaluate(()=>MDTest.sprites())).some(x=>x.image==='Common_Btn_NEW.png'));
  assert.equal((await page.evaluate(()=>MDTest.state())).writes,0);assert.deepEqual(errors,[]);
  await page.screenshot({path:`${out}/${name}-slots.png`});
- results.push({name,w,h,originalTitleCount:titles.length,originalSize:[titles[0].w,titles[0].h],slotsOpened:true,writes:0,errors});
+ results.push({name,w,h,originalTitleCount:titles.length,originalSize:[center.w,center.h],slotsOpened:true,writes:0,errors});
  await context.close();
 }
 }finally{await browser.close();}

@@ -6,7 +6,7 @@
   "max_damage": 10000,
   "max_shots": 130,
   "resource_table_sha256": {
-    "Resources/Tables/BaseUpgrade.tsv": "cc1f63df44eb991dca10eefc3c823b09118e132525aff7292c1a10bf1f8073a8",
+    "Resources/Tables/BaseUpgrade.tsv": "8e13de21b46e059d05c87f385f4f321eb15f005db4c44f6b5c2cb5015b3a6d60",
     "Resources/Tables/Description_kr.tsv": "a5bccb55d538582f70da6e47e6782c04eee2b92580c393ba79eae665d71103ed",
     "Resources/Tables/Description_us.tsv": "c854d52f2bc89c0b03e0095f017bcf6bad62f1f334b6c6ece6cde3f82b4266e5",
     "Resources/Tables/ESpawn_01.tsv": "c685d1c0f4edc6fd08056adc226dcb22ea120ab8ba7d95c5b40419a04545c056",
@@ -89,17 +89,17 @@
     "Resources/Tables/ESpawn_78.tsv": "a6df2d002797b789d388c7dc9e70a39701c9ede0664a3f4b9de396358e0f3ce6",
     "Resources/Tables/ESpawn_79.tsv": "7dca0f87a311616a8dc446ab969aafbccc6c592b318774589bc9a646e8952c14",
     "Resources/Tables/ESpawn_80.tsv": "414522c66ec31954010d1e253e7ab354c785c24e7fd93d84814200626dc60cf6",
-    "Resources/Tables/ItemInfo.tsv": "a14baa92670e20e2a9938962d0c57e7ac1e7c9b71043c94e5c4fb384b1fc1cf1",
+    "Resources/Tables/ItemInfo.tsv": "24d29510e5cde475e6dcc209b8052821f8dac24c91ad5919650c3932c7a93b98",
     "Resources/Tables/ItemRegen.tsv": "8d0f6d460e15d37cba0efb790550461ee4abf9fe86717a6bbcc8f64e5bf3e341",
-    "Resources/Tables/MachBuild_Name.tsv": "fac52de6939416ad16f5937c44508d4be070f8707db90ba579da628e09b21dd1",
+    "Resources/Tables/MachBuild_Name.tsv": "d2d1b8082e9ec8870dc1190d9ee9d91c80f0b0843c9e25f9a783f5d742082f3c",
     "Resources/Tables/MachBuild_Parts.tsv": "e541e9c951231e405e5dac1ad49fda36497a0626e3b61d5fb32a526a37108186",
-    "Resources/Tables/MachList.tsv": "c0d0962414d8cdf670cacab4bc0952a80be529ca234f4bdf5ffdf5cf8dc40642",
+    "Resources/Tables/MachList.tsv": "b0736a8a53874877860f2b6dffb74fe7fd5a26b6381f85b446f2d63a48294cae",
     "Resources/Tables/MachRegen.tsv": "2fbfaedbef67699aaad6faf88cf4c0bd819ffdabed707dd7b85153b8d97d9a21",
     "Resources/Tables/MapList.tsv": "06c01bea0d92f0db9529d9a702ad6b465bbc166800ff0bb5e24ab6448d68486f",
-    "Resources/Tables/PartsList.tsv": "835569f20b27ae750ac5214ba3d04c43ae2870b685fc8ad6a3e0cdb9951ba55c",
-    "Resources/Tables/SpAttackList.tsv": "d24b060c5fd3e7b48e72b798f107878c8c1c7b36ac77ce75f745ccfe3cc41538",
-    "Resources/Tables/TileList.tsv": "891a2d265a606f7458ece9c2919245dc0106cbde09a24318d747dfc3de768f49",
-    "Resources/Tables/WeaponInfo.tsv": "2ae3f8d1823a67ae5a61ed0647964a4483ff849ee547149c20e44ddb971cef63"
+    "Resources/Tables/PartsList.tsv": "ffb498932e30e74e4ae84211a542fabac28de6ab43759b1b25d1015522d3aeb1",
+    "Resources/Tables/SpAttackList.tsv": "5ac06d6aad956c854db53e8a8bcd9d9f7cd6c3fdecb5b79d572892ee7af7db73",
+    "Resources/Tables/TileList.tsv": "4266caf60c3ab60f1a084e7459fde6ce9628b6a237582d55dde1462601e485a6",
+    "Resources/Tables/WeaponInfo.tsv": "7e5701a4319490ce3103b1b469feb2b752cc47a8f48ffa8c7b0ee8eff84b5fd5"
   },
   "checks": [
     "existing weapon rows equal",

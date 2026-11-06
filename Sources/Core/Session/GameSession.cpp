@@ -20,7 +20,7 @@ DataTable table(ResourceAccess& r,std::string_view n){auto b=r.read("Tables/"+st
 std::string fontMetrics(ResourceAccess& r){auto b=r.read("Generated/TrebuchetMS-Bold-48.tsv");return {b.begin(),b.end()};}
 SaveData loadSave(HostServices& host){if(auto data=host.readSave())return SaveData::decode(*data);return SaveData::empty(std::uint32_t(std::time(nullptr)));}
 std::string levelName(std::string_view name,unsigned level){char b[24];std::snprintf(b,sizeof b,"_%02u",level+1);return std::string(name)+b;}
-std::string attackIcon(int itemId){char b[32];std::snprintf(b,sizeof b,"Icon%05d.png",itemId);return b;}
+
 class SessionHost final:public HostServices {
 public:
     explicit SessionHost(HostServices& h):host(h){}
@@ -44,6 +44,7 @@ public:
 struct GameSession::State {
     ResourceAccess& resources;SessionHost host;SaveData save;
     DataTable items,machines,descriptions;SpriteFont messageFont;
+    std::unordered_map<int,std::string> attackIcons;
     BuildCatalog builds;WeaponCatalog weapons;BaseUpgradeCatalog baseUpgrades;AttackCatalog attacks;Settlement settlement;BattleModels models;
     Menu menu;Transition transition;GameHUD hud;UpgradeDialog upgrades;SummaryDialog summary;
     EmergencySupport support;SupportDialog supportDialog;
@@ -62,14 +63,23 @@ struct GameSession::State {
       items(table(r,"ItemInfo")),machines(table(r,"MachList")),descriptions(table(r,"Description_us")),messageFont(fontMetrics(r)),
       builds(BuildCatalog::load(table(r,"MachBuild_Parts"),table(r,"MachBuild_Name"))),weapons(WeaponCatalog::load(table(r,"WeaponInfo"),true)),
       baseUpgrades(table(r,"BaseUpgrade")),attacks(table(r,"SpAttackList")),settlement(builds,table(r,"MachRegen")),
-      models(BattleModels::parse(Chunk::parse(r.read("RawData/PartsInfo.mcb")),Chunk::parse(r.read("RawData/MachInfo.mcb")))),
+      models(BattleModels::load(r)),
       menu(r,host,save,true),transition(r,host),hud(r,[this](Frame& f,std::string_view n,Vec2 p,float s){drawUnit(f,n,p,s);}),
       upgrades(r,[this](Frame& f,const UpgradeUnit& u,bool next,Vec2 p,float s){drawUnit(f,levelName(u.name,u.level+(next?1:0)),p,s);},
                  [this](Frame& f,const auto&,Vec2 p,float s){auto parts=PlayerLoadout::forBase(save,slot,baseUpgrades,BattleGeometry::phone());drawParts(f,parts.assembly,p,s);}),
       summary(r,[this](Frame& f,const StageReward& reward,Vec2 p,float s){drawReward(f,reward,p,s);}),supportDialog(r),validation(v){
-        models.configureTiles(table(r,"PartsList"),table(r,"TileList"));
+        // ItemInfo.Icon is the shared visual identity. Extended rows reuse the
+        // first original item image with that identity, while ItemId/Param1
+        // continue to select the new combat level.
+        std::unordered_map<int,std::string> originalIcons;
+        for(std::size_t row=0;row<items.rowCount();++row)if(items.value(row,"Type")=="SpAtk"){
+            const auto code=int(*items.integer(row,"Code")),icon=int(*items.integer(row,"Icon"));
+            char image[32];std::snprintf(image,sizeof image,"Icon%05d.png",code);
+            auto [it,inserted]=originalIcons.try_emplace(icon,image);attackIcons.emplace(code,it->second);
+        }
         messageOK.bounds={128,279,64,32};if(validation){validationTools=std::make_unique<ValidationTools>(r);validationPanel=std::make_unique<ValidationPanel>(r);}rebuild();
     }
+    std::string attackIcon(int itemId)const{return attackIcons.at(itemId);}
     std::size_t offset()const{return SaveData::slotStart+slot*SaveData::slotStride;}
     std::string label(std::string_view name)const{auto row=descriptions.findRow("MN_"+std::string(name));return row?std::string(descriptions.value(*row,"Value")):std::string(name);}
     void drawParts(Frame& f,const std::vector<AssemblyPart>& parts,Vec2 p,float scale,bool unitPreview=false){
@@ -89,8 +99,8 @@ struct GameSession::State {
         if(!reward.build.empty()){drawUnit(f,reward.build,p,scale);return;}
         if(reward.attack.empty())return;
         const int item=attacks.definition({reward.attack,0,0,false}).itemId;
-        // DlgSummary uses the attack's ItemId, not ItemInfo.Icon (atlas ID).
-        char name[40];std::snprintf(name,sizeof name,"Icon%05d.png",item);auto size=resources.imageSize(name);
+        // Resolve appended ItemIds through their reused original icon identity.
+        const auto name=attackIcon(item);auto size=resources.imageSize(name);
         for(unsigned i=0;i<reward.attackCount;++i){Sprite s;s.image=name;const float x=p.x+(float(i)*80-float(reward.attackCount-1)*40)*scale;s.destination={x-size.x*scale*.5f,p.y-size.y*scale*.5f,size.x*scale,size.y*scale};f.sprites.push_back(s);}
     }
     bool persist(){pendingSave=!host.writeSave(save.encode());if(!pendingSave)return true;message="Could not save progress.";return false;}
@@ -167,7 +177,7 @@ struct GameSession::State {
             s.production.push_back(std::move(row));
         }
         for(const auto& a:save.attacks(slot))if(a.onSlot){const auto& d=attacks.definition(a);
-            s.attacks.push_back({a.name,attackIcon(d.itemId),a.level,attacks.maximumLevel(a.name),a.count,unsigned(attacks.upgradeCost(a)),a.level+1<attacks.maximumLevel(a.name)});}
+            s.attacks.push_back({a.name,attackIcon(d.itemId),a.level,attacks.maximumLevel(a.name),a.count,std::uint64_t(attacks.upgradeCost(a)),a.level+1<attacks.maximumLevel(a.name)});}
         for(const auto& q:world->productionRows())s.queue.push_back({q.name,q.progress});hud.setState(std::move(s));
     }
     void refreshUpgrades(){
@@ -178,16 +188,16 @@ struct GameSession::State {
             else if((i==1||i==5)&&current.parameter){const int divisor=i==1?100:1;const int value=int(*current.parameter)/divisor;row.stat=std::string(i==1?"DEF ":"Size ")+std::to_string(value);if(row.level+1<row.maximumLevel){auto next=baseUpgrades.level(type,row.level+1).parameter;if(next)row.stat+="(+"+std::to_string(int(*next)/divisor-value)+")";}}
         }
         upgradeState.baseCenter={160,-36+panelOffset};
-        upgradeState.units.clear();const auto owned=save.builds(slot);const auto installed=std::count_if(owned.begin(),owned.end(),[](const auto& b){return b.onSlot;});
+        upgradeState.units.clear();const auto owned=save.builds(slot);
         for(const auto& b:owned){const auto* d=settlement.definition(b);if(!d)throw std::runtime_error("Unknown saved unit");UpgradeUnit u;u.name=b.name;u.englishName=label(b.name);u.level=b.level;
             while(builds.find(levelName(b.name,u.maximumLevel)))++u.maximumLevel;
-            u.cost=d->upgradeCost;u.installed=b.onSlot;u.hasNext=b.level+1<u.maximumLevel;u.canUpgrade=u.hasNext&&save.credits(slot)>=int(u.cost);u.canInstall=!b.onSlot&&installed<7;
+            u.cost=d->upgradeCost;u.installed=b.onSlot;u.hasNext=b.level+1<u.maximumLevel;u.canUpgrade=u.hasNext&&save.credits(slot)>=int(u.cost);u.canInstall=!b.onSlot;
             u.stats=unitStats(*d);if(u.hasNext)u.nextStats=unitStats(*builds.find(levelName(b.name,b.level+1)));upgradeState.units.push_back(u);
         }
         upgradeState.attacks.clear();const auto ownedAttacks=save.attacks(slot);const auto attackSlots=std::count_if(ownedAttacks.begin(),ownedAttacks.end(),[](const auto& a){return a.onSlot;});
         for(const auto& a:ownedAttacks){const auto& d=attacks.definition(a);UpgradeAttack row;
             row.name=a.name;row.icon=attackIcon(d.itemId);row.level=a.level;row.maximumLevel=attacks.maximumLevel(a.name);row.count=a.count;row.buyCost=d.cost;row.upgradeCost=attacks.upgradeCost(a);
-            row.installed=a.onSlot;row.hasNext=a.level+1<row.maximumLevel;row.canBuy=save.credits(slot)>=int(row.buyCost);row.canUpgrade=row.hasNext&&save.credits(slot)>=int(row.upgradeCost);row.canInstall=!a.onSlot&&attackSlots<7;
+            row.installed=a.onSlot;row.hasNext=a.level+1<row.maximumLevel;row.canBuy=save.credits(slot)>=int(row.buyCost);row.canUpgrade=row.hasNext&&std::int64_t(save.credits(slot))>=std::int64_t(row.upgradeCost);row.canInstall=!a.onSlot&&attackSlots<7;
             if(row.hasNext){auto next=a;++next.level;row.nextIcon=attackIcon(attacks.definition(next).itemId);}upgradeState.attacks.push_back(row);
         }
         upgrades.setState(upgradeState);
@@ -220,6 +230,7 @@ struct GameSession::State {
         case 0x3fd:actionSound={};world->upgradeCells();break;
         case 0x40d:{std::vector<OwnedBuild> visible;for(auto b:save.builds(slot))if(b.onSlot)visible.push_back(b);
             if(a.row<visible.size()){const auto& b=visible[a.row];const auto* d=settlement.definition(b);
+                if(!a.machine.empty()&&(!d||d->name!=a.machine))break;
                 if(upgradeState.kind==UpgradeDialogState::Kind::units){const auto list=save.builds(slot);for(std::size_t i=0;i<list.size();++i)if(list[i].name==b.name)upgradeState.selectedUnit=i;refreshUpgrades();}
                 else if(d->placementType==1){placement=b.name;selectedAttack.reset();host.playSound("SFX_OnMessage.wav");}
                 else {placement.reset();world->enqueueBuild(b.name);}}
@@ -235,7 +246,7 @@ struct GameSession::State {
         case 0x3fc:world->order(0);break;
         case 0x40e:if(panel==3)break;else if(upgradeState.kind==UpgradeDialogState::Kind::attacks){auto list=save.attacks(slot);std::size_t row=0;for(std::size_t i=0;i<list.size();++i)if(list[i].onSlot){if(row++==a.row){upgradeState.selectedAttack=i;break;}}refreshUpgrades();}else selectedAttack=a.row;break;
         case 0x400:if(a.row<upgradeState.units.size()){if(settlement.upgradeBuild(save,slot,upgradeState.units[a.row].name))host.playSound("UpgradeMach.wav");refreshUpgrades();}break;
-        case 0x401:case 0x402:{auto b=save.builds(slot);if(a.row<b.size()){const auto count=std::count_if(b.begin(),b.end(),[](const auto& b){return b.onSlot;});if(a.buttonId==0x402||count<7){b[a.row].onSlot=a.buttonId==0x401;save.setBuilds(slot,b);host.playSound(a.buttonId==0x401?"Install.wav":"Uninstall.wav");refreshUpgrades();}}break;}
+        case 0x401:case 0x402:{auto b=save.builds(slot);if(a.row<b.size()){b[a.row].onSlot=a.buttonId==0x401;save.setBuilds(slot,b);host.playSound(a.buttonId==0x401?"Install.wav":"Uninstall.wav");refreshUpgrades();}break;}
         case 0x3ff:upgradeState.kind=UpgradeDialogState::Kind::hidden;upgrades.setState(upgradeState);break;
         case 0x3f9:actionSound={};if(pendingSave&&!persist())break;loadNextMission(save.readWord(offset()+0x34));break;
         case 0x3fa:actionSound={};if(pendingSave&&!persist())break;loadNextMission(summaryState.mission);break;
@@ -347,6 +358,11 @@ GameSession::~GameSession()=default;
 const Frame& GameSession::frame()const{return state_->frame;}
 void GameSession::tick(){state_->tick();}
 void GameSession::touch(const Touch& t){state_->touch(t);}
+bool GameSession::scrollProduction(Vec2 point,float delta){
+    auto& s=*state_;
+    if(!s.active||s.transition.visible()||s.mapLoadingStep<6||!s.world||s.validationOpen||s.help||s.summaryState.visible||s.supportDialog.visible()||!s.message.empty()||s.upgradeState.kind!=UpgradeDialogState::Kind::hidden)return false;
+    const bool consumed=s.hud.scrollProduction(point,delta);if(consumed)s.rebuild();return consumed;
+}
 void GameSession::setActive(bool active){if(!active){state_->cancelGameTouches();state_->activeTouches.clear();}state_->active=active;if(!active&&state_->world)state_->paused=true;state_->updatePause();state_->refreshHUD();state_->rebuild();}
 void GameSession::resize(float w,float h,float top,float bottom){
     auto& s=*state_;auto next=s.layout;next.resize(w,h,top,bottom);
