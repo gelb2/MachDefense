@@ -1,6 +1,6 @@
 # 2026-11-07 승인 부품 연결·화풍 스킬
 
-작업 브랜치 `feat/level10-effects-art`. 승인 부품 44개 연결과 실기기 검사, iPhone/iPad 일반·치트 앱 4개 설치를 마쳤다. 저장 4개는 설치 전후 동일하다. [검사](docs/evidence/level10-art-integration-20261107.md), [화풍 스킬](.agents/skills/mach-series-art/SKILL.md). develop까지 병합할 범위이며 main·태그·운영 PWA는 이번 배포 대상이 아니다.
+작업 브랜치 `feat/level10-effects-art`. 승인 부품 44개 연결과 실기기 검사, iPhone/iPad 일반·치트 앱 4개 설치를 마쳤다. 저장 4개는 설치 전후 동일하다. [검사](docs/evidence/level10-art-integration-20261107.md), [화풍 스킬](.agents/skills/mach-series-art/SKILL.md). develop `1f4dca7`에 병합했다. main·태그·운영 PWA는 변경하지 않았다.
 
 아래는 이전 시점의 기록이다.
 

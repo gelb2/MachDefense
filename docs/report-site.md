@@ -176,3 +176,10 @@ Chrome에서 신규 부품 35개의 길이와 비율 보존·텍스처 잘림, �
 - 버전: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_fd6d219afe108191994e11e30c01e88b`.
 - 기존 소유자 전용 접근을 유지했다. 첫 업로드의 용량 초과 후 기존 PNG 24개를 무손실 압축해 1,600,038바이트를 줄였다. 크기와 RGBA 픽셀 해시가 같음을 확인했다. 확장자만 PNG인 JPEG 한 장은 압축 도구가 거절했으며 수정하지 않았다.
 - 게임 코드·공용 모듈·Resources와 운영 앱은 변경하지 않았다.
+
+
+## Mach 시리즈 화풍·44개 부품 실기기 검증 — 2026-11-07
+
+[세 작품 비교·화풍·스킬](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#mach-series-art-20261107), [실제 iPad 렌더 캡처·기능 검사](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#level10-art-integration-20261107).
+
+사이트 소스 `a6337c9d5140b508791bf5cd2c43ba35145652e3`, 게시 `appgdep_6aee45a38a3881919966fb37991827b6` 성공. 기존 접근 범위를 유지했다. 데스크톱·모바일 레이아웃과 새 이미지 11개 로딩을 검사했다. 기존 보고서의 스크린샷 한 장과 새 미리보기의 압축 크기를 줄였다. 원본 캡처는 로컬 검사 폴더에 보존했다.
