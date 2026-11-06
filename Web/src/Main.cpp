@@ -13,7 +13,13 @@ EM_JS(int, saveLength,(),{return window.MDStore.current?.length||0;});
 EM_JS(void, copySave,(unsigned char* p),{HEAPU8.set(window.MDStore.current,p);});
 EM_JS(void, music,(const char* n,float gain),{window.MDAudio.music(UTF8ToString(n),gain);});
 EM_ASYNC_JS(char*, inputName,(const char* initial,int maximum),{const result=await window.MDText.input('PROFILE NAME',UTF8ToString(initial),maximum);if(result===null)return 0;return stringToNewUTF8(result);});
-EM_ASYNC_JS(char*, transferText,(const char* text,int exporting),{const result=await window.MDText.input(exporting?'RECOVERY CODE — COPY AND KEEP IT':'ENTER RECOVERY CODE',UTF8ToString(text),120000);if(result===null)return 0;return stringToNewUTF8(result);});
+EM_JS(void, openTransfer,(const char* text,int readOnly,float x,float y,float w,float h),{window.MDTransfer.open(UTF8ToString(text),!!readOnly,{x,y,w,h});});
+EM_JS(void, layoutTransfer,(float x,float y,float w,float h),{window.MDTransfer.bounds={x,y,w,h};window.MDTransfer.layout();});
+EM_JS(char*, readTransfer,(),{return stringToNewUTF8(window.MDTransfer.text());});
+EM_JS(void, closeTransfer,(),{window.MDTransfer.close();});
+EM_JS(void, copyTransfer,(const char* text),{window.MDTransfer.copy(UTF8ToString(text));});
+EM_JS(void, transferViewport,(float w,float h),{window.MDTransfer.viewport={w,h};window.MDTransfer.layout();});
+
 namespace {
 web::Assets assets;web::Audio effects;web::Renderer renderer(assets);std::unique_ptr<GameSession> game;bool contextLost=false;int pw=320,ph=480;unsigned ticks=0;
 struct Host:HostServices{
@@ -26,7 +32,11 @@ struct Host:HostServices{
  void stopMusic()override{music("",0);}
  bool restoreSave(std::span<const uint8_t> b)override{bool ok=commitSave(b.data(),b.size(),1);if(ok)++writes;return ok;}
  bool supportsSaveTransfer()const override{return true;}
- void transferText(std::string initial,bool exporting,std::function<void(std::optional<std::string>)> cb)override{char* n=::transferText(initial.c_str(),exporting);if(n){std::string s=n;free(n);cb(s);}else cb({});}
+ void openTransferField(std::string initial,bool readOnly,Rect r)override{openTransfer(initial.c_str(),readOnly,r.x,r.y,r.width,r.height);}
+ void layoutTransferField(Rect r)override{layoutTransfer(r.x,r.y,r.width,r.height);}
+ std::string transferFieldText()const override{char* p=readTransfer();std::string result=p?p:"";free(p);return result;}
+ void closeTransferField()override{closeTransfer();}
+ void copyTransferCode(std::string text)override{copyTransfer(text.c_str());}
  void requestName(std::string initial,std::size_t max,std::function<void(std::optional<std::string>)> cb)override{char* n=inputName(initial.c_str(),max);if(n){std::string s=n;free(n);cb(s);}else cb({});}
 } host;
 std::string status;
@@ -35,7 +45,7 @@ extern "C" {
 EMSCRIPTEN_KEEPALIVE int md_start(){try{EmscriptenWebGLContextAttributes attr;emscripten_webgl_init_context_attributes(&attr);attr.majorVersion=2;attr.alpha=false;attr.depth=false;attr.stencil=false;attr.antialias=false;auto ctx=emscripten_webgl_create_context("#game",&attr);if(ctx<=0)throw std::runtime_error("WebGL 2 is unavailable");emscripten_webgl_make_context_current(ctx);renderer.init();effects.prepare(assets);game=std::make_unique<GameSession>(assets,host,MD_WEB_CHEAT);return 1;}catch(const std::exception& e){status=e.what();return 0;}}
 EMSCRIPTEN_KEEPALIVE void md_tick(){if(!game||contextLost)return;game->tick();++ticks;renderer.draw(game->frame(),pw,ph);}
 EMSCRIPTEN_KEEPALIVE void md_touch(int id,int phase,float x,float y){if(game&&!contextLost)game->touch({std::uint64_t(id),TouchPhase(phase),{x*game->frame().logicalWidth,y*game->frame().logicalHeight}});}
-EMSCRIPTEN_KEEPALIVE void md_resize(int w,int h,int pixelw,int pixelh,float top,float bottom){pw=pixelw;ph=pixelh;if(game)game->resize(w,h,top,bottom);}
+EMSCRIPTEN_KEEPALIVE void md_resize(int w,int h,int pixelw,int pixelh,float top,float bottom){pw=pixelw;ph=pixelh;if(game){game->resize(w,h,top,bottom);transferViewport(game->frame().logicalWidth,game->frame().logicalHeight);}}
 EMSCRIPTEN_KEEPALIVE void md_active(int active){effects.setActive(active);if(game)game->setActive(active);}
 EMSCRIPTEN_KEEPALIVE void md_context(int restored){contextLost=!restored;if(restored)renderer.init();else renderer.lost();if(game)game->setActive(false);}
 EMSCRIPTEN_KEEPALIVE const char* md_debug(){std::ostringstream o;o<<"{\"ready\":"<<(game?"true":"false")<<",\"cheat\":"<<(MD_WEB_CHEAT?"true":"false")<<",\"ticks\":"<<ticks<<",\"writes\":"<<host.writes<<",\"sounds\":"<<effects.playCount()<<",\"uploads\":"<<renderer.uploads<<",\"draws\":"<<renderer.draws;

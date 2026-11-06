@@ -31,3 +31,7 @@
 ## 복원 코드·웹·PWA·Tauri — 2026-11-06 계획
 
 [세부 설계와 검사 순서](save-transfer-web-tauri-plan.md)에 공용 SaveTransfer, 원본 5슬롯 보존, Core의 복원 UI, 단일 Web 실행기와 플랫폼별 저장 서비스를 정리했다. 먼저 웹 실행기를 검증하고 같은 산출물을 설치형 PWA와 Tauri Mac에 연결한다. 기존 플랫폼의 OS 연결은 유지한다. 웹 저장은 Asyncify로 IndexedDB 트랜잭션 완료를 기다린 뒤 기존 bool 결과를 반환한다. 공용 복원 연결 4파일 외 Apple·Android 실행기·기존 계산·음향·자원은 보존했다. 현재 전체 5슬롯 복원과 웹/PWA를 구현했고 Tauri는 남았다. [검사와 파일 목록](evidence/web-pwa-20261106.md).
+
+## 복원 코드 플랫폼 연결 — 2026-11-06
+
+Apple·Android의 HostServices에 텍스트 필드·클립보드·FileStore를 연결했다. Web의 복원 입력창 액션도 공용 Menu로 옮겼다. 버튼과 상태 문구는 C++ Frame으로 그린다. 플랫폼별 텍스트 필드는 코드 입력과 선택만 담당한다. 복원 작업은 슬롯 화면에서 실행한다. 전투·경제·기존 저장 형식과 오디오 처리는 유지한다. [변경 파일과 검증](evidence/save-transfer-all-platforms-20261106.md).

@@ -32,7 +32,7 @@ python3 -m http.server 8940 --bind 127.0.0.1 --directory build/web-cheat/dist
 
 ## 저장과 복원
 
-슬롯 화면에서 GET CODE로 원본 5슬롯 전체를 내보내고 ENTER CODE로 복원한다. 확인 창에서 YES를 누르면 전체 슬롯을 교체한다. 교체 전 저장은 IndexedDB의 restoreBackup에 남긴다. 취소·잘못된 입력·기록 실패 때는 기존 진행을 유지한다. 단일 슬롯과 확장 설정은 아직 지원하지 않는다.
+슬롯 화면에서 GET CODE → COPY로 원본 5슬롯 전체를 내보낸다. ENTER CODE에 코드를 붙여넣고 게임 화면의 CHECK를 누른다. 확인 창에서 YES를 누르면 전체 슬롯을 교체한다. 교체 전 저장은 IndexedDB의 restoreBackup에 남긴다. 취소·잘못된 입력·기록 실패 때는 기존 진행을 유지한다. 단일 슬롯과 확장 설정은 아직 지원하지 않는다.
 
 진행은 IndexedDB, 설치 파일은 Cache Storage에 둔다. 저장 트랜잭션이 완료된 뒤 게임에 성공을 알린다. 자원 캐시 재다운로드·PWA 업데이트 후에도 진행을 유지한다. 사용자가 사이트 데이터를 삭제하면 복원 코드로 다시 가져올 수 있다.
 
@@ -43,6 +43,7 @@ npm ci --prefix Web/tests
 cd Web/tests
 npx playwright install webkit
 cd ../..
+node Web/tests/transfer-ui.mjs .local/pwa-20261106 http://127.0.0.1:8941/
 node Web/tests/smoke.mjs
 node Web/tests/game-flow.mjs .local/pwa-20261106
 node Web/tests/pwa-storage.mjs .local/pwa-20261106
@@ -51,7 +52,7 @@ MD_BROWSER=webkit node Web/tests/regression.mjs .local/pwa-20261106 http://127.0
 
 현재 Chrome 검사는 macOS 설치 경로를 사용한다. `regression.mjs`와 `pwa-storage.mjs`는 검사 폴더의 `iphone/MachDefense.sav` 복사본을 읽고, regression은 같은 폴더의 `recovery.txt`도 읽는다. 사용자 저장을 Git에 넣지 않는다. 빈 진행 검사에는 smoke/game-flow를 사용한다. 초기 프로필·생산·승패·재시작은 game-flow, 저장 복원·생명주기·GPU는 regression, 자원 손상·업데이트·캐시 삭제는 pwa-storage가 검사한다.
 
-실제 iPhone·iPad·Galaxy의 설치형 PWA 검사는 남아 있다. Apple·Android 기존 앱의 복원 버튼은 아직 연결하지 않았다.
+실제 iPhone·iPad·Galaxy의 설치형 PWA 검사는 남아 있다. Apple·Android에도 같은 코드 메뉴를 연결했다. [연결과 검사 결과](../docs/evidence/save-transfer-all-platforms-20261106.md).
 
 ## 네이티브/Wasm 화면 수치 대조
 

@@ -1,6 +1,6 @@
 # MachDefense
 
-[![Release v0.2](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.2)
+[![Release v0.3](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.3)
 [![iOS, iPadOS, Android, Web, PWA](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript](docs/public/media/badges/code.svg)](docs/public/architecture.md)
@@ -15,13 +15,17 @@
 
 [개발자의 변 전문](docs/RESTORATION.md)
 
-## Quick Play
+## Quick Play — PWA
 
 [**MachDefense 플레이·PWA 설치**](https://gelb2.github.io/MachDefense/)
 
 위 주소를 열어 게임을 설치하거나 브라우저에서 바로 플레이한다. iPhone·iPad는 Safari의 공유 메뉴에서 **홈 화면에 추가**, Android·Mac은 **INSTALL GAME**을 누른다. 자원 다운로드가 끝나면 인터넷 없이도 플레이할 수 있다.
 
 Xcode나 Android Studio로 빌드하기 어렵다면 PWA를 이용하면 된다. [설치와 실행](docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
+
+### 레벨업이 힘든 사람을 위한 방법
+
+내 아이폰 네이티브 앱에서 직접 플레이한 진행도의 복원 코드를 공유한다. **Stage 42·보유 유닛 12종·20,329Cr** 상태에서 이어서 플레이할 수 있다. **[복원 코드와 적용 방법](docs/public/quick-play.md#레벨업이-힘든-사람을-위한-방법)**.
 
 ## 원작의 전투와 성장
 
@@ -41,7 +45,7 @@ MachDefense는 메크와 포탑을 생산해 적 기지를 공격하는 세로 �
 
 - iPhone·iPad 화면에 맞춘 전장·메뉴·HUD 표시 영역.
 - 같은 C++ 게임 코드와 자원을 사용하는 Android·웹 실행기.
-- 웹판에서 전체 프로필 5개를 한 줄 코드로 내보내고 복원하는 기능.
+- iPhone·iPad·Android·웹/PWA 사이에서 전체 프로필 5개를 한 줄 코드로 옮기는 기능. [사용법](docs/public/gameplay.md).
 - 저장을 분리한 일반 앱과 치트 검증 앱.
 
 [추가 기능과 기획 의도](docs/public/features.md) · [조작과 저장](docs/public/gameplay.md)
@@ -50,8 +54,8 @@ MachDefense는 메크와 포탑을 생산해 적 기지를 공격하는 세로 �
 
 | 플랫폼 | 실행 | 현재 상태 |
 |---|---|---|
-| iPhone·iPad | Xcode 워크스페이스 | v0.1 출시. 실제 기기에서 일반·치트 앱 검사 |
-| Android | Android Studio 또는 APK | v0.1 출시. Galaxy·에뮬레이터 검사 |
+| iPhone·iPad | Xcode 워크스페이스 | v0.3 소스. 실제 일반·치트 앱의 코드 복원 검사 |
+| Android | Android Studio 또는 APK | [v0.3 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.3). Galaxy·에뮬레이터 복원 검사 |
 | 웹 | 브라우저 | GitHub Pages 배포. Mac Chrome·Safari·WebKit 검사 |
 | PWA | 브라우저에서 설치 | 설치·오프라인 실행 지원. 기기별 검사 결과는 검사 문서 참고 |
 | Tauri Mac | 데스크톱 앱 | 개발 예정 |

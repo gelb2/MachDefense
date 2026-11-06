@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-06",
+  "target": "https://little-lamplighter.onrender.com/",
+  "javascript": {
+    "path": "assets/index-UvzzVFgF.js",
+    "bytes": 1215162,
+    "sha256": "d4e58148f8ab9955c0f3a75a2f83ff086190ca7ebb107f579f79b82984021f8a"
+  },
+  "focused_input": {
+    "byte_start": 1111661,
+    "byte_end_exclusive": 1215162,
+    "sha256": "f990733694fca883cb03b28e3345e62138b05983992a442f73444ce2e5a6bef9"
+  },
+  "rea": {
+    "full_bundle": {
+      "evidence_id": "ev_657ec123dc144e8a24d52d62b6e75a0e5b66401f9eac49ac42eef4538e4c4da0",
+      "outcome": "heap-exhausted",
+      "max_heap_mb": 1536
+    },
+    "application_suffix": {
+      "evidence_id": "ev_8a001af1cb7add89078148357c44f556ec45de958faa95ba74abd4a7faa68d26",
+      "parsed_javascript_files": 1,
+      "visited_ast_nodes": 34605,
+      "parse_failures": 0,
+      "graph_coverage": "partial",
+      "semantic_unknowns_retained": 300
+    },
+    "browser_scenario": {
+      "outcome": "input-validation-rejected",
+      "reason": "actions array was empty",
+      "network_capture_performed": false
+    }
+  },
+  "manual_browser": {
+    "browser": "Mac Safari",
+    "tool": "cua_repl",
+    "observations": [
+      "3D character and planet rendered",
+      "Help disclosed WASD, drag, E, G",
+      "W changed nearby action from weed to lamp",
+      "Drag changed camera view",
+      "E changed lamp action from turn off to turn on; E again restored it"
+    ],
+    "closed_owned_tab": true
+  },
+  "not_measured": [
+    "FPS",
+    "thermal behavior",
+    "server storage durability",
+    "multi-client synchronization",
+    "production user count"
+  ],
+  "game_runtime_changed": false
+}

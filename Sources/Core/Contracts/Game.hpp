@@ -32,8 +32,12 @@ public:
     virtual void stopMusic()=0;
     virtual bool restoreSave(std::span<const std::uint8_t> bytes){return writeSave(bytes);}
     virtual bool supportsSaveTransfer() const {return false;}
-    // Text entry/clipboard only. The common game owns buttons and confirmation.
-    virtual void transferText(std::string,bool,std::function<void(std::optional<std::string>)> completion){completion({});}
+    // Plain text field only; game Menu owns every action button.
+    virtual void openTransferField(std::string,bool,Rect) {}
+    virtual void layoutTransferField(Rect) {}
+    virtual std::string transferFieldText() const {return {};}
+    virtual void closeTransferField() {}
+    virtual void copyTransferCode(std::string) {}
     virtual void requestName(std::string initial,std::size_t maximumBytes,
                              std::function<void(std::optional<std::string>)> completion)=0;
 };

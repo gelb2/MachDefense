@@ -4,4 +4,8 @@
 
 There is no server, salt, encryption or platform-specific codec. The codec uses the existing `SaveData` accessors. The shared menu owns GET CODE / ENTER CODE and the confirmation dialog. Hosts only supply text entry and durable storage. Hosts that do not enable transfer retain their existing menu.
 
-The initial PWA UI restores all five slots. Single-slot selection and native Apple/Android transfer UI connections remain follow-up work; raw iPhone save copies can already be encoded by the same module for PWA tests.
+Apple, Android and Web use the same codec and C++ menu. GET CODE opens a read-only field; COPY copies its contents. ENTER CODE opens a writable field; CHECK validates it, then the original YES/NO buttons confirm replacement of all five slots. CLOSE and CANCEL leave the save unchanged. Hosts supply the text field, keyboard and clipboard.
+
+`FileStore.hpp` implements the Apple/Android restore transaction: backup, pending payload, atomic replacement, re-read, durable commit marker and cleanup. Startup completes an interrupted transaction. A commit marker prevents an old journal from overwriting later gameplay saves. An uncertain I/O failure blocks further saves until restart. Web uses its existing IndexedDB transaction for the backup and replacement.
+
+Single-slot selection and future settings extensions remain follow-up work. See [implementation and checks](../../docs/evidence/save-transfer-all-platforms-20261106.md).
