@@ -76,3 +76,12 @@ MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지�
 - 배포: `appgdep_6aecf43711488191b93f78be356b8ee4`, `succeeded`.
 - 기존 소유자 전용 접근을 유지했다. 보고서 게시이며 게임 공개 배포는 아니다.
 - 로컬 Safari에서 새 본문·표·링크를 확인했다. USTAR 포장 전후 파일 내용 SHA가 같고 확장 크기는 268,342,784바이트다.
+
+## 웹·PWA 공개 결과 — 2026-11-06
+
+[배포·검사 결과](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#pwa-release-20261106)와 README·연결 문서 전문을 갱신했다. 게임 주소, PWA 설치 식별자 수정, 운영 설치·오프라인·복원 검사와 Tauri Mac 다음 작업을 담았다.
+
+- 소스: `96dadbf2709f3a4ff29ace02f65d082ff88d0b62`.
+- 배포: `appgdep_6aed18960394819188c5366362c01d19`, succeeded.
+- 버전: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_c67aa55b827c81919a5fc24b61691c42`.
+- 기존 소유자 전용 보고서 접근은 유지했다. 게임 저장소와 Pages만 공개했다.

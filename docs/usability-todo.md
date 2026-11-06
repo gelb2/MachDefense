@@ -5,9 +5,10 @@
 - [x] 정식 Release 재빌드·Chrome 설치형 PWA와 오프라인 재실행.
 - [x] Chrome·WebKit 정식판 복원·저장·Stage 36·생명주기·GPU 회귀.
 - [x] 사용자 지시에 따른 저장소 공개와 Pages 운영 배포.
-- [ ] release/pwa-20261106→develop→main 병합과 v0.2 릴리스.
+소스 릴리스는 `release/pwa-20261106→develop→main` 순서로 병합하며 [v0.2](https://github.com/gelb2/MachDefense/releases/tag/v0.2)에서 확인한다.
 - [x] 운영 주소에서 Mac Chrome PWA 설치·오프라인·저장·복원 재검사.
 - [ ] 실제 모바일 PWA 검사 및 Tauri 파일 저장·종료 구현.
+- [ ] 데스크톱의 넓은 가로 창에서 타이틀·문 배경의 좌우 늘어짐과 메뉴 크기를 검토한다. Safari 운영 화면에서 관측했다.
 
 [배포 검사와 Tauri 조건](evidence/pwa-release-20261106.md)
 

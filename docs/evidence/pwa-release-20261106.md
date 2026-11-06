@@ -32,7 +32,7 @@ HeavyMach1과 같은 독립 `gh-pages` 브랜치에 정식 WebAssembly·자원·
 
 로컬 로그는 `.local/release-check/installed-production/installed.json`, `.local/release-check/production-final/browser-regression-chromium-normal.json`, `.local/release-check/production/browser-regression-webkit-normal.json`, `.local/release-check/production-final/deployed-files.json`이다. 사용자 저장 복사본과 복원 코드는 이 로컬 검사 폴더에만 둔다.
 
-iPhone·iPad·Galaxy의 홈 화면 설치와 실제 터치·음향·장시간 검사는 후속 과제다.
+Safari 운영 주소에서도 PLAY IN BROWSER를 직접 눌러 타이틀 전환을 확인했다. 넓은 가로 창에서 타이틀·문 배경의 좌우 늘어짐은 후속 화면 과제로 기록했다. iPhone·iPad·Galaxy의 홈 화면 설치와 실제 터치·음향·장시간 검사는 후속 과제다.
 
 ## Tauri Mac 착수 조건
 
