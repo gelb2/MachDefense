@@ -1,6 +1,6 @@
 # 웹·PWA 공개 — 2026-11-06
 
-2026-11-06 복원 연결: `feat/save-transfer-all-platforms`에서 Apple·Android·Web의 공용 복원 화면을 연결했다. 현재 iPhone 저장 백업으로 플랫폼 교차 검사를 진행했다. 운영 PWA 빌드는 `d679d7b1061097b5`이며 설치·복원·오프라인 실행을 재검사했다. [구현·검사 결과](evidence/save-transfer-all-platforms-20261106.md).
+2026-11-06 복원 연결: `feat/save-transfer-all-platforms`에서 Apple·Android·Web의 공용 복원 화면을 연결했다. 현재 iPhone 저장 백업으로 플랫폼 교차 검사를 진행했다. 운영 PWA 빌드는 `d679d7b1061097b5`이며 설치·복원·오프라인 실행을 재검사했다. iPhone·iPad 정식 앱 최종 설치와 iPad 치트 복원도 확인했다. Galaxy 실기기 검사는 연결 후 진행한다. [구현·검사 결과](evidence/save-transfer-all-platforms-20261106.md).
 
 이전 조사: [작은 행성 전등지기](research/lamplighter-20261106.md)와 [복원 코드 3플랫폼 연결 계획](save-transfer-native-plan-20261106.md)을 추가했다. 이 조사는 구현 착수 전에 작성했다.
 

@@ -1,6 +1,6 @@
 # iPhone 저장으로 플랫폼 간 복원 검사
 
-2026-11-06. 작업 브랜치 `feat/save-transfer-all-platforms`, 기준 develop `52e1e6c`.
+2026-11-06. 작업 브랜치 `feat/save-transfer-all-platforms`, 기준 develop `52e1e6c`. 구현 커밋은 `61291c3`이다.
 
 ## 구현
 
@@ -35,7 +35,9 @@ Apple·Android·웹이 같은 MD1 코덱과 5슬롯 저장 형식을 사용한�
 
 iPhone 정식 앱에서 GET CODE·COPY·ENTER CODE·붙여넣기·CHECK·확인 취소를 직접 검사했다. 진행·무장·자금은 유지됐으며, 슬롯 최근 접속 시각만 바뀌었다. 최초 원본 백업은 그대로 보존했다.
 
-iPad 치트 앱에서 같은 코드를 실제 복원했다. 결과 파일 42,496바이트가 최초 iPhone 백업과 일치했고, 자동 생성한 restore-backup도 복원 전 iPad 파일과 일치했다. 재진입·종료를 확인했다.
+iPad 치트 앱에서 같은 코드를 실제 복원했다. 결과 파일 42,496바이트가 최초 iPhone 백업과 일치했고, 자동 생성한 restore-backup도 복원 전 iPad 파일과 일치했다. 복원된 미션의 전투·해금 유닛 HUD·저장 후 재실행을 확인했다.
+
+iPhone·iPad 정식 앱에 최종 공용 메뉴 수정본을 설치했다. iPad 정식 앱은 기존 저장을 백업한 뒤 GET CODE·CLOSE를 검사했고 설치 전후 파일 전체가 일치했다. iPhone·iPad 검사 앱을 종료하고 홈 화면으로 돌아왔다.
 
 Galaxy는 현재 ADB 목록에 없어 에뮬레이터에서 검사했다. 복원한 진행으로 미션 진입·유닛 생산·사운드 호출과 재실행을 확인했다. WebKit 데스크톱 검사는 iPhone Safari 실기기 검사와 구분한다. 운영 PWA 배포 결과는 아래에 추가한다.
 
