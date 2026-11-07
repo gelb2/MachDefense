@@ -55,27 +55,9 @@ This shows the existing special attack. The separately proposed tap-to-lock-on f
 
 <a href="../../public/media/gameplay-20261107/upgrade.jpg"><img src="../../public/media/gameplay-20261107/upgrade.jpg" alt="Equipment upgrades and INSTALL / UNINSTALL" width="360"></a>
 
-## Captures used to report problems
-
-These show the screen at the time of the report. The iPhone HUD cover has since been changed; the pathfinding report remains under investigation.
-
-<details>
-<summary>Stage 23: combat and the HUD at the time</summary>
-
-<img src="../../public/media/gameplay-20261107/iphone-stage23-hud.jpg" alt="Stage 23: combat and the HUD at the time" width="360">
-
-</details>
-
-<details>
-<summary>Reported unit congestion near a circular structure</summary>
-
-<img src="../../public/media/gameplay-20261107/pathfinding-report.jpg" alt="Reported unit congestion near a circular structure" width="360">
-
-</details>
-
 ## Files and sources
 
-The exact build IDs were not recorded. These are gameplay captures from their recording dates, not a comparison of the current release across platforms. The second copy of IMG_1129 was identical and is listed once.
+The exact build IDs were not recorded. These are gameplay captures from their recording dates, not a comparison of the current release across platforms.
 
 [Scene times, source hashes and exported files](../../public/media/gameplay-20261107/scenes.json)
 

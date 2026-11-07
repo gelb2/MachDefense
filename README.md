@@ -50,6 +50,12 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 [12초 전투 영상](docs/public/media/gameplay-20261107/combat.mp4) · [전체 캡처와 영상](docs/public/gameplay-gallery.md)
 
+<img src="docs/public/media/gameplay-20261107/special-attack.gif" alt="특수공격 표적 지정과 미사일 발사" width="360">
+
+[10초 특수공격 영상](docs/public/media/gameplay-20261107/special-attack.mp4)
+
+<a href="docs/public/media/gameplay-20261107/iphone-stage40.jpg"><img src="docs/public/media/gameplay-20261107/iphone-stage40.jpg" alt="Stage 40: 여러 무장이 동시에 교전하는 장면" width="360"></a>
+
 ## 내가 기획해 추가한 기능
 
 긴급지원은 원작 복원과 별개로 내가 구상한 기능이다. 타워디펜스의 난관이 결국 결제로 산 아이템을 써야 넘어갈 수 있는 것으로 바뀌는 것이 마음에 걸렸다. 작동하지 않는 인앱결제 버튼을 긴급지원 창으로 바꾼 이유다.
