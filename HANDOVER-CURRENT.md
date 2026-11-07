@@ -1,3 +1,9 @@
+# 라이선스 문서·한영 공개 — 2026-11-07
+
+방문자 문서 26쌍을 main `2610af3`에 게시하고 GitHub의 언어 전환·목차·설치·개발자의 변 경로를 확인했다. 후속 `docs/licensing-20261107`에서 HeavyMach1과 같은 새 코드 MIT·자원 제외·외부 고지 구성을 적용했다. 라이선스 3쌍을 더해 총 29쌍이다. [라이선스 조사](docs/evidence/license-review-20261107.md), [Sass 자료](docs/editorial/sass-publication-guide.md). 게임 코드·자원·앱 버전·PWA 실행 파일은 변경하지 않았다.
+
+아래는 이전 기록이다.
+
 # 한·영 문서 작성 — 2026-11-07
 
 작업 브랜치는 `docs/visitor-bilingual-20261107`이다. 방문자 문서 26쌍, 언어 선택 링크, 현재 상태·과제 안내를 작성했다. 번역 검사기와 회귀 검사 6개, 문서 링크 검사를 통과했다. 개발자의 변 국문 본문·게임 코드·에셋·저장은 유지했다. [검사 기록](docs/evidence/document-localization-20261107.md)과 [Sass 집필 안내](docs/editorial/sass-publication-guide.md)를 따른다.

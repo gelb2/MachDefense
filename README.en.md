@@ -8,6 +8,7 @@
 [![iOS, iPadOS, Android, Web, PWA](docs/public/media/badges/platforms.svg)](docs/en/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/en/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript](docs/public/media/badges/code.svg)](docs/en/public/architecture.md)
+[![Code license MIT](docs/public/media/badges/license.svg)](LICENSE-SCOPE.en.md)
 
 ## Why I rebuilt MachDefense
 
@@ -85,3 +86,7 @@ The idea for MachDefense is to give the player more opportunities to watch and m
 Level-10 upgrades and scrolling through all INSTALLed units in the production list are implemented. Pathfinding around round structures and tightly packed turrets, production-list reordering, the new lock-on feature, the first PWA update transition, and Tauri Mac remain to be done. [Roadmap](docs/en/public/roadmap.md) · [Architecture](docs/en/public/architecture.md) · [Development history](docs/en/public/development-history.md) · [Credits](CREDITS.en.md)
 
 [Implementation status](docs/en/public/implementation-status.md) · [Documentation](docs/en/public/README.md) · [Changelog](CHANGELOG.en.md) · [Credits](CREDITS.en.md)
+
+## License and resources
+
+Newly written code in this project uses [MIT](LICENSE). See [code scope](LICENSE-SCOPE.en.md), [artwork, audio, and game data](ASSET-LICENSES.en.md), and [third-party notices](THIRD_PARTY_NOTICES.en.md) for their respective terms.

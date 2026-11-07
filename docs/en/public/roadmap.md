@@ -34,6 +34,4 @@ As of 2026-11-07. See [implementation status](implementation-status.md) for what
 - Write “How I tested it” and “How I directed the work” from the author's material and validation evidence. Organize Sass writing sources separately.
 - Prepare a contact channel and English thank-you draft for Mesabloo. The author reviews it before sending.
 
-- Compare HeavyMach1’s license documents, check whether the same distinctions apply, then update README.
-
 Detailed requirements and historical records are in the [development TODO](../../usability-todo.md). [Documentation](README.md)

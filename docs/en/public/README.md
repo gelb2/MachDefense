@@ -19,4 +19,6 @@
 - [Changelog](../../../CHANGELOG.en.md)
 - [Credits](../../../CREDITS.en.md)
 
+- [Code license](../../../LICENSE-SCOPE.en.md) · [Asset terms](../../../ASSET-LICENSES.en.md) · [Third-party notices](../../../THIRD_PARTY_NOTICES.en.md)
+
 Historical material: [draft for the first web/PWA release](../../public/web-pwa-release-draft.md). Detailed development records are available through each document's evidence links and the [development TODO](../../usability-todo.md).

@@ -131,6 +131,21 @@
       "ko": "docs/public/roadmap.md",
       "en": "docs/en/public/roadmap.md",
       "status": "reviewed"
+    },
+    {
+      "ko": "LICENSE-SCOPE.md",
+      "en": "LICENSE-SCOPE.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "ASSET-LICENSES.md",
+      "en": "ASSET-LICENSES.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "THIRD_PARTY_NOTICES.md",
+      "en": "THIRD_PARTY_NOTICES.en.md",
+      "status": "reviewed"
     }
   ],
   "excluded": [

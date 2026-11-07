@@ -5,22 +5,22 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "d10e7b4c3471151221f94797d49fb3e7c223055921cae2519ca0c1180acbf81f",
-      "en_sha256": "26713a62605118f712188f9a97eeb5fdbd40ecfb8621f4d7d7a65e8ad001bfa8",
+      "ko_sha256": "e0b21760d77b27ffd06c65869a2057f8ee77c02ea874f3def0316e5f88d89a43",
+      "en_sha256": "7ef69113da56d721a3839e8e05ea9dd3e0d1a6dea8b87917ca16b03ffa7232e0",
       "review": "paragraphs, author voice, figures, status, commands, links"
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "53c7f88d6750ac547eab4a67614d8c45005ac526f4ad087ee6eedb3af12cbc7d",
-      "en_sha256": "dcce47b7e9d7b35a1d0ffb7b15a7181e42870957f763e71662f29c1e19fffd86",
+      "ko_sha256": "c31135f09e2c4e4dbd08601eacf7216a0f04ca5807b7b5b1164e795e8a1ecaa9",
+      "en_sha256": "676a93dfbe08f356a40f35273872d1387df9a25c3d9ee5a442998bcbd7620722",
       "review": "paragraphs, author voice, figures, status, commands, links"
     },
     {
       "ko": "CREDITS.md",
       "en": "CREDITS.en.md",
-      "ko_sha256": "4dc41893a5c8ebf73f2da39388a2371db5499d3d2771c4e526cceed41ff0153d",
-      "en_sha256": "27d1fbbac6bcd9b67df8dc9c247ff94d4fe70bb1e49a8bb27b615823f82793f3",
+      "ko_sha256": "b11f9f82474541d14ee12f1b62c8b3d77bfae5badfe68ce33c3151b273be7de9",
+      "en_sha256": "f9629184b3ba8130fb4262dbfb69c39b374959782f32abb230e0f2e17dea7dbb",
       "review": "paragraphs, author voice, figures, status, commands, links"
     },
     {
@@ -33,8 +33,8 @@
     {
       "ko": "docs/public/README.md",
       "en": "docs/en/public/README.md",
-      "ko_sha256": "89d5ad52ce095d0e4927ebd46be2dc487d3e7d677c30b309df1f1548cb3257bd",
-      "en_sha256": "09be32e3cf9cbc6abbb3b4ab73eba3911719c19aee366400bb53c18a4a507864",
+      "ko_sha256": "a0eeb9a1555143908d917fa80a4653b92dbacae4427967fc733b8f3210841792",
+      "en_sha256": "472d5b9394ef87f0a6e71b61ebe6e1433d77e921f593ba325ba18789a87cb219",
       "review": "paragraphs, author voice, figures, status, commands, links"
     },
     {
@@ -180,8 +180,29 @@
     {
       "ko": "docs/public/roadmap.md",
       "en": "docs/en/public/roadmap.md",
-      "ko_sha256": "fd4573a1bd39b185a8a79b4b78d86715afc8034ae9158b9f41f020a7b434e78f",
-      "en_sha256": "dec431a5e7134f1d524f2248668c5bef6f558dbb9c7c63a2095d807f6afaa285",
+      "ko_sha256": "c9a8dea21b4f1f8b9dac40a1ce34783dccffb7d1e9509d739bf0d4ec9a7afc8f",
+      "en_sha256": "48644b6609ceadfd2d7749e385c3cfd6a8926ed249122beb627bccf56ed9200f",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "LICENSE-SCOPE.md",
+      "en": "LICENSE-SCOPE.en.md",
+      "ko_sha256": "b7c86617f6423bd7ee5c1c15cd1c0fa212d2fcdb917d438f20b5c4ad8b254632",
+      "en_sha256": "4dfe0df1185c68de5dc14bf9e3c6e2d1622a925f3e0d31524955a7ace4f9e59b",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "ASSET-LICENSES.md",
+      "en": "ASSET-LICENSES.en.md",
+      "ko_sha256": "61187aa7d390bf22e15c466a2f67eafc2e9e63732772b447756480151e6682af",
+      "en_sha256": "742f07a26a0c66c3507bdbe70a6621db9861beacc23fc40d4574fd9557f41089",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "THIRD_PARTY_NOTICES.md",
+      "en": "THIRD_PARTY_NOTICES.en.md",
+      "ko_sha256": "60191712c4fc497f44482b5723afac7705912033581a42d16ba0935a69f6caae",
+      "en_sha256": "d4910b388b63fa165165da2bdc941eee1c857231f3ba06c615b51cc530b792d6",
       "review": "paragraphs, author voice, figures, status, commands, links"
     }
   ]

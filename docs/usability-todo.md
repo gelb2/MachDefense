@@ -28,9 +28,7 @@
 | 18 | 집필·트러블슈팅·Sass 자료 | 「나는 이렇게 테스트했다」「나는 이렇게 일을 시켰다」를 HeavyMach1·MachDefense 양쪽에 작성한다. 사용자 원문, 포팅판→재구현→치트 검증, p99·25ms 수치의 뜻과 측정 조건, 계획·보고서·모듈 경계 지시를 담는다. 새 수정 근거를 트러블슈팅과 Sass 집필 자료에 연결한다. HeavyMach1처럼 Apps/Mags 주제별 원고·사용자 원문·이미지·검사·완료 상태를 [집필 안내](editorial/sass-publication-guide.md)에 모은다. 이 안내와 Sass 허브의 MachDefense 진입 서신, 한영 원고 연결을 작성했다. 별도 두 원고의 집필은 남았다. 개발자의 변 최종본을 다시 쓰는 과제는 아니다. [글감](editorial/test-method-material-20261107.md). |
 | 19 | Mesabloo 감사 연락 | 연락 안내와 Issue·Discussion·이메일을 확인하고 한 채널을 고른다. 감사만을 위한 PR이나 중복 발송은 하지 않는다. HeavyMach WASM PR 기여자의 정확한 계정·링크를 확인하고 정중한 영어 초안을 작성한다. 사용자 검토 후 연락한다. 아래 제공 원문과 코드베이스 하이재킹 오해에 관한 참고 의견을 보존했다. |
 | 20 | Galaxy 연결·Android 배포 후속 | USB 기본 MTP와 현재 디버깅은 확인했다. 케이블 재연결 유지와 무선 접속·설치 검사는 남았다. **무선은 급하지 않다는 사용자 지시를 반영한다.** 추가 OS/기기·배포용 서명도 Android 후속 검사다. [최근 결과](evidence/v05-release-20261107.md), [Android 검사 범위](evidence/android-native-20261106.md). |
-| 21 | GitHub 문서 한·영과 언어 전환 | 방문자용 소개·설치·조작·기술·기획·개발자의 변·릴리스·크레딧·플랫폼/모듈 안내에 한국어와 영어를 제공한다. 각 문서 상단에서 같은 문서의 언어판으로 이동하고 영문 내부 링크도 영문으로 연결한다. HeavyMach1처럼 대응 목록·원문 해시·링크·수치·문체를 검사한다. 개발 정본·스킬·사용자 명령 원문은 유지한다. [대상·절차](document-localization-plan.md), [Sass 집필 안내](editorial/sass-publication-guide.md). 26쌍 작성과 언어 선택·링크·명령·해시 검사를 완료했다. 후속 원문 변경 때 대응 영어판을 함께 검토한다. |
 
-| 22 | 라이선스 검토와 README 표기 | HeavyMach1의 라이선스 문서·README 표기를 확인하고 MachDefense에도 같은 구분을 적용할 수 있는지 검토한다. 복원 코드·원작 에셋·추가 그림·외부 라이브러리의 출처와 현재 고지를 대조한다. 확인 후 GitHub README의 라이선스 설명·문서 링크와 영어판에 반영한다. 아직 동일 라이선스를 적용하기로 확정한 것은 아니다. |
 
 ## 보류·제안
 
@@ -43,6 +41,8 @@
 
 | 완료 범위 | 근거 |
 |---|---|
+| TODO 21: 방문자 문서 한·영과 언어 전환 | 최초 26쌍을 작성하고 라이선스 3쌍을 추가해 29쌍이다. [검사](evidence/document-localization-20261107.md), [대응 목록](translations/scope.json), [Sass 집필 안내](editorial/sass-publication-guide.md) |
+| TODO 22: HeavyMach1 라이선스 비교·README 반영 | 새 코드 MIT, 원작/추가 자원 제외, 외부 고지를 한·영으로 적용했다. [조사](evidence/license-review-20261107.md), [코드 범위](../LICENSE-SCOPE.md). |
 | 독립 저장소·판본 3종 비교·기준 선택, IPA 없이 제품 빌드, 공개 GitHub·Pages 배포 | [판본](evidence/version-audit-20261104.md), [웹 배포](evidence/pwa-release-20261106.md) |
 | C++ 공용 게임 모듈·OpenAL Soft, Apple·Android·Web 실행기와 공용 인게임 UI | [모듈](evidence/module-work-20261105.md), [Android](evidence/android-native-20261106.md), [웹](evidence/web-pwa-20261106.md) |
 | 오디오 컨텍스트 발사 지연, 세션 메인 스레드 경고, 복귀 후 효과음 소실 수정 | [트러블슈팅](troubleshooting.md), [세션](evidence/audio-session-20261105.md), [복귀](evidence/effects-resume-20261105.md) |
