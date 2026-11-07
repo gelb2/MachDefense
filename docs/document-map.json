@@ -118,7 +118,10 @@
       "docs/public/development-history.md",
       "docs/public/troubleshooting.md",
       "docs/usability-todo.md",
-      "CHANGELOG.md"
+      "CHANGELOG.md",
+      "docs/document-localization-plan.md",
+      "docs/translations/scope.json",
+      "docs/editorial/sass-publication-guide.md"
     ],
     "repository": [
       "docs/repository-management.md",

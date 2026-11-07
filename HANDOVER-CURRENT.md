@@ -1,6 +1,6 @@
 # TODO·문서 점검 — 2026-11-07
 
-작업 브랜치는 `docs/todo-audit-20261107`이다. TODO 정리는 `30b6b3e`에 커밋했다. [현행 20개 과제](docs/usability-todo.md)와 [문서 점검 결과](docs/evidence/document-hygiene-20261107.md)를 읽는다. 게임 코드·에셋·앱 설치본은 v0.5 그대로다. 개발자의 변 최종본도 보존했다.
+작업 브랜치는 `docs/todo-audit-20261107`이다. 후속 [한·영 문서 계획](docs/document-localization-plan.md)과 [Sass 집필 안내](docs/editorial/sass-publication-guide.md)를 기록했다. 영어판 작성은 아직 시작하지 않았다. TODO 정리는 `30b6b3e`에 커밋했다. [현행 과제](docs/usability-todo.md)와 [문서 점검 결과](docs/evidence/document-hygiene-20261107.md)를 읽는다. 게임 코드·에셋·앱 설치본은 v0.5 그대로다. 개발자의 변 최종본도 보존했다.
 
 아래는 이전 작업 당시 인계다. 완료한 모듈화·복원·강화·그림 적용을 다시 착수하거나 기각된 시안을 채택하지 않는다.
 
