@@ -1,3 +1,9 @@
+# 사용자 플레이 자료 — 2026-11-07
+
+`docs/gameplay-media-20261107`에서 바탕화면의 녹화·이미지를 정리했다. 정지 이미지 11장·GIF 2개·MP4 3개, 한·영 캡처 모음, README와 Sass 집필 자료 연결을 작성했다. [선정·검사](evidence/gameplay-media-20261107.md). 게임 코드·자원·버전은 v0.5 그대로다.
+
+아래는 이전 기록이다.
+
 # 라이선스 main 게시·후속 비교 — 2026-11-07
 
 한·영 방문자 문서 29쌍과 라이선스 문서를 main `c87cc73`까지 게시했다. CI와 GitHub 배지·언어 전환·고지 링크를 확인했다. HeavyMach main과 MIT 원문은 같지만 HeavyMach의 Android·웹·Tauri 고지 보강이 남아 TODO 23에 기록했다. 현재 미완료 과제는 21건이다. [비교 결과](evidence/license-review-20261107.md). 게임 코드·자원·앱 버전은 변경하지 않았다.

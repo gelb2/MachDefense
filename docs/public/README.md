@@ -4,6 +4,8 @@
 [한국어](README.md) | [English](../en/public/README.md)
 <!-- language-nav:end -->
 
+- [플레이 캡처와 짧은 영상](gameplay-gallery.md)
+
 - [게임 소개](../../README.md)
 - [Quick Play — PWA와 공유 복원 코드](quick-play.md)
 - [개발자의 변](../RESTORATION.md)
