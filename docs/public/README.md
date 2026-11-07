@@ -24,3 +24,8 @@
 - [코드 라이선스](../../LICENSE-SCOPE.md) · [자원 조건](../../ASSET-LICENSES.md) · [외부 고지](../../THIRD_PARTY_NOTICES.md)
 
 과거 자료: [웹·PWA 첫 릴리스 당시 초안](web-pwa-release-draft.md). 세부 개발 기록은 각 문서의 근거 링크와 [개발 TODO](../usability-todo.md)에서 확인한다.
+
+## 작업 지시와 검증 경험
+
+- [나는 이렇게 일을 시켰다](work-method.md)
+- [나는 이렇게 테스트했다](testing-method.md)

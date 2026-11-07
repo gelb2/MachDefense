@@ -4,6 +4,10 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## 2026-11-07 Work and testing essays
+
+Added Korean and English accounts of directing the work and testing with cheat builds. Linked them from the README, index, validation, and troubleshooting pages. Each game retains its own failures and measurement conditions. Updated the integrated report and Sass writing materials.
+
 ## 2026-11-07 Social preview
 
 Selected candidate B for the GitHub repository and web/PWA social preview. Added Open Graph and Twitter card metadata to the launcher and included the same image in the web package. Game code, progress, and v0.5 apps are unchanged.

@@ -102,6 +102,12 @@ Level-10 upgrades and scrolling through all INSTALLed units in the production li
 
 [Implementation status](docs/en/public/implementation-status.md) · [Documentation](docs/en/public/README.md) · [Changelog](CHANGELOG.en.md) · [Credits](CREDITS.en.md)
 
+## How I directed and tested the work
+
+I recorded how I used plans and reports to check the scope of changes, and compatibility and cheat builds to test the game. The accounts include failures I found while playing and the fixes and repeat checks carried out by Codex.
+
+[How I directed the work](docs/en/public/work-method.md) · [How I tested the game](docs/en/public/testing-method.md)
+
 ## License and resources
 
 Newly written code in this project uses [MIT](LICENSE). See [code scope](LICENSE-SCOPE.en.md), [artwork, audio, and game data](ASSET-LICENSES.en.md), and [third-party notices](THIRD_PARTY_NOTICES.en.md) for their respective terms.

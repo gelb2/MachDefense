@@ -47,3 +47,5 @@ No original IPA or files from the existing production folder were copied. Game e
 The web cheat build checked 280 production, 120 placement, and 100 special-attack conditions, plus 130 HUD, upgrade, and recovery rows. Chrome and WebKit each compared 144 turret poses. Assembly, purchases, saves, and recovery were also checked on a physical iPad. Regular and cheat v0.5 apps were installed on iPhone, iPad, and Galaxy.
 
 In a fresh browser, the live web build's 44 images and 3 tables matched the repository. With an old cache, the runtime tables sometimes retained their previous values on the first return. The second launch loaded the latest values. The first-update problem remains in the TODO. [Device checks and deployment results](../../evidence/v05-release-20261107.md).
+
+[How I directed the work](work-method.md) · [Testing with cheat builds and direct play](testing-method.md)

@@ -5,16 +5,16 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "79c9a3b9582182fabc0dec5bf8652ad3725362249a9afd4a8cd01c307730b1b4",
-      "en_sha256": "cf501126504cd6efb736f3fa0fde85563dfc970f022a352f10e39d90d7713c28",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "c51cf3fcab3cd91ceb9ec53a6670383cd866370ecad9860add4f23591cedc6b5",
+      "en_sha256": "c1982bbd641db7f2e0eff181f6345894d5b5fe49b84673e709c23f0ccd23acc3",
+      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "525cae7973152c8a5dcbcf5445f0b24dc445dd71750130a6500aa2ba1e0885af",
-      "en_sha256": "c8efdd50261504ce50508d334bf58b748dbd525886bd6dc3ff23083619e58ce0",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "c67062a7ad9d35d9343bced78305c9d489c24cd8d91a130f82b21cdcc991af54",
+      "en_sha256": "fb54ff1d9ec000726c722ad785ff1181dab73d998d83ad9d074957c1433c4596",
+      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
     },
     {
       "ko": "CREDITS.md",
@@ -33,9 +33,9 @@
     {
       "ko": "docs/public/README.md",
       "en": "docs/en/public/README.md",
-      "ko_sha256": "47cb3bbf5a7a5c21084c9819d67816a19232f693fde8ae64dd63d264c041de86",
-      "en_sha256": "d315c69a85ce50f9773d2b4db13af5839e1b493555ef8391467f2455f6c84617",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "e4883f0736a50fb3a2f3049b60720455e29aa8e2f334a8e66243e2d86015f33a",
+      "en_sha256": "16b5b52ba9813ee71b0cea0065be5256035e2a66acfdb3933d5bc2292f2d4356",
+      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
     },
     {
       "ko": "docs/public/architecture.md",
@@ -82,16 +82,16 @@
     {
       "ko": "docs/public/troubleshooting.md",
       "en": "docs/en/public/troubleshooting.md",
-      "ko_sha256": "788dac6b4cc82902cc274ff38b28e620b4e6b5e755f322a968cb10e7ed3cb40a",
-      "en_sha256": "c5c4ecfb008006b2a9d0d8021668fa289f9d6ae8f5cb79456339dd7d75b006be",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "236a7a6682a2558c41545ce6d7a9b268b66929899f49306235e0e3064ee2e254",
+      "en_sha256": "43bbc9090e7d40ee6f06d6c4c8a0adcb12a7b11b9a3893428d40a5a8030d516e",
+      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
     },
     {
       "ko": "docs/public/validation.md",
       "en": "docs/en/public/validation.md",
-      "ko_sha256": "221fa93eff84955c7a9c8058b8c47bc4e6adb0404f17cd8a23c7bb3c7691fcdf",
-      "en_sha256": "8a08ca4cbad51bca8f3e29ddad66e116772b99777d5c4e81119b4b09a2c24acf",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "810ffb7939d21485f5259089b2cbe6bd5cd1a82dd8d7806f2a90e3ef26906749",
+      "en_sha256": "b0dcae75c590081748d79229a8abb0586c497603ea436da6fa2fb15cace91484",
+      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
     },
     {
       "ko": "Apple/README.md",
@@ -211,6 +211,20 @@
       "review": "captions, scene times, source provenance, media and navigation links",
       "ko_sha256": "90e92f98f19437ccdc1a6e37189d4ae0135a6a1bec9d5734e2e007c94d49d521",
       "en_sha256": "ae30117595857040606477da0c029242862fd8e5b1e1b5ecda30c65598b30075"
+    },
+    {
+      "ko": "docs/public/work-method.md",
+      "en": "docs/en/public/work-method.md",
+      "ko_sha256": "de348b62512f44dde5daaa9d699f1e97923057f78a09a2d5282d09541151a8c2",
+      "en_sha256": "cca6298d52e1c022b3626bc80bd5ed5f7a9e213dcf93404636858292da9aed9e",
+      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
+    },
+    {
+      "ko": "docs/public/testing-method.md",
+      "en": "docs/en/public/testing-method.md",
+      "ko_sha256": "e85d77bdfb3d8110b9e1b126830931a28252c04bd1a268cc64323114e9322a16",
+      "en_sha256": "89854f6d4cc651ef6577595aaa35906aef62e9887004197bbe8933153280737f",
+      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
     }
   ]
 }

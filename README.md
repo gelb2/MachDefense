@@ -102,6 +102,12 @@ MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행
 
 [현재 구현 상태](docs/public/implementation-status.md) · [문서 목차](docs/public/README.md) · [변경 이력](CHANGELOG.md) · [크레딧](CREDITS.md)
 
+## 나는 이렇게 일을 시키고 테스트했다
+
+계획과 보고서로 수정 범위를 확인하고, 포팅판과 치트앱으로 게임을 검증한 과정을 기록했다. 내가 플레이하며 발견한 오류와 Codex가 수정·재검사한 결과를 함께 담았다.
+
+[나는 이렇게 일을 시켰다](docs/public/work-method.md) · [나는 이렇게 테스트했다](docs/public/testing-method.md)
+
 ## 라이선스와 자원
 
 이 프로젝트에서 새로 작성한 코드에는 [MIT](LICENSE)를 적용한다. [코드 적용 범위](LICENSE-SCOPE.md), [그림·음원·게임 데이터](ASSET-LICENSES.md), [외부 라이브러리 고지](THIRD_PARTY_NOTICES.md)를 구분해 정리했다.
