@@ -1,6 +1,6 @@
 # 헬기 실제 World 비교 — 2026-11-07
 
-`feat/art-parity-followup-20261107`, `.local/worktrees/save-transfer`. 소형 폭 +20%, 중량형 폭·길이 +20% 지시를 반영했다. 16색 제한은 후속 지시로 미적용. 실제 World에 헬기 2대와 원작 탱크 2대를 생성하고 빠른 로터·바닥 그림자·이동·일시정지를 C++와 Chrome/WebKit에서 검사했다. [세부 결과](docs/research/aircraft-scale-20261107.md#크기로터그림자-수정--2026-11-07-후속). 무장·기울임·캠페인 연결은 남았다. 아래는 이전 상태다.
+`feat/art-parity-followup-20261107`, `.local/worktrees/save-transfer`. 소형 폭 +20%, 중량형 폭·길이 +20% 지시를 반영했다. 16색 제한은 후속 지시로 미적용. 실제 World에 헬기 2대와 원작 탱크 2대를 생성하고 빠른 로터·바닥 그림자·이동·일시정지를 C++와 Chrome/WebKit에서 검사했다. [세부 결과](docs/research/aircraft-scale-20261107.md#크기로터그림자-수정--2026-11-07-후속). 무장·기울임·캠페인 연결은 남았다. [게시된 비교 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-world-20261107), 게임 커밋 `4fdaca5`. 보고서 배포 성공은 docs/report-site.md에 기록했다. 아래는 이전 상태다.
 
 # 헬기 화풍 채택·크기 기준 — 2026-11-07
 

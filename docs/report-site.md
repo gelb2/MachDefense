@@ -1,3 +1,17 @@
+# 헬기 실제 World 비교 — 2026-11-07
+
+[크기·로터·그림자 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-world-20261107)를 기존 소유자 전용 보고서 첫 부분에 게시했다. 네 유닛의 동일 지면 비교 캡처와 약 4초의 실제 웹 치트 로터 영상을 제공한다. [코드·검사 근거](research/aircraft-scale-20261107.md).
+
+- 게임 작업 커밋: `4fdaca5`, `feat/art-parity-followup-20261107`.
+- 보고서 소스: `253a0d7101ae3d7d8512dfe556dd5b73915a2588`.
+- 배포: `appgdep_6aef2c96c53c8191805995c2442760e1`, succeeded.
+- 1440·390px에서 캡처 로드·동영상 재생·가로 넘침 없음·목차 287항목 일치를 확인했다.
+- 최초 push 때 보고서 원격의 VTOL 배치 문서 추가와 이력이 갈렸다. 원격 변경을 정상 merge로 보존한 뒤 게시했다.
+- 기존 PNG 세 개를 무손실 WebP로 바꾸고 RGBA 바이트 동일성을 확인했다. 원본은 로컬 `.local/aircraft-report-backup`에 보존했다. 보고서 자원 총량 제한 안에서 새 자료를 추가했다.
+- main·운영 PWA·기기 앱에는 배포하지 않았다. 무장·기울임·캠페인 연결은 남아 있다.
+
+이전 게시 기록:
+
 # 2026-11-07 Lv.5 무장·몸체 교체 웹 검증
 
 [6종 포탑 실제 렌더링 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-body-only-20261107)를 기존 보고서에 게시했다. 각 계열의 Lv.5~10과 4방향을 나란히 표시한다. [게임 변경·검사](evidence/turret-body-only-integration-20261107.md).
