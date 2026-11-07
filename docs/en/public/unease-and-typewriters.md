@@ -22,6 +22,18 @@ This time, a different unease emerged. I supplied a helicopter drawing made with
 
 The tool that had been restoring combat, shells and explosions stopped at a helicopter drawing for the same game. I asked why restoring the game could proceed while this drawing could not. Codex could not explain the distinction. I had to repeat the instruction without knowing what needed correcting.
 
+## The combat I wanted to change with helicopters
+
+While restoring MachDefense, I was preserving the original creators’ work and researching and implementing a very simple way to push past the limitations of tower defense. I wanted to minimize changes to the code reconstructed from the original and to its assets, while using my own design to introduce less predictable combat and increase the value of the creators’ work.
+
+The starting point was how attacks work in MachDefense: hitscan attacks that connect immediately, and unguided projectiles that travel at a finite speed without following their target after launch. What if I added a few families of allied units that could readily evade those unguided projectiles? I thought this could push past tower defense’s reliance on durability, firepower, placement and reorganizing the battle line. With the same shells and enemies, changing how allied units moved could change the outcome. [Design and comparison with original projectile behavior](../../evidence/aircraft-allied-20261108.md#미션-55의-헬기-밀집과-피격--2026-11-08)
+
+What I took from Dark Souls and Sekiro was evasion and a moment of invulnerability. I conceived a family of units whose health would not decrease for a limited time when an evasive maneuver activated, and was introducing and testing helicopters to realize that idea. Rather than slowing the original shells or reducing enemy attack power, I wanted the new units’ movement and brief invulnerability to provide another way to survive. [Emergency-dodge design](../../research/aircraft-plan-20261107.md#긴급회피-후속-합의--2026-11-08)
+
+To state the result plainly, the algorithm was complete, however crude. Within the tests I conducted, even basic units achieved meaningful survival against advanced enemy units. I judged that it had reached a minimum functional stage at which balancing and adjustments were possible. I was not declaring the balance finished, but I could now test and refine the design in actual combat.
+
+But Codex’s refusal to follow my work instructions left me unable to put the skins I requested on those units. It kept producing skins that insulted the original creators’ aesthetic achievement while refusing my asset-rendering instructions. My requirements to preserve the supplied drawings’ shapes and proportions and the original’s texture were never fully met. The evasion algorithm could run, but the appearance of the units I wanted to release remained unfinished. Whether these new units will be released is uncertain. [Visual errors and unfinished work](../../evidence/new-unit-art-errors-20261108.md) · [Incident report on the drawing-work refusal](../../evidence/aircraft-instruction-refusal-20261108.md)
+
 ## When a classification takes the place of an explanation
 
 The Cheyenne generation request was blocked at the output stage. The error recorded a category, but did not identify the image element responsible. Codex then refused the text edit. The earlier error and the later refusal must each be recorded. Writing that the follow-up edit had been attempted and blocked would invent an event that never happened. [Error and subsequent response](troubleshooting.md)
