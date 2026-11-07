@@ -1,5 +1,9 @@
 # MachDefense 공용 코어
 
+<!-- language-nav:start -->
+[한국어](README.md) | [English](README.en.md)
+<!-- language-nav:end -->
+
 C++20 게임 코드다. Apple SDK·OpenAL·그래픽 API를 직접 호출하지 않는다.
 
 | 폴더 | 담당 |

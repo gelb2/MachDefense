@@ -1,5 +1,9 @@
 # MachDefense Android
 
+<!-- language-nav:start -->
+[한국어](README.md) | [English](README.en.md)
+<!-- language-nav:end -->
+
 Android 일반 앱과 치트 앱은 공통 C++ Core·Audio와 같은 게임 자원을 사용한다. Kotlin은 Surface, 입력 전달, 생명주기, 오디오 포커스, 음악 재생, 프로필 이름·복원 코드 입력과 클립보드를 연결한다. 게임 버튼·메뉴·HUD·전투·강화·긴급지원은 C++에서 그린다.
 
 ## 빌드

@@ -1,5 +1,9 @@
 # 설치와 실행
 
+<!-- language-nav:start -->
+[한국어](build-and-install.md) | [English](../en/public/build-and-install.md)
+<!-- language-nav:end -->
+
 ## 웹·PWA
 
 [MachDefense 실행·설치](https://gelb2.github.io/MachDefense/)

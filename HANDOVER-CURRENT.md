@@ -1,3 +1,11 @@
+# 한·영 문서 작성 — 2026-11-07
+
+작업 브랜치는 `docs/visitor-bilingual-20261107`이다. 방문자 문서 26쌍, 언어 선택 링크, 현재 상태·과제 안내를 작성했다. 번역 검사기와 회귀 검사 6개, 문서 링크 검사를 통과했다. 개발자의 변 국문 본문·게임 코드·에셋·저장은 유지했다. [검사 기록](docs/evidence/document-localization-20261107.md)과 [Sass 집필 안내](docs/editorial/sass-publication-guide.md)를 따른다.
+
+라이선스는 HeavyMach1과 같은 구분을 적용할 수 있는지 확인 후 README에 반영하는 TODO 22로 추가했다. 아직 라이선스를 변경하지 않았다. 다음 원문 수정은 해당 영어판을 검토하고 매니페스트 해시를 갱신한다.
+
+아래는 이전 작업 기록이다.
+
 # TODO·문서 점검 — 2026-11-07
 
 작업 브랜치는 `docs/todo-audit-20261107`이다. 후속 [한·영 문서 계획](docs/document-localization-plan.md)과 [Sass 집필 안내](docs/editorial/sass-publication-guide.md)를 기록했다. 영어판 작성은 아직 시작하지 않았다. TODO 정리는 `30b6b3e`에 커밋했다. [현행 과제](docs/usability-todo.md)와 [문서 점검 결과](docs/evidence/document-hygiene-20261107.md)를 읽는다. 게임 코드·에셋·앱 설치본은 v0.5 그대로다. 개발자의 변 최종본도 보존했다.

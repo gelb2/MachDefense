@@ -46,8 +46,22 @@ Tauri Mac은 아직 미구현이다. 신규 락온도 기획 단계다. HeavyMac
 
 ## 한·영 원고와 갱신
 
-[한·영 문서 계획](../document-localization-plan.md)과 [대응 목록](../translations/scope.json)을 따르며 현재는 번역 전이다. 영어판이 완성되면 각 주제의 한·영 경로와 원문 검토 버전을 이 안내에 연결한다. 공개 기능·기획·수정 결과가 바뀌면 최신 원고·검사·채택 이미지·미완료 항목을 함께 갱신한다.
+방문자 문서 26쌍을 작성했다. 각 문서 제목 아래의 한국어·English 링크로 같은 원고를 전환한다. [대응 목록](../translations/scope.json)과 [검토 해시](../translations/manifest.json)에 전체 경로를 기록했다.
 
-Sass 허브에는 이 안내로 들어오는 서신을 추가한다. 현재까지 확인한 HeavyMach1 전달 위치는 `ProjectPersonalFunnelPage/governance/operations/`다. MachDefense 서신 작성은 TODO에 남겼다. 비공개 Sass·Candidate 자료를 공개 게임 저장소로 복사하지 않는다.
+| 주제 | 한국어 | English |
+|---|---|---|
+| 게임 소개 | [README](../../README.md) | [README](../../README.en.md) |
+| 개발자의 변 | [최종본](../RESTORATION.md) | [Developer's statement](../en/RESTORATION.md) |
+| 기능·기획 | [추가 기능](../public/features.md) | [Features](../en/public/features.md) |
+| 기술·플랫폼 | [기술 구조](../public/architecture.md) | [Architecture](../en/public/architecture.md) |
+| 개발 과정 | [과정](../public/development-history.md) | [Development](../en/public/development-history.md) |
+| 트러블슈팅 | [수정 기록](../public/troubleshooting.md) | [Troubleshooting](../en/public/troubleshooting.md) |
+| 검증 | [검사 결과](../public/validation.md) | [Validation](../en/public/validation.md) |
+| 현재·후속 작업 | [상태](../public/implementation-status.md) · [과제](../public/roadmap.md) | [Status](../en/public/implementation-status.md) · [Roadmap](../en/public/roadmap.md) |
+| 전체 목차 | [문서](../public/README.md) | [Documentation](../en/public/README.md) |
+
+공개 기능·기획·수정 결과가 바뀌면 해당 원고의 양쪽 언어, 검사 근거, 채택 이미지와 미완료 항목을 함께 갱신한다. 개발 정본·스킬·인터뷰 원문과 과거 검사 기록은 한국어로 유지한다. 번역문이 내부 개발 기준을 바꾸지 않는다.
+
+Sass 허브 서신은 `ProjectPersonalFunnelPage/governance/operations/machdefense-apps-mags-handover-2026-11-07.md`에 작성했다. Apps/Mags 원고 작성과 sass.studio 반영은 그 세션에서 진행한다. 비공개 Sass·Candidate 자료를 공개 게임 저장소로 복사하지 않는다.
 
 [문서 목차](../public/README.md) · [릴리스 이력](../../CHANGELOG.md)

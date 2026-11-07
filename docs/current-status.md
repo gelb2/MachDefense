@@ -1,3 +1,9 @@
+# 한·영 문서 작성 — 2026-11-07
+
+GitHub 방문자 문서 26쌍과 언어 전환, 번역 검사기를 작성했다. [한국어 목차](public/README.md) · [English](en/public/README.md). [Sass 집필 안내](editorial/sass-publication-guide.md)와 허브 서신도 연결했다. 게임 릴리스는 v0.5 그대로이며 게임 소스·자원·앱 설치본은 바꾸지 않았다. [검사 기록](evidence/document-localization-20261107.md).
+
+아래는 이전 작업 기록이다.
+
 # 한·영 문서와 Sass 자료 계획 — 2026-11-07
 
 GitHub 방문자용 문서 26쌍의 한·영 경로와 언어 전환·번역 검사를 [계획](document-localization-plan.md)으로 기록했다. 기존 원문 24개와 새 방문자용 상태·과제 문서 2개가 대상이다. 영어 본문과 언어 링크는 아직 작성 전이다.

@@ -1,5 +1,9 @@
 # 검사 결과
 
+<!-- language-nav:start -->
+[한국어](validation.md) | [English](../en/public/validation.md)
+<!-- language-nav:end -->
+
 iOS·iPadOS·Android 네이티브 앱과 웹·PWA가 같은 C++ 게임 코드를 사용한다.
 
 일반 앱과 별도 저장을 쓰는 치트 앱으로 조건을 만든다. 전체 유닛·강화·무장·미션을 자동 검사하고, 실제 버튼 입력과 기기의 중단·복귀를 함께 확인한다.

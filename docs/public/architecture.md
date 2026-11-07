@@ -1,5 +1,9 @@
 # 기술 구조
 
+<!-- language-nav:start -->
+[한국어](architecture.md) | [English](../en/public/architecture.md)
+<!-- language-nav:end -->
+
 iOS·iPadOS·Android 네이티브 앱과 웹·PWA가 같은 C++ 게임 코드를 사용한다.
 
 ## 공통 게임 코드와 플랫폼 실행기

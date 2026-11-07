@@ -1,5 +1,9 @@
 # MachDefense Web / PWA
 
+<!-- language-nav:start -->
+[한국어](README.md) | [English](README.en.md)
+<!-- language-nav:end -->
+
 [플레이·PWA 설치](https://gelb2.github.io/MachDefense/) · [사용자 설치 안내](../docs/public/build-and-install.md)
 
 같은 C++20 Core·효과음·자원을 Emscripten으로 빌드한다. WebGL2 출력과 브라우저 입력은 `src/`, 시작 화면·IndexedDB·service worker는 `../Distribution/Web/`에 있다. 게임 메뉴·HUD·복원 버튼은 공용 C++에서 그린다. Tauri 실행기는 아직 없다.

@@ -1,5 +1,9 @@
 # 공용 모듈
 
+<!-- language-nav:start -->
+[한국어](README.md) | [English](README.en.md)
+<!-- language-nav:end -->
+
 | 출력 | 소스·자원 | 역할 |
 |---|---|---|
 | `MachDefenseCore` | `Sources/Core` | 게임 규칙·메뉴·HUD·저장 직렬화·그리기 명령 |

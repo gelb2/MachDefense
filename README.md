@@ -1,5 +1,9 @@
 # MachDefense
 
+<!-- language-nav:start -->
+[한국어](README.md) | [English](README.en.md)
+<!-- language-nav:end -->
+
 [![Release v0.5](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.5)
 [![iOS, iPadOS, Android, Web, PWA](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
@@ -78,6 +82,6 @@ Codex는 원작에서 유지하던 오디오 컨텍스트를 발사 때마다 �
 
 MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행동을 바꾸지 않으면서 화면을 보고 판단할 기회를 더하려는 구상이다. 기존 크로스파이어의 에셋과 조준·사거리 로직을 쓰되, 크로스파이어 자체는 그대로 둘 생각이다.
 
-10레벨 강화와 INSTALL한 전체 유닛의 생산 목록 스크롤은 구현했다. 원형 구조물과 포탑 밀집 구간의 길찾기, 생산 목록 순서 편집, 새 락온 기능, PWA 최초 업데이트 전환과 Tauri Mac 구현은 남은 과제다. [전체 TODO](docs/usability-todo.md) · [기술 구조](docs/public/architecture.md) · [개발 과정](docs/public/development-history.md) · [크레딧](CREDITS.md)
+10레벨 강화와 INSTALL한 전체 유닛의 생산 목록 스크롤은 구현했다. 원형 구조물과 포탑 밀집 구간의 길찾기, 생산 목록 순서 편집, 새 락온 기능, PWA 최초 업데이트 전환과 Tauri Mac 구현은 남은 과제다. [남은 과제](docs/public/roadmap.md) · [기술 구조](docs/public/architecture.md) · [개발 과정](docs/public/development-history.md) · [크레딧](CREDITS.md)
 
-[문서 목차](docs/public/README.md) · [변경 이력](CHANGELOG.md) · [크레딧](CREDITS.md)
+[현재 구현 상태](docs/public/implementation-status.md) · [문서 목차](docs/public/README.md) · [변경 이력](CHANGELOG.md) · [크레딧](CREDITS.md)
