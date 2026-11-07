@@ -58,7 +58,7 @@ Apps에서 원작 전투와 추가 긴급지원 기능을 설명할 때 같은 �
 
 ## 한·영 원고와 갱신
 
-방문자 문서 30쌍을 작성했다. 각 문서 제목 아래의 한국어·English 링크로 같은 원고를 전환한다. [대응 목록](../translations/scope.json)과 [검토 해시](../translations/manifest.json)에 전체 경로를 기록했다.
+방문자 문서 32쌍을 작성했다. 각 문서 제목 아래의 한국어·English 링크로 같은 원고를 전환한다. [대응 목록](../translations/scope.json)과 [검토 해시](../translations/manifest.json)에 전체 경로를 기록했다.
 
 | 주제 | 한국어 | English |
 |---|---|---|
@@ -79,3 +79,11 @@ Apps에서 원작 전투와 추가 긴급지원 기능을 설명할 때 같은 �
 Sass 허브 서신은 `ProjectPersonalFunnelPage/governance/operations/machdefense-apps-mags-handover-2026-11-07.md`에 작성했다. Apps/Mags 원고 작성과 sass.studio 반영은 그 세션에서 진행한다. 비공개 Sass·Candidate 자료를 공개 게임 저장소로 복사하지 않는다.
 
 [문서 목차](../public/README.md) · [릴리스 이력](../../CHANGELOG.md)
+
+## 작업 지시·치트 검사 완성 원고 — 2026-11-07
+
+[나는 이렇게 일을 시켰다](../public/work-method.md) · [English](../en/public/work-method.md) · [나는 이렇게 테스트했다](../public/testing-method.md) · [English](../en/public/testing-method.md).
+
+오디오 컨텍스트·메인 스레드·복귀 후 무음, Android 보존 파일 2,978개, 80미션 검사의 범위, 10레벨·생산 HUD 검사와 실제 iPad 프레임 수치를 담았다. 원문은 [집필 자료](test-method-material-20261107.md)에 보존했다. Apps는 각 문단의 구현·검사 근거를, Mags는 저자의 지시와 경험을 사용한다. HeavyMach의 사격별 저장 오류를 MachDefense에서도 발생한 것처럼 쓰지 않는다.
+
+[MachDefense 통합 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#work-test-20261107)에서 한·영 전문을 함께 볼 수 있다.
