@@ -1,4 +1,5 @@
 #include "Core/Simulation/Production.hpp"
+#include "Core/Simulation/AlliedAircraft.hpp"
 #include <algorithm>
 #include <stdexcept>
 namespace md {
@@ -42,6 +43,9 @@ void ProductionQueue::tick(double time,BattleGeometry geometry,DarwinRandom& ran
         Vec2 position{0,-geometry.halfLength()};
         // BuildItem::tick 0x30644: random X only for the parts-built walkers.
         if(i->definition.setType==0)position.x=(float(random.next())*0x1p-31f*440.f-220.f)*geometry.deviceScale;
+        // New aircraft use the same runway width as walkers, but a separate RNG.
+        // Do not consume the original enemy/loot/weapon random sequence here.
+        else if(alliedAircraftForModel(i->definition.machine))position.x=(float(aircraftSpawnRandom_.next())*0x1p-31f*440.f-220.f)*geometry.deviceScale;
         const ProducedUnit unit{i->definition,position,i->destination};
         i=jobs_.erase(i);
         spawn(unit);

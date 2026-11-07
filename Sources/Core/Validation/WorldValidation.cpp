@@ -9,6 +9,7 @@
 #include "Core/Simulation/WorldSupport.hpp"
 #include "Core/Validation/AircraftComparison.hpp"
 #include "Core/Validation/AlliedAircraft.hpp"
+#include "Core/Simulation/AlliedAircraft.hpp"
 namespace md {
 using namespace world_detail;
 void World::setValidationCells(float value){
@@ -53,6 +54,7 @@ ActorId World::validationAlliedAircraft(unsigned kind,Vec2 position){
     a.flightHeight=trial.height;a.rotorStep=7.3f*6.28318530718f/60.f;
     a.aircraft.rotationDivisor=12;a.aircraft.moveSpeed=trial.speed*geometry_.deviceScale;
     a.flightTactics=AircraftTactics{trial.widthFraction,trial.speed,std::uint32_t(a.id*2654435761u)|1u};
+    if(const auto* policy=alliedAircraftForModel(a.name)){a.flightTactics->noseStep=policy->noseDegreesPerSecond*3.14159265f/10800.f;a.flightTactics->weaponStep=policy->weaponDegreesPerSecond*3.14159265f/10800.f;}
     configureWeapons(a);
     // Only these new aircraft acquire using the longest attached weapon.
     for(const auto& w:a.weapons)if(auto d=weapons_.find(w.name))a.range=std::max(a.range,float(d->shotRange));
@@ -69,6 +71,18 @@ void World::validationAlliedAircraftComparison(){
         target.weapons.clear();target.range=0;
         validationAlliedAircraft(i,{x,-90*scale});
     }
+}
+
+void World::validationAircraftDodgeComparison(){
+    validationAircraftComparison();actors_.clear();
+    const float scale=geometry_.deviceScale;
+    for(unsigned i=0;i<3;++i){
+        auto& enemy=addNamed(i==1?"E_Tank_01":"E_Turret_13",{float(int(i)*120-120)*scale,80*scale},false);
+        enemy.hp=enemy.maxHP=100000;enemy.enemyAI.stopDelay=1e9f;enemy.attackCheck=0;
+        enemy.vehicle.moveSpeed=0;
+    }
+    for(unsigned i=0;i<3;++i)addNamed("AircraftLight_10",{float(int(i)*80-80)*scale,-80*scale},true);
+    addNamed("AircraftHeavy_10",{0,-200*scale},true);
 }
 
 }

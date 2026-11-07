@@ -1,0 +1,49 @@
+{
+  "chromium": {
+    "ok": true,
+    "errors": [],
+    "viewports": [
+      {
+        "mode": 3,
+        "pause": true,
+        "uploadsDuringWarmCombat": 0
+      },
+      {
+        "mode": 4,
+        "pause": true,
+        "uploadsDuringWarmCombat": 0
+      },
+      {
+        "mode": 5,
+        "pause": true,
+        "uploadsDuringWarmCombat": 0
+      }
+    ]
+  },
+  "webkit": {
+    "ok": true,
+    "errors": [],
+    "viewports": [
+      {
+        "mode": 3,
+        "pause": true,
+        "uploadsDuringWarmCombat": 0
+      },
+      {
+        "mode": 4,
+        "pause": true,
+        "uploadsDuringWarmCombat": 0
+      },
+      {
+        "mode": 5,
+        "pause": true,
+        "uploadsDuringWarmCombat": 0
+      }
+    ]
+  },
+  "preserved": {
+    "Sources/Core/Simulation/Projectile.cpp": true,
+    "Sources/Core/Simulation/Combat.cpp": true,
+    "originalSpawnTables": true
+  }
+}

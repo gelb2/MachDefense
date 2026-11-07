@@ -31,7 +31,7 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
  auto models=md::BattleModels::load(r);md::validation::appendAircraftModels(models);
  for(const char* name:{"AircraftLight","AircraftHeavy"})for(float angle:{0.f,1.57079632679f,3.14159265359f,4.71238898038f}){
   auto poses=models.pose(name,1,angle,angle,angle);
-  for(const auto& pose:poses)if(pose.definition->type==4){auto m=pose.muzzle();assert(m);auto size=r.imageSize(pose.definition->image);float dx=m->x-pose.localCenter.x,dy=m->y-pose.localCenter.y;float forward=dx*std::cos(angle)+dy*std::sin(angle);assert(std::abs(forward-size.x*.5f)<=.51f);assert(pose.definition->sockets.front().x==0&&pose.definition->sockets.front().y==0);}
+  for(const auto& pose:poses)if(pose.definition->type==4){auto m=pose.muzzle();assert(m);auto size=r.imageSize(pose.definition->image);float dx=m->x-pose.localCenter.x,dy=m->y-pose.localCenter.y;float forward=dx*std::cos(angle)+dy*std::sin(angle);assert(std::abs(forward-size.x*.5f*pose.deviceScale)<=.51f*pose.deviceScale);assert(pose.definition->sockets.front().x==0&&pose.definition->sockets.front().y==0);}
  }
 
  for(unsigned mode=0;mode<3;++mode){md::validation::AircraftComparisonScene scene(r,mode);auto& w=*scene.world;assert(w.actors().size()==4);auto before=scene.frame();unsigned heliSprites=0,shadows=0;for(const auto& s:before.sprites)if(s.image.starts_with("ALight")||s.image.starts_with("AHeavy")){assert(s.nearest);++heliSprites;if(s.color.r==0){++shadows;assert(s.color.a==.55f);}}assert(heliSprites==20&&shadows==10);

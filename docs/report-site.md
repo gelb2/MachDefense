@@ -1,3 +1,20 @@
+# 승인한 헬기 형상 복구 — 2026-11-08
+
+[보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-approved-20261108)에 승인본 링크·현재 World 캡처·회색 오르카 원본·몸체 측정·검사·아이폰 설치 범위를 추가했다.
+
+- Source: `b319b98e64260676c5b3964bcfd7845ad5e7092c`.
+- Deployment: `appgdep_6aef64f3706c8191a06a04a17391f92f`, succeeded.
+- 접근: 기존 소유자 전용. 1280·390px의 이미지 로드·가로 범위·JS 오류 없음 확인.
+- 게임 main·운영 PWA 미배포. iPhone 정식 앱 02:45 빌드 설치·저장 보존, 기기 외형 직접 검사는 미완료.
+
+# 2026-11-08 헬기 생산 위치·미션 55 회피 검사
+
+[검사 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-evasion-20261108)를 기존 소유자 전용 사이트에 게시했다. 생산 위치·12방향 경로 수정, 원작 포탑의 폭발 범위, 미션 55 전후 사망 시각과 격리 웹 치트 영상을 함께 제공한다. 소형 3대가 수정 후에도 전멸한 결과를 명시했다.
+
+- Source `1d8e19a4e0a7e77121cb8553adf87e8a0d579cde`.
+- Deployment `appgdep_6aef570cf58481918ee45ebc5bd377a3`: succeeded.
+- 로컬 Chrome 1280·390px에서 새 단락 가로 범위, 영상 재생, 자료 링크 5개 응답을 확인했다. 게임 운영 PWA 배포와 별개다.
+
 # 아군 항공기 시험 보고 — 2026-11-08
 
 [아군 항공기 4종 시험](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-allied-20261108)을 기존 소유자 전용 통합 보고서에 게시했다. 임시 VTOL 도색, 기존 로터 복귀, 네 기체 조립·무장·경제 제안, 좌우 전환의 감속·정지·재가속과 약 22초의 실제 웹 영상을 포함한다.

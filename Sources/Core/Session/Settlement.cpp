@@ -1,4 +1,5 @@
 #include "Core/Session/Settlement.hpp"
+#include "Core/Simulation/AlliedAircraft.hpp"
 #include <algorithm>
 #include <array>
 #include <bit>
@@ -50,6 +51,11 @@ bool Settlement::grantCampaignUnlock(SaveData& save,std::size_t slot,unsigned co
     return awardBuild(save,slot,"LaserTurret");
 }
 
+std::vector<std::string> Settlement::grantAircraftUnlocks(SaveData& save,std::size_t slot,unsigned completed)const{
+    std::vector<std::string> acquired;if(!save.active(slot))return acquired;
+    for(const auto& a:alliedAircraftCatalog)if(completed>=a.mission&&catalog_.find(levelName(a.name,0))&&awardBuild(save,slot,a.name))acquired.emplace_back(a.name);
+    return acquired;
+}
 StageReward Settlement::clear(SaveData& save,std::size_t slot,DarwinRandom& rng)const{
     if(!save.active(slot))throw std::invalid_argument("Empty profile");
     const auto at=SaveData::slotStart+slot*SaveData::slotStride;
@@ -60,7 +66,9 @@ StageReward Settlement::clear(SaveData& save,std::size_t slot,DarwinRandom& rng)
     save.writeWord(at+0x3c,save.readWord(at+0x3c)+unsigned(result.credits));
     const auto cleared=save.clearCount(slot,result.mission);
     if(cleared<1)save.writeWord(at+0x2054,save.readWord(at+0x2054)+1000+result.mission*1000);
+    auto aircraft=grantAircraftUnlocks(save,slot,std::max(save.stage(slot),result.mission+1));
     if(grantCampaignUnlock(save,slot,std::max(save.stage(slot),result.mission+1)))result.build="LaserTurret";
+    else if(!aircraft.empty())result.build=aircraft.front();
     else if(cleared<=0&&rng.next()%40<=9)result.build=addBuild(save,slot,rng);
     if(result.build.empty()){
         static constexpr std::array<std::string_view,5> names{"AirStrike-Bomb","AirStrike-Missile","AirStrike-Nuclear","AirStrike-EMP","Crossfire-Missile"};

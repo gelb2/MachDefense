@@ -93,6 +93,7 @@ EMSCRIPTEN_KEEPALIVE const char* md_aircraft_scene(int command,int mode){
   if(command==3)aircraftScene->world->setPaused(false);
   if(command==4)aircraftScene->move();
   if(command==6)aircraftScene->fight();
+  if(command==7)aircraftScene->world->validationAircraftDodgeComparison();
   renderer.draw(aircraftScene->frame(),pw,ph);status=aircraftScene->state();
  } catch(const std::exception& e){status=std::string("ERROR: ")+e.what();}
 #else

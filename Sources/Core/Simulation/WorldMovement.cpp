@@ -19,7 +19,9 @@ void World::updateActor(WorldActor& a){
     if(aiEnabled&&a.flightTactics){
         auto& tactic=*a.flightTactics;a.moveToTarget=false;
         a.aircraft.moveSpeed=tactic.speed*geometry_.deviceScale;
-        if(target){
+        if(tactic.updateDodge(time(),a.position,a.player,a.aircraft.moveSpeed,a.radius,512*geometry_.deviceScale,geometry_.halfLength(),aircraftThreats_)){
+            setDestination(a,tactic.dodgeDestination);
+        }else if(target){
             if(tactic.targetId!=target->id){tactic.engaged=false;tactic.targetId=target->id;}
             setDestination(a,tactic.destination(time(),a.position,target->position,a.range,512*geometry_.deviceScale,geometry_.halfLength(),a.radius));
         }else{
@@ -44,7 +46,13 @@ void World::updateActor(WorldActor& a){
             else if(part.parentSocket==3){part.angle=a.bipod.bodyAngle;part.visualScale=a.bipod.bodyScale;part.addPosition.y=a.bipod.bodyAddPosY;}
         }}
     }else if(a.type==1){a.vehicle.position=a.position;a.vehicle.tick(random_,a.collision);a.position=a.vehicle.position;a.angle=a.vehicle.angle;}
-    else if(a.type==2||a.type==5){a.aircraft.position=a.position;if(a.flightTactics)a.flightTactics->advance(a.aircraft);else a.aircraft.tick();a.position=a.aircraft.position;a.angle=a.aircraft.angle;}
+    else if(a.type==2||a.type==5){a.aircraft.position=a.position;if(a.flightTactics)a.flightTactics->advance(a.aircraft);else a.aircraft.tick();a.position=a.aircraft.position;
+        if(a.flightTactics&&target){
+            // The flight velocity is independent of the nose bearing, including
+            // the stopped frame between opposite strafing directions.
+            a.flightTactics->face(a.aircraft,std::atan2(target->position.y-a.position.y,target->position.x-a.position.x));
+        }
+        a.angle=a.aircraft.angle;}
     else if(a.type==4){a.train.position=a.position;a.train.tick();a.position=a.train.position;}
     if(a.type!=2&&a.type!=5&&double(a.collisionCheck+.02f)<time()){collideTerrain(a);collideGroundBodies(a);a.collisionCheck=float(time());}
     updatePursuit(a,target);

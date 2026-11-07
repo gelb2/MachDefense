@@ -1,0 +1,14 @@
+spawn level=1 id=11 x=0 y=-511.967 hp=210
+spawn level=1 id=12 x=0 y=-511.967 hp=210
+spawn level=1 id=13 x=0 y=-511.967 hp=210
+mission55 level=1 produced=3 deaths=3 damageFrames=27 enemyDestroyed=0 writes=0
+death id=11 second=12.4832
+death id=12 second=12.4832
+death id=13 second=12.4832
+spawn level=10 id=13 x=0 y=-511.962 hp=644
+spawn level=10 id=14 x=0 y=-511.962 hp=644
+spawn level=10 id=15 x=0 y=-511.962 hp=644
+mission55 level=10 produced=3 deaths=3 damageFrames=66 enemyDestroyed=0 writes=0
+death id=13 second=29.9464
+death id=14 second=29.9464
+death id=15 second=29.9464

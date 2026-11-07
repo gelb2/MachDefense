@@ -1,3 +1,4 @@
+#include "Core/Simulation/AircraftVisual.hpp"
 #include "Core/Simulation/World.hpp"
 #include "Core/Simulation/Formation.hpp"
 #include <algorithm>
@@ -76,7 +77,23 @@ void World::appendSprites(Frame& frame)const{
                     shadow.nearest=part.sprites[1].nearest=true;
 
                 }
-                layers[0].sprites.push_back(std::move(part.sprites[0]));layers[baseLayer+(a->hp>0&&pose.hasParent?1:0)].sprites.push_back(std::move(part.sprites[1]));
+                const int layer=baseLayer+(a->hp>0&&pose.hasParent?1:0);
+                if(a->flightTactics&&a->hp<=0){
+                    // Grounded wreck: no altitude offset; only a faint contact shadow.
+                    auto& sh=part.sprites[0];const auto& body=part.sprites[1];sh.destination=body.destination;
+                    sh.destination.x+=scale;sh.destination.y+=scale;sh.color.a=.18f;
+                }
+                const float bank=a->flightTactics&&a->hp>0?a->flightTactics->bank:0;
+                if(a->flightTactics&&std::abs(bank)>.001f){
+                    const auto origin=worldToView(a->position);
+                    // Use the preserved body texture throughout a roll. Switching
+                    // to a separately generated pose changed the approved design.
+                    for(unsigned i=0;i<2;++i){auto& dst=layers[i?layer:0];auto pivot=origin;
+                        if(!i){pivot.x+=a->flightHeight*scale+4*pose.deviceScale;pivot.y+=a->flightHeight*scale+4*pose.deviceScale;}
+                        auto mesh=aircraftBankMesh(part.sprites[i],pivot,a->angle,bank,resources_.imageSize(part.sprites[i].image));
+                        mesh.beforeSpriteIndex=dst.sprites.size();dst.meshes.push_back(std::move(mesh));
+                    }
+                }else{layers[0].sprites.push_back(std::move(part.sprites[0]));layers[layer].sprites.push_back(std::move(part.sprites[1]));}
             }
         }
     }

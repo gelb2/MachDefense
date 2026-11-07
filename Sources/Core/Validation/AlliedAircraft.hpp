@@ -10,7 +10,7 @@ struct AlliedAircraftTrial {const char* model;const char* reference;float widthF
 // Medium-heavy uses medium's span until the user's "10+" unit is resolved.
 inline constexpr std::array<AlliedAircraftTrial,4> alliedAircraft{{
  {"AircraftLight","MachineGun",.50f,2.0f,12},
- {"AircraftHeavy","HMG",.425f,1.8f,18},
+ {"AircraftHeavy","HMG",.425f,1.0f,18},
  {"AircraftDuct","HeavyMissile",.425f,1.6f,18},
  {"AircraftTransport","IonRifle",.25f,1.4f,22}
 }};

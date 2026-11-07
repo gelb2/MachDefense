@@ -1,0 +1,210 @@
+[
+  {
+    "prefix": "ALight",
+    "source": "Art/Aircraft/parts/helicopter-bank-v2.png",
+    "source_sha256": "66ef99f314ed145b43fb8535060845ed3dbf3f9e8a65975a9f942a1882940876",
+    "source_neutral_hull_xywh": [
+      698,
+      142,
+      140,
+      174
+    ],
+    "source_alpha_boxes": [
+      [
+        175,
+        23,
+        170,
+        476
+      ],
+      [
+        675,
+        23,
+        187,
+        476
+      ],
+      [
+        1191,
+        23,
+        170,
+        476
+      ]
+    ],
+    "uniform_scale": 0.16428571428571428,
+    "target_hull_width": 23,
+    "packed_alpha_dimensions_north": [
+      [
+        28,
+        78
+      ],
+      [
+        31,
+        78
+      ],
+      [
+        28,
+        78
+      ]
+    ],
+    "canvas_north": [
+      35,
+      82
+    ],
+    "note": "Manual neutral-hull annotation; excludes outboard nacelles, weapons, rotor and tailplane."
+  },
+  {
+    "prefix": "AHeavy",
+    "source": "Art/Aircraft/parts/gunship-bank-v3.png",
+    "source_sha256": "93ff8eaa433ca572b1a2afb9987c57f0607f48b400521efc2512f138ddda4ce5",
+    "source_neutral_hull_xywh": [
+      844,
+      116,
+      484,
+      481
+    ],
+    "source_alpha_boxes": [
+      [
+        14,
+        116,
+        654,
+        482
+      ],
+      [
+        736,
+        116,
+        700,
+        481
+      ],
+      [
+        1505,
+        116,
+        653,
+        482
+      ]
+    ],
+    "uniform_scale": 0.21487603305785125,
+    "target_hull_width": 104,
+    "packed_alpha_dimensions_north": [
+      [
+        141,
+        104
+      ],
+      [
+        150,
+        103
+      ],
+      [
+        140,
+        104
+      ]
+    ],
+    "canvas_north": [
+      154,
+      108
+    ],
+    "note": "Manual neutral-hull annotation; excludes outboard nacelles, weapons, rotor and tailplane."
+  },
+  {
+    "prefix": "ADuct",
+    "source": "Art/Aircraft/parts/orca-bank-v2.png",
+    "source_sha256": "da0fb40b214a8dd3afc97a2a4cba70de047ae77a6f0060743b94dad9fe170c90",
+    "source_neutral_hull_xywh": [
+      970,
+      165,
+      231,
+      326
+    ],
+    "source_alpha_boxes": [
+      [
+        101,
+        60,
+        553,
+        608
+      ],
+      [
+        793,
+        60,
+        586,
+        608
+      ],
+      [
+        1518,
+        60,
+        553,
+        608
+      ]
+    ],
+    "uniform_scale": 0.09956709956709957,
+    "target_hull_width": 23,
+    "packed_alpha_dimensions_north": [
+      [
+        55,
+        61
+      ],
+      [
+        58,
+        61
+      ],
+      [
+        55,
+        61
+      ]
+    ],
+    "canvas_north": [
+      62,
+      65
+    ],
+    "note": "Manual neutral-hull annotation; excludes outboard nacelles, weapons, rotor and tailplane."
+  },
+  {
+    "prefix": "ATransport",
+    "source": "Art/Aircraft/parts/orca-bomber-bank-v2.png",
+    "source_sha256": "9bad2d663703ebe717bca8ef88594a5a6bf5369751f6cf343d156c95f0ab5d51",
+    "source_neutral_hull_xywh": [
+      970,
+      87,
+      231,
+      346
+    ],
+    "source_alpha_boxes": [
+      [
+        73,
+        18,
+        623,
+        684
+      ],
+      [
+        752,
+        21,
+        668,
+        684
+      ],
+      [
+        1477,
+        18,
+        623,
+        684
+      ]
+    ],
+    "uniform_scale": 0.09956709956709957,
+    "target_hull_width": 23,
+    "packed_alpha_dimensions_north": [
+      [
+        62,
+        68
+      ],
+      [
+        67,
+        68
+      ],
+      [
+        62,
+        68
+      ]
+    ],
+    "canvas_north": [
+      71,
+      72
+    ],
+    "note": "Manual neutral-hull annotation; excludes outboard nacelles, weapons, rotor and tailplane."
+  }
+]

@@ -1,5 +1,6 @@
 #include "Core/Simulation/WeaponController.hpp"
 #include <cmath>
+#include <algorithm>
 
 namespace md {
 namespace {
@@ -17,12 +18,12 @@ bool WeaponController::track(const WeaponFrame& frame) {
     if(frame.target && frame.target->hp>0) {
         auto target=frame.target->position;
         float desired=float(std::atan2(double(target.y-frame.ownerPosition.y),double(target.x-frame.ownerPosition.x)));
-        wrapToward(desired,angle_);angle_+=(desired-angle_)/10.f;
+        wrapToward(desired,angle_);const float step=(desired-angle_)/10.f;angle_+=frame.maxAimStep>0?std::clamp(step,-frame.maxAimStep,frame.maxAimStep):step;
         if(frame.machineType!=0) ready=std::abs(angle_-desired)<.1f;
     } else {
         wrapToward(frame.bodyAngle,angle_);
         float sway=std::cos(float((frame.time-double(startTime_))*.5))*.5f;
-        angle_+=((frame.bodyAngle+sway)-angle_)*.125f;
+        const float step=((frame.bodyAngle+sway)-angle_)*.125f;angle_+=frame.maxAimStep>0?std::clamp(step,-frame.maxAimStep,frame.maxAimStep):step;
     }
     return ready;
 }

@@ -7,6 +7,7 @@
 #include "Core/Presentation/Transition.hpp"
 #include "Core/Presentation/UpgradeDialog.hpp"
 #include "Core/Simulation/World.hpp"
+#include "Core/Simulation/AlliedAircraft.hpp"
 #include "Core/Validation/ValidationTools.hpp"
 #include <algorithm>
 #include <bit>
@@ -77,7 +78,7 @@ struct GameSession::State {
             char image[32];std::snprintf(image,sizeof image,"Icon%05d.png",code);
             auto [it,inserted]=originalIcons.try_emplace(icon,image);attackIcons.emplace(code,it->second);
         }
-        menu.setProfilePreparation([this](std::size_t selected){settlement.grantCampaignUnlock(save,selected,save.stage(selected));});
+        menu.setProfilePreparation([this](std::size_t selected){settlement.grantCampaignUnlock(save,selected,save.stage(selected));settlement.grantAircraftUnlocks(save,selected,save.stage(selected));});
         messageOK.bounds={128,279,64,32};if(validation){validationTools=std::make_unique<ValidationTools>(r);validationPanel=std::make_unique<ValidationPanel>(r);}rebuild();
     }
     std::string attackIcon(int itemId)const{return attackIcons.at(itemId);}
@@ -209,7 +210,7 @@ struct GameSession::State {
             return {w?w->attackPoint()*2:0,w?w->shotRange:0,p.hp,originalStepSpeedPoint(p.stepSize*2)};}
         const auto row=machines.findRow(d.machine);if(!row)return {};
         const auto m=MachineDefinition::fromTable(machines,*row,BattleGeometry::phone());int attack=0,range=0;
-        if(const auto* parts=models.machine(d.machine)){auto walk=[&](auto&& self,const auto& list)->void{for(const auto& part:list){if(const auto* w=weapons.find(part.name)){attack=w->attackPoint();range=w->shotRange;}self(self,part.children);}};walk(walk,*parts);}
+        if(const auto* parts=models.machine(d.machine)){auto walk=[&](auto&& self,const auto& list)->void{for(const auto& part:list){if(const auto* w=weapons.find(part.name)){if(alliedAircraftForModel(d.machine)){attack+=w->attackPoint();range=std::max(range,int(w->shotRange));}else{attack=w->attackPoint();range=w->shotRange;}}self(self,part.children);}};walk(walk,*parts);}
         return {attack,range,m.hp,originalVehicleSpeedPoint(m.speed)};
     }
     void action(HUDAction a){
@@ -260,7 +261,9 @@ struct GameSession::State {
         if(summaryState.visible)return;
         summaryState.visible=true;summaryState.cleared=state==WorldState::cleared;summaryState.mission=world->stage();
         const auto stats=world->statistics();summaryState.kills=stats.enemyDestroyed;summaryState.deaths=stats.playerDestroyed;summaryState.built=stats.produced;summaryState.elapsedSeconds=world->time()-world->startTime();
-        if(summaryState.cleared)summaryState.reward=settlement.clear(save,slot,world->randomSource());summary.setState(summaryState);persist();
+        if(summaryState.cleared)summaryState.reward=settlement.clear(save,slot,world->randomSource());
+        summary.setState(summaryState);
+        persist();
     }
     Vec2 upgradeOffset()const{return upgradeState.kind==UpgradeDialogState::Kind::base?layout.bottomRight():layout.center();}
     void cancelGameTouches(){

@@ -1,4 +1,23 @@
+# 2026-11-08 회피 보존·아이패드 시각 재검수
+
+사용자가 현재 회피기동은 유지하도록 지시했다. 현재 항공기 기능과 작업 자료를 먼저 커밋하고 시각 수정용 별도 브랜치에서 작업한다. 직전 설치본의 건쉽 크기·도색·승인 시안 일치에 대한 완료 판단은 철회한다. 실제 iPad 치트앱에서 원작 기준 유닛과 승인 그림을 대조하고, 틀린 부분은 다시 수정·캡처한다. 이 체크포인트는 시각적 승인본이나 출시본이 아니다.
+
 # 아군 항공기 4종 시험 — 2026-11-08
+
+2026-11-08 01:59 KST 후속: 회피 수정 정식 앱을 Xcode GUI로 빌드·서명하여 iPhone에 덮어 설치했다. 설치 전 저장 폴더를 로컬 백업했고, 설치 전후 MachDefense.sav의 바이트 일치를 확인했다. 미션 55 진입·헬기 표시를 확인한 뒤 앱 프로세스를 종료하고 홈 화면을 확인했다. iPad·Android·운영 PWA는 이번에 갱신하지 않았다. 로컬 설치 근거는 `.local/aircraft-evasion-20261108/iphone-reinstall/`에 보관한다. 개인 저장과 기기 정보는 공개하지 않는다.
+
+## 2026-11-08 항공기 회피 검사 후속
+
+현행 작업 사본: `.local/worktrees/save-transfer`, 브랜치 `feat/art-parity-followup-20261107`. 항공기 캠페인·미술·회전·속도 변경이 미커밋으로 함께 있으므로 기존 작업을 덮거나 초기화하지 않는다. 이전 iPhone 설치본은 이번 회피 수정 전 버전이다.
+
+- 새 항공기 생산 위치 분산, 적 중심 12시계 방향, 기체별 시작 위상·회전 순서·전환 시간 구현. 원작 난수와 분리했다.
+- 소형 속도 유지, 건쉽 동일 레벨 소형의 1/2. 기수/포신 회전 제한 및 기울임·추락 접지 그림자는 이전 후속 코드와 함께 작업 중이다.
+- C++ 47개, Chrome/WebKit 격리 항공기 검사 통과. 미션 55 소형 3대 비교에서는 수정 후에도 전멸했으므로 생존력 조정 완료로 보고하지 않는다. 원작 포탑의 피해 36/폭발 반경 30/탄속 약 3.61(아이폰 월드 틱)을 확인했다.
+- 원본 `Projectile.cpp`, `Combat.cpp`, ESpawn 80개 보존. 적 무기·헬기 체력을 이번 회피 수정에서 바꾸지 않았다.
+- 이번 변경의 네이티브 재설치·운영 PWA 배포·main 병합은 하지 않았다. 소형/Orca 몸체 두께·최대 헬기 크기·회색 시안과 설치본의 황토색 차이 등 미술 후속 검수도 남았다.
+- 검사/사망 시각: `docs/evidence/aircraft-allied-20261108.md` 마지막 절, `docs/evidence/aircraft-evasion-20261108/`. 로컬 실행 로그·웹 영상: `.local/aircraft-evasion-20261108/`.
+- 기존 비공개 통합 보고 사이트에 게시: https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-evasion-20261108 . Site source `1d8e19a4e0a7e77121cb8553adf87e8a0d579cde`, deployment `appgdep_6aef570cf58481918ee45ebc5bd377a3` succeeded.
+
 
 `feat/art-parity-followup-20261107`에서 헬기 로터를 이전 그림으로 되돌리고, 임시 VTOL 2종을 포함한 아군 4종을 치트 생성·회피·무장·크로스파이어에 연결했다. 후속 지시로 좌우 전환에 감속·정지·재가속을 추가했고 실제 웹 속도 기록의 37회 전환이 모두 0을 거침을 확인했다. C++ 6검사와 Chrome/WebKit 3화면 검사가 통과했다. [실행 결과·남은 작업](docs/evidence/aircraft-allied-20261108.md). 정식 캠페인·기기 설치·운영 PWA는 v0.6 그대로다. VTOL 디자인은 시험용이다. [보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-allied-20261108) 게시 succeeded를 확인했다. 코드 커밋은 `029fa01`이다. 아래는 이전 기록이다.
 
@@ -392,3 +411,7 @@ MD-AUDIO-BACKEND-01을 모듈화 단계에 포함한다. 원본 IPA는 Apple Ope
 ## 2026-11-05 생산 HUD·Base Upgrade 후속
 
 생산 HUD 7개 제한 원본 대조·세로 스크롤·순서 편집 연구를 MD-PRODUCTION-HUD-01로 등록했다. Base Upgrade 6종의 단계별 비율과 원본 자료형·주기는 [증거](docs/evidence/base-upgrade-rates-20261105.md)에 정리했다. 현재 강화 표·연산에서 차이를 발견하지 못했고, 10단계 × 61분 가속 검사에서 생산 감소가 없었다. 실제 포팅판 영상 대조는 남았다. 게임 코드는 이번 조사에서 변경하지 않았다.
+
+## 2026-11-08 승인 헬기 형상 복구
+
+사용자가 새 건쉽 형상·질감을 기각했다. 현행 아트 포장은 `tools/pack_aircraft_approved.py`다. 이전 `pack_aircraft_body_revision.py`를 다시 실행하지 않는다. 소형·건쉽은 보존된 승인 몸체, 오르카는 회색 도색 수정, 폭격형은 상아색 원래 시트다. 선회는 같은 몸체 텍스처를 메시로 기울이며 생성된 BankL/BankR를 쓰지 않는다. 긴급회피·무적 코드는 유지했다. C++ 관련 7개와 Chrome/WebKit 세 크기 검사 통과. iPhone 정식 02:45 빌드 설치 완료, 저장 보존. 사용 중인 기기 화면은 더 조작하지 않았다. 시각 검수는 웹 완료·아이폰 미완료. 새 설치본을 사용자가 승인한 것으로 기록하지 않는다. 원본 파일·측정·검사와 다음 근거는 `.local/aircraft-approved-20261108/`, `Art/Aircraft/runtime/approved-restoration.json`, `docs/evidence/aircraft-allied-20261108.md`다.

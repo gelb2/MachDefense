@@ -1,3 +1,4 @@
+#include "Core/Simulation/AircraftVisual.hpp"
 #include "Core/Simulation/World.hpp"
 #include "Core/Simulation/Formation.hpp"
 #include <algorithm>
@@ -15,7 +16,7 @@ void World::configureWeapons(WorldActor& actor){
         for(std::size_t i=0;i<nodes.size();++i){auto p=path;p.push_back(i);auto& part=nodes[i];
             if(const auto* weapon=weapons_.find(part.name)){
                 WorldWeapon w;w.name=part.name;w.partPath=p;w.controller=WeaponController(float(time()));w.controller.setAngle(actor.angle);
-                actor.weapons.push_back(std::move(w));actor.range=float(weapon->shotRange);
+                actor.weapons.push_back(std::move(w));actor.range=actor.flightTactics?std::max(actor.range,float(weapon->shotRange)):float(weapon->shotRange);
             }
             walk(part.children,p);
         }
@@ -58,6 +59,7 @@ void World::updateWeapons(WorldActor& a){
     for(auto& gun:a.weapons){const auto* definition=weapons_.find(gun.name);if(!definition)continue;
         auto& part=partAt(a.assembly,gun.partPath);
         WeaponFrame frame;frame.time=time();frame.ownerPosition=a.position;frame.bodyAngle=a.angle;frame.deviceScale=geometry_.deviceScale;
+        if(a.flightTactics)frame.maxAimStep=a.flightTactics->weaponStep;
         frame.ownerHP=a.hp;frame.machineType=a.type;frame.statusFlags=a.statusFlags;frame.weaponReady=a.type!=0||a.bipod.weaponReady;
         if(target)frame.target=WeaponTarget{target->position,target->hp};
         frame.weaponReady=gun.controller.track(frame);
@@ -69,6 +71,7 @@ void World::updateWeapons(WorldActor& a){
         std::size_t ordinal=0;for(const auto& other:a.weapons){if(&other==&gun)break;if(other.name==gun.name)++ordinal;}
         const PartPose* pose=nullptr;for(const auto& p:poses)if(p.definition&&p.definition->name==gun.name){if(ordinal==0){pose=&p;break;}--ordinal;}
         auto muzzle=pose?pose->muzzle(gun.muzzle):std::nullopt;
+        if(muzzle&&a.flightTactics)*muzzle=aircraftBankPoint(*muzzle,a.angle,a.flightTactics->bank);
         frame.muzzlePosition={a.position.x+(muzzle?muzzle->x:0),a.position.y+(muzzle?muzzle->y:0)};
         const auto fired=gun.controller.tick(*definition,frame,random_,[&](const WeaponFire& shot){
             // Original muzzle flash is allocated before damage/projectile creation.
@@ -142,7 +145,7 @@ void World::updateProjectiles(){
             host_.playSound("SFX_ExplGround.wav");
         }
         const auto hits=projectileCollide(*weapon,p.motion.position,p.motion.toPlayer,time(),enemies,players);
-        for(const auto& hit:hits){auto id=(hit.player?playerIds:enemyIds).at(hit.index);damage(id,hit.damage,p.attacker);if(hit.special){auto* a=actor(id);if(a&&a->hp>0&&a->specialDamage.add(*hit.special)){a->target=0;setDestination(*a,a->position);}}if(hit.secondary)if(const auto* a=actor(id))emitSecondaryImpact(*weapon,p.motion.position,a->position);}
+        for(const auto& hit:hits){auto id=(hit.player?playerIds:enemyIds).at(hit.index);damage(id,hit.damage,p.attacker);if(hit.special){auto* a=actor(id);if(a&&a->hp>0&&!(a->flightTactics&&a->flightTactics->invulnerable(time()))&&a->specialDamage.add(*hit.special)){a->target=0;setDestination(*a,a->position);}}if(hit.secondary)if(const auto* a=actor(id))emitSecondaryImpact(*weapon,p.motion.position,a->position);}
         emitWeaponImpact(*weapon,p.motion.position,0,.04f);
         p.motion.removed=true;
     }
@@ -161,6 +164,9 @@ void World::damage(ActorId id,int value,ActorId attacker){
                             float(std::sqrt(double(a->position.y-actualCamera_))/10.0)};
         host_.playSoundAt(sound,position);
     };
+    // Incoming hits retain their visual/audio impact; only HP is protected.
+    // Latest user rule includes hitscan. Original actors have no flightTactics.
+    if(a->flightTactics&&a->flightTactics->invulnerable(time())){playHit();return;}
     a->hp=hpAfterDamage(a->hp,value);
     if(a->hp>0){if(const auto* target=actor(a->target);target&&target->base)a->target=attacker;playHit();return;}
     host_.playSound("SFX_ExplMach.wav");emitCrashExplosion(a->position);

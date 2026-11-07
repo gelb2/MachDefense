@@ -1,5 +1,6 @@
 #include "Core/Simulation/World.hpp"
 #include "Core/Simulation/Formation.hpp"
+#include "Core/Simulation/AlliedAircraft.hpp"
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
@@ -36,6 +37,11 @@ WorldActor& World::addNamed(std::string_view name,Vec2 position,bool player){
     a.bipod.setStepSize(info.speed);a.bipod.position=a.vehicle.position=a.aircraft.position=a.train.position=position;
     a.bipod.destination=a.vehicle.destination=a.aircraft.destination=a.train.destination=position;
     a.bipod.angle=a.bipod.bodyAngle=a.bipod.baseAngle=a.vehicle.angle=a.aircraft.angle=a.angle;
+    if(player)if(const auto* aircraft=alliedAircraftForModel(name)){
+        a.flightTactics=AircraftTactics{aircraft->widthFraction,info.speed/geometry_.deviceScale,std::uint32_t(a.id*2654435761u)|1u};
+        a.flightTactics->noseStep=aircraft->noseDegreesPerSecond*3.14159265f/10800.f;a.flightTactics->weaponStep=aircraft->weaponDegreesPerSecond*3.14159265f/10800.f;
+        a.flightHeight=aircraft->height;a.rotorStep=7.3f*6.28318530718f/60.f;a.aircraft.rotationDivisor=12;
+    }
     configureWeapons(a);actors_.push_back(std::move(value));return a;
 }
 WorldActor& World::addParts(const BuildDefinition& definition,Vec2 position){
@@ -98,6 +104,9 @@ void World::tick(){
     }
     // New carriers may create their final unit during this pass; process those
     // children on the following update, keeping actor references stable.
+    aircraftThreats_.clear(geometry_.deviceScale);
+    const bool aircraftActive=std::any_of(actors_.begin(),actors_.end(),[](const auto& a){return a->flightTactics&&a->hp>0&&!a->removed;});
+    if(aircraftActive)for(const auto& p:projectiles_)if(const auto* w=weapons_.find(p.weapon))aircraftThreats_.add(p.motion,*w);
     const auto count=actors_.size();for(std::size_t i=0;i<count;++i)updateActor(*actors_[i]);
     for(auto& strike:airStrikes_)if(const auto* weapon=weapons_.find(strike.weapon))
         if(auto bullet=strike.motion.tick(*weapon,time(),random_))addProjectile(strike.weapon,*bullet,0,0);
@@ -113,6 +122,10 @@ void World::tick(){
         else if(pickup->type==LootType::mineral)clock_.setCells(pickup->applyCells(clock_.cells(),capacity_));
     }
     std::erase_if(loot_,[](const auto& l){return l.removed;});
+    // New aircraft can be built repeatedly. Release their assembly/weapons and
+    // per-entity dodge state after the original wreck lifetime has finished.
+    // Original ground actor retention is unchanged.
+    std::erase_if(actors_,[](const auto& a){return a->flightTactics&&a->removed;});
 }
 void World::finish(WorldState state){
     state_=state;events_.push_back({state==WorldState::cleared?WorldEvent::Kind::stageCleared:WorldEvent::Kind::stageFailed,0,0});

@@ -1,7 +1,9 @@
 {
   "pipeline": [
     "tools/pack_aircraft_art.sh",
-    "tools/pack_vtol_trial.sh"
+    "tools/pack_vtol_trial.sh",
+    "tools/pack_orca_art.sh",
+    "tools/pack_aircraft_body_revision.py"
   ],
   "palette_policy": "Full RGBA, unchanged original game PNGs; no fixed palette",
   "inputs": [
@@ -32,205 +34,479 @@
     {
       "path": "Art/Aircraft/concepts/vtol-transport-allied-v2.png",
       "sha256": "cd5f77474ed88ba5bee71a59fb43ab4afe4a1a64dad8f78fdb6b3250b6fba45b"
+    },
+    {
+      "path": "Art/Aircraft/parts/helicopter-bank-v2.png",
+      "sha256": "66ef99f314ed145b43fb8535060845ed3dbf3f9e8a65975a9f942a1882940876"
+    },
+    {
+      "path": "Art/Aircraft/parts/gunship-bank-v3.png",
+      "sha256": "93ff8eaa433ca572b1a2afb9987c57f0607f48b400521efc2512f138ddda4ce5"
+    },
+    {
+      "path": "Art/Aircraft/parts/orca-bank-v2.png",
+      "sha256": "da0fb40b214a8dd3afc97a2a4cba70de047ae77a6f0060743b94dad9fe170c90"
+    },
+    {
+      "path": "Art/Aircraft/parts/orca-bomber-bank-v2.png",
+      "sha256": "9bad2d663703ebe717bca8ef88594a5a6bf5369751f6cf343d156c95f0ab5d51"
     }
   ],
   "sprites": [
     {
-      "width": 87,
-      "height": 100,
+      "name": "ADuctBody",
+      "width": 88,
+      "height": 80,
       "cgbi": false,
       "interlaced": false,
-      "name": "ADuctBody",
-      "colors": 5465,
-      "alpha_levels": 224,
-      "sha256": "6f804c1756b4a5e67f1ae0242e99df7ef0ae8d9a9edc1cad88d0c264eb7a6b5b"
+      "colors": 3246,
+      "alpha_levels": 221,
+      "sha256": "dc9f5ebecb8a0a37eda3c35fc6ce7cfdfa0e34aecb7a7983da193cae334f2a39",
+      "mean_rgb": [
+        104.71,
+        105.95,
+        107.12
+      ],
+      "consumed": true
     },
     {
+      "name": "ADuctBodyBankL",
+      "width": 65,
+      "height": 62,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 2009,
+      "alpha_levels": 183,
+      "sha256": "b9ca7c1e20580ccf1daecbf7afb194ff8a50217bb8557e0e4d97ba3e87ffbb5e",
+      "mean_rgb": [
+        80.57,
+        79.21,
+        75.86
+      ],
+      "consumed": false
+    },
+    {
+      "name": "ADuctBodyBankR",
+      "width": 65,
+      "height": 62,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 1987,
+      "alpha_levels": 200,
+      "sha256": "8a93e14cb68d58fc5670649701d6c56aae955dd6c93c21b6d6de68a7438ae5c4",
+      "mean_rgb": [
+        80.5,
+        79.12,
+        75.84
+      ],
+      "consumed": false
+    },
+    {
+      "name": "ADuctFan",
       "width": 30,
       "height": 30,
       "cgbi": false,
       "interlaced": false,
-      "name": "ADuctFan",
-      "colors": 802,
+      "colors": 684,
       "alpha_levels": 100,
-      "sha256": "19048bc6ec631cebb1ba7225d346cef39d96b7c7052750a1b4baec83be1afe91"
+      "sha256": "19048bc6ec631cebb1ba7225d346cef39d96b7c7052750a1b4baec83be1afe91",
+      "mean_rgb": [
+        79.12,
+        73.27,
+        55.3
+      ],
+      "consumed": true
     },
     {
-      "width": 18,
-      "height": 12,
-      "cgbi": false,
-      "interlaced": false,
       "name": "ADuctGun",
-      "colors": 208,
-      "alpha_levels": 61,
-      "sha256": "ee89a3831d4dda7d6f1f392b9fe5d68d57af1e794aba81f56c4513f87ad42f67"
-    },
-    {
-      "width": 17,
-      "height": 12,
+      "width": 10,
+      "height": 4,
       "cgbi": false,
       "interlaced": false,
+      "colors": 30,
+      "alpha_levels": 25,
+      "sha256": "0e233a14043b38ea13c86604b81d87846ecc2625cafde24e71629c7921eeafa9",
+      "mean_rgb": [
+        79.1,
+        77.54,
+        76.37
+      ],
+      "consumed": true
+    },
+    {
       "name": "ADuctMissile",
-      "colors": 200,
-      "alpha_levels": 57,
-      "sha256": "c2aded0e03181755a0c9b4cff4403351d5191f1f9a0be46d37df23cc6a146320"
-    },
-    {
-      "width": 80,
-      "height": 87,
+      "width": 10,
+      "height": 6,
       "cgbi": false,
       "interlaced": false,
-      "name": "AHeavyBody",
-      "colors": 4005,
-      "alpha_levels": 207,
-      "sha256": "395aa47eeaa4f8374b6b84cd2a00a517ac617d1fa7da39ee4449fab6b3b44979"
+      "colors": 52,
+      "alpha_levels": 39,
+      "sha256": "b888fb9011862ad7402952c325b6bf4d7a1b2ea8c575e6e279165dd3c6813aed",
+      "mean_rgb": [
+        92.28,
+        90.11,
+        88.05
+      ],
+      "consumed": true
     },
     {
+      "name": "AHeavyBody",
+      "width": 96,
+      "height": 104,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 4825,
+      "alpha_levels": 216,
+      "sha256": "5031b8bd9b62f00e1565c33ff934d7f05745a2bb8fa161211fabfd9668dbaa92",
+      "mean_rgb": [
+        112.79,
+        103.33,
+        85.74
+      ],
+      "consumed": true
+    },
+    {
+      "name": "AHeavyBodyBankL",
+      "width": 108,
+      "height": 154,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 7055,
+      "alpha_levels": 214,
+      "sha256": "a7a81903fd1b97ccda3be13abddbfbb1ca30b854ef11f96e9c766cf5a226f40e",
+      "mean_rgb": [
+        100.8,
+        97.1,
+        91.37
+      ],
+      "consumed": false
+    },
+    {
+      "name": "AHeavyBodyBankR",
+      "width": 108,
+      "height": 154,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 7316,
+      "alpha_levels": 211,
+      "sha256": "a9f30bde15fc9683a5676dc623277325f289990346199254b80621fa666f515e",
+      "mean_rgb": [
+        100.45,
+        96.64,
+        90.88
+      ],
+      "consumed": false
+    },
+    {
+      "name": "AHeavyCannon",
       "width": 22,
       "height": 9,
       "cgbi": false,
       "interlaced": false,
-      "name": "AHeavyCannon",
-      "colors": 187,
+      "colors": 152,
       "alpha_levels": 62,
-      "sha256": "c92be4f1555a016be664d0703c0dfa760525a4052b4051a834685211c0ce1f89"
+      "sha256": "c92be4f1555a016be664d0703c0dfa760525a4052b4051a834685211c0ce1f89",
+      "mean_rgb": [
+        90.87,
+        86.92,
+        73.13
+      ],
+      "consumed": true
     },
     {
+      "name": "AHeavyGun",
       "width": 18,
       "height": 12,
       "cgbi": false,
       "interlaced": false,
-      "name": "AHeavyGun",
-      "colors": 207,
+      "colors": 167,
       "alpha_levels": 64,
-      "sha256": "524b2e8051fcb4e57783c99055075a2e50bdace8aa701f6f8210405a6171c663"
+      "sha256": "524b2e8051fcb4e57783c99055075a2e50bdace8aa701f6f8210405a6171c663",
+      "mean_rgb": [
+        98.18,
+        93.93,
+        80.96
+      ],
+      "consumed": true
     },
     {
+      "name": "AHeavyMissile",
       "width": 17,
       "height": 10,
       "cgbi": false,
       "interlaced": false,
-      "name": "AHeavyMissile",
-      "colors": 170,
+      "colors": 154,
       "alpha_levels": 63,
-      "sha256": "d9d41eef42e771f2fdb26192e0701cb6bf8edac48ef75cffdd9e3be0af8781a4"
+      "sha256": "d9d41eef42e771f2fdb26192e0701cb6bf8edac48ef75cffdd9e3be0af8781a4",
+      "mean_rgb": [
+        101.65,
+        96.03,
+        74.77
+      ],
+      "consumed": true
     },
     {
+      "name": "AHeavyRotor",
       "width": 41,
       "height": 40,
       "cgbi": false,
       "interlaced": false,
-      "name": "AHeavyRotor",
-      "colors": 958,
+      "colors": 596,
       "alpha_levels": 151,
-      "sha256": "4194e0458b5644f5c60e5cbf80b102e226ac494971830fae735238e8f6215154"
+      "sha256": "4194e0458b5644f5c60e5cbf80b102e226ac494971830fae735238e8f6215154",
+      "mean_rgb": [
+        110.11,
+        104.52,
+        87.62
+      ],
+      "consumed": true
     },
     {
-      "width": 57,
-      "height": 18,
+      "name": "ALightBody",
+      "width": 104,
+      "height": 32,
       "cgbi": false,
       "interlaced": false,
-      "name": "ALightBody",
-      "colors": 809,
-      "alpha_levels": 129,
-      "sha256": "77ba85b3fadc856ee56a0d0d3fa600ad1728ffc7e9eaf338bc81f21d682dfe0b"
+      "colors": 1865,
+      "alpha_levels": 188,
+      "sha256": "36080731ba780f6c12f5f976ddf9cef9140d7b80ea4f24e09dd079136d8a8aa8",
+      "mean_rgb": [
+        113.83,
+        103.27,
+        84.02
+      ],
+      "consumed": true
     },
     {
+      "name": "ALightBodyBankL",
+      "width": 82,
+      "height": 35,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 1431,
+      "alpha_levels": 161,
+      "sha256": "5f16c980af5e420d4e20e0734b56b9178453489e69213cb0a128eedfa0af7129",
+      "mean_rgb": [
+        94.79,
+        92.67,
+        87.76
+      ],
+      "consumed": false
+    },
+    {
+      "name": "ALightBodyBankR",
+      "width": 82,
+      "height": 35,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 1440,
+      "alpha_levels": 152,
+      "sha256": "6b9dbe295b8624d63bbc69e2a3665463c2184f3de3cb7c874bf904a358da1c45",
+      "mean_rgb": [
+        94.93,
+        92.62,
+        87.57
+      ],
+      "consumed": false
+    },
+    {
+      "name": "ALightGun",
       "width": 11,
       "height": 6,
       "cgbi": false,
       "interlaced": false,
-      "name": "ALightGun",
-      "colors": 66,
+      "colors": 58,
       "alpha_levels": 36,
-      "sha256": "704f2fa1b98f9ec4a591ebe2db5d918b0144fdbad04caa5ebd812b2a30dd0b26"
+      "sha256": "704f2fa1b98f9ec4a591ebe2db5d918b0144fdbad04caa5ebd812b2a30dd0b26",
+      "mean_rgb": [
+        99.43,
+        89.36,
+        73.28
+      ],
+      "consumed": true
     },
     {
+      "name": "ALightMissile",
       "width": 9,
       "height": 6,
       "cgbi": false,
       "interlaced": false,
-      "name": "ALightMissile",
-      "colors": 54,
+      "colors": 52,
       "alpha_levels": 28,
-      "sha256": "92bb0bfb75e34e92a722d901b5ea63cc848dd4f39cea5f4f6cba64e9847a2daa"
+      "sha256": "92bb0bfb75e34e92a722d901b5ea63cc848dd4f39cea5f4f6cba64e9847a2daa",
+      "mean_rgb": [
+        99.08,
+        87.44,
+        69.19
+      ],
+      "consumed": true
     },
     {
+      "name": "ALightRotor",
       "width": 26,
       "height": 26,
       "cgbi": false,
       "interlaced": false,
-      "name": "ALightRotor",
-      "colors": 498,
+      "colors": 294,
       "alpha_levels": 115,
-      "sha256": "c30325972f0961b61fdbc9078c6df89904cf39c1e9187491adf2f4fe4bed0840"
+      "sha256": "c30325972f0961b61fdbc9078c6df89904cf39c1e9187491adf2f4fe4bed0840",
+      "mean_rgb": [
+        108.32,
+        102.29,
+        85.64
+      ],
+      "consumed": true
     },
     {
-      "width": 97,
-      "height": 48,
+      "name": "ATransportBody",
+      "width": 121,
+      "height": 96,
       "cgbi": false,
       "interlaced": false,
-      "name": "ATransportBody",
-      "colors": 3781,
-      "alpha_levels": 176,
-      "sha256": "ed1dd57af81139be0d8d65f57ff0cc2b291d0227fda4525716e903c742e9dc70"
+      "colors": 5102,
+      "alpha_levels": 229,
+      "sha256": "4b269928051fc1431fcc416a3dd5e64a24eaba15931f5fe36d317d71cc75326e",
+      "mean_rgb": [
+        115.7,
+        109.43,
+        95.29
+      ],
+      "consumed": true
     },
     {
+      "name": "ATransportBodyBankL",
+      "width": 72,
+      "height": 71,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 2368,
+      "alpha_levels": 177,
+      "sha256": "33adc052b5935b683d2db4c4c61d3e2177610dcf46b68f1abbe5327cfa3f1b2d",
+      "mean_rgb": [
+        109.06,
+        102.61,
+        91.11
+      ],
+      "consumed": false
+    },
+    {
+      "name": "ATransportBodyBankR",
+      "width": 72,
+      "height": 71,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 2390,
+      "alpha_levels": 191,
+      "sha256": "8da434a1bb74b54006a5a803b8ffa3892a23c4ff0028d7de22d0fc4f7837a96f",
+      "mean_rgb": [
+        108.57,
+        102.08,
+        90.48
+      ],
+      "consumed": false
+    },
+    {
+      "name": "ATransportEngine",
       "width": 50,
       "height": 29,
       "cgbi": false,
       "interlaced": false,
-      "name": "ATransportEngine",
-      "colors": 1308,
+      "colors": 1133,
       "alpha_levels": 133,
-      "sha256": "aa2b4d5fae03d15d0ed6a9251d042a660fca5a3889feb320db3ece2ac29bdcf0"
+      "sha256": "aa2b4d5fae03d15d0ed6a9251d042a660fca5a3889feb320db3ece2ac29bdcf0",
+      "mean_rgb": [
+        111.3,
+        107.37,
+        88.85
+      ],
+      "consumed": true
     },
     {
-      "width": 18,
-      "height": 11,
+      "name": "ATransportFan",
+      "width": 35,
+      "height": 35,
       "cgbi": false,
       "interlaced": false,
+      "colors": 668,
+      "alpha_levels": 94,
+      "sha256": "766880d3fb2e93d18ceb9585d3f884caf4d56a5b85811a5ec54bb9b5900a40db",
+      "mean_rgb": [
+        90.5,
+        84.44,
+        69.71
+      ],
+      "consumed": true
+    },
+    {
       "name": "ATransportGun",
-      "colors": 192,
-      "alpha_levels": 70,
-      "sha256": "db9d7724c6d058e10fc69c7e8d63c2753578f5b3bc2a35fecbeb9b935dc1a8d2"
-    },
-    {
-      "width": 17,
-      "height": 11,
+      "width": 13,
+      "height": 7,
       "cgbi": false,
       "interlaced": false,
+      "colors": 69,
+      "alpha_levels": 42,
+      "sha256": "a0a196ac0b8159c10a44462f36348d0df792b4597abce868bc790f57b911d22c",
+      "mean_rgb": [
+        96.21,
+        89.69,
+        74.74
+      ],
+      "consumed": true
+    },
+    {
       "name": "ATransportMissile",
-      "colors": 179,
-      "alpha_levels": 63,
-      "sha256": "825cf20c6d8b47a2e00606c30b4546958a8f4edf5014f053a00c5d2232376cae"
-    },
-    {
-      "width": 31,
-      "height": 49,
+      "width": 12,
+      "height": 10,
       "cgbi": false,
       "interlaced": false,
+      "colors": 87,
+      "alpha_levels": 52,
+      "sha256": "1e11073cf3a48c0d0871121e3b94f5c4c67c979788f769482fae4e410ef9e299",
+      "mean_rgb": [
+        117.9,
+        105.87,
+        88.48
+      ],
+      "consumed": true
+    },
+    {
       "name": "ATransportWingL",
-      "colors": 1167,
-      "alpha_levels": 118,
-      "sha256": "f617bb7cc718a344d93c3eda212263b9b1cf50090a20f022981d6919fbdac6b0"
-    },
-    {
       "width": 31,
       "height": 49,
       "cgbi": false,
       "interlaced": false,
+      "colors": 937,
+      "alpha_levels": 118,
+      "sha256": "f617bb7cc718a344d93c3eda212263b9b1cf50090a20f022981d6919fbdac6b0",
+      "mean_rgb": [
+        120.92,
+        119.76,
+        106.48
+      ],
+      "consumed": true
+    },
+    {
       "name": "ATransportWingR",
-      "colors": 1172,
+      "width": 31,
+      "height": 49,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 943,
       "alpha_levels": 125,
-      "sha256": "83e9e938de19d5403c9d8c81a52963690a814900e29f5359bf915f3419d119f9"
+      "sha256": "83e9e938de19d5403c9d8c81a52963690a814900e29f5359bf915f3419d119f9",
+      "mean_rgb": [
+        119.79,
+        118.5,
+        105.05
+      ],
+      "consumed": true
     }
   ],
   "rotor_body_opacity": 1,
   "rotor_shadow_opacity": 0.55,
   "body_shadow_opacity": 0.55,
-  "status": "Four allied validation prototypes; VTOL design provisional; production campaign unchanged",
-  "bounds": [
+  "status": "Approved source body shapes restored and web checked; iPhone installed. New visual acceptance pending.",
+  "prior_bounds_trial": [
     {
       "name": "AircraftLight",
       "orientation": "north",
@@ -263,5 +539,15 @@
       "max_width": 115.0,
       "max_height": 101.5
     }
-  ]
+  ],
+  "body_measurements": "Art/Aircraft/runtime/approved-restoration.json",
+  "active_body_revision": "approved-restoration.json",
+  "rejected_body_revision": "body-revision-v2.json",
+  "active_body_files": {
+    "ALightBody.png": "36080731ba780f6c12f5f976ddf9cef9140d7b80ea4f24e09dd079136d8a8aa8",
+    "ADuctBody.png": "dc9f5ebecb8a0a37eda3c35fc6ce7cfdfa0e34aecb7a7983da193cae334f2a39",
+    "ATransportBody.png": "4b269928051fc1431fcc416a3dd5e64a24eaba15931f5fe36d317d71cc75326e",
+    "AHeavyBody.png": "5031b8bd9b62f00e1565c33ff934d7f05745a2bb8fa161211fabfd9668dbaa92"
+  },
+  "bank_rendering": "Use the same active neutral texture with the existing shared roll mesh; generated BankL/BankR images are not consumed."
 }

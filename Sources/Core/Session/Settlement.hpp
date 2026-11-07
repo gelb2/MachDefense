@@ -17,6 +17,7 @@ public:
     // Campaign completion count is one-based; inventory/serialization stay unchanged.
     static constexpr unsigned laserUnlockMission=30;
     bool grantCampaignUnlock(SaveData&,std::size_t slot,unsigned completedMissions)const;
+    std::vector<std::string> grantAircraftUnlocks(SaveData&,std::size_t slot,unsigned completedMissions)const;
     StageReward clear(SaveData&,std::size_t slot,DarwinRandom&)const;
     const BuildDefinition* definition(const OwnedBuild&)const;
     bool upgradeBuild(SaveData&,std::size_t slot,std::string_view name)const;

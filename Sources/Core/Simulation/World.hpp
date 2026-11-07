@@ -72,6 +72,7 @@ public:
     ActorId validationSpawn(std::string_view machineName,bool player,Vec2 position);
     void validationAircraftComparison();
     void validationAlliedAircraftComparison();
+    void validationAircraftDodgeComparison();
     ActorId validationAlliedAircraft(unsigned kind,Vec2 position);
     bool activateSpecial(std::string_view ownedBaseName,Vec2 worldPoint);
     void setUIMargin(float);
@@ -111,6 +112,7 @@ private:
     std::vector<WorldTrail> trails_;std::uint64_t nextRenderOrder_=0;
     void addProjectile(std::string,Projectile,ActorId,int layer=5);
     std::vector<WorldProjectile> projectiles_;std::vector<WorldEvent> events_;
+    AircraftThreatGrid aircraftThreats_;
     std::unordered_map<std::string,LootDefinition> lootDefinitions_;std::vector<LootState> loot_;
     std::unique_ptr<ParticlePool> particles_;
     struct ParticleImage {std::string image;unsigned columns=1,rows=1;Vec2 origin;float assetScale=0;};

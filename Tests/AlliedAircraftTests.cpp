@@ -23,10 +23,10 @@ int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];
  auto builds=md::BuildCatalog::load(table("MachBuild_Parts"),table("MachBuild_Name"));auto items=table("ItemInfo");
  std::cout<<"model,level,cells,hp,upgradeCredits,buildSeconds\n";
  for(unsigned k=0;k<4;++k){int hp=0,cells=0;for(unsigned level=1;level<=10;++level){auto e=md::validation::aircraftTrialEconomy(k,level,builds,items,md::BattleGeometry::pad());assert(e.hp>hp&&e.cells>cells);hp=e.hp;cells=e.cells;std::cout<<md::validation::alliedAircraft[k].model<<","<<level<<","<<e.cells<<","<<e.hp<<","<<e.upgradeCredits<<","<<e.duration<<"\n";}}
- // All six routes remain inside the map, and the moving target updates the anchor.
- md::AircraftTactics route;std::set<std::pair<int,int>> directions;
- for(int i=0;i<6;++i){auto p=route.destination(i*4,{0,0},{0,200},300,512,800,12);directions.emplace(p.x<0?-1:1,p.y<route.anchor.y-.01f?-1:p.y>route.anchor.y+.01f?1:0);assert(std::abs(p.x)<=244&&std::abs(p.y)<=788);}
- assert(directions.size()==6);float y=route.anchor.y;route.destination(28,{0,0},{0,400},300,512,800,12);assert(route.anchor.y>y);
+ // All clock directions remain in the map; the moving target updates the orbit center.
+ md::AircraftTactics route;std::set<int> directions;
+ for(int i=0;i<24;++i){auto p=route.destination(i*10,{0,0},{0,200},300,512,800,12);directions.insert(route.sector);assert(std::abs(p.x)<=244&&std::abs(p.y)<=788);}
+ assert(directions.size()==12);route.destination(250,{0,0},{0,400},300,512,800,12);assert(route.anchor.y==400);
 
  // Right-to-left and left-to-right both decelerate to an exact stopped frame.
  for(float sign:{-1.f,1.f}){
@@ -61,5 +61,5 @@ int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];
   // Campaign reset removes the trial units and restores normal spawns.
   w.start(0);for(const auto& a:w.actors())assert(!a->flightTactics);assert(scene.host.writes==0);
  }
- std::cout<<"AlliedAircraft: 4 trial allies; 40 economy proposals; six routes; auto targeting/fire; Crossfire; enemy damage; pause; no file writes passed\n";
+ std::cout<<"AlliedAircraft: 4 trial allies; 40 economy proposals; twelve clock routes; auto targeting/fire; Crossfire; enemy damage; pause; no file writes passed\n";
 }
