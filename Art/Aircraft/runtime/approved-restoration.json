@@ -10,11 +10,11 @@
       1155
     ],
     "source_measured_width": 250,
-    "target_width": 22.666666666666668,
-    "scale": 0.09066666666666667,
-    "alpha_width_north": 32,
-    "alpha_length_north": 104,
-    "sha256": "36080731ba780f6c12f5f976ddf9cef9140d7b80ea4f24e09dd079136d8a8aa8"
+    "target_width": 27.333333333333332,
+    "scale": 0.10933333333333332,
+    "alpha_width_north": 39,
+    "alpha_length_north": 126,
+    "sha256": "f51745eb56cf6a99437fec2c2c7cac4a56d9394bc4663eebac27b634e0649772"
   },
   {
     "name": "AHeavyBody",
@@ -26,12 +26,12 @@
       534,
       491
     ],
-    "source_measured_width": 534,
-    "target_width": 104,
-    "scale": 0.1947565543071161,
-    "alpha_width_north": 104,
-    "alpha_length_north": 96,
-    "sha256": "5031b8bd9b62f00e1565c33ff934d7f05745a2bb8fa161211fabfd9668dbaa92"
+    "source_measured_width": 250,
+    "target_width": 78.0,
+    "scale": 0.312,
+    "alpha_width_north": 166,
+    "alpha_length_north": 153,
+    "sha256": "1a32b27024e3a36c81eb352c8792a428a728e9f88db58367f656febfe1ae2cca"
   },
   {
     "name": "ADuctBody",
@@ -44,11 +44,11 @@
       580
     ],
     "source_measured_width": 150,
-    "target_width": 22.666666666666668,
-    "scale": 0.1511111111111111,
-    "alpha_width_north": 76,
-    "alpha_length_north": 84,
-    "sha256": "dc9f5ebecb8a0a37eda3c35fc6ce7cfdfa0e34aecb7a7983da193cae334f2a39"
+    "target_width": 27.333333333333332,
+    "scale": 0.1822222222222222,
+    "alpha_width_north": 92,
+    "alpha_length_north": 102,
+    "sha256": "44ca4bb01630edd3b1876ef73df6a173e96643423f8ecd19e46cc9af00db03b7"
   },
   {
     "name": "ATransportBody",
@@ -61,10 +61,10 @@
       690
     ],
     "source_measured_width": 129,
-    "target_width": 22.666666666666668,
-    "scale": 0.1757105943152455,
-    "alpha_width_north": 91,
-    "alpha_length_north": 113,
-    "sha256": "4b269928051fc1431fcc416a3dd5e64a24eaba15931f5fe36d317d71cc75326e"
+    "target_width": 27.333333333333332,
+    "scale": 0.2118863049095607,
+    "alpha_width_north": 109,
+    "alpha_length_north": 136,
+    "sha256": "ba3027da0bfd2f4bd2b6cc345cd8381300c9a66bd83a64208db4b73b6c00e0be"
   }
 ]

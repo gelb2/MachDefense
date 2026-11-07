@@ -52,7 +52,7 @@ bool Renderer::draw(const Frame& frame,int width,int height){
         const bool premultiplied=mesh.blend==md::Blend::premultipliedAlpha;
         Texture* texture=this->texture(mesh.image,premultiplied);if(!texture){valid=false;return;}
         glDisable(GL_SCISSOR_TEST);glEnable(GL_TEXTURE_2D);glBindTexture(GL_TEXTURE_2D,texture->id);
-        glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);glTexEnvi(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
+        glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,mesh.nearest?GL_NEAREST:GL_LINEAR);glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,mesh.nearest?GL_NEAREST:GL_LINEAR);glTexEnvi(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
         if(mesh.blend==md::Blend::opaque)glDisable(GL_BLEND);else{glEnable(GL_BLEND);glBlendFunc(premultiplied?GL_ONE:GL_SRC_ALPHA,mesh.blend==md::Blend::additive?GL_ONE:GL_ONE_MINUS_SRC_ALPHA);}
         std::vector<md::MeshVertex> vertices=mesh.vertices;
         for(auto& v:vertices){v.uv.x*=float(texture->width)/texture->storageWidth;v.uv.y*=float(texture->height)/texture->storageHeight;}

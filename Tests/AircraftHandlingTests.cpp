@@ -14,6 +14,16 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
   w.damage(id,a->hp);w.tick();assert(a->hp==0&&a->flightHeight==0&&a->flightTactics->bank==0&&a->aircraft.speed==0);
   Frame dead;w.appendSprites(dead);bool shadow=false;for(const auto& s:dead.sprites)if(s.image.starts_with(spec.model=="AircraftLight"?"ALight":spec.model=="AircraftHeavy"?"AHeavy":spec.model=="AircraftDuct"?"ADuct":"ATransport")&&s.color.r==0){assert(s.color.a==.18f);shadow=true;}assert(shadow);
  }
+ // A banked part must retain the neutral part's texture sampling.
+ for(bool nearest:{false,true}){Sprite s;s.image="ALightBody";s.nearest=nearest;s.destination={0,0,20,60};
+  auto m=aircraftBankMesh(s,{10,30},1.5707963f,.5f,{20,60});assert(m.nearest==nearest);
+ }
+ // Opposite rolls must be visually distinct; all part/muzzle coordinates use
+ // this same projection, so bank changes cannot detach a mounted weapon.
+ {auto a=aircraftBankPoint({10,5},0,.5f),b=aircraftBankPoint({10,5},0,-.5f);
+  assert(std::abs(a.x-b.x)>1.f);assert(std::abs(a.y-b.y)<.0001f);
+  auto n=aircraftBankPoint({10,5},0,0);assert(n.x==10&&n.y==5);
+ }
  // Production table -> actual motion: every level retains Scout speed and halves Gunship speed.
  for(unsigned level=1;level<=10;++level){
   Host host;auto save=SaveData::empty(1);save.createProfile("SPEED",1);World w(r,host,save,0);w.start(0);

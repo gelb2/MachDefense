@@ -29,6 +29,7 @@ struct TextureMesh {
     std::vector<MeshVertex> vertices; // triangle strip; normalized image UVs
     Blend blend=Blend::alpha;
     std::size_t beforeSpriteIndex=0;
+    bool nearest=false;
 };
 struct Frame {
     float logicalWidth=320, logicalHeight=480;

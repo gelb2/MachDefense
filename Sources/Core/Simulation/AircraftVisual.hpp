@@ -10,10 +10,14 @@ inline Vec2 aircraftBankPoint(Vec2 p,float heading,float bank){
  const Vec2 left{-std::sin(heading),std::cos(heading)};
  const float across=p.x*left.x+p.y*left.y;
  const float compression=(std::cos(bank)-1)*across;
- return {p.x+left.x*compression,p.y+left.y*compression};
+ // A slight oblique view exposes the raised/lowered side. A pure cos(bank)
+ // squeeze produced identical left/right poses and made banking unreadable.
+ const Vec2 forward{std::cos(heading),std::sin(heading)};
+ const float rise=std::sin(bank)*across*.35f;
+ return {p.x+left.x*compression+forward.x*rise,p.y+left.y*compression+forward.y*rise};
 }
 inline TextureMesh aircraftBankMesh(const Sprite& s,Vec2 pivot,float heading,float bank,Vec2 imageSize){
- TextureMesh m;m.image=s.image;m.blend=s.blend;
+ TextureMesh m;m.image=s.image;m.blend=s.blend;m.nearest=s.nearest;
  const auto r=s.sourcePx.value_or(Rect{0,0,imageSize.x,imageSize.y});
  const float angle=-s.rotationDegrees*3.14159265359f/180.f,c=std::cos(angle),t=std::sin(angle);
  const Vec2 center{s.destination.x+s.destination.width*.5f,s.destination.y+s.destination.height*.5f};

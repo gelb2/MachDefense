@@ -25,14 +25,14 @@ inline void appendAircraftModels(BattleModels& models){
  auto item=[&](const char* name,unsigned socket,unsigned z){auto c=named(4,name);c.data.push_back(socket);c.data.push_back(z);return c;};
  Chunk parts;parts.type=0;
  parts.children={
-  part("ALightBody",0,{{0,0},{10,0},{6,13},{6,-13}}), part("ALightRotor",7,{{0,0}}),
-  part("ALightGun",4,{{0,0},{5,1},{5,-1}}), part("ALightMissile",4,{{0,0},{4,1},{4,-1}}),
-  part("AHeavyBody",0,{{0,0},{7,40},{7,-40},{32,0},{-8,-40},{-8,40}}), part("AHeavyRotor",7,{{0,0}}),
-  part("AHeavyGun",4,{{0,0},{9,2},{9,-2}}), part("AHeavyMissile",4,{{0,0},{8,2},{8,-2}}),
-  part("AHeavyCannon",4,{{0,0},{11,0}}),
-  part("ADuctBody",0,{{0,0},{0,0},{0,0},{34,0},{18,11},{18,-11}}),
-  part("ADuctFan",7,{{0,0}}),part("ADuctGun",4,{{0,0},{5,0}}),part("ADuctMissile",4,{{0,0},{5,1},{5,-1}}),
-  part("ATransportBody",0,{{0,0},{8,33},{8,-33},{0,0},{0,0},{29,17},{29,-17},{-11,20},{-11,-20}}),part("ATransportFan",7,{{0,0}}),
+  part("ALightBody",0,{{0,0},{15,0},{8,16},{8,-16}}), part("ALightRotor",7,{{0,0}}),
+  part("ALightGun",4,{{0,0},{8,2},{8,-2}}), part("ALightMissile",4,{{0,0},{7,2},{7,-2}}),
+  part("AHeavyBody",0,{{0,0},{11,64},{11,-64},{51,0},{-13,-64},{-13,64}}), part("AHeavyRotor",7,{{0,0}}),
+  part("AHeavyGun",4,{{0,0},{14.5f,3},{14.5f,-3}}), part("AHeavyMissile",4,{{0,0},{13.5f,3},{13.5f,-3}}),
+  part("AHeavyCannon",4,{{0,0},{17.5f,0}}),
+  part("ADuctBody",0,{{0,0},{0,0},{0,0},{41,0},{22,13},{22,-13}}),
+  part("ADuctFan",7,{{0,0}}),part("ADuctGun",4,{{0,0},{6,0}}),part("ADuctMissile",4,{{0,0},{6,1},{6,-1}}),
+  part("ATransportBody",0,{{0,0},{10,40},{10,-40},{0,0},{0,0},{35,21},{35,-21},{-13,24},{-13,-24}}),part("ATransportFan",7,{{0,0}}),
   part("ATransportWingL",0,{{0,0}}),part("ATransportWingR",0,{{0,0}}),part("ATransportEngine",0,{{0,0}}),
   part("ATransportGun",4,{{0,0},{6,1},{6,-1}}),part("ATransportMissile",4,{{0,0},{6,1},{6,-1}})
  };

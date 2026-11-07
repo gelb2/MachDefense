@@ -91,11 +91,31 @@ struct GameSession::State {
         if(unitPreview)for(auto& pose:poses){const auto c=pose.localCenter;pose.localCenter={-c.y,c.x};pose.angle+=1.5707963267948966f;}
         models.appendSprites(f,poses,p,[&](std::string_view n){return resources.imageSize(n);});
     }
+    std::unordered_map<std::string,float> aircraftPreviewScales;
     void drawUnit(Frame& f,std::string_view n,Vec2 p,float scale){
         const auto* d=builds.find(n);if(!d){auto owned=save.builds(slot);auto i=std::find_if(owned.begin(),owned.end(),[&](const auto& b){return b.name==n;});if(i!=owned.end())d=settlement.definition(*i);}
         if(!d)return;
         if(d->setType==0){auto parts=PlayerLoadout::fromBuild(*d,items,BattleGeometry::phone());drawParts(f,parts.assembly,p,scale,true);}
-        else if(const auto* parts=models.machine(d->machine))drawParts(f,*parts,p,scale,true);
+        else if(const auto* parts=models.machine(d->machine)){
+            if(const auto* aircraft=alliedAircraftForModel(d->machine)){
+                auto [it,inserted]=aircraftPreviewScales.try_emplace(std::string(aircraft->model),1.f);
+                if(inserted){
+                    // Original preview assembly path, fitted once to the existing
+                    // icon well. World scale and original unit previews are unchanged.
+                    Frame preview;drawParts(preview,*parts,{},1,true);float halfX=0,halfY=0;
+                    for(const auto& sprite:preview.sprites){auto r=sprite.destination;
+                        const float a=sprite.rotationDegrees*3.14159265359f/180.f,c=std::cos(a),t=std::sin(a);
+                        for(float x:{-.5f,.5f})for(float y:{-.5f,.5f}){
+                            halfX=std::max(halfX,std::abs(r.x+r.width*.5f+x*r.width*c-y*r.height*t));
+                            halfY=std::max(halfY,std::abs(r.y+r.height*.5f+x*r.width*t+y*r.height*c));
+                        }
+                    }
+                    it->second=std::min({1.f,36.f/std::max(1.f,halfX),30.f/std::max(1.f,halfY)});
+                }
+                scale*=it->second;
+            }
+            drawParts(f,*parts,p,scale,true);
+        }
     }
     void drawReward(Frame& f,const StageReward& reward,Vec2 p,float scale){
         if(!reward.build.empty()){drawUnit(f,reward.build,p,scale);return;}

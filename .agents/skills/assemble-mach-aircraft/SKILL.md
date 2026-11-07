@@ -44,3 +44,13 @@ description: MachDefense 헬기·VTOL의 채택 그림을 몸체·무장·로터
 ## 승인 형상 복구 — 2026-11-08
 
 크기·색 보정 요청을 새 기체 디자인 생성으로 확대하지 않는다. 현행 입력은 `tools/pack_aircraft_approved.py`와 `runtime/approved-restoration.json`이다. `pack_aircraft_body_revision.py`의 v2/v3 몸체는 사용자가 기각했다. 승인한 원본 몸체를 직접 축소하며, 몸체 두께와 날개 포함 전체 폭을 구분해 표기한다. 회색으로 바꿨다는 이유만으로 질감 일치를 주장하지 않는다. 기울임 중 다른 생성 그림으로 바뀌는지 실제 게임에서 확인한다.
+
+## 중앙 동체·미리보기 검사 — 2026-11-08
+
+최신 기준은 소형·Orca 중앙 동체 두께 = Lv.10 MachineGun 몸체 41의 2/3, 건쉽 중앙 동체 폭 = E_Tank32_Body 104의 3/4다. 로터 지지부 포함 전체 폭으로 대체하지 않는다. 그림 원본의 중앙 동체 경계는 수동 측정이고 포장 결과에는 픽셀 반올림이 있다. 측정 경계·목표·전체 조립 범위를 구분한다.
+
+날개형 로터를 유지하되 확대 포장은 heavy-body-v4.png의 보존된 고해상도 날개에서 한다. ALightRotor 60×60, AHeavyRotor 66×66이며 원반형으로 교체하지 않는다. 현행 크롭·배율·해시는 pack_aircraft_approved.py와 approved-restoration.json이 정본이다. 과거 rotor-light-v2/rotor-heavy-v2의 작은 PNG를 그대로 복사하지 않는다.
+
+항공기 기울임 메시는 Sprite의 nearest 설정을 Apple·Android·Web까지 전달한다. 승인 몸체와 다른 생성 그림으로 교체하지 않는다. 총구에도 같은 기울임 변환을 적용한다. 확대 후 포신 끝을 네 기체 모두 검사한다.
+
+전장의 크기를 키우면 생산·강화·획득 아이콘도 확인한다. 기존 조립 출력의 경계를 캐시해 원래 아이콘 칸에 맞추며 세계 좌표의 기체 크기를 축소하지 않는다. 실제 GameSession 큐로 생산한 iPad 화면을 보고 가격·이름·테두리와 겹치면 다시 수정한다. [실행 기록](../../../docs/evidence/aircraft-visual-repair-20261108.md).
