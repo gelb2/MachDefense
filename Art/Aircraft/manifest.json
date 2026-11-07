@@ -36,7 +36,61 @@
     "path": "Art/Aircraft/concepts/aircraft-v2.png",
     "sha256": "cd0d989dec506804051d0fe97052ac49da3a00885dabc1aac1f3327404b19245",
     "prompt": "Art/Aircraft/concepts/aircraft-v2-prompt.txt",
-    "status": "review only; original texture and actual-size parity not approved",
-    "report": "https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-revision-20261107"
-  }
+    "status": "style adopted by user; parts assembly and in-game verification pending",
+    "report": "https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-revision-20261107",
+    "scale_reference": {
+      "small": {
+        "machine": "E_Tank_01",
+        "identification": "red APC candidate; original body and gun inspected",
+        "assembled_size": [
+          57,
+          32
+        ]
+      },
+      "heavy": {
+        "machine": "E_Tank_32",
+        "first_stage": 47,
+        "assembled_size": [
+          100,
+          105
+        ]
+      },
+      "measurement": "docs/research/aircraft-scale-20261107/measurements.json",
+      "units": "original asset pixels at deviceScale=1, heading=0; alpha bounds of assembled body and weapon; shadows measured separately"
+    }
+  },
+  "component_prototypes": [
+    {
+      "path": "Art/Aircraft/parts/aircraft-parts-v1.png",
+      "sha256": "5f75e585b5260177746c459758cdb653b77a3a7653fcd32c80781191f216defa",
+      "status": "rejected: weapon cells differed from the light body and duplicated heavy rotor supports"
+    },
+    {
+      "path": "Art/Aircraft/parts/aircraft-parts-v2.png",
+      "sha256": "03e3f2171db1d4da20547dee8371f4586d60e5782d3da792d5359ef9c48ce440",
+      "status": "assembly prototype: fixed weapons on bodies, independent rotors; no gameplay integration",
+      "grid": [
+        2,
+        2
+      ],
+      "canvas": [
+        1254,
+        1254
+      ],
+      "cells": [
+        "light body with fixed weapons",
+        "light rotor",
+        "heavy body with fixed weapons",
+        "heavy rotor reused twice"
+      ],
+      "probe": "tools/aircraft_assembly_probe.cpp",
+      "measurements": "docs/research/aircraft-scale-20261107/assembled-bounds.json",
+      "remaining": [
+        "separate weapons and firing sockets",
+        "native-resolution texture preparation and low-alpha residue cleanup",
+        "banking states",
+        "combat, hit and destruction validation"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "AircraftLight",
+    "scale": 0.09913,
+    "frames": 72,
+    "max_width": 30.302299868391756,
+    "max_height": 56.60322089314194,
+    "min_width": 22.7007663476874,
+    "min_height": 56.60322089314194
+  },
+  {
+    "name": "AircraftHeavy",
+    "scale": 0.137,
+    "frames": 72,
+    "max_width": 102.9426102317745,
+    "max_height": 66.856,
+    "min_width": 90.536384354067,
+    "min_height": 66.856
+  }
+]
