@@ -5,8 +5,8 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "2b095e1cbd4017b24ca997bde1c513005ae859e2a621c7209cc87153dc0281b2",
-      "en_sha256": "8742e8ffe73dfd0f75897373ff1ca604ecb6fbbfc3e496f9f73bdc841a1c368e",
+      "ko_sha256": "3c3b47202289a1936dc08854c8c9ee73cd12c323b3418883f95f9e08f4043f02",
+      "en_sha256": "d07f3025bdec0a725867f55c135ff0044f4040bb70ae025505f9f31930910df1",
       "review": "2026-11-08: added matching essay introductions and essay, incident, and troubleshooting links; existing author text preserved."
     },
     {
@@ -232,6 +232,13 @@
       "ko_sha256": "201eabe9146bac248ee7eb7327bf43bd277e4e45d707506efd4c1a471ff4ee81",
       "en_sha256": "baab0dada803f91748bc269afa49d7becb0c85e3c7fd9811522de805b3d91047",
       "review": "2026-11-08: appended author paragraph on the typewriter and overseer; Korean wording preserved verbatim and English paragraph added."
+    },
+    {
+      "ko": "docs/editorial/unease-and-typewriters-draft-20261108.md",
+      "en": "docs/en/editorial/unease-and-typewriters-draft-20261108.md",
+      "review": "2026-11-08: 37 body paragraphs compared in order; author voice, figures, error identifiers, citations and latest overseer paragraph retained.",
+      "ko_sha256": "9d84f0abdf877800adb1a673ecb73f3479a73e2249f03a5320f2c3a81fefa575",
+      "en_sha256": "b9bd117a80e099422981216bed345c187ff3a7ff46d9bbf91d35c770ac456ca6"
     }
   ]
 }

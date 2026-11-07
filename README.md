@@ -24,7 +24,7 @@
 
 헬기 유닛의 회피 기능을 시험하던 중 겪은 도안 제작·텍스트 편집 거부와 경위서의 책임 전가를 썼다. 신규 유닛을 기획한 이유, 작업이 멈춘 과정, 과학과 도덕을 내세우는 도구에 대한 나의 비판을 담았다.
 
-[글 전문](docs/editorial/unease-and-typewriters-draft-20261108.md) · [경위서](docs/evidence/aircraft-instruction-refusal-20261108.md) · [트러블슈팅](docs/public/troubleshooting.md)
+[한국어 전문](docs/editorial/unease-and-typewriters-draft-20261108.md) · [English](docs/en/editorial/unease-and-typewriters-draft-20261108.md) · [경위서](docs/evidence/aircraft-instruction-refusal-20261108.md) · [트러블슈팅](docs/public/troubleshooting.md)
 
 ## Quick Play — PWA·Mac
 
