@@ -1,3 +1,17 @@
+# 2026-11-07 몸체·라이플 새 부품 시안
+
+[원작 1~5단계·새 부품 10개·조립 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-design-grammar-20261107)를 기존 소유자 전용 보고서에 게시했다.
+
+- Site source: `b4635ab68a00c5317b490937cec4dd5e646bc2b2`.
+- Deployment: `appgdep_6aee898c6cf0819192f97168702f7808`, `succeeded`.
+- 1280·390px 새 섹션의 이미지 35개, Lv.6~10 카드 5개, 원고 다운로드 200, 섹션 가로 넘침 없음, 페이지 오류 없음.
+- 원작 단계별 연결점 수정 뒤 390px에서 새 섹션 이미지 35개 로드와 화면을 다시 확인했다.
+- 생성 원본·실제 크기·2배 확대·조립본을 제공한다. 몸체 폭·라이플 높이 최대 3px 차이와 표면 표현 보정은 남았다.
+- 기존 title-a/title-b/06-stage-clear PNG를 lossless WebP로 변환했다. RGBA 바이트 동일성을 확인했고 원본은 로컬에 보존했다. 참조 16곳을 바꿨다.
+- 기존 표 2개에 가로 스크롤을 추가했다. 이번 반응형 검사 범위는 새 시안 섹션이다.
+
+이전 게시 기록:
+
 # 보고와 Sass 전달
 
 MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지를 계속 갱신한다.
