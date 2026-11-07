@@ -1,3 +1,11 @@
+# v0.6 배포 완료 — 2026-11-07
+
+main `2f82a09`, v0.6 태그·Release·운영 PWA를 배포했다. PWA 빌드는 `87ea3cfe8a8dc249`다. 운영 구버전 전환과 저장 보존, 새 Chrome·WebKit의 복원·미션·오프라인 검사, 공개 Mac ZIP의 해시·서명이 통과했다. iPhone·iPad·Galaxy 정식·치트 앱도 설치했다. [배포 결과](evidence/v06-release-20261107.md).
+
+타이틀 그림은 미완료이며 제품에 넣지 않았다. 원본 태블릿 시야·비정상 로컬 저장·Tauri 창 닫기/업데이트 재실행 확인은 남았다. 공중유닛은 연구·시안 단계다. [남은 과제](usability-todo.md).
+
+아래는 이전 작업 기록이다.
+
 # PWA·Tauri·레이저 생산 가격 — 2026-11-07 작업 중
 
 작업 브랜치 `feat/pwa-tauri-followup-20261107`에서 PWA 업데이트와 레이저 생산 가격을 수정했고 Tauri Mac을 구현했다. C++ 42개 검사, 웹 강화·생산·복원 검사, Galaxy 설치·기능·복원 검사, iPhone 시뮬레이터 검사가 통과했다. iPhone·iPad 실기기 강화/HUD 검사와 정식·치트 앱 네 개 설치도 통과했다. 설치 후 저장 바이트가 모두 같았다. 운영 배포 대조는 남았다. [실기기 결과](evidence/native-release-20261107.md). [Tauri 결과](evidence/tauri-desktop-20261107.md) · [가격](evidence/laser-production-cost-20261107.md) · [PWA](evidence/pwa-update-20261107.md).
