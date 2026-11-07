@@ -29,6 +29,7 @@
 | 19 | Mesabloo 감사 연락 | hm-defense의 Discussions 활성화와 Show and tell·General 분류, 공식 개인 사이트의 연락 이메일을 확인했다. Show and tell에 감사와 복원 소식을 전하는 방식을 제안한다. HeavyMach WASM 기여자는 fastutlego의 PR #24다. 문구와 발송은 사용자와 논의 중이다.  감사만을 위한 PR이나 중복 발송은 하지 않는다. HeavyMach WASM PR 기여자의 정확한 계정·링크를 확인하고 정중한 영어 초안을 작성한다. 사용자 검토 후 연락한다. 아래 제공 원문과 코드베이스 하이재킹 오해에 관한 참고 의견을 보존했다. |
 | 20 | Galaxy 연결·Android 배포 후속 | USB 기본 MTP와 현재 디버깅은 확인했다. 케이블 재연결 유지와 무선 접속·설치 검사는 남았다. **무선은 급하지 않다는 사용자 지시를 반영한다.** 추가 OS/기기·배포용 서명도 Android 후속 검사다. [최근 결과](evidence/v05-release-20261107.md), [Android 검사 범위](evidence/android-native-20261106.md). |
 | 23 | HeavyMach 라이선스 고지 후속 보완 | 두 main의 MIT 원문과 코드·자원·외부 고지 구분은 같다. HeavyMach의 세부 범위 표와 외부 고지에는 Android·웹·Tauri 확장 내용이 빠져 있다. 실제 배포 의존성·버전과 외부 PR 기여자 고지를 확인해 한·영 문서를 갱신한다. HeavyMach 수정은 아직 하지 않았다. [비교 결과](evidence/license-review-20261107.md). |
+| 24 | 페이지·PWA 공유용 OG 이미지 | HeavyMach1에서 채택한 OG 이미지와 제작·적용 절차를 확인하고, 현재 페이지 공유용과 MachDefense 웹·PWA 진입 페이지용 시안을 구상한다. 원작 메인화면 일러스트와 게임의 색·질감을 기준으로 한다. 대상 URL별 이미지·제목·설명, 한·영 연결과 공유 미리보기를 확인한다. 2026-11-07 원작 타이틀 기반 가로 시안 2종을 만들었다. [공개 빌드·IPA 검사와 시안](evidence/public-playability-20261107.md)을 기존 통합 보고서에 모았다. GitHub·PWA OG 운영 적용은 남아 있다. |
 
 
 ## 보류·제안
