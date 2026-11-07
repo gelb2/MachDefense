@@ -1,0 +1,468 @@
+{
+  "status": "review-only-not-runtime",
+  "filter": "uniform Lanczos reduction; comparison enlargement nearest neighbor",
+  "parts": [
+    {
+      "family": "body",
+      "level": 6,
+      "source": "body.png",
+      "source_sha256": "1f2aba3ce2691edf149ce50df54ec05361d587f4f2a0070a51c835eae9b9d6c3",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source_rect": [
+        49,
+        150,
+        336,
+        386
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        52,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ],
+      "uniform_scale": 0.15544041450777202,
+      "offset": [
+        4,
+        2
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 107.73,
+        "bright_pct": 26.5
+      },
+      "original_tone": {
+        "mean_luma": 103.95,
+        "bright_pct": 24.08
+      },
+      "review_sha256": "8702f71b25bf109a9736e4ba634e1d9f25ce8e778638217d7c4cdb5b1afb5289"
+    },
+    {
+      "family": "body",
+      "level": 7,
+      "source": "body.png",
+      "source_sha256": "1f2aba3ce2691edf149ce50df54ec05361d587f4f2a0070a51c835eae9b9d6c3",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source_rect": [
+        476,
+        152,
+        339,
+        384
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        53,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ],
+      "uniform_scale": 0.15625,
+      "offset": [
+        4,
+        2
+      ],
+      "height_delta": 0,
+      "width_delta": 1,
+      "tone": {
+        "mean_luma": 103.89,
+        "bright_pct": 24.77
+      },
+      "original_tone": {
+        "mean_luma": 103.95,
+        "bright_pct": 24.08
+      },
+      "review_sha256": "d7a933b43afc6b1184bff5519f775c11299c88043072256a7af657c960a2b3b7"
+    },
+    {
+      "family": "body",
+      "level": 8,
+      "source": "body.png",
+      "source_sha256": "1f2aba3ce2691edf149ce50df54ec05361d587f4f2a0070a51c835eae9b9d6c3",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source_rect": [
+        893,
+        150,
+        352,
+        392
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        54,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ],
+      "uniform_scale": 0.15306122448979592,
+      "offset": [
+        3,
+        2
+      ],
+      "height_delta": 0,
+      "width_delta": 2,
+      "tone": {
+        "mean_luma": 106.9,
+        "bright_pct": 23.88
+      },
+      "original_tone": {
+        "mean_luma": 103.95,
+        "bright_pct": 24.08
+      },
+      "review_sha256": "0e2dca9fd373645acef7e238cd2d077e1f291ac7353cddc8930e71b27f71aeef"
+    },
+    {
+      "family": "body",
+      "level": 9,
+      "source": "body.png",
+      "source_sha256": "1f2aba3ce2691edf149ce50df54ec05361d587f4f2a0070a51c835eae9b9d6c3",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source_rect": [
+        1329,
+        153,
+        350,
+        383
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        55,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ],
+      "uniform_scale": 0.1566579634464752,
+      "offset": [
+        2,
+        2
+      ],
+      "height_delta": 0,
+      "width_delta": 3,
+      "tone": {
+        "mean_luma": 104.01,
+        "bright_pct": 22.77
+      },
+      "original_tone": {
+        "mean_luma": 103.95,
+        "bright_pct": 24.08
+      },
+      "review_sha256": "c6a22c03f51736db47296a81e3f5ce4ce2f66dd6c1a409b18e802f82da076681"
+    },
+    {
+      "family": "body",
+      "level": 10,
+      "source": "body.png",
+      "source_sha256": "1f2aba3ce2691edf149ce50df54ec05361d587f4f2a0070a51c835eae9b9d6c3",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source_rect": [
+        1765,
+        141,
+        356,
+        401
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        53,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ],
+      "uniform_scale": 0.14962593516209477,
+      "offset": [
+        4,
+        2
+      ],
+      "height_delta": 0,
+      "width_delta": 1,
+      "tone": {
+        "mean_luma": 109.2,
+        "bright_pct": 26.9
+      },
+      "original_tone": {
+        "mean_luma": 103.95,
+        "bright_pct": 24.08
+      },
+      "review_sha256": "a06be0c44b64c8abd26f46b198c111217b26ee70386ceac9d8bb661e3a663923"
+    },
+    {
+      "family": "rifle",
+      "level": 6,
+      "source": "rifle.png",
+      "source_sha256": "70b5e671a0f5a3df3bc6954d59a211a5b1f36ffb5d60841e86587a4b747b4be3",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source_rect": [
+        52,
+        231,
+        352,
+        259
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        61,
+        45
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ],
+      "uniform_scale": 0.17329545454545456,
+      "offset": [
+        1,
+        9
+      ],
+      "height_delta": 2,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 91.58,
+        "bright_pct": 8.13
+      },
+      "original_tone": {
+        "mean_luma": 100.9,
+        "bright_pct": 20.65
+      },
+      "review_sha256": "6338c633ace32c6631d02fccbb21146d0bea1e068be3412af6fe54c0e4b57461"
+    },
+    {
+      "family": "rifle",
+      "level": 7,
+      "source": "rifle.png",
+      "source_sha256": "70b5e671a0f5a3df3bc6954d59a211a5b1f36ffb5d60841e86587a4b747b4be3",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source_rect": [
+        479,
+        235,
+        358,
+        254
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        61,
+        43
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ],
+      "uniform_scale": 0.17039106145251395,
+      "offset": [
+        1,
+        10
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 95.27,
+        "bright_pct": 12.77
+      },
+      "original_tone": {
+        "mean_luma": 100.9,
+        "bright_pct": 20.65
+      },
+      "review_sha256": "4f01d956cf79312e348302546990c6c5456ad1f912cb8ffbbc9e32be6c6c62f0"
+    },
+    {
+      "family": "rifle",
+      "level": 8,
+      "source": "rifle.png",
+      "source_sha256": "70b5e671a0f5a3df3bc6954d59a211a5b1f36ffb5d60841e86587a4b747b4be3",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source_rect": [
+        908,
+        227,
+        355,
+        266
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        61,
+        46
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ],
+      "uniform_scale": 0.17183098591549295,
+      "offset": [
+        1,
+        8
+      ],
+      "height_delta": 3,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 91.86,
+        "bright_pct": 10.59
+      },
+      "original_tone": {
+        "mean_luma": 100.9,
+        "bright_pct": 20.65
+      },
+      "review_sha256": "59db6c3e4a29c316b5c23d23c0d5f00b116d7a6198a8c3d3335ac6ec30dc091f"
+    },
+    {
+      "family": "rifle",
+      "level": 9,
+      "source": "rifle.png",
+      "source_sha256": "70b5e671a0f5a3df3bc6954d59a211a5b1f36ffb5d60841e86587a4b747b4be3",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source_rect": [
+        1333,
+        241,
+        362,
+        245
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        61,
+        41
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ],
+      "uniform_scale": 0.1685082872928177,
+      "offset": [
+        1,
+        11
+      ],
+      "height_delta": -2,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 93.62,
+        "bright_pct": 11.79
+      },
+      "original_tone": {
+        "mean_luma": 100.9,
+        "bright_pct": 20.65
+      },
+      "review_sha256": "92626d67af26c3e16dba775cf1c65f8dae13b73adfee476dbb65edce0418a93c"
+    },
+    {
+      "family": "rifle",
+      "level": 10,
+      "source": "rifle.png",
+      "source_sha256": "70b5e671a0f5a3df3bc6954d59a211a5b1f36ffb5d60841e86587a4b747b4be3",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source_rect": [
+        1771,
+        231,
+        354,
+        263
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        61,
+        45
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ],
+      "uniform_scale": 0.17231638418079095,
+      "offset": [
+        1,
+        9
+      ],
+      "height_delta": 2,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 88.35,
+        "bright_pct": 11.83
+      },
+      "original_tone": {
+        "mean_luma": 100.9,
+        "bright_pct": 20.65
+      },
+      "review_sha256": "6c2e41d2c0918abd8cc4d4845b6eed4c8c7190598fb621cb166c788e920fc590"
+    }
+  ],
+  "original_references": [
+    {
+      "file": "Resources/Images/Turret_b_01.png",
+      "sha256": "a4a1bcdfe70ae823c543c0c905d55492613aeff55fb3a7a3c7c9b781eb0d121e"
+    },
+    {
+      "file": "Resources/Images/Turret_b_02.png",
+      "sha256": "c7dea9d63e9d2b1eb3b7458de27c6f467739a3c1e9905ae5f5b9ed166a35e327"
+    },
+    {
+      "file": "Resources/Images/Turret_b_03.png",
+      "sha256": "bdededb5cb6338c3b148669ed74c224d48b0494354cbebe4936077f48fd7cd6a"
+    },
+    {
+      "file": "Resources/Images/Turret_b_04.png",
+      "sha256": "a2cbf5d4331bf850f9c0f9f1be71e1824d34eab41050f66e31afc664f3bd42ac"
+    },
+    {
+      "file": "Resources/Images/Turret_b_05.png",
+      "sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927"
+    },
+    {
+      "file": "Resources/Images/Turret_gun_01.png",
+      "sha256": "0473c926e45f0f04ce0f94411cada9946773523cc1c282c9a877f107ef921459"
+    },
+    {
+      "file": "Resources/Images/Turret_gun_02.png",
+      "sha256": "c5163a57811128dc673a5c1b7cd0feb83c701a76392a548db30768bad1c964b2"
+    },
+    {
+      "file": "Resources/Images/Turret_gun_03.png",
+      "sha256": "c28d3533f5a2c43105e84838a9d094381d75f39f2685feb24eaa77215fadaf7a"
+    },
+    {
+      "file": "Resources/Images/Turret_gun_04.png",
+      "sha256": "6ccaad8a90d40a530418afdb9c4d95e79c9570ee1fc2d222e42a8e5c1df27a49"
+    },
+    {
+      "file": "Resources/Images/Turret_gun_05.png",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9"
+    }
+  ]
+}

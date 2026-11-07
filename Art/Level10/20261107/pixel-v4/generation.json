@@ -1,0 +1,100 @@
+[
+  {
+    "family": "body",
+    "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-1a354188-6e17-4ea4-9224-f3c75a1abd6d.png",
+    "stage": 4,
+    "prompt": "Remove ONLY the unwanted white/gray/colored halo and stray background pixels surrounding these five mechanical game sprites. Keep every part of the five sprites and their pixel-art texture, shape, positions, proportions, colors, highlights and details unchanged. The entire space outside the actual mechanical silhouettes and between them must have zero alpha, completely transparent. No white matting, feathering, glowing edge, colored specks or drop shadow. Preserve silver/white areas that are part of the metal itself, the central mechanical bearing, tubes and braces. Do not redraw or stylize the foreground. Return same five separate sprites in same row, transparent background.",
+    "prior_generation": {
+      "family": "body",
+      "prompt": "Use the attached ORIGINAL raster as the pixel-grid source. It is an 8x nearest-neighbor enlargement; each large square is one original pixel. Create FIVE minimally edited copies in one horizontal row, equal size, clear transparent gutters. Preserve the exact silhouette, irregular broken edges, sparse lumpy silver-white highlights, uneven gray-green clusters and tiny original accent colors. Do not add detail finer than existing pixel squares. Only change a handful of small flat vent/plate/brace pixels between levels6–10; retain95% of original. No stylistic redesign, no thick dark outline, no polished 3D bevel, no smooth cylindrical shading, no increase in barrel thickness, no additional body bulk. No labels/background/shadow. All5same dimensions. Body only, open dark ring, left asymmetric bright plates and orange details, top silver panels, thin legs. Visible aspect52:60. Preserve original ring and empty areas. Do not add weapons.",
+      "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-b15bf73c-939e-4032-a2ea-95c51b1e0e58.png"
+    },
+    "tool": "built-in image_gen",
+    "workspace_file": "body.png",
+    "original_reference": "review/measurements.json"
+  },
+  {
+    "family": "rifle",
+    "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-d08873bd-d226-45ef-b452-a25f861c1f34.png",
+    "stage": 3,
+    "prompt": "Use this reference as an exact pixel-grid source, not as inspiration. Produce five minimally edited copies side by side of this SAME tiny original rifle turret. The attached reference is an 8x nearest-neighbor enlargement of a 64x64 original, so each existing large square is ONE original pixel. Preserve those same squares, colors and irregular edge positions, especially the superthin horizontal barrels pointing right, loose asymmetrical pale highlights, gray-green receiver, black negative spaces and central plain silver disk. Keep the original 64x64 pixel density. Five levels only change a few 1-pixel vent/plate details on receiver and small lower braces. Do not polish, shade, redraw into 3D, add bevels, dark outline, fat tubes, circles or detail finer than existing pixel squares. Five copies of the SAME original silhouette at exactly the same size in a horizontal row with transparent gutters, no labels. Retain original white and pale silver highlights and mottled sparse unfinished-looking pixels. Transparent background.",
+    "prior_generation": {
+      "family": "rifle",
+      "prompt": "Use this reference as an exact pixel-grid source, not as inspiration. Produce five minimally edited copies side by side of this SAME tiny original rifle turret. The attached reference is an 8x nearest-neighbor enlargement of a 64x64 original, so each existing large square is ONE original pixel. Preserve those same squares, colors and irregular edge positions, especially the superthin horizontal barrels pointing right, loose asymmetrical pale highlights, gray-green receiver, black negative spaces and central plain silver disk. Keep the original 64x64 pixel density. Five levels only change a few 1-pixel vent/plate details on receiver and small lower braces. Do not polish, shade, redraw into 3D, add bevels, dark outline, fat tubes, circles or detail finer than existing pixel squares. Five copies of the SAME original silhouette at exactly the same size in a horizontal row with transparent gutters, no labels. Retain original white and pale silver highlights and mottled sparse unfinished-looking pixels. Transparent background.",
+      "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-d08873bd-d226-45ef-b452-a25f861c1f34.png"
+    },
+    "tool": "built-in image_gen",
+    "workspace_file": "rifle.png",
+    "original_reference": "review/measurements.json"
+  },
+  {
+    "family": "missile",
+    "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-2a321bb1-6588-42e7-8639-121dc3d5923e.png",
+    "stage": 3,
+    "prompt": "Use the attached ORIGINAL raster as the pixel-grid source. It is an 8x nearest-neighbor enlargement; each large square is one original pixel. Create FIVE minimally edited copies in one horizontal row, equal size, clear transparent gutters. Preserve the exact silhouette, irregular broken edges, sparse lumpy silver-white highlights, uneven gray-green clusters and tiny original accent colors. Do not add detail finer than existing pixel squares. Only change a handful of small flat vent/plate/brace pixels between levels6–10; retain95% of original. No stylistic redesign, no thick dark outline, no polished 3D bevel, no smooth cylindrical shading, no increase in barrel thickness, no additional body bulk. No labels/background/shadow. All5same dimensions. Two parallel thin missile launchers face RIGHT, tiny plain silver bearing between them. Preserve angular skeletal launch cages and slim silver missile noses. Visible aspect52:43.",
+    "prior_generation": {
+      "family": "missile",
+      "prompt": "Use the attached ORIGINAL raster as the pixel-grid source. It is an 8x nearest-neighbor enlargement; each large square is one original pixel. Create FIVE minimally edited copies in one horizontal row, equal size, clear transparent gutters. Preserve the exact silhouette, irregular broken edges, sparse lumpy silver-white highlights, uneven gray-green clusters and tiny original accent colors. Do not add detail finer than existing pixel squares. Only change a handful of small flat vent/plate/brace pixels between levels6–10; retain95% of original. No stylistic redesign, no thick dark outline, no polished 3D bevel, no smooth cylindrical shading, no increase in barrel thickness, no additional body bulk. No labels/background/shadow. All5same dimensions. Two parallel thin missile launchers face RIGHT, tiny plain silver bearing between them. Preserve angular skeletal launch cages and slim silver missile noses. Visible aspect52:43.",
+      "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-2a321bb1-6588-42e7-8639-121dc3d5923e.png"
+    },
+    "tool": "built-in image_gen",
+    "workspace_file": "missile.png",
+    "original_reference": "review/measurements.json"
+  },
+  {
+    "family": "vulcan",
+    "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-c2f658c1-df08-4f30-83bd-c4825bd6635b.png",
+    "stage": 4,
+    "prompt": "Remove ONLY the unwanted white/gray/colored halo and stray background pixels surrounding these five mechanical game sprites. Keep every part of the five sprites and their pixel-art texture, shape, positions, proportions, colors, highlights and details unchanged. The entire space outside the actual mechanical silhouettes and between them must have zero alpha, completely transparent. No white matting, feathering, glowing edge, colored specks or drop shadow. Preserve silver/white areas that are part of the metal itself, the central mechanical bearing, tubes and braces. Do not redraw or stylize the foreground. Return same five separate sprites in same row, transparent background.",
+    "prior_generation": {
+      "family": "vulcan",
+      "prompt": "Use the attached ORIGINAL raster as the pixel-grid source. It is an 8x nearest-neighbor enlargement; each large square is one original pixel. Create FIVE minimally edited copies in one horizontal row, equal size, clear transparent gutters. Preserve the exact silhouette, irregular broken edges, sparse lumpy silver-white highlights, uneven gray-green clusters and tiny original accent colors. Do not add detail finer than existing pixel squares. Only change a handful of small flat vent/plate/brace pixels between levels6–10; retain95% of original. No stylistic redesign, no thick dark outline, no polished 3D bevel, no smooth cylindrical shading, no increase in barrel thickness, no additional body bulk. No labels/background/shadow. All5same dimensions. Two parallel slim rotary weapon units point RIGHT. Original small BLUE patches, bright white armor flecks, little plain silver bearing between them. Visible aspect60:43. No green/yellow replacement accents.",
+      "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-2f3b03be-0f8c-4d1a-a1b5-3be07788206b.png"
+    },
+    "tool": "built-in image_gen",
+    "workspace_file": "vulcan.png",
+    "original_reference": "review/measurements.json"
+  },
+  {
+    "family": "ion",
+    "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-c07632a1-833d-4cdd-bc0d-be5d395b7a69.png",
+    "stage": 5,
+    "prompt": "Edit the supplied five ion turret sprites. Remove only the yellow white and green fringes OUTSIDE the metal silhouette. Make all empty area fully transparent (alpha 0). Keep each gun, its silver olive metal colors, coarse uneven pixel clusters and thin barrel unchanged. No smoke, no painted background, no shadows around the objects. Five separated sprites in one horizontal row, exactly the same positions and sizes as input. Do not add any new marks. This is transparent background cleanup only.",
+    "prior_generation": {
+      "family": "ion",
+      "prompt": "Use the attached ORIGINAL raster as the pixel-grid source. It is an 8x nearest-neighbor enlargement; each large square is one original pixel. Create FIVE minimally edited copies in one horizontal row, equal size, clear transparent gutters. Preserve the exact silhouette, irregular broken edges, sparse lumpy silver-white highlights, uneven gray-green clusters and tiny original accent colors. Do not add detail finer than existing pixel squares. Only change a handful of small flat vent/plate/brace pixels between levels6–10; retain95% of original. No stylistic redesign, no thick dark outline, no polished 3D bevel, no smooth cylindrical shading, no increase in barrel thickness, no additional body bulk. No labels/background/shadow. All5same dimensions. Single low, long silver ion gun pointing RIGHT, small yellow-banded side canisters. Visible aspect ratio69:26. Preserve original flat bright silver block pixels and skinny barrel, no blue.",
+      "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-6c5bfa23-b44f-4559-9d52-8060db8f6152.png"
+    },
+    "tool": "built-in image_gen",
+    "workspace_file": "ion.png",
+    "original_reference": "review/measurements.json"
+  },
+  {
+    "family": "laser",
+    "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-7caa8368-be1e-4359-892a-3d203affd863.png",
+    "stage": 4,
+    "prompt": "Remove ONLY the unwanted white/gray/colored halo and stray background pixels surrounding these five mechanical game sprites. Keep every part of the five sprites and their pixel-art texture, shape, positions, proportions, colors, highlights and details unchanged. The entire space outside the actual mechanical silhouettes and between them must have zero alpha, completely transparent. No white matting, feathering, glowing edge, colored specks or drop shadow. Preserve silver/white areas that are part of the metal itself, the central mechanical bearing, tubes and braces. Do not redraw or stylize the foreground. Return same five separate sprites in same row, transparent background.",
+    "prior_generation": {
+      "family": "laser",
+      "prompt": "Use the attached ORIGINAL raster as the pixel-grid source. It is an 8x nearest-neighbor enlargement; each large square is one original pixel. Create FIVE minimally edited copies in one horizontal row, equal size, clear transparent gutters. Preserve the exact silhouette, irregular broken edges, sparse lumpy silver-white highlights, uneven gray-green clusters and tiny original accent colors. Do not add detail finer than existing pixel squares. Only change a handful of small flat vent/plate/brace pixels between levels6–10; retain95% of original. No stylistic redesign, no thick dark outline, no polished 3D bevel, no smooth cylindrical shading, no increase in barrel thickness, no additional body bulk. No labels/background/shadow. All5same dimensions. Two parallel long skinny laser assemblies pointing RIGHT, small pale blue accents on left and plain silver bearing between assemblies. Visible aspect95:61. Preserve the very thin parallel muzzle prongs and lighter original metal.",
+      "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-dbb84b68-ab33-40ae-a077-ea7c7587f54b.png"
+    },
+    "tool": "built-in image_gen",
+    "workspace_file": "laser.png",
+    "original_reference": "review/measurements.json"
+  },
+  {
+    "family": "plasma",
+    "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-06cc435b-a25b-443b-b567-185371142432.png",
+    "stage": 3,
+    "prompt": "Use the attached ORIGINAL raster as the pixel-grid source. It is an 8x nearest-neighbor enlargement; each large square is one original pixel. Create FIVE minimally edited copies in one horizontal row, equal size, clear transparent gutters. Preserve the exact silhouette, irregular broken edges, sparse lumpy silver-white highlights, uneven gray-green clusters and tiny original accent colors. Do not add detail finer than existing pixel squares. Only change a handful of small flat vent/plate/brace pixels between levels6–10; retain95% of original. No stylistic redesign, no thick dark outline, no polished 3D bevel, no smooth cylindrical shading, no increase in barrel thickness, no additional body bulk. No labels/background/shadow. All5same dimensions. Two parallel plasma guns pointing RIGHT. Preserve the original irregular white/silver pixels, thin green vertical bands, gray tube ends. Visible aspect77:40. No vivid neon glow.",
+    "prior_generation": {
+      "family": "plasma",
+      "prompt": "Use the attached ORIGINAL raster as the pixel-grid source. It is an 8x nearest-neighbor enlargement; each large square is one original pixel. Create FIVE minimally edited copies in one horizontal row, equal size, clear transparent gutters. Preserve the exact silhouette, irregular broken edges, sparse lumpy silver-white highlights, uneven gray-green clusters and tiny original accent colors. Do not add detail finer than existing pixel squares. Only change a handful of small flat vent/plate/brace pixels between levels6–10; retain95% of original. No stylistic redesign, no thick dark outline, no polished 3D bevel, no smooth cylindrical shading, no increase in barrel thickness, no additional body bulk. No labels/background/shadow. All5same dimensions. Two parallel plasma guns pointing RIGHT. Preserve the original irregular white/silver pixels, thin green vertical bands, gray tube ends. Visible aspect77:40. No vivid neon glow.",
+      "source": "/Users/sokol/.codex/generated_images/01a16cd5-17c4-7ef0-b6fb-87f0ac64e260/exec-06cc435b-a25b-443b-b567-185371142432.png"
+    },
+    "tool": "built-in image_gen",
+    "workspace_file": "plasma.png",
+    "original_reference": "review/measurements.json"
+  }
+]

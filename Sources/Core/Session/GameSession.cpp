@@ -77,6 +77,7 @@ struct GameSession::State {
             char image[32];std::snprintf(image,sizeof image,"Icon%05d.png",code);
             auto [it,inserted]=originalIcons.try_emplace(icon,image);attackIcons.emplace(code,it->second);
         }
+        menu.setProfilePreparation([this](std::size_t selected){settlement.grantCampaignUnlock(save,selected,save.stage(selected));});
         messageOK.bounds={128,279,64,32};if(validation){validationTools=std::make_unique<ValidationTools>(r);validationPanel=std::make_unique<ValidationPanel>(r);}rebuild();
     }
     std::string attackIcon(int itemId)const{return attackIcons.at(itemId);}

@@ -1,1300 +1,950 @@
 {
   "generator": "tools/pack_level10_art.py",
-  "filter": "Lanczos, uniform scale then integer pixel rounding",
+  "filter": "Turrets: byte copy; base sheets: Lanczos, uniform scale then integer pixel rounding",
   "images": [
     {
       "output": "Resources/Images/Turret_b_06.png",
-      "sha256": "4358d88a26bacd35249035314edbd740ea3a2669f589ec2b6c87e56fdfc61c74",
+      "sha256": "8702f71b25bf109a9736e4ba634e1d9f25ce8e778638217d7c4cdb5b1afb5289",
       "original": "Resources/Images/Turret_b_05.png",
       "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
-      "source": "Art/Level10/20261107/body-geometry-v2.png",
-      "source_sha256": "62b7136172a88f156546f976f57da7212bb9aa738661b34be2d554c1b9dd8397",
-      "source_rect": [
-        28,
-        151,
-        372,
-        433
-      ],
-      "uniform_scale": 0.13856812933025403,
-      "raster_size": [
-        52,
-        60
-      ],
-      "offset": [
-        4,
-        2
-      ],
+      "source": "Art/Level10/20261107/design-v5/review/body-6.png",
+      "source_sha256": "8702f71b25bf109a9736e4ba634e1d9f25ce8e778638217d7c4cdb5b1afb5289",
+      "operation": "byte-copy-approved-body",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        52,
-        60
       ],
       "visible_bbox": [
         4,
         2,
         56,
         62
+      ],
+      "raster_size": [
+        52,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
       ]
     },
     {
       "output": "Resources/Images/Turret_b_07.png",
-      "sha256": "85214886d3c8cc173e022549c7be5df6721e2c04b8e46141889657502add3770",
+      "sha256": "d7a933b43afc6b1184bff5519f775c11299c88043072256a7af657c960a2b3b7",
       "original": "Resources/Images/Turret_b_05.png",
       "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
-      "source": "Art/Level10/20261107/body-geometry-v2.png",
-      "source_sha256": "62b7136172a88f156546f976f57da7212bb9aa738661b34be2d554c1b9dd8397",
-      "source_rect": [
-        442,
-        154,
-        370,
-        430
-      ],
-      "uniform_scale": 0.13953488372093023,
-      "raster_size": [
-        52,
-        60
-      ],
-      "offset": [
-        4,
-        2
-      ],
+      "source": "Art/Level10/20261107/design-v5/review/body-7.png",
+      "source_sha256": "d7a933b43afc6b1184bff5519f775c11299c88043072256a7af657c960a2b3b7",
+      "operation": "byte-copy-approved-body",
       "canvas": [
         64,
         64
       ],
-      "original_visible_size": [
-        52,
-        60
-      ],
       "visible_bbox": [
         4,
         2,
-        56,
+        57,
         62
+      ],
+      "raster_size": [
+        53,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
       ]
     },
     {
       "output": "Resources/Images/Turret_b_08.png",
-      "sha256": "e6d2b60272ec6017c4fb287bc97027965a033b2776b9304f4a105a7845e2199b",
+      "sha256": "0e2dca9fd373645acef7e238cd2d077e1f291ac7353cddc8930e71b27f71aeef",
       "original": "Resources/Images/Turret_b_05.png",
       "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
-      "source": "Art/Level10/20261107/body-geometry-v2.png",
-      "source_sha256": "62b7136172a88f156546f976f57da7212bb9aa738661b34be2d554c1b9dd8397",
-      "source_rect": [
-        854,
-        154,
-        371,
-        430
-      ],
-      "uniform_scale": 0.13953488372093023,
-      "raster_size": [
-        52,
-        60
-      ],
-      "offset": [
-        4,
-        2
-      ],
+      "source": "Art/Level10/20261107/design-v5/review/body-8.png",
+      "source_sha256": "0e2dca9fd373645acef7e238cd2d077e1f291ac7353cddc8930e71b27f71aeef",
+      "operation": "byte-copy-approved-body",
       "canvas": [
         64,
         64
       ],
+      "visible_bbox": [
+        3,
+        2,
+        57,
+        62
+      ],
+      "raster_size": [
+        54,
+        60
+      ],
       "original_visible_size": [
         52,
         60
-      ],
-      "visible_bbox": [
-        4,
-        2,
-        56,
-        62
       ]
     },
     {
       "output": "Resources/Images/Turret_b_09.png",
-      "sha256": "3eb76dc7deb40ccb64b0eeda3052a93b8deaa5bf54b45da88b32f3a5eb6116ce",
+      "sha256": "c6a22c03f51736db47296a81e3f5ce4ce2f66dd6c1a409b18e802f82da076681",
       "original": "Resources/Images/Turret_b_05.png",
       "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
-      "source": "Art/Level10/20261107/body-geometry-v2.png",
-      "source_sha256": "62b7136172a88f156546f976f57da7212bb9aa738661b34be2d554c1b9dd8397",
-      "source_rect": [
-        1267,
-        154,
-        371,
-        430
-      ],
-      "uniform_scale": 0.13953488372093023,
-      "raster_size": [
-        52,
-        60
-      ],
-      "offset": [
-        4,
-        2
-      ],
+      "source": "Art/Level10/20261107/design-v5/review/body-9.png",
+      "source_sha256": "c6a22c03f51736db47296a81e3f5ce4ce2f66dd6c1a409b18e802f82da076681",
+      "operation": "byte-copy-approved-body",
       "canvas": [
         64,
         64
       ],
+      "visible_bbox": [
+        2,
+        2,
+        57,
+        62
+      ],
+      "raster_size": [
+        55,
+        60
+      ],
       "original_visible_size": [
         52,
         60
-      ],
-      "visible_bbox": [
-        4,
-        2,
-        56,
-        62
       ]
     },
     {
       "output": "Resources/Images/Turret_b_10.png",
-      "sha256": "a034ddea91b3c5feb32448051f8f188d4703e793fc92a126ab4602bc17c48915",
+      "sha256": "a06be0c44b64c8abd26f46b198c111217b26ee70386ceac9d8bb661e3a663923",
       "original": "Resources/Images/Turret_b_05.png",
       "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
-      "source": "Art/Level10/20261107/body-geometry-v2.png",
-      "source_sha256": "62b7136172a88f156546f976f57da7212bb9aa738661b34be2d554c1b9dd8397",
-      "source_rect": [
-        1680,
-        151,
-        371,
-        433
-      ],
-      "uniform_scale": 0.13856812933025403,
-      "raster_size": [
-        51,
-        60
-      ],
-      "offset": [
-        4,
-        2
-      ],
+      "source": "Art/Level10/20261107/design-v5/review/body-10.png",
+      "source_sha256": "a06be0c44b64c8abd26f46b198c111217b26ee70386ceac9d8bb661e3a663923",
+      "operation": "byte-copy-approved-body",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        52,
-        60
       ],
       "visible_bbox": [
         4,
         2,
-        55,
+        57,
         62
+      ],
+      "raster_size": [
+        53,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
       ]
     },
     {
       "output": "Resources/Images/Turret_gun_06.png",
-      "sha256": "1c19e85a909ec1a7344318d7be21e05e8b14c3f882143ec457d28cb1f392678c",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
       "original": "Resources/Images/Turret_gun_05.png",
       "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
-      "source": "Art/Level10/20261107/rifle-geometry-v2.png",
-      "source_sha256": "2950f800bbc8600dbb7ad3fb56eaf57efc5524346a937f960212486faade9597",
-      "source_rect": [
-        21,
-        242,
-        374,
-        259
-      ],
-      "uniform_scale": 0.16310160427807488,
-      "raster_size": [
-        61,
-        42
-      ],
-      "offset": [
-        1,
-        10
-      ],
+      "source": "Resources/Images/Turret_gun_05.png",
+      "source_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        61,
-        43
       ],
       "visible_bbox": [
         1,
         10,
         62,
-        52
+        53
+      ],
+      "raster_size": [
+        61,
+        43
+      ],
+      "original_visible_size": [
+        61,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_gun_07.png",
-      "sha256": "e18863834e7902a924bd127d06fd040ab91f7eccf06e5d4f466100b54c001cd9",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
       "original": "Resources/Images/Turret_gun_05.png",
       "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
-      "source": "Art/Level10/20261107/rifle-geometry-v2.png",
-      "source_sha256": "2950f800bbc8600dbb7ad3fb56eaf57efc5524346a937f960212486faade9597",
-      "source_rect": [
-        451,
-        239,
-        378,
-        261
-      ],
-      "uniform_scale": 0.16137566137566137,
-      "raster_size": [
-        61,
-        42
-      ],
-      "offset": [
-        1,
-        10
-      ],
+      "source": "Resources/Images/Turret_gun_05.png",
+      "source_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        61,
-        43
       ],
       "visible_bbox": [
         1,
         10,
         62,
-        52
+        53
+      ],
+      "raster_size": [
+        61,
+        43
+      ],
+      "original_visible_size": [
+        61,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_gun_08.png",
-      "sha256": "edc791838136f554f2cdf923535717ab6c6855d98aa680561f04be8ebdd6b65b",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
       "original": "Resources/Images/Turret_gun_05.png",
       "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
-      "source": "Art/Level10/20261107/rifle-geometry-v2.png",
-      "source_sha256": "2950f800bbc8600dbb7ad3fb56eaf57efc5524346a937f960212486faade9597",
-      "source_rect": [
-        884,
-        240,
-        377,
-        260
-      ],
-      "uniform_scale": 0.16180371352785147,
-      "raster_size": [
-        61,
-        42
-      ],
-      "offset": [
-        1,
-        10
-      ],
+      "source": "Resources/Images/Turret_gun_05.png",
+      "source_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        61,
-        43
       ],
       "visible_bbox": [
         1,
         10,
         62,
-        52
+        53
+      ],
+      "raster_size": [
+        61,
+        43
+      ],
+      "original_visible_size": [
+        61,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_gun_09.png",
-      "sha256": "c289d73f966da92f924b791b635493a0226b3873e32bdf2a5c63988880aa893a",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
       "original": "Resources/Images/Turret_gun_05.png",
       "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
-      "source": "Art/Level10/20261107/rifle-geometry-v2.png",
-      "source_sha256": "2950f800bbc8600dbb7ad3fb56eaf57efc5524346a937f960212486faade9597",
-      "source_rect": [
-        1314,
-        237,
-        377,
-        266
-      ],
-      "uniform_scale": 0.16180371352785147,
-      "raster_size": [
-        61,
-        43
-      ],
-      "offset": [
-        1,
-        10
-      ],
+      "source": "Resources/Images/Turret_gun_05.png",
+      "source_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        61,
-        43
       ],
       "visible_bbox": [
         1,
         10,
         62,
         53
+      ],
+      "raster_size": [
+        61,
+        43
+      ],
+      "original_visible_size": [
+        61,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_gun_10.png",
-      "sha256": "0ce420a57f17fac8b5b103c2806e8dd0c5091a6499b0b900086125b751110103",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
       "original": "Resources/Images/Turret_gun_05.png",
       "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
-      "source": "Art/Level10/20261107/rifle-geometry-v2.png",
-      "source_sha256": "2950f800bbc8600dbb7ad3fb56eaf57efc5524346a937f960212486faade9597",
-      "source_rect": [
-        1746,
-        237,
-        378,
-        266
-      ],
-      "uniform_scale": 0.16137566137566137,
-      "raster_size": [
-        61,
-        43
-      ],
-      "offset": [
-        1,
-        10
-      ],
+      "source": "Resources/Images/Turret_gun_05.png",
+      "source_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        61,
-        43
       ],
       "visible_bbox": [
         1,
         10,
         62,
         53
+      ],
+      "raster_size": [
+        61,
+        43
+      ],
+      "original_visible_size": [
+        61,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_msl_06.png",
-      "sha256": "151684d3f94f15ec119b1d717e1fdbaeaf63098d155f156e185c55107ae2547c",
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
       "original": "Resources/Images/Turret_msl_05.png",
       "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
-      "source": "Art/Level10/20261107/missile-geometry-v2.png",
-      "source_sha256": "2d4a264bad2685886ea6f15e9bdbfb6f7ea7c03864b69cbc6641223681442081",
-      "source_rect": [
-        53,
-        227,
-        352,
-        295
-      ],
-      "uniform_scale": 0.14772727272727273,
-      "raster_size": [
-        52,
-        44
-      ],
-      "offset": [
-        9,
-        10
-      ],
+      "source": "Resources/Images/Turret_msl_05.png",
+      "source_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        52,
-        43
       ],
       "visible_bbox": [
         9,
         10,
         61,
-        54
+        53
+      ],
+      "raster_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_msl_07.png",
-      "sha256": "e0a3776f540bac2dae1757750625257e34d21cb2926c399f8fa01b3d82686690",
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
       "original": "Resources/Images/Turret_msl_05.png",
       "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
-      "source": "Art/Level10/20261107/missile-geometry-v2.png",
-      "source_sha256": "2d4a264bad2685886ea6f15e9bdbfb6f7ea7c03864b69cbc6641223681442081",
-      "source_rect": [
-        473,
-        222,
-        353,
-        300
-      ],
-      "uniform_scale": 0.14730878186968838,
-      "raster_size": [
-        52,
-        44
-      ],
-      "offset": [
-        9,
-        10
-      ],
+      "source": "Resources/Images/Turret_msl_05.png",
+      "source_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        52,
-        43
       ],
       "visible_bbox": [
         9,
         10,
         61,
-        54
+        53
+      ],
+      "raster_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_msl_08.png",
-      "sha256": "38165aedfb4e0c42ab5ddfef51d0bd6b1ac6ca0b16c9086249cfaedd814e10bd",
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
       "original": "Resources/Images/Turret_msl_05.png",
       "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
-      "source": "Art/Level10/20261107/missile-geometry-v2.png",
-      "source_sha256": "2d4a264bad2685886ea6f15e9bdbfb6f7ea7c03864b69cbc6641223681442081",
-      "source_rect": [
-        893,
-        222,
-        353,
-        300
-      ],
-      "uniform_scale": 0.14730878186968838,
-      "raster_size": [
-        52,
-        44
-      ],
-      "offset": [
-        9,
-        10
-      ],
+      "source": "Resources/Images/Turret_msl_05.png",
+      "source_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        52,
-        43
       ],
       "visible_bbox": [
         9,
         10,
         61,
-        54
+        53
+      ],
+      "raster_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_msl_09.png",
-      "sha256": "ff7516de1496319d30b0d240b030bc7dd4efa5067ec374a9a3526589eda98a36",
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
       "original": "Resources/Images/Turret_msl_05.png",
       "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
-      "source": "Art/Level10/20261107/missile-geometry-v2.png",
-      "source_sha256": "2d4a264bad2685886ea6f15e9bdbfb6f7ea7c03864b69cbc6641223681442081",
-      "source_rect": [
-        1312,
-        222,
-        355,
-        300
-      ],
-      "uniform_scale": 0.14647887323943662,
-      "raster_size": [
-        52,
-        44
-      ],
-      "offset": [
-        9,
-        10
-      ],
+      "source": "Resources/Images/Turret_msl_05.png",
+      "source_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        52,
-        43
       ],
       "visible_bbox": [
         9,
         10,
         61,
-        54
+        53
+      ],
+      "raster_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_msl_10.png",
-      "sha256": "16fa8a558c646f95ac360ea77a7a02fea639eb636785074b8336467866548c9c",
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
       "original": "Resources/Images/Turret_msl_05.png",
       "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
-      "source": "Art/Level10/20261107/missile-geometry-v2.png",
-      "source_sha256": "2d4a264bad2685886ea6f15e9bdbfb6f7ea7c03864b69cbc6641223681442081",
-      "source_rect": [
-        1734,
-        220,
-        354,
-        302
-      ],
-      "uniform_scale": 0.14689265536723164,
-      "raster_size": [
-        52,
-        44
-      ],
-      "offset": [
-        9,
-        10
-      ],
+      "source": "Resources/Images/Turret_msl_05.png",
+      "source_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         64,
         64
-      ],
-      "original_visible_size": [
-        52,
-        43
       ],
       "visible_bbox": [
         9,
         10,
         61,
-        54
+        53
+      ],
+      "raster_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_mg_06.png",
-      "sha256": "03cced65794ed8b65e1b855751b7562e4e42acaf7b495902077bd04dab830b0e",
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
       "original": "Resources/Images/Turret_mg_05.png",
       "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
-      "source": "Art/Level10/20261107/vulcan-geometry-v4.png",
-      "source_sha256": "00a2deeab04a0d36a01125b32f982a8625a03bc8c52cb6ba36a3f1cb81ea7a25",
-      "source_rect": [
-        54,
-        239,
-        351,
-        248
-      ],
-      "uniform_scale": 0.17094017094017094,
-      "raster_size": [
-        60,
-        42
-      ],
-      "offset": [
-        40,
-        10
-      ],
+      "source": "Resources/Images/Turret_mg_05.png",
+      "source_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
-      ],
-      "original_visible_size": [
-        60,
-        43
       ],
       "visible_bbox": [
         40,
         10,
         100,
-        52
+        53
+      ],
+      "raster_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_mg_07.png",
-      "sha256": "e0231abc749c5dc3598efaa5e42cd1fdfaa148a57e0aad0e54166b692351f60b",
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
       "original": "Resources/Images/Turret_mg_05.png",
       "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
-      "source": "Art/Level10/20261107/vulcan-geometry-v4.png",
-      "source_sha256": "00a2deeab04a0d36a01125b32f982a8625a03bc8c52cb6ba36a3f1cb81ea7a25",
-      "source_rect": [
-        486,
-        239,
-        351,
-        248
-      ],
-      "uniform_scale": 0.17094017094017094,
-      "raster_size": [
-        60,
-        42
-      ],
-      "offset": [
-        40,
-        10
-      ],
+      "source": "Resources/Images/Turret_mg_05.png",
+      "source_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
-      ],
-      "original_visible_size": [
-        60,
-        43
       ],
       "visible_bbox": [
         40,
         10,
         100,
-        52
+        53
+      ],
+      "raster_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_mg_08.png",
-      "sha256": "8c312faad1662fe2b6909060c916e24c10b4c7b0115852687346ea2360011b17",
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
       "original": "Resources/Images/Turret_mg_05.png",
       "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
-      "source": "Art/Level10/20261107/vulcan-geometry-v4.png",
-      "source_sha256": "00a2deeab04a0d36a01125b32f982a8625a03bc8c52cb6ba36a3f1cb81ea7a25",
-      "source_rect": [
-        918,
-        239,
-        351,
-        248
-      ],
-      "uniform_scale": 0.17094017094017094,
-      "raster_size": [
-        60,
-        42
-      ],
-      "offset": [
-        40,
-        10
-      ],
+      "source": "Resources/Images/Turret_mg_05.png",
+      "source_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
-      ],
-      "original_visible_size": [
-        60,
-        43
       ],
       "visible_bbox": [
         40,
         10,
         100,
-        52
+        53
+      ],
+      "raster_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_mg_09.png",
-      "sha256": "8bb9146ec3845f980705eb7208680f30a21aa59088fe05672818c074ab9b5625",
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
       "original": "Resources/Images/Turret_mg_05.png",
       "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
-      "source": "Art/Level10/20261107/vulcan-geometry-v4.png",
-      "source_sha256": "00a2deeab04a0d36a01125b32f982a8625a03bc8c52cb6ba36a3f1cb81ea7a25",
-      "source_rect": [
-        1351,
-        239,
-        351,
-        248
-      ],
-      "uniform_scale": 0.17094017094017094,
-      "raster_size": [
-        60,
-        42
-      ],
-      "offset": [
-        40,
-        10
-      ],
+      "source": "Resources/Images/Turret_mg_05.png",
+      "source_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
-      ],
-      "original_visible_size": [
-        60,
-        43
       ],
       "visible_bbox": [
         40,
         10,
         100,
-        52
+        53
+      ],
+      "raster_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_mg_10.png",
-      "sha256": "634b8637e9da2f79b38f5538e11c08f865c77818e3d10e6d203ebde40aab75b4",
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
       "original": "Resources/Images/Turret_mg_05.png",
       "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
-      "source": "Art/Level10/20261107/vulcan-geometry-v4.png",
-      "source_sha256": "00a2deeab04a0d36a01125b32f982a8625a03bc8c52cb6ba36a3f1cb81ea7a25",
-      "source_rect": [
-        1783,
-        239,
-        351,
-        248
-      ],
-      "uniform_scale": 0.17094017094017094,
-      "raster_size": [
-        60,
-        42
-      ],
-      "offset": [
-        40,
-        10
-      ],
+      "source": "Resources/Images/Turret_mg_05.png",
+      "source_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
-      ],
-      "original_visible_size": [
-        60,
-        43
       ],
       "visible_bbox": [
         40,
         10,
         100,
-        52
+        53
+      ],
+      "raster_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
       ]
     },
     {
       "output": "Resources/Images/Turret_ion_06.png",
-      "sha256": "3d92676015b66292294076d6816cd03342da649e0662015e1df20fcaefbf07e9",
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
       "original": "Resources/Images/Turret_ion_05.png",
       "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
-      "source": "Art/Level10/20261107/ion-geometry-v3.png",
-      "source_sha256": "30d7bcf21346932a3746e8747713f522bf83f0b878a7b5414fd30de291d7c8bf",
-      "source_rect": [
-        31,
-        277,
-        396,
-        158
-      ],
-      "uniform_scale": 0.17424242424242425,
-      "raster_size": [
-        69,
-        28
-      ],
-      "offset": [
-        41,
-        17
-      ],
+      "source": "Resources/Images/Turret_ion_05.png",
+      "source_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
       ],
-      "original_visible_size": [
+      "visible_bbox": [
+        41,
+        18,
+        110,
+        44
+      ],
+      "raster_size": [
         69,
         26
       ],
-      "visible_bbox": [
-        41,
-        17,
-        110,
-        45
+      "original_visible_size": [
+        69,
+        26
       ]
     },
     {
       "output": "Resources/Images/Turret_ion_07.png",
-      "sha256": "2d334598c31821525e6cf23e94ea57e06b6a05e54ef9074c34f4c553d81012e9",
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
       "original": "Resources/Images/Turret_ion_05.png",
       "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
-      "source": "Art/Level10/20261107/ion-geometry-v3.png",
-      "source_sha256": "30d7bcf21346932a3746e8747713f522bf83f0b878a7b5414fd30de291d7c8bf",
-      "source_rect": [
-        459,
-        277,
-        395,
-        160
-      ],
-      "uniform_scale": 0.17468354430379746,
-      "raster_size": [
-        69,
-        28
-      ],
-      "offset": [
-        41,
-        17
-      ],
+      "source": "Resources/Images/Turret_ion_05.png",
+      "source_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
       ],
-      "original_visible_size": [
+      "visible_bbox": [
+        41,
+        18,
+        110,
+        44
+      ],
+      "raster_size": [
         69,
         26
       ],
-      "visible_bbox": [
-        41,
-        17,
-        110,
-        45
+      "original_visible_size": [
+        69,
+        26
       ]
     },
     {
       "output": "Resources/Images/Turret_ion_08.png",
-      "sha256": "77cd106c90c05740162d190a505ee34631b291242e6bb91e7f0e34bfb97e9e8f",
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
       "original": "Resources/Images/Turret_ion_05.png",
       "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
-      "source": "Art/Level10/20261107/ion-geometry-v3.png",
-      "source_sha256": "30d7bcf21346932a3746e8747713f522bf83f0b878a7b5414fd30de291d7c8bf",
-      "source_rect": [
-        886,
-        276,
-        399,
-        161
-      ],
-      "uniform_scale": 0.17293233082706766,
-      "raster_size": [
-        69,
-        28
-      ],
-      "offset": [
-        41,
-        17
-      ],
+      "source": "Resources/Images/Turret_ion_05.png",
+      "source_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
       ],
-      "original_visible_size": [
+      "visible_bbox": [
+        41,
+        18,
+        110,
+        44
+      ],
+      "raster_size": [
         69,
         26
       ],
-      "visible_bbox": [
-        41,
-        17,
-        110,
-        45
+      "original_visible_size": [
+        69,
+        26
       ]
     },
     {
       "output": "Resources/Images/Turret_ion_09.png",
-      "sha256": "fb3de18ea6ced725effc1a03bd836d750667df4e355e06ec0a21bb9e83d7103f",
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
       "original": "Resources/Images/Turret_ion_05.png",
       "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
-      "source": "Art/Level10/20261107/ion-geometry-v3.png",
-      "source_sha256": "30d7bcf21346932a3746e8747713f522bf83f0b878a7b5414fd30de291d7c8bf",
-      "source_rect": [
-        1317,
-        277,
-        395,
-        160
-      ],
-      "uniform_scale": 0.17468354430379746,
-      "raster_size": [
-        69,
-        28
-      ],
-      "offset": [
-        41,
-        17
-      ],
+      "source": "Resources/Images/Turret_ion_05.png",
+      "source_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
       ],
-      "original_visible_size": [
+      "visible_bbox": [
+        41,
+        18,
+        110,
+        44
+      ],
+      "raster_size": [
         69,
         26
       ],
-      "visible_bbox": [
-        41,
-        17,
-        110,
-        45
+      "original_visible_size": [
+        69,
+        26
       ]
     },
     {
       "output": "Resources/Images/Turret_ion_10.png",
-      "sha256": "1ef308103621a09adbae1a3c4e1eb8ce9e356fb928cff110da9653c467abde45",
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
       "original": "Resources/Images/Turret_ion_05.png",
       "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
-      "source": "Art/Level10/20261107/ion-geometry-v3.png",
-      "source_sha256": "30d7bcf21346932a3746e8747713f522bf83f0b878a7b5414fd30de291d7c8bf",
-      "source_rect": [
-        1747,
-        277,
-        396,
-        160
-      ],
-      "uniform_scale": 0.17424242424242425,
-      "raster_size": [
-        69,
-        28
-      ],
-      "offset": [
-        41,
-        17
-      ],
+      "source": "Resources/Images/Turret_ion_05.png",
+      "source_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
+      ],
+      "visible_bbox": [
+        41,
+        18,
+        110,
+        44
+      ],
+      "raster_size": [
+        69,
+        26
       ],
       "original_visible_size": [
         69,
         26
-      ],
-      "visible_bbox": [
-        41,
-        17,
-        110,
-        45
       ]
     },
     {
       "output": "Resources/Images/Turret_lsr_06.png",
-      "sha256": "9250a0863ea7adf445ef8c2f7edc5c42377efc4483a4fdea8d9b07e1206c9a31",
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
       "original": "Resources/Images/Turret_lsr_05.png",
       "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
-      "source": "Art/Level10/20261107/laser-geometry-v3.png",
-      "source_sha256": "d2f387132730ed5397f4bf9553c70f6c02e8049e899afef8daed8a70517f943b",
-      "source_rect": [
-        35,
-        238,
-        374,
-        231
-      ],
-      "uniform_scale": 0.2540106951871658,
-      "raster_size": [
-        95,
-        59
-      ],
-      "offset": [
-        24,
-        35
-      ],
+      "source": "Resources/Images/Turret_lsr_05.png",
+      "source_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         128
       ],
-      "original_visible_size": [
+      "visible_bbox": [
+        24,
+        34,
+        119,
+        95
+      ],
+      "raster_size": [
         95,
         61
       ],
-      "visible_bbox": [
-        24,
-        35,
-        119,
-        94
+      "original_visible_size": [
+        95,
+        61
       ]
     },
     {
       "output": "Resources/Images/Turret_lsr_07.png",
-      "sha256": "e08e6165703023e779d167e468a53260f4fc00ef9d8c6ce30406389f2e4bfcb2",
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
       "original": "Resources/Images/Turret_lsr_05.png",
       "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
-      "source": "Art/Level10/20261107/laser-geometry-v3.png",
-      "source_sha256": "d2f387132730ed5397f4bf9553c70f6c02e8049e899afef8daed8a70517f943b",
-      "source_rect": [
-        468,
-        237,
-        370,
-        232
-      ],
-      "uniform_scale": 0.25675675675675674,
-      "raster_size": [
-        95,
-        60
-      ],
-      "offset": [
-        24,
-        34
-      ],
+      "source": "Resources/Images/Turret_lsr_05.png",
+      "source_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         128
-      ],
-      "original_visible_size": [
-        95,
-        61
       ],
       "visible_bbox": [
         24,
         34,
         119,
-        94
+        95
+      ],
+      "raster_size": [
+        95,
+        61
+      ],
+      "original_visible_size": [
+        95,
+        61
       ]
     },
     {
       "output": "Resources/Images/Turret_lsr_08.png",
-      "sha256": "db8f4de99f13e9dfd6ac17c6c3946a1b5a766969e0d8b87e399575cd2ba81588",
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
       "original": "Resources/Images/Turret_lsr_05.png",
       "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
-      "source": "Art/Level10/20261107/laser-geometry-v3.png",
-      "source_sha256": "d2f387132730ed5397f4bf9553c70f6c02e8049e899afef8daed8a70517f943b",
-      "source_rect": [
-        907,
-        237,
-        372,
-        232
-      ],
-      "uniform_scale": 0.2553763440860215,
-      "raster_size": [
-        95,
-        59
-      ],
-      "offset": [
-        24,
-        35
-      ],
+      "source": "Resources/Images/Turret_lsr_05.png",
+      "source_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         128
       ],
-      "original_visible_size": [
+      "visible_bbox": [
+        24,
+        34,
+        119,
+        95
+      ],
+      "raster_size": [
         95,
         61
       ],
-      "visible_bbox": [
-        24,
-        35,
-        119,
-        94
+      "original_visible_size": [
+        95,
+        61
       ]
     },
     {
       "output": "Resources/Images/Turret_lsr_09.png",
-      "sha256": "b60fa44c7336af7fa22aff53650062502274fa2d3f61af670ef7d5071a5e32fb",
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
       "original": "Resources/Images/Turret_lsr_05.png",
       "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
-      "source": "Art/Level10/20261107/laser-geometry-v3.png",
-      "source_sha256": "d2f387132730ed5397f4bf9553c70f6c02e8049e899afef8daed8a70517f943b",
-      "source_rect": [
-        1335,
-        235,
-        373,
-        236
-      ],
-      "uniform_scale": 0.2546916890080429,
-      "raster_size": [
-        95,
-        60
-      ],
-      "offset": [
-        24,
-        34
-      ],
+      "source": "Resources/Images/Turret_lsr_05.png",
+      "source_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         128
-      ],
-      "original_visible_size": [
-        95,
-        61
       ],
       "visible_bbox": [
         24,
         34,
         119,
-        94
+        95
+      ],
+      "raster_size": [
+        95,
+        61
+      ],
+      "original_visible_size": [
+        95,
+        61
       ]
     },
     {
       "output": "Resources/Images/Turret_lsr_10.png",
-      "sha256": "7e414710731cffc70d9a3b12928fc64f7ee3fa657864770d9d87b41c3fd70e18",
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
       "original": "Resources/Images/Turret_lsr_05.png",
       "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
-      "source": "Art/Level10/20261107/laser-geometry-v3.png",
-      "source_sha256": "d2f387132730ed5397f4bf9553c70f6c02e8049e899afef8daed8a70517f943b",
-      "source_rect": [
-        1775,
-        235,
-        377,
-        237
-      ],
-      "uniform_scale": 0.2519893899204244,
-      "raster_size": [
-        95,
-        60
-      ],
-      "offset": [
-        24,
-        34
-      ],
+      "source": "Resources/Images/Turret_lsr_05.png",
+      "source_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         128
-      ],
-      "original_visible_size": [
-        95,
-        61
       ],
       "visible_bbox": [
         24,
         34,
         119,
-        94
+        95
+      ],
+      "raster_size": [
+        95,
+        61
+      ],
+      "original_visible_size": [
+        95,
+        61
       ]
     },
     {
       "output": "Resources/Images/Turret_pla_06.png",
-      "sha256": "bbf793ba6bc78225161fc06637b2cd87dd3e7e42bc9ecbd0fce893d1f9f8484c",
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
       "original": "Resources/Images/Turret_pla_05.png",
       "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
-      "source": "Art/Level10/20261107/plasma-geometry-v2.png",
-      "source_sha256": "b44e2c6067af4d95452501f14a91b8a58e2abb1fc31f1120a81201b6c894a58d",
-      "source_rect": [
-        36,
-        306,
-        339,
-        181
-      ],
-      "uniform_scale": 0.22713864306784662,
-      "raster_size": [
-        77,
-        41
-      ],
-      "offset": [
-        34,
-        12
-      ],
+      "source": "Resources/Images/Turret_pla_05.png",
+      "source_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
-      ],
-      "original_visible_size": [
-        77,
-        40
       ],
       "visible_bbox": [
         34,
         12,
         111,
-        53
+        52
+      ],
+      "raster_size": [
+        77,
+        40
+      ],
+      "original_visible_size": [
+        77,
+        40
       ]
     },
     {
       "output": "Resources/Images/Turret_pla_07.png",
-      "sha256": "fcaadaa4433589d8f5d7013f134298e5cc0ab01ca09663c424d2279a5c873741",
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
       "original": "Resources/Images/Turret_pla_05.png",
       "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
-      "source": "Art/Level10/20261107/plasma-geometry-v2.png",
-      "source_sha256": "b44e2c6067af4d95452501f14a91b8a58e2abb1fc31f1120a81201b6c894a58d",
-      "source_rect": [
-        430,
-        306,
-        340,
-        180
-      ],
-      "uniform_scale": 0.22647058823529412,
-      "raster_size": [
-        77,
-        41
-      ],
-      "offset": [
-        34,
-        12
-      ],
+      "source": "Resources/Images/Turret_pla_05.png",
+      "source_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
-      ],
-      "original_visible_size": [
-        77,
-        40
       ],
       "visible_bbox": [
         34,
         12,
         111,
-        53
+        52
+      ],
+      "raster_size": [
+        77,
+        40
+      ],
+      "original_visible_size": [
+        77,
+        40
       ]
     },
     {
       "output": "Resources/Images/Turret_pla_08.png",
-      "sha256": "5a724c320f7623d4c437f58ca7bedb9a7e946db0a29c6696d06cc7da50607b20",
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
       "original": "Resources/Images/Turret_pla_05.png",
       "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
-      "source": "Art/Level10/20261107/plasma-geometry-v2.png",
-      "source_sha256": "b44e2c6067af4d95452501f14a91b8a58e2abb1fc31f1120a81201b6c894a58d",
-      "source_rect": [
-        823,
-        306,
-        339,
-        181
-      ],
-      "uniform_scale": 0.22713864306784662,
-      "raster_size": [
-        77,
-        41
-      ],
-      "offset": [
-        34,
-        12
-      ],
+      "source": "Resources/Images/Turret_pla_05.png",
+      "source_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
-      ],
-      "original_visible_size": [
-        77,
-        40
       ],
       "visible_bbox": [
         34,
         12,
         111,
-        53
+        52
+      ],
+      "raster_size": [
+        77,
+        40
+      ],
+      "original_visible_size": [
+        77,
+        40
       ]
     },
     {
       "output": "Resources/Images/Turret_pla_09.png",
-      "sha256": "dcef860c42be276c221728303184c0bc714ee0cd767cad7758854fef75ba83d1",
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
       "original": "Resources/Images/Turret_pla_05.png",
       "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
-      "source": "Art/Level10/20261107/plasma-geometry-v2.png",
-      "source_sha256": "b44e2c6067af4d95452501f14a91b8a58e2abb1fc31f1120a81201b6c894a58d",
-      "source_rect": [
-        1215,
-        306,
-        341,
-        180
-      ],
-      "uniform_scale": 0.22580645161290322,
-      "raster_size": [
-        77,
-        41
-      ],
-      "offset": [
-        34,
-        12
-      ],
+      "source": "Resources/Images/Turret_pla_05.png",
+      "source_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
-      ],
-      "original_visible_size": [
-        77,
-        40
       ],
       "visible_bbox": [
         34,
         12,
         111,
-        53
+        52
+      ],
+      "raster_size": [
+        77,
+        40
+      ],
+      "original_visible_size": [
+        77,
+        40
       ]
     },
     {
       "output": "Resources/Images/Turret_pla_10.png",
-      "sha256": "60e42e9dc35247a16981962066431c2dbd01444e085a14e58060788ca834f0a7",
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
       "original": "Resources/Images/Turret_pla_05.png",
       "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
-      "source": "Art/Level10/20261107/plasma-geometry-v2.png",
-      "source_sha256": "b44e2c6067af4d95452501f14a91b8a58e2abb1fc31f1120a81201b6c894a58d",
-      "source_rect": [
-        1609,
-        306,
-        340,
-        181
-      ],
-      "uniform_scale": 0.22647058823529412,
-      "raster_size": [
-        77,
-        41
-      ],
-      "offset": [
-        34,
-        12
-      ],
+      "source": "Resources/Images/Turret_pla_05.png",
+      "source_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "operation": "byte-copy-original-level5",
       "canvas": [
         128,
         64
-      ],
-      "original_visible_size": [
-        77,
-        40
       ],
       "visible_bbox": [
         34,
         12,
         111,
-        53
+        52
+      ],
+      "raster_size": [
+        77,
+        40
+      ],
+      "original_visible_size": [
+        77,
+        40
       ]
     },
     {

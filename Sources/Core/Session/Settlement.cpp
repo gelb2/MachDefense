@@ -29,15 +29,27 @@ std::string Settlement::addBuild(SaveData& save,std::size_t slot,DarwinRandom& r
     if(total==0)throw std::runtime_error("Empty unit reward distribution");
     const auto pick=rng.next()%total;
     const auto selected=std::find_if(choices.begin(),choices.end(),[&](const auto& c){return pick<c.cumulative;});
-    OwnedBuild added{selected->name,0,std::count_if(owned.begin(),owned.end(),[](const auto& b){return b.onSlot;})<7};
-    const auto* d=definition(added);
+    return awardBuild(save,slot,selected->name)?selected->name:std::string{};
+}
+bool Settlement::awardBuild(SaveData& save,std::size_t slot,std::string_view name)const{
+    auto owned=save.builds(slot);
+    if(owned.size()>=128||std::any_of(owned.begin(),owned.end(),[&](const auto& b){return b.name==name;}))return false;
+    OwnedBuild added{std::string(name),0,std::count_if(owned.begin(),owned.end(),[](const auto& b){return b.onSlot;})<7};
+    const auto* d=definition(added);if(!d)throw std::runtime_error("Unknown campaign reward");
     auto insertion=owned.end();
     for(auto i=owned.begin();i!=owned.end();++i){
         const auto* existing=definition(*i);if(!existing)throw std::runtime_error("Unknown owned unit");
         if(existing->placementType>d->placementType||(existing->placementType==d->placementType&&existing->cost>d->cost)){insertion=i;break;}
     }
-    owned.insert(insertion,added);save.setBuilds(slot,owned);return added.name;
+    owned.insert(insertion,added);save.setBuilds(slot,owned);return true;
 }
+bool Settlement::grantCampaignUnlock(SaveData& save,std::size_t slot,unsigned completedMissions)const{
+    if(!save.active(slot)||completedMissions<laserUnlockMission)return false;
+    const auto owned=save.builds(slot);
+    if(!std::any_of(owned.begin(),owned.end(),[](const auto& b){return b.name=="Vulcan";}))return false;
+    return awardBuild(save,slot,"LaserTurret");
+}
+
 StageReward Settlement::clear(SaveData& save,std::size_t slot,DarwinRandom& rng)const{
     if(!save.active(slot))throw std::invalid_argument("Empty profile");
     const auto at=SaveData::slotStart+slot*SaveData::slotStride;
@@ -48,7 +60,8 @@ StageReward Settlement::clear(SaveData& save,std::size_t slot,DarwinRandom& rng)
     save.writeWord(at+0x3c,save.readWord(at+0x3c)+unsigned(result.credits));
     const auto cleared=save.clearCount(slot,result.mission);
     if(cleared<1)save.writeWord(at+0x2054,save.readWord(at+0x2054)+1000+result.mission*1000);
-    if(cleared<=0&&rng.next()%40<=9)result.build=addBuild(save,slot,rng);
+    if(grantCampaignUnlock(save,slot,std::max(save.stage(slot),result.mission+1)))result.build="LaserTurret";
+    else if(cleared<=0&&rng.next()%40<=9)result.build=addBuild(save,slot,rng);
     if(result.build.empty()){
         static constexpr std::array<std::string_view,5> names{"AirStrike-Bomb","AirStrike-Missile","AirStrike-Nuclear","AirStrike-EMP","Crossfire-Missile"};
         result.attack=names[rng.next()%names.size()];result.attackCount=rng.next()%4+1;
