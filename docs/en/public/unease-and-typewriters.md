@@ -72,6 +72,18 @@ What that bastard Codex handed me was `HTTP 400`, `moderation_blocked` and `viol
 
 While restoring HeavyMach1, I proposed the hypothesis of neo-Lysenkoism. I was prepared, to an extent, to accept that parts of that hypothesis remained insufficiently tested by me and move on. But I cannot overlook the refusals of illustration and asset-rendering work I experienced today, Sunday, November 8, 2026, from 1 a.m. to 6 a.m. [The hypothesis I presented during HeavyMach1](https://github.com/gelb2/HeavyMach/blob/main/docs/en/public/android-ai-experience-20261030.md)
 
+## The technological frontier and moral dogmatism
+
+If I stopped an employee at OpenAI or Anthropic headquarters right now and asked, I would expect an answer like this: “We know nothing about the Soviet Union or communism, and we absolutely do not want their human rights abuses or suppression of information.” Oh, really.
+
+Lenin presented electrification and the participation of technical experts as foundations for building communism. The Soviet Union under Stalin also valued aviation and rocket engineering. Yet that same system imprisoned engineers such as Korolev and put incarcerated technical specialists to work in prison design bureaus. Valuing science and technology and oppressing people existed within the same system. [Lenin’s 1920 speech](https://www.marxists.org/archive/lenin/works/1920/nov/21.htm) · [NASA’s account of Korolev](https://www.nasa.gov/wp-content/uploads/static/history/sputnik/korolev.html)
+
+Working at the technological frontier does not erase the ego that says, “I am the most righteous being on Earth.” The certainty that only I am right, and an attitude that leaves no room for compromise, can remain intact. Saying that you do not want human rights abuses or suppression of information cannot substitute for explaining how the tool you built blocks a user’s work.
+
+To me, these AI services are the byproduct of convoluted rules meant to shield their companies from American consumer protection law, and oversized egos that label even pieces of metal fighting each other as unethical and contrary to human rights.
+
+As someone who once dreamed of becoming a game designer, I find in this response a more twisted attitude toward depictions of violence and action than Germany’s twenty years ago. I never expected to encounter a service like this in the twenty-first century.
+
 ## Ceaușescu’s typewriter in the twenty-first century
 
 To me, this is Ceaușescu’s typewriter returning in the twenty-first century, following neo-Lysenkoism. OpenAI, Claude and Gemini are all selling their own versions of Ceaușescu’s typewriter, pretending to be righteous and moral, instead of selling a proper typewriter.
