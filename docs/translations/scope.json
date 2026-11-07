@@ -1,0 +1,144 @@
+{
+  "updated": "2026-11-07",
+  "state": "implemented",
+  "pairs": [
+    {
+      "ko": "README.md",
+      "en": "README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "CHANGELOG.md",
+      "en": "CHANGELOG.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "CREDITS.md",
+      "en": "CREDITS.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/RESTORATION.md",
+      "en": "docs/en/RESTORATION.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/README.md",
+      "en": "docs/en/public/README.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/architecture.md",
+      "en": "docs/en/public/architecture.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/build-and-install.md",
+      "en": "docs/en/public/build-and-install.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/development-history.md",
+      "en": "docs/en/public/development-history.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/features.md",
+      "en": "docs/en/public/features.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/gameplay.md",
+      "en": "docs/en/public/gameplay.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/quick-play.md",
+      "en": "docs/en/public/quick-play.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/troubleshooting.md",
+      "en": "docs/en/public/troubleshooting.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/validation.md",
+      "en": "docs/en/public/validation.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "Apple/README.md",
+      "en": "Apple/README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "Android/README.md",
+      "en": "Android/README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "Web/README.md",
+      "en": "Web/README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "Desktop/Tauri/README.md",
+      "en": "Desktop/Tauri/README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "Distribution/README.md",
+      "en": "Distribution/README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "Modules/README.md",
+      "en": "Modules/README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "Modules/SaveTransfer/README.md",
+      "en": "Modules/SaveTransfer/README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "Sources/Core/README.md",
+      "en": "Sources/Core/README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "Resources/README.md",
+      "en": "Resources/README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "Tests/README.md",
+      "en": "Tests/README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "Compatibility/README.md",
+      "en": "Compatibility/README.en.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/implementation-status.md",
+      "en": "docs/en/public/implementation-status.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/roadmap.md",
+      "en": "docs/en/public/roadmap.md",
+      "status": "reviewed"
+    }
+  ],
+  "excluded": [
+    "development canon and policies",
+    "agent instructions and skills",
+    "verbatim user/interview sources",
+    "internal TODO and handovers",
+    "historical evidence and draft copies",
+    "third-party license originals"
+  ]
+}

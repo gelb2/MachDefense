@@ -1,0 +1,188 @@
+{
+  "reviewed": "2026-11-07",
+  "source_basis": "caaf60d; user main manuscript checked against origin/main ef0fd20",
+  "pairs": [
+    {
+      "ko": "README.md",
+      "en": "README.en.md",
+      "ko_sha256": "d10e7b4c3471151221f94797d49fb3e7c223055921cae2519ca0c1180acbf81f",
+      "en_sha256": "26713a62605118f712188f9a97eeb5fdbd40ecfb8621f4d7d7a65e8ad001bfa8",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "CHANGELOG.md",
+      "en": "CHANGELOG.en.md",
+      "ko_sha256": "53c7f88d6750ac547eab4a67614d8c45005ac526f4ad087ee6eedb3af12cbc7d",
+      "en_sha256": "dcce47b7e9d7b35a1d0ffb7b15a7181e42870957f763e71662f29c1e19fffd86",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "CREDITS.md",
+      "en": "CREDITS.en.md",
+      "ko_sha256": "4dc41893a5c8ebf73f2da39388a2371db5499d3d2771c4e526cceed41ff0153d",
+      "en_sha256": "27d1fbbac6bcd9b67df8dc9c247ff94d4fe70bb1e49a8bb27b615823f82793f3",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/RESTORATION.md",
+      "en": "docs/en/RESTORATION.md",
+      "ko_sha256": "8d2340416f3cf96af9075e28987ef203febffc330f947574612e5444cd06d19d",
+      "en_sha256": "54b4819e5ad6325c6dfe4ba3039e8e365103562e336997dfdebc02bb733d01f8",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/README.md",
+      "en": "docs/en/public/README.md",
+      "ko_sha256": "89d5ad52ce095d0e4927ebd46be2dc487d3e7d677c30b309df1f1548cb3257bd",
+      "en_sha256": "09be32e3cf9cbc6abbb3b4ab73eba3911719c19aee366400bb53c18a4a507864",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/architecture.md",
+      "en": "docs/en/public/architecture.md",
+      "ko_sha256": "69c8b35c7c67c23fb226b2e182b6f8552248e6aa96cfaad0e8a732f545980123",
+      "en_sha256": "9f39fb1d47b3a05ab6b50ee162831b3ab2bc7dccd1652a3b375c670565ff96a5",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/build-and-install.md",
+      "en": "docs/en/public/build-and-install.md",
+      "ko_sha256": "dd9d3598b26e87b75bbbaf6097478d199b5aa169454bcc77d99eff92630c3bf9",
+      "en_sha256": "aa7efb13ac171a970c9d565eecb898fe9d5c75a573a51be50e7ba5688b1e67b9",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/development-history.md",
+      "en": "docs/en/public/development-history.md",
+      "ko_sha256": "06bcf8be70e10647f7e615435a995132b2e5e69ca2bd053ff7b8f2f3dac34134",
+      "en_sha256": "762c87d65d42d9784f95c05e74c9f2ec24422cdc63489a2be996989dfab09e0e",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/features.md",
+      "en": "docs/en/public/features.md",
+      "ko_sha256": "b073576e1263964a06e040484e88d50fc43ee059f343cb02977758175c9946e7",
+      "en_sha256": "217635cbf8ee49f95a97c49f0195bd90a75d92768c2d8e8754fe671872d482fa",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/gameplay.md",
+      "en": "docs/en/public/gameplay.md",
+      "ko_sha256": "00e3967488bc19245b2f4c47dfd34efe76784ba9fb28b02498306f23282d45c9",
+      "en_sha256": "8accc34cedde58f92927c6a1adc0088faa7ce4b92fe7f8959c34731fec24d798",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/quick-play.md",
+      "en": "docs/en/public/quick-play.md",
+      "ko_sha256": "8b0d3403b7d0aff9fddc33b20b61d3d783b847efdf851522afc924f653222141",
+      "en_sha256": "ff34c843d7b78dcfe7b539252b90f0554b79ea5d52dd1bec667ec859862792dd",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/troubleshooting.md",
+      "en": "docs/en/public/troubleshooting.md",
+      "ko_sha256": "788dac6b4cc82902cc274ff38b28e620b4e6b5e755f322a968cb10e7ed3cb40a",
+      "en_sha256": "c5c4ecfb008006b2a9d0d8021668fa289f9d6ae8f5cb79456339dd7d75b006be",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/validation.md",
+      "en": "docs/en/public/validation.md",
+      "ko_sha256": "221fa93eff84955c7a9c8058b8c47bc4e6adb0404f17cd8a23c7bb3c7691fcdf",
+      "en_sha256": "8a08ca4cbad51bca8f3e29ddad66e116772b99777d5c4e81119b4b09a2c24acf",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "Apple/README.md",
+      "en": "Apple/README.en.md",
+      "ko_sha256": "832cef12ab7e507ca3b43f7369fe7adf334320bd2aeb0f2cd13d4cc2225a1e0e",
+      "en_sha256": "23ca0ef9162df1d09b0acffec2fc8427cbd7e080a9155b7778224be2322eea26",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "Android/README.md",
+      "en": "Android/README.en.md",
+      "ko_sha256": "e3797aba5ef843ea5889b52c147388cba5abaf9a7e52d4ce997ea7bcf3333787",
+      "en_sha256": "a63bd7ab1d747c0a841dce501cd1b1c2c1bbf9f7f80a5dd7bf58633d6a0f3f0d",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "Web/README.md",
+      "en": "Web/README.en.md",
+      "ko_sha256": "742252f2d354dbe9c9d80821444d0b054b192bf7c8433e997143980cb2b29776",
+      "en_sha256": "1ce80dd1b13e0d87b184f087a0e59c8c7a6699c14680670bd3a4fd099eaeb55f",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "Desktop/Tauri/README.md",
+      "en": "Desktop/Tauri/README.en.md",
+      "ko_sha256": "aca34d4054af6b88650dcac82885767302f6c6df39ea088ce5d1c31760d158a0",
+      "en_sha256": "cb85732ed5af42e920c3c16a11d7d0faaa8d3ea8f85d8f7f722266459310e9c1",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "Distribution/README.md",
+      "en": "Distribution/README.en.md",
+      "ko_sha256": "bfe8136be3b9a64f58d1ada34733133d993644b0627f095ecfffb9ad6951f893",
+      "en_sha256": "24abbac953157b864662cbeb8c77810c0e27b8cb67a840d82c3a24c83ed8e6e8",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "Modules/README.md",
+      "en": "Modules/README.en.md",
+      "ko_sha256": "5ac144c702bd495e423e43b8e04db64d15b547f04e076719538c0ab6d9c2fa65",
+      "en_sha256": "52c3e4670aea9b0fd9b71d0c11a8125b8048f4dc20a7629c6e51638373b93c56",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "Modules/SaveTransfer/README.md",
+      "en": "Modules/SaveTransfer/README.en.md",
+      "ko_sha256": "073279d76cd1045ab07057cba3475c110215d490bb834b7b98d8a6d983494882",
+      "en_sha256": "5f30f61eb048a32a498536193f48bd74dfe09a9ddbd759d5dde9f0b8d10a5d68",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "Sources/Core/README.md",
+      "en": "Sources/Core/README.en.md",
+      "ko_sha256": "9f31fcac0654c738d82791ef8c262b695417f9caf955a4166766dfa77b1c55b2",
+      "en_sha256": "122411a1410ed36e1745f8366bb0f9060621dfd60d877a4b5dca55ddc07d2159",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "Resources/README.md",
+      "en": "Resources/README.en.md",
+      "ko_sha256": "d42dcde3afc55f68deb818d2264eb88f082104282424aa946a30ae7981fc6bb9",
+      "en_sha256": "4046481cc6ad4a6dd0d980a1e8e1903d2cdc50058e0d1a370e30f298fc5a8c56",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "Tests/README.md",
+      "en": "Tests/README.en.md",
+      "ko_sha256": "790299b94f45b9c17ef6c158886556f8dbb013b6101d3378020bca54bba5a2f6",
+      "en_sha256": "a037e1c90d9681a089a9a8c1b57fa079984e5b541a9dc4a3a4c899b436456233",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "Compatibility/README.md",
+      "en": "Compatibility/README.en.md",
+      "ko_sha256": "dba70363e0271826e8a9925297ce91c7414023f4ee13786fb054a6f3449a21af",
+      "en_sha256": "27224c33cedffd415467b975be992c122b65a72bf55f72b744b2fc6963be6987",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/implementation-status.md",
+      "en": "docs/en/public/implementation-status.md",
+      "ko_sha256": "6b602ef6b4e41ff56e24ae9a4a62534c7d1554bdd8a517fccd5f4bc25dd38e37",
+      "en_sha256": "4b9ef1810d754c934546e204bb9f305c4ceb656582169e19c6744764d41ccc63",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/roadmap.md",
+      "en": "docs/en/public/roadmap.md",
+      "ko_sha256": "fd4573a1bd39b185a8a79b4b78d86715afc8034ae9158b9f41f020a7b434e78f",
+      "en_sha256": "dec431a5e7134f1d524f2248668c5bef6f558dbb9c7c63a2095d807f6afaa285",
+      "review": "paragraphs, author voice, figures, status, commands, links"
+    }
+  ]
+}

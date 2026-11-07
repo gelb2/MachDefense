@@ -1,5 +1,7 @@
 # 복원 코드 공용 모듈과 웹·PWA·Tauri Mac 계획
 
+2026-11-07 현재: Apple·Android·웹/PWA의 전체 5슬롯 복원과 운영 배포는 완료했다. [플랫폼별 검사](evidence/save-transfer-all-platforms-20261106.md) · [v0.5 배포 검사](evidence/v05-release-20261107.md). Tauri 앱과 PWA 최초 업데이트 전환 보강은 남았다. 단일 슬롯·확장 설정은 채택 전 제안이다. 아래 구현 순서와 초기 브랜치명은 당시 기록이다.
+
 2026-11-06. 계획 작성 기준은 develop `ae08521`이다. 계획은 `docs/shared-save-web-plan`에서 작성했다. 후속 PWA 우선 개발 지시에 따라 `feat/web-pwa`를 분기해 웹 실행기·5슬롯 복원·PWA를 구현했다. [현재 결과와 미완료 검사](evidence/web-pwa-20261106.md)를 먼저 읽는다. 아래 단일 슬롯·확장 설정·Tauri 항목에는 후속 계획도 포함된다.
 
 2026-11-06 구현 후속: 전체 5슬롯 복원과 Apple·Android·Web 연결은 구현했다. [현재 검사와 배포](evidence/save-transfer-all-platforms-20261106.md)를 먼저 확인한다. 연결과 저장 중단 복구의 설계는 [3플랫폼 복원 코드 계획](save-transfer-native-plan-20261106.md)을 따른다. iPhone·iPad·Android와 PWA의 복사·검사·확인·취소 버튼을 공용 게임 UI로 연결했다.
@@ -23,7 +25,7 @@ HeavyMach1의 웹판 기여와 후속 오류 수정본을 고정한 다음, 웹 
 - `Modules/SaveTransfer/README.md`: 코드 형식, 슬롯 선택, 복원 중단 처리, 네이티브/Wasm 대조.
 - `docs/reviews/mac-web-pwa-comparison-20261101.md`: 저장·오프라인·종료·입력·GPU 복구 검사.
 
-MachDefense 웹 실행기는 기존 공용 Frame을 소비한다. Mac Chrome·WebKit 로컬 검사를 마쳤으며 모바일 PWA 실기기 검사는 남았다. 그 산출물을 고정한 뒤 PWA와 Tauri가 사용한다. HeavyMach1의 게임별 메뉴·HUD 복사본이나 세 슬롯 규격은 가져오지 않는다. 재사용하는 도구 코드에는 출처와 해당 파일의 라이선스를 남긴다.
+MachDefense 웹 실행기는 기존 공용 Frame을 소비한다. Mac Chrome·WebKit 및 Galaxy PWA를 검사했고 사용자는 iPad PWA 복원 왕복을 확인했다. iPhone PWA 직접 검사는 남았다. [플랫폼별 결과](evidence/save-transfer-all-platforms-20261106.md). 그 산출물을 고정한 뒤 PWA와 Tauri가 사용한다. HeavyMach1의 게임별 메뉴·HUD 복사본이나 세 슬롯 규격은 가져오지 않는다. 재사용하는 도구 코드에는 출처와 해당 파일의 라이선스를 남긴다.
 
 ## 폴더와 책임
 

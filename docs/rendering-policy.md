@@ -15,3 +15,7 @@
 ## iPhone의 오른쪽 HUD 상단
 
 안전 영역 때문에 원본 생산 HUD 위가 비면 `GameUI_MachSlot.png`의 빈 금속판 상단 2px만 화면 위까지 이어 그린다. 셀 창·숫자·생산 버튼과 입력 좌표는 옮기지 않는다. 원본 판이 이미 화면 위를 덮는 iPad 배치에서는 추가로 그리지 않는다. 원본 PNG와 월드 표시 범위는 그대로다. [검사와 남은 월드 과제](evidence/iphone-hud-top-20261106.md).
+
+## 플랫폼과 채택 그림
+
+공용 Frame은 [Apple](../Sources/Platform/Apple/MDRenderer.mm), [Android](../Android/app/src/main/cpp/Renderer.cpp), [웹](../Web/src/Renderer.cpp) 렌더러가 소비한다. 추가 단계 그림은 [기획의 v0.5 외형 확정](game-design.md#v05-외형-확정과-생산-목록)과 [런타임 자원 명세](../Art/Level10/20261107/runtime-art.json)를 따른다. 시안 폴더의 모든 그림이 앱 채택본인 것은 아니다.

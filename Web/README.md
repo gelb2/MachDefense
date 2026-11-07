@@ -1,17 +1,20 @@
 # MachDefense Web / PWA
 
+<!-- language-nav:start -->
+[한국어](README.md) | [English](README.en.md)
+<!-- language-nav:end -->
+
 [플레이·PWA 설치](https://gelb2.github.io/MachDefense/) · [사용자 설치 안내](../docs/public/build-and-install.md)
 
 같은 C++20 Core·효과음·자원을 Emscripten으로 빌드한다. WebGL2 출력과 브라우저 입력은 `src/`, 시작 화면·IndexedDB·service worker는 `../Distribution/Web/`에 있다. 게임 메뉴·HUD·복원 버튼은 공용 C++에서 그린다. Tauri 실행기는 아직 없다.
 
-[현재 검사 결과](../docs/evidence/web-pwa-20261106.md) · [개발 계획](../docs/save-transfer-web-tauri-plan.md).
+[v0.5 검사 결과](../docs/evidence/v05-release-20261107.md) · [최초 구현 검사](../docs/evidence/web-pwa-20261106.md) · [개발 계획](../docs/save-transfer-web-tauri-plan.md).
 
 ## 빌드
 
-저장소 루트에서 실행한다. Emscripten 6.0.13으로 검사했다. 먼저 Git LFS 자원을 받는다. 원본 IPA는 필요하지 않다.
+저장소 루트에서 실행한다. Emscripten 6.0.13으로 검사했다. 자원은 일반 Git 파일로 함께 받는다. Git LFS와 원본 IPA는 필요하지 않다.
 
 ```sh
-git lfs pull
 # 설치한 Emscripten SDK의 emsdk_env.sh를 먼저 source 한다.
 emcmake cmake -S Web -B build/web-normal -DMD_WEB_CHEAT=OFF -DCMAKE_BUILD_TYPE=Release
 cmake --build build/web-normal -j6
@@ -52,7 +55,7 @@ MD_BROWSER=webkit node Web/tests/regression.mjs .local/pwa-20261106 http://127.0
 
 현재 Chrome 검사는 macOS 설치 경로를 사용한다. `regression.mjs`와 `pwa-storage.mjs`는 검사 폴더의 `iphone/MachDefense.sav` 복사본을 읽고, regression은 같은 폴더의 `recovery.txt`도 읽는다. 사용자 저장을 Git에 넣지 않는다. 빈 진행 검사에는 smoke/game-flow를 사용한다. 초기 프로필·생산·승패·재시작은 game-flow, 저장 복원·생명주기·GPU는 regression, 자원 손상·업데이트·캐시 삭제는 pwa-storage가 검사한다.
 
-실제 iPhone·iPad·Galaxy의 설치형 PWA 검사는 남아 있다. Apple·Android에도 같은 코드 메뉴를 연결했다. [연결과 검사 결과](../docs/evidence/save-transfer-all-platforms-20261106.md).
+Galaxy 설치형 PWA의 복원·오프라인 재실행은 검사했다. 사용자는 iPhone → iPad PWA → iPhone 코드 복원과 미션 진입을 확인했다. iPhone 설치형 PWA의 직접 검사와 기기별 장시간 검사는 남아 있다. Apple·Android에도 같은 코드 메뉴를 연결했다. [연결과 검사 결과](../docs/evidence/save-transfer-all-platforms-20261106.md).
 
 ## 네이티브/Wasm 화면 수치 대조
 

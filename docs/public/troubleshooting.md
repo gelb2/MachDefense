@@ -1,5 +1,9 @@
 # 트러블슈팅
 
+<!-- language-nav:start -->
+[한국어](troubleshooting.md) | [English](../en/public/troubleshooting.md)
+<!-- language-nav:end -->
+
 ## 기관총 발사 시 프레임 저하
 
 아이패드에서 기지 기관총이 발사될 때 화면이 끊겼다. 적 탱크 포탄에는 같은 끊김이 보이지 않았다. 나는 발사 때 저장 파일을 쓰는지, 탄환을 계속 할당하는지, 에셋을 다시 만드는지 확인하고 Instruments로 측정하라고 지시했다.

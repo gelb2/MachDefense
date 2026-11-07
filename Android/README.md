@@ -1,6 +1,10 @@
 # MachDefense Android
 
-Android 일반 앱과 치트 앱은 공통 C++ Core·Audio와 같은 게임 자원을 사용한다. Kotlin은 Surface, 입력 전달, 생명주기, 오디오 포커스, 음악 재생, 프로필 이름 입력을 연결한다. 게임 버튼·메뉴·HUD·전투·강화·긴급지원은 C++에서 그린다.
+<!-- language-nav:start -->
+[한국어](README.md) | [English](README.en.md)
+<!-- language-nav:end -->
+
+Android 일반 앱과 치트 앱은 공통 C++ Core·Audio와 같은 게임 자원을 사용한다. Kotlin은 Surface, 입력 전달, 생명주기, 오디오 포커스, 음악 재생, 프로필 이름·복원 코드 입력과 클립보드를 연결한다. 게임 버튼·메뉴·HUD·전투·강화·긴급지원은 C++에서 그린다.
 
 ## 빌드
 
@@ -17,7 +21,7 @@ Android Studio에서 이 `Android/` 폴더를 연다. Android SDK 36, NDK 26.3.1
 
 Android 8(API 26) 이상 arm64 대상으로 빌드한다. 실제 확인한 기기는 Galaxy SM-S731N과 API 36 arm64 에뮬레이터다. 두 앱은 개발용 서명이며 별도 저장을 쓴다. 공개 배포용 서명은 아직 준비하지 않았다.
 
-`prepare_assets.py`가 저장소의 자원 1,387개를 APK에 넣고 해시 목록을 만든다. 게임 실행에 외부 원본 패키지나 다운로드 서버가 필요하지 않다. APK·Gradle 캐시·개인 SDK 경로는 Git에 넣지 않는다.
+`prepare_assets.py`가 저장소의 실행 자원을 APK에 넣고 해시 목록을 만든다. 게임 실행에 외부 원본 패키지나 다운로드 서버가 필요하지 않다. APK·Gradle 캐시·개인 SDK 경로는 Git에 넣지 않는다.
 
 ## 폴더 책임
 
@@ -32,7 +36,7 @@ Android 8(API 26) 이상 arm64 대상으로 빌드한다. 실제 확인한 기�
 
 ## 검사와 저장 이전
 
-[구현·검사 기록](../docs/evidence/android-native-20261106.md)에 기기, 실행 범위, 측정값과 남은 과제를 정리했다. `python3 Android/tools/verify_preserved.py`로 보존 파일의 해시를 검사한다. `tools/device.py`는 치트 APK의 상태를 읽는다. `tools/app_smoke.py`는 첫 미션에 진입한 치트 앱에서 실제 ADB 터치와 기존 치트 명령을 함께 사용한다. `tools/campaign_render_sweep.py`는 80개 미션 화면을 차례로 로딩한다.
+[구현·검사 기록](../docs/evidence/android-native-20261106.md)에 기기, 실행 범위, 측정값과 남은 과제를 정리했다. `python3 Android/tools/verify_preserved.py`는 Android 최초 이식 전 기준과 비교한다. 이후 승인된 공용 복원 메뉴·10레벨·그림 변경도 차이로 표시하므로 현재 브랜치의 무변경 검사로 사용하지 않는다. 당시 보존 결과는 위 구현 기록에 있다. `tools/device.py`는 치트 APK의 상태를 읽는다. `tools/app_smoke.py`는 첫 미션에 진입한 치트 앱에서 실제 ADB 터치와 기존 치트 명령을 함께 사용한다. `tools/campaign_render_sweep.py`는 80개 미션 화면을 차례로 로딩한다.
 
 저장 구조는 기존 `SaveData` 그대로다. 앱의 `files/MachDefense.sav`를 읽고 쓴다. `copy_save_to_device.py`는 대상 앱을 멈추고 기존 저장부터 백업한 뒤 지정한 저장을 복사하고 바이트 일치를 확인한다. 사용자 저장은 `.local/` 등 Git 제외 경로에만 보관한다. 프로필 선택 화면의 `GET CODE`는 다섯 슬롯을 코드로 내보낸다. `ENTER CODE`에서 입력한 코드를 검사하고 확인하면 다섯 슬롯을 복원한다.
 

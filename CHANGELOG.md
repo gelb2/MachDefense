@@ -1,5 +1,13 @@
 # 변경 이력
 
+<!-- language-nav:start -->
+[한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
+<!-- language-nav:end -->
+
+## 2026-11-07 문서 갱신
+
+방문자용 문서 26종에 한국어·영어판과 문서별 언어 전환을 추가했다. 현재 구현 상태와 남은 과제를 별도 안내로 정리하고, Sass 집필 자료에 주제별 원문·그림·검사 근거를 연결했다. 오래된 설치·검사 설명과 문서 링크도 수정했다. 게임 릴리스는 v0.5이며 코드·에셋·저장 형식은 바꾸지 않았다.
+
 ## v0.5 — 포탑 몸체·레이저 포탑 해금
 
 2026-11-07. [웹·PWA 플레이](https://gelb2.github.io/MachDefense/) · [변경과 검사](docs/evidence/v05-release-20261107.md)
