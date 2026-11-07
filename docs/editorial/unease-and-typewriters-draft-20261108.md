@@ -1,5 +1,9 @@
 # 헤비멕1과는 다른 위화감 — 신 리셴코주의와 차우세스쿠의 타자기
 
+<!-- language-nav:start -->
+[한국어](unease-and-typewriters-draft-20261108.md) | [English](../en/editorial/unease-and-typewriters-draft-20261108.md)
+<!-- language-nav:end -->
+
 HeavyMach1을 복원할 때도 Codex를 계속 고쳐 써야 했다. 사격할 때마다 저장하는 구현을 지적했고, 원작의 그림과 동작을 벗어나면 다시 대조하라고 했다. 다음 작품인 MachDefense에서는 그때 만든 절차와 검증 도구를 가져오게 했다. 잘못된 구현을 찾아 수정하는 일을 줄이려는 선택이었다.
 
 그때의 위화감을 처음부터 전부 AI의 문제로 단정한 것은 아니다. 내가 정치인의 페이지와 내 자기소개 페이지를 만들 때는 이렇게 생각했다.

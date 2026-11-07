@@ -24,7 +24,7 @@ I have no intention of making money from this. Money is only needed in this life
 
 I wrote about the refusals to create helicopter artwork and edit text in my designs, and about Codex shifting responsibility in the incident report. The essay covers why I designed these units, how the work stopped, and my criticism of tools that invoke science and morality.
 
-[Essay in English](docs/en/public/unease-and-typewriters.md) · [Latest Korean draft](docs/editorial/unease-and-typewriters-draft-20261108.md) · [Incident report (Korean)](docs/evidence/aircraft-instruction-refusal-20261108.md) · [Troubleshooting](docs/en/public/troubleshooting.md)
+[Full essay in English](docs/en/editorial/unease-and-typewriters-draft-20261108.md) · [Incident report (Korean)](docs/evidence/aircraft-instruction-refusal-20261108.md) · [Troubleshooting](docs/en/public/troubleshooting.md)
 
 ## Quick Play — PWA and Mac
 
