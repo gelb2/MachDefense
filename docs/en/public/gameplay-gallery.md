@@ -5,7 +5,7 @@
 [한국어](../../public/gameplay-gallery.md) | [English](gameplay-gallery.md)
 <!-- language-nav:end -->
 
-I recorded these battles on my iPhone on November 6–7, 2026. The Galaxy screenshot is from November 6. The two recordings run for 4:12 and 4:16. The clips below keep their original speed and full screen, including the HUD.
+These are captures from my own gameplay on iPhone and Galaxy. I recorded the videos on my iPhone on November 6 and 7, 2026. The two recordings run for 4:12 and 4:16. The clips below keep their original speed and full screen, including the HUD.
 
 ## Combat clips
 
