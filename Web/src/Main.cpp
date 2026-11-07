@@ -8,6 +8,7 @@
 #if MD_WEB_CHEAT
 #include "../../Tests/Level10HUDSweep.hpp"
 #include "../../Tests/ContentSweep.hpp"
+#include "../../Tests/TurretArtSweep.hpp"
 #endif
 #include <sstream>
 #include <cmath>
@@ -64,6 +65,15 @@ EMSCRIPTEN_KEEPALIVE const char* md_content_sweep(){
  try { validation::Level10SweepHost isolated(&host);unsigned frames=0;
  auto result=validation::runContentSweep(assets,isolated,[&](const Frame& frame){if(frames++%16==0)renderer.draw(frame,pw,ph);});
  std::ostringstream out;out<<"Content: builds="<<result.builds<<" placements="<<result.placements<<" specials="<<result.attacks<<" frames="<<frames<<" writes="<<isolated.writes;status=out.str(); }
+ catch(const std::exception& e){status=std::string("ERROR: ")+e.what();}
+#else
+ status="Unavailable";
+#endif
+ return status.c_str();
+}
+EMSCRIPTEN_KEEPALIVE const char* md_art_frame(unsigned family){
+#if MD_WEB_CHEAT
+ try { auto frame=validation::turretArtFrame(assets,family);renderer.draw(frame,pw,ph);status="Art: 24 poses; level-five weapons; body levels; canvases/sockets/muzzles unchanged"; }
  catch(const std::exception& e){status=std::string("ERROR: ")+e.what();}
 #else
  status="Unavailable";

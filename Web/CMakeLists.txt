@@ -16,7 +16,7 @@ set_target_properties(game PROPERTIES SUFFIX ".js" RUNTIME_OUTPUT_DIRECTORY "${C
 target_link_options(game PRIVATE -fexceptions -sDISABLE_EXCEPTION_CATCHING=0 -sASYNCIFY=1 -sASYNCIFY_STACK_SIZE=131072
  -sMIN_WEBGL_VERSION=2 -sMAX_WEBGL_VERSION=2 -sALLOW_MEMORY_GROWTH=1 -sINITIAL_MEMORY=134217728 -sSTACK_SIZE=2097152
  -sFORCE_FILESYSTEM=1 -sENVIRONMENT=web -sMODULARIZE=1 -sEXPORT_NAME=createMachDefense -lopenal
- "-sEXPORTED_FUNCTIONS=_main,_md_start,_md_tick,_md_touch,_md_scroll,_md_level10_sweep,_md_content_sweep,_md_resize,_md_active,_md_context,_md_debug,_md_ui,_md_command,_md_audio_probe,_md_save_info,_malloc,_free"
+ "-sEXPORTED_FUNCTIONS=_main,_md_start,_md_tick,_md_touch,_md_scroll,_md_level10_sweep,_md_content_sweep,_md_art_frame,_md_resize,_md_active,_md_context,_md_debug,_md_ui,_md_command,_md_audio_probe,_md_save_info,_malloc,_free"
  "-sEXPORTED_RUNTIME_METHODS=ccall,FS,UTF8ToString,HEAPU8,stringToNewUTF8"
  "--preload-file=${MD_ROOT}/Resources/Images@/assets/Images" "--preload-file=${MD_ROOT}/Resources/Generated@/assets/Generated"
  "--preload-file=${MD_ROOT}/Resources/Tables@/assets/Tables" "--preload-file=${MD_ROOT}/Resources/RawData@/assets/RawData"

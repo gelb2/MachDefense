@@ -1,24 +1,24 @@
 #!/usr/bin/env python3
 """Pack approved sheets into original-size game textures. Requires Pillow.
 
-No drawing, per-axis stretching or gameplay geometry changes. Only slice,
-uniform downsample and position. Sources and every transform are recorded.
+Turret weapons and approved bodies are byte copies. Base sheets use uniform
+downsampling and positioning. Sources and every transform are recorded.
 """
 from pathlib import Path
-import hashlib, json
+import hashlib, json, shutil
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 ART = ROOT / 'Art/Level10/20261107'
 IMAGES = ROOT / 'Resources/Images'
 CONFIG = [
-    ('Turret_b_', 5, 5, 'body-geometry-v2.png', 'y'),
-    ('Turret_gun_', 5, 5, 'rifle-geometry-v2.png', 'x'),
-    ('Turret_msl_', 5, 5, 'missile-geometry-v2.png', 'x'),
-    ('Turret_mg_', 5, 5, 'vulcan-geometry-v4.png', 'x'),
-    ('Turret_ion_', 5, 5, 'ion-geometry-v3.png', 'x'),
-    ('Turret_lsr_', 5, 5, 'laser-geometry-v3.png', 'x'),
-    ('Turret_pla_', 5, 5, 'plasma-geometry-v2.png', 'x'),
+    ('Turret_b_', 5, 5, None, None),
+    ('Turret_gun_', 5, 5, None, None),
+    ('Turret_msl_', 5, 5, None, None),
+    ('Turret_mg_', 5, 5, None, None),
+    ('Turret_ion_', 5, 5, None, None),
+    ('Turret_lsr_', 5, 5, None, None),
+    ('Turret_pla_', 5, 5, None, None),
     ('Base', 7, 3, 'base-body-v2.png', 'y'),
     ('BaseWpn', 7, 3, 'base-gun-v1.png', 'x'),
     ('Base{level}_Rader', 7, 3, 'base-radar-v2.png', 'x'),
@@ -34,6 +34,24 @@ for prefix, cap, count, filename, axis in CONFIG:
     reference = Image.open(old).convert('RGBA')
     ob = bounds(reference)
     ow, oh = ob[2]-ob[0], ob[3]-ob[1]
+    # 2026-11-07 user selection: original level-five weapons at every extra
+    # level; only the approved design-v5 bodies change. Keep part names so
+    # weapon statistics, sockets and assembly tables retain their bindings.
+    if prefix.startswith('Turret_'):
+        for level in range(6,11):
+            source = ART / f'design-v5/review/body-{level}.png' if prefix == 'Turret_b_' else old
+            image = Image.open(source).convert('RGBA')
+            assert image.size == reference.size
+            output = IMAGES / (name(prefix,level)+'.png')
+            shutil.copyfile(source,output)
+            bb=bounds(image)
+            records.append(dict(output=str(output.relative_to(ROOT)),sha256=digest(output),
+                original=str(old.relative_to(ROOT)),original_sha256=digest(old),
+                source=str(source.relative_to(ROOT)),source_sha256=digest(source),
+                operation='byte-copy-approved-body' if prefix == 'Turret_b_' else 'byte-copy-original-level5',
+                canvas=list(image.size),visible_bbox=list(bb),
+                raster_size=[bb[2]-bb[0],bb[3]-bb[1]],original_visible_size=[ow,oh]))
+        continue
     source = ART / filename
     sheet = Image.open(source).convert('RGBA')
     for index in range(count):
@@ -61,7 +79,7 @@ for prefix, cap, count, filename, axis in CONFIG:
             source_rect=[left+box[0],box[1],box[2]-box[0],box[3]-box[1]],
             uniform_scale=scale,raster_size=list(size),offset=[x,y],canvas=list(reference.size),
             original_visible_size=[ow,oh],visible_bbox=list(bounds(out))))
-manifest={'generator':'tools/pack_level10_art.py','filter':'Lanczos, uniform scale then integer pixel rounding',
+manifest={'generator':'tools/pack_level10_art.py','filter':'Turrets: byte copy; base sheets: Lanczos, uniform scale then integer pixel rounding',
           'images':records}
 (ART/'runtime-art.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print(f'{len(records)} additional-level textures packed; original canvases retained.')

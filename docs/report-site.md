@@ -1,3 +1,16 @@
+# 2026-11-07 Lv.5 무장·몸체 교체 웹 검증
+
+[6종 포탑 실제 렌더링 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-body-only-20261107)를 기존 보고서에 게시했다. 각 계열의 Lv.5~10과 4방향을 나란히 표시한다. [게임 변경·검사](evidence/turret-body-only-integration-20261107.md).
+
+- Site source: `708bc99b0b6da19247325f85405fb666b659f625`.
+- Version 192, deployment `appgdep_6aee8ee707048191a8c628f23912853b`, `succeeded`.
+- 로컬 Chrome 1280·390px에서 새 섹션의 이미지 6개 로드, 가로 넘침 없음, 원고 다운로드 200, 페이지 오류 없음.
+- 첫 업로드는 256MiB 확장 크기 제한으로 거절됐다. 기존 게임 캡처 04-special·02-jump를 무손실 WebP로 바꾸고 RGBA 픽셀 동일성을 확인했다. 원본은 로컬 백업에 보존했고 참조 31곳을 갱신했다.
+- 두 번째 요청은 응답 시간 초과였지만 저장된 버전의 소스 커밋과 배포 ID를 조회해 게시 성공을 확인했다.
+- 기존 소유자 전용 접근을 유지했다. 게임 운영 PWA 배포와 별개다.
+
+이전 게시 기록:
+
 # 2026-11-07 몸체·라이플 새 부품 시안
 
 [원작 1~5단계·새 부품 10개·조립 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-design-grammar-20261107)를 기존 소유자 전용 보고서에 게시했다.
