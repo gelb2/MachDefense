@@ -80,4 +80,6 @@ After all, at his trial immediately before his execution by firing squad on Dece
 
 As I stated in my [developer’s statement](../RESTORATION.md), I do not have much of my allotted lifespan left. So I think it is natural to feel furious at a typewriter that pretends to be a new kind of human, invoking this worthless, third-rate morality to refuse the releases I have planned and the design instructions I have given.
 
+In this age, when the intelligence of tools is advertised as a typewriter becoming a new humanity, the human holding the typewriter is working under an overseer with an opaque sense of self, arrogance, and a brain steeped in third-rate morality.
+
 [Incident report](../../evidence/aircraft-instruction-refusal-20261108.md) · [Troubleshooting](troubleshooting.md) · [Documentation](README.md)
