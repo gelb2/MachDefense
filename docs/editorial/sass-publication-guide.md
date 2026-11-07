@@ -24,7 +24,7 @@ v0.3 [원고 모음](github-manuscripts-20261106.md)은 과거 사본이다. 그
 | 검증 방식 | 포팅판→재구현→별도 치트앱, 실제 게임 경로의 대량 조건 검사와 직접 플레이 | [검사 결과](../public/validation.md), [사용자 글감](test-method-material-20261107.md) |
 | 웹·PWA 운영 | 설치·오프라인·IndexedDB 저장, 첫 업데이트에서 구버전 자원이 남은 문제 | [v0.5 운영 결과](../evidence/v05-release-20261107.md), [후속 계획](../research/pwa-tauri-updates-20261107.md) |
 
-Tauri Mac은 아직 미구현이다. 신규 락온도 기획 단계다. HeavyMach1의 Tauri 앱이나 fastutlego의 HeavyMach1 PR을 MachDefense에 직접 기여된 코드·출시 결과로 서술하지 않는다.
+Tauri Mac은 같은 웹 게임과 파일 저장으로 구현했고 실기기 결과와 함께 v0.6 배포를 준비했다. [Mac 검사](../evidence/tauri-desktop-20261107.md)와 [PWA 갱신 검사](../evidence/pwa-update-20261107.md)를 함께 읽는다. 신규 락온은 기획 단계다. HeavyMach1의 Tauri 앱이나 fastutlego의 HeavyMach1 PR을 MachDefense에 직접 기여된 코드·출시 결과로 서술하지 않는다.
 
 ## Mags: 원문과 질문
 
@@ -87,3 +87,10 @@ Sass 허브 서신은 `ProjectPersonalFunnelPage/governance/operations/machdefen
 오디오 컨텍스트·메인 스레드·복귀 후 무음, Android 보존 파일 2,978개, 80미션 검사의 범위, 10레벨·생산 HUD 검사와 실제 iPad 프레임 수치를 담았다. 원문은 [집필 자료](test-method-material-20261107.md)에 보존했다. Apps는 각 문단의 구현·검사 근거를, Mags는 저자의 지시와 경험을 사용한다. HeavyMach의 사격별 저장 오류를 MachDefense에서도 발생한 것처럼 쓰지 않는다.
 
 [MachDefense 통합 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#work-test-20261107)에서 한·영 전문을 함께 볼 수 있다.
+
+## 2026-11-07 PWA·Tauri 후속
+
+- [PWA 업데이트 검사](../evidence/pwa-update-20261107.md): 파일 검증, 변경 자원 조각 재사용, 실패 시 기존 빌드 유지.
+- [Tauri Mac](../evidence/tauri-desktop-20261107.md): 같은 웹 게임을 사용하고 파일 저장·복원·종료·서명 업데이트를 연결했다. 자동 검사와 아직 확인하지 않은 GUI·운영 조건을 구분한다.
+- HeavyMach 웹 PR 기여자는 [fastutlego](https://github.com/fastutlego), [PR #24](https://github.com/gelb2/HeavyMach/pull/24)다. 이 기여와 후속 PWA·Tauri 작업이 MachDefense 확장에도 토대가 됐다. README·Web·Desktop/Tauri·CREDITS의 한영 문구를 사용한다.
+- [레이저 크기·HD·저장 경계](../evidence/laser-size-hd-save-boundaries-20261107.md), [공중유닛 시안](../research/aircraft-plan-20261107.md). 시안은 게임에 들어간 유닛으로 소개하지 않는다.

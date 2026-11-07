@@ -1,6 +1,8 @@
 # PWA와 Tauri Mac의 배포·업데이트
 
-2026-11-07. MachDefense v0.5 준비 과정에서 현행 웹 배포 코드와 HeavyMach Tauri 실행기를 대조했다. MachDefense Tauri 앱은 아직 구현하지 않았다.
+2026-11-07 후속 구현: PWA의 해시 검증·변경 자원 재사용·95개 자원 조각·시작 화면 전환을 구현했다. Tauri Mac의 파일 저장·복원·종료와 공식 updater도 구현했다. [PWA 검사](../evidence/pwa-update-20261107.md), [Tauri 검사](../evidence/tauri-desktop-20261107.md).
+
+아래는 v0.5 당시 조사와 구현 순서다. 당시 미구현 항목의 현재 상태는 위 검사 기록과 [TODO](../usability-todo.md)를 따른다.
 
 ## 현재 PWA
 

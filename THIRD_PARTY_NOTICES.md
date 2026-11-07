@@ -18,6 +18,10 @@ Apple·Android는 OpenAL Soft를 정적으로 연결한다. 라이브러리 소�
 
 웹은 `Web/CMakeLists.txt`의 `-lopenal`로 Emscripten OpenAL 구현을 사용한다. OpenAL Soft 네이티브 바이너리를 웹에 넣지 않는다. 웹 검사 도구 Puppeteer·Playwright는 개발 의존성이며 각 npm 패키지의 고지를 따른다.
 
+## Tauri Mac
+
+`Desktop/Tauri`는 Tauri·Wry·Tao와 Rust 라이브러리를 사용한다. 정확한 버전은 Cargo.lock에 고정했다. 빌드 시 각 패키지의 라이선스 표기와 LICENSE·COPYING·NOTICE·COPYRIGHT 파일을 앱의 `Contents/Resources/notices/`에 모은다. Tauri·Wry·Tao는 MIT/Apache-2.0 선택형이며 각 패키지의 원문 고지를 보존한다. 게임·Emscripten·자원의 고지도 같은 폴더에 포함한다. [Tauri 원본](https://github.com/tauri-apps/tauri) · [빌드 스크립트](Desktop/Tauri/scripts/prepare.py).
+
 ## 비교 실행기와 보관 자료
 
 | 자료 | 출처와 적용 조건 |

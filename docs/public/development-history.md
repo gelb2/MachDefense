@@ -36,4 +36,6 @@ Android는 Kotlin·JNI 실행기를 추가했다. 이때 기존 Apple·공통 �
 
 복원 코덱과 메뉴를 연결하면서 기존 파일 4개에 서비스 계약·버튼·연결 코드를 추가했다. 게임 계산과 기존 플랫폼 실행기는 유지했다. 수정 전후 네이티브 실행 결과를 대조하고, 네이티브와 Wasm에서도 같은 게임 상태와 저장 결과를 확인했다. [웹 구현과 검사](../evidence/web-pwa-20261106.md)
 
+HeavyMach 웹판을 기여한 [fastutlego](https://github.com/fastutlego)에게 감사드린다. [PR #24](https://github.com/gelb2/HeavyMach/pull/24)의 WebAssembly 실행부와 이후 PWA·Tauri 연결 절차가 MachDefense를 PWA와 Tauri Mac으로 확장하는 데도 토대가 됐다.
+
 [게임 소개](../../README.md) · [문서 목차](README.md)

@@ -1,3 +1,11 @@
+# PWA·Tauri 후속 작업 — 2026-11-07
+
+작업 위치: `.local/worktrees/save-transfer`, 브랜치 `feat/pwa-tauri-followup-20261107`. 게임 릴리스 v0.6을 준비했다. PWA 자원 검사·변경 조각 갱신, Tauri Mac 파일 저장·종료·서명 업데이트, 레이저 레벨별 생산 가격을 구현했다. iPhone·iPad·Galaxy 정식/치트 0.6 설치와 저장 보존, 웹·실기기 기능 검사를 통과했다. 운영 배포 결과는 [현재 상태](docs/current-status.md)와 [PWA 검사](docs/evidence/pwa-update-20261107.md), [Mac 검사](docs/evidence/tauri-desktop-20261107.md)를 확인한다.
+
+타이틀 네 번째 생성 시안도 원본 중심을 다시 그려 제품에 넣지 않았다. 원본 이미지는 그대로다. 공중유닛은 연구·시안만 만들었고 게임에 넣지 않았다. 별도 HD 패키지는 확보한 세 원본에 없으며 레이저 무장 크기는 원본과 같다. 비정상 로컬 저장 레벨은 경계 실패를 재현했으나 아직 보정하지 않았다. [현행 TODO](docs/usability-todo.md).
+
+아래는 이전 작업 기록이다.
+
 # 작업 지시·치트앱 검사 원고 — 2026-11-07
 
 [나는 이렇게 일을 시켰다](docs/public/work-method.md)와 [나는 이렇게 테스트했다](docs/public/testing-method.md)의 한·영 전문을 작성하고 README·문서 목차·검사·트러블슈팅에 연결했다. 각 게임의 기존 측정 기록과 직접 플레이 중 지적한 오류를 사용했다. [작성·검사 기록](docs/evidence/work-test-publication-20261107.md). 게임 코드와 자원은 변경하지 않았다.

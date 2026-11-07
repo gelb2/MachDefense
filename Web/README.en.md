@@ -6,7 +6,7 @@
 
 [Play / install PWA](https://gelb2.github.io/MachDefense/) · [Installation guide](../docs/en/public/build-and-install.md)
 
-Emscripten builds the same C++20 Core, sound effects, and resources. WebGL2 output and browser input live in `src/`; the launch page, IndexedDB, and service worker live in `../Distribution/Web/`. Shared C++ draws game menus, HUD, and recovery buttons. There is no Tauri host yet.
+Emscripten builds the same C++20 Core, sound effects, and resources. WebGL2 output and browser input live in `src/`; the launch page, IndexedDB, and service worker live in `../Distribution/Web/`. Shared C++ draws game menus, HUD, and recovery buttons. The [Tauri Mac host](../Desktop/Tauri/README.en.md) bundles the same web product and saves progress in the Mac app data folder.
 
 [v0.5 results](../docs/evidence/v05-release-20261107.md) · [Initial implementation checks](../docs/evidence/web-pwa-20261106.md) · [Development plan](../docs/save-transfer-web-tauri-plan.md).
 
@@ -66,3 +66,5 @@ python3 Web/tests/compare-frame.py .local/pwa-20261106
 ```
 
 The check compares non-floating-point data exactly across 144,000 frames and records the maximum floating-point difference. The current threshold is 0.001. Original full-bit hash results are also retained; game calculations are not changed for this comparison.
+
+Thank you to [fastutlego](https://github.com/fastutlego) for contributing the HeavyMach web port. The WebAssembly host, WebGL2 renderer, input, audio and saves in [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24), together with the subsequent PWA and Tauri work, also laid the groundwork for bringing MachDefense to the web and desktop. I used that architecture for the MachDefense PWA and used the same web host in the Tauri Mac app.

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "MachDefense Desktop",
+  "version": "0.6.0",
+  "identifier": "com.gelb2.machdefense.desktop",
+  "build": {
+    "frontendDist": "../build/frontend",
+    "beforeBuildCommand": "python3 scripts/prepare.py"
+  },
+  "app": {
+    "windows": [],
+    "withGlobalTauri": true,
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "app"
+    ],
+    "icon": [
+      "../icons/icon.png",
+      "../icons/icon.icns"
+    ],
+    "macOS": {
+      "minimumSystemVersion": "14.0",
+      "signingIdentity": "-"
+    },
+    "createUpdaterArtifacts": false,
+    "resources": {
+      "../build/notices/": "notices/"
+    }
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEY1MDYzNTIzRDhBQzlCNUMKUldSY202ellJelVHOWFJV29UNnlBSWh5VE9kV1BlMGRINE85dUNvY241eEVxVWJESjg3b2RGbnYK",
+      "endpoints": [
+        "https://github.com/gelb2/MachDefense/releases/latest/download/tauri-update.json"
+      ],
+      "requireSignedVersion": true
+    }
+  }
+}

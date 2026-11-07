@@ -17,6 +17,7 @@ iOS, iPadOS, Android, and web/PWA use the same C++ game code.
 | Apple | `Apple/`, `Sources/Platform/Apple/` | Workspace, rendering, input, audio session, and save paths |
 | Android | `Android/` | Kotlin, JNI, EGL, audio output, and app lifecycle |
 | Web | `Web/`, `Distribution/Web/` | Wasm, WebGL2, browser input, audio, IndexedDB, launch page, and PWA |
+| Tauri Mac | `Desktop/Tauri/` | Rust/WKWebView host, bundled web game, atomic file saves, signed app updates |
 
 Core does not call platform SDKs directly. It requests resource reads, saves, audio, and text entry through `ResourceAccess` and `HostServices`. Each host renders the `Frame` produced by Core. Menus and HUD buttons use this same path.
 
@@ -33,5 +34,7 @@ The reference save format has 5 slots and occupies 42,496 bytes. Recovery codes 
 The web stores game progress in IndexedDB and reports success after the transaction completes. Resources use Cache Storage. Downloading the resource cache again preserves progress. Save revisions prevent an older tab from overwriting a newer save when two tabs open the same progress. If the player deletes site data, a recovery code can restore the progress.
 
 Restoring creates a backup of the existing save first. The current menu replaces all 5 slots. Apple and Android use the shared FileStore for backups, interrupted-restore recovery, and file replacement. The shared C++ menu draws the copy, check, cancel, and confirmation buttons. Platforms provide text entry, the keyboard, clipboard, and storage paths. Single-slot selection is a proposal; the current operation transfers all 5 slots.
+
+Tauri stores the same save bytes in the app data folder, outside browser caches. It flushes a temporary file, replaces the current file, and verifies the result. Previous progress and the pre-import save have separate backups. The game and recovery codec are unchanged.
 
 [Game overview](../../../README.en.md) · [Documentation](README.md)

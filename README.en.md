@@ -4,10 +4,10 @@
 [한국어](README.md) | [English](README.en.md)
 <!-- language-nav:end -->
 
-[![Release v0.5](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.5)
-[![iOS, iPadOS, Android, Web, PWA](docs/public/media/badges/platforms.svg)](docs/en/public/build-and-install.md)
+[![Release v0.6](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.6)
+[![iOS, iPadOS, Android, Web, PWA, macOS](docs/public/media/badges/platforms.svg)](docs/en/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/en/public/architecture.md)
-[![C++20, Objective-C++, Kotlin, JavaScript](docs/public/media/badges/code.svg)](docs/en/public/architecture.md)
+[![C++20, Objective-C++, Kotlin, JavaScript, Rust](docs/public/media/badges/code.svg)](docs/en/public/architecture.md)
 [![Code license MIT](docs/public/media/badges/license.svg)](LICENSE-SCOPE.en.md)
 
 ## Why I rebuilt MachDefense
@@ -20,13 +20,15 @@ I have no intention of making money from this. Money is only needed in this life
 
 [Read the developer's statement](docs/en/RESTORATION.md)
 
-## Quick Play — PWA
+## Quick Play — PWA and Mac
 
 [**Play MachDefense or install the PWA**](https://gelb2.github.io/MachDefense/)
 
 Open the link to install the game or play in your browser. On iPhone and iPad, choose **Add to Home Screen** in Safari's Share menu. On Android and Mac, press **INSTALL GAME**. Once the resources finish downloading, you can play offline.
 
-If building with Xcode or Android Studio is difficult, use the PWA. [Build and installation](docs/en/public/build-and-install.md) also explains how to install the native apps.
+If building with Xcode or Android Studio is difficult, use the PWA or the [Tauri Mac app](https://github.com/gelb2/MachDefense/releases/download/v0.6/MachDefense-Desktop-v0.6-arm64.zip). The Mac app requires macOS 14 or later on Apple Silicon and stores progress in its app data folder. [Build and installation](docs/en/public/build-and-install.md) also explains how to install the native apps.
+
+Thank you to [fastutlego](https://github.com/fastutlego) for contributing the HeavyMach web port. The WebAssembly host, WebGL2 renderer, input, audio and saves in [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24), together with the subsequent PWA and Tauri work, also laid the groundwork for bringing MachDefense to the web and desktop. I used that architecture for the MachDefense PWA and used the same web host in the Tauri Mac app.
 
 ### If leveling up is difficult
 
@@ -80,11 +82,11 @@ I did not want a one-time handout. I wanted small amounts of credits and cells t
 
 | Platform | How to run | Current status |
 |---|---|---|
-| iPhone / iPad | Xcode workspace | v0.5. Regular and cheat apps installed on iPhone and iPad; upgrade and combat checks on iPad |
-| Android | Android Studio or APK | [v0.5 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.5). Regular and cheat apps installed on Galaxy; production, upgrades, audio, resume, victory, and defeat checked |
+| iPhone / iPad | Xcode workspace | v0.6. Regular and cheat apps installed on iPhone and iPad; upgrade, recovery and production HUD checks on both devices |
+| Android | Android Studio or APK | [v0.6 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.6). Regular and cheat apps installed on Galaxy; production, upgrades, audio, resume, victory, and defeat checked |
 | Web | Browser | Deployed to GitHub Pages. Checked in Mac Chrome, Safari, and WebKit |
 | PWA | Install through the browser | Installation and offline play supported. See the validation document for device results |
-| Tauri Mac | Desktop app | Planned |
+| Tauri Mac | Desktop app | [Download v0.6](https://github.com/gelb2/MachDefense/releases/tag/v0.6). File saves, recovery and exit checked. macOS 14+ on Apple Silicon |
 
 ## Fixed problems and remaining work
 
@@ -98,7 +100,7 @@ I am also considering a new lock-on feature. It would mark enemies within range 
 
 The idea for MachDefense is to give the player more opportunities to watch and make decisions without changing the original enemy placement, attack power, or allied and enemy behavior. It would reuse Crossfire's assets, aiming, and range logic while leaving the existing Crossfire skill intact.
 
-Level-10 upgrades and scrolling through all INSTALLed units in the production list are implemented. Pathfinding around round structures and tightly packed turrets, production-list reordering, the new lock-on feature, the first PWA update transition, and Tauri Mac remain to be done. [Roadmap](docs/en/public/roadmap.md) · [Architecture](docs/en/public/architecture.md) · [Development history](docs/en/public/development-history.md) · [Credits](CREDITS.en.md)
+Level-10 upgrades and scrolling through all INSTALLed units in the production list are implemented. Pathfinding around round structures and tightly packed turrets, production-list reordering, the new lock-on feature, and final production update checks for PWA and Tauri Mac remain to be done. [Roadmap](docs/en/public/roadmap.md) · [Architecture](docs/en/public/architecture.md) · [Development history](docs/en/public/development-history.md) · [Credits](CREDITS.en.md)
 
 [Implementation status](docs/en/public/implementation-status.md) · [Documentation](docs/en/public/README.md) · [Changelog](CHANGELOG.en.md) · [Credits](CREDITS.en.md)
 

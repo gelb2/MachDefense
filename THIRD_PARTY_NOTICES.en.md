@@ -31,3 +31,8 @@ The web uses Emscripten's OpenAL implementation through `-lopenal` in `Web/CMake
 The compatibility app's original game package is not uploaded externally. External-code notices are not replaced with this project's author name. Notice-file sources and hashes are in the [inventory](docs/license-notice-sources.json).
 
 [Code scope](LICENSE-SCOPE.en.md) · [Asset terms](ASSET-LICENSES.en.md)
+
+
+## Tauri Mac
+
+`Desktop/Tauri` uses Tauri, Wry, Tao and Rust libraries. Cargo.lock fixes the versions. The build collects each package’s license declaration and LICENSE, COPYING, NOTICE and COPYRIGHT files into `Contents/Resources/notices/` in the app. Tauri, Wry and Tao offer MIT/Apache-2.0 licensing; package notices are preserved. Game, Emscripten and asset notices are included in the same folder. [Tauri upstream](https://github.com/tauri-apps/tauri) · [Build script](Desktop/Tauri/scripts/prepare.py).

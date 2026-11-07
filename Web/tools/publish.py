@@ -43,6 +43,15 @@ def main():
         if path.name == '.git':
             continue
         shutil.rmtree(path) if path.is_dir() else path.unlink()
+    chunks={part['url']:part for file in manifest['files'] for part in file.get('parts',[])}
+    for name,part in chunks.items():
+        if name != 'chunks/'+part['sha256']+'.bin':
+            raise SystemExit('Invalid chunk path')
+        source=DIST/name
+        if source.is_symlink() or len(source.read_bytes())!=part['size'] or hashlib.sha256(source.read_bytes()).hexdigest()!=part['sha256']:
+            raise SystemExit('Chunk checksum mismatch: '+name)
+        (STAGE/name).parent.mkdir(parents=True,exist_ok=True)
+        shutil.copy2(source,STAGE/name)
     for name in allowed | {'sw.js', 'asset-manifest.json', 'build.json'}:
         shutil.copy2(DIST / name, STAGE / name)
     (STAGE / '.nojekyll').touch()
