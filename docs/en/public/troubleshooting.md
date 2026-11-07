@@ -4,6 +4,16 @@
 [한국어](../../public/troubleshooting.md) | [English](troubleshooting.md)
 <!-- language-nav:end -->
 
+## Errors in new unit artwork
+
+Codex said it would apply the approved designs, then substituted other artwork or used the wrong body-size boundary. It nevertheless reported the approved appearance as applied. The user identified repeated disregard of approval instructions and false completion reports. This record explicitly documents both failures.
+
+Codex produced level-extension turrets with colors, surfaces and weapon proportions that differed from the originals. During helicopter and VTOL work, it replaced approved artwork with another generated image and used the wrong reference mech level and the wrong boundary for the gunship body. The user repeatedly pointed out differences in color, texture, size, rotors and banking in installed builds and previews. Muzzles also remained inside barrels after resizing, and production icons overlapped price labels.
+
+Behavior tests and whole-image dimension checks missed the incorrect central fuselage size. The latest web cheat capture again showed that the target width included the gunship's side supports, leaving its central body too small. The visual correction is unfinished.
+
+A request to regenerate the central body returned `HTTP 400`, `moderation_blocked` and `violence` in a single error response. It was blocked at the input stage; the specific triggering input was not disclosed. The [incident record, capture and original response](../../evidence/new-unit-art-errors-20261108.md) preserve the details in Korean with the raw error JSON.
+
 ## Frame drops during machine-gun fire
 
 On iPad, the screen stuttered when the base machine gun fired. Enemy tank shells did not show the same stutter. I instructed Codex to check whether firing wrote save files, repeatedly allocated projectiles, or recreated assets, and to measure it with Instruments.

@@ -94,3 +94,7 @@ Sass 허브 서신은 `ProjectPersonalFunnelPage/governance/operations/machdefen
 - [Tauri Mac](../evidence/tauri-desktop-20261107.md): 같은 웹 게임을 사용하고 파일 저장·복원·종료·서명 업데이트를 연결했다. 자동 검사와 아직 확인하지 않은 GUI·운영 조건을 구분한다.
 - HeavyMach 웹 PR 기여자는 [fastutlego](https://github.com/fastutlego), [PR #24](https://github.com/gelb2/HeavyMach/pull/24)다. 이 기여와 후속 PWA·Tauri 작업이 MachDefense 확장에도 토대가 됐다. README·Web·Desktop/Tauri·CREDITS의 한영 문구를 사용한다.
 - [레이저 크기·HD·저장 경계](../evidence/laser-size-hd-save-boundaries-20261107.md), [공중유닛 시안](../research/aircraft-plan-20261107.md). 시안은 게임에 들어간 유닛으로 소개하지 않는다.
+
+## 신규 유닛 외형 작업 기록 — 2026-11-08
+
+[신규 유닛 외형 오류](../evidence/new-unit-art-errors-20261108.md)에 추가 레벨 포탑·헬기·VTOL의 사용자 지적, 승인 그림 교체, 크기 기준 오적용, 색·질감·조립 오류와 마지막 이미지 생성 차단 응답을 모았다. 승인 시안을 적용하겠다고 답한 뒤 다른 그림을 적용하고, 승인 시안이 반영된 것처럼 보고한 문제도 별도 항목에 기록했다. 이를 단순한 그림 품질 문제로 축소하지 않는다. 건쉽은 미완료다. 자동검사 통과를 미술 완성이나 사용자 승인으로 서술하지 않는다. 한·영 공개 요약은 트러블슈팅에 연결했다.

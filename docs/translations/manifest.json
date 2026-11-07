@@ -82,9 +82,9 @@
     {
       "ko": "docs/public/troubleshooting.md",
       "en": "docs/en/public/troubleshooting.md",
-      "ko_sha256": "236a7a6682a2558c41545ce6d7a9b268b66929899f49306235e0e3064ee2e254",
-      "en_sha256": "43bbc9090e7d40ee6f06d6c4c8a0adcb12a7b11b9a3893428d40a5a8030d516e",
-      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
+      "ko_sha256": "8dbcdb1ce47f0edef084f363d5a5a9d5224736e00c7e881e831ccc0584f3219b",
+      "en_sha256": "708e47ac1ed429f2fa59efbd74a61605df23887e2abaa5dbfbe7953e41927dea",
+      "review": "2026-11-08: approval violations and false completion reports explicitly matched; turret/aircraft errors, unfinished body correction and raw moderation error linked."
     },
     {
       "ko": "docs/public/validation.md",
