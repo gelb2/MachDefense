@@ -13,9 +13,29 @@ struct Resources:md::ResourceAccess{
 struct Host:md::HostServices{int writes=0,sounds=0;std::optional<md::Bytes>readSave()override{return{};}bool writeSave(std::span<const std::uint8_t>)override{++writes;return true;}void playSound(std::string_view,float,float)override{++sounds;}void playMusic(std::string_view,float)override{}void stopMusic()override{}void requestName(std::string,std::size_t,std::function<void(std::optional<std::string>)>)override{}};
 
 #include "AircraftComparisonScene.hpp"
+#include "Core/Validation/AircraftComparison.hpp"
+#include <algorithm>
 int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
- for(unsigned mode=0;mode<3;++mode){md::validation::AircraftComparisonScene scene(r,mode);auto& w=*scene.world;assert(w.actors().size()==4);auto before=scene.frame();unsigned heliSprites=0,shadows=0;for(const auto& s:before.sprites)if(s.image.starts_with("ALight")||s.image.starts_with("AHeavy")){assert(s.nearest);++heliSprites;if(s.color.r==0){++shadows;assert(s.color.a==.55f);}}assert(heliSprites==10&&shadows==5);
- for(const char* name:{"ALightBody.png","ALightRotor.png","AHeavyBody.png","AHeavyRotor.png"}){
+ auto data=r.read("Tables/WeaponInfo.tsv");auto table=md::DataTable::parse({reinterpret_cast<const char*>(data.data()),data.size()});
+ for(bool phone:{false,true}){
+  auto catalog=md::WeaponCatalog::load(table,phone);const auto count=catalog.size();md::validation::appendAircraftWeapons(catalog);assert(catalog.size()==count+5);
+  for(const auto& binding:md::validation::aircraftWeapons){auto a=*catalog.find(binding.part),b=*catalog.find(binding.original);
+   assert(a.type==b.type&&a.damage==b.damage&&a.damageRange==b.damageRange&&a.shotRange==b.shotRange&&a.shotCount==b.shotCount&&a.shotDelay==b.shotDelay&&a.reloadDelay==b.reloadDelay&&a.speed==b.speed&&a.aimRate==b.aimRate&&a.special1==b.special1&&a.special2==b.special2&&a.shell==b.shell&&a.uiTile==b.uiTile&&a.bulletImage==b.bulletImage&&a.bulletTile==b.bulletTile&&a.effectImage==b.effectImage&&a.effectType==b.effectType&&a.effectColumns==b.effectColumns&&a.effectRows==b.effectRows&&a.explodeImage==b.explodeImage&&a.explodeScale==b.explodeScale&&a.fireSound==b.fireSound);
+  }
+  bool rejected=false;try{catalog.addAlias("E_Tank31_Wpn","E_Turret_Wpn_02");}catch(const std::runtime_error&){rejected=true;}assert(rejected&&catalog.find("E_Tank31_Wpn")->damage==120);
+  // First medium missile burst is exactly two, with the original one-second spacing.
+  auto missile=*catalog.find("AHeavyMissile");md::WeaponController controller;md::DarwinRandom random(12);md::WeaponFrame frame;frame.manualFire=true;frame.muzzlePosition={17,23};unsigned shots=0;std::vector<double> times;
+  for(int i=0;i<240;++i){frame.time=i/60.;controller.tick(missile,frame,random,[&](const md::WeaponFire& f){assert(f.origin.x==17&&f.origin.y==23);++shots;times.push_back(frame.time);});}
+  assert(shots==2&&times[1]-times[0]>=1.&&times[1]-times[0]<1.02);
+ }
+ auto models=md::BattleModels::load(r);md::validation::appendAircraftModels(models);
+ for(const char* name:{"AircraftLight","AircraftHeavy"})for(float angle:{0.f,1.57079632679f,3.14159265359f,4.71238898038f}){
+  auto poses=models.pose(name,1,angle,angle,angle);
+  for(const auto& pose:poses)if(pose.definition->type==4){auto m=pose.muzzle();assert(m);auto size=r.imageSize(pose.definition->image);float dx=m->x-pose.localCenter.x,dy=m->y-pose.localCenter.y;float forward=dx*std::cos(angle)+dy*std::sin(angle);assert(std::abs(forward-size.x*.5f)<=.51f);assert(pose.definition->sockets.front().x==0&&pose.definition->sockets.front().y==0);}
+ }
+
+ for(unsigned mode=0;mode<3;++mode){md::validation::AircraftComparisonScene scene(r,mode);auto& w=*scene.world;assert(w.actors().size()==4);auto before=scene.frame();unsigned heliSprites=0,shadows=0;for(const auto& s:before.sprites)if(s.image.starts_with("ALight")||s.image.starts_with("AHeavy")){assert(s.nearest);++heliSprites;if(s.color.r==0){++shadows;assert(s.color.a==(s.image.find("Rotor")!=std::string::npos?.13f:.55f));}}assert(heliSprites==20&&shadows==10);
+ for(const char* name:{"ALightBody.png","ALightRotor.png","AHeavyBody.png","AHeavyRotor.png","ALightGun.png","ALightMissile.png","AHeavyGun.png","AHeavyMissile.png","AHeavyCannon.png"}){
   const md::Sprite *shadow=nullptr,*body=nullptr;for(const auto& s:before.sprites)if(s.image==name){if(s.color.r==0)shadow=&s;else body=&s;}
   assert(shadow&&body);const float z=mode==0?1.f:(mode==1?.5f:1.375f);const float gap=(std::string_view(name).starts_with("ALight")?16.f:22.f)*z;
   assert(std::abs(shadow->destination.x-body->destination.x-gap)<.001f&&std::abs(shadow->destination.y-body->destination.y-gap)<.001f);assert(shadow->rotationDegrees==body->rotationDegrees);
@@ -24,8 +44,28 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
  w.setPaused(true);angle=light->radarAngle;auto time=w.time();for(int i=0;i<60;++i)w.tick();assert(light->radarAngle==angle&&w.time()==time);w.setPaused(false);
  auto pos=light->position;scene.move();for(int i=0;i<240;++i)w.tick();assert(light->position.x!=pos.x||light->position.y!=pos.y);assert(scene.host.writes==0);assert(w.actors().size()==4);
  auto frame=scene.frame();for(const auto& s:frame.sprites){assert(std::isfinite(s.destination.x)&&std::isfinite(s.destination.y));}
+ scene.fight();
+ const int initialHP=w.actors()[0]->hp,heavyHP=w.actors()[2]->hp;
+ bool projectiles=false;for(int i=0;i<900;++i){w.tick();projectiles|=!w.projectiles().empty();}
+ assert(projectiles&&scene.host.sounds>0&&scene.host.writes==0);
+ assert(w.actors()[0]->hp<initialHP&&w.actors()[2]->hp<heavyHP);
  // Starting a real stage restores its normal original spawn path.
  w.start(0);for(int i=0;i<900;++i)w.tick();assert(w.actors().size()>2);
+ }
+ // Every attached weapon fires independently through the original World path.
+ for(const auto& binding:md::validation::aircraftWeapons){
+  md::validation::AircraftComparisonScene scene(r,0);scene.fight();auto& w=*scene.world;
+  md::WorldActor* shooter=nullptr;
+  for(const auto& a:w.actors())if(a->flightHeight>0){
+   auto& guns=a->weapons;std::erase_if(guns,[&](const auto& g){return g.name!=binding.part;});
+   if(!guns.empty())shooter=a.get();
+  }
+  assert(shooter);auto* target=w.actor(shooter->target);int hp=target->hp;
+  // Put the target well inside all original ranges to test each binding.
+  target->position={shooter->position.x-100,shooter->position.y};target->vehicle.position=target->position;
+  for(int i=0;i<1200;++i)w.tick();
+  assert(target->hp<hp&&scene.host.sounds>0&&scene.host.writes==0);
+  std::cout<<binding.part<<" -> "<<binding.original<<": damage="<<(hp-target->hp)<<" sounds="<<scene.host.sounds<<"\n";
  }
  std::cout<<"AircraftTests: 3 viewports; 4 real World actors; original part assembly, independent fast rotors, pause, movement, ground shadows, no save writes, campaign restart passed\n";
 }

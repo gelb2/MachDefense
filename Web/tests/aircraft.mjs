@@ -23,7 +23,20 @@ try{
   }
   await call(4);const moving=JSON.parse(await page.evaluate(async mode=>{let s;for(let i=0;i<240;++i)s=await MDTest.call('md_aircraft_scene',['number','number'],[1,mode],'string');return s;},mode));
   assert.notEqual(moving.actors[1].x,initial.actors[1].x);assert.equal(moving.writes,0);assert.equal(moving.actors.length,4);const after=await page.evaluate(()=>MDTest.state());assert.equal(after.uploads,before.uploads);assert.equal(after.writes,before.writes);
-  result.scenes.push({mode,initial,moving,uploadsDuringMotion:after.uploads-before.uploads,pause:true});
+  await call(6);
+  const combat=JSON.parse(await page.evaluate(async mode=>{let s;for(let i=0;i<600;++i)s=await MDTest.call('md_aircraft_scene',['number','number'],[1,mode],'string');return s;},mode));
+  assert.ok(combat.actors[0].hp<100000&&combat.actors[2].hp<100000);assert.ok(combat.sounds>0);assert.equal(combat.writes,0);
+  const warm=await page.evaluate(()=>MDTest.state());
+  if(mode===0&&engine==='chromium'){
+   const encoded=await page.evaluate(async()=>{
+    const stream=document.querySelector('#game').captureStream(60),rec=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp9',videoBitsPerSecond:1800000}),chunks=[];
+    rec.ondataavailable=e=>chunks.push(e.data);const done=new Promise(resolve=>rec.onstop=resolve);rec.start();
+    for(let i=0;i<360;++i){await new Promise(requestAnimationFrame);await MDTest.call('md_aircraft_scene',['number','number'],[1,0],'string');}
+    rec.stop();await done;stream.getTracks().forEach(t=>t.stop());return await new Promise(resolve=>{let r=new FileReader();r.onload=()=>resolve(r.result.split(',')[1]);r.readAsDataURL(new Blob(chunks,{type:'video/webm'}));});
+   });await fs.writeFile(`${out}/weapons.webm`,Buffer.from(encoded,'base64'));
+  }
+  const end=await page.evaluate(()=>MDTest.state());assert.equal(end.uploads,warm.uploads);
+  result.scenes.push({mode,initial,moving,combat,uploadsDuringMotion:after.uploads-before.uploads,uploadsDuringWarmCombat:end.uploads-warm.uploads,pause:true});
  }
  assert.deepEqual(errors,[]);result.ok=true;
 }catch(e){result.error=e.stack;process.exitCode=1;await page.screenshot({path:`${out}/failed-${engine}.png`});}finally{result.errors=errors;await fs.writeFile(`${out}/check-${engine}.json`,JSON.stringify(result,null,2));console.log(JSON.stringify(result));await browser.close();}

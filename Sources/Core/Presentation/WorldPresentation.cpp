@@ -74,6 +74,11 @@ void World::appendSprites(Frame& frame)const{
                     // The silhouette follows the same moving part on the ground.
                     auto& shadow=part.sprites[0];shadow.destination.x+=a->flightHeight*scale;shadow.destination.y+=a->flightHeight*scale;shadow.color.a=.55f;
                     shadow.nearest=part.sprites[1].nearest=true;
+                    if(pose.definition->type==7){
+                        // Pre-rendered rotational exposure: no slowly trackable blades,
+                        // no per-frame image generation or extra texture upload.
+                        part.sprites[1].color.a=.40f;shadow.color.a=.13f;
+                    }
                 }
                 layers[0].sprites.push_back(std::move(part.sprites[0]));layers[baseLayer+(a->hp>0&&pose.hasParent?1:0)].sprites.push_back(std::move(part.sprites[1]));
             }

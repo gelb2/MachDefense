@@ -1,48 +1,117 @@
 {
-  "source": "Art/Aircraft/parts/aircraft-parts-v2.png",
-  "source_sha256": "03e3f2171db1d4da20547dee8371f4586d60e5782d3da792d5359ef9c48ce440",
   "pipeline": "tools/pack_aircraft_art.sh",
-  "palette_policy": "Full RGBA; original-16 experiment not applied following user correction",
+  "palette_policy": "Full RGBA, unchanged original game PNGs; no fixed palette",
+  "inputs": [
+    {
+      "path": "Art/Aircraft/parts/light-modular-v3.png",
+      "sha256": "031ae669fda0db51f2a819c6eebd2718c33134951b0e3e9eb216e296b78f1853"
+    },
+    {
+      "path": "Art/Aircraft/parts/heavy-modular-v3.png",
+      "sha256": "c1ddb73781749ef531c74224238fe7289e97c7a08f8df9a39e75f1adf0a2b86f"
+    },
+    {
+      "path": "Art/Aircraft/parts/heavy-body-v4.png",
+      "sha256": "cd5c4db5a41083f18a53d8994fe6a62a13e47c5662c16330f99932c5105da4d7"
+    },
+    {
+      "path": "Art/Aircraft/parts/rotor-running-v3.png",
+      "sha256": "46bc8e3e1d596d75be90aa6f4da4de757f6dfd8ee72477401ddc550e2e2e9083"
+    }
+  ],
   "sprites": [
     {
-      "name": "ALightBody",
-      "width": 27,
-      "height": 57,
+      "width": 80,
+      "height": 87,
       "cgbi": false,
       "interlaced": false,
-      "colors": 786,
-      "alpha_levels": 146,
-      "sha256": "6f0b937419d30d7fcead41407266ddbd821e8b306c4959b721778356a6043ca6"
-    },
-    {
-      "name": "ALightRotor",
-      "width": 26,
-      "height": 26,
-      "cgbi": false,
-      "interlaced": false,
-      "colors": 276,
-      "alpha_levels": 114,
-      "sha256": "c30325972f0961b61fdbc9078c6df89904cf39c1e9187491adf2f4fe4bed0840"
-    },
-    {
       "name": "AHeavyBody",
-      "width": 87,
-      "height": 80,
-      "cgbi": false,
-      "interlaced": false,
-      "colors": 3674,
-      "alpha_levels": 231,
-      "sha256": "cf6e3cdefad9e85b16f06ac8f994bdbba6949cd000a2d5a391b2e52da9889311"
+      "colors": 3281,
+      "alpha_levels": 207,
+      "sha256": "395aa47eeaa4f8374b6b84cd2a00a517ac617d1fa7da39ee4449fab6b3b44979"
     },
     {
-      "name": "AHeavyRotor",
-      "width": 41,
-      "height": 40,
+      "width": 22,
+      "height": 9,
       "cgbi": false,
       "interlaced": false,
-      "colors": 537,
-      "alpha_levels": 150,
-      "sha256": "4194e0458b5644f5c60e5cbf80b102e226ac494971830fae735238e8f6215154"
+      "name": "AHeavyCannon",
+      "colors": 148,
+      "alpha_levels": 62,
+      "sha256": "c92be4f1555a016be664d0703c0dfa760525a4052b4051a834685211c0ce1f89"
+    },
+    {
+      "width": 18,
+      "height": 12,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "AHeavyGun",
+      "colors": 163,
+      "alpha_levels": 64,
+      "sha256": "524b2e8051fcb4e57783c99055075a2e50bdace8aa701f6f8210405a6171c663"
+    },
+    {
+      "width": 17,
+      "height": 10,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "AHeavyMissile",
+      "colors": 151,
+      "alpha_levels": 63,
+      "sha256": "d9d41eef42e771f2fdb26192e0701cb6bf8edac48ef75cffdd9e3be0af8781a4"
+    },
+    {
+      "width": 61,
+      "height": 61,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "AHeavyRotor",
+      "colors": 1161,
+      "alpha_levels": 237,
+      "sha256": "5f806478710bef2af768aa58c7659389afdf4e83a4c2ee36b7ef337e30e0b20d"
+    },
+    {
+      "width": 57,
+      "height": 18,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ALightBody",
+      "colors": 642,
+      "alpha_levels": 129,
+      "sha256": "77ba85b3fadc856ee56a0d0d3fa600ad1728ffc7e9eaf338bc81f21d682dfe0b"
+    },
+    {
+      "width": 11,
+      "height": 6,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ALightGun",
+      "colors": 57,
+      "alpha_levels": 36,
+      "sha256": "704f2fa1b98f9ec4a591ebe2db5d918b0144fdbad04caa5ebd812b2a30dd0b26"
+    },
+    {
+      "width": 9,
+      "height": 6,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ALightMissile",
+      "colors": 52,
+      "alpha_levels": 28,
+      "sha256": "92bb0bfb75e34e92a722d901b5ea63cc848dd4f39cea5f4f6cba64e9847a2daa"
+    },
+    {
+      "width": 39,
+      "height": 39,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ALightRotor",
+      "colors": 636,
+      "alpha_levels": 213,
+      "sha256": "6c931dcef883ed5437d4ba16312a2b8092b183f08d1027525dd68e07afc55561"
     }
-  ]
+  ],
+  "rotor_body_opacity": 0.4,
+  "rotor_shadow_opacity": 0.13,
+  "body_shadow_opacity": 0.55
 }
