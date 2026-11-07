@@ -229,9 +229,9 @@
     {
       "ko": "docs/public/unease-and-typewriters.md",
       "en": "docs/en/public/unease-and-typewriters.md",
-      "ko_sha256": "2447ce43b74990059eda7ab13743c6c98802c5bef4c48531812f819b85b48eab",
-      "en_sha256": "65b334c3358abe67961575fea87d6ce6ff297b0805430b4416a04d5aff1c5327",
-      "review": "2026-11-08: removed agent-added subheadings from Korean/English essay per author correction; user-supplied main title and body paragraphs unchanged."
+      "ko_sha256": "201eabe9146bac248ee7eb7327bf43bd277e4e45d707506efd4c1a471ff4ee81",
+      "en_sha256": "baab0dada803f91748bc269afa49d7becb0c85e3c7fd9811522de805b3d91047",
+      "review": "2026-11-08: appended author paragraph on the typewriter and overseer; Korean wording preserved verbatim and English paragraph added."
     }
   ]
 }
