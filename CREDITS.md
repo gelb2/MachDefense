@@ -1,5 +1,9 @@
 # 제작자와 사용 자원
 
+<!-- language-nav:start -->
+[한국어](CREDITS.md) | [English](CREDITS.en.md)
+<!-- language-nav:end -->
+
 ## 원작
 
 MachDefense의 그림·음악·게임 설계는 원작 제작진의 작업이다. 이 복원은 당시 게임을 다시 실행하고 다른 플랫폼에서 플레이할 수 있도록 만드는 프로젝트다.

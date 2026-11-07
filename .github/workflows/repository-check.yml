@@ -11,6 +11,8 @@ jobs:
           fetch-depth: 0
       - run: python3 tools/original_guard.py --history
       - run: python3 tools/document_contract.py check
+      - run: python3 tools/check_translations.py
+      - run: python3 -m unittest discover -s Tests -p 'test_*translations*.py'
       - run: python3 -m unittest discover -s Tests/tools -v
       - name: Main accepts develop only
         if: github.event_name == 'pull_request' && github.base_ref == 'main'

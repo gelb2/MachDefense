@@ -1,5 +1,9 @@
 # 개발자의 변
 
+<!-- language-nav:start -->
+[한국어](RESTORATION.md) | [English](en/RESTORATION.md)
+<!-- language-nav:end -->
+
 ## Mach 시리즈를 다시 만든 이유
 
 이와 비슷한 프로젝트를 진행한 [mesabloo](https://github.com/Mesabloo/hm-defense)라는 사람이 있었다. 그는 HeavyMach Defense의 에셋을 구하고 소스코드를 밑바닥부터 새로 작성했다. 유닛 간 교전 알고리즘을 구현하다가 멈춘 듯했다. 나는 소스코드를 밑바닥부터 새로 작성해야 했던 그 보다는 시작점이 더 나은 상황이었다.

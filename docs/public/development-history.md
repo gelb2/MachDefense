@@ -1,5 +1,9 @@
 # 복원과 개발 과정
 
+<!-- language-nav:start -->
+[한국어](development-history.md) | [English](../en/public/development-history.md)
+<!-- language-nav:end -->
+
 ## 원본을 구한 곳
 
 HeavyMach1 복원을 시작할 때 구글 검색의 Gemini가 [Internet Archive](https://archive.org)를 알려줬다. 그곳의 [HeavyMach 시리즈 모음](https://archive.org/details/heavy-mach-archive_202406)에서 원본을 받았다. MachDefense 원본도 같은 모음에서 확보했다.

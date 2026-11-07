@@ -1,5 +1,9 @@
 # Quick Play — PWA와 공유 복원 코드
 
+<!-- language-nav:start -->
+[한국어](quick-play.md) | [English](../en/public/quick-play.md)
+<!-- language-nav:end -->
+
 [MachDefense 플레이·PWA 설치](https://gelb2.github.io/MachDefense/)
 
 ## PWA로 설치하기

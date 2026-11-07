@@ -39,7 +39,12 @@
       "docs/evidence/menu-layout-20261104.md",
       "docs/troubleshooting.md",
       "docs/evidence/source-cheat-campaign-20261104.md",
-      "docs/evidence/port-source-parity-20261104.md"
+      "docs/evidence/port-source-parity-20261104.md",
+      "docs/evidence/v05-release-20261107.md",
+      "docs/evidence/turret-body-only-integration-20261107.md",
+      "Art/Level10/20261107/runtime-art.json",
+      "Sources/Core/Presentation/GameHUD.cpp",
+      "Tests/TurretArtSweep.hpp"
     ],
     "combat": [
       "docs/game-calculation-policy.md",
@@ -49,11 +54,22 @@
       "docs/evidence/source-session-validation-20261104.md",
       "docs/troubleshooting.md",
       "docs/evidence/source-cheat-campaign-20261104.md",
-      "docs/evidence/port-source-parity-20261104.md"
+      "docs/evidence/port-source-parity-20261104.md",
+      "docs/research/level10-plan-20261107.md",
+      "docs/evidence/level10-range-damage-20261107.md",
+      "docs/evidence/level10-effects-20261107.md",
+      "docs/evidence/terrain-original-followup-20261106.md",
+      "docs/evidence/economy-frame-audit-20261106.md",
+      "Sources/Core/Simulation/Combat.cpp",
+      "Tests/Level10DataTests.cpp"
     ],
     "lifecycle": [
       "docs/runtime-policy.md",
-      "docs/stage-transition-contract.md"
+      "docs/stage-transition-contract.md",
+      "docs/evidence/audio-session-20261105.md",
+      "docs/evidence/effects-resume-20261105.md",
+      "Sources/Platform/Apple/MDAudio.mm",
+      "docs/evidence/v05-release-20261107.md"
     ],
     "apple": [
       "docs/design.md",
@@ -68,7 +84,11 @@
       "docs/evidence/source-session-validation-20261104.md",
       "docs/troubleshooting.md",
       "docs/evidence/source-cheat-campaign-20261104.md",
-      "docs/evidence/port-source-parity-20261104.md"
+      "docs/evidence/port-source-parity-20261104.md",
+      "Apple/iOS/project.yml",
+      "Sources/Platform/Apple/MDApplication.mm",
+      "Apple/Tests/SaveTransferAdapterTests.mm",
+      "docs/evidence/v05-release-20261107.md"
     ],
     "android": [
       "docs/design.md",
@@ -76,7 +96,11 @@
       ".agents/skills/port-machdefense-android/SKILL.md",
       ".agents/skills/debug-machdefense-android/SKILL.md",
       "Android/README.md",
-      "docs/evidence/android-native-20261106.md"
+      "docs/evidence/android-native-20261106.md",
+      "Android/app/build.gradle.kts",
+      "Android/app/src/main/cpp/Runtime.cpp",
+      "docs/evidence/save-transfer-all-platforms-20261106.md",
+      "docs/evidence/v05-release-20261107.md"
     ],
     "writing": [
       "docs/report-site.md",
@@ -86,7 +110,18 @@
       "docs/RESTORATION.md",
       "docs/public/gameplay.md",
       "docs/public/architecture.md",
-      "docs/public/validation.md"
+      "docs/public/validation.md",
+      "README.md",
+      "docs/public/README.md",
+      "docs/public/features.md",
+      "docs/public/build-and-install.md",
+      "docs/public/development-history.md",
+      "docs/public/troubleshooting.md",
+      "docs/usability-todo.md",
+      "CHANGELOG.md",
+      "docs/document-localization-plan.md",
+      "docs/translations/scope.json",
+      "docs/editorial/sass-publication-guide.md"
     ],
     "repository": [
       "docs/repository-management.md",
@@ -94,7 +129,10 @@
       "tools/original_guard.py",
       "tools/setup.py",
       "docs/release-process.md",
-      "CHANGELOG.md"
+      "CHANGELOG.md",
+      "docs/document-governance.md",
+      "tools/document_contract.py",
+      "docs/evidence/document-hygiene-20261107.md"
     ],
     "modules": [
       "docs/design.md",
@@ -107,7 +145,10 @@
       "docs/evidence/module-work-20261105.md",
       "Modules/README.md",
       "docs/development.md",
-      "docs/save-transfer-web-tauri-plan.md"
+      "docs/save-transfer-web-tauri-plan.md",
+      "Modules/SaveTransfer/README.md",
+      "Modules/core-sources.cmake",
+      "docs/evidence/v05-release-20261107.md"
     ],
     "save_transfer": [
       "docs/save-transfer-web-tauri-plan.md",
@@ -118,7 +159,16 @@
       "Sources/Core/Session/SaveData.cpp",
       "Sources/Core/Contracts/Game.hpp",
       "docs/save-transfer-native-plan-20261106.md",
-      "docs/evidence/save-transfer-all-platforms-20261106.md"
+      "docs/evidence/save-transfer-all-platforms-20261106.md",
+      "Modules/SaveTransfer/README.md",
+      "Modules/SaveTransfer/Codec.hpp",
+      "Modules/SaveTransfer/Validate.hpp",
+      "Modules/SaveTransfer/FileStore.hpp",
+      "Sources/Core/Presentation/Menu.cpp",
+      "Sources/Core/Session/GameSession.cpp",
+      "Tests/TransferLevel10Tests.cpp",
+      "Tests/TransferFileStoreTests.cpp",
+      "docs/evidence/level10-recovery-20261107.md"
     ],
     "web": [
       "docs/save-transfer-web-tauri-plan.md",
@@ -129,7 +179,23 @@
       "Web/README.md",
       "Distribution/README.md",
       "docs/evidence/web-pwa-20261106.md",
-      "Modules/SaveTransfer/README.md"
+      "Modules/SaveTransfer/README.md",
+      "Web/src/Main.cpp",
+      "Web/src/Renderer.cpp",
+      "Distribution/Web/app.js",
+      "Distribution/Web/storage.js",
+      "Distribution/Web/sw.js",
+      "docs/evidence/save-transfer-all-platforms-20261106.md",
+      "docs/evidence/v05-release-20261107.md",
+      "docs/research/pwa-tauri-updates-20261107.md"
+    ],
+    "tauri": [
+      "Desktop/Tauri/README.md",
+      "docs/save-transfer-web-tauri-plan.md",
+      "docs/research/pwa-tauri-updates-20261107.md",
+      "docs/usability-todo.md",
+      "Web/README.md",
+      "Distribution/README.md"
     ]
   }
 }

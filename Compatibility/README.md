@@ -1,5 +1,9 @@
 # MachDefense iOS 호환 실행판
 
+<!-- language-nav:start -->
+[한국어](README.md) | [English](README.en.md)
+<!-- language-nav:end -->
+
 원본 Mach Defense 1.0.5를 현재 iPhone·iPad에서 비교 실행하는 앱이다. 원본 ARMv7 코드를 touchHLE로 실행한다. 소스 재구현 제품과 구분한다.
 
 원본은 저장소 밖에서 읽으며 SHA-256을 확인한다. 원본을 포함한 앱·빌드 폴더도 저장소 밖에 둔다. IPA와 이 비교 앱은 GitHub·보고 사이트·릴리스 자산에 올리지 않는다.
