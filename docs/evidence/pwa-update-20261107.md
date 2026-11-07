@@ -21,3 +21,15 @@ data의 마지막 자원 일부를 바꾼 시험에서는 **72,193바이트 조�
 현재 운영 v0.5의 시작 화면에는 새 워커 전환 버튼/요청 코드가 없다. 이미 켜 둔 구버전 창이 새 설치를 붙잡고 있으면 해당 창을 닫아야 새 워커가 활성화된다. 새 시작 화면을 받은 이후의 갱신 경로는 위 검사로 확인했다. 최종 운영 배포 뒤 기존 설치에서 이 최초 전환을 다시 검사한다.
 
 기술 근거: [Service Worker skipWaiting](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting), [clients](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/clients). 실행 중인 다른 게임 창을 강제로 새 워커로 바꾸지 않도록 적용했다.
+
+## 최종 가격 표·구버전 전환 재검사
+
+레이저 가격을 포함한 빌드 `87ea3cfe8a8dc249`의 data는 66,614,462바이트다. Chrome·WebKit 재검사에서 95조각을 사용했고, 마지막 자원 일부만 바꾼 시험은 72,177바이트 조각 하나만 받았다. 위의 수치는 가격 수정 전 검사 기록이다.
+
+운영 gh-pages 커밋 `a5c6bf682ed0a030a7f5ee98930ebaf981294f63`의 v0.5 산출물을 그대로 내려받아 구버전 설치를 재현했다. 두 브라우저 모두 실행 중 게임은 이전 버전으로 유지했고, 창을 모두 닫고 다시 열면 새 버전으로 바뀌었다. iPhone 백업의 저장 바이트, 실행 중 가격 표, 오프라인 재실행을 대조했다. 같은 출처의 다른 프로젝트 창이 MachDefense 업데이트를 막지 않는 것도 검사했다.
+
+구버전 검사에서 설치 대기를 잘못 판정한 원인은 검사 코드였다. 비동기 콜백을 `waitForFunction`에 넘겨 설치 전에 다음 단계로 진행했다. 워커 등록 객체를 먼저 얻고 `waiting` 상태를 동기 조건으로 기다리도록 수정한 뒤 두 브라우저를 다시 검사했다. 게임의 워커를 강제 활성화하는 코드는 추가하지 않았다.
+
+실제 Galaxy Chrome에서도 복원 코드 입력·재출력, 게임 진입, 그래픽 컨텍스트 복구, 서버 연결 불가 상태의 재실행, 저장 실패·오래된 쓰기 거절을 통과했다. 이는 로컬 시험 주소의 검사이며 설치형 PWA의 장기 보존 검사는 별도다.
+
+최종 결과는 `.local/release-v06/integrity-final-{chrome,webkit}.json`, `legacy-final-{chrome,webkit}.json`, `galaxy-web/browser-regression-galaxy-chrome-normal.json`에 있다. 사용자 저장과 코드는 외부에 올리지 않는다.

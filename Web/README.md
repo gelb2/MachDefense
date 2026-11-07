@@ -6,7 +6,7 @@
 
 [플레이·PWA 설치](https://gelb2.github.io/MachDefense/) · [사용자 설치 안내](../docs/public/build-and-install.md)
 
-같은 C++20 Core·효과음·자원을 Emscripten으로 빌드한다. WebGL2 출력과 브라우저 입력은 `src/`, 시작 화면·IndexedDB·service worker는 `../Distribution/Web/`에 있다. 게임 메뉴·HUD·복원 버튼은 공용 C++에서 그린다. Tauri 실행기는 아직 없다.
+같은 C++20 Core·효과음·자원을 Emscripten으로 빌드한다. WebGL2 출력과 브라우저 입력은 `src/`, 시작 화면·IndexedDB·service worker는 `../Distribution/Web/`에 있다. 게임 메뉴·HUD·복원 버튼은 공용 C++에서 그린다. [Tauri Mac 실행기](../Desktop/Tauri/README.md)는 같은 웹 산출물을 앱에 포함하고 진행을 Mac의 앱 데이터 폴더에 저장한다.
 
 [v0.5 검사 결과](../docs/evidence/v05-release-20261107.md) · [최초 구현 검사](../docs/evidence/web-pwa-20261106.md) · [개발 계획](../docs/save-transfer-web-tauri-plan.md).
 
@@ -66,3 +66,5 @@ python3 Web/tests/compare-frame.py .local/pwa-20261106
 ```
 
 144,000프레임의 비실수 데이터는 정확히 대조하고 실수 차이의 최대값을 기록한다. 현재 검사 한도는 0.001이다. 원래 전체 비트 해시 결과도 보존하며 이 비교 때문에 게임 계산을 바꾸지 않는다.
+
+HeavyMach의 웹판을 기여한 [fastutlego](https://github.com/fastutlego)에게 감사드린다. [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24)의 WebAssembly 실행부·WebGL2 렌더링·입력·음향·저장 구현과 그 뒤의 PWA·Tauri 확장 절차가 MachDefense를 웹과 데스크톱으로 확장하는 데도 토대가 됐다. MachDefense의 PWA를 이 구조를 참고해 만들었고, 같은 웹 실행기를 Tauri Mac 앱에서도 사용했다.

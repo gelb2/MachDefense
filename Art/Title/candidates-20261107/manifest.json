@@ -1,0 +1,17 @@
+{
+  "reference": "Resources/Images/Title.jpg",
+  "reference_sha256": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696",
+  "status": "review only; not shipped; central repaint must not replace the original",
+  "images": {
+    "wide-v3.png": "94a7d4d47169b02713e6e0434a182f39f884cdaa57dad9bd3b1bc378c4b2e655",
+    "tall-v3.png": "1bc5cbd5a47d7fe0c187fc9c639332af3cd04c04f24461c03a723459670a99a6",
+    "tall-v4.png": "121fbbfbc96a5d882d664df9c83b0f66e712bc4df6841fca5f1975501a93db39"
+  },
+  "findings": [
+    "Wide and tall extensions keep a closer composition than the first two attempts.",
+    "The generated center still differs from the original.",
+    "A direct original-center overlay shows visible join lines; a feathered preview reduces them but changes edge pixels.",
+    "No generated title is bound to game resources.",
+    "Fourth attempt returned 1024x1536 and repainted the center instead of the requested 768x1536 narrow outpaint; not shipped."
+  ]
+}

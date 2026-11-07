@@ -1,3 +1,11 @@
+# PWA·Tauri·레이저 생산 가격 — 2026-11-07 작업 중
+
+작업 브랜치 `feat/pwa-tauri-followup-20261107`에서 PWA 업데이트와 레이저 생산 가격을 수정했고 Tauri Mac을 구현했다. C++ 42개 검사, 웹 강화·생산·복원 검사, Galaxy 설치·기능·복원 검사, iPhone 시뮬레이터 검사가 통과했다. iPhone·iPad 실기기 강화/HUD 검사와 정식·치트 앱 네 개 설치도 통과했다. 설치 후 저장 바이트가 모두 같았다. 운영 배포 대조는 남았다. [실기기 결과](evidence/native-release-20261107.md). [Tauri 결과](evidence/tauri-desktop-20261107.md) · [가격](evidence/laser-production-cost-20261107.md) · [PWA](evidence/pwa-update-20261107.md).
+
+레이저 크기는 원본도 크다. 확보한 세 MachDefense 판본은 유니버설 선언이며 별도 HD 패키지는 발견하지 못했다. [원본과 저장 경계 조사](evidence/laser-size-hd-save-boundaries-20261107.md). [공중유닛 계획과 시안](research/aircraft-plan-20261107.md)은 검토 단계다. 타이틀 확장 시안 두 장은 원본 기체가 바뀌어 제품에 적용하지 않았다.
+
+아래는 이전 작업 당시 기록이다.
+
 # 작업 지시·치트앱 검사 원고 — 2026-11-07
 
 [나는 이렇게 일을 시켰다](public/work-method.md)와 [나는 이렇게 테스트했다](public/testing-method.md)의 한·영 전문을 작성하고 README·문서 목차·검사·트러블슈팅에 연결했다. 각 게임의 기존 측정 기록과 직접 플레이 중 지적한 오류를 사용했다. [작성·검사 기록](evidence/work-test-publication-20261107.md). 게임 코드와 자원은 변경하지 않았다.

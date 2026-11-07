@@ -22,4 +22,6 @@ HeavyMach1에서 사용한 복원 절차와 스킬, 공통 코드·플랫폼 실
 
 OpenAL Soft는 효과음 재생, stb는 이미지 디코딩에 사용한다. 각 라이브러리의 소스와 라이선스는 `Modules/ThirdParty/`에 있다. [외부 고지](THIRD_PARTY_NOTICES.md) · [코드 라이선스](LICENSE-SCOPE.md) · [자원 조건](ASSET-LICENSES.md).
 
+HeavyMach의 웹판을 기여한 [fastutlego](https://github.com/fastutlego)에게 감사드린다. [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24)의 WebAssembly 실행부·WebGL2 렌더링·입력·음향·저장 구현과 그 뒤의 PWA·Tauri 확장 절차가 MachDefense를 웹과 데스크톱으로 확장하는 데도 토대가 됐다. MachDefense의 PWA를 이 구조를 참고해 만들었고, 같은 웹 실행기를 Tauri Mac 앱에서도 사용했다.
+
 [게임 소개](README.md) · [문서 목차](docs/public/README.md)

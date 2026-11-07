@@ -22,4 +22,6 @@ The work followed HeavyMach1's restoration procedure and skills, shared-code/pla
 
 OpenAL Soft plays sound effects; stb decodes images. Their sources and licenses are in `Modules/ThirdParty/`. [Third-party notices](THIRD_PARTY_NOTICES.en.md) · [Code license](LICENSE-SCOPE.en.md) · [Asset terms](ASSET-LICENSES.en.md).
 
+Thank you to [fastutlego](https://github.com/fastutlego) for contributing the HeavyMach web port. The WebAssembly host, WebGL2 renderer, input, audio and saves in [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24), together with the subsequent PWA and Tauri work, also laid the groundwork for bringing MachDefense to the web and desktop. I used that architecture for the MachDefense PWA and used the same web host in the Tauri Mac app.
+
 [Game overview](README.en.md) · [Documentation](docs/en/public/README.md)

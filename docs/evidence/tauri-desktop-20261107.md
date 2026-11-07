@@ -28,6 +28,10 @@
 
 ## 남은 확인
 
-직접 메뉴 종료·Cmd-Q·창 닫기, 실기기 최종 설치, 공개 Release에서 실제 업데이트 다운로드·재실행, 디스크 부족과 새 실행 파일의 시작 실패는 아직 이 기록의 통과 항목에 포함하지 않는다. 화면 조작 도구가 Mac 앱 창을 찾지 못하는 상태에서 자동 검사와 GUI 검사를 구분했다.
+직접 GUI에서 Desktop QA 프로필을 만들고 Cmd-Q로 종료했다. 다시 열어 같은 프로필이 남은 것을 확인하고 메뉴의 Quit MachDefense Desktop으로도 종료했다. 두 경우 모두 프로세스 종료를 확인했다. 창 닫기, 공개 Release에서 실제 업데이트 다운로드·재실행, 디스크 부족과 새 실행 파일의 시작 실패 검사는 남았다.
 
 [빌드와 사용](../../Desktop/Tauri/README.md) · [업데이트 조사](../research/pwa-tauri-updates-20261107.md) · [TODO](../usability-todo.md)
+
+## 앱 번들 서명 검사
+
+최종 포장 검사에서 실행 파일의 링커 서명만 있고 앱의 자원 서명이 빠진 것을 확인했다. `bundle.macOS.signingIdentity`를 `-`로 지정해 앱 전체를 ad-hoc 서명하도록 수정했다. 다시 만든 앱에 `codesign --verify --deep --strict`를 적용했다. 업데이트 패키지용 서명과 macOS 앱 서명은 별도로 검사한다. Developer ID 공증은 하지 않았다. [Tauri의 ad-hoc 서명 안내](https://v2.tauri.app/distribute/sign/macos/#ad-hoc-signing).

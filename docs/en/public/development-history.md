@@ -36,4 +36,6 @@ The same C++ was built with Emscripten and connected to WebGL2 rendering, browse
 
 Connecting the recovery codec and menu added service contracts, buttons, and wiring to 4 existing files. Game calculations and existing platform hosts were retained. Native results were compared before and after the changes; native and Wasm builds also produced matching game states and save results. [Web implementation and checks](../../evidence/web-pwa-20261106.md)
 
+HeavyMach web contributor [fastutlego](https://github.com/fastutlego) provided the WebAssembly runtime in [PR #24](https://github.com/gelb2/HeavyMach/pull/24). That contribution and the later PWA/Tauri integration also gave MachDefense a basis for its web and Mac hosts. Thank you for making that expansion possible.
+
 [Game overview](../../../README.en.md) · [Documentation](README.md)

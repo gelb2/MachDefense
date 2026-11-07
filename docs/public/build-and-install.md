@@ -21,6 +21,14 @@
 
 [PWA 안내와 공유 복원 코드](quick-play.md)
 
+## Tauri Mac
+
+[Mac 앱 다운로드](https://github.com/gelb2/MachDefense/releases/download/v0.6/MachDefense-Desktop-v0.6-arm64.zip). 압축을 풀고 MachDefense Desktop.app을 응용 프로그램 폴더로 옮겨 실행한다. macOS 14 이상 Apple Silicon용이다. 첫 실행부터 게임 자원이 포함되어 있다.
+
+앱은 ad-hoc 서명이며 Apple 공증을 받지 않았다. 실행이 차단되면 시스템 설정 → 개인정보 보호 및 보안 → 확인 없이 열기를 선택한다. 키보드로 텍스트를 입력하고 마우스·트랙패드로 게임을 조작한다. 전장 이동은 눌러 끌기이며 휠·트랙패드 스크롤은 생산 목록에서 동작한다. 전장 키보드 이동은 아직 없다.
+
+슬롯 화면의 GET CODE·ENTER CODE로 다른 플랫폼과 진행을 옮긴다. [빌드·저장·업데이트 설명](../../Desktop/Tauri/README.md).
+
 ## iPhone·iPad
 
 Apple Silicon Mac에 Xcode와 iOS Simulator, Python 3, CMake 3.20 이상을 설치한다. Homebrew를 쓴다면 `brew install cmake`로 CMake를 설치할 수 있다. 첫 빌드에서 저장소에 포함된 OpenAL Soft 소스를 CMake로 컴파일한다.

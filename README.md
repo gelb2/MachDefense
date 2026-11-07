@@ -4,10 +4,10 @@
 [한국어](README.md) | [English](README.en.md)
 <!-- language-nav:end -->
 
-[![Release v0.5](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.5)
-[![iOS, iPadOS, Android, Web, PWA](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
+[![Release v0.6](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.6)
+[![iOS, iPadOS, Android, Web, PWA, macOS](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
-[![C++20, Objective-C++, Kotlin, JavaScript](docs/public/media/badges/code.svg)](docs/public/architecture.md)
+[![C++20, Objective-C++, Kotlin, JavaScript, Rust](docs/public/media/badges/code.svg)](docs/public/architecture.md)
 [![Code license MIT](docs/public/media/badges/license.svg)](LICENSE-SCOPE.md)
 
 ## MachDefense를 다시 만든 이유
@@ -20,13 +20,15 @@
 
 [개발자의 변 전문](docs/RESTORATION.md)
 
-## Quick Play — PWA
+## Quick Play — PWA·Mac
 
 [**MachDefense 플레이·PWA 설치**](https://gelb2.github.io/MachDefense/)
 
 위 주소를 열어 게임을 설치하거나 브라우저에서 바로 플레이한다. iPhone·iPad는 Safari의 공유 메뉴에서 **홈 화면에 추가**, Android·Mac은 **INSTALL GAME**을 누른다. 자원 다운로드가 끝나면 인터넷 없이도 플레이할 수 있다.
 
-Xcode나 Android Studio로 빌드하기 어렵다면 PWA를 이용하면 된다. [설치와 실행](docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
+Xcode나 Android Studio로 빌드하기 어렵다면 PWA나 [Tauri Mac 앱](https://github.com/gelb2/MachDefense/releases/download/v0.6/MachDefense-Desktop-v0.6-arm64.zip)을 이용하면 된다. Mac 앱은 macOS 14 이상 Apple Silicon에서 실행하며 진행을 앱 데이터 폴더에 저장한다. [설치와 실행](docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
+
+HeavyMach의 웹판을 기여한 [fastutlego](https://github.com/fastutlego)에게 감사드린다. [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24)의 WebAssembly 실행부·WebGL2 렌더링·입력·음향·저장 구현과 그 뒤의 PWA·Tauri 확장 절차가 MachDefense를 웹과 데스크톱으로 확장하는 데도 토대가 됐다. MachDefense의 PWA를 이 구조를 참고해 만들었고, 같은 웹 실행기를 Tauri Mac 앱에서도 사용했다.
 
 ### 레벨업이 힘든 사람을 위한 방법
 
@@ -80,11 +82,11 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 | 플랫폼 | 실행 | 현재 상태 |
 |---|---|---|
-| iPhone·iPad | Xcode 워크스페이스 | v0.5. iPhone·iPad 정식·치트 설치, iPad 강화·전투 검사 |
-| Android | Android Studio 또는 APK | [v0.5 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.5). Galaxy 정식·치트 설치, 생산·강화·음향·복귀·승패 검사 |
+| iPhone·iPad | Xcode 워크스페이스 | v0.6. iPhone·iPad 정식·치트 설치, 두 기기의 강화·복원·생산 HUD 검사 |
+| Android | Android Studio 또는 APK | [v0.6 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.6). Galaxy 정식·치트 설치, 생산·강화·음향·복귀·승패 검사 |
 | 웹 | 브라우저 | GitHub Pages 배포. Mac Chrome·Safari·WebKit 검사 |
 | PWA | 브라우저에서 설치 | 설치·오프라인 실행 지원. 기기별 검사 결과는 검사 문서 참고 |
-| Tauri Mac | 데스크톱 앱 | 개발 예정 |
+| Tauri Mac | 데스크톱 앱 | [v0.6 다운로드](https://github.com/gelb2/MachDefense/releases/tag/v0.6). 파일 저장·복원·종료 검사. macOS 14+ Apple Silicon |
 
 ## 고친 문제와 남은 일
 
@@ -98,7 +100,7 @@ Codex는 원작에서 유지하던 오디오 컨텍스트를 발사 때마다 �
 
 MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행동을 바꾸지 않으면서 화면을 보고 판단할 기회를 더하려는 구상이다. 기존 크로스파이어의 에셋과 조준·사거리 로직을 쓰되, 크로스파이어 자체는 그대로 둘 생각이다.
 
-10레벨 강화와 INSTALL한 전체 유닛의 생산 목록 스크롤은 구현했다. 원형 구조물과 포탑 밀집 구간의 길찾기, 생산 목록 순서 편집, 새 락온 기능, PWA 최초 업데이트 전환과 Tauri Mac 구현은 남은 과제다. [남은 과제](docs/public/roadmap.md) · [기술 구조](docs/public/architecture.md) · [개발 과정](docs/public/development-history.md) · [크레딧](CREDITS.md)
+10레벨 강화와 INSTALL한 전체 유닛의 생산 목록 스크롤은 구현했다. 원형 구조물과 포탑 밀집 구간의 길찾기, 생산 목록 순서 편집, 새 락온 기능, PWA·Tauri 운영 업데이트 확인은 남은 과제다. [남은 과제](docs/public/roadmap.md) · [기술 구조](docs/public/architecture.md) · [개발 과정](docs/public/development-history.md) · [크레딧](CREDITS.md)
 
 [현재 구현 상태](docs/public/implementation-status.md) · [문서 목차](docs/public/README.md) · [변경 이력](CHANGELOG.md) · [크레딧](CREDITS.md)
 

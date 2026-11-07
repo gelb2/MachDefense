@@ -4,6 +4,23 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## v0.6 — PWA updates, Tauri Mac, and Laser Turret costs
+
+2026-11-07.
+
+- PWA resources are checked by SHA-256 and length. Existing resources are reused; the large game resource bundle is split into 95 chunks so only changed chunks are downloaded. Running games keep their version; closing their windows allows a prepared update to activate. Failed updates preserve the previous version.
+- Added a Tauri Mac app using the same WebAssembly game. Saves live in the app data folder. It supports MD1 recovery codes, waiting for saves before exit, and signed app updates. Requires macOS 14 or later on Apple Silicon.
+- Laser Turret production costs for levels 1–10 are now 200/220/240/270/300/330/360/390/420/450 cells. Other stats and its size are unchanged.
+- Updated iPhone, iPad and Android app versions to 0.6. Added thanks to HeavyMach web contributor fastutlego and PR #24 in Korean and English documentation.
+
+### Checks
+
+Passed 42 C++ tests; Chrome/WebKit install-failure, update, recovery and offline checks; and actual Galaxy Chrome and native Android checks. Recreated an old installation using production v0.5 files and verified the update and save preservation. Tested upgrades, purchases, save/recovery and the production HUD on physical iPhone/iPad, then installed all four regular/cheat apps. Saves matched before and after installation. Mac checks covered file saves, recovery, Cmd-Q, menu exit, signatures and replacement of a disposable app copy.
+
+[PWA checks](docs/evidence/pwa-update-20261107.md) · [Mac checks](docs/evidence/tauri-desktop-20261107.md) · [Device installation](docs/evidence/native-release-20261107.md)
+
+Title extensions are excluded because their joins did not match the original. Aircraft remain research and concepts. Battlefield wheel/keyboard movement on Mac, comparison with the original tablet view, and invalid local-save handling remain follow-up work.
+
 ## 2026-11-07 Work and testing essays
 
 Added Korean and English accounts of directing the work and testing with cheat builds. Linked them from the README, index, validation, and troubleshooting pages. Each game retains its own failures and measurement conditions. Updated the integrated report and Sass writing materials.
