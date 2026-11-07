@@ -1,0 +1,106 @@
+{
+  "tool": "image_gen",
+  "status": "concept-not-runtime",
+  "jobs": [
+    {
+      "level": 6,
+      "dest": "Art/Level10/20261107/turret-body-6-v1.png",
+      "prompt": "Use case: precise-object-edit. This is ONE upgrade BODY sprite, not a whole turret. Use the attached original MachDefense Turret_b_03,04,05 images as strict references. The third reference (level 5) is the geometry template. Recreate this exact top-down mechanical mounting body, NOT a side-view pedestal. Retain the empty dark olive circular mounting ring on the RIGHT, its diameter and center, the narrow machinery column on the LEFT, its little amber details, the silver horizontal cap at the top, and the lower little support. No gun, barrel, missile, radar, ground, shadow, legs or additional chassis. Same perspective, flat vertical overhead sprite, grey/olive/warm grey original pixel palette and sparse silver highlights. Do NOT grow the object with upgrade level. Keep EXACT same silhouette height and width and ring/body proportions as the level-5 reference. Change only mechanical panel arrangement in the existing left/top/bottom machinery areas; do NOT add armor outside the current outline. Original is a 64x64 texture, visible bounds x=3..55 y=2..61, mounting pivot at texture coordinate x=38,y=30.5 (y down), ring centered around that point. Work as a coarse pixel sprite with crisp pixel clusters, as if drawn on that 64x64 grid and enlarged with nearest-neighbor sampling, NOT a smooth 3D render or a detailed painting. Preserve original broken thin pixel edge highlights, no bold outlines. Match original ring/machinery balance rather than adding decorative detail everywhere. Place ONE complete sprite centrally on transparent background with generous clear padding, no text/labels/borders/checkerboard. Sprite intended to be composited UNDER the original gun; the mounting ring must stay exactly the same shape and position.\nLevel 6 detail: Replace two small left rectangular armor panels with joined inset panels, keep the small amber latch.",
+      "references": [
+        {
+          "path": "Resources/Images/Turret_b_03.png",
+          "sha256": "bdededb5cb6338c3b148669ed74c224d48b0494354cbebe4936077f48fd7cd6a"
+        },
+        {
+          "path": "Resources/Images/Turret_b_04.png",
+          "sha256": "a2cbf5d4331bf850f9c0f9f1be71e1824d34eab41050f66e31afc664f3bd42ac"
+        },
+        {
+          "path": "Resources/Images/Turret_b_05.png",
+          "sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927"
+        }
+      ],
+      "output_sha256": "3808e6bbd78ee00d93b01345f3a15d9c09d6b4b7ea9bdf19330e6d7262f6d8a6"
+    },
+    {
+      "level": 7,
+      "dest": "Art/Level10/20261107/turret-body-7-v1.png",
+      "prompt": "Use case: precise-object-edit. This is ONE upgrade BODY sprite, not a whole turret. Use the attached original MachDefense Turret_b_03,04,05 images as strict references. The third reference (level 5) is the geometry template. Recreate this exact top-down mechanical mounting body, NOT a side-view pedestal. Retain the empty dark olive circular mounting ring on the RIGHT, its diameter and center, the narrow machinery column on the LEFT, its little amber details, the silver horizontal cap at the top, and the lower little support. No gun, barrel, missile, radar, ground, shadow, legs or additional chassis. Same perspective, flat vertical overhead sprite, grey/olive/warm grey original pixel palette and sparse silver highlights. Do NOT grow the object with upgrade level. Keep EXACT same silhouette height and width and ring/body proportions as the level-5 reference. Change only mechanical panel arrangement in the existing left/top/bottom machinery areas; do NOT add armor outside the current outline. Original is a 64x64 texture, visible bounds x=3..55 y=2..61, mounting pivot at texture coordinate x=38,y=30.5 (y down), ring centered around that point. Work as a coarse pixel sprite with crisp pixel clusters, as if drawn on that 64x64 grid and enlarged with nearest-neighbor sampling, NOT a smooth 3D render or a detailed painting. Preserve original broken thin pixel edge highlights, no bold outlines. Match original ring/machinery balance rather than adding decorative detail everywhere. Place ONE complete sprite centrally on transparent background with generous clear padding, no text/labels/borders/checkerboard. Sprite intended to be composited UNDER the original gun; the mounting ring must stay exactly the same shape and position.\nLevel 7 detail: Use two vertically aligned recessed ventilation panels on the left, with the same original thin silver support at the top.",
+      "references": [
+        {
+          "path": "Resources/Images/Turret_b_03.png",
+          "sha256": "bdededb5cb6338c3b148669ed74c224d48b0494354cbebe4936077f48fd7cd6a"
+        },
+        {
+          "path": "Resources/Images/Turret_b_04.png",
+          "sha256": "a2cbf5d4331bf850f9c0f9f1be71e1824d34eab41050f66e31afc664f3bd42ac"
+        },
+        {
+          "path": "Resources/Images/Turret_b_05.png",
+          "sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927"
+        }
+      ],
+      "output_sha256": "5f3458bac82e742253be1797765bbd0a14bb49c732a7f9d90ed2e3e3adc16c81"
+    },
+    {
+      "level": 8,
+      "dest": "Art/Level10/20261107/turret-body-8-v1.png",
+      "prompt": "Use case: precise-object-edit. This is ONE upgrade BODY sprite, not a whole turret. Use the attached original MachDefense Turret_b_03,04,05 images as strict references. The third reference (level 5) is the geometry template. Recreate this exact top-down mechanical mounting body, NOT a side-view pedestal. Retain the empty dark olive circular mounting ring on the RIGHT, its diameter and center, the narrow machinery column on the LEFT, its little amber details, the silver horizontal cap at the top, and the lower little support. No gun, barrel, missile, radar, ground, shadow, legs or additional chassis. Same perspective, flat vertical overhead sprite, grey/olive/warm grey original pixel palette and sparse silver highlights. Do NOT grow the object with upgrade level. Keep EXACT same silhouette height and width and ring/body proportions as the level-5 reference. Change only mechanical panel arrangement in the existing left/top/bottom machinery areas; do NOT add armor outside the current outline. Original is a 64x64 texture, visible bounds x=3..55 y=2..61, mounting pivot at texture coordinate x=38,y=30.5 (y down), ring centered around that point. Work as a coarse pixel sprite with crisp pixel clusters, as if drawn on that 64x64 grid and enlarged with nearest-neighbor sampling, NOT a smooth 3D render or a detailed painting. Preserve original broken thin pixel edge highlights, no bold outlines. Match original ring/machinery balance rather than adding decorative detail everywhere. Place ONE complete sprite centrally on transparent background with generous clear padding, no text/labels/borders/checkerboard. Sprite intended to be composited UNDER the original gun; the mounting ring must stay exactly the same shape and position.\nLevel 8 detail: Use a reinforced segmented top cap and two small left service hatches. Keep the original subdued palette and silhouette.",
+      "references": [
+        {
+          "path": "Resources/Images/Turret_b_03.png",
+          "sha256": "bdededb5cb6338c3b148669ed74c224d48b0494354cbebe4936077f48fd7cd6a"
+        },
+        {
+          "path": "Resources/Images/Turret_b_04.png",
+          "sha256": "a2cbf5d4331bf850f9c0f9f1be71e1824d34eab41050f66e31afc664f3bd42ac"
+        },
+        {
+          "path": "Resources/Images/Turret_b_05.png",
+          "sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927"
+        }
+      ],
+      "output_sha256": "6712ade5c9e95c0bb09abf5c5cf8016300a40a00cf6a5769e75b0aa7c6c12c97"
+    },
+    {
+      "level": 9,
+      "dest": "Art/Level10/20261107/turret-body-9-v1.png",
+      "prompt": "Use case: precise-object-edit. This is ONE upgrade BODY sprite, not a whole turret. Use the attached original MachDefense Turret_b_03,04,05 images as strict references. The third reference (level 5) is the geometry template. Recreate this exact top-down mechanical mounting body, NOT a side-view pedestal. Retain the empty dark olive circular mounting ring on the RIGHT, its diameter and center, the narrow machinery column on the LEFT, its little amber details, the silver horizontal cap at the top, and the lower little support. No gun, barrel, missile, radar, ground, shadow, legs or additional chassis. Same perspective, flat vertical overhead sprite, grey/olive/warm grey original pixel palette and sparse silver highlights. Do NOT grow the object with upgrade level. Keep EXACT same silhouette height and width and ring/body proportions as the level-5 reference. Change only mechanical panel arrangement in the existing left/top/bottom machinery areas; do NOT add armor outside the current outline. Original is a 64x64 texture, visible bounds x=3..55 y=2..61, mounting pivot at texture coordinate x=38,y=30.5 (y down), ring centered around that point. Work as a coarse pixel sprite with crisp pixel clusters, as if drawn on that 64x64 grid and enlarged with nearest-neighbor sampling, NOT a smooth 3D render or a detailed painting. Preserve original broken thin pixel edge highlights, no bold outlines. Match original ring/machinery balance rather than adding decorative detail everywhere. Place ONE complete sprite centrally on transparent background with generous clear padding, no text/labels/borders/checkerboard. Sprite intended to be composited UNDER the original gun; the mounting ring must stay exactly the same shape and position.\nLevel 9 detail: Use paired narrow vertical mechanical rib panels on the left and a slightly different lower access plate, inside the original outline.",
+      "references": [
+        {
+          "path": "Resources/Images/Turret_b_03.png",
+          "sha256": "bdededb5cb6338c3b148669ed74c224d48b0494354cbebe4936077f48fd7cd6a"
+        },
+        {
+          "path": "Resources/Images/Turret_b_04.png",
+          "sha256": "a2cbf5d4331bf850f9c0f9f1be71e1824d34eab41050f66e31afc664f3bd42ac"
+        },
+        {
+          "path": "Resources/Images/Turret_b_05.png",
+          "sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927"
+        }
+      ],
+      "output_sha256": "36ebba0246f1d6b18c2efea2488a5f111778294c10589fc8c553a5654556e67b"
+    },
+    {
+      "level": 10,
+      "dest": "Art/Level10/20261107/turret-body-10-v1.png",
+      "prompt": "Use case: precise-object-edit. This is ONE upgrade BODY sprite, not a whole turret. Use the attached original MachDefense Turret_b_03,04,05 images as strict references. The third reference (level 5) is the geometry template. Recreate this exact top-down mechanical mounting body, NOT a side-view pedestal. Retain the empty dark olive circular mounting ring on the RIGHT, its diameter and center, the narrow machinery column on the LEFT, its little amber details, the silver horizontal cap at the top, and the lower little support. No gun, barrel, missile, radar, ground, shadow, legs or additional chassis. Same perspective, flat vertical overhead sprite, grey/olive/warm grey original pixel palette and sparse silver highlights. Do NOT grow the object with upgrade level. Keep EXACT same silhouette height and width and ring/body proportions as the level-5 reference. Change only mechanical panel arrangement in the existing left/top/bottom machinery areas; do NOT add armor outside the current outline. Original is a 64x64 texture, visible bounds x=3..55 y=2..61, mounting pivot at texture coordinate x=38,y=30.5 (y down), ring centered around that point. Work as a coarse pixel sprite with crisp pixel clusters, as if drawn on that 64x64 grid and enlarged with nearest-neighbor sampling, NOT a smooth 3D render or a detailed painting. Preserve original broken thin pixel edge highlights, no bold outlines. Match original ring/machinery balance rather than adding decorative detail everywhere. Place ONE complete sprite centrally on transparent background with generous clear padding, no text/labels/borders/checkerboard. Sprite intended to be composited UNDER the original gun; the mounting ring must stay exactly the same shape and position.\nLevel 10 detail: Use three compact fitted armor panels around the left machinery and a divided top cap. The strongest tier is denser mechanical construction inside the same volume, NOT larger, taller, wider, gold, glowing, or extravagant.",
+      "references": [
+        {
+          "path": "Resources/Images/Turret_b_03.png",
+          "sha256": "bdededb5cb6338c3b148669ed74c224d48b0494354cbebe4936077f48fd7cd6a"
+        },
+        {
+          "path": "Resources/Images/Turret_b_04.png",
+          "sha256": "a2cbf5d4331bf850f9c0f9f1be71e1824d34eab41050f66e31afc664f3bd42ac"
+        },
+        {
+          "path": "Resources/Images/Turret_b_05.png",
+          "sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927"
+        }
+      ],
+      "output_sha256": "7c7b1a1ca3aded2a170fd9d00cc085edb118e922021600751593659b73220cbf"
+    }
+  ]
+}

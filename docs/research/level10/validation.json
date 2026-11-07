@@ -99,7 +99,7 @@
     "Resources/Tables/PartsList.tsv": "ffb498932e30e74e4ae84211a542fabac28de6ab43759b1b25d1015522d3aeb1",
     "Resources/Tables/SpAttackList.tsv": "5ac06d6aad956c854db53e8a8bcd9d9f7cd6c3fdecb5b79d572892ee7af7db73",
     "Resources/Tables/TileList.tsv": "4266caf60c3ab60f1a084e7459fde6ce9628b6a237582d55dde1462601e485a6",
-    "Resources/Tables/WeaponInfo.tsv": "7e5701a4319490ce3103b1b469feb2b752cc47a8f48ffa8c7b0ee8eff84b5fd5"
+    "Resources/Tables/WeaponInfo.tsv": "e931f1d4780604af595e2ee5ab7db923e68e723e464710094242bd57c64b3d73"
   },
   "checks": [
     "existing weapon rows equal",

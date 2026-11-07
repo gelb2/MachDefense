@@ -1,0 +1,1562 @@
+{
+  "status": "review-only-not-runtime",
+  "filter": "uniform Lanczos reduction; comparison enlargement nearest neighbor",
+  "parts": [
+    {
+      "family": "body",
+      "level": 6,
+      "source": "body.png",
+      "source_sha256": "fa867f460810694b9af1f05d0fcea36deb21369324d146e72067f4dd50d50641",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source_rect": [
+        21,
+        174,
+        382,
+        442
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        52,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ],
+      "uniform_scale": 0.13574660633484162,
+      "offset": [
+        4,
+        2
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 96.26,
+        "bright_pct": 17.52
+      },
+      "original_tone": {
+        "mean_luma": 103.95,
+        "bright_pct": 24.08
+      },
+      "review_sha256": "fd2f4840a82fe7fc452e845ea9179c8e04d52c353d28a784a19a1054e8bb4fa4"
+    },
+    {
+      "family": "body",
+      "level": 7,
+      "source": "body.png",
+      "source_sha256": "fa867f460810694b9af1f05d0fcea36deb21369324d146e72067f4dd50d50641",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source_rect": [
+        420,
+        174,
+        381,
+        442
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        52,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ],
+      "uniform_scale": 0.13574660633484162,
+      "offset": [
+        4,
+        2
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 96.1,
+        "bright_pct": 17.25
+      },
+      "original_tone": {
+        "mean_luma": 103.95,
+        "bright_pct": 24.08
+      },
+      "review_sha256": "22673a133bde9089af8fe56b343c4a8e7ee5b9b22af5ed72ac22eaef86a0d4c6"
+    },
+    {
+      "family": "body",
+      "level": 8,
+      "source": "body.png",
+      "source_sha256": "fa867f460810694b9af1f05d0fcea36deb21369324d146e72067f4dd50d50641",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source_rect": [
+        817,
+        174,
+        381,
+        442
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        52,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ],
+      "uniform_scale": 0.13574660633484162,
+      "offset": [
+        4,
+        2
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 94.82,
+        "bright_pct": 17.02
+      },
+      "original_tone": {
+        "mean_luma": 103.95,
+        "bright_pct": 24.08
+      },
+      "review_sha256": "84f10e5a5ef4b9c1157e3ab6081666012aa0fe12f5ee114bd99e9f54883e3574"
+    },
+    {
+      "family": "body",
+      "level": 9,
+      "source": "body.png",
+      "source_sha256": "fa867f460810694b9af1f05d0fcea36deb21369324d146e72067f4dd50d50641",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source_rect": [
+        1215,
+        174,
+        379,
+        442
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        51,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ],
+      "uniform_scale": 0.13574660633484162,
+      "offset": [
+        4,
+        2
+      ],
+      "height_delta": 0,
+      "width_delta": -1,
+      "tone": {
+        "mean_luma": 95.87,
+        "bright_pct": 17.9
+      },
+      "original_tone": {
+        "mean_luma": 103.95,
+        "bright_pct": 24.08
+      },
+      "review_sha256": "b4696a4e6dc1e894b1d4ae750024a8da767e2047dec14c3236bac046ee08bb0d"
+    },
+    {
+      "family": "body",
+      "level": 10,
+      "source": "body.png",
+      "source_sha256": "fa867f460810694b9af1f05d0fcea36deb21369324d146e72067f4dd50d50641",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source_rect": [
+        1612,
+        174,
+        380,
+        442
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        52,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ],
+      "uniform_scale": 0.13574660633484162,
+      "offset": [
+        4,
+        2
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 95.41,
+        "bright_pct": 17.13
+      },
+      "original_tone": {
+        "mean_luma": 103.95,
+        "bright_pct": 24.08
+      },
+      "review_sha256": "43f63c4cb4d6f0e00f0455dc1943e0840923648359173429ada9ec218335c155"
+    },
+    {
+      "family": "rifle",
+      "level": 6,
+      "source": "rifle.png",
+      "source_sha256": "f23f155d56755e5d48b861be31ff8b33f44ed218db1036ee1fe7176b33e16e85",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source_rect": [
+        24,
+        194,
+        404,
+        302
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        61,
+        46
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ],
+      "uniform_scale": 0.15099009900990099,
+      "offset": [
+        1,
+        8
+      ],
+      "height_delta": 3,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 95.22,
+        "bright_pct": 16.1
+      },
+      "original_tone": {
+        "mean_luma": 100.9,
+        "bright_pct": 20.65
+      },
+      "review_sha256": "c792f0344dff226eeb07d93f92e4c1a221fca07423e68050187952baef85bc69"
+    },
+    {
+      "family": "rifle",
+      "level": 7,
+      "source": "rifle.png",
+      "source_sha256": "f23f155d56755e5d48b861be31ff8b33f44ed218db1036ee1fe7176b33e16e85",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source_rect": [
+        457,
+        194,
+        405,
+        302
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        61,
+        45
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ],
+      "uniform_scale": 0.1506172839506173,
+      "offset": [
+        1,
+        9
+      ],
+      "height_delta": 2,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 95.48,
+        "bright_pct": 16.01
+      },
+      "original_tone": {
+        "mean_luma": 100.9,
+        "bright_pct": 20.65
+      },
+      "review_sha256": "729535e474e1b0e509b6bdad44dcb5910b619f47bb11da57238454a2e4612ad9"
+    },
+    {
+      "family": "rifle",
+      "level": 8,
+      "source": "rifle.png",
+      "source_sha256": "f23f155d56755e5d48b861be31ff8b33f44ed218db1036ee1fe7176b33e16e85",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source_rect": [
+        892,
+        194,
+        404,
+        302
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        61,
+        46
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ],
+      "uniform_scale": 0.15099009900990099,
+      "offset": [
+        1,
+        8
+      ],
+      "height_delta": 3,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 92.76,
+        "bright_pct": 13.84
+      },
+      "original_tone": {
+        "mean_luma": 100.9,
+        "bright_pct": 20.65
+      },
+      "review_sha256": "7e76b0aeb062e08834f1633c085c3ba9329ff3af67961a4538a03b08ad191086"
+    },
+    {
+      "family": "rifle",
+      "level": 9,
+      "source": "rifle.png",
+      "source_sha256": "f23f155d56755e5d48b861be31ff8b33f44ed218db1036ee1fe7176b33e16e85",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source_rect": [
+        1326,
+        194,
+        405,
+        302
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        61,
+        45
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ],
+      "uniform_scale": 0.1506172839506173,
+      "offset": [
+        1,
+        9
+      ],
+      "height_delta": 2,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 94.05,
+        "bright_pct": 15.34
+      },
+      "original_tone": {
+        "mean_luma": 100.9,
+        "bright_pct": 20.65
+      },
+      "review_sha256": "83086581f5a07637f61f9f94edbd62da8691972468a892183d2f56abb8772e9b"
+    },
+    {
+      "family": "rifle",
+      "level": 10,
+      "source": "rifle.png",
+      "source_sha256": "f23f155d56755e5d48b861be31ff8b33f44ed218db1036ee1fe7176b33e16e85",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source_rect": [
+        1760,
+        194,
+        405,
+        302
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        61,
+        45
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ],
+      "uniform_scale": 0.1506172839506173,
+      "offset": [
+        1,
+        9
+      ],
+      "height_delta": 2,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 93.43,
+        "bright_pct": 15.03
+      },
+      "original_tone": {
+        "mean_luma": 100.9,
+        "bright_pct": 20.65
+      },
+      "review_sha256": "25106a538fb74353f9b96fb7ab2e604923aa96b6d555719ebc2adf90acea4074"
+    },
+    {
+      "family": "missile",
+      "level": 6,
+      "source": "missile.png",
+      "source_sha256": "ef496a34e6330cf0cb77a957329238af9c440428ff08d306823e7215d796b516",
+      "original": "Resources/Images/Turret_msl_05.png",
+      "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "source_rect": [
+        41,
+        476,
+        244,
+        203
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
+      ],
+      "uniform_scale": 0.21311475409836064,
+      "offset": [
+        9,
+        10
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 100.02,
+        "bright_pct": 16.14
+      },
+      "original_tone": {
+        "mean_luma": 107.45,
+        "bright_pct": 22.0
+      },
+      "review_sha256": "f4ee4d82f8a90b8f941f0a9dd0f2c5570795c475fb6c6406cf9de8a75284f741"
+    },
+    {
+      "family": "missile",
+      "level": 7,
+      "source": "missile.png",
+      "source_sha256": "ef496a34e6330cf0cb77a957329238af9c440428ff08d306823e7215d796b516",
+      "original": "Resources/Images/Turret_msl_05.png",
+      "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "source_rect": [
+        309,
+        476,
+        243,
+        203
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
+      ],
+      "uniform_scale": 0.2139917695473251,
+      "offset": [
+        9,
+        10
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 99.41,
+        "bright_pct": 15.82
+      },
+      "original_tone": {
+        "mean_luma": 107.45,
+        "bright_pct": 22.0
+      },
+      "review_sha256": "6e4ccc02fee448295a75f4b034bb098e4f260faaf4c42c6eea1c0d8e27c8eead"
+    },
+    {
+      "family": "missile",
+      "level": 8,
+      "source": "missile.png",
+      "source_sha256": "ef496a34e6330cf0cb77a957329238af9c440428ff08d306823e7215d796b516",
+      "original": "Resources/Images/Turret_msl_05.png",
+      "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "source_rect": [
+        576,
+        476,
+        243,
+        203
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
+      ],
+      "uniform_scale": 0.2139917695473251,
+      "offset": [
+        9,
+        10
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 102.41,
+        "bright_pct": 17.33
+      },
+      "original_tone": {
+        "mean_luma": 107.45,
+        "bright_pct": 22.0
+      },
+      "review_sha256": "d26b551e51e2313d3c3e9fb011cbe43d896b337126bbdc49a1a74d9ef2000360"
+    },
+    {
+      "family": "missile",
+      "level": 9,
+      "source": "missile.png",
+      "source_sha256": "ef496a34e6330cf0cb77a957329238af9c440428ff08d306823e7215d796b516",
+      "original": "Resources/Images/Turret_msl_05.png",
+      "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "source_rect": [
+        843,
+        475,
+        244,
+        204
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
+      ],
+      "uniform_scale": 0.21311475409836064,
+      "offset": [
+        9,
+        10
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 101.03,
+        "bright_pct": 17.03
+      },
+      "original_tone": {
+        "mean_luma": 107.45,
+        "bright_pct": 22.0
+      },
+      "review_sha256": "aca2504624bb7407868e8f552f7cb42e01e7506f39dbbe418cb23ae08ede93ed"
+    },
+    {
+      "family": "missile",
+      "level": 10,
+      "source": "missile.png",
+      "source_sha256": "ef496a34e6330cf0cb77a957329238af9c440428ff08d306823e7215d796b516",
+      "original": "Resources/Images/Turret_msl_05.png",
+      "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "source_rect": [
+        1111,
+        475,
+        242,
+        204
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_size": [
+        52,
+        44
+      ],
+      "original_visible_size": [
+        52,
+        43
+      ],
+      "uniform_scale": 0.21487603305785125,
+      "offset": [
+        9,
+        10
+      ],
+      "height_delta": 1,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 101.43,
+        "bright_pct": 18.38
+      },
+      "original_tone": {
+        "mean_luma": 107.45,
+        "bright_pct": 22.0
+      },
+      "review_sha256": "b16b9cda611ec2eab3bef0f9b386dab7a25847adec95faf90ab7274a2968399e"
+    },
+    {
+      "family": "vulcan",
+      "level": 6,
+      "source": "vulcan.png",
+      "source_sha256": "045b511b9cb6f1ef5ca1300879fec05293200f11a3a1c0114553cfdd693b362c",
+      "original": "Resources/Images/Turret_mg_05.png",
+      "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "source_rect": [
+        61,
+        246,
+        355,
+        257
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
+      ],
+      "uniform_scale": 0.16901408450704225,
+      "offset": [
+        40,
+        10
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 107.25,
+        "bright_pct": 17.97
+      },
+      "original_tone": {
+        "mean_luma": 115.95,
+        "bright_pct": 26.08
+      },
+      "review_sha256": "42da62a25e22ac4a145a05cabafbba927c15836258714a7d4f06d8bb2a2b5c96"
+    },
+    {
+      "family": "vulcan",
+      "level": 7,
+      "source": "vulcan.png",
+      "source_sha256": "045b511b9cb6f1ef5ca1300879fec05293200f11a3a1c0114553cfdd693b362c",
+      "original": "Resources/Images/Turret_mg_05.png",
+      "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "source_rect": [
+        475,
+        246,
+        355,
+        257
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
+      ],
+      "uniform_scale": 0.16901408450704225,
+      "offset": [
+        40,
+        10
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 107.5,
+        "bright_pct": 18.17
+      },
+      "original_tone": {
+        "mean_luma": 115.95,
+        "bright_pct": 26.08
+      },
+      "review_sha256": "887ad504eb7e322707f7530a69455830ba9bc1828889531e674ea6aaef132a64"
+    },
+    {
+      "family": "vulcan",
+      "level": 8,
+      "source": "vulcan.png",
+      "source_sha256": "045b511b9cb6f1ef5ca1300879fec05293200f11a3a1c0114553cfdd693b362c",
+      "original": "Resources/Images/Turret_mg_05.png",
+      "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "source_rect": [
+        889,
+        246,
+        355,
+        257
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
+      ],
+      "uniform_scale": 0.16901408450704225,
+      "offset": [
+        40,
+        10
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 106.39,
+        "bright_pct": 17.84
+      },
+      "original_tone": {
+        "mean_luma": 115.95,
+        "bright_pct": 26.08
+      },
+      "review_sha256": "39cf9a74b89c388208fada475baa28041f0a0140d0752021ccf345ef596d997b"
+    },
+    {
+      "family": "vulcan",
+      "level": 9,
+      "source": "vulcan.png",
+      "source_sha256": "045b511b9cb6f1ef5ca1300879fec05293200f11a3a1c0114553cfdd693b362c",
+      "original": "Resources/Images/Turret_mg_05.png",
+      "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "source_rect": [
+        1303,
+        246,
+        355,
+        257
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
+      ],
+      "uniform_scale": 0.16901408450704225,
+      "offset": [
+        40,
+        10
+      ],
+      "height_delta": 0,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 106.88,
+        "bright_pct": 18.29
+      },
+      "original_tone": {
+        "mean_luma": 115.95,
+        "bright_pct": 26.08
+      },
+      "review_sha256": "34fc23f85253534a28da89da53badf24a433e401cdd95eff9630cb10aede086d"
+    },
+    {
+      "family": "vulcan",
+      "level": 10,
+      "source": "vulcan.png",
+      "source_sha256": "045b511b9cb6f1ef5ca1300879fec05293200f11a3a1c0114553cfdd693b362c",
+      "original": "Resources/Images/Turret_mg_05.png",
+      "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "source_rect": [
+        1717,
+        246,
+        354,
+        257
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        60,
+        44
+      ],
+      "original_visible_size": [
+        60,
+        43
+      ],
+      "uniform_scale": 0.1694915254237288,
+      "offset": [
+        40,
+        10
+      ],
+      "height_delta": 1,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 107.63,
+        "bright_pct": 18.06
+      },
+      "original_tone": {
+        "mean_luma": 115.95,
+        "bright_pct": 26.08
+      },
+      "review_sha256": "dba1444dd586fb5bc9786363012f0b17e46386a569fe8eeeb1ae72fb2d6b319d"
+    },
+    {
+      "family": "ion",
+      "level": 6,
+      "source": "ion.png",
+      "source_sha256": "275c9f7f3ef4e4400c7d15b69c15b0c9a3d470fc2d494b210a7ea1195a5d26e8",
+      "original": "Resources/Images/Turret_ion_05.png",
+      "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "source_rect": [
+        44,
+        297,
+        361,
+        151
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        69,
+        29
+      ],
+      "original_visible_size": [
+        69,
+        26
+      ],
+      "uniform_scale": 0.19113573407202217,
+      "offset": [
+        41,
+        16
+      ],
+      "height_delta": 3,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 117.0,
+        "bright_pct": 21.18
+      },
+      "original_tone": {
+        "mean_luma": 132.89,
+        "bright_pct": 33.42
+      },
+      "review_sha256": "c3a1199e9f622d95bea95f0b587bad0437f725c6f3b85afad26394e8aed7758f"
+    },
+    {
+      "family": "ion",
+      "level": 7,
+      "source": "ion.png",
+      "source_sha256": "275c9f7f3ef4e4400c7d15b69c15b0c9a3d470fc2d494b210a7ea1195a5d26e8",
+      "original": "Resources/Images/Turret_ion_05.png",
+      "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "source_rect": [
+        452,
+        297,
+        358,
+        151
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        69,
+        29
+      ],
+      "original_visible_size": [
+        69,
+        26
+      ],
+      "uniform_scale": 0.19273743016759776,
+      "offset": [
+        41,
+        16
+      ],
+      "height_delta": 3,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 117.53,
+        "bright_pct": 21.69
+      },
+      "original_tone": {
+        "mean_luma": 132.89,
+        "bright_pct": 33.42
+      },
+      "review_sha256": "26ca077b94a55153553360a1868b51d104132149786bc43d78fd6e71a0f8ed83"
+    },
+    {
+      "family": "ion",
+      "level": 8,
+      "source": "ion.png",
+      "source_sha256": "275c9f7f3ef4e4400c7d15b69c15b0c9a3d470fc2d494b210a7ea1195a5d26e8",
+      "original": "Resources/Images/Turret_ion_05.png",
+      "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "source_rect": [
+        857,
+        297,
+        358,
+        151
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        69,
+        29
+      ],
+      "original_visible_size": [
+        69,
+        26
+      ],
+      "uniform_scale": 0.19273743016759776,
+      "offset": [
+        41,
+        16
+      ],
+      "height_delta": 3,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 116.73,
+        "bright_pct": 20.5
+      },
+      "original_tone": {
+        "mean_luma": 132.89,
+        "bright_pct": 33.42
+      },
+      "review_sha256": "1d534b67f0186f291dcaeafdebb7e64e3e4ddc0eaf3f680636aa7f0ec5685bf8"
+    },
+    {
+      "family": "ion",
+      "level": 9,
+      "source": "ion.png",
+      "source_sha256": "275c9f7f3ef4e4400c7d15b69c15b0c9a3d470fc2d494b210a7ea1195a5d26e8",
+      "original": "Resources/Images/Turret_ion_05.png",
+      "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "source_rect": [
+        1263,
+        297,
+        357,
+        151
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        69,
+        29
+      ],
+      "original_visible_size": [
+        69,
+        26
+      ],
+      "uniform_scale": 0.19327731092436976,
+      "offset": [
+        41,
+        16
+      ],
+      "height_delta": 3,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 118.16,
+        "bright_pct": 20.72
+      },
+      "original_tone": {
+        "mean_luma": 132.89,
+        "bright_pct": 33.42
+      },
+      "review_sha256": "36d3d2541f4814e1278aeb50d05bbc59dad35c1058fe445427593f9d396004bd"
+    },
+    {
+      "family": "ion",
+      "level": 10,
+      "source": "ion.png",
+      "source_sha256": "275c9f7f3ef4e4400c7d15b69c15b0c9a3d470fc2d494b210a7ea1195a5d26e8",
+      "original": "Resources/Images/Turret_ion_05.png",
+      "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "source_rect": [
+        1667,
+        297,
+        357,
+        151
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        69,
+        29
+      ],
+      "original_visible_size": [
+        69,
+        26
+      ],
+      "uniform_scale": 0.19327731092436976,
+      "offset": [
+        41,
+        16
+      ],
+      "height_delta": 3,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 119.37,
+        "bright_pct": 22.61
+      },
+      "original_tone": {
+        "mean_luma": 132.89,
+        "bright_pct": 33.42
+      },
+      "review_sha256": "ca2f10e9f644f4b81441d9f745a0c28b5f44c0dd3514832cc087791109a3be00"
+    },
+    {
+      "family": "laser",
+      "level": 6,
+      "source": "laser.png",
+      "source_sha256": "ff082834ced870dd2624a325de6b7acb59e4aba7d4709c2df0061eef361c553a",
+      "original": "Resources/Images/Turret_lsr_05.png",
+      "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "source_rect": [
+        22,
+        400,
+        279,
+        196
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "visible_size": [
+        95,
+        67
+      ],
+      "original_visible_size": [
+        95,
+        61
+      ],
+      "uniform_scale": 0.34050179211469533,
+      "offset": [
+        24,
+        31
+      ],
+      "height_delta": 6,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 100.51,
+        "bright_pct": 12.62
+      },
+      "original_tone": {
+        "mean_luma": 117.4,
+        "bright_pct": 26.79
+      },
+      "review_sha256": "6bb06217453280866a5f9c338e664460a674175ab1602efd2d617a55fc925871"
+    },
+    {
+      "family": "laser",
+      "level": 7,
+      "source": "laser.png",
+      "source_sha256": "ff082834ced870dd2624a325de6b7acb59e4aba7d4709c2df0061eef361c553a",
+      "original": "Resources/Images/Turret_lsr_05.png",
+      "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "source_rect": [
+        335,
+        400,
+        277,
+        196
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "visible_size": [
+        95,
+        67
+      ],
+      "original_visible_size": [
+        95,
+        61
+      ],
+      "uniform_scale": 0.34296028880866425,
+      "offset": [
+        24,
+        31
+      ],
+      "height_delta": 6,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 100.89,
+        "bright_pct": 12.81
+      },
+      "original_tone": {
+        "mean_luma": 117.4,
+        "bright_pct": 26.79
+      },
+      "review_sha256": "c43163d45c107dce8afa5384ace6442e11c2c8f4dff1211aabba16044b1824ca"
+    },
+    {
+      "family": "laser",
+      "level": 8,
+      "source": "laser.png",
+      "source_sha256": "ff082834ced870dd2624a325de6b7acb59e4aba7d4709c2df0061eef361c553a",
+      "original": "Resources/Images/Turret_lsr_05.png",
+      "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "source_rect": [
+        645,
+        401,
+        277,
+        195
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "visible_size": [
+        95,
+        67
+      ],
+      "original_visible_size": [
+        95,
+        61
+      ],
+      "uniform_scale": 0.34296028880866425,
+      "offset": [
+        24,
+        31
+      ],
+      "height_delta": 6,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 100.58,
+        "bright_pct": 13.18
+      },
+      "original_tone": {
+        "mean_luma": 117.4,
+        "bright_pct": 26.79
+      },
+      "review_sha256": "c1abb31a0de82528546b051ce1a8802a2900c60aed0d5b4e0acb05f4780a604f"
+    },
+    {
+      "family": "laser",
+      "level": 9,
+      "source": "laser.png",
+      "source_sha256": "ff082834ced870dd2624a325de6b7acb59e4aba7d4709c2df0061eef361c553a",
+      "original": "Resources/Images/Turret_lsr_05.png",
+      "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "source_rect": [
+        956,
+        400,
+        276,
+        196
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "visible_size": [
+        95,
+        67
+      ],
+      "original_visible_size": [
+        95,
+        61
+      ],
+      "uniform_scale": 0.3442028985507246,
+      "offset": [
+        24,
+        31
+      ],
+      "height_delta": 6,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 100.22,
+        "bright_pct": 13.17
+      },
+      "original_tone": {
+        "mean_luma": 117.4,
+        "bright_pct": 26.79
+      },
+      "review_sha256": "3d25eb5edf4074a0de31140362a2ac0ffa7f2c89bdbd3d6637c59091970c95fe"
+    },
+    {
+      "family": "laser",
+      "level": 10,
+      "source": "laser.png",
+      "source_sha256": "ff082834ced870dd2624a325de6b7acb59e4aba7d4709c2df0061eef361c553a",
+      "original": "Resources/Images/Turret_lsr_05.png",
+      "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "source_rect": [
+        1265,
+        401,
+        279,
+        195
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "visible_size": [
+        95,
+        66
+      ],
+      "original_visible_size": [
+        95,
+        61
+      ],
+      "uniform_scale": 0.34050179211469533,
+      "offset": [
+        24,
+        32
+      ],
+      "height_delta": 5,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 100.37,
+        "bright_pct": 12.9
+      },
+      "original_tone": {
+        "mean_luma": 117.4,
+        "bright_pct": 26.79
+      },
+      "review_sha256": "5510db5747043b90d2ff4d436f060c521d5e43a5911ea7854f058ae353b99e26"
+    },
+    {
+      "family": "plasma",
+      "level": 6,
+      "source": "plasma.png",
+      "source_sha256": "025325c555525bbf012d4e1bf07f6494a1bf094123c0f31dec288d438814a72a",
+      "original": "Resources/Images/Turret_pla_05.png",
+      "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "source_rect": [
+        38,
+        371,
+        302,
+        161
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        77,
+        41
+      ],
+      "original_visible_size": [
+        77,
+        40
+      ],
+      "uniform_scale": 0.25496688741721857,
+      "offset": [
+        34,
+        12
+      ],
+      "height_delta": 1,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 96.78,
+        "bright_pct": 13.67
+      },
+      "original_tone": {
+        "mean_luma": 108.14,
+        "bright_pct": 19.69
+      },
+      "review_sha256": "e32e2ed055a27abcaff7d6ce404e2c6993cdaffaa73243d71a66976232548ff4"
+    },
+    {
+      "family": "plasma",
+      "level": 7,
+      "source": "plasma.png",
+      "source_sha256": "025325c555525bbf012d4e1bf07f6494a1bf094123c0f31dec288d438814a72a",
+      "original": "Resources/Images/Turret_pla_05.png",
+      "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "source_rect": [
+        381,
+        371,
+        300,
+        161
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        77,
+        41
+      ],
+      "original_visible_size": [
+        77,
+        40
+      ],
+      "uniform_scale": 0.25666666666666665,
+      "offset": [
+        34,
+        12
+      ],
+      "height_delta": 1,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 96.17,
+        "bright_pct": 12.62
+      },
+      "original_tone": {
+        "mean_luma": 108.14,
+        "bright_pct": 19.69
+      },
+      "review_sha256": "e846afdf101b2d98d088706fb82647a1ff0f26d89bc305218efe6f62e5a91bd1"
+    },
+    {
+      "family": "plasma",
+      "level": 8,
+      "source": "plasma.png",
+      "source_sha256": "025325c555525bbf012d4e1bf07f6494a1bf094123c0f31dec288d438814a72a",
+      "original": "Resources/Images/Turret_pla_05.png",
+      "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "source_rect": [
+        722,
+        371,
+        299,
+        161
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        77,
+        41
+      ],
+      "original_visible_size": [
+        77,
+        40
+      ],
+      "uniform_scale": 0.25752508361204013,
+      "offset": [
+        34,
+        12
+      ],
+      "height_delta": 1,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 95.63,
+        "bright_pct": 12.77
+      },
+      "original_tone": {
+        "mean_luma": 108.14,
+        "bright_pct": 19.69
+      },
+      "review_sha256": "08bf0820d45c04004cee06799c55973edec404f26a41a084ff553c1e44d448cb"
+    },
+    {
+      "family": "plasma",
+      "level": 9,
+      "source": "plasma.png",
+      "source_sha256": "025325c555525bbf012d4e1bf07f6494a1bf094123c0f31dec288d438814a72a",
+      "original": "Resources/Images/Turret_pla_05.png",
+      "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "source_rect": [
+        1063,
+        371,
+        300,
+        161
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        77,
+        41
+      ],
+      "original_visible_size": [
+        77,
+        40
+      ],
+      "uniform_scale": 0.25666666666666665,
+      "offset": [
+        34,
+        12
+      ],
+      "height_delta": 1,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 95.49,
+        "bright_pct": 12.74
+      },
+      "original_tone": {
+        "mean_luma": 108.14,
+        "bright_pct": 19.69
+      },
+      "review_sha256": "ec27a78f6cdb997aee3767af42df553a4727e041c051afe8874cc759cf269430"
+    },
+    {
+      "family": "plasma",
+      "level": 10,
+      "source": "plasma.png",
+      "source_sha256": "025325c555525bbf012d4e1bf07f6494a1bf094123c0f31dec288d438814a72a",
+      "original": "Resources/Images/Turret_pla_05.png",
+      "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "source_rect": [
+        1403,
+        371,
+        301,
+        161
+      ],
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_size": [
+        77,
+        41
+      ],
+      "original_visible_size": [
+        77,
+        40
+      ],
+      "uniform_scale": 0.2558139534883721,
+      "offset": [
+        34,
+        12
+      ],
+      "height_delta": 1,
+      "width_delta": 0,
+      "tone": {
+        "mean_luma": 95.76,
+        "bright_pct": 12.15
+      },
+      "original_tone": {
+        "mean_luma": 108.14,
+        "bright_pct": 19.69
+      },
+      "review_sha256": "8e36842a2ea344bf2c4d98ad8cd5ee539d707276d724c4a27de492357976bb42"
+    }
+  ],
+  "original_references": [
+    {
+      "file": "Resources/Images/Turret_b_03.png",
+      "sha256": "bdededb5cb6338c3b148669ed74c224d48b0494354cbebe4936077f48fd7cd6a"
+    },
+    {
+      "file": "Resources/Images/Turret_b_04.png",
+      "sha256": "a2cbf5d4331bf850f9c0f9f1be71e1824d34eab41050f66e31afc664f3bd42ac"
+    },
+    {
+      "file": "Resources/Images/Turret_b_05.png",
+      "sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927"
+    },
+    {
+      "file": "Resources/Images/Turret_gun_03.png",
+      "sha256": "c28d3533f5a2c43105e84838a9d094381d75f39f2685feb24eaa77215fadaf7a"
+    },
+    {
+      "file": "Resources/Images/Turret_gun_04.png",
+      "sha256": "6ccaad8a90d40a530418afdb9c4d95e79c9570ee1fc2d222e42a8e5c1df27a49"
+    },
+    {
+      "file": "Resources/Images/Turret_gun_05.png",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9"
+    },
+    {
+      "file": "Resources/Images/Turret_msl_03.png",
+      "sha256": "60cf1af8c6d791703541c65144a61cbb05864c3f65fc48c251ddf74f87bbe9cb"
+    },
+    {
+      "file": "Resources/Images/Turret_msl_04.png",
+      "sha256": "87adac311929df1906c229a6f7a6b5584e86d768768f5f0ed465144af5c27396"
+    },
+    {
+      "file": "Resources/Images/Turret_msl_05.png",
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08"
+    },
+    {
+      "file": "Resources/Images/Turret_mg_03.png",
+      "sha256": "18625026b2a674d7df164604e22be3c6436c35d599870e9ba3d5bd4d77e1c288"
+    },
+    {
+      "file": "Resources/Images/Turret_mg_04.png",
+      "sha256": "a5235085921c6b14e4db454ad841d3153fc5456f3b9f48c4c47a7eac11b4b4ca"
+    },
+    {
+      "file": "Resources/Images/Turret_mg_05.png",
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34"
+    },
+    {
+      "file": "Resources/Images/Turret_ion_03.png",
+      "sha256": "79021e12936176eb6e3bfe50dd60eb9004c8b0fe687acdeeb28d23de32a88d08"
+    },
+    {
+      "file": "Resources/Images/Turret_ion_04.png",
+      "sha256": "a12ec43ca95d7fe1668e30aa46ad63a36834d1c5ef34cb1d6d4ded6dd9e2103d"
+    },
+    {
+      "file": "Resources/Images/Turret_ion_05.png",
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6"
+    },
+    {
+      "file": "Resources/Images/Turret_lsr_03.png",
+      "sha256": "8a0fc4f508722ea386e70377eb307763c074468908a074a23c29a8803da624ed"
+    },
+    {
+      "file": "Resources/Images/Turret_lsr_04.png",
+      "sha256": "a69f9aba794287084b0a24eeb660f8f66e9816337c90936965a89f59e8d3d444"
+    },
+    {
+      "file": "Resources/Images/Turret_lsr_05.png",
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1"
+    },
+    {
+      "file": "Resources/Images/Turret_pla_03.png",
+      "sha256": "015c565e332c9ae1d796e342264246a437b23219de959cc9a27b152b23c5ab0c"
+    },
+    {
+      "file": "Resources/Images/Turret_pla_04.png",
+      "sha256": "e266597c60a35de1783d37e7b9d886f705355a685b697b0b5daa8a9409c7ed83"
+    },
+    {
+      "file": "Resources/Images/Turret_pla_05.png",
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc"
+    }
+  ]
+}

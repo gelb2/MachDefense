@@ -36,6 +36,12 @@ for name,mach,prefix,hpf,dd,dc in configs:
             elif name=='Vulcan':w['ShtCnt']=str(80+10*n)
             elif name=='IonCannon':w['RldDly']=str(round(1.6-.08*n,3))
             elif name=='PlasmaCannon':w['RldDly']=str(round(.8-.04*n,3))
+            # Continue the final original increment only for consumed numeric
+            # effects. Ion sp2 has no simulation consumer; keep that field.
+            fields={'MissileTurret':('Range',),'IonCannon':('sp1',),'PlasmaCannon':('sp1','sp2')}.get(name,())
+            for field in fields:
+                step=int(W[f'{prefix}_05'][field])-int(W[f'{prefix}_04'][field])
+                w[field]=str(int(w[field])+step*n)
         if l<=5:
             cost=int(B[f'{name}_{l:02d}']['Cost']);hp=2*int(M[f'{mach}_{l:02d}']['HP'])
             assert hp==2*hpf(l)

@@ -1,3 +1,30 @@
+# 2026-11-07 Lv.5 무장·몸체 교체 웹 검증
+
+[6종 포탑 실제 렌더링 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-body-only-20261107)를 기존 보고서에 게시했다. 각 계열의 Lv.5~10과 4방향을 나란히 표시한다. [게임 변경·검사](evidence/turret-body-only-integration-20261107.md).
+
+- Site source: `708bc99b0b6da19247325f85405fb666b659f625`.
+- Version 192, deployment `appgdep_6aee8ee707048191a8c628f23912853b`, `succeeded`.
+- 로컬 Chrome 1280·390px에서 새 섹션의 이미지 6개 로드, 가로 넘침 없음, 원고 다운로드 200, 페이지 오류 없음.
+- 첫 업로드는 256MiB 확장 크기 제한으로 거절됐다. 기존 게임 캡처 04-special·02-jump를 무손실 WebP로 바꾸고 RGBA 픽셀 동일성을 확인했다. 원본은 로컬 백업에 보존했고 참조 31곳을 갱신했다.
+- 두 번째 요청은 응답 시간 초과였지만 저장된 버전의 소스 커밋과 배포 ID를 조회해 게시 성공을 확인했다.
+- 기존 소유자 전용 접근을 유지했다. 게임 운영 PWA 배포와 별개다.
+
+이전 게시 기록:
+
+# 2026-11-07 몸체·라이플 새 부품 시안
+
+[원작 1~5단계·새 부품 10개·조립 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-design-grammar-20261107)를 기존 소유자 전용 보고서에 게시했다.
+
+- Site source: `b4635ab68a00c5317b490937cec4dd5e646bc2b2`.
+- Deployment: `appgdep_6aee898c6cf0819192f97168702f7808`, `succeeded`.
+- 1280·390px 새 섹션의 이미지 35개, Lv.6~10 카드 5개, 원고 다운로드 200, 섹션 가로 넘침 없음, 페이지 오류 없음.
+- 원작 단계별 연결점 수정 뒤 390px에서 새 섹션 이미지 35개 로드와 화면을 다시 확인했다.
+- 생성 원본·실제 크기·2배 확대·조립본을 제공한다. 몸체 폭·라이플 높이 최대 3px 차이와 표면 표현 보정은 남았다.
+- 기존 title-a/title-b/06-stage-clear PNG를 lossless WebP로 변환했다. RGBA 바이트 동일성을 확인했고 원본은 로컬에 보존했다. 참조 16곳을 바꿨다.
+- 기존 표 2개에 가로 스크롤을 추가했다. 이번 반응형 검사 범위는 새 시안 섹션이다.
+
+이전 게시 기록:
+
 # 보고와 Sass 전달
 
 MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지를 계속 갱신한다.
@@ -138,3 +165,62 @@ MachDefense 보고는 기존 HeavyMach 통합 보고 사이트의 한 페이지�
 - 배포 `appgdep_6aee17ab14b0819181907955c705c796`, 상태 `succeeded`.
 - 기존 소유자 전용 접근 범위를 유지했다. 로컬 Chrome에서 본문·표·이미지를 확인했다.
 - 누적 자료의 압축 해제 크기로 처음 두 게시가 거절됐다. macOS 부가 메타데이터를 제외하고 기존 PNG 3장을 추가 무손실 압축했다. 변환 전후 RGBA SHA-256이 같고 파일 경로·본문·이미지는 보존했다.
+
+## 추가 레벨 효과와 39개 외형 시안 — 2026-11-07
+
+[시안과 효과 수정 보고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#level10-effects-art-20261107)를 기존 페이지에 추가했다. 원작 비교 9개와 새 부품 39개를 같은 PNG 크기로 표시하고 확대 시안·프롬프트·해시·스킬을 연결했다. 효과 수치 수정, 관련 검사 6개 통과, PWA 무결성과 신규 락온 TODO를 함께 기록했다.
+
+- 소스 `04f438cdf2dc591d3c643e70412a76d56b203d0c`.
+- 배포 `appgdep_6aee2b9c59ec8191889a790b3e7eeee7`, `succeeded`. 기존 소유자 전용 접근 유지.
+- 로컬 Chrome에서 9개 비교군·48개 그림·스크립트 오류 0개를 확인했다. 게시 후 IAB 열기는 해당 브라우저가 없어 실패했다. 게시 성공은 Sites 응답으로 확인했다.
+- 첫 업로드는 256MiB 확장 용량 제한으로 거절됐다. 기존 PNG를 무손실 압축하고 이전 Git 그림과 RGBA 픽셀 일치를 확인했다. 파일 내용 합계 264,882,792바이트로 재게시했다. 기존 자료는 삭제하지 않았다.
+- 이미지 생성은 built-in image_gen, 원본·시안·프롬프트는 `Art/Level10/20261107`에 보존했다. 게임 운영 자원 교체나 앱 설치는 하지 않았다.
+
+## 포탑 몸체와 크기 대조 — 2026-11-07
+
+[원작 30개 조립 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-body-scale-20261107)를 기존 페이지에 추가했다. 원작 몸체 5개와 무장 30개를 연결점에 따라 같은 배율로 표시한다. 브라우저 비교이며 게임 런타임 캡처와 구분했다. 기존 39개 시안에 공용 몸체 5개가 빠졌음을 정정하고, 강화에 따른 크기 확대 금지·원작 최종 단계의 비례 보존을 적었다. 길찾기 사진은 바탕화면에서 확보해 로컬 증거로 보존했다.
+
+Chrome 로컬 검사는 원작 조립 30칸, 기존 시안 비교 48칸, 콘솔 오류 0건이었다. 데스크톱·393px 모바일 캡처를 저장했다. 사이트 원본 커밋 `871efba02b8cda0660fb35c04a8383f8d6cb0862`, 배포 `appgdep_6aee2f1c6ea08191b16410dde7c2354b`가 succeeded로 완료됐다. 기존 소유자 전용 접근을 유지했다. [조사 원문](evidence/turret-body-scale-20261107.md).
+
+## 포탑 몸체·무장 조립 시안 — 2026-11-07
+
+[몸체 Lv.6–10과 조립 시안](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-body-concepts-20261107)을 같은 페이지에 게시했다. 몸체 5개를 더해 전체 부품 시안은 44개다. 원작 크기와 3배 확대, 원작 Lv.5를 포함한 6종×6단계 조립, 원작/신규 무장·몸체 단독 선택, 무장 회전과 확대 보기를 제공한다. 원본 PNG와 전체 프롬프트·입력/출력 해시는 Art/Level10/20261107에 있다.
+
+Chrome에서 35개 신규 그림의 원작 크기 범위, 36개 조립 화면, 무장 전환·몸체 단독·45도 회전·초기화를 검사했다. 데스크톱·393px 모바일 캡처를 확인했다. 기존 시안 48칸과 원작 조립 30칸도 그대로 로딩됐고 콘솔 오류는 없었다. 보고서 공간 확보 과정에서 기존 PNG 69개를 무손실 최적화해 2,412,644바이트를 줄였으며 RGBA 픽셀 해시·크기가 같음을 확인했다.
+
+사이트 커밋 `8282a84c1221d5832080b46bac75b15ad0fbf56b`, 배포 `appgdep_6aee3346de6c81918c37fc6afb7060be`가 succeeded로 끝났다. 소유자 전용 접근은 유지했다. 게임 코드와 Resources, 운영 게임 배포는 변경하지 않았다.
+
+## 포탑 원본 교체 규칙과 시안 수정 — 2026-11-07
+
+[같은 조립 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-body-concepts-20261107)에 원본 세 판본 대조와 새 몸체·무장 35개를 반영했다. 원작 포탑 6종은 Lv.1~5에서 몸체·무장을 함께 바꾸며, 몸체 3→4는 변화가 작았다. [근거](evidence/turret-original-stage-change-20261107.md).
+
+이전 미리보기의 최소 배율 맞춤은 단계별로 무장을 축소했다. 원작 범위를 넘지 않는다는 검사만으로 같은 크기라고 설명한 것은 잘못됐다. 원작 길이를 고정하는 계산으로 교체하고 각 칸에 길이·폭을 표시했다. 생성 그림의 폭 차이·세부 도트·피벗 수정은 남았다. 몸체는 무장 밖으로 드러나는 측면 장갑·뒤쪽 기계부·통풍구·보강대를 바꿨다.
+
+Chrome에서 신규 부품 35개의 길이와 비율 보존·텍스처 잘림, 조립 36칸, 무장 전환·회전·초기화를 검사했다. 데스크톱·393px 모바일 화면을 확인했다. 이전 시안 48칸과 원작 조립 30칸도 로딩됐으며 스크립트 오류는 없었다. 이전 원본·설정·측정은 Art 폴더에 보존했다.
+
+- 사이트 소스: `849113c1740fe80b994c9d8ccf9c23c911a83b00`.
+- 배포: `appgdep_6aee39fc98a4819186ed840c154bc316`, `succeeded`.
+- 버전: `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_fd6d219afe108191994e11e30c01e88b`.
+- 기존 소유자 전용 접근을 유지했다. 첫 업로드의 용량 초과 후 기존 PNG 24개를 무손실 압축해 1,600,038바이트를 줄였다. 크기와 RGBA 픽셀 해시가 같음을 확인했다. 확장자만 PNG인 JPEG 한 장은 압축 도구가 거절했으며 수정하지 않았다.
+- 게임 코드·공용 모듈·Resources와 운영 앱은 변경하지 않았다.
+
+
+## Mach 시리즈 화풍·44개 부품 실기기 검증 — 2026-11-07
+
+[세 작품 비교·화풍·스킬](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#mach-series-art-20261107), [실제 iPad 렌더 캡처·기능 검사](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#level10-art-integration-20261107).
+
+사이트 소스 `a6337c9d5140b508791bf5cd2c43ba35145652e3`, 게시 `appgdep_6aee45a38a3881919966fb37991827b6` 성공. 기존 접근 범위를 유지했다. 데스크톱·모바일 레이아웃과 새 이미지 11개 로딩을 검사했다. 기존 보고서의 스크린샷 한 장과 새 미리보기의 압축 크기를 줄였다. 원본 캡처는 로컬 검사 폴더에 보존했다.
+
+## 2026-11-07 레이저 해금·포탑 색조 대조
+
+기존 보고 페이지에 [레이저 해금](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#laser-unlock-20261107)과 [원작·신규 포탑 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-art-review-20261107)를 추가했다. 70개 부품 측정값·같은 배율의 비교 그림·기존 저장 지급·C++ 및 Chrome/WebKit 검사 결과를 담았다. 데스크톱 1280px·모바일 390px에서 이미지와 새 절 표시, JS 오류 0건을 확인했다.
+
+게시 소스 `e7f8285a61d977697d155102f478a63c82a1eb83`, 배포 `appgdep_6aee4bd1ccc8819188b12ec263b3a31f`는 succeeded다. 기존 본인 전용 접근을 유지했다. 게임 main·운영 PWA·기기 앱의 배포와 별개다.
+
+## 2026-11-07 포탑 재시안·텍스처 후속 검수
+
+[포탑 재시안 35개](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-redraw-20261107)에 원작 3·4·5단계, 새 부품 35개와 조립 비교를 올렸다. iPhone·iPad 정식·치트 설치 결과와 사용자 iPhone 레이저 확인도 기록했다. 후속 지적에 따라 현재 시안의 표면 질감 부족과 남은 폭 차이를 명시했다. 새 그림은 게임에 연결하지 않았다.
+
+1280px·390px 로컬 Chrome에서 새 이미지 69개, 시안 35칸, 7계열 표시와 오류·가로 넘침 없음을 확인했다. 첫 게시 패키지는 크기 한도로 거절됐다. 기존 대형 PNG 3개를 픽셀 값이 같은 무손실 WebP로 바꾸고 참조를 갱신했다. RGBA 바이트 일치와 새 주소 응답을 검사했고 원본 PNG는 로컬에 보존했다.
+
+사이트 소스 `431944124b299bb8b1498eaff36cff4b67402832`, 배포 `appgdep_6aee57ddd8948191ba4b27355c28a8c9`가 succeeded로 완료됐다. 본인 전용 접근을 유지했다. [측정·설치·질감 검수 근거](evidence/turret-redraw-20261107.md).

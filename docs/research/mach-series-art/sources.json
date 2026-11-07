@@ -1,0 +1,228 @@
+[
+  {
+    "game": "hm1",
+    "archive": "HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+    "member": "Payload/HeavyMach.app/Main_BG.png",
+    "source_sha256": "049126fd0456b2c1122d9797ca6d80e67b8ff3b9da0a7b1003223bdfa9da8d43",
+    "prepared_sha256": "0b012d92fbf8bf794107ba90cf569017441e7846f1975adb43128b25cf3fd0e5",
+    "file": "hm1-Main_BG.png"
+  },
+  {
+    "game": "hm1",
+    "archive": "HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+    "member": "Payload/HeavyMach.app/GameLoading_01.jpg",
+    "source_sha256": "5b2211359fda6f9534925ab26624910237ba29c9d8faaa3fb0300ae29e2f8ff2",
+    "prepared_sha256": "5b2211359fda6f9534925ab26624910237ba29c9d8faaa3fb0300ae29e2f8ff2",
+    "file": "hm1-GameLoading_01.jpg"
+  },
+  {
+    "game": "hm1",
+    "archive": "HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+    "member": "Payload/HeavyMach.app/GameLoading_04.jpg",
+    "source_sha256": "3b30210f6c52e83859ce0f7cb9dd0b9283f94b565958f9312e2f2ca647bdd896",
+    "prepared_sha256": "3b30210f6c52e83859ce0f7cb9dd0b9283f94b565958f9312e2f2ca647bdd896",
+    "file": "hm1-GameLoading_04.jpg"
+  },
+  {
+    "game": "hm1",
+    "archive": "HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+    "member": "Payload/HeavyMach.app/P_Body_01.png",
+    "source_sha256": "85f84a21bf00b62fd9de9cd008af2f937ec79650e2179ffce508151d1647efeb",
+    "prepared_sha256": "0e4d2781cd2041b064eca61519370fe7270210d2e637958f8284a2333d972510",
+    "file": "hm1-P_Body_01.png"
+  },
+  {
+    "game": "hm1",
+    "archive": "HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+    "member": "Payload/HeavyMach.app/P_Body_07.png",
+    "source_sha256": "4033a5396f707bcf4aeaed7b1626e6cbbf5665ed250e19f8a7e87f2a2f259c1d",
+    "prepared_sha256": "d52670a9960db4f5c29cb571746a419e82825f1579e3cebf5f97afcd2a0708d8",
+    "file": "hm1-P_Body_07.png"
+  },
+  {
+    "game": "hm1",
+    "archive": "HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+    "member": "Payload/HeavyMach.app/E_Tank_Body_01.png",
+    "source_sha256": "62ae6dd0159b89c6edeb9352d921e6e52c8c3360a48552b1295920c20194fef4",
+    "prepared_sha256": "2b8b6f56399d161047734ffc94fff7df129854a3bb724b47e6c6890d3b079f90",
+    "file": "hm1-E_Tank_Body_01.png"
+  },
+  {
+    "game": "hm1",
+    "archive": "HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+    "member": "Payload/HeavyMach.app/E_Tank_Top_01.png",
+    "source_sha256": "b14906a2c11f5a7d6c1fbf58614ecf20bc0690a30d7d13deb0f691f2adfc359a",
+    "prepared_sha256": "a690e86191a5a14656819f351278a619ba6800e5daf5d59040cae72dd6893d92",
+    "file": "hm1-E_Tank_Top_01.png"
+  },
+  {
+    "game": "hm1",
+    "archive": "HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+    "member": "Payload/HeavyMach.app/E_Tank_Wpn_01.png",
+    "source_sha256": "28350b21e834faff0b5f63ec6891adad1da8326a37becbde5bca171364be903f",
+    "prepared_sha256": "9f3bee17f6d8be5ee27f865115332f5e7e7cd47a69e7ec28f2f260b7a3227da5",
+    "file": "hm1-E_Tank_Wpn_01.png"
+  },
+  {
+    "game": "hm1",
+    "archive": "HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+    "member": "Payload/HeavyMach.app/E_Heli_Body_01.png",
+    "source_sha256": "a53e23f7c1ad8f6d24bbb4e1b2857cd6cb80095019d1ce7ff3684679cc16b7f3",
+    "prepared_sha256": "f436a24f4ced90b6650d7639e71ed9bbdb6697159f958024e64117307e1f4bb5",
+    "file": "hm1-E_Heli_Body_01.png"
+  },
+  {
+    "game": "hm1",
+    "archive": "HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+    "member": "Payload/HeavyMach.app/E_Heli_Body_06.png",
+    "source_sha256": "07b36d526e71bab25c182bc07f6cd2bcfeae1356f1a21256e6767d68b25681b8",
+    "prepared_sha256": "c6eb6e864596ec772e6474818ea5d7210c445a25b9460939d9e1d1bc946b4067",
+    "file": "hm1-E_Heli_Body_06.png"
+  },
+  {
+    "game": "hm1",
+    "archive": "HeavyMach v1.13 - (kr.connect.touch.HeavyMach.game).ipa",
+    "member": "Payload/HeavyMach.app/GameMenu.png",
+    "source_sha256": "30641162dfdf1e64ef2f62bc3eac44772484608d1be35744c17c7173733e07f8",
+    "prepared_sha256": "5200e746d20782bff96ace10b5f364ba3e13600c8b69d76797903364871d1d23",
+    "file": "hm1-GameMenu.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/Main_BG.png",
+    "source_sha256": "d34b109ac8ccdb73f90a419b60840d350ab7c3d53acad40194f0c8eb3b809a36",
+    "prepared_sha256": "90ce0ea902d129e9be300c2a45aca6b71e3410d238b37961b58db8eaa91a549c",
+    "file": "hm2-Main_BG.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/Main_TitleBig.png",
+    "source_sha256": "beb275f09457c235477a2acbec31bf3730a344d8e26e1c0119e32769d215c2c9",
+    "prepared_sha256": "02f06c7585d92a2b779f77b98eff50e26f5c1da68a5c9665ac580d1ca4dced1b",
+    "file": "hm2-Main_TitleBig.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/MaintenanceBG.png",
+    "source_sha256": "79681534cd797701942c2a735a9d0473232c369f05e03a30e7058df4915d9066",
+    "prepared_sha256": "f75a1c1fc82c6c8c9f17708cfda1354b1690990b789beaed37e97d9889250167",
+    "file": "hm2-MaintenanceBG.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/P_Body_01.png",
+    "source_sha256": "d8c6bacf5e8adf327f7070034d96e76b0473a6fb10b29522dd4dd65d022b289a",
+    "prepared_sha256": "1d3e59a30749ed380fdb6f1fe1c9dd2f6fc94d1ad7b0697c2745b11894bf50a4",
+    "file": "hm2-P_Body_01.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/P_Body_34.png",
+    "source_sha256": "78fdeffeeba58762220a7675ac6281d5977b2507c65e809ce391549fb4f86f60",
+    "prepared_sha256": "a5e630832ce5b1095d5dbbf867d28fb4a0e4f15e5734a156e1fe4c03e79dd747",
+    "file": "hm2-P_Body_34.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/E_Tank_Body_01.png",
+    "source_sha256": "8a6dc2b9439d3898d269c7405226c51f4b97a2df83653cbcea37533bc8ef1fa2",
+    "prepared_sha256": "42a6c2646913db96cf02075ecf408edcac25132f9bef45fb4aeb96f8f9c228f3",
+    "file": "hm2-E_Tank_Body_01.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/E_Tank20_Body.png",
+    "source_sha256": "4c82ed6a39d90111c53246c9c98d323e61db229e1af2c7ad961763ddecbeeb6e",
+    "prepared_sha256": "ac60052251bf1dcf3ba6f9db68821781b8333fc66cd326f9634cde964f574d2f",
+    "file": "hm2-E_Tank20_Body.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/E_Tank20_Wpn.png",
+    "source_sha256": "b0c36f859542b3d7ea44feac8e361ef2ca23c64bf8bca94a0f0b26d6e4fd1749",
+    "prepared_sha256": "d72f73403ee2d48cb50457f06c1df14bcacb62b3ae7da7edd2b85b56e0a3da0a",
+    "file": "hm2-E_Tank20_Wpn.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/E_Plane_Body_01.png",
+    "source_sha256": "50b79982c7ee23fafc1a819765c3d262f3d3c29f7ffa9592e5a31b08fcdd671c",
+    "prepared_sha256": "cd7d8920011dd5e36d08c74051b3f3125ce693380a7828051d7a1d2966af7411",
+    "file": "hm2-E_Plane_Body_01.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/E_Turret_Body_01.png",
+    "source_sha256": "5ef842827c3fff0c3ab3b51725b375bc4caa30829bb406f1e74cc252b136f081",
+    "prepared_sha256": "0e19cae0cbebd27ae29185d0ea33625ce89359b332cead3d16a0e26e0ac08b3c",
+    "file": "hm2-E_Turret_Body_01.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/E_Turret_Wpn_01.png",
+    "source_sha256": "46f9887c9aed9b9d3366df91e9ac9a337890b3b4e6e358da85ccafa980042475",
+    "prepared_sha256": "227ec543b0a5722cec717d18441087f449cdde222ecae81eccaffd8d46fb8204",
+    "file": "hm2-E_Turret_Wpn_01.png"
+  },
+  {
+    "game": "hm2",
+    "archive": "HeavyMach2HD v1.0.3 - (kr.indieapps.HvM2HD).ipa",
+    "member": "Payload/HM2HD.app/Base001.png",
+    "source_sha256": "53e096185974b0a3c6b31af0b33a8327c2ef0494952e71afce4b3ea1936da037",
+    "prepared_sha256": "443a9b36704345192f3de1209884eb42084b82714413bf2f84ce5d9486f5299a",
+    "file": "hm2-Base001.png"
+  },
+  {
+    "game": "md",
+    "file": "md-iPad_Title_Main.png",
+    "source": "Resources/Images/iPad_Title_Main.png",
+    "prepared_sha256": "dc7faad24631b35c6e796ae373471983c5c4836d65b5d095d4d3f306f4aeda36"
+  },
+  {
+    "game": "md",
+    "file": "md-StageClear01.png",
+    "source": "Resources/Images/StageClear01.png",
+    "prepared_sha256": "6889cc88d786f80bb44130e3c086ce9f1bef4d046793d0a92650725c7f6cd174"
+  },
+  {
+    "game": "md",
+    "file": "md-P_Body_01.png",
+    "source": "Resources/Images/P_Body_01.png",
+    "prepared_sha256": "bfa5d07f6ca5a1d1514e5f60a1f25b888ad7a66053e4113d5fd435b989a5e742"
+  },
+  {
+    "game": "md",
+    "file": "md-P_Body_34.png",
+    "source": "Resources/Images/P_Body_34.png",
+    "prepared_sha256": "b4f5f69579a37381e42146c6418447ec23853170e674353ca930974eed84d3d5"
+  },
+  {
+    "game": "md",
+    "file": "md-Turret_b_05.png",
+    "source": "Resources/Images/Turret_b_05.png",
+    "prepared_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927"
+  },
+  {
+    "game": "md",
+    "file": "md-Turret_gun_05.png",
+    "source": "Resources/Images/Turret_gun_05.png",
+    "prepared_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9"
+  },
+  {
+    "game": "md",
+    "file": "md-Base07.png",
+    "source": "Resources/Images/Base07.png",
+    "prepared_sha256": "128154d66b9eb3bd2e6d0c89a533a1f170d60bfb978c7ac890dc8e10c05793ff"
+  }
+]

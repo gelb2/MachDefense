@@ -1,0 +1,1284 @@
+{
+  "generator": "tools/pack_level10_art.py",
+  "filter": "Turrets: byte copy; base sheets: Lanczos, uniform scale then integer pixel rounding",
+  "images": [
+    {
+      "output": "Resources/Images/Turret_b_06.png",
+      "sha256": "8702f71b25bf109a9736e4ba634e1d9f25ce8e778638217d7c4cdb5b1afb5289",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source": "Art/Level10/20261107/design-v5/review/body-6.png",
+      "source_sha256": "8702f71b25bf109a9736e4ba634e1d9f25ce8e778638217d7c4cdb5b1afb5289",
+      "operation": "byte-copy-approved-body",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        4,
+        2,
+        56,
+        62
+      ],
+      "raster_size": [
+        52,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_b_07.png",
+      "sha256": "d7a933b43afc6b1184bff5519f775c11299c88043072256a7af657c960a2b3b7",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source": "Art/Level10/20261107/design-v5/review/body-7.png",
+      "source_sha256": "d7a933b43afc6b1184bff5519f775c11299c88043072256a7af657c960a2b3b7",
+      "operation": "byte-copy-approved-body",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        4,
+        2,
+        57,
+        62
+      ],
+      "raster_size": [
+        53,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_b_08.png",
+      "sha256": "0e2dca9fd373645acef7e238cd2d077e1f291ac7353cddc8930e71b27f71aeef",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source": "Art/Level10/20261107/design-v5/review/body-8.png",
+      "source_sha256": "0e2dca9fd373645acef7e238cd2d077e1f291ac7353cddc8930e71b27f71aeef",
+      "operation": "byte-copy-approved-body",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        3,
+        2,
+        57,
+        62
+      ],
+      "raster_size": [
+        54,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_b_09.png",
+      "sha256": "c6a22c03f51736db47296a81e3f5ce4ce2f66dd6c1a409b18e802f82da076681",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source": "Art/Level10/20261107/design-v5/review/body-9.png",
+      "source_sha256": "c6a22c03f51736db47296a81e3f5ce4ce2f66dd6c1a409b18e802f82da076681",
+      "operation": "byte-copy-approved-body",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        2,
+        2,
+        57,
+        62
+      ],
+      "raster_size": [
+        55,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_b_10.png",
+      "sha256": "a06be0c44b64c8abd26f46b198c111217b26ee70386ceac9d8bb661e3a663923",
+      "original": "Resources/Images/Turret_b_05.png",
+      "original_sha256": "7e8742dd849ab29a95eb724c559ed914751dc9e0ce49d6f5d3a099e96566a927",
+      "source": "Art/Level10/20261107/design-v5/review/body-10.png",
+      "source_sha256": "a06be0c44b64c8abd26f46b198c111217b26ee70386ceac9d8bb661e3a663923",
+      "operation": "byte-copy-approved-body",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        4,
+        2,
+        57,
+        62
+      ],
+      "raster_size": [
+        53,
+        60
+      ],
+      "original_visible_size": [
+        52,
+        60
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_gun_06.png",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source": "Resources/Images/Turret_gun_05.png",
+      "source_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        1,
+        10,
+        62,
+        53
+      ],
+      "raster_size": [
+        61,
+        43
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_gun_07.png",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source": "Resources/Images/Turret_gun_05.png",
+      "source_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        1,
+        10,
+        62,
+        53
+      ],
+      "raster_size": [
+        61,
+        43
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_gun_08.png",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source": "Resources/Images/Turret_gun_05.png",
+      "source_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        1,
+        10,
+        62,
+        53
+      ],
+      "raster_size": [
+        61,
+        43
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_gun_09.png",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source": "Resources/Images/Turret_gun_05.png",
+      "source_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        1,
+        10,
+        62,
+        53
+      ],
+      "raster_size": [
+        61,
+        43
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_gun_10.png",
+      "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "original": "Resources/Images/Turret_gun_05.png",
+      "original_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "source": "Resources/Images/Turret_gun_05.png",
+      "source_sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        1,
+        10,
+        62,
+        53
+      ],
+      "raster_size": [
+        61,
+        43
+      ],
+      "original_visible_size": [
+        61,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_msl_06.png",
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "original": "Resources/Images/Turret_msl_05.png",
+      "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "source": "Resources/Images/Turret_msl_05.png",
+      "source_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        9,
+        10,
+        61,
+        53
+      ],
+      "raster_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_msl_07.png",
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "original": "Resources/Images/Turret_msl_05.png",
+      "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "source": "Resources/Images/Turret_msl_05.png",
+      "source_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        9,
+        10,
+        61,
+        53
+      ],
+      "raster_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_msl_08.png",
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "original": "Resources/Images/Turret_msl_05.png",
+      "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "source": "Resources/Images/Turret_msl_05.png",
+      "source_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        9,
+        10,
+        61,
+        53
+      ],
+      "raster_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_msl_09.png",
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "original": "Resources/Images/Turret_msl_05.png",
+      "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "source": "Resources/Images/Turret_msl_05.png",
+      "source_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        9,
+        10,
+        61,
+        53
+      ],
+      "raster_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_msl_10.png",
+      "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "original": "Resources/Images/Turret_msl_05.png",
+      "original_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "source": "Resources/Images/Turret_msl_05.png",
+      "source_sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        64,
+        64
+      ],
+      "visible_bbox": [
+        9,
+        10,
+        61,
+        53
+      ],
+      "raster_size": [
+        52,
+        43
+      ],
+      "original_visible_size": [
+        52,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_mg_06.png",
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "original": "Resources/Images/Turret_mg_05.png",
+      "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "source": "Resources/Images/Turret_mg_05.png",
+      "source_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        40,
+        10,
+        100,
+        53
+      ],
+      "raster_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_mg_07.png",
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "original": "Resources/Images/Turret_mg_05.png",
+      "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "source": "Resources/Images/Turret_mg_05.png",
+      "source_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        40,
+        10,
+        100,
+        53
+      ],
+      "raster_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_mg_08.png",
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "original": "Resources/Images/Turret_mg_05.png",
+      "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "source": "Resources/Images/Turret_mg_05.png",
+      "source_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        40,
+        10,
+        100,
+        53
+      ],
+      "raster_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_mg_09.png",
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "original": "Resources/Images/Turret_mg_05.png",
+      "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "source": "Resources/Images/Turret_mg_05.png",
+      "source_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        40,
+        10,
+        100,
+        53
+      ],
+      "raster_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_mg_10.png",
+      "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "original": "Resources/Images/Turret_mg_05.png",
+      "original_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "source": "Resources/Images/Turret_mg_05.png",
+      "source_sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        40,
+        10,
+        100,
+        53
+      ],
+      "raster_size": [
+        60,
+        43
+      ],
+      "original_visible_size": [
+        60,
+        43
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_ion_06.png",
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "original": "Resources/Images/Turret_ion_05.png",
+      "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "source": "Resources/Images/Turret_ion_05.png",
+      "source_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        41,
+        18,
+        110,
+        44
+      ],
+      "raster_size": [
+        69,
+        26
+      ],
+      "original_visible_size": [
+        69,
+        26
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_ion_07.png",
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "original": "Resources/Images/Turret_ion_05.png",
+      "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "source": "Resources/Images/Turret_ion_05.png",
+      "source_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        41,
+        18,
+        110,
+        44
+      ],
+      "raster_size": [
+        69,
+        26
+      ],
+      "original_visible_size": [
+        69,
+        26
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_ion_08.png",
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "original": "Resources/Images/Turret_ion_05.png",
+      "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "source": "Resources/Images/Turret_ion_05.png",
+      "source_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        41,
+        18,
+        110,
+        44
+      ],
+      "raster_size": [
+        69,
+        26
+      ],
+      "original_visible_size": [
+        69,
+        26
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_ion_09.png",
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "original": "Resources/Images/Turret_ion_05.png",
+      "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "source": "Resources/Images/Turret_ion_05.png",
+      "source_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        41,
+        18,
+        110,
+        44
+      ],
+      "raster_size": [
+        69,
+        26
+      ],
+      "original_visible_size": [
+        69,
+        26
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_ion_10.png",
+      "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "original": "Resources/Images/Turret_ion_05.png",
+      "original_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "source": "Resources/Images/Turret_ion_05.png",
+      "source_sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        41,
+        18,
+        110,
+        44
+      ],
+      "raster_size": [
+        69,
+        26
+      ],
+      "original_visible_size": [
+        69,
+        26
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_lsr_06.png",
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "original": "Resources/Images/Turret_lsr_05.png",
+      "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "source": "Resources/Images/Turret_lsr_05.png",
+      "source_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        128
+      ],
+      "visible_bbox": [
+        24,
+        34,
+        119,
+        95
+      ],
+      "raster_size": [
+        95,
+        61
+      ],
+      "original_visible_size": [
+        95,
+        61
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_lsr_07.png",
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "original": "Resources/Images/Turret_lsr_05.png",
+      "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "source": "Resources/Images/Turret_lsr_05.png",
+      "source_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        128
+      ],
+      "visible_bbox": [
+        24,
+        34,
+        119,
+        95
+      ],
+      "raster_size": [
+        95,
+        61
+      ],
+      "original_visible_size": [
+        95,
+        61
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_lsr_08.png",
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "original": "Resources/Images/Turret_lsr_05.png",
+      "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "source": "Resources/Images/Turret_lsr_05.png",
+      "source_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        128
+      ],
+      "visible_bbox": [
+        24,
+        34,
+        119,
+        95
+      ],
+      "raster_size": [
+        95,
+        61
+      ],
+      "original_visible_size": [
+        95,
+        61
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_lsr_09.png",
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "original": "Resources/Images/Turret_lsr_05.png",
+      "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "source": "Resources/Images/Turret_lsr_05.png",
+      "source_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        128
+      ],
+      "visible_bbox": [
+        24,
+        34,
+        119,
+        95
+      ],
+      "raster_size": [
+        95,
+        61
+      ],
+      "original_visible_size": [
+        95,
+        61
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_lsr_10.png",
+      "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "original": "Resources/Images/Turret_lsr_05.png",
+      "original_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "source": "Resources/Images/Turret_lsr_05.png",
+      "source_sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        128
+      ],
+      "visible_bbox": [
+        24,
+        34,
+        119,
+        95
+      ],
+      "raster_size": [
+        95,
+        61
+      ],
+      "original_visible_size": [
+        95,
+        61
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_pla_06.png",
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "original": "Resources/Images/Turret_pla_05.png",
+      "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "source": "Resources/Images/Turret_pla_05.png",
+      "source_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        34,
+        12,
+        111,
+        52
+      ],
+      "raster_size": [
+        77,
+        40
+      ],
+      "original_visible_size": [
+        77,
+        40
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_pla_07.png",
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "original": "Resources/Images/Turret_pla_05.png",
+      "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "source": "Resources/Images/Turret_pla_05.png",
+      "source_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        34,
+        12,
+        111,
+        52
+      ],
+      "raster_size": [
+        77,
+        40
+      ],
+      "original_visible_size": [
+        77,
+        40
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_pla_08.png",
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "original": "Resources/Images/Turret_pla_05.png",
+      "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "source": "Resources/Images/Turret_pla_05.png",
+      "source_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        34,
+        12,
+        111,
+        52
+      ],
+      "raster_size": [
+        77,
+        40
+      ],
+      "original_visible_size": [
+        77,
+        40
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_pla_09.png",
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "original": "Resources/Images/Turret_pla_05.png",
+      "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "source": "Resources/Images/Turret_pla_05.png",
+      "source_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        34,
+        12,
+        111,
+        52
+      ],
+      "raster_size": [
+        77,
+        40
+      ],
+      "original_visible_size": [
+        77,
+        40
+      ]
+    },
+    {
+      "output": "Resources/Images/Turret_pla_10.png",
+      "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "original": "Resources/Images/Turret_pla_05.png",
+      "original_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "source": "Resources/Images/Turret_pla_05.png",
+      "source_sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc",
+      "operation": "byte-copy-original-level5",
+      "canvas": [
+        128,
+        64
+      ],
+      "visible_bbox": [
+        34,
+        12,
+        111,
+        52
+      ],
+      "raster_size": [
+        77,
+        40
+      ],
+      "original_visible_size": [
+        77,
+        40
+      ]
+    },
+    {
+      "output": "Resources/Images/Base08.png",
+      "sha256": "7596149c7f8c78ff20b623456f3798982ef9e5eb3df02ac0f4b4fc9372cfa499",
+      "original": "Resources/Images/Base07.png",
+      "original_sha256": "128154d66b9eb3bd2e6d0c89a533a1f170d60bfb978c7ac890dc8e10c05793ff",
+      "source": "Art/Level10/20261107/base-body-v2.png",
+      "source_sha256": "a390f1a00cb7ee21e7de45188ceb32bfc2c47fc9c6b3ddd0e10398eea7f32856",
+      "source_rect": [
+        51,
+        51,
+        432,
+        790
+      ],
+      "uniform_scale": 0.2936708860759494,
+      "raster_size": [
+        127,
+        232
+      ],
+      "offset": [
+        0,
+        12
+      ],
+      "canvas": [
+        128,
+        256
+      ],
+      "original_visible_size": [
+        127,
+        232
+      ],
+      "visible_bbox": [
+        0,
+        12,
+        127,
+        244
+      ]
+    },
+    {
+      "output": "Resources/Images/Base09.png",
+      "sha256": "4defa771a0beed923c134109de64bce83cf0725cfedcddbfb31352bba84ad4ba",
+      "original": "Resources/Images/Base07.png",
+      "original_sha256": "128154d66b9eb3bd2e6d0c89a533a1f170d60bfb978c7ac890dc8e10c05793ff",
+      "source": "Art/Level10/20261107/base-body-v2.png",
+      "source_sha256": "a390f1a00cb7ee21e7de45188ceb32bfc2c47fc9c6b3ddd0e10398eea7f32856",
+      "source_rect": [
+        646,
+        51,
+        434,
+        790
+      ],
+      "uniform_scale": 0.2936708860759494,
+      "raster_size": [
+        127,
+        232
+      ],
+      "offset": [
+        0,
+        12
+      ],
+      "canvas": [
+        128,
+        256
+      ],
+      "original_visible_size": [
+        127,
+        232
+      ],
+      "visible_bbox": [
+        0,
+        12,
+        127,
+        244
+      ]
+    },
+    {
+      "output": "Resources/Images/Base10.png",
+      "sha256": "70e73c799e1efbd1989d963cb688d04cfbd24f9287ef671254c91fadfe7a537d",
+      "original": "Resources/Images/Base07.png",
+      "original_sha256": "128154d66b9eb3bd2e6d0c89a533a1f170d60bfb978c7ac890dc8e10c05793ff",
+      "source": "Art/Level10/20261107/base-body-v2.png",
+      "source_sha256": "a390f1a00cb7ee21e7de45188ceb32bfc2c47fc9c6b3ddd0e10398eea7f32856",
+      "source_rect": [
+        1241,
+        51,
+        434,
+        790
+      ],
+      "uniform_scale": 0.2936708860759494,
+      "raster_size": [
+        127,
+        232
+      ],
+      "offset": [
+        0,
+        12
+      ],
+      "canvas": [
+        128,
+        256
+      ],
+      "original_visible_size": [
+        127,
+        232
+      ],
+      "visible_bbox": [
+        0,
+        12,
+        127,
+        244
+      ]
+    },
+    {
+      "output": "Resources/Images/BaseWpn08.png",
+      "sha256": "9b27be13dd548719f788e620c692b1c79a1da4554f8bd88a8e4e655a6d754adb",
+      "original": "Resources/Images/BaseWpn07.png",
+      "original_sha256": "ddfc0bdcd878ca8b1d038880077e1015f7da009695b4c6cffe256e630278d688",
+      "source": "Art/Level10/20261107/base-gun-v1.png",
+      "source_sha256": "f746b69b04966a581f53b326b82d3089877dc31bd4799db0959db52fb9a01357",
+      "source_rect": [
+        135,
+        194,
+        484,
+        322
+      ],
+      "uniform_scale": 0.14049586776859505,
+      "raster_size": [
+        68,
+        45
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "canvas": [
+        68,
+        45
+      ],
+      "original_visible_size": [
+        68,
+        45
+      ],
+      "visible_bbox": [
+        0,
+        0,
+        68,
+        45
+      ]
+    },
+    {
+      "output": "Resources/Images/BaseWpn09.png",
+      "sha256": "b870403d2505fa4d268b40dcb6debffed4e13f9fa8f21b5343615ca8cc95441c",
+      "original": "Resources/Images/BaseWpn07.png",
+      "original_sha256": "ddfc0bdcd878ca8b1d038880077e1015f7da009695b4c6cffe256e630278d688",
+      "source": "Art/Level10/20261107/base-gun-v1.png",
+      "source_sha256": "f746b69b04966a581f53b326b82d3089877dc31bd4799db0959db52fb9a01357",
+      "source_rect": [
+        841,
+        193,
+        489,
+        323
+      ],
+      "uniform_scale": 0.1390593047034765,
+      "raster_size": [
+        68,
+        45
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "canvas": [
+        68,
+        45
+      ],
+      "original_visible_size": [
+        68,
+        45
+      ],
+      "visible_bbox": [
+        0,
+        0,
+        68,
+        45
+      ]
+    },
+    {
+      "output": "Resources/Images/BaseWpn10.png",
+      "sha256": "5c9c904e57ae0523f47fb15a6db0c3d727c931bad6dbcb597dee65a2a6520994",
+      "original": "Resources/Images/BaseWpn07.png",
+      "original_sha256": "ddfc0bdcd878ca8b1d038880077e1015f7da009695b4c6cffe256e630278d688",
+      "source": "Art/Level10/20261107/base-gun-v1.png",
+      "source_sha256": "f746b69b04966a581f53b326b82d3089877dc31bd4799db0959db52fb9a01357",
+      "source_rect": [
+        1555,
+        193,
+        483,
+        323
+      ],
+      "uniform_scale": 0.14078674948240166,
+      "raster_size": [
+        68,
+        45
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "canvas": [
+        68,
+        45
+      ],
+      "original_visible_size": [
+        68,
+        45
+      ],
+      "visible_bbox": [
+        0,
+        0,
+        68,
+        45
+      ]
+    },
+    {
+      "output": "Resources/Images/Base08_Rader.png",
+      "sha256": "cb5ee43bb80aadb4aae2613646ca43f1eedd0cf73584c45238f0efa052ccc369",
+      "original": "Resources/Images/Base07_Rader.png",
+      "original_sha256": "e2aa1ed63702369323f2dc846c4292ca7c9b593e7d699da1622d0f809ebdc85b",
+      "source": "Art/Level10/20261107/base-radar-v2.png",
+      "source_sha256": "85804f94fd8edad79d077d0e5c469e4500fdbfcccc7cd01e4434a27289561bab",
+      "source_rect": [
+        130,
+        232,
+        469,
+        235
+      ],
+      "uniform_scale": 0.09594882729211088,
+      "raster_size": [
+        45,
+        23
+      ],
+      "offset": [
+        1,
+        0
+      ],
+      "canvas": [
+        46,
+        23
+      ],
+      "original_visible_size": [
+        45,
+        23
+      ],
+      "visible_bbox": [
+        1,
+        0,
+        46,
+        23
+      ]
+    },
+    {
+      "output": "Resources/Images/Base09_Rader.png",
+      "sha256": "92d8308d0d6eb6a583ba1f0dc62ef2f95b1f5974dc7a682ac2fccc82110e41d2",
+      "original": "Resources/Images/Base07_Rader.png",
+      "original_sha256": "e2aa1ed63702369323f2dc846c4292ca7c9b593e7d699da1622d0f809ebdc85b",
+      "source": "Art/Level10/20261107/base-radar-v2.png",
+      "source_sha256": "85804f94fd8edad79d077d0e5c469e4500fdbfcccc7cd01e4434a27289561bab",
+      "source_rect": [
+        856,
+        232,
+        474,
+        235
+      ],
+      "uniform_scale": 0.0949367088607595,
+      "raster_size": [
+        45,
+        22
+      ],
+      "offset": [
+        1,
+        0
+      ],
+      "canvas": [
+        46,
+        23
+      ],
+      "original_visible_size": [
+        45,
+        23
+      ],
+      "visible_bbox": [
+        1,
+        0,
+        46,
+        22
+      ]
+    },
+    {
+      "output": "Resources/Images/Base10_Rader.png",
+      "sha256": "48f6ecc39d4a9ccf760974d25b8dbadd8fd0b588042cb9fda41846b1953d6989",
+      "original": "Resources/Images/Base07_Rader.png",
+      "original_sha256": "e2aa1ed63702369323f2dc846c4292ca7c9b593e7d699da1622d0f809ebdc85b",
+      "source": "Art/Level10/20261107/base-radar-v2.png",
+      "source_sha256": "85804f94fd8edad79d077d0e5c469e4500fdbfcccc7cd01e4434a27289561bab",
+      "source_rect": [
+        1581,
+        232,
+        482,
+        235
+      ],
+      "uniform_scale": 0.09336099585062241,
+      "raster_size": [
+        45,
+        22
+      ],
+      "offset": [
+        1,
+        0
+      ],
+      "canvas": [
+        46,
+        23
+      ],
+      "original_visible_size": [
+        45,
+        23
+      ],
+      "visible_bbox": [
+        1,
+        0,
+        46,
+        22
+      ]
+    }
+  ]
+}

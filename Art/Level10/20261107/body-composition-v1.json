@@ -1,0 +1,285 @@
+{
+  "status": "review-composition-not-runtime",
+  "body_texture_size": [
+    64,
+    64
+  ],
+  "body_visible_limit": [
+    3,
+    2,
+    56,
+    62
+  ],
+  "body_target_anchor": [
+    38,
+    31
+  ],
+  "source_alpha_threshold": 32,
+  "body_source_ring_centers": {
+    "6": [
+      715,
+      610
+    ],
+    "7": [
+      748,
+      609
+    ],
+    "8": [
+      719,
+      605
+    ],
+    "9": [
+      724,
+      612
+    ],
+    "10": [
+      728,
+      590
+    ]
+  },
+  "render_rule": "Uniform fit around mounting pivot within original Lv5 alpha extents; original body/gun socket offsets and sprite canvas retained; source PNGs unchanged. Manual ring landmarks are preview calibration, not finalized asset pivots.",
+  "families": [
+    {
+      "id": "gun",
+      "name": "Rifle",
+      "sheet": "rifle-v1",
+      "sheet_cell_ring_x_fraction": 0.44,
+      "sheet_ring_y_fraction": 0.5,
+      "original": {
+        "name": "Turret_gun_05",
+        "png_size": [
+          64,
+          64
+        ],
+        "visible_bbox": [
+          1,
+          10,
+          62,
+          53
+        ],
+        "visible_size": [
+          61,
+          43
+        ],
+        "part_type": 4,
+        "tiles": 1,
+        "sockets": [
+          [
+            -8.5,
+            0.5
+          ],
+          [
+            28.5,
+            13.5
+          ],
+          [
+            29.0,
+            -12.5
+          ]
+        ],
+        "sha256": "77af1d1578fd4a955b760528b0d3d3f629f8a0ebd2b023136a237e982910cfa9"
+      }
+    },
+    {
+      "id": "msl",
+      "name": "Missile",
+      "sheet": "missile-v1",
+      "sheet_cell_ring_x_fraction": 0.49,
+      "sheet_ring_y_fraction": 0.5,
+      "original": {
+        "name": "Turret_msl_05",
+        "png_size": [
+          64,
+          64
+        ],
+        "visible_bbox": [
+          9,
+          10,
+          61,
+          53
+        ],
+        "visible_size": [
+          52,
+          43
+        ],
+        "part_type": 4,
+        "tiles": 1,
+        "sockets": [
+          [
+            0.0,
+            0.5
+          ],
+          [
+            27.0,
+            11.5
+          ],
+          [
+            27.5,
+            -9.5
+          ]
+        ],
+        "sha256": "ae43066b5662308b5c633d92091e89217e402677dc5a47d2cb3aa0b00019ba08"
+      }
+    },
+    {
+      "id": "mg",
+      "name": "Vulcan",
+      "sheet": "vulcan-v1",
+      "sheet_cell_ring_x_fraction": 0.45,
+      "sheet_ring_y_fraction": 0.5,
+      "original": {
+        "name": "Turret_mg_05",
+        "png_size": [
+          128,
+          64
+        ],
+        "visible_bbox": [
+          40,
+          10,
+          100,
+          53
+        ],
+        "visible_size": [
+          60,
+          43
+        ],
+        "part_type": 4,
+        "tiles": 1,
+        "sockets": [
+          [
+            -2.5,
+            0.5
+          ],
+          [
+            34.0,
+            14.5
+          ],
+          [
+            33.5,
+            -13.5
+          ]
+        ],
+        "sha256": "d10e373e218aea9a0a43d1be71765d10cb5ac9949a3498425a5138c4185eaa34"
+      }
+    },
+    {
+      "id": "ion",
+      "name": "Ion",
+      "sheet": "ion-v1",
+      "sheet_cell_ring_x_fraction": 0.47,
+      "sheet_ring_y_fraction": 0.5,
+      "original": {
+        "name": "Turret_ion_05",
+        "png_size": [
+          128,
+          64
+        ],
+        "visible_bbox": [
+          41,
+          18,
+          110,
+          44
+        ],
+        "visible_size": [
+          69,
+          26
+        ],
+        "part_type": 4,
+        "tiles": 1,
+        "sockets": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            44.0,
+            -0.5
+          ]
+        ],
+        "sha256": "812402fc80ca10b83539f03932cdb18d934ca51af78db241d54b7374545283e6"
+      }
+    },
+    {
+      "id": "lsr",
+      "name": "Laser",
+      "sheet": "laser-v2",
+      "sheet_cell_ring_x_fraction": 0.41,
+      "sheet_ring_y_fraction": 0.5,
+      "original": {
+        "name": "Turret_lsr_05",
+        "png_size": [
+          128,
+          128
+        ],
+        "visible_bbox": [
+          24,
+          34,
+          119,
+          95
+        ],
+        "visible_size": [
+          95,
+          61
+        ],
+        "part_type": 4,
+        "tiles": 1,
+        "sockets": [
+          [
+            -5.0,
+            -0.5
+          ],
+          [
+            53.5,
+            20.0
+          ],
+          [
+            53.5,
+            -21.5
+          ]
+        ],
+        "sha256": "31a46f2cb9142e10ee33165dd34f1af9d84db15ae05a99eaee8b4388cb483af1"
+      }
+    },
+    {
+      "id": "pla",
+      "name": "Plasma",
+      "sheet": "plasma-v1",
+      "sheet_cell_ring_x_fraction": 0.44,
+      "sheet_ring_y_fraction": 0.5,
+      "original": {
+        "name": "Turret_pla_05",
+        "png_size": [
+          128,
+          64
+        ],
+        "visible_bbox": [
+          34,
+          12,
+          111,
+          52
+        ],
+        "visible_size": [
+          77,
+          40
+        ],
+        "part_type": 4,
+        "tiles": 1,
+        "sockets": [
+          [
+            -2.0,
+            1.0
+          ],
+          [
+            46.0,
+            10.0
+          ],
+          [
+            46.0,
+            -7.5
+          ]
+        ],
+        "sha256": "1ba27e8cdb233d754c325f0c29a6e5c74dabe53e3929b03b13180f818cb83efc"
+      }
+    }
+  ]
+}
