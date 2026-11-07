@@ -121,7 +121,9 @@
       "CHANGELOG.md",
       "docs/document-localization-plan.md",
       "docs/translations/scope.json",
-      "docs/editorial/sass-publication-guide.md"
+      "docs/editorial/sass-publication-guide.md",
+      "docs/public/work-method.md",
+      "docs/public/testing-method.md"
     ],
     "repository": [
       "docs/repository-management.md",

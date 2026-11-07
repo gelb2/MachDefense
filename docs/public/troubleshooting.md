@@ -51,3 +51,5 @@ Android 첫 구현에서 화면 객체 생성 전 시스템 바 설정, 오디�
 ## PWA 설치 주소
 
 GitHub Pages에 올린 첫 설치 검사에서 앱 식별자가 `/MachDefense/` 대신 사이트 루트로 잡혔다. manifest의 상대 `id`가 원점을 기준으로 해석됐기 때문이다. 명시 id를 제거하고 게임 시작 주소를 설치 식별자로 사용하게 고쳤다. [운영 검사](../evidence/pwa-release-20261106.md).
+
+[작업을 지시한 과정](work-method.md) · [치트앱과 직접 플레이로 검사한 과정](testing-method.md)

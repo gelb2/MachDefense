@@ -24,3 +24,8 @@
 - [Code license](../../../LICENSE-SCOPE.en.md) · [Asset terms](../../../ASSET-LICENSES.en.md) · [Third-party notices](../../../THIRD_PARTY_NOTICES.en.md)
 
 Historical material: [draft for the first web/PWA release](../../public/web-pwa-release-draft.md). Detailed development records are available through each document's evidence links and the [development TODO](../../usability-todo.md).
+
+## Directing and testing the work
+
+- [How I directed the work](work-method.md)
+- [How I tested the game](testing-method.md)

@@ -51,3 +51,5 @@ The web version waits for save completion, rejects writes from stale tabs, and b
 ## PWA installation address
 
 The first GitHub Pages installation check assigned the site root as the app identity instead of `/MachDefense/`. The manifest's relative `id` was resolved against the origin. Removing the explicit id made the game start address the installation identity. [Live-deployment checks](../../evidence/pwa-release-20261106.md).
+
+[How I directed the work](work-method.md) · [Testing with cheat builds and direct play](testing-method.md)
