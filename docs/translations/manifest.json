@@ -1,27 +1,27 @@
 {
   "reviewed": "2026-11-07",
-  "source_basis": "caaf60d; user main manuscript checked against origin/main ef0fd20",
+  "source_basis": "origin/main 3d9a8f3; v0.6 PWA/Tauri and device evidence reviewed",
   "pairs": [
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "c51cf3fcab3cd91ceb9ec53a6670383cd866370ecad9860add4f23591cedc6b5",
-      "en_sha256": "c1982bbd641db7f2e0eff181f6345894d5b5fe49b84673e709c23f0ccd23acc3",
-      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
+      "ko_sha256": "ae09adec0a3ccfa60016c4977f8f4140d98d8e267690a62de83bf0d9908ed6a5",
+      "en_sha256": "ffc70a1287ede1fae384a271f4a6df0960534ab79eeaadad25a8d42f11a14de2",
+      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved."
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "c67062a7ad9d35d9343bced78305c9d489c24cd8d91a130f82b21cdcc991af54",
-      "en_sha256": "fb54ff1d9ec000726c722ad785ff1181dab73d998d83ad9d074957c1433c4596",
-      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
+      "ko_sha256": "573e321907b7d4de6408dfe6b472b1bd87f8106d872d6f86db02b4aa0447af45",
+      "en_sha256": "ed78e43eeb1202fe9bcecc704eafbd8a1517b8482cf1a3960f28c8d53b4f910f",
+      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved."
     },
     {
       "ko": "CREDITS.md",
       "en": "CREDITS.en.md",
-      "ko_sha256": "b11f9f82474541d14ee12f1b62c8b3d77bfae5badfe68ce33c3151b273be7de9",
-      "en_sha256": "f9629184b3ba8130fb4262dbfb69c39b374959782f32abb230e0f2e17dea7dbb",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "75e0910426acb1c2d23a009fd79a431aec45b6ad9b9ad3813e341c161b5db738",
+      "en_sha256": "83e99c37a17cea7706d25660bdd9f1c97cfb1081af8d4ab41fcb3aef6b7452d2",
+      "review": "2026-11-07 PWA/Tauri follow-up: contributor attribution, shared runtime, save handling, tested scope and pending release checked in both languages."
     },
     {
       "ko": "docs/RESTORATION.md",
@@ -40,23 +40,23 @@
     {
       "ko": "docs/public/architecture.md",
       "en": "docs/en/public/architecture.md",
-      "ko_sha256": "69c8b35c7c67c23fb226b2e182b6f8552248e6aa96cfaad0e8a732f545980123",
-      "en_sha256": "9f39fb1d47b3a05ab6b50ee162831b3ab2bc7dccd1652a3b375c670565ff96a5",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "17b5a933ec2b1181f13d468ff923fd2eafc4f049fc5c3473be3b20edb01a930a",
+      "en_sha256": "752c50515a3909de128f123d2731a7885af6d2da2075ea2e49f1bb71c244ab69",
+      "review": "2026-11-07 PWA/Tauri follow-up: contributor attribution, shared runtime, save handling, tested scope and pending release checked in both languages."
     },
     {
       "ko": "docs/public/build-and-install.md",
       "en": "docs/en/public/build-and-install.md",
-      "ko_sha256": "dd9d3598b26e87b75bbbaf6097478d199b5aa169454bcc77d99eff92630c3bf9",
-      "en_sha256": "aa7efb13ac171a970c9d565eecb898fe9d5c75a573a51be50e7ba5688b1e67b9",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "a1530a0cb2e92c0d0d450c90596908d2c539242572ade730a05a7d4837c06ba5",
+      "en_sha256": "767617f0905abe6bc2dd371004df6cfab86233a39211f5e2c77aef5328ad777e",
+      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved."
     },
     {
       "ko": "docs/public/development-history.md",
       "en": "docs/en/public/development-history.md",
-      "ko_sha256": "06bcf8be70e10647f7e615435a995132b2e5e69ca2bd053ff7b8f2f3dac34134",
-      "en_sha256": "762c87d65d42d9784f95c05e74c9f2ec24422cdc63489a2be996989dfab09e0e",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "84bd9a41c8e3cea7efec1200b2db572f2fe39607c2920329b2f7d21795c3865f",
+      "en_sha256": "9cbcee4120e4a13d2209e4f93a8ffac2da72e6fea0f9ec5b3a80c75ffd22bd93",
+      "review": "2026-11-07 PWA/Tauri follow-up: contributor attribution, shared runtime, save handling, tested scope and pending release checked in both languages."
     },
     {
       "ko": "docs/public/features.md",
@@ -110,16 +110,16 @@
     {
       "ko": "Web/README.md",
       "en": "Web/README.en.md",
-      "ko_sha256": "742252f2d354dbe9c9d80821444d0b054b192bf7c8433e997143980cb2b29776",
-      "en_sha256": "1ce80dd1b13e0d87b184f087a0e59c8c7a6699c14680670bd3a4fd099eaeb55f",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "43eec9c37303e19e8ddc0596cfc18c32ce5ea8cbd7dcdbd7b907e8ee58e5b782",
+      "en_sha256": "b08ff03def4752746563b77315244d9d0e4b64459824b9a3a4d14dae3b5ef847",
+      "review": "2026-11-07 PWA/Tauri follow-up: contributor attribution, shared runtime, save handling, tested scope and pending release checked in both languages."
     },
     {
       "ko": "Desktop/Tauri/README.md",
       "en": "Desktop/Tauri/README.en.md",
-      "ko_sha256": "aca34d4054af6b88650dcac82885767302f6c6df39ea088ce5d1c31760d158a0",
-      "en_sha256": "cb85732ed5af42e920c3c16a11d7d0faaa8d3ea8f85d8f7f722266459310e9c1",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "07f9dd1903ebb10a07c6d5603a2f58d5a4085dcd955c5e0674b19cbb6dad0f3d",
+      "en_sha256": "be2fdb1d884c8eaa57cc1fb407445fec5c1709c34580d59151ee30e0178d9e03",
+      "review": "2026-11-07 PWA/Tauri follow-up: contributor attribution, shared runtime, save handling, tested scope and pending release checked in both languages."
     },
     {
       "ko": "Distribution/README.md",
@@ -173,16 +173,16 @@
     {
       "ko": "docs/public/implementation-status.md",
       "en": "docs/en/public/implementation-status.md",
-      "ko_sha256": "6b602ef6b4e41ff56e24ae9a4a62534c7d1554bdd8a517fccd5f4bc25dd38e37",
-      "en_sha256": "4b9ef1810d754c934546e204bb9f305c4ceb656582169e19c6744764d41ccc63",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "9b1f874b7b8d9124b8fb7ac9b3fead9a324804b95c2a3146940f79b654a22390",
+      "en_sha256": "c97e2f090a089fd5ec95bd338caa45c8e423d6279b69f735edfc0a49186629f6",
+      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved."
     },
     {
       "ko": "docs/public/roadmap.md",
       "en": "docs/en/public/roadmap.md",
-      "ko_sha256": "c9a8dea21b4f1f8b9dac40a1ce34783dccffb7d1e9509d739bf0d4ec9a7afc8f",
-      "en_sha256": "48644b6609ceadfd2d7749e385c3cfd6a8926ed249122beb627bccf56ed9200f",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "f2127f26e1bcd9410ff0cf3c3ab8ee30eefa9204018ffbebf8bbcba1364278ac",
+      "en_sha256": "4d01007ee18d97c265c9fc2638b0bc25932e5a2500177326e177fd8c7f5f37aa",
+      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved."
     },
     {
       "ko": "LICENSE-SCOPE.md",
@@ -201,9 +201,9 @@
     {
       "ko": "THIRD_PARTY_NOTICES.md",
       "en": "THIRD_PARTY_NOTICES.en.md",
-      "ko_sha256": "60191712c4fc497f44482b5723afac7705912033581a42d16ba0935a69f6caae",
-      "en_sha256": "d4910b388b63fa165165da2bdc941eee1c857231f3ba06c615b51cc530b792d6",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "c1b9634584ef0d37c68abfefc48eaf8d67fa3ae2f948ac6bbf8d8e58a8272c50",
+      "en_sha256": "1ab62c766723bd2bab0f0dd733d3a044c1fa86327b0b6b830bd0c6925bdb09b4",
+      "review": "2026-11-07 PWA/Tauri follow-up: contributor attribution, shared runtime, save handling, tested scope and pending release checked in both languages."
     },
     {
       "ko": "docs/public/gameplay-gallery.md",

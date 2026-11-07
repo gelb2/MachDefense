@@ -8,8 +8,8 @@ As of 2026-11-07. See [implementation status](implementation-status.md) for what
 
 ## Distribution and platforms
 
-- Fix previous tables running on the first PWA update. Test reuse of unchanged files, resource-bundle splitting, and recovery from corruption or interruption.
-- Develop Tauri Mac window/input handling, file saves, code recovery, exit, offline execution, and signed updates.
+- Local PWA transition, hash, reuse and 95-chunk checks passed. Compare saved progress and runtime resources during production updates as well.
+- Tauri Mac file saves, recovery, automated exit, signatures and bundle-replacement checks passed. Direct menu and Cmd-Q exit checks also passed. Production downloads, real updates and window-close checks remain.
 - Investigate wheel, trackpad, and keyboard movement for the Mac battlefield camera. The wheel currently works only in the production list.
 - Check whether Galaxy USB defaults survive reconnection, wireless debugging, additional Android devices/OS versions, and production signing.
 

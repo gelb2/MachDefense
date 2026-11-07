@@ -29,7 +29,7 @@ MachDefense 웹 실행기는 기존 공용 Frame을 소비한다. Mac Chrome·We
 
 ## 폴더와 책임
 
-Web·Distribution/Web·Modules/SaveTransfer는 구현했다. Desktop/Tauri는 예정 위치다.
+Web·Distribution/Web·Modules/SaveTransfer는 구현했다. Desktop/Tauri는 같은 웹 산출물과 Rust 파일 저장을 사용하는 Mac 실행기다.
 
 | 경로 | 책임 |
 |---|---|
@@ -168,4 +168,4 @@ Tauri는 같은 웹 빌드를 앱에 포함하고 앱 데이터 폴더에 정상
 
 ## 2026-11-07 업데이트 조사
 
-[PWA·Tauri 배포·무결성·변경 자원 다운로드](research/pwa-tauri-updates-20261107.md)에 현행 구현과 후속 순서를 정리했다. Tauri Mac은 아직 구현 전이다.
+[PWA·Tauri 배포·무결성·변경 자원 다운로드](research/pwa-tauri-updates-20261107.md)에 현행 구현과 후속 순서를 정리했다. Tauri Mac의 로컬 빌드·저장·복원·업데이트 검사 결과는 [실행 기록](evidence/tauri-desktop-20261107.md)에 있다.

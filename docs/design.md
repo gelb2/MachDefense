@@ -1,6 +1,6 @@
 # 설계
 
-원본 비교 실행기는 Compatibility/ios에 있다. Web·Distribution/Web은 구현했다. Desktop/Tauri와 native macOS 경로는 예정 책임이다. Android는 2026-11-06 일반·치트 APK를 구현하고 Galaxy와 에뮬레이터에서 검사했다. [Android 책임과 실행 근거](evidence/android-native-20261106.md)를 따른다. 소스 재개발판은 C++20 코어·공용 자원을 Apple·Android·웹/PWA 실행기에 연결해 배포했다. Apple/MachDefense.xcworkspace에 일반·치트 앱과 Modules 프로젝트를 연결했다. GameSession에 메뉴·전투·강화·보상·저장을 연결했다. 현재 위메이드 1.0.3 포팅판과 기능·표시를 대조하고 실기기 검증을 진행한다. 전체 완료 범위는 [현재 상태](current-status.md), 작업 순서는 [소스 재개발 계획](source-reimplementation-plan.md)을 따른다.
+원본 비교 실행기는 Compatibility/ios에 있다. Web·Distribution/Web은 구현했다. Desktop/Tauri는 같은 웹 게임을 포함한 Mac 실행기이며 별도 native macOS 실행기는 없다. Android는 2026-11-06 일반·치트 APK를 구현하고 Galaxy와 에뮬레이터에서 검사했다. [Android 책임과 실행 근거](evidence/android-native-20261106.md)를 따른다. 소스 재개발판은 C++20 코어·공용 자원을 Apple·Android·웹/PWA 실행기에 연결해 배포했다. Apple/MachDefense.xcworkspace에 일반·치트 앱과 Modules 프로젝트를 연결했다. GameSession에 메뉴·전투·강화·보상·저장을 연결했다. 현재 위메이드 1.0.3 포팅판과 기능·표시를 대조하고 실기기 검증을 진행한다. 전체 완료 범위는 [현재 상태](current-status.md), 작업 순서는 [소스 재개발 계획](source-reimplementation-plan.md)을 따른다.
 
 | 경로 | 책임 |
 |---|---|
@@ -11,7 +11,7 @@
 | Apple | iOS/iPadOS 유니버설 workspace. native macOS 앱은 미구현 |
 | Android | Gradle·NDK·Kotlin OS 연결과 플랫폼 생명주기 |
 | Web | 웹 런타임·저장·입력·GPU 복구 |
-| Desktop/Tauri | 웹 빌드를 소비할 데스크톱 실행기 예정 위치. 현재 README만 있음 |
+| Desktop/Tauri | 같은 웹 산출물, Rust 파일 저장, 창·종료, 서명 업데이트 |
 | Distribution | 배포 포장·PWA 등 배포 구성 |
 | Tests | 기능·동등성·플랫폼·도구 검사 |
 | docs/evidence | 공개 가능한 검사 요약·해시. 원본 및 개인정보 제외 |
@@ -30,7 +30,7 @@
 
 ## 복원 코드·웹·PWA·Tauri — 2026-11-06 계획
 
-[세부 설계와 검사 순서](save-transfer-web-tauri-plan.md)에 공용 SaveTransfer, 원본 5슬롯 보존, Core의 복원 UI, 단일 Web 실행기와 플랫폼별 저장 서비스를 정리했다. 먼저 웹 실행기를 검증하고 같은 산출물을 설치형 PWA와 Tauri Mac에 연결한다. 기존 플랫폼의 OS 연결은 유지한다. 웹 저장은 Asyncify로 IndexedDB 트랜잭션 완료를 기다린 뒤 기존 bool 결과를 반환한다. 최초 웹 이식에서는 공용 복원 연결 4파일 외 Apple·Android 실행기·기존 계산·음향·자원을 보존했다. 이후 네이티브 복원 연결은 아래 후속 단계에서 구현했다. 현재 전체 5슬롯 복원과 웹/PWA를 구현했고 Tauri는 남았다. [검사와 파일 목록](evidence/web-pwa-20261106.md).
+[세부 설계와 검사 순서](save-transfer-web-tauri-plan.md)에 공용 SaveTransfer, 원본 5슬롯 보존, Core의 복원 UI, 단일 Web 실행기와 플랫폼별 저장 서비스를 정리했다. 먼저 웹 실행기를 검증하고 같은 산출물을 설치형 PWA와 Tauri Mac에 연결한다. 기존 플랫폼의 OS 연결은 유지한다. 웹 저장은 Asyncify로 IndexedDB 트랜잭션 완료를 기다린 뒤 기존 bool 결과를 반환한다. 최초 웹 이식에서는 공용 복원 연결 4파일 외 Apple·Android 실행기·기존 계산·음향·자원을 보존했다. 이후 네이티브 복원 연결은 아래 후속 단계에서 구현했다. 현재 전체 5슬롯 복원과 웹/PWA·Tauri Mac을 구현했다. [검사와 파일 목록](evidence/web-pwa-20261106.md).
 
 ## 복원 코드 플랫폼 연결 — 2026-11-06
 

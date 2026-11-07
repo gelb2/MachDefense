@@ -17,6 +17,7 @@ iOS·iPadOS·Android 네이티브 앱과 웹·PWA가 같은 C++ 게임 코드를
 | Apple | `Apple/`, `Sources/Platform/Apple/` | 워크스페이스·렌더링·입력·오디오 세션·저장 경로 |
 | Android | `Android/` | Kotlin·JNI·EGL·오디오 출력·앱 생명주기 |
 | 웹 | `Web/`, `Distribution/Web/` | Wasm·WebGL2·브라우저 입력·음향·IndexedDB·시작 화면·PWA |
+| Tauri Mac | `Desktop/Tauri/` | Rust·WKWebView 실행기, 웹 게임 번들, 파일 저장, 서명된 앱 업데이트 |
 
 Core는 플랫폼 SDK를 직접 부르지 않는다. `ResourceAccess`와 `HostServices`를 통해 자원 읽기·저장·음향·텍스트 입력을 요청한다. 게임 화면은 Core가 만든 `Frame`을 각 실행기가 그린다. 메뉴와 HUD 버튼도 이 경로를 쓴다.
 
@@ -33,5 +34,7 @@ Apple의 효과음은 OpenAL Soft, 음악은 AudioFile·AudioQueue로 재생한�
 웹은 게임 저장을 IndexedDB에 기록하고 트랜잭션 완료 뒤 성공을 반환한다. 자원은 Cache Storage에 둔다. 자원 캐시를 다시 받아도 진행 데이터는 유지된다. 두 창에서 같은 진행을 열었을 때 오래된 창이 최신 저장을 덮지 않도록 저장 버전을 대조한다. 사용자가 사이트 데이터를 삭제하면 복원 코드로 진행을 다시 가져올 수 있다.
 
 복원 적용 전에는 기존 저장의 백업을 남긴다. 현재 메뉴는 전체 5슬롯을 교체한다. Apple·Android는 공용 FileStore로 백업·중단 복구·파일 교체를 처리한다. 복사·검사·취소와 확인 버튼은 공용 C++ 메뉴가 그린다. 플랫폼은 텍스트 입력·키보드·클립보드와 저장 경로를 연결한다. 단일 슬롯 선택은 검토 제안이며, 현재 복원 범위는 전체 5슬롯이다.
+
+Tauri는 같은 저장 바이트를 브라우저 캐시 밖의 앱 데이터 폴더에 기록한다. 임시 파일을 완전히 기록한 뒤 현재 파일을 교체하고 검증한다. 이전 진행과 코드 복원 전 저장은 별도 백업으로 남긴다. 게임 규칙과 복원 코덱은 그대로 사용한다.
 
 [게임 소개](../../README.md) · [문서 목차](README.md)

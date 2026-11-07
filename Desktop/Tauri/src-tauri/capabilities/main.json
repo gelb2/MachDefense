@@ -1,0 +1,15 @@
+{
+  "identifier": "main",
+  "description": "Packaged MachDefense save and lifecycle commands",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "allow-save-read",
+    "allow-save-write",
+    "allow-finish-close",
+    "allow-diagnostics-write",
+    "allow-update-check",
+    "allow-update-install"
+  ]
+}

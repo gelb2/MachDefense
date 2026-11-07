@@ -1,0 +1,32 @@
+{
+  "browser": "webkit",
+  "errors": [
+    "Failed to load resource: WebKit encountered an internal error"
+  ],
+  "corruptInstallRejected": true,
+  "storage": {
+    "quota": 1048576000,
+    "usage": 141173852
+  },
+  "initial": {
+    "ok": true,
+    "version": "8ea76b784827ce94",
+    "downloaded": 0,
+    "reused": 70664211
+  },
+  "cacheCount": 2,
+  "gameStarted": true,
+  "runningVersionHeld": true,
+  "otherPlayingTabHeld": true,
+  "firstLauncherUsesNewVersion": true,
+  "savePreserved": true,
+  "unchangedGameNotDownloaded": true,
+  "badUpdateKeepsPrevious": true,
+  "corruptCacheRepaired": true,
+  "changedChunkOnly": true,
+  "changedChunkBytes": 72193,
+  "fullPackageBytes": 66614478,
+  "assembledPackageVerified": true,
+  "offlineGameAndSave": true,
+  "ok": true
+}

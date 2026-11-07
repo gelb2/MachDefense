@@ -96,9 +96,9 @@
     "Resources/Tables/MachList.tsv": "b0736a8a53874877860f2b6dffb74fe7fd5a26b6381f85b446f2d63a48294cae",
     "Resources/Tables/MachRegen.tsv": "2fbfaedbef67699aaad6faf88cf4c0bd819ffdabed707dd7b85153b8d97d9a21",
     "Resources/Tables/MapList.tsv": "06c01bea0d92f0db9529d9a702ad6b465bbc166800ff0bb5e24ab6448d68486f",
-    "Resources/Tables/PartsList.tsv": "ffb498932e30e74e4ae84211a542fabac28de6ab43759b1b25d1015522d3aeb1",
+    "Resources/Tables/PartsList.tsv": "994825d33b5209449f5225ebd99f5972c5d41cfde3af25eb77f18bd3f69a2ec9",
     "Resources/Tables/SpAttackList.tsv": "5ac06d6aad956c854db53e8a8bcd9d9f7cd6c3fdecb5b79d572892ee7af7db73",
-    "Resources/Tables/TileList.tsv": "4266caf60c3ab60f1a084e7459fde6ce9628b6a237582d55dde1462601e485a6",
+    "Resources/Tables/TileList.tsv": "9d18753197630bed1a01c64da1f48d353b42b067444e4c8b56eb8f72fc198cd7",
     "Resources/Tables/WeaponInfo.tsv": "e931f1d4780604af595e2ee5ab7db923e68e723e464710094242bd57c64b3d73"
   },
   "checks": [

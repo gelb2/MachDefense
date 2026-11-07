@@ -1,0 +1,27 @@
+{
+  "tool": "image_gen.imagegen",
+  "status": "concept-only; not connected to runtime",
+  "references": [
+    {
+      "path": "Resources/Images/P_Body_34.png",
+      "sha256": "b4f5f69579a37381e42146c6418447ec23853170e674353ca930974eed84d3d5"
+    },
+    {
+      "path": "Resources/Images/PB_Tanker_05.png",
+      "sha256": "3be79e70c4e22ccf4b811e8cf281eda3aa79202b14b80f5f7d81dca7e4cf390f"
+    },
+    {
+      "path": "Resources/Images/E_Tank_Body_05.png",
+      "sha256": "a282a193fb1886b0c1117e929ed5b734317567a9964ee33cd3b369be6e00e930"
+    }
+  ],
+  "output": {
+    "path": "Art/Aircraft/concepts/aircraft-v1.png",
+    "sha256": "8b7ebad7ad7ccfbaeb05d534ec3a3e18bb60503ff0d1de0db6ed7e282027a55f"
+  },
+  "review": [
+    "Pixel clusters and wear are heavier than the original sprites.",
+    "VTOL banking needs fuselage-side exposure, not only nacelle rotation.",
+    "Actual-size, socket, muzzle and rotor animation checks are pending."
+  ]
+}
