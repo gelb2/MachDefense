@@ -82,9 +82,9 @@
     {
       "ko": "docs/public/troubleshooting.md",
       "en": "docs/en/public/troubleshooting.md",
-      "ko_sha256": "1bbfba860608d1f12d0c3d15888ee1eb260b4a161ae816ce4784eb9b9f44c375",
-      "en_sha256": "66bc4e6487b7499c1e6c359895da80e38b53e7180ade49eb88fef5fcdaa74d01",
-      "review": "2026-11-08: refusal without knowing the block cause recorded as Codex action, not a user allegation; draft attribution error and unfinished work matched."
+      "ko_sha256": "6debbb9d53617af170bb5bc92af5bb1a02efc5fa5c0fe58d546b7bde224240bc",
+      "en_sha256": "36f2917af64351e8e564161d072c5c3e3106b0efd0d5c164a2471493caa906c1",
+      "review": "2026-11-08: explicitly records refusal to remove or modify text in the supplied sketch and create the requested drawing; Korean and English subjects, actions and unfinished scope match."
     },
     {
       "ko": "docs/public/validation.md",
