@@ -20,6 +20,6 @@ The work followed HeavyMach1's restoration procedure and skills, shared-code/pla
 
 ## Libraries
 
-OpenAL Soft plays sound effects; stb decodes images. Their sources and licenses are in `Modules/ThirdParty/`.
+OpenAL Soft plays sound effects; stb decodes images. Their sources and licenses are in `Modules/ThirdParty/`. [Third-party notices](THIRD_PARTY_NOTICES.en.md) · [Code license](LICENSE-SCOPE.en.md) · [Asset terms](ASSET-LICENSES.en.md).
 
 [Game overview](README.en.md) · [Documentation](docs/en/public/README.md)
