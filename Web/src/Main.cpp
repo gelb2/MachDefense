@@ -10,6 +10,7 @@
 #include "../../Tests/ContentSweep.hpp"
 #include "../../Tests/TurretArtSweep.hpp"
 #include "../../Tests/AircraftComparisonScene.hpp"
+#include "../../Tests/AircraftVisualFrame.hpp"
 #endif
 #include <sstream>
 #include <cmath>
@@ -87,6 +88,7 @@ EMSCRIPTEN_KEEPALIVE const char* md_art_frame(unsigned family){
 EMSCRIPTEN_KEEPALIVE const char* md_aircraft_scene(int command,int mode){
 #if MD_WEB_CHEAT
  try {
+  if(command==8){renderer.draw(validation::aircraftVisualFrame(assets,unsigned(mode)),pw,ph);status="visual comparison at uniform 2x";return status.c_str();}
   if(command==0||!aircraftScene)aircraftScene=std::make_unique<validation::AircraftComparisonScene>(assets,unsigned(mode));
   if(command==1)aircraftScene->world->tick();
   if(command==2)aircraftScene->world->setPaused(true);

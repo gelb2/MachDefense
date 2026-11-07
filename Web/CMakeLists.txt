@@ -21,3 +21,10 @@ target_link_options(game PRIVATE -fexceptions -sDISABLE_EXCEPTION_CATCHING=0 -sA
  "--preload-file=${MD_ROOT}/Resources/Images@/assets/Images" "--preload-file=${MD_ROOT}/Resources/Generated@/assets/Generated"
  "--preload-file=${MD_ROOT}/Resources/Tables@/assets/Tables" "--preload-file=${MD_ROOT}/Resources/RawData@/assets/RawData"
  "--preload-file=${MD_ROOT}/Resources/Audio@/assets/Audio")
+
+# Emscripten embeds these files at link time. Repack after asset-only edits.
+file(GLOB_RECURSE MD_WEB_ASSET_INPUTS CONFIGURE_DEPENDS
+ "${MD_ROOT}/Resources/Images/*" "${MD_ROOT}/Resources/Generated/*"
+ "${MD_ROOT}/Resources/Tables/*" "${MD_ROOT}/Resources/RawData/*"
+ "${MD_ROOT}/Resources/Audio/*")
+set_property(TARGET game APPEND PROPERTY LINK_DEPENDS ${MD_WEB_ASSET_INPUTS})

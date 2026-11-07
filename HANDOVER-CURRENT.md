@@ -1,3 +1,11 @@
+## 2026-11-08 IMG_1168 Cheyenne
+
+IMG_1168 원본과 비율 유지 지시를 보존했다. 표시 이름은 Cheyenne으로 변경했다. 새 그림은 생성하지 못했다. 이미지 도구가 입력 단계에서 400 / moderation_blocked / violence를 반환했다. AH-10도 출력 단계에서 차단됐다. Beluga만 새 사용자 도안을 적용했다. 상세: [사용자 도안 작업](docs/evidence/user-aircraft-20261108.md). 이름 변경 후 C++ 관련 8개 검사는 통과했고 웹 묶음의 PNG 4개와 이름 테이블 바이트가 현재 Resources와 일치한다. main·실기기 배포는 하지 않았다.
+
+# AH-10·Beluga 도안 적용 — 2026-11-08 후속
+
+현재 작업 브랜치는 `feat/aircraft-visual-repair-20261108`이다. 사용자가 제공한 IMG_1166/1167을 각각 AH-10/Beluga 기준으로 지정했고, 후속 답변으로 제공 이미지 비율을 유지하도록 했다. Beluga는 생성·조립·웹 검사했으며 AH-10은 output 단계 violence 차단으로 새 그림을 받지 못했다. 표시 이름은 두 기체 모두 바꿨고 저장 키는 유지했다. [작업·원본·오류·검사](docs/evidence/user-aircraft-20261108.md)를 읽는다. 이전 AHeavyBody와 소형 후보는 앞 작업의 미완료 상태이며 새 AH-10 적용본이 아니다. Web CMake 자원 링크 의존성 누락을 수정해 묶음 PNG 4개와 이름 표가 Resources와 일치함을 확인했다. main·운영 PWA·기기를 갱신하지 않았다.
+
 # 2026-11-08 신규 유닛 외형 오류 기록
 
 현재 브랜치는 `feat/aircraft-visual-repair-20261108`이다. 최신 사용자 지시는 소형 몸체 폭=Lv.10 MachineGun의 3/4·길이=2배, 건쉽 몸체=가장 큰 적 전체 조립 크기·AC6 첫 보스 형태다. 이전 2/3·3/4 건쉽 기록은 당시 기준이다. 현재 AC6 후보는 옆 지지부를 포함한 폭을 맞춰 중앙 동체가 작게 남았다. 외형 미완료이며 main·운영 PWA·기기는 갱신하지 않았다. [오류 전체 기록과 이미지 생성 실패 응답](docs/evidence/new-unit-art-errors-20261108.md), [최신 제작 지시](docs/research/aircraft-plan-20261107.md)를 읽는다. 기존 회피 구현과 미커밋 아트·웹 검사 코드는 보존한다.

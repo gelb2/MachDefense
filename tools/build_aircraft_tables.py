@@ -50,7 +50,7 @@ for lv in range(1,11):
   mr.append(dict(MachName=f'{model}_{lv:02}',HP=hp//2,EXP=0,Spd=move_speed,Type='PLANE',Refer='-',Rad=radius,**{'Coin%':0,'Coin':0,'ItemRegen':'NULL','BaseParts':model}))
   out.append(dict(name=name,level=lv,mission=mission,cells=cost,upgradeCredits=upgrade,hp=hp,speed=mr[-1]['Spd'],range=ranges[k],rangeReference=maxsource if k==1 else ref,dps=round(dps,2),weapons=parts))
 append('WeaponInfo',wr);append('MachBuild_Name',br);append('MachList',mr)
-append('Description_us',[{'Key':'MN_'+s[0],'Value':s[0]} for s in specs]) if read('Description_us')[0][0]=='Key' else None
+append('Description_us',[{'Key':'MN_'+s[0],'Value':{'Gunship':'AH-10','OrcaBomber':'Beluga','Orca':'Cheyenne'}.get(s[0],s[0])} for s in specs]) if read('Description_us')[0][0]=='Key' else None
 (root/'Art/Aircraft/runtime/campaign-stats.json').write_text(json.dumps(out,indent=2)+'\n')
 print('Appended 40 builds, 40 machines, 90 weapons. Original rows retained.')
 print('Heavy maximum range references:', sorted(set((r['rangeReference'],r['range']) for r in out if r['name']=='Gunship')))

@@ -276,3 +276,9 @@ Chrome에서 신규 부품 35개의 길이와 비율 보존·텍스처 잘림, �
 최종 사이트 소스 `29c0aa500df9dcc138c2528452c27a7a91fcc700`, 배포 `appgdep_6aef3aa79b048191bb3d505d33e13c57`, 버전 `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_8bf7fe00a0188191b6c5f423fdada9b6`가 succeeded다. 기존 소유자 전용 접근을 유지했다.
 
 1440×1000·390×844 Chrome에서 새 이미지 12개, 영상 2개 재생, 목차 295개와 검색·이동, 가로 넘침 없음·JS 오류 없음을 확인했다. 기존 PNG 9개를 RGBA 값이 같은 무손실 WebP로 바꿔 용량을 확보했다. 원본은 로컬에 보존했고 변환한 그림의 HTML 참조를 검사했다. 배포 압축 해제 크기는 268,330,496바이트다.
+
+## 2026-11-08 사용자 도안 1166·1167·1168
+
+[보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#user-aircraft-20261108)에 원본 3장, Beluga 적용 화면, AH-10·Cheyenne 생성 실패 응답과 기존 승인 불이행·허위 완료 보고 기록을 게시했다. 새 그림 완료로 표시한 것은 Beluga뿐이다. 로컬 Chrome 1280·390 폭에서 새 이미지 6개 로드와 가로 넘침 없음을 확인했다.
+
+Sites source `7acf9756f0d5e356d4ceeda99fc98f267995a41f`, deployment `appgdep_6aef85a553e081919184ae0b7d7888ee`, status `succeeded`. 사이트는 기존 소유자 전용 공개 범위를 유지한다. 게임 main·PWA·실기기 배포는 하지 않았다. 보고서 256MiB 제한 때문에 기존 전투 MP4 4개의 인코딩을 압축했다. 원본은 `.local/report-compression-originals/`에 보존했다. 해상도·프레임 수·길이·재생률을 대조했고 오디오는 복사했다. 손실 인코딩이므로 픽셀 일치를 주장하지 않는다.

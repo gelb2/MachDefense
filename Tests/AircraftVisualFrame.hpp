@@ -1,0 +1,26 @@
+#pragma once
+#include "Core/Simulation/Battle.hpp"
+#include "Core/Simulation/AircraftModels.hpp"
+#include "Core/Simulation/PlayerParts.hpp"
+#include <algorithm>
+namespace md::validation {
+// Cheat-only measured sheet: production parts and sprite assembly, uniform scale.
+inline Frame aircraftVisualFrame(ResourceAccess& r,unsigned mode){
+ auto models=BattleModels::load(r);appendAircraftModels(models);
+ auto dims=[&](std::string_view n){return r.imageSize(n);};
+ Frame f;f.logicalWidth=640;f.logicalHeight=800;f.background={.18f,.20f,.20f,1};
+ auto one=[&](std::string_view image,Vec2 center,float scale){auto d=dims(image);Sprite s;s.image=image;s.destination={center.x-d.x*scale/2,center.y-d.y*scale/2,d.x*scale,d.y*scale};s.rotationDegrees=-90;s.nearest=true;f.sprites.push_back(s);};
+ auto machine=[&](const char* name,Vec2 c,float scale){Frame t;models.appendSprites(t,name,c,scale,1.57079632679f,1.57079632679f,float(mode)*.5f,dims);for(auto s:t.sprites)if(s.color.r!=0){s.nearest=true;f.sprites.push_back(s);}};
+ if(mode==2){
+  one("P_Body_18.png",{160,140},2);one("ATransportBody.png",{450,180},2);
+  machine("E_Tank_28",{160,470},2);machine("AircraftTransport",{450,470},2);
+  machine("AircraftTransport",{160,710},1);machine("AircraftDuct",{450,710},1);
+  return f;
+ }
+ // All rows use 2x original logical pixels. No per-image fit-to-cell scaling.
+ one("P_Body_18.png",{160,110},2);one("ALightBody.png",{460,110},2);
+ machine("E_Tank_28",{160,380},2);one("AHeavyBody.png",{460,380},2);
+ machine("E_Turret_18",{160,655},2);machine("AircraftHeavy",{460,655},2);
+ return f;
+}
+}

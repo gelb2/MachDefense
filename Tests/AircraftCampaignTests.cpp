@@ -7,6 +7,10 @@
 int main(int argc,char** argv){assert(argc>=2);Resources r;r.root=argv[1];
  auto table=[&](const char* n){return DataTable::load(r.root/"Tables"/(std::string(n)+".tsv"));};
  auto builds=BuildCatalog::load(table("MachBuild_Parts"),table("MachBuild_Name"));Settlement policy(builds,table("MachRegen"));auto weapons=WeaponCatalog::load(table("WeaponInfo"),true);auto models=BattleModels::load(r);
+ auto descriptions=table("Description_us");
+ assert(descriptions.value(*descriptions.findRow("MN_Orca"),"Value")=="Cheyenne");
+ assert(descriptions.value(*descriptions.findRow("MN_Gunship"),"Value")=="AH-10");
+ assert(descriptions.value(*descriptions.findRow("MN_OrcaBomber"),"Value")=="Beluga");
  auto fixture=[](){auto s=SaveData::empty(29);s.createProfile("AIR",1);s.writeWord(SaveData::slotStart+0xc,5);s.setCredits(0,10000000);return s;};
  for(const auto& spec:alliedAircraftCatalog){
   auto s=fixture();auto first=policy.grantAircraftUnlocks(s,0,spec.mission-1);auto second=policy.grantAircraftUnlocks(s,0,spec.mission);assert(std::find(second.begin(),second.end(),spec.name)!=second.end());assert(policy.grantAircraftUnlocks(s,0,spec.mission).empty());
