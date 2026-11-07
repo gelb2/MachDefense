@@ -29,13 +29,13 @@
 
 ### iPad에서 확인한 화면
 
-![포탑 설치 위치 안내](assets/machdefense/feedback-turret-prompt.webp)
+![포탑 설치 위치 안내](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/assets/machdefense/feedback-turret-prompt.webp)
 
-![셀이 부족한 생산 아이콘의 딤 표시](assets/machdefense/feedback-production-dim.webp)
+![셀이 부족한 생산 아이콘의 딤 표시](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/assets/machdefense/feedback-production-dim.webp)
 
-![하단 스킬 버튼을 누른 상태](assets/machdefense/feedback-skill-pressed.webp)
+![하단 스킬 버튼을 누른 상태](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/assets/machdefense/feedback-skill-pressed.webp)
 
-![미션 전환 일러스트](assets/machdefense/feedback-stage-illustration.webp)
+![미션 전환 일러스트](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/assets/machdefense/feedback-stage-illustration.webp)
 
 ### 기지 강화 6종의 실제 효과
 
@@ -91,7 +91,7 @@ HeavyMach 1과 오류 개수를 같은 범위로 집계한 자료는 없다. 현
 - iPhone 정식 앱에 후속 수정본을 반영하고 같은 행동을 확인한다.
 - 화면 확장은 원본 기능 대조 뒤 진행한다. 현재 레터박스는 남아 있다.
 
-[원본 대조와 검사 절차 점검 전문](machdefense-process-audit.md) · [핵폭탄 계산 기록](machdefense-nuclear-damage.md) · [지형·이동 대조 기록](machdefense-terrain-audit.md)
+[원본 대조와 검사 절차 점검 전문](../evidence/restoration-process-audit-20261104.md) · [핵폭탄 계산 기록](../evidence/nuclear-damage-20261104.md) · [지형·이동 대조 기록](../evidence/terrain-motion-audit-20261104.md)
 
 ## 소스 재개발 진행
 
@@ -291,13 +291,13 @@ indieapps 1.0.5 저장은 42,476바이트, 위메이드 1.0.3 저장은 42,496�
 
 ## 오른쪽 HUD·타이틀 수정 — 2026-11-05
 
-모듈화·오디오 수정·반복 긴급지원을 develop에 병합했다. 이후 별도 브랜치에서 iPhone의 회색 HUD 확장과 타이틀 가장자리 반복을 수정했다. 원인·코드 변경·시뮬레이터 검사·수정 전후 그림은 [화면 수정 기록](../evidence/hud-title-20261105.md), 오디오 메인 스레드 경고와 효과음 복귀를 포함한 경위는 [트러블슈팅](../troubleshooting.md)에 모았다.
+모듈화·오디오 수정·반복 긴급지원을 develop에 병합했다. 이후 별도 브랜치에서 iPhone의 회색 HUD 확장과 타이틀 가장자리 반복을 수정했다. 원인·코드 변경·시뮬레이터 검사·수정 전후 그림은 [화면 수정 기록](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense-hud-title-20261105.md), 오디오 메인 스레드 경고와 효과음 복귀를 포함한 경위는 [트러블슈팅](../troubleshooting.md)에 모았다.
 
 HeavyMach 1처럼 진행도·레벨·강화를 한 줄 코드로 복원하는 기능은 투두에 추가했다. 원본 슬롯 구조를 사용하고, 화면과 버튼도 게임 내부에서 구현한다. iOS·Android·웹 UI 컴포넌트는 사용하지 않는다.
 
 ### 후속 수정: HUD 롤백과 타이틀 경계 제거
 
-HUD 몸통 세로 늘리기는 사용자의 지시로 철회했다. 코드와 검사를 수정 전으로 되돌리고 HUD는 재작업 투두로 남겼다. 타이틀은 한 줄 픽셀을 늘리는 합성과 그림에 남은 사각 경계를 제거했다. [최신 화면과 검사](../evidence/hud-title-20261105.md#hud-롤백타이틀-경계-제거).
+HUD 몸통 세로 늘리기는 사용자의 지시로 철회했다. 코드와 검사를 수정 전으로 되돌리고 HUD는 재작업 투두로 남겼다. 타이틀은 한 줄 픽셀을 늘리는 합성과 그림에 남은 사각 경계를 제거했다. [최신 화면과 검사](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense-hud-title-20261105.md#hud-롤백타이틀-경계-제거).
 
 
 ## PWA·Tauri Mac 개발 계획 — 2026-11-06
@@ -463,7 +463,7 @@ MachDefense 저장소는 비공개다. 로컬/비공개 검증으로 시작한�
 - [Tauri 프런트엔드 구성](https://v2.tauri.app/start/frontend/): 웹 산출물 연결 방법.
 - [StorageManager.persist](https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist): 저장 회수 방지 요청과 승인 결과.
 
-구현 시 도구 버전·브라우저·OS와 실제 결과를 함께 남긴다. 남은 작업은 [TODO](usability-todo.md), 현행 설계는 [설계](design.md), 저장 정책은 [시간·저장·음향](runtime-policy.md)을 따른다.
+구현 시 도구 버전·브라우저·OS와 실제 결과를 함께 남긴다. 남은 작업은 [TODO](../usability-todo.md), 현행 설계는 [설계](../design.md), 저장 정책은 [시간·저장·음향](../runtime-policy.md)을 따른다.
 
 
 ## Web·PWA 구현과 검사 — 2026-11-06

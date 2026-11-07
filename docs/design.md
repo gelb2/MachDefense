@@ -1,6 +1,6 @@
 # 설계
 
-원본 비교 실행기는 Compatibility/ios에 있다. Web·Distribution/Web은 구현했다. Desktop/Tauri와 native macOS 경로는 예정 책임이다. Android는 2026-11-06 일반·치트 APK를 구현하고 Galaxy와 에뮬레이터에서 검사했다. [Android 책임과 실행 근거](evidence/android-native-20261106.md)를 따른다. 소스 재개발판은 C++20 코어·공용 자원 번들·Objective-C++ Apple 실행기로 작성 중이다. Apple/MachDefense.xcworkspace에 일반·치트 앱과 Modules 프로젝트를 연결했다. GameSession에 메뉴·전투·강화·보상·저장을 연결했다. 현재 위메이드 1.0.3 포팅판과 기능·표시를 대조하고 실기기 검증을 진행한다. 전체 완료 범위는 [현재 상태](current-status.md), 작업 순서는 [소스 재개발 계획](source-reimplementation-plan.md)을 따른다.
+원본 비교 실행기는 Compatibility/ios에 있다. Web·Distribution/Web은 구현했다. Desktop/Tauri와 native macOS 경로는 예정 책임이다. Android는 2026-11-06 일반·치트 APK를 구현하고 Galaxy와 에뮬레이터에서 검사했다. [Android 책임과 실행 근거](evidence/android-native-20261106.md)를 따른다. 소스 재개발판은 C++20 코어·공용 자원을 Apple·Android·웹/PWA 실행기에 연결해 배포했다. Apple/MachDefense.xcworkspace에 일반·치트 앱과 Modules 프로젝트를 연결했다. GameSession에 메뉴·전투·강화·보상·저장을 연결했다. 현재 위메이드 1.0.3 포팅판과 기능·표시를 대조하고 실기기 검증을 진행한다. 전체 완료 범위는 [현재 상태](current-status.md), 작업 순서는 [소스 재개발 계획](source-reimplementation-plan.md)을 따른다.
 
 | 경로 | 책임 |
 |---|---|
@@ -8,10 +8,10 @@
 | Modules | C++ 코어 라이브러리·공용 에셋 번들·외부 라이브러리 |
 | Resources | 패키지에서 분리해 준비한 에셋·데이터와 명세 |
 | Compatibility | 원본 비교 실행 도구. IPA·실행 바이너리는 외부에 보관 |
-| Apple | 하나의 workspace와 하위 iOS/iPadOS·native macOS 프로젝트. Catalyst 제외 |
+| Apple | iOS/iPadOS 유니버설 workspace. native macOS 앱은 미구현 |
 | Android | Gradle·NDK·Kotlin OS 연결과 플랫폼 생명주기 |
 | Web | 웹 런타임·저장·입력·GPU 복구 |
-| Desktop/Tauri | 웹 빌드를 소비하는 데스크톱 실행기 |
+| Desktop/Tauri | 웹 빌드를 소비할 데스크톱 실행기 예정 위치. 현재 README만 있음 |
 | Distribution | 배포 포장·PWA 등 배포 구성 |
 | Tests | 기능·동등성·플랫폼·도구 검사 |
 | docs/evidence | 공개 가능한 검사 요약·해시. 원본 및 개인정보 제외 |
@@ -30,7 +30,7 @@
 
 ## 복원 코드·웹·PWA·Tauri — 2026-11-06 계획
 
-[세부 설계와 검사 순서](save-transfer-web-tauri-plan.md)에 공용 SaveTransfer, 원본 5슬롯 보존, Core의 복원 UI, 단일 Web 실행기와 플랫폼별 저장 서비스를 정리했다. 먼저 웹 실행기를 검증하고 같은 산출물을 설치형 PWA와 Tauri Mac에 연결한다. 기존 플랫폼의 OS 연결은 유지한다. 웹 저장은 Asyncify로 IndexedDB 트랜잭션 완료를 기다린 뒤 기존 bool 결과를 반환한다. 공용 복원 연결 4파일 외 Apple·Android 실행기·기존 계산·음향·자원은 보존했다. 현재 전체 5슬롯 복원과 웹/PWA를 구현했고 Tauri는 남았다. [검사와 파일 목록](evidence/web-pwa-20261106.md).
+[세부 설계와 검사 순서](save-transfer-web-tauri-plan.md)에 공용 SaveTransfer, 원본 5슬롯 보존, Core의 복원 UI, 단일 Web 실행기와 플랫폼별 저장 서비스를 정리했다. 먼저 웹 실행기를 검증하고 같은 산출물을 설치형 PWA와 Tauri Mac에 연결한다. 기존 플랫폼의 OS 연결은 유지한다. 웹 저장은 Asyncify로 IndexedDB 트랜잭션 완료를 기다린 뒤 기존 bool 결과를 반환한다. 최초 웹 이식에서는 공용 복원 연결 4파일 외 Apple·Android 실행기·기존 계산·음향·자원을 보존했다. 이후 네이티브 복원 연결은 아래 후속 단계에서 구현했다. 현재 전체 5슬롯 복원과 웹/PWA를 구현했고 Tauri는 남았다. [검사와 파일 목록](evidence/web-pwa-20261106.md).
 
 ## 복원 코드 플랫폼 연결 — 2026-11-06
 
@@ -39,3 +39,7 @@ Apple·Android의 HostServices에 텍스트 필드·클립보드·FileStore를 �
 ## 레이저 해금과 기존 저장 — 2026-11-07
 
 공용 `Settlement::grantCampaignUnlock`이 캠페인 진행도와 발칸 보유 여부를 검사하고 기존 유닛 인벤토리에 레이저를 넣는다. 미션 정산과 프로필 선택에서만 호출한다. `GameSession`이 `Menu`의 선택 준비 콜백을 연결한다. 기존 프로필 선택의 저장 한 번에 함께 기록하며 쓰기 실패 시 프로필 변경과 지급을 함께 되돌린다. 복원 코드로 가져온 저장도 프로필 선택에서 같은 처리를 거친다. 저장 형식·전투 틱·OS 연결에는 새 처리를 넣지 않는다.
+
+## 강화·그림·HUD의 공용 소비 경로
+
+추가 레벨은 `Resources/Tables`의 레벨 행과 `Resources/Generated`의 부품 연결을 공용 Core가 읽는다. 원작 최종 단계까지의 수치와 추가 단계를 구분한다. `BattleModels`가 채택 부품을 조립하고 `GameHUD`가 전체 설치 목록의 스크롤·입력을 처리한다. Apple·Android·웹이 같은 표와 Frame을 사용한다. [수치·사거리 검사](evidence/level10-range-damage-20261107.md) · [복원 코드 검사](evidence/level10-recovery-20261107.md) · [v0.5 그림·플랫폼 검사](evidence/v05-release-20261107.md).

@@ -1,5 +1,7 @@
 # MachDefense GitHub 원고
 
+이 문서는 v0.3 작성 당시의 원고 모음이다. 현재 공개 원고는 [저장소 README](../../README.md)와 [방문자 문서](../public/README.md), 사용자가 직접 고친 [개발자의 변](../RESTORATION.md)이다. 이 사본을 최신 원고 위에 덮어쓰지 않는다.
+
 2026-11-06. [공개 저장소](https://github.com/gelb2/MachDefense)와 [웹·PWA](https://gelb2.github.io/MachDefense/)의 문서 전문이다. README와 개발자의 변은 v0.3 원고를 반영했다.
 
 ## 1. README

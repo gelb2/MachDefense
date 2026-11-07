@@ -1,3 +1,9 @@
+# TODO·문서 점검 — 2026-11-07
+
+작업 브랜치는 `docs/todo-audit-20261107`이다. TODO 정리는 `30b6b3e`에 커밋했다. [현행 20개 과제](docs/usability-todo.md)와 [문서 점검 결과](docs/evidence/document-hygiene-20261107.md)를 읽는다. 게임 코드·에셋·앱 설치본은 v0.5 그대로다. 개발자의 변 최종본도 보존했다.
+
+아래는 이전 작업 당시 인계다. 완료한 모듈화·복원·강화·그림 적용을 다시 착수하거나 기각된 시안을 채택하지 않는다.
+
 # v0.5 배포와 후속 검사 — 2026-11-07
 
 main `31c73f6`에 병합하고 v0.5 태그·GitHub Release·운영 PWA를 배포했다. iPhone·iPad·Galaxy 일반/치트 앱을 설치했다. 운영 Chrome·WebKit의 복원·미션·오프라인 검사가 통과했고 실행 그림 44개·테이블 3개가 최신 파일과 일치했다. [전체 결과](docs/evidence/v05-release-20261107.md).

@@ -74,10 +74,10 @@ Codex는 원작에서 유지하던 오디오 컨텍스트를 발사 때마다 �
 
 [트러블슈팅](docs/public/troubleshooting.md) · [검사 결과](docs/public/validation.md)
 
-새 락온 기능도 생각하고 있다. 일정 시간이나 무작위 조건으로 적을 락온하고, 사용자가 그 적을 터치하면 일격에 처치하는 방식이다. HeavyMach1에 넣은 자동조준을 보고 지인이 “아 이거라도 있으니 게임 쉽게 할 수 있다. 어깨 빠지는 줄 알았네”라고 했던 기억이 있다.
+새 락온 기능도 생각하고 있다. 사거리 안의 적을 표시하고, 사용자가 터치한 적과 가장 가까운 메크 한 대가 크로스파이어를 발사하는 방식이다. 적 포탑과 탱크도 대상이며 메크마다 3초 간격을 둔다. 피해와 발사 수·속도·효과는 현재 크로스파이어 레벨을 따른다. HeavyMach1에 넣은 자동조준을 보고 지인이 “아 이거라도 있으니 게임 쉽게 할 수 있다. 어깨 빠지는 줄 알았네”라고 했던 기억이 있다.
 
 MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행동을 바꾸지 않으면서 화면을 보고 판단할 기회를 더하려는 구상이다. 기존 크로스파이어의 에셋과 조준·사거리 로직을 쓰되, 크로스파이어 자체는 그대로 둘 생각이다.
 
-원형 구조물과 포탑 밀집 구간의 길찾기, 생산 HUD 전체 유닛 목록과 순서 편집, 강화 상한 확장, 새 락온 기능은 남은 과제다. [전체 TODO](docs/usability-todo.md) · [기술 구조](docs/public/architecture.md) · [개발 과정](docs/public/development-history.md) · [크레딧](CREDITS.md)
+10레벨 강화와 INSTALL한 전체 유닛의 생산 목록 스크롤은 구현했다. 원형 구조물과 포탑 밀집 구간의 길찾기, 생산 목록 순서 편집, 새 락온 기능, PWA 최초 업데이트 전환과 Tauri Mac 구현은 남은 과제다. [전체 TODO](docs/usability-todo.md) · [기술 구조](docs/public/architecture.md) · [개발 과정](docs/public/development-history.md) · [크레딧](CREDITS.md)
 
 [문서 목차](docs/public/README.md) · [변경 이력](CHANGELOG.md) · [크레딧](CREDITS.md)

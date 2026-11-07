@@ -8,4 +8,4 @@ Apple, Android and Web use the same codec and C++ menu. GET CODE opens a read-on
 
 `FileStore.hpp` implements the Apple/Android restore transaction: backup, pending payload, atomic replacement, re-read, durable commit marker and cleanup. Startup completes an interrupted transaction. A commit marker prevents an old journal from overwriting later gameplay saves. An uncertain I/O failure blocks further saves until restart. Web uses its existing IndexedDB transaction for the backup and replacement.
 
-Single-slot selection and future settings extensions remain follow-up work. See [implementation and checks](../../docs/evidence/save-transfer-all-platforms-20261106.md).
+Single-slot selection and future settings extensions are proposals; the current feature transfers all five slots. See [implementation and checks](../../docs/evidence/save-transfer-all-platforms-20261106.md).
