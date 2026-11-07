@@ -18,8 +18,13 @@ def resume():
  return d.snapshot()
 
 s=resume();assert 'world' in s and not s['world']['paused']
-d.command('validation',12);d.press('Btn_BuildMachBG',index=0);d.command('ticks',240)
-s=record('production-confirmed');assert s['world']['produced']>=1
+before_produced=s['world']['produced']
+d.command('validation',12);d.press('Btn_BuildMachBG',index=0)
+# Higher-level builds can take longer than the old fixed four-second wait.
+for _ in range(30):
+ d.command('ticks',60)
+ if d.snapshot()['world']['produced']>before_produced:break
+s=record('production-confirmed');assert s['world']['produced']>before_produced
 # Real menu touch and pause time, followed by real resume.
 d.press('iPon_QuickBtn',index=0);s=d.snapshot();assert s['world']['paused'];t=s['world']['time'];d.command('ticks',50);assert d.snapshot()['world']['time']==t
 resume();s=record('pause-resume');assert not s['world']['paused']

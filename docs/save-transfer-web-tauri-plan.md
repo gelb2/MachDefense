@@ -163,3 +163,7 @@ Tauri는 같은 웹 빌드를 앱에 포함하고 앱 데이터 폴더에 정상
 - [StorageManager.persist](https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist): 저장 회수 방지 요청과 승인 결과.
 
 구현 시 도구 버전·브라우저·OS와 실제 결과를 함께 남긴다. 남은 작업은 [TODO](usability-todo.md), 현행 설계는 [설계](design.md), 저장 정책은 [시간·저장·음향](runtime-policy.md)을 따른다.
+
+## 2026-11-07 업데이트 조사
+
+[PWA·Tauri 배포·무결성·변경 자원 다운로드](research/pwa-tauri-updates-20261107.md)에 현행 구현과 후속 순서를 정리했다. Tauri Mac은 아직 구현 전이다.
