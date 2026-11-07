@@ -1,0 +1,60 @@
+{
+  "checked": "2026-11-07",
+  "files": [
+    {
+      "file": "LICENSES/OpenAL-Soft-LGPL-2.0.txt",
+      "sha256": "d808ce217e5b611854da622b57ec29fe545584c48bc5352fae72a4b6e5074a15",
+      "source": "Modules/ThirdParty/openal-soft/COPYING"
+    },
+    {
+      "file": "LICENSES/OpenAL-Soft-BSD-3-Clause.txt",
+      "sha256": "b5a08cf98996dd83aa906a72c163600f6cb17a65ce546a553815a1267abd43ff",
+      "source": "Modules/ThirdParty/openal-soft/BSD-3Clause"
+    },
+    {
+      "file": "LICENSES/touchHLE-MPL-2.0.txt",
+      "sha256": "66a3107d5ad6a058aab753eaac2047ccb2ed0e39465dd0fe5844da3e300d5172",
+      "source": "HeavyMach checked license copy"
+    },
+    {
+      "file": "LICENSES/rust-sdl2-MIT.txt",
+      "sha256": "df7af208e28b219a02bfa6efb733ed70c96b35e13aa09064c3c999919790dd4c",
+      "source": "HeavyMach checked license copy"
+    },
+    {
+      "file": "LICENSES/engineering-skills-MIT.txt",
+      "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "source": ".agents/skills/engineering-debug/references/LICENSE"
+    },
+    {
+      "file": "LICENSES/Emscripten.txt",
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+      "source": "installed Emscripten SDK license"
+    },
+    {
+      "file": "LICENSES/musl-COPYRIGHT.txt",
+      "sha256": "b870108ec5e7790e9f9919064f1b9421d62d5f9b0e6c230c6adf7ea2da62e97b",
+      "source": "installed Emscripten SDK license"
+    },
+    {
+      "file": "LICENSES/stb-MIT.txt",
+      "sha256": "f7e9ed73812898371959e214ac4d82df98152c658f2270f7e9766d833d155e71",
+      "source": "Modules/ThirdParty/stb/stb_image.h: ALTERNATIVE A"
+    },
+    {
+      "file": "LICENSES/Gradle.txt",
+      "sha256": "9536d88ea948603d18e232a13f5958d67807cd80828036b082bff171d2cf0703",
+      "source": "https://raw.githubusercontent.com/gradle/gradle/v8.13.0/LICENSE"
+    },
+    {
+      "file": "LICENSES/SDL-zlib.txt",
+      "sha256": "1c040b8271b37e5076359f8fd54240e371114112924d2df81ef87c7d6a1dfdfd",
+      "source": "https://raw.githubusercontent.com/libsdl-org/SDL/SDL2/LICENSE.txt"
+    },
+    {
+      "file": "LICENSES/Gradle-wrapper.txt",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "source": "Android/gradle/wrapper/gradle-wrapper.jar!META-INF/LICENSE"
+    }
+  ]
+}

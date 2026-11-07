@@ -8,6 +8,8 @@
 
 Added Korean and English versions of 26 visitor documents, with language links on each page. Added separate guides to implementation status and remaining work, and connected topic-specific manuscripts, images, and validation evidence in the Sass writing guide. Updated stale build/test descriptions and document links. The game release remains v0.5; code, assets, and save format are unchanged.
 
+A follow-up applies MIT to newly written code and adds Korean/English code-scope, asset, and third-party notices. README now has a code-license badge. Visitor documentation totals 29 pairs.
+
 ## v0.5 — turret bodies and Laser Turret unlock
 
 2026-11-07. [Play web / PWA](https://gelb2.github.io/MachDefense/) · [Changes and checks](docs/evidence/v05-release-20261107.md)

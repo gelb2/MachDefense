@@ -46,7 +46,7 @@ Tauri Mac은 아직 미구현이다. 신규 락온도 기획 단계다. HeavyMac
 
 ## 한·영 원고와 갱신
 
-방문자 문서 26쌍을 작성했다. 각 문서 제목 아래의 한국어·English 링크로 같은 원고를 전환한다. [대응 목록](../translations/scope.json)과 [검토 해시](../translations/manifest.json)에 전체 경로를 기록했다.
+방문자 문서 29쌍을 작성했다. 각 문서 제목 아래의 한국어·English 링크로 같은 원고를 전환한다. [대응 목록](../translations/scope.json)과 [검토 해시](../translations/manifest.json)에 전체 경로를 기록했다.
 
 | 주제 | 한국어 | English |
 |---|---|---|
@@ -59,6 +59,8 @@ Tauri Mac은 아직 미구현이다. 신규 락온도 기획 단계다. HeavyMac
 | 검증 | [검사 결과](../public/validation.md) | [Validation](../en/public/validation.md) |
 | 현재·후속 작업 | [상태](../public/implementation-status.md) · [과제](../public/roadmap.md) | [Status](../en/public/implementation-status.md) · [Roadmap](../en/public/roadmap.md) |
 | 전체 목차 | [문서](../public/README.md) | [Documentation](../en/public/README.md) |
+
+[코드 라이선스](../../LICENSE-SCOPE.md) · [영문](../../LICENSE-SCOPE.en.md), [자원 조건](../../ASSET-LICENSES.md), [외부 고지](../../THIRD_PARTY_NOTICES.md)도 준비했다. 원작 자원까지 MIT라고 서술하지 않는다.
 
 공개 기능·기획·수정 결과가 바뀌면 해당 원고의 양쪽 언어, 검사 근거, 채택 이미지와 미완료 항목을 함께 갱신한다. 개발 정본·스킬·인터뷰 원문과 과거 검사 기록은 한국어로 유지한다. 번역문이 내부 개발 기준을 바꾸지 않는다.
 

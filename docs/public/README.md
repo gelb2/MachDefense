@@ -19,4 +19,6 @@
 - [릴리스 이력](../../CHANGELOG.md)
 - [크레딧](../../CREDITS.md)
 
+- [코드 라이선스](../../LICENSE-SCOPE.md) · [자원 조건](../../ASSET-LICENSES.md) · [외부 고지](../../THIRD_PARTY_NOTICES.md)
+
 과거 자료: [웹·PWA 첫 릴리스 당시 초안](web-pwa-release-draft.md). 세부 개발 기록은 각 문서의 근거 링크와 [개발 TODO](../usability-todo.md)에서 확인한다.
