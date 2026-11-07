@@ -1,5 +1,6 @@
 #include "Core/Simulation/Production.hpp"
 #include <cassert>
+#include <array>
 #include <filesystem>
 #include <iostream>
 int main(int argc,char** argv){
@@ -8,6 +9,14 @@ int main(int argc,char** argv){
     auto catalog=md::BuildCatalog::load(parts,names);assert(catalog.size()==parts.rowCount()+names.rowCount());
     auto gun=catalog.find("MachineGun_01"),missile=catalog.find("Missile_01"),turret=catalog.find("RifleTurret_01");assert(gun&&missile&&turret);
     assert(gun->cost==60&&gun->duration==3&&gun->maximumConcurrent==5&&gun->armor==11001&&gun->weapon==10041);
+    const std::array laserCosts{200,220,240,270,300,330,360,390,420,450};
+    for(unsigned level=1;level<=10;++level){
+        const auto key=std::string("LaserTurret_")+(level<10?"0":"")+std::to_string(level);
+        auto laser=catalog.find(key);assert(laser&&laser->cost==laserCosts[level-1]);
+        md::ProductionQueue q;float balance=float(laser->cost)-1;
+        assert(!q.enqueue(*laser,0,1,balance,md::Vec2{1,2})&&balance==float(laser->cost)-1);
+        balance=float(laser->cost);assert(q.enqueue(*laser,0,1,balance,md::Vec2{1,2})&&balance==0);
+    }
     md::ProductionQueue queue;float cells=59;
     assert(!queue.enqueue(*gun,0,1,cells)&&cells==59);cells=10000;
     for(int i=0;i<5;++i)assert(queue.enqueue(*gun,0,1,cells));

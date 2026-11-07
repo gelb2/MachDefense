@@ -47,6 +47,9 @@ for name,mach,prefix,hpf,dd,dc in configs:
             assert hp==2*hpf(l)
         else:
             hp=2*hpf(l);cost=int(last['Cost'])+(dc*n if dc is not None else sum(60+10*k for k in range(1,n+1)))
+        # User-approved laser price growth. Match the original RifleTurret
+        # curve (same 200-cell starting price), then its final +30-cell step.
+        if name=='LaserTurret':cost=int(B[f'RifleTurret_{min(l,5):02d}']['Cost'])+30*max(l-5,0)
         up=int(B[f'{name}_{l:02d}']['UpgCost']) if l<5 else (0 if l==10 else first_extension*2**(l-5))
         put(name,l,5,w,hp,cost,up,min(l,5))
 for category in ('BaseCannon','BaseDefense'):

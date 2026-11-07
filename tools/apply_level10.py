@@ -39,8 +39,9 @@ for r in proposal['rows']:
  n,l=r['object'],r['level'];key=f'{n}_{l:02d}'
  if n in configs:
   cap=5;mach,_=configs[n]
-  if l<cap:continue
+  if l<cap and n!='LaserTurret':continue
   row=t['MachBuild_Name'].get(f'{n}_{min(l,cap):02d}');row.update(MachName=key,UpgCost=str(r['upgrade_to_next']))
+  if n=='LaserTurret':row['Cost']=str(r['purchase_cost'])
   if l>cap:
    row.update(Cost=str(r['purchase_cost']),Turret=f'{mach}_{l:02d}')
    m=t['MachList'].get(f'{mach}_{cap:02d}');m.update(MachName=f'{mach}_{l:02d}',HP=str(r['hp']//2));t['MachList'].put(m)

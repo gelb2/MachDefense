@@ -1,6 +1,6 @@
 {
   "source_proposal": "docs/research/level10/proposal.json",
-  "source_proposal_sha256": "f560ca5dabb7b6aca0de57a8c16c5cbf4746b0f1c6132b6151d47f90c9478fde",
+  "source_proposal_sha256": "e74b54e4bf8af8e3ce50e7df0f45cf407437c28bbdecea73c0b2adbc097f8c3a",
   "generator": "tools/apply_level10.py",
   "original_mcb_preserved": true,
   "files": [
@@ -11,8 +11,8 @@
     },
     {
       "path": "Tables/MachBuild_Name.tsv",
-      "sha256": "d2d1b8082e9ec8870dc1190d9ee9d91c80f0b0843c9e25f9a783f5d742082f3c",
-      "bytes": 3903
+      "sha256": "b6ea300d002140bf8b1b9f628097db64d36fa92dde3c2e8616d0c3651a67560f",
+      "bytes": 3887
     },
     {
       "path": "Tables/MachList.tsv",
