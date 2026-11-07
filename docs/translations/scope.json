@@ -161,6 +161,11 @@
       "ko": "docs/public/testing-method.md",
       "en": "docs/en/public/testing-method.md",
       "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/unease-and-typewriters.md",
+      "en": "docs/en/public/unease-and-typewriters.md",
+      "status": "reviewed"
     }
   ],
   "excluded": [

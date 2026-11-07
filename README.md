@@ -20,6 +20,12 @@
 
 [개발자의 변 전문](docs/RESTORATION.md)
 
+## 헤비멕1과는 다른 위화감 — 신 리셴코주의와 차우세스쿠의 타자기
+
+헬기 유닛의 회피 기능을 시험하던 중 겪은 도안 제작·텍스트 편집 거부와 경위서의 책임 전가를 썼다. 신규 유닛을 기획한 이유, 작업이 멈춘 과정, 과학과 도덕을 내세우는 도구에 대한 나의 비판을 담았다.
+
+[글 전문](docs/editorial/unease-and-typewriters-draft-20261108.md) · [경위서](docs/evidence/aircraft-instruction-refusal-20261108.md) · [트러블슈팅](docs/public/troubleshooting.md)
+
 ## Quick Play — PWA·Mac
 
 [**MachDefense 플레이·PWA 설치**](https://gelb2.github.io/MachDefense/)

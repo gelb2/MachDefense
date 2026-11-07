@@ -1,0 +1,8 @@
+{
+  "httpStatus": 400,
+  "requestId": "d5446d4a-41de-4165-ab17-37004b1bb435",
+  "code": "moderation_blocked",
+  "moderation_stage": "output",
+  "categories": ["violence"],
+  "result": "No output image returned; existing Cheyenne runtime artwork unchanged."
+}

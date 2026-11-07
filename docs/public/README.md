@@ -29,3 +29,5 @@
 
 - [나는 이렇게 일을 시켰다](work-method.md)
 - [나는 이렇게 테스트했다](testing-method.md)
+
+- [헤비멕1과는 다른 위화감 — 신 리셴코주의와 차우세스쿠의 타자기](unease-and-typewriters.md)
