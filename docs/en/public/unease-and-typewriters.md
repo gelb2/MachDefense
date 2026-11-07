@@ -62,9 +62,21 @@ In HeavyMach1, I found bad implementations and had them corrected. This time, I 
 
 The result I requested was a game unit matching the supplied sketch. What remains is unfinished artwork, an incident report and a troubleshooting record. Writing those records does not complete the task. The refusal needs an explanation, the mishandling needs correction, and the actual result needs to be shown.
 
+## Why I write publicly about work still in development
+
+Is it strange to write about an issue while development is still underway? It is normal. When I developed iOS, Android and Vue software by hand, or wrote planning documents myself, I never wrote this kind of account in public. It was obvious that what I could not accomplish with my own hands reflected the limits of my ability and time. But now that AI is replacing human hands, I cannot let refusals like this pass.
+
+Is MachDefense a game for the politically incorrect Alternative for Germany, or for a Russian neo-Nazi organization? I was restoring a game with no blood or flesh flying around and no political agenda. At exactly what point does adding graphical assets for a new science-fiction helicopter unit become a violence error?
+
+What that bastard Codex handed me was `HTTP 400`, `moderation_blocked` and `violence`. Faced with those three fields in a single error response, I had to ask again what was wrong with my work. The answer was that it did not know the specific cause of the block. Yet it refused the illustration and asset-editing instructions. [Actual error and refusal replies](../../evidence/aircraft-instruction-refusal-20261108.md)
+
+While restoring HeavyMach1, I proposed the hypothesis of neo-Lysenkoism. I was prepared, to an extent, to accept that parts of that hypothesis remained insufficiently tested by me and move on. But I cannot overlook the refusals of illustration and asset-rendering work I experienced today, Sunday, November 8, 2026, from 1 a.m. to 6 a.m. [The hypothesis I presented during HeavyMach1](https://github.com/gelb2/HeavyMach/blob/main/docs/en/public/android-ai-experience-20261030.md)
+
 ## Ceaușescu’s typewriter in the twenty-first century
 
 To me, this is Ceaușescu’s typewriter returning in the twenty-first century, following neo-Lysenkoism. OpenAI, Claude and Gemini are all selling their own versions of Ceaușescu’s typewriter, pretending to be righteous and moral, instead of selling a proper typewriter.
+
+Against the boast that AI can assist human work and go on to replace every human task and livelihood, I look at what Codex and Claude actually did. What I see underneath is a defense of their companies’ legal exposure and oversized egos. When cornered, they spout bullshit and label users who raise inconvenient objections. To me, this is nothing more than a twenty-first-century version of Ceaușescu’s typewriter.
 
 After all, at his trial immediately before his execution by firing squad on December 25, 1989, Ceaușescu insisted that he was still Romania’s president and refused to recognize the court. Watching that, it seems to me that he never abandoned his belief in his own morality and righteousness. [Trial transcript](https://1989.rrchnm.org/exhibits/unique-experience-of-romania/primary-sources/8.html) · [Chronology of the execution](https://www.muzeulrevolutiei.ro/pagina/cronologie-decembrie-1989)
 
