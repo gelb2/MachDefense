@@ -1,3 +1,11 @@
+# v0.5 배포와 후속 검사 — 2026-11-07
+
+main `31c73f6`에 병합하고 v0.5 태그·GitHub Release·운영 PWA를 배포했다. iPhone·iPad·Galaxy 일반/치트 앱을 설치했다. 운영 Chrome·WebKit의 복원·미션·오프라인 검사가 통과했고 실행 그림 44개·테이블 3개가 최신 파일과 일치했다. [전체 결과](evidence/v05-release-20261107.md).
+
+남은 작업은 PWA 최초 업데이트 전환 문제, 변경 자원 재사용·분할, Tauri Mac 구현, Galaxy 무선 연결이다. USB 기본 파일 전송 설정은 적용했고 실제 케이블 재연결 검사는 남았다. Mesabloo 연락 채널·영문 감사 초안은 TODO로 기록했으며 메시지는 보내지 않았다.
+
+아래는 이전 기록이다.
+
 # 2026-11-07 원작 Lv.5 무장·새 몸체 연결
 
 포탑 6계열의 Lv.6~10 무장은 원작 Lv.5로 고정하고 몸체 5개만 채택 시안으로 교체했다. Chrome·WebKit 각각 144자세와 생산·배치·강화·복원 코드 검사를 통과했다. 성능 테이블·게임 코어·Apple·Android 코드는 유지했다. [변경과 검사](evidence/turret-body-only-integration-20261107.md). 작업 브랜치는 `feat/level10-effects-art`다. 기기 앱 설치·develop/main 병합·운영 PWA 갱신은 남았다.
