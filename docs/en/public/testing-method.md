@@ -6,13 +6,13 @@
 
 I applied the method used for HeavyMach1 to MachDefense. First came a compatibility build that ran the original game, followed by a source reimplementation checked against its behavior. I then required a cheat app with freely adjustable levels, items, funds, and mission state. We used the running original, the regular app intended for distribution, and the cheat app for preparing conditions quickly.
 
-## Why I required a separate cheat app
+## Why I requested a cheat app
 
 I have never worked as a developer in the game industry. In iOS development, I learned that unit tests should be quick and easy to run frequently. I also thought about why so many games have cheat codes. Testing every weapon and upgrade becomes slow if levels and funds prevent access to the feature being checked.
 
 I therefore asked Codex for a build that could exercise game functions and interactions regardless of player progression. The regular and cheat apps used the same game code with separate storage. Checks used temporary saves or backed-up copies. My original iPhone save was preserved before tests that moved my actual progress to other platforms.
 
-## Prepare the state, then exercise the actual behavior
+## Production, upgrade, combat, and save checks
 
 After using cheats to prepare funds and equipment, the checks followed the actual purchase, production, firing, hit, victory, defeat, and save paths. They checked rejection with insufficient funds as well as successful purchases. Saves were reread to check upgrade persistence, then transferred through recovery codes for comparison.
 
@@ -30,13 +30,13 @@ On November 7, 2026, the level-10 extension and production-list scrolling work i
 
 The 80-mission progression checks examined results after victory and defeat, next missions, rewards, and saves. On the Android emulator, each of the 80 missions was entered, its resources loaded, and its screen rendered. The records distinguish what each “80 missions” check actually covered. [Campaign checks](../../evidence/source-cheat-campaign-20261104.md) · [Android checks](../../evidence/android-native-20261106.md)
 
-## The sound failure the cheat-app checks missed
+## Sound-effect checks after returning from the background
 
 While playing the modularized app, I found that returning from the background restored music but left shell fire and production-complete effects silent. The existing check counted calls to the sound playback function. The count increased even while the output device was stopped.
 
 Codex added a check of the sound's sample playback position. Before the fix, it stayed at 0 seconds after returning. After connecting output-device pause and resume, the position advanced to 0.192–0.213 seconds during a 0.2-second wait. Recording speaker output and comparing it with the original remained a separate task. [Reproduction and fix](../../evidence/effects-resume-20261105.md)
 
-## What the frame measurements mean
+## Frame measurements and their meaning
 
 **The frame test recorded p99 16.67ms, with 0 intervals above 25ms.** This was measured on November 7, 2026 in the cheat app on an iPad Air 13-inch (M2), in a full game session with 14 installed unit types and level-10 base, units, and turrets. Combat ran for 300 frames, followed by another 300 frames of the same combat while scrolling the HUD. Consecutive CADisplayLink timestamps were recorded without a debugger attached.
 
@@ -46,7 +46,7 @@ The p95 CPU time for game calculation and rendering submission was 5.24ms in com
 
 Getting there involved fixing code that detached the audio context on each base-machine-gun shot and moving audio-session calls off the main thread. In the production HUD, dragging over a disabled unit had cancelled scrolling; that was fixed too. Fast functional checks were followed by real-time combat and dragging to measure frame behavior. Performance and audio measurements ran separately from other load tests. [Audio-session fix and measurements](../../evidence/audio-session-20261105.md)
 
-## I moved my own progress between platforms
+## Transferring and restoring iPhone progress
 
 The checks also used an established profile. Progress, unlocks, upgrades, and funds accumulated on my iPhone were transferred and restored through a code, with all 42,496 bytes compared. I used an iPhone-generated code to restore the iPad PWA and cleared a mission. I then generated a new code there, restored it on the iPhone, and confirmed entry into a stage. [Recovery checks by platform](../../evidence/save-transfer-all-platforms-20261106.md)
 
