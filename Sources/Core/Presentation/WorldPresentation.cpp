@@ -66,10 +66,17 @@ void World::appendSprites(Frame& frame)const{
     // child parts use the machine layer + 1 (GobHvMach::setLayer 0x14430).
     std::array<Frame,10> layers;
     for(const auto& a:actors_)if(!a->removed){
-        const auto poses=models_.pose(a->assembly,scale,a->angle,a->angle,a->radarAngle);
-        const int baseLayer=a->hp<=0?1:(a->base?(a->player?7:5):(a->player?3:1));
+        const auto poses=models_.pose(a->assembly,scale,a->angle+a->artHeadingOffset,a->angle,a->radarAngle);
+        const int baseLayer=a->hp<=0?1:(a->flightHeight>0?7:(a->base?(a->player?7:5):(a->player?3:1)));
         for(const auto& pose:poses){Frame part;models_.appendSprites(part,std::span<const PartPose>(&pose,1),worldToView(a->position),[&](std::string_view n){return resources_.imageSize(n);});
-            if(part.sprites.size()==2){layers[0].sprites.push_back(std::move(part.sprites[0]));layers[baseLayer+(a->hp>0&&pose.hasParent?1:0)].sprites.push_back(std::move(part.sprites[1]));}
+            if(part.sprites.size()==2){
+                if(a->flightHeight>0){
+                    // The silhouette follows the same moving part on the ground.
+                    auto& shadow=part.sprites[0];shadow.destination.x+=a->flightHeight*scale;shadow.destination.y+=a->flightHeight*scale;shadow.color.a=.55f;
+                    shadow.nearest=part.sprites[1].nearest=true;
+                }
+                layers[0].sprites.push_back(std::move(part.sprites[0]));layers[baseLayer+(a->hp>0&&pose.hasParent?1:0)].sprites.push_back(std::move(part.sprites[1]));
+            }
         }
     }
     for(const auto& item:loot_)item.appendSprites(layers[0],worldToView(item.position),[&](std::string_view n){return resources_.imageSize(n);});

@@ -21,6 +21,8 @@ struct WorldActor {
     bool player=false,base=false,removed=false,moveToTarget=false;
     int hp=0,maxHP=0,type=0,referenceType=0,experience=0,coin=0,coinRate=0;
     float radius=0,range=0,angle=0,radarAngle=0,attackCheck=0,targetCheck=0,crashTime=0;
+    // Visual-only aircraft properties. Original actors retain their original defaults.
+    float rotorStep=.2f,artHeadingOffset=0,flightHeight=0;
     std::uint32_t statusFlags=0;
     Vec2 position,destination;
     ActorId target=0;
@@ -66,6 +68,7 @@ public:
     void setValidationCells(float);
     bool setValidationHealth(ActorId,int);
     ActorId validationSpawn(std::string_view machineName,bool player,Vec2 position);
+    void validationAircraftComparison();
     bool activateSpecial(std::string_view ownedBaseName,Vec2 worldPoint);
     void setUIMargin(float);
     void setViewport(float width,float height,float safeTop=0);
@@ -119,7 +122,7 @@ private:
     std::function<void(WorldState)> finishHandler_;
     unsigned cellLevel_=0;
     unsigned stage_=0;WorldState state_=WorldState::running;
-    bool started_=false,paused_=false;
+    bool started_=false,paused_=false,validationArtScene_=false;
     float capacity_=0,buildFactor_=1,baseBoundary_=0,topPlayerPosition_=-800;
     float viewWidth_=0,viewHeight_=0,safeTop_=0,presentationScale_=1;
     float camera_=0,actualCamera_=0,cameraVelocity_=0,dragY_=0,uiMargin_=0;

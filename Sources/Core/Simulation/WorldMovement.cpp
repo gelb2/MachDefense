@@ -13,7 +13,7 @@ void World::setDestination(WorldActor& a,Vec2 point){a.destination=point;a.bipod
 void World::updateActor(WorldActor& a){
     if(a.removed)return;
     if(a.hp<=0){updateCrash(a);return;}
-    a.radarAngle+=.2f;if(a.radarAngle>0x1.921fb6p+2f)a.radarAngle-=0x1.921fb6p+2f;
+    a.radarAngle+=a.rotorStep;if(a.radarAngle>0x1.921fb6p+2f)a.radarAngle-=0x1.921fb6p+2f;
     auto* target=selectTarget(a);
     const bool aiEnabled=a.player||!(a.statusFlags&2);
     if(aiEnabled&&((a.player&&a.type==0)||a.type==1)){

@@ -48,6 +48,7 @@ WorldActor& World::addParts(const BuildDefinition& definition,Vec2 position){
 }
 void World::start(unsigned stage){
     if(stage>=80||stage>=maps_.children.size()||stage>=mapTable_.rowCount())throw std::out_of_range("Original stage index");
+    validationArtScene_=false;
     stage_=stage;startTime_=time();statistics_={};actors_.clear();loot_.clear();projectiles_.clear();trails_.clear();airStrikes_.clear();spawners_.clear();production_.clear();events_.clear();
     for(auto& p:particles_->particles())p.shown=false;
     cellLevel_=0;state_=WorldState::running;paused_=false;started_=true;cameraTouch_.reset();radarTouch_.reset();cameraVelocity_=0;
@@ -77,7 +78,7 @@ const WorldActor* World::actor(ActorId id)const{for(const auto& a:actors_)if(a->
 void World::tick(){
     if(!started_)return;
     clock_.tick(true,paused_,int(state_));updateCamera();if(paused_)return;
-    if(state_==WorldState::running){
+    if(state_==WorldState::running&&!validationArtScene_){
         topPlayerPosition_=-800;
         if(auto generated=director_->tick(time(),random_))spawners_.push_back(std::move(*generated));
         std::vector<SpawnEvent> incoming;

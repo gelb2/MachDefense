@@ -41,7 +41,7 @@
     "scale_reference": {
       "small": {
         "machine": "E_Tank_01",
-        "identification": "red APC candidate; original body and gun inspected",
+        "identification": "E_Tank_01 reference accepted by user",
         "assembled_size": [
           57,
           32
@@ -92,5 +92,12 @@
         "combat, hit and destruction validation"
       ]
     }
-  ]
+  ],
+  "runtime_comparison": {
+    "source": "parts/aircraft-parts-v2.png",
+    "manifest": "runtime/manifest.json",
+    "bounds": "runtime/bounds.json",
+    "status": "World cheat scene: size, fast rotors, ground shadows and movement verified; combat and campaign pending",
+    "palette": "Full RGBA; 16-color proposal withdrawn by subsequent user direction"
+  }
 }

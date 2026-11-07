@@ -9,6 +9,7 @@
 #include "../../Tests/Level10HUDSweep.hpp"
 #include "../../Tests/ContentSweep.hpp"
 #include "../../Tests/TurretArtSweep.hpp"
+#include "../../Tests/AircraftComparisonScene.hpp"
 #endif
 #include <sstream>
 #include <cmath>
@@ -45,6 +46,9 @@ struct Host:HostServices{
  void requestName(std::string initial,std::size_t max,std::function<void(std::optional<std::string>)> cb)override{char* n=inputName(initial.c_str(),max);if(n){std::string s=n;free(n);cb(s);}else cb({});}
 } host;
 std::string status;
+#if MD_WEB_CHEAT
+std::unique_ptr<validation::AircraftComparisonScene> aircraftScene;
+#endif
 }
 extern "C" {
 EMSCRIPTEN_KEEPALIVE int md_start(){try{EmscriptenWebGLContextAttributes attr;emscripten_webgl_init_context_attributes(&attr);attr.majorVersion=2;attr.alpha=false;attr.depth=false;attr.stencil=false;attr.antialias=false;auto ctx=emscripten_webgl_create_context("#game",&attr);if(ctx<=0)throw std::runtime_error("WebGL 2 is unavailable");emscripten_webgl_make_context_current(ctx);renderer.init();effects.prepare(assets);game=std::make_unique<GameSession>(assets,host,MD_WEB_CHEAT);return 1;}catch(const std::exception& e){status=e.what();return 0;}}
@@ -75,6 +79,21 @@ EMSCRIPTEN_KEEPALIVE const char* md_art_frame(unsigned family){
 #if MD_WEB_CHEAT
  try { auto frame=validation::turretArtFrame(assets,family);renderer.draw(frame,pw,ph);status="Art: 24 poses; level-five weapons; body levels; canvases/sockets/muzzles unchanged"; }
  catch(const std::exception& e){status=std::string("ERROR: ")+e.what();}
+#else
+ status="Unavailable";
+#endif
+ return status.c_str();
+}
+EMSCRIPTEN_KEEPALIVE const char* md_aircraft_scene(int command,int mode){
+#if MD_WEB_CHEAT
+ try {
+  if(command==0||!aircraftScene)aircraftScene=std::make_unique<validation::AircraftComparisonScene>(assets,unsigned(mode));
+  if(command==1)aircraftScene->world->tick();
+  if(command==2)aircraftScene->world->setPaused(true);
+  if(command==3)aircraftScene->world->setPaused(false);
+  if(command==4)aircraftScene->move();
+  renderer.draw(aircraftScene->frame(),pw,ph);status=aircraftScene->state();
+ } catch(const std::exception& e){status=std::string("ERROR: ")+e.what();}
 #else
  status="Unavailable";
 #endif

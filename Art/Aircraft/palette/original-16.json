@@ -1,0 +1,145 @@
+{
+  "method": "weighted median-cut, nearest original opaque RGB representative, no invented colors",
+  "references": [
+    {
+      "path": "Resources/Images/E_Tank_Body_01.png",
+      "sha256": "415592d9b7df8081b368d8c38df22e30fb4a1e1ffcb0d6da22512cbfe61df49f",
+      "opaque_colors": 1207,
+      "partial_alpha": 362,
+      "width": 55,
+      "height": 32,
+      "cgbi": false,
+      "interlaced": false
+    },
+    {
+      "path": "Resources/Images/E_Tank_Wpn_01.png",
+      "sha256": "51d480e646fffe09208051a48cfbdf03a077104ceff05fc7a293ccc5fbc7acf8",
+      "opaque_colors": 304,
+      "partial_alpha": 240,
+      "width": 33,
+      "height": 22,
+      "cgbi": false,
+      "interlaced": false
+    },
+    {
+      "path": "Resources/Images/E_Tank32_Body.png",
+      "sha256": "c884a2536c8ebf8b86c25c50a66670ed9ce9122f83d31766772837ddcbf6486b",
+      "opaque_colors": 4882,
+      "partial_alpha": 2464,
+      "width": 100,
+      "height": 105,
+      "cgbi": false,
+      "interlaced": false
+    },
+    {
+      "path": "Resources/Images/E_Tank32_Wpn.png",
+      "sha256": "aca52d22d708fc6ae8a648d92ec20a702849434ab272a49c1776c06e9a1a67ef",
+      "opaque_colors": 1876,
+      "partial_alpha": 1280,
+      "width": 67,
+      "height": 65,
+      "cgbi": false,
+      "interlaced": false
+    }
+  ],
+  "rgb": [
+    [
+      24,
+      31,
+      12
+    ],
+    [
+      81,
+      36,
+      16
+    ],
+    [
+      62,
+      62,
+      32
+    ],
+    [
+      59,
+      65,
+      48
+    ],
+    [
+      83,
+      78,
+      55
+    ],
+    [
+      134,
+      69,
+      30
+    ],
+    [
+      85,
+      89,
+      72
+    ],
+    [
+      98,
+      106,
+      96
+    ],
+    [
+      146,
+      122,
+      71
+    ],
+    [
+      125,
+      132,
+      125
+    ],
+    [
+      141,
+      146,
+      136
+    ],
+    [
+      181,
+      147,
+      96
+    ],
+    [
+      139,
+      149,
+      147
+    ],
+    [
+      166,
+      168,
+      156
+    ],
+    [
+      179,
+      184,
+      179
+    ],
+    [
+      221,
+      223,
+      217
+    ]
+  ],
+  "hex": [
+    "#181F0C",
+    "#512410",
+    "#3E3E20",
+    "#3B4130",
+    "#534E37",
+    "#86451E",
+    "#555948",
+    "#626A60",
+    "#927A47",
+    "#7D847D",
+    "#8D9288",
+    "#B59360",
+    "#8B9593",
+    "#A6A89C",
+    "#B3B8B3",
+    "#DDDFD9"
+  ]
+}
