@@ -1,0 +1,416 @@
+{
+  "date": "2026-11-07",
+  "sources": [
+    {
+      "filename": "IMG_1129 2.PNG",
+      "sha256": "c81bd103f65f74ea6129db6729393f545495a0ac5cd64eca45049030a494be21",
+      "bytes": 3499656,
+      "id": "IMG_1129_2",
+      "width": 1260,
+      "height": 2736,
+      "platform": "iPhone",
+      "build": "not recorded",
+      "capture": "user gameplay"
+    },
+    {
+      "filename": "IMG_1129.PNG",
+      "sha256": "c81bd103f65f74ea6129db6729393f545495a0ac5cd64eca45049030a494be21",
+      "bytes": 3499656,
+      "id": "IMG_1129",
+      "width": 1260,
+      "height": 2736,
+      "platform": "iPhone",
+      "build": "not recorded",
+      "capture": "user gameplay"
+    },
+    {
+      "filename": "IMG_1143.PNG",
+      "sha256": "d5ba012156292867425b05f6134874645773b56cb123568153128f6fb7d2f3c1",
+      "bytes": 3384615,
+      "id": "IMG_1143",
+      "width": 1260,
+      "height": 2736,
+      "platform": "iPhone",
+      "build": "not recorded",
+      "capture": "user gameplay"
+    },
+    {
+      "filename": "IMG_1146.PNG",
+      "sha256": "46b794d55fea9ca261099aa176a1ac7dc0d89ec269d16a191604efef5834de2e",
+      "bytes": 3753828,
+      "id": "IMG_1146",
+      "width": 1260,
+      "height": 2736,
+      "platform": "iPhone",
+      "build": "not recorded",
+      "capture": "user gameplay"
+    },
+    {
+      "filename": "IMG_1147.jpg",
+      "sha256": "165a8a2979267268fbb738673c87fff1fdf3cb07f02518b4b7232648eb6efc58",
+      "bytes": 187090,
+      "id": "IMG_1147",
+      "width": 706,
+      "height": 1182,
+      "platform": "iPhone",
+      "build": "not recorded",
+      "capture": "user gameplay"
+    },
+    {
+      "filename": "IMG_1148.PNG",
+      "sha256": "ad7d95cc24bd6450343bae88748d722eddc581f5c08ddc6fe4c12f76414ff0d4",
+      "bytes": 3869209,
+      "id": "IMG_1148",
+      "width": 1260,
+      "height": 2736,
+      "platform": "iPhone",
+      "build": "not recorded",
+      "capture": "user gameplay"
+    },
+    {
+      "filename": "IMG_1149.PNG",
+      "sha256": "0f8784a781fb58d6108bded163f96b9148894dbb6edb97f6234e397fcab9467a",
+      "bytes": 4328378,
+      "id": "IMG_1149",
+      "width": 1260,
+      "height": 2736,
+      "platform": "iPhone",
+      "build": "not recorded",
+      "capture": "user gameplay"
+    },
+    {
+      "filename": "KakaoTalk_Photo_2026-11-06-03-23-29.jpeg",
+      "sha256": "006ead20b8aed9393dee611c7063a37f15f5581b36a4720fb93cc59c653b4d8a",
+      "bytes": 1165676,
+      "id": "KakaoTalk_Photo_2026-11-06-03-23-29",
+      "width": 1080,
+      "height": 2340,
+      "platform": "Android",
+      "build": "not recorded",
+      "capture": "user gameplay"
+    },
+    {
+      "filename": "ScreenRecording_11-06-2026 09-56-15_1.mov",
+      "sha256": "07d17f7c3a2ad4c390af63c547d860420cc16a89435946765c95ab1af6b7acf1",
+      "bytes": 478309787,
+      "id": "ScreenRecording_11-06-2026_09-56-15_1",
+      "width": 1260,
+      "height": 2736,
+      "platform": "iPhone",
+      "build": "not recorded",
+      "capture": "user gameplay"
+    },
+    {
+      "filename": "ScreenRecording_11-07-2026 02-25-50_1.mov",
+      "sha256": "76f9b9dfd670d288c6721fecc15b7d8e41f09ab43e8fe40eaa8006804ec23ea9",
+      "bytes": 483050204,
+      "id": "ScreenRecording_11-07-2026_02-25-50_1",
+      "width": 1260,
+      "height": 2736,
+      "platform": "iPhone",
+      "build": "not recorded",
+      "capture": "user gameplay"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "iphone-stage23-hud",
+      "source": "IMG_1129",
+      "kind": "historical-issue",
+      "caption_ko": "Stage 23: 전투와 당시 HUD 상단 표시",
+      "caption_en": "Stage 23: combat and the HUD at the time",
+      "files": [
+        "iphone-stage23-hud.jpg"
+      ],
+      "output_metadata": [
+        {
+          "path": "iphone-stage23-hud.jpg",
+          "sha256": "0ee71f17dcd568a9fddb9b4b83188ceec62f39fac1a5838d1f4460dd229f97d6",
+          "bytes": 603108,
+          "width": 1260,
+          "height": 2736,
+          "codec": "mjpeg"
+        }
+      ]
+    },
+    {
+      "id": "iphone-stage11",
+      "source": "IMG_1143",
+      "kind": "gameplay",
+      "caption_ko": "Stage 11: 적 기지 앞 교전",
+      "caption_en": "Stage 11: fighting near the enemy base",
+      "files": [
+        "iphone-stage11.jpg"
+      ],
+      "output_metadata": [
+        {
+          "path": "iphone-stage11.jpg",
+          "sha256": "489dc44786973fe2c3a6be76b43ce1aa2437b070349cdf875700728b268b27e8",
+          "bytes": 612793,
+          "width": 1260,
+          "height": 2736,
+          "codec": "mjpeg"
+        }
+      ]
+    },
+    {
+      "id": "iphone-stage23",
+      "source": "IMG_1146",
+      "kind": "gameplay",
+      "caption_ko": "Stage 23: 포탑과 메크의 교전",
+      "caption_en": "Stage 23: turrets and mechs in combat",
+      "files": [
+        "iphone-stage23.jpg"
+      ],
+      "output_metadata": [
+        {
+          "path": "iphone-stage23.jpg",
+          "sha256": "84987c5008b8a2c2abfbe4f24ec7a0e216cab2406398ee597c09cf67366c99c9",
+          "bytes": 692973,
+          "width": 1260,
+          "height": 2736,
+          "codec": "mjpeg"
+        }
+      ]
+    },
+    {
+      "id": "pathfinding-report",
+      "source": "IMG_1147",
+      "kind": "historical-issue",
+      "caption_ko": "원형 구조물과 유닛 정체 제보",
+      "caption_en": "Reported unit congestion near a circular structure",
+      "files": [
+        "pathfinding-report.jpg"
+      ],
+      "output_metadata": [
+        {
+          "path": "pathfinding-report.jpg",
+          "sha256": "fff07dd3dd6ea1e16a0b872638f0fc04c2b9cbcbaa4a8901e8214a5fdbf27992",
+          "bytes": 147981,
+          "width": 706,
+          "height": 1182,
+          "codec": "mjpeg"
+        }
+      ]
+    },
+    {
+      "id": "iphone-stage46",
+      "source": "IMG_1148",
+      "kind": "gameplay",
+      "caption_ko": "Stage 46: 긴 구조물 주변의 병력 배치",
+      "caption_en": "Stage 46: units around a long structure",
+      "files": [
+        "iphone-stage46.jpg"
+      ],
+      "output_metadata": [
+        {
+          "path": "iphone-stage46.jpg",
+          "sha256": "e0666ddeb662d7146a815da5e6ed5072b63041e37380fae8070de15b3d7ece78",
+          "bytes": 695976,
+          "width": 1260,
+          "height": 2736,
+          "codec": "mjpeg"
+        }
+      ]
+    },
+    {
+      "id": "iphone-stage40",
+      "source": "IMG_1149",
+      "kind": "gameplay",
+      "caption_ko": "Stage 40: 여러 무장이 동시에 교전하는 장면",
+      "caption_en": "Stage 40: several weapon types firing together",
+      "files": [
+        "iphone-stage40.jpg"
+      ],
+      "output_metadata": [
+        {
+          "path": "iphone-stage40.jpg",
+          "sha256": "2a07d71da25ef7199eca65cd63df92e4fb620e959a99fee2cb20b2ce529d1497",
+          "bytes": 817748,
+          "width": 1260,
+          "height": 2736,
+          "codec": "mjpeg"
+        }
+      ]
+    },
+    {
+      "id": "android-stage1",
+      "source": "KakaoTalk_Photo_2026-11-06-03-23-29",
+      "kind": "gameplay",
+      "caption_ko": "Galaxy Stage 1: 전장과 생산 목록",
+      "caption_en": "Galaxy Stage 1: battlefield and production list",
+      "files": [
+        "android-stage1.jpg"
+      ],
+      "output_metadata": [
+        {
+          "path": "android-stage1.jpg",
+          "sha256": "504b7e49905ad56e6ec9dbd95069bed155c1e43e8d1df2bf5fb57f2803eed68a",
+          "bytes": 350796,
+          "width": 1080,
+          "height": 2340,
+          "codec": "mjpeg"
+        }
+      ]
+    },
+    {
+      "id": "combat",
+      "source": "ScreenRecording_11-07-2026_02-25-50_1",
+      "kind": "gameplay",
+      "start": 158,
+      "end": 170,
+      "poster": 165,
+      "caption_ko": "포탑 사격과 메크 교전",
+      "caption_en": "Turret fire and mech combat",
+      "files": [
+        "combat.jpg",
+        "combat.mp4",
+        "combat.gif"
+      ],
+      "gif_start": 158,
+      "gif_end": 166,
+      "output_metadata": [
+        {
+          "path": "combat.jpg",
+          "sha256": "a4edecc65662b49f8b6a65881993f4f2da1e30b2fd853fd71ce58e5bcb970eee",
+          "bytes": 547381,
+          "width": 1260,
+          "height": 2736,
+          "codec": "mjpeg"
+        },
+        {
+          "path": "combat.mp4",
+          "sha256": "43f886d1ffce5a1a55eb343d92a74b348e61a9d73692aefa59f6dc62e58646f3",
+          "bytes": 2881085,
+          "width": 630,
+          "height": 1368,
+          "codec": "h264",
+          "duration": 12.0,
+          "full_decode": "passed"
+        },
+        {
+          "path": "combat.gif",
+          "sha256": "76bc6b34b792f7d5d6cd0d21bf1859bbdefa98c79c43f8be710d18604996355f",
+          "bytes": 4708457,
+          "width": 420,
+          "height": 912,
+          "codec": "gif",
+          "duration": 8.0,
+          "full_decode": "passed"
+        }
+      ]
+    },
+    {
+      "id": "special-attack",
+      "source": "ScreenRecording_11-06-2026_09-56-15_1",
+      "kind": "gameplay",
+      "start": 232,
+      "end": 242,
+      "poster": 235,
+      "caption_ko": "특수공격 표적 지정과 미사일 발사",
+      "caption_en": "Selecting a special-attack target and firing missiles",
+      "files": [
+        "special-attack.jpg",
+        "special-attack.mp4",
+        "special-attack.gif"
+      ],
+      "gif_start": 232,
+      "gif_end": 240,
+      "output_metadata": [
+        {
+          "path": "special-attack.jpg",
+          "sha256": "7b39835f91dafbaa196ceae44d6d3ee9413c91d8ac9e0aa8b40b7c545e7b2cae",
+          "bytes": 467290,
+          "width": 1260,
+          "height": 2736,
+          "codec": "mjpeg"
+        },
+        {
+          "path": "special-attack.mp4",
+          "sha256": "899af6e08684b29076d5f1bf4f426adf2c906082579ab71efd16f098a8a090f1",
+          "bytes": 2430830,
+          "width": 630,
+          "height": 1368,
+          "codec": "h264",
+          "duration": 10.0,
+          "full_decode": "passed"
+        },
+        {
+          "path": "special-attack.gif",
+          "sha256": "5a528e3bd01d03fa3f495e5423d982e4af58db61da09084aa1b897b7eccbf78a",
+          "bytes": 5459220,
+          "width": 420,
+          "height": 912,
+          "codec": "gif",
+          "duration": 8.0,
+          "full_decode": "passed"
+        }
+      ]
+    },
+    {
+      "id": "resupply",
+      "source": "ScreenRecording_11-06-2026_09-56-15_1",
+      "kind": "gameplay",
+      "start": 40,
+      "end": 49,
+      "poster": 42,
+      "caption_ko": "긴급지원 수령과 영문 메시지",
+      "caption_en": "Claiming emergency supplies and the English message",
+      "files": [
+        "resupply.jpg",
+        "resupply.mp4"
+      ],
+      "output_metadata": [
+        {
+          "path": "resupply.jpg",
+          "sha256": "ce734ac94a7a764fb0bc90a7f8b731c050a2c3bcf057accf6fa6fdb3338ccc29",
+          "bytes": 300291,
+          "width": 1260,
+          "height": 2736,
+          "codec": "mjpeg"
+        },
+        {
+          "path": "resupply.mp4",
+          "sha256": "dc288dd086a4c89a412fc37f7e72ab14ff8f7247c4cba472f9487d04a68bbf39",
+          "bytes": 414681,
+          "width": 630,
+          "height": 1368,
+          "codec": "h264",
+          "duration": 9.0,
+          "full_decode": "passed"
+        }
+      ]
+    },
+    {
+      "id": "upgrade",
+      "source": "ScreenRecording_11-06-2026_09-56-15_1",
+      "kind": "gameplay",
+      "poster": 105,
+      "caption_ko": "장비 강화와 INSTALL·UNINSTALL",
+      "caption_en": "Equipment upgrades and INSTALL / UNINSTALL",
+      "files": [
+        "upgrade.jpg"
+      ],
+      "output_metadata": [
+        {
+          "path": "upgrade.jpg",
+          "sha256": "72244088261c18a3b1502aff723914019113a97f0ff923858847169604450fa9",
+          "bytes": 446709,
+          "width": 1260,
+          "height": 2736,
+          "codec": "mjpeg"
+        }
+      ]
+    }
+  ],
+  "duplicate": {
+    "IMG_1129 2.PNG": "IMG_1129.PNG"
+  },
+  "notes": [
+    "Source files remain outside tracked paths.",
+    "Capture dates precede or overlap v0.5 development; exact build IDs are unavailable.",
+    "Original aspect ratio, HUD and playback speed retained. No overlays or invented gameplay.",
+    "Dynamic Island is present in the original recordings.",
+    "Historical issue captures are not current-build validation."
+  ]
+}

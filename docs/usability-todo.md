@@ -42,6 +42,7 @@
 
 | 완료 범위 | 근거 |
 |---|---|
+| 사용자 플레이 이미지·영상 정리 | 바탕화면 자료의 정지 이미지 11장·GIF 2개·MP4 3개와 한·영 [캡처 모음](public/gameplay-gallery.md)을 작성했다. README·목차·Sass 집필 안내에 연결하고 원본은 Git 제외 폴더에 보존했다. [추출·검사 기록](evidence/gameplay-media-20261107.md). |
 | TODO 21: 방문자 문서 한·영과 언어 전환 | 최초 26쌍을 작성하고 라이선스 3쌍을 추가해 29쌍이다. [검사](evidence/document-localization-20261107.md), [대응 목록](translations/scope.json), [Sass 집필 안내](editorial/sass-publication-guide.md) |
 | TODO 22: HeavyMach1 라이선스 비교·README 반영 | 새 코드 MIT, 원작/추가 자원 제외, 외부 고지를 한·영으로 적용했다. [조사](evidence/license-review-20261107.md), [코드 범위](../LICENSE-SCOPE.md). |
 | 독립 저장소·판본 3종 비교·기준 선택, IPA 없이 제품 빌드, 공개 GitHub·Pages 배포 | [판본](evidence/version-audit-20261104.md), [웹 배포](evidence/pwa-release-20261106.md) |

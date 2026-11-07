@@ -5,15 +5,15 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "e0b21760d77b27ffd06c65869a2057f8ee77c02ea874f3def0316e5f88d89a43",
-      "en_sha256": "7ef69113da56d721a3839e8e05ea9dd3e0d1a6dea8b87917ca16b03ffa7232e0",
+      "ko_sha256": "38dbd4d4d0b5524d493e207bc7a77a31698b1ff201c994e5f9fa490e67ab87cf",
+      "en_sha256": "d08459362ecf236c7879c631b34b01b93fb4229c7bdcc3f1c1d9fe7b8abfe203",
       "review": "paragraphs, author voice, figures, status, commands, links"
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "c31135f09e2c4e4dbd08601eacf7216a0f04ca5807b7b5b1164e795e8a1ecaa9",
-      "en_sha256": "676a93dfbe08f356a40f35273872d1387df9a25c3d9ee5a442998bcbd7620722",
+      "ko_sha256": "3001b5a757bd1ba19d587e80626abfbccc90ab92f020c048a92f18a69e71de09",
+      "en_sha256": "c3ade6314caa598f6b7333f91d48fafeb452b7110ca36d7722609a98c172ad88",
       "review": "paragraphs, author voice, figures, status, commands, links"
     },
     {
@@ -33,8 +33,8 @@
     {
       "ko": "docs/public/README.md",
       "en": "docs/en/public/README.md",
-      "ko_sha256": "a0eeb9a1555143908d917fa80a4653b92dbacae4427967fc733b8f3210841792",
-      "en_sha256": "472d5b9394ef87f0a6e71b61ebe6e1433d77e921f593ba325ba18789a87cb219",
+      "ko_sha256": "47cb3bbf5a7a5c21084c9819d67816a19232f693fde8ae64dd63d264c041de86",
+      "en_sha256": "d315c69a85ce50f9773d2b4db13af5839e1b493555ef8391467f2455f6c84617",
       "review": "paragraphs, author voice, figures, status, commands, links"
     },
     {
@@ -204,6 +204,13 @@
       "ko_sha256": "60191712c4fc497f44482b5723afac7705912033581a42d16ba0935a69f6caae",
       "en_sha256": "d4910b388b63fa165165da2bdc941eee1c857231f3ba06c615b51cc530b792d6",
       "review": "paragraphs, author voice, figures, status, commands, links"
+    },
+    {
+      "ko": "docs/public/gameplay-gallery.md",
+      "en": "docs/en/public/gameplay-gallery.md",
+      "review": "captions, scene times, source provenance, media and navigation links",
+      "ko_sha256": "9b8144654d010824926573fb8686ef99b1bc650a3c3a7ae35780f22e37b97bcd",
+      "en_sha256": "565a29120a16b64a8d99af1f9e806b6318339458640e55c457d721d45a812fdb"
     }
   ]
 }

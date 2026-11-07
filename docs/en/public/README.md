@@ -4,6 +4,8 @@
 [한국어](../../public/README.md) | [English](README.md)
 <!-- language-nav:end -->
 
+- [Gameplay captures and clips](gameplay-gallery.md)
+
 - [Game overview](../../../README.en.md)
 - [Quick Play — PWA and shared recovery code](quick-play.md)
 - [Developer's statement](../RESTORATION.md)
