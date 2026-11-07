@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-08",
+  "source": "User-provided Desktop images; these supersede previous shape references for these two units.",
+  "references": [
+    {
+      "file": "IMG_1166.PNG",
+      "sha256": "35a59d0a5e678129412be2a88028726850a645f58cb63c096344d2f6f1d67b5e",
+      "existingSaveAndTableKey": "Gunship",
+      "displayName": "AH-10",
+      "view": "upper-left top view",
+      "instruction": "Reproduce this exact supplied design. Do not substitute prior generated designs."
+    },
+    {
+      "file": "IMG_1167.PNG",
+      "sha256": "02c73baf17bca4ae73e96c6c0e5ecdf4d030550badcf9129eb669c0a685bf31a",
+      "existingSaveAndTableKey": "OrcaBomber",
+      "displayName": "Beluga",
+      "view": "upper-left top view",
+      "instruction": "Reproduce this exact supplied design. Do not substitute prior generated designs."
+    },
+    {
+      "file": "IMG_1168.PNG",
+      "sha256": "3ecd8382e116bc9138b5766352dfa71f404d3df0ef199383dee3a47b1709670a",
+      "existingSaveAndTableKey": "Orca",
+      "displayName": "Cheyenne",
+      "view": "upper-left top view",
+      "instruction": "Reproduce exact supplied design and aspect ratio."
+    }
+  ]
+}

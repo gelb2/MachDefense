@@ -44,3 +44,5 @@
 
 - [복원 코드 iPhone·iPad·Android 동시 연결 계획](save-transfer-native-plan-20261106.md)
 - [작은 행성 전등지기 조사](research/lamplighter-20261106.md)
+
+- [헤비멕1과는 다른 위화감 — 신 리셴코주의와 차우세스쿠의 타자기](public/unease-and-typewriters.md)
