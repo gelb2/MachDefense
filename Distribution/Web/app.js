@@ -45,20 +45,39 @@ $('install').onclick=async()=>{
  finally{$('install').disabled=false;updateInstall();}
 };
 updateInstall();
+function workerRequest(worker,kind){return new Promise((resolve,reject)=>{
+ const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();reject(Error('Resource check timed out.'));},180000);
+ channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();e.data.ok||e.data.waiting?resolve(e.data):reject(Error(e.data.error));};
+ worker.postMessage({kind},[channel.port2]);
+});}
+function waitInstallation(worker){return new Promise((resolve,reject)=>{
+ const check=()=>{if(['installed','activated'].includes(worker.state)){cleanup();resolve();}else if(worker.state==='redundant'){cleanup();reject(Error('Resource download failed.'));}};
+ const timer=setTimeout(()=>{cleanup();reject(Error('Resource download timed out.'));},180000);
+ function cleanup(){clearTimeout(timer);worker.removeEventListener('statechange',check);}
+ worker.addEventListener('statechange',check);check();
+});}
 async function prepare(){try{
- build=await(await fetch('build.json',{cache:'no-store'})).json();await MDStore.open(build.cheat);
+ build=await(await fetch('build.json',{cache:'no-store'})).json();
  if(!('serviceWorker'in navigator))throw Error('Open this game over HTTPS to enable offline play.');
- navigator.serviceWorker.addEventListener('message',e=>{if(preparing&&e.data.kind==='download'){$('progress').value=100*e.data.done/e.data.total;$('status').textContent='Downloading game resources… '+Math.round(e.data.done/1048576)+' / '+Math.round(e.data.total/1048576)+' MB';}});
+ navigator.serviceWorker.addEventListener('message',e=>{if(preparing&&e.data.kind==='download'){$('progress').value=100*e.data.done/e.data.total;$('status').textContent='Checking game resources… '+Math.round(e.data.done/1048576)+' / '+Math.round(e.data.total/1048576)+' MB';}});
  const reg=await navigator.serviceWorker.register('sw.js',{updateViaCache:'none'});
- if(!reg.active)await new Promise((resolve,reject)=>{
-  const worker=reg.installing||reg.waiting;if(!worker){reject(Error('Offline installation did not start.'));return;}
-  const check=()=>{if(worker.state==='activated'){cleanup();resolve();}else if(worker.state==='redundant'){cleanup();reject(Error('Resource download failed.'));}};
-  const timer=setTimeout(()=>{cleanup();reject(Error('Resource download timed out.'));},180000);
-  function cleanup(){clearTimeout(timer);worker.removeEventListener('statechange',check);}
-  worker.addEventListener('statechange',check);check();
- });
- if(!navigator.serviceWorker.controller)await new Promise(resolve=>navigator.serviceWorker.addEventListener('controllerchange',resolve,{once:true}));await new Promise((resolve,reject)=>{const channel=new MessageChannel();const timer=setTimeout(()=>reject(Error('Resource check timed out.')),180000);channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();e.data.ok?resolve():reject(Error(e.data.error));};navigator.serviceWorker.controller.postMessage({kind:'prepare'},[channel.port2]);});reg.update().catch(()=>{});
- preparing=false;$('progress').value=100;$('status').textContent='Ready for offline play';$('play').disabled=false;updateInstall();
+ try{await reg.update();if(reg.installing)await waitInstallation(reg.installing);}
+ catch(error){if(!reg.active)throw error;/* Keep a complete older release when the update fails. */}
+ if(!reg.active&&reg.installing)await waitInstallation(reg.installing);
+ if(reg.waiting){
+  const waiting=reg.waiting,result=await workerRequest(waiting,'activate');
+  if(result.ok){
+   await new Promise(resolve=>{if(navigator.serviceWorker.controller===waiting)resolve();else navigator.serviceWorker.addEventListener('controllerchange',resolve,{once:true});});
+   // Reload the launcher's JS/CSS as well, before any C++ game code starts.
+   location.reload();return;
+  }
+  window.MDUpdateWaiting=true;
+ }
+ if(!navigator.serviceWorker.controller)await new Promise(resolve=>navigator.serviceWorker.addEventListener('controllerchange',resolve,{once:true}));
+ const ready=await workerRequest(navigator.serviceWorker.controller,'prepare');
+ if(ready.version&&ready.version!==build.version){location.reload();return;}
+ window.MDResourceCheck=ready;await MDStore.open(build.cheat);
+ preparing=false;$('progress').value=100;$('status').textContent=window.MDUpdateWaiting?'Ready. Close other game windows to apply the update.':'Ready for offline play';$('play').disabled=false;updateInstall();
 }catch(e){MDError('Cannot prepare game: '+e.message);$('status').textContent='Reload to retry.';}}
 $('play').onclick=async()=>{try{$('play').disabled=true;$('status').textContent='Loading game…';await navigator.storage?.persist?.();await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='game.js';s.onload=resolve;s.onerror=reject;document.body.append(s);});module=await createMachDefense({canvas,printErr:console.error});window.MDModule=module;await MDAudio.prepare(module);await MDAudio.context.resume();canvas.hidden=false;const ok=await call('md_start',[],[],'number');if(!ok)throw Error('Cannot start game renderer or audio');await resize();$('launcher').hidden=true;running=true;requestAnimationFrame(frame);canvas.focus();}catch(e){MDError(String(e));}};
 window.MDTest={call,async advance(n){window.MD_TEST_PAUSE=true;for(let i=0;i<n;i++)await call('md_tick');},async tap(x,y){await call('md_touch',['number','number','number','number'],[1,0,x,y]);await call('md_touch',['number','number','number','number'],[1,2,x,y]);},async state(){return JSON.parse(await call('md_debug',[],[],'string'));},async sprites(){return JSON.parse(await call('md_ui',[],[],'string'));},async save(){return JSON.parse(await call('md_save_info',[],[],'string'));},activity};
