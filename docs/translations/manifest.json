@@ -229,9 +229,9 @@
     {
       "ko": "docs/public/unease-and-typewriters.md",
       "en": "docs/en/public/unease-and-typewriters.md",
-      "ko_sha256": "b248dc8c42daa45f805f275bc629a713e73a339ab883b95119dadf5d5ef0bc08",
-      "en_sha256": "779d1d97b26d6b8fc198f00837c2ae42f24c122b61d8321e00253baa8cab8c8f",
-      "review": "2026-11-08: added technological expertise and moral dogmatism section; hypothetical employee speech, author criticism, Lenin/Korolev sources and Germany comparison matched in Korean/English; verbatim source and unverified Rice claim retained in editorial record."
+      "ko_sha256": "a3801633c3ba494e9c7762c530c0e2aadd60967d789fead21899f559dd4cd484",
+      "en_sha256": "1e9ae729a8a917533b0b9e4bd0e0d540de92cef021e0e4ceeda2487b42027ff3",
+      "review": "2026-11-08 correction: restored scientific socialism and author argument that AI companies can use science to impose oversized egos irrationally; removed unsolicited Korolev imprisonment example from both languages; user corrections and editing history preserved."
     }
   ]
 }

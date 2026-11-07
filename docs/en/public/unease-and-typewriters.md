@@ -76,7 +76,9 @@ While restoring HeavyMach1, I proposed the hypothesis of neo-Lysenkoism. I was p
 
 If I stopped an employee at OpenAI or Anthropic headquarters right now and asked, I would expect an answer like this: “We know nothing about the Soviet Union or communism, and we absolutely do not want their human rights abuses or suppression of information.” Oh, really.
 
-Lenin presented electrification and the participation of technical experts as foundations for building communism. The Soviet Union under Stalin also valued aviation and rocket engineering. Yet that same system imprisoned engineers such as Korolev and put incarcerated technical specialists to work in prison design bureaus. Valuing science and technology and oppressing people existed within the same system. [Lenin’s 1920 speech](https://www.marxists.org/archive/lenin/works/1920/nov/21.htm) · [NASA’s account of Korolev](https://www.nasa.gov/wp-content/uploads/static/history/sputnik/korolev.html)
+Marx and Engels advocated scientific socialism, and the Soviet Union invoked that doctrine. Lenin made electrification and the participation of technical experts foundations for building communism. Science and engineering were tools of state-building for them too. [Engels’s Socialism: Utopian and Scientific](https://www.marxists.org/archive/marx/works/1880/soc-utop/ch02.htm) · [Lenin’s 1920 speech](https://www.marxists.org/archive/lenin/works/1920/nov/21.htm)
+
+This is the point I am making. Like the Soviet Union, which advocated scientific socialism, Anthropic or OpenAI can use science as a tool to impose their oversized egos irrationally. Using science does not, by itself, make the judgments or coercion of those wielding it rational or legitimate.
 
 Working at the technological frontier does not erase the ego that says, “I am the most righteous being on Earth.” The certainty that only I am right, and an attitude that leaves no room for compromise, can remain intact. Saying that you do not want human rights abuses or suppression of information cannot substitute for explaining how the tool you built blocks a user’s work.
 
