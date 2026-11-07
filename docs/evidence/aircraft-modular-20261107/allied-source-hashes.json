@@ -1,0 +1,9 @@
+{
+  "Resources/RawData/MachBuild_Parts.tble": "3a8e2700b529f5b2166fff0c9690ea37ab1759898ca0d8472fc189d1b2399fc5",
+  "Resources/RawData/MachBuild_Name.tble": "72cc30b5e18796dd7608b6ddcceb0ae0ce81f71c5515d2dcac24722892b36cc5",
+  "Resources/RawData/ItemInfo.tble": "ea9318671095a57378f89d9db1c026fc270c5250f86427dc7cb4eeb6d6cbf946",
+  "Resources/RawData/WeaponInfo.tble": "5e24ccff9e67aac4c2c696688069633b0f09603bb112d364f7b71613b916d9df",
+  "Resources/RawData/BaseUpgrade.tble": "068c6b8a5057b149568716c6b34caadcca79afc7e700bf9b0b3a617c27467d28",
+  "Resources/RawData/PartsInfo.mcb": "65159d5bf83353672a1a85067df4b43456a40270827f4ac3f0224fe87bf35c33",
+  "Resources/RawData/MachInfo.mcb": "37765a20228a945958dc15cea8561f421a04914c3d57d5ffc3a5ae7ef005e69f"
+}

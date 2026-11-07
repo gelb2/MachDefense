@@ -1,5 +1,7 @@
 # 스킬과 출처
 
+헬기·VTOL 파츠 제작과 조립에는 [assemble-mach-aircraft](../.agents/skills/assemble-mach-aircraft/SKILL.md)를 적용한다. 몸체에 그려진 무장 분리, 원작 부품 이름과 무기 행 연결, 총구·조준·반동, 고속 로터와 동적 그림자, 실제 World 크기 검사를 다룬다.
+
 HeavyMach 1 프로젝트 스킬 11개 전체를 `reference/heavymach1/skills`에 원문으로 보존했다. 현재 적용본은 `.agents/skills`에 있다. 원본 사본의 과거 앱 이름·주소·완료 기록은 실행 지시가 아니다.
 
 | HeavyMach 1 | MachDefense 적용본 |

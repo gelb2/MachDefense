@@ -1,3 +1,7 @@
+# 헬기 무장 조립·웹 검사 — 2026-11-07
+
+`feat/art-parity-followup-20261107`, `.local/worktrees/save-transfer`. 소형·중형 무장을 별도 파츠로 만들고 원작 무장 5개를 연결했다. 로터 회전 원반과 중형 위험 표식을 적용했다. C++ 3검사·Chrome/WebKit 각 3화면의 전투 검사를 통과했다. [실행 결과](docs/evidence/aircraft-modular-20261107.md). 추가 VTOL 2종은 시안 단계다. 아군 생산 표와 기지를 원작 117단계·현재 150단계 대조했고 모두 무기 종류 1종이었다. 아군 다중 무장 추가는 공용 발사 경로로 가능하나 항공기 표적 선택·대표 사거리·생산·강화·저장 연결이 남았다. 다음 과제는 사용자 지정 6방향 회피기동·체급별 범위·크로스파이어·자동락온 참여 연구다. [게시 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-modular-20261107)에 무장·시안·아군 다중 무장 조사 결과를 올렸으며 배포 succeeded를 확인했다. 캠페인과 기기 설치본은 아직 v0.6이다. 아래는 이전 기록이다.
+
 # 헬기 실제 World 비교 — 2026-11-07
 
 `feat/art-parity-followup-20261107`, `.local/worktrees/save-transfer`. 소형 폭 +20%, 중량형 폭·길이 +20% 지시를 반영했다. 16색 제한은 후속 지시로 미적용. 실제 World에 헬기 2대와 원작 탱크 2대를 생성하고 빠른 로터·바닥 그림자·이동·일시정지를 C++와 Chrome/WebKit에서 검사했다. [세부 결과](docs/research/aircraft-scale-20261107.md#크기로터그림자-수정--2026-11-07-후속). 무장·기울임·캠페인 연결은 남았다. [게시된 비교 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-world-20261107), 게임 커밋 `4fdaca5`. 보고서 배포 성공은 docs/report-site.md에 기록했다. 아래는 이전 상태다.

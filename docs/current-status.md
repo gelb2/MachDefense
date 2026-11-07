@@ -1,3 +1,7 @@
+# 헬기 무장 조립·웹 검사 — 2026-11-07
+
+`feat/art-parity-followup-20261107`, `.local/worktrees/save-transfer`. 소형·중형 무장을 별도 파츠로 만들고 원작 무장 5개를 연결했다. 로터 회전 원반과 중형 위험 표식을 적용했다. C++ 3검사·Chrome/WebKit 각 3화면의 전투 검사를 통과했다. [실행 결과](evidence/aircraft-modular-20261107.md). 추가 VTOL 2종은 시안 단계다. 다음 과제는 사용자 지정 6방향 회피기동·체급별 범위·크로스파이어·자동락온 참여 연구다. [게시 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-modular-20261107)에 무장·시안·아군 다중 무장 조사 결과를 올렸으며 배포 succeeded를 확인했다. 캠페인과 기기 설치본은 아직 v0.6이다. 아래는 이전 기록이다.
+
 # v0.6 배포 완료 — 2026-11-07
 
 main `2f82a09`, v0.6 태그·Release·운영 PWA를 배포했다. PWA 빌드는 `87ea3cfe8a8dc249`다. 운영 구버전 전환과 저장 보존, 새 Chrome·WebKit의 복원·미션·오프라인 검사, 공개 Mac ZIP의 해시·서명이 통과했다. iPhone·iPad·Galaxy 정식·치트 앱도 설치했다. [배포 결과](evidence/v06-release-20261107.md).
