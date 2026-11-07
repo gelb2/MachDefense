@@ -9,7 +9,9 @@ HeavyMach1의 채택본처럼 메인 일러스트와 게임 로고로 화면을 
 - A — GitHub 공유 카드: 위쪽 로고, 아래쪽 전차·메크. 1774×887, 2:1.
 - B — 웹·PWA 공유 카드: 아래쪽 로고, 위쪽 교전 장면. 1734×907, 약 1.91:1.
 - 사용자는 GitHub·PWA 모두 B안을 채택했다. 원래 1734×907 구도를 유지하고 JPEG로 내보냈다. 파일은 `Distribution/Web/social-preview.jpg`이며 627,410바이트다.
-- GitHub Social preview 업로드를 완료했다. GitHub에서 내려받은 파일의 SHA-256도 `15fddebb459273543a2ebad916f7fae99ab8bf2cd90bd242050b6c482a93f633`으로 일치한다. 웹·PWA에는 같은 이미지의 절대 주소·제목·설명을 연결한다.
+- GitHub Social preview 업로드를 완료했다. GitHub에서 내려받은 파일의 SHA-256도 `15fddebb459273543a2ebad916f7fae99ab8bf2cd90bd242050b6c482a93f633`으로 일치한다. 웹·PWA에도 같은 이미지의 절대 주소·제목·설명을 연결했다. 운영 이미지의 SHA-256도 같다.
+
+운영 웹 빌드는 `2ef4e04fca811fca`다. [Pages 배포](https://github.com/gelb2/MachDefense/actions/runs/42355241019)가 성공했다. `game.js`, `game.wasm`, `game.data`는 앞서 검사한 정식 빌드와 동일하다. 배포 후 WebKit에서 새 프로필 생성·Stage 1 진입·유닛 생산·오프라인 재실행·저장 보존을 확인했다. 실행 오류는 0건이었다.
 
 ## 누구나 받을 수 있는가
 
@@ -21,7 +23,7 @@ HeavyMach1의 채택본처럼 메인 일러스트와 게임 로고로 화면을 
 | PWA | Mac Chrome에 실제 설치. 별도 창에서 타이틀·슬롯 진입, 오프라인 재실행 통과 | 첫 다운로드 후 설치. iPhone·iPad 홈 화면 신규 설치는 이번 검사에서 반복하지 않음 |
 | Android | 새 클론에서 일반 APK 빌드. API 36 arm64 에뮬레이터에서 Stage 1 진입·생산·이동 확인 | Android 8 이상 arm64. Releases의 일반 APK도 다운로드 가능 |
 | iPhone·iPad | 새 클론에서 시뮬레이터 Debug·기기 Release 빌드 성공. 새 시뮬레이터에 일반 앱 설치·실행 | Mac·Xcode·Python·CMake 필요. 실기기는 자신의 개발 팀으로 서명 |
-| 웹 직접 빌드 | 새 클론에서 Emscripten 정식 빌드·패키징 성공 | Emscripten SDK. 생성된 build ID는 운영과 같은 `701b376ebb23a762` |
+| 웹 직접 빌드 | 새 클론에서 Emscripten 정식 빌드·패키징 성공 | Emscripten SDK. OG 추가 전 build ID `701b376ebb23a762` |
 
 Chrome·WebKit 모두 다운로드 후 네트워크를 끊고 페이지를 다시 열어 게임이 시작되고 기존 프로필이 남는 것을 확인했다. 브라우저 실행 오류는 각각 0건이었다. Mac Chrome의 설치 가능성 검사도 오류 0건이었다.
 
