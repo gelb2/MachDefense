@@ -4,6 +4,10 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## 2026-11-07 공유 카드
+
+GitHub 저장소와 웹·PWA의 공유 이미지로 B안을 채택했다. 웹 시작 페이지에 Open Graph·Twitter 카드 정보를 추가하고 같은 그림을 배포 묶음에 포함했다. 게임 코드·진행도·v0.5 앱은 그대로다.
+
 ## 2026-11-07 README 전투 장면
 
 README의 기존 글을 유지하고 특수공격 GIF·MP4 링크와 Stage 40 전투 이미지를 추가했다. 플레이 캡처 모음에서는 버그 제보 이미지 2장을 뺐다. 원본과 조사 자료는 보존한다.
