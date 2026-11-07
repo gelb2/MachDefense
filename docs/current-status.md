@@ -1,3 +1,7 @@
+# 아군 항공기 4종 시험 — 2026-11-08
+
+`feat/art-parity-followup-20261107`에서 헬기 로터를 이전 그림으로 되돌리고, 임시 VTOL 2종을 포함한 아군 4종을 치트 생성·회피·무장·크로스파이어에 연결했다. C++ 6검사와 Chrome/WebKit 3화면 검사가 통과했다. [실행 결과·남은 작업](evidence/aircraft-allied-20261108.md). 정식 캠페인·기기 설치·운영 PWA는 v0.6 그대로다. VTOL 디자인은 시험용이다. 아래는 이전 기록이다.
+
 # 헬기 무장 조립·웹 검사 — 2026-11-07
 
 `feat/art-parity-followup-20261107`, `.local/worktrees/save-transfer`. 소형·중형 무장을 별도 파츠로 만들고 원작 무장 5개를 연결했다. 로터 회전 원반과 중형 위험 표식을 적용했다. C++ 3검사·Chrome/WebKit 각 3화면의 전투 검사를 통과했다. [실행 결과](evidence/aircraft-modular-20261107.md). 추가 VTOL 2종은 시안 단계다. 다음 과제는 사용자 지정 6방향 회피기동·체급별 범위·크로스파이어·자동락온 참여 연구다. [게시 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-modular-20261107)에 무장·시안·아군 다중 무장 조사 결과를 올렸으며 배포 succeeded를 확인했다. 캠페인과 기기 설치본은 아직 v0.6이다. 아래는 이전 기록이다.

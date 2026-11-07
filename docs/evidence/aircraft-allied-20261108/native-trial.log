@@ -1,0 +1,45 @@
+model,level,cells,hp,upgradeCredits,buildSeconds
+AircraftLight,1,75,210,200,3
+AircraftLight,2,100,231,500,3
+AircraftLight,3,125,259,1000,3
+AircraftLight,4,150,294,2000,3
+AircraftLight,5,190,336,4000,3
+AircraftLight,6,250,378,8000,5
+AircraftLight,7,315,434,16000,5
+AircraftLight,8,400,490,32000,5
+AircraftLight,9,500,560,64000,5
+AircraftLight,10,625,644,0,5
+AircraftHeavy,1,265,350,2000,9
+AircraftHeavy,2,275,385,5000,9
+AircraftHeavy,3,300,434,10000,9
+AircraftHeavy,4,350,497,20000,9
+AircraftHeavy,5,400,560,40000,9
+AircraftHeavy,6,475,630,75000,9
+AircraftHeavy,7,565,700,150000,9
+AircraftHeavy,8,675,770,300000,9
+AircraftHeavy,9,840,875,500000,9
+AircraftHeavy,10,1000,1050,0,9
+AircraftDuct,1,375,700,3000,12
+AircraftDuct,2,400,770,5000,12
+AircraftDuct,3,440,840,9000,12
+AircraftDuct,4,500,910,17000,12
+AircraftDuct,5,565,1050,33000,12
+AircraftDuct,6,650,1190,65000,15
+AircraftDuct,7,750,1400,120000,15
+AircraftDuct,8,875,1610,230000,15
+AircraftDuct,9,1000,1820,650000,15
+AircraftDuct,10,1150,2100,0,15
+AircraftTransport,1,1000,700,4300,10
+AircraftTransport,2,1250,840,7800,10
+AircraftTransport,3,1500,980,14500,10
+AircraftTransport,4,1750,1120,30700,10
+AircraftTransport,5,2125,1260,61400,10
+AircraftTransport,6,2500,1400,125800,12
+AircraftTransport,7,3000,1610,227000,12
+AircraftTransport,8,3500,1820,458000,12
+AircraftTransport,9,4000,2100,921000,12
+AircraftTransport,10,4500,2380,0,12
+mode=3 tick+Frame CPU p99_ms=0.01725 max_ms=0.683625
+mode=4 tick+Frame CPU p99_ms=0.030333 max_ms=2.59225
+mode=5 tick+Frame CPU p99_ms=0.016542 max_ms=0.080834
+AlliedAircraft: 4 trial allies; 40 economy proposals; six routes; auto targeting/fire; Crossfire; enemy damage; pause; no file writes passed

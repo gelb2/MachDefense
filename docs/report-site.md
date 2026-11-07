@@ -1,3 +1,16 @@
+# 아군 항공기 시험 보고 — 2026-11-08
+
+[아군 항공기 4종 시험](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-allied-20261108)을 기존 소유자 전용 통합 보고서에 게시했다. 임시 VTOL 도색, 기존 로터 복귀, 네 기체 조립·무장·경제 제안, 좌우 전환의 감속·정지·재가속과 약 22초의 실제 웹 영상을 포함한다.
+
+- 게임 코드 커밋: `029fa01`, `feat/art-parity-followup-20261107`.
+- 보고서 소스: `7f0a1abcbc5fe4774ad87f8c224ca300e6cc39ca`.
+- 배포: `appgdep_6aef4687ab6081918965075f7f6985ef`, succeeded.
+- 1440·390px에서 이미지 4개, 영상 재생, 가로 넘침 없음, 목차 300항목 연결을 확인했다.
+- 첫 업로드는 256MiB 확장 제한을 104KB 넘겨 거절됐다. 기존 PNG 56개를 무손실 WebP로 바꾸고 모든 RGBA 바이트의 일치를 검사했다. 원본과 변환 기록은 `.local/report-image-originals-20261108`에 보존했다. 보고서 본문과 이전 영상은 유지했다. 이 기록의 `.local` 경로는 기본 MachDefense 저장소 기준이다.
+- 정식 게임 main·운영 PWA·기기 설치본은 배포하지 않았다. [시험 근거](evidence/aircraft-allied-20261108.md).
+
+아래는 이전 게시 기록이다.
+
 # 헬기 실제 World 비교 — 2026-11-07
 
 [크기·로터·그림자 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-world-20261107)를 기존 소유자 전용 보고서 첫 부분에 게시했다. 네 유닛의 동일 지면 비교 캡처와 약 4초의 실제 웹 치트 로터 영상을 제공한다. [코드·검사 근거](research/aircraft-scale-20261107.md).
