@@ -50,6 +50,12 @@ Choose a unit from the list on the right to produce it using cells. Spend credit
 
 [12-second combat clip](docs/public/media/gameplay-20261107/combat.mp4) · [All screenshots and clips](docs/en/public/gameplay-gallery.md)
 
+<img src="docs/public/media/gameplay-20261107/special-attack.gif" alt="Special-attack targeting and missile fire" width="360">
+
+[10-second special-attack clip](docs/public/media/gameplay-20261107/special-attack.mp4)
+
+<a href="docs/public/media/gameplay-20261107/iphone-stage40.jpg"><img src="docs/public/media/gameplay-20261107/iphone-stage40.jpg" alt="Stage 40: multiple weapon types in combat" width="360"></a>
+
 ## Features I designed and added
 
 Emergency resupply was my own idea, separate from restoring the original game. I was troubled by the way tower-defense challenges could become obstacles that required purchased items to overcome. That is why I replaced the nonfunctional in-app purchase button with a resupply window.

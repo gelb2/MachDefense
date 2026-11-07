@@ -55,27 +55,9 @@
 
 <a href="media/gameplay-20261107/upgrade.jpg"><img src="media/gameplay-20261107/upgrade.jpg" alt="장비 강화와 INSTALL·UNINSTALL" width="360"></a>
 
-## 문제 제보에 사용한 캡처
-
-제보 당시 화면이다. 아이폰 HUD 덮개는 이후 수정했고, 길찾기 제보는 후속 조사에 남아 있다.
-
-<details>
-<summary>Stage 23: 전투와 당시 HUD 상단 표시</summary>
-
-<img src="media/gameplay-20261107/iphone-stage23-hud.jpg" alt="Stage 23: 전투와 당시 HUD 상단 표시" width="360">
-
-</details>
-
-<details>
-<summary>원형 구조물과 유닛 정체 제보</summary>
-
-<img src="media/gameplay-20261107/pathfinding-report.jpg" alt="원형 구조물과 유닛 정체 제보" width="360">
-
-</details>
-
 ## 파일과 출처
 
-촬영본의 정확한 빌드 번호는 기록되지 않았다. 촬영 당시의 플레이 자료이며 최신 릴리스의 플랫폼 비교 자료로 쓰지 않는다. IMG_1129의 두 파일은 같아서 한 장만 실었다.
+촬영본의 정확한 빌드 번호는 기록되지 않았다. 촬영 당시의 플레이 자료이며 최신 릴리스의 플랫폼 비교 자료로 쓰지 않는다.
 
 [장면 시각·원본 해시·추출 파일](media/gameplay-20261107/scenes.json)
 

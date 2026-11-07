@@ -4,6 +4,10 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## 2026-11-07 README combat scenes
+
+Added the special-attack GIF, its MP4 link and the Stage 40 combat image to the README without changing its existing text. Removed the two bug-report images from the gameplay gallery. Their source files remain available for troubleshooting.
+
 ## 2026-11-07 Gameplay media
 
 Added 11 still images, two combat GIFs and three short MP4 clips from user gameplay recordings. The Korean and English gallery links to the README and documentation index. Source hashes, timestamps and captions are shared with the Sass writing guide. Game code and release v0.5 are unchanged.

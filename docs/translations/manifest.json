@@ -5,15 +5,15 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "38dbd4d4d0b5524d493e207bc7a77a31698b1ff201c994e5f9fa490e67ab87cf",
-      "en_sha256": "d08459362ecf236c7879c631b34b01b93fb4229c7bdcc3f1c1d9fe7b8abfe203",
+      "ko_sha256": "79c9a3b9582182fabc0dec5bf8652ad3725362249a9afd4a8cd01c307730b1b4",
+      "en_sha256": "cf501126504cd6efb736f3fa0fde85563dfc970f022a352f10e39d90d7713c28",
       "review": "paragraphs, author voice, figures, status, commands, links"
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "3001b5a757bd1ba19d587e80626abfbccc90ab92f020c048a92f18a69e71de09",
-      "en_sha256": "c3ade6314caa598f6b7333f91d48fafeb452b7110ca36d7722609a98c172ad88",
+      "ko_sha256": "f32a9c226af89e997a586d3b8d396f75d90ea48f0c63e00c00a06dba484ec512",
+      "en_sha256": "7317e033e17c444545add0c461b6b3f98819c5038406b1f1f1ecdf3953148b68",
       "review": "paragraphs, author voice, figures, status, commands, links"
     },
     {
@@ -209,8 +209,8 @@
       "ko": "docs/public/gameplay-gallery.md",
       "en": "docs/en/public/gameplay-gallery.md",
       "review": "captions, scene times, source provenance, media and navigation links",
-      "ko_sha256": "ce1eb14a41349f0843b7711cf421b201edf961aa38380a33f0c06953bf22c25b",
-      "en_sha256": "7294d4b68c18faf277b83e44abed1204c4ac64ca30a565b0b012649f272adb8e"
+      "ko_sha256": "90e92f98f19437ccdc1a6e37189d4ae0135a6a1bec9d5734e2e007c94d49d521",
+      "en_sha256": "ae30117595857040606477da0c029242862fd8e5b1e1b5ecda30c65598b30075"
     }
   ]
 }
