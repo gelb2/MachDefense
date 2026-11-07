@@ -5,9 +5,9 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "ae09adec0a3ccfa60016c4977f8f4140d98d8e267690a62de83bf0d9908ed6a5",
-      "en_sha256": "ffc70a1287ede1fae384a271f4a6df0960534ab79eeaadad25a8d42f11a14de2",
-      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved."
+      "ko_sha256": "2b095e1cbd4017b24ca997bde1c513005ae859e2a621c7209cc87153dc0281b2",
+      "en_sha256": "8742e8ffe73dfd0f75897373ff1ca604ecb6fbbfc3e496f9f73bdc841a1c368e",
+      "review": "2026-11-08: added matching essay introductions and essay, incident, and troubleshooting links; existing author text preserved."
     },
     {
       "ko": "CHANGELOG.md",
@@ -33,9 +33,9 @@
     {
       "ko": "docs/public/README.md",
       "en": "docs/en/public/README.md",
-      "ko_sha256": "e4883f0736a50fb3a2f3049b60720455e29aa8e2f334a8e66243e2d86015f33a",
-      "en_sha256": "16b5b52ba9813ee71b0cea0065be5256035e2a66acfdb3933d5bc2292f2d4356",
-      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
+      "ko_sha256": "a43f0a988f0812ac530b0037f5b4c510fbe52c40263abd3182ad076807ff44c2",
+      "en_sha256": "d9a2f9032308486bee74d682a0dfd6c36cb0bcdaed7db3ac422d5c3cfcb910fb",
+      "review": "2026-11-08: essay and reciprocal incident links; author voice, Gemini sketch/text edit refusals, responsibility shifting, historical facts and analogy distinction matched in Korean and English."
     },
     {
       "ko": "docs/public/architecture.md",
@@ -82,9 +82,9 @@
     {
       "ko": "docs/public/troubleshooting.md",
       "en": "docs/en/public/troubleshooting.md",
-      "ko_sha256": "236a7a6682a2558c41545ce6d7a9b268b66929899f49306235e0e3064ee2e254",
-      "en_sha256": "43bbc9090e7d40ee6f06d6c4c8a0adcb12a7b11b9a3893428d40a5a8030d516e",
-      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
+      "ko_sha256": "a171f48619fb083fc5f1f1b0185c019261385e2ca09a082eeba4a1ecd9b94792",
+      "en_sha256": "d1a4bfb6b3c9c481cd2f3c4a1073d1046ed556844df6bfda628ee0df186032bf",
+      "review": "2026-11-08: essay and reciprocal incident links; author voice, Gemini sketch/text edit refusals, responsibility shifting, historical facts and analogy distinction matched in Korean and English."
     },
     {
       "ko": "docs/public/validation.md",
@@ -225,6 +225,13 @@
       "ko_sha256": "e098442e7bc3f1ff4b74548b9d5282ad06a6f9711c4acc8259aa28bc3d52d50e",
       "en_sha256": "09d5b7b6ef59e793439952f46f363af328d76ca7ae0a430a9b56e8b4e352dd98",
       "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
+    },
+    {
+      "ko": "docs/public/unease-and-typewriters.md",
+      "en": "docs/en/public/unease-and-typewriters.md",
+      "ko_sha256": "2447ce43b74990059eda7ab13743c6c98802c5bef4c48531812f819b85b48eab",
+      "en_sha256": "65b334c3358abe67961575fea87d6ce6ff297b0805430b4416a04d5aff1c5327",
+      "review": "2026-11-08: removed agent-added subheadings from Korean/English essay per author correction; user-supplied main title and body paragraphs unchanged."
     }
   ]
 }

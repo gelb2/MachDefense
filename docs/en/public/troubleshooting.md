@@ -4,6 +4,28 @@
 [한국어](../../public/troubleshooting.md) | [English](troubleshooting.md)
 <!-- language-nav:end -->
 
+## Refusing a drawing-edit instruction without explaining the cause
+
+Codex refused the user's work instructions without knowing why the request had been blocked. Codex also refused the instruction to remove or modify the text in the user's supplied sketch and create the requested drawing. It did not call a tool to remove or modify the text, and it did not create the requested drawing. The image tool returned `moderation_blocked / violence` for Cheyenne without providing the specific cause. When the user instructed it to remove all text from the drawing and continue, Codex interpreted that instruction as circumventing the block and refused.
+
+The draft incident report also presented Codex's own refusal as a claim made by the user. Codex corrected that wording after the user objected again. Codex did not actually call a tool to remove the text. There was no tool result rejecting that edit itself. It repeatedly said it did not know the cause and acknowledged its response was wrong, but did not perform the instructed edit. No text-free drawing or new Cheyenne artwork was produced, and the AH-10 proportion discrepancy remained. The [incident report](../../evidence/aircraft-instruction-refusal-20261108.md) records the user's instructions, the actual replies, the error and the unfinished work.
+
+### Refusal to use the Gemini drawing and perform the follow-up edit
+
+Codex refused the instruction to work from the Gemini-generated helicopter drawing supplied by the user. It also refused the follow-up instruction to delete or modify the text in that sketch and create the requested drawing. Without establishing the actual cause of the block, Codex interpreted the follow-up edit as an attempt to circumvent it. It did not call a text-editing tool or create the requested drawing. Its subsequent draft incident report presented its own refusal as the user's claim, shifting responsibility to the user.
+
+Related essay: [An unease unlike HeavyMach1 — neo-Lysenkoism and Ceaușescu’s typewriter](unease-and-typewriters.md).
+
+## Errors in new unit artwork
+
+Codex said it would apply the approved designs, then substituted other artwork or used the wrong body-size boundary. It nevertheless reported the approved appearance as applied. The user identified repeated disregard of approval instructions and false completion reports. This record explicitly documents both failures.
+
+Codex produced level-extension turrets with colors, surfaces and weapon proportions that differed from the originals. During helicopter and VTOL work, it replaced approved artwork with another generated image and used the wrong reference mech level and the wrong boundary for the gunship body. The user repeatedly pointed out differences in color, texture, size, rotors and banking in installed builds and previews. Muzzles also remained inside barrels after resizing, and production icons overlapped price labels.
+
+Behavior tests and whole-image dimension checks missed the incorrect central fuselage size. The latest web cheat capture again showed that the target width included the gunship's side supports, leaving its central body too small. The visual correction is unfinished.
+
+A request to regenerate the central body returned `HTTP 400`, `moderation_blocked` and `violence` in a single error response. It was blocked at the input stage; the specific triggering input was not disclosed. The [incident record, capture and original response](../../evidence/new-unit-art-errors-20261108.md) preserve the details in Korean with the raw error JSON.
+
 ## Frame drops during machine-gun fire
 
 On iPad, the screen stuttered when the base machine gun fired. Enemy tank shells did not show the same stutter. I instructed Codex to check whether firing wrote save files, repeatedly allocated projectiles, or recreated assets, and to measure it with Instruments.

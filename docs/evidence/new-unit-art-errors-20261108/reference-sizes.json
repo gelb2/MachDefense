@@ -1,0 +1,314 @@
+[
+  {
+    "name": "E_Tank_28",
+    "width": 110.0,
+    "length": 121.0,
+    "area": 13310.0
+  },
+  {
+    "name": "E_Turret_18",
+    "width": 114.0,
+    "length": 112.0,
+    "area": 12768.0
+  },
+  {
+    "name": "E_Turret_19",
+    "width": 107.0,
+    "length": 119.0,
+    "area": 12733.0
+  },
+  {
+    "name": "E_Turret_20",
+    "width": 107.0,
+    "length": 116.0,
+    "area": 12412.0
+  },
+  {
+    "name": "E_Turret_17",
+    "width": 106.0,
+    "length": 116.0,
+    "area": 12296.0
+  },
+  {
+    "name": "E_Turret_15",
+    "width": 103.0,
+    "length": 118.0,
+    "area": 12154.0
+  },
+  {
+    "name": "E_Turret_16",
+    "width": 107.0,
+    "length": 113.0,
+    "area": 12091.0
+  },
+  {
+    "name": "E_Turret_14",
+    "width": 107.0,
+    "length": 112.0,
+    "area": 11984.0
+  },
+  {
+    "name": "E_Turret_13",
+    "width": 113.0,
+    "length": 104.5,
+    "area": 11808.5
+  },
+  {
+    "name": "E_Tank_30",
+    "width": 96.0,
+    "length": 117.0,
+    "area": 11232.0
+  },
+  {
+    "name": "E_Tank_27",
+    "width": 104.0,
+    "length": 100.0,
+    "area": 10400.0
+  },
+  {
+    "name": "E_Tank_32",
+    "width": 104.0,
+    "length": 100.0,
+    "area": 10400.0
+  },
+  {
+    "name": "E_Tank_31",
+    "width": 97.0,
+    "length": 105.0,
+    "area": 10185.0
+  },
+  {
+    "name": "E_Tank_26",
+    "width": 83.0,
+    "length": 120.0,
+    "area": 9960.0
+  },
+  {
+    "name": "E_Tank_29",
+    "width": 77.0,
+    "length": 118.0,
+    "area": 9086.0
+  },
+  {
+    "name": "E_Tank_24",
+    "width": 96.0,
+    "length": 86.0,
+    "area": 8256.0
+  },
+  {
+    "name": "E_Tank_25",
+    "width": 66.0,
+    "length": 121.5,
+    "area": 8019.0
+  },
+  {
+    "name": "E_Tank_23",
+    "width": 71.0,
+    "length": 87.5,
+    "area": 6212.5
+  },
+  {
+    "name": "E_Tank_21",
+    "width": 71.0,
+    "length": 75.0,
+    "area": 5325.0
+  },
+  {
+    "name": "E_Tank_22",
+    "width": 71.0,
+    "length": 68.0,
+    "area": 4828.0
+  },
+  {
+    "name": "E_Tank_19",
+    "width": 60.0,
+    "length": 77.0,
+    "area": 4620.0
+  },
+  {
+    "name": "E_Tank_17",
+    "width": 60.0,
+    "length": 76.0,
+    "area": 4560.0
+  },
+  {
+    "name": "E_Tank_18",
+    "width": 59.0,
+    "length": 73.0,
+    "area": 4307.0
+  },
+  {
+    "name": "E_Tank_16",
+    "width": 52.0,
+    "length": 79.5,
+    "area": 4134.0
+  },
+  {
+    "name": "E_Tank_15",
+    "width": 51.0,
+    "length": 81.0,
+    "area": 4131.0
+  },
+  {
+    "name": "E_Tank_14",
+    "width": 49.0,
+    "length": 71.5,
+    "area": 3503.5
+  },
+  {
+    "name": "E_Turret_12",
+    "width": 62.0,
+    "length": 53.0,
+    "area": 3286.0
+  },
+  {
+    "name": "E_Turret_10",
+    "width": 49.0,
+    "length": 67.0,
+    "area": 3283.0
+  },
+  {
+    "name": "E_Tank_13",
+    "width": 53.0,
+    "length": 61.0,
+    "area": 3233.0
+  },
+  {
+    "name": "E_Turret_11",
+    "width": 50.0,
+    "length": 58.0,
+    "area": 2900.0
+  },
+  {
+    "name": "E_Tank_06",
+    "width": 42.0,
+    "length": 68.0,
+    "area": 2856.0
+  },
+  {
+    "name": "E_Tank_08",
+    "width": 41.0,
+    "length": 69.0,
+    "area": 2829.0
+  },
+  {
+    "name": "E_Tank_10",
+    "width": 41.0,
+    "length": 65.0,
+    "area": 2665.0
+  },
+  {
+    "name": "E_Tank_07",
+    "width": 42.0,
+    "length": 63.0,
+    "area": 2646.0
+  },
+  {
+    "name": "E_Tank_12",
+    "width": 41.0,
+    "length": 62.5,
+    "area": 2562.5
+  },
+  {
+    "name": "E_Tank_11",
+    "width": 42.0,
+    "length": 61.0,
+    "area": 2562.0
+  },
+  {
+    "name": "E_Tank_02",
+    "width": 37.0,
+    "length": 69.0,
+    "area": 2553.0
+  },
+  {
+    "name": "E_Tank_09",
+    "width": 41.0,
+    "length": 61.0,
+    "area": 2501.0
+  },
+  {
+    "name": "E_Tank_04",
+    "width": 49.0,
+    "length": 51.0,
+    "area": 2499.0
+  },
+  {
+    "name": "E_Tank_05",
+    "width": 49.0,
+    "length": 48.0,
+    "area": 2352.0
+  },
+  {
+    "name": "E_Turret_09",
+    "width": 41.0,
+    "length": 57.0,
+    "area": 2337.0
+  },
+  {
+    "name": "E_Tank_20",
+    "width": 37.0,
+    "length": 61.0,
+    "area": 2257.0
+  },
+  {
+    "name": "E_Turret_08",
+    "width": 37.0,
+    "length": 58.0,
+    "area": 2146.0
+  },
+  {
+    "name": "E_Tank_03",
+    "width": 38.0,
+    "length": 54.0,
+    "area": 2052.0
+  },
+  {
+    "name": "E_Turret_07",
+    "width": 39.0,
+    "length": 52.0,
+    "area": 2028.0
+  },
+  {
+    "name": "E_Turret_01",
+    "width": 39.0,
+    "length": 49.5,
+    "area": 1930.5
+  },
+  {
+    "name": "E_Tank_01",
+    "width": 32.0,
+    "length": 57.0,
+    "area": 1824.0
+  },
+  {
+    "name": "E_Turret_04",
+    "width": 35.0,
+    "length": 52.0,
+    "area": 1820.0
+  },
+  {
+    "name": "E_Turret_06",
+    "width": 39.0,
+    "length": 45.0,
+    "area": 1755.0
+  },
+  {
+    "name": "E_Turret_03",
+    "width": 33.0,
+    "length": 52.5,
+    "area": 1732.5
+  },
+  {
+    "name": "E_Turret_02",
+    "width": 33.0,
+    "length": 51.0,
+    "area": 1683.0
+  },
+  {
+    "name": "E_Turret_05",
+    "width": 31.0,
+    "length": 45.0,
+    "area": 1395.0
+  }
+]
