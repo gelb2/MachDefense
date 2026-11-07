@@ -215,15 +215,15 @@
     {
       "ko": "docs/public/work-method.md",
       "en": "docs/en/public/work-method.md",
-      "ko_sha256": "de348b62512f44dde5daaa9d699f1e97923057f78a09a2d5282d09541151a8c2",
-      "en_sha256": "cca6298d52e1c022b3626bc80bd5ed5f7a9e213dcf93404636858292da9aed9e",
+      "ko_sha256": "36ef9cd179c3d053f96f0a866bb16862d09fd16a4fa3dfb84c5fde18c39bf5cc",
+      "en_sha256": "6d60d2b95817b616057a16c4179c1317e21abc8375091338b697f11c697e6e83",
       "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
     },
     {
       "ko": "docs/public/testing-method.md",
       "en": "docs/en/public/testing-method.md",
-      "ko_sha256": "e85d77bdfb3d8110b9e1b126830931a28252c04bd1a268cc64323114e9322a16",
-      "en_sha256": "89854f6d4cc651ef6577595aaa35906aef62e9887004197bbe8933153280737f",
+      "ko_sha256": "e098442e7bc3f1ff4b74548b9d5282ad06a6f9711c4acc8259aa28bc3d52d50e",
+      "en_sha256": "09d5b7b6ef59e793439952f46f363af328d76ca7ae0a430a9b56e8b4e352dd98",
       "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
     }
   ]
