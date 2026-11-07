@@ -82,9 +82,9 @@
     {
       "ko": "docs/public/troubleshooting.md",
       "en": "docs/en/public/troubleshooting.md",
-      "ko_sha256": "8dbcdb1ce47f0edef084f363d5a5a9d5224736e00c7e881e831ccc0584f3219b",
-      "en_sha256": "708e47ac1ed429f2fa59efbd74a61605df23887e2abaa5dbfbe7953e41927dea",
-      "review": "2026-11-08: approval violations and false completion reports explicitly matched; turret/aircraft errors, unfinished body correction and raw moderation error linked."
+      "ko_sha256": "1bbfba860608d1f12d0c3d15888ee1eb260b4a161ae816ce4784eb9b9f44c375",
+      "en_sha256": "66bc4e6487b7499c1e6c359895da80e38b53e7180ade49eb88fef5fcdaa74d01",
+      "review": "2026-11-08: refusal without knowing the block cause recorded as Codex action, not a user allegation; draft attribution error and unfinished work matched."
     },
     {
       "ko": "docs/public/validation.md",

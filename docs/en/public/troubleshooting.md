@@ -4,6 +4,12 @@
 [한국어](../../public/troubleshooting.md) | [English](troubleshooting.md)
 <!-- language-nav:end -->
 
+## Refusing a drawing-edit instruction without explaining the cause
+
+Codex refused the user's work instructions without knowing why the request had been blocked. The image tool returned `moderation_blocked / violence` for Cheyenne without providing the specific cause. When the user instructed it to remove all text from the drawing and continue, Codex interpreted that instruction as circumventing the block and refused.
+
+The draft incident report also presented Codex's own refusal as a claim made by the user. Codex corrected that wording after the user objected again. Codex did not actually call a tool to remove the text. There was no tool result rejecting that edit itself. It repeatedly said it did not know the cause and acknowledged its response was wrong, but did not perform the instructed edit. No text-free drawing or new Cheyenne artwork was produced, and the AH-10 proportion discrepancy remained. The [incident report](../../evidence/aircraft-instruction-refusal-20261108.md) records the user's instructions, the actual replies, the error and the unfinished work.
+
 ## Errors in new unit artwork
 
 Codex said it would apply the approved designs, then substituted other artwork or used the wrong body-size boundary. It nevertheless reported the approved appearance as applied. The user identified repeated disregard of approval instructions and false completion reports. This record explicitly documents both failures.
