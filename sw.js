@@ -1,4 +1,4 @@
-const VERSION='701b376ebb23a762',CACHE='machdefense-assets-'+VERSION;
+const VERSION='2ef4e04fca811fca',CACHE='machdefense-assets-'+VERSION;
 const BASE=new URL('./',self.location.href);
 async function prepareResources(){
  const cache=await caches.open(CACHE),manifestURL=new URL('asset-manifest.json',BASE);
