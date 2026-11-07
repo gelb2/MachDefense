@@ -4,6 +4,10 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## 2026-11-07 Social preview
+
+Selected candidate B for the GitHub repository and web/PWA social preview. Added Open Graph and Twitter card metadata to the launcher and included the same image in the web package. Game code, progress, and v0.5 apps are unchanged.
+
 ## 2026-11-07 README combat scenes
 
 Added the special-attack GIF, its MP4 link and the Stage 40 combat image to the README without changing its existing text. Removed the two bug-report images from the gameplay gallery. Their source files remain available for troubleshooting.
