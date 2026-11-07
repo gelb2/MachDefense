@@ -1,6 +1,6 @@
 # MachDefense
 
-[![Release v0.4](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.4)
+[![Release v0.5](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.5)
 [![iOS, iPadOS, Android, Web, PWA](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript](docs/public/media/badges/code.svg)](docs/public/architecture.md)
@@ -60,8 +60,8 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 | 플랫폼 | 실행 | 현재 상태 |
 |---|---|---|
-| iPhone·iPad | Xcode 워크스페이스 | v0.4. iPhone·iPad 정식·치트 설치, iPad 강화·전투 검사 |
-| Android | Android Studio 또는 APK | [v0.4 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.4). v0.4 빌드 완료. Galaxy·에뮬레이터 복원은 이전 버전에서 검사 |
+| iPhone·iPad | Xcode 워크스페이스 | v0.5. iPhone·iPad 정식·치트 설치, iPad 강화·전투 검사 |
+| Android | Android Studio 또는 APK | [v0.5 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.5). Galaxy 정식·치트 설치, 생산·강화·음향·복귀·승패 검사 |
 | 웹 | 브라우저 | GitHub Pages 배포. Mac Chrome·Safari·WebKit 검사 |
 | PWA | 브라우저에서 설치 | 설치·오프라인 실행 지원. 기기별 검사 결과는 검사 문서 참고 |
 | Tauri Mac | 데스크톱 앱 | 개발 예정 |
