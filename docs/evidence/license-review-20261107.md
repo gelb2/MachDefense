@@ -27,3 +27,21 @@ MachDefense의 Android Gradle 8.13 wrapper는 Apache-2.0이다. [공식 배포 L
 ## 확인
 
 고지 원문 11개의 SHA-256 대조, 29쌍 번역 검사, Markdown 165개·링크/절 1,559개 검사와 문서 검사기 회귀 9개가 통과했다. 게임 실행 파일·자원은 변경하지 않았다.
+
+## 공개된 main 재대조 — 2026-11-07
+
+MachDefense `c87cc732e1260585f18b383e193382f00c01407e`와 HeavyMach `fa3c1a519d2a775d77dd62d5085b08fb86dcf403`의 공개 파일을 다시 받아 대조했다. 위 로컬 사본 조사 이후의 확인이다.
+
+| 항목 | HeavyMach | MachDefense | 비교 결과 |
+|---|---|---|---|
+| 루트 LICENSE | MIT, Copyright (c) 2026 Jun Young Jee | 같은 원문 | 바이트 일치 |
+| 코드 범위 | 새로 작성한 코드에 적용, 외부 코드·원작 자료 제외 | 같은 구분 | 방법 동일. 실제 경로 목록은 프로젝트별로 작성 |
+| 원작 그림·음원·데이터 | ASSET-LICENSES에서 별도 설명 | 같은 문서 구조 | 원작 자원을 코드 MIT에 포함하지 않음 |
+| 외부 코드 | THIRD_PARTY_NOTICES와 LICENSES 원문 | 같은 구조, Android·웹 의존성도 기재 | 아래 후속 보완 차이가 있음 |
+| GitHub 표시 | README MIT 배지, 한·영 범위·자원·고지 | 같은 표시·언어 전환 | 방문자가 코드와 자원의 조건을 따로 확인 가능 |
+
+HeavyMach의 세부 범위 표에는 Android·Web·Distribution·Desktop/Tauri 경로가 없고, 외부 고지에는 Gradle·Emscripten·Tauri 관련 항목이 없다. 현재 README에는 이 플랫폼들의 배포가 안내돼 있다. **라이선스 구분 방식은 같지만, HeavyMach의 세부 목록은 플랫폼 확장 내용을 충분히 반영하지 못했다.** 실제 포함되는 의존성·버전·기여자 고지를 조사해 갱신할 후속 과제로 남긴다. 단순히 MachDefense 목록을 복사하면 HeavyMach의 Tauri 의존성과 외부 PR 기여분을 놓칠 수 있다. 이번 비교에서 HeavyMach 파일은 수정하지 않았다.
+
+MachDefense 라이선스 문서는 develop→main으로 게시했고 해당 main CI가 통과했다. GitHub에서 README 배지→한국어 코드 범위→English→영어 자원 조건→한국어 자원 조건→외부 고지→English를 실제 클릭했다. 여섯 번의 링크 이동이 성공했다. 390×844 브라우저 화면에서 영어 README의 언어 링크와 배지 표시도 확인했다. 실제 휴대폰 검사를 뜻하지 않는다.
+
+TODO는 기존 미완료 20건에 HeavyMach 라이선스 후속 보완 1건을 추가했다. 한·영 문서와 MachDefense 라이선스 적용은 완료 목록에 있다. PWA 첫 업데이트 전환, Tauri 앱 구현, 전장 스크롤·키보드와 기존 게임 검사는 미완료 상태로 유지한다. 게임 코드·자원·v0.5 배포 파일은 바꾸지 않았다.

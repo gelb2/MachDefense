@@ -28,6 +28,7 @@
 | 18 | 집필·트러블슈팅·Sass 자료 | 「나는 이렇게 테스트했다」「나는 이렇게 일을 시켰다」를 HeavyMach1·MachDefense 양쪽에 작성한다. 사용자 원문, 포팅판→재구현→치트 검증, p99·25ms 수치의 뜻과 측정 조건, 계획·보고서·모듈 경계 지시를 담는다. 새 수정 근거를 트러블슈팅과 Sass 집필 자료에 연결한다. HeavyMach1처럼 Apps/Mags 주제별 원고·사용자 원문·이미지·검사·완료 상태를 [집필 안내](editorial/sass-publication-guide.md)에 모은다. 이 안내와 Sass 허브의 MachDefense 진입 서신, 한영 원고 연결을 작성했다. 별도 두 원고의 집필은 남았다. 개발자의 변 최종본을 다시 쓰는 과제는 아니다. [글감](editorial/test-method-material-20261107.md). |
 | 19 | Mesabloo 감사 연락 | 연락 안내와 Issue·Discussion·이메일을 확인하고 한 채널을 고른다. 감사만을 위한 PR이나 중복 발송은 하지 않는다. HeavyMach WASM PR 기여자의 정확한 계정·링크를 확인하고 정중한 영어 초안을 작성한다. 사용자 검토 후 연락한다. 아래 제공 원문과 코드베이스 하이재킹 오해에 관한 참고 의견을 보존했다. |
 | 20 | Galaxy 연결·Android 배포 후속 | USB 기본 MTP와 현재 디버깅은 확인했다. 케이블 재연결 유지와 무선 접속·설치 검사는 남았다. **무선은 급하지 않다는 사용자 지시를 반영한다.** 추가 OS/기기·배포용 서명도 Android 후속 검사다. [최근 결과](evidence/v05-release-20261107.md), [Android 검사 범위](evidence/android-native-20261106.md). |
+| 23 | HeavyMach 라이선스 고지 후속 보완 | 두 main의 MIT 원문과 코드·자원·외부 고지 구분은 같다. HeavyMach의 세부 범위 표와 외부 고지에는 Android·웹·Tauri 확장 내용이 빠져 있다. 실제 배포 의존성·버전과 외부 PR 기여자 고지를 확인해 한·영 문서를 갱신한다. HeavyMach 수정은 아직 하지 않았다. [비교 결과](evidence/license-review-20261107.md). |
 
 
 ## 보류·제안

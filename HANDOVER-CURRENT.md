@@ -1,3 +1,9 @@
+# 라이선스 main 게시·후속 비교 — 2026-11-07
+
+한·영 방문자 문서 29쌍과 라이선스 문서를 main `c87cc73`까지 게시했다. CI와 GitHub 배지·언어 전환·고지 링크를 확인했다. HeavyMach main과 MIT 원문은 같지만 HeavyMach의 Android·웹·Tauri 고지 보강이 남아 TODO 23에 기록했다. 현재 미완료 과제는 21건이다. [비교 결과](docs/evidence/license-review-20261107.md). 게임 코드·자원·앱 버전은 변경하지 않았다.
+
+아래는 이전 기록이다.
+
 # 라이선스 문서·한영 공개 — 2026-11-07
 
 방문자 문서 26쌍을 main `2610af3`에 게시하고 GitHub의 언어 전환·목차·설치·개발자의 변 경로를 확인했다. 후속 `docs/licensing-20261107`에서 HeavyMach1과 같은 새 코드 MIT·자원 제외·외부 고지 구성을 적용했다. 라이선스 3쌍을 더해 총 29쌍이다. [라이선스 조사](docs/evidence/license-review-20261107.md), [Sass 자료](docs/editorial/sass-publication-guide.md). 게임 코드·자원·앱 버전·PWA 실행 파일은 변경하지 않았다.
