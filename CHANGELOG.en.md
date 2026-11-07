@@ -4,6 +4,10 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## 2026-11-07 Gameplay media
+
+Added 11 still images, two combat GIFs and three short MP4 clips from user gameplay recordings. The Korean and English gallery links to the README and documentation index. Source hashes, timestamps and captions are shared with the Sass writing guide. Game code and release v0.5 are unchanged.
+
 ## 2026-11-07 documentation update
 
 Added Korean and English versions of 26 visitor documents, with language links on each page. Added separate guides to implementation status and remaining work, and connected topic-specific manuscripts, images, and validation evidence in the Sass writing guide. Updated stale build/test descriptions and document links. The game release remains v0.5; code, assets, and save format are unchanged.

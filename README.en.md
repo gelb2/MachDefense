@@ -46,11 +46,20 @@ Choose a unit from the list on the right to produce it using cells. Spend credit
 
 ![Owned equipment and upgrade levels](docs/evidence/images/android-20261106/normal-iphone-upgrades.png)
 
+<img src="docs/public/media/gameplay-20261107/combat.gif" alt="Turret fire and mech combat" width="360">
+
+[12-second combat clip](docs/public/media/gameplay-20261107/combat.mp4) · [All screenshots and clips](docs/en/public/gameplay-gallery.md)
+
 ## Features I designed and added
 
 Emergency resupply was my own idea, separate from restoring the original game. I was troubled by the way tower-defense challenges could become obstacles that required purchased items to overcome. That is why I replaced the nonfunctional in-app purchase button with a resupply window.
 
 I did not want a one-time handout. I wanted small amounts of credits and cells to become available repeatedly as game time passed, so players could overcome difficult sections without paying. The amounts use current cell capacity, production, and mission rewards. I directed the calculations to account for intervals, repeated claims, and resource capacity. Codex implemented them in shared C++ using the original assets.
+
+
+<img src="docs/public/media/gameplay-20261107/resupply.jpg" alt="Emergency supplies during battle" width="360">
+
+[Claiming supplies: 9-second clip](docs/public/media/gameplay-20261107/resupply.mp4)
 
 ## Screen support, platforms, and testing tools
 

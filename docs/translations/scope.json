@@ -146,6 +146,11 @@
       "ko": "THIRD_PARTY_NOTICES.md",
       "en": "THIRD_PARTY_NOTICES.en.md",
       "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/gameplay-gallery.md",
+      "en": "docs/en/public/gameplay-gallery.md",
+      "status": "reviewed"
     }
   ],
   "excluded": [

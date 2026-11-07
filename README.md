@@ -46,11 +46,20 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 ![보유 장비와 강화 단계](docs/evidence/images/android-20261106/normal-iphone-upgrades.png)
 
+<img src="docs/public/media/gameplay-20261107/combat.gif" alt="포탑 사격과 메크 교전" width="360">
+
+[12초 전투 영상](docs/public/media/gameplay-20261107/combat.mp4) · [전체 캡처와 영상](docs/public/gameplay-gallery.md)
+
 ## 내가 기획해 추가한 기능
 
 긴급지원은 원작 복원과 별개로 내가 구상한 기능이다. 타워디펜스의 난관이 결국 결제로 산 아이템을 써야 넘어갈 수 있는 것으로 바뀌는 것이 마음에 걸렸다. 작동하지 않는 인앱결제 버튼을 긴급지원 창으로 바꾼 이유다.
 
 한 번 받고 끝내는 지원을 원한 것은 아니었다. 게임 시간에 따라 소량의 크레딧과 셀을 반복해서 받도록 했다. 사용자가 결제 없이 난관을 돌파할 수 있게 하고 싶었다. 지급량은 현재 셀 용량과 생산량, 미션 보상을 기준으로 계산했다. 지급 간격·반복 수령·자원 용량을 고려한 계산을 지시했고, Codex가 공통 C++ 코드와 원작 에셋으로 구현했다.
+
+
+<img src="docs/public/media/gameplay-20261107/resupply.jpg" alt="전투 중 긴급지원 수령" width="360">
+
+[지원 수령 장면: 9초 영상](docs/public/media/gameplay-20261107/resupply.mp4)
 
 ## 화면·플랫폼 확장과 검증 도구
 
