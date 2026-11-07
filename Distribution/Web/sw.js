@@ -2,6 +2,7 @@ const VERSION='__BUILD_VERSION__',CACHE='machdefense-assets-'+VERSION;
 const MANIFEST=__ASSET_MANIFEST__;
 const BASE=new URL('./',self.location.href),BLOBS='machdefense-chunks-v1';
 const urlFor=name=>new URL(name,BASE).href;
+const scopedClients=async()=> (await self.clients.matchAll({includeUncontrolled:true,type:'window'})).filter(client=>client.url.startsWith(BASE.href));
 const digest=async bytes=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
 let preparation=null;
 async function checked(response,file){
@@ -37,7 +38,7 @@ async function prepare(){
     if(piece)reused+=piece.byteLength;
     else{piece=await download(part);downloaded+=piece.byteLength;await blobs.put(urlFor(part.url),responseFor(piece,part.url));}
     output.set(new Uint8Array(piece),offset);offset+=piece.byteLength;
-    for(const client of await self.clients.matchAll({includeUncontrolled:true}))client.postMessage({kind:'download',version:VERSION,done:done+offset,total,downloaded,reused});
+    for(const client of await scopedClients())client.postMessage({kind:'download',version:VERSION,done:done+offset,total,downloaded,reused});
    }
    if(offset!==file.size||await digest(output)!==file.sha256)throw Error('Resource assembly failed');
    bytes=output;
@@ -50,7 +51,7 @@ async function prepare(){
    else{bytes=await download(file);downloaded+=bytes.byteLength;}
   }
   if(!file.parts)await cache.put(urlFor(file.url),responseFor(bytes,file.url));done+=file.size;
-  for(const client of await self.clients.matchAll({includeUncontrolled:true}))client.postMessage({kind:'download',version:VERSION,done,total,downloaded,reused});
+  for(const client of await scopedClients())client.postMessage({kind:'download',version:VERSION,done,total,downloaded,reused});
  }
  // Only complete, verified releases receive this marker. Progress lives in
  // IndexedDB and is never touched by this worker.
@@ -65,7 +66,7 @@ self.addEventListener('message',event=>{
  if(event.data?.kind==='activate')event.waitUntil((async()=>{
   // Only a launcher which has not loaded the game asks to activate. Another
   // open tab may still be playing the previous release, so leave it alone.
-  const clients=await self.clients.matchAll({includeUncontrolled:true,type:'window'});
+  const clients=await scopedClients();
   if(clients.some(c=>c.id!==event.source?.id)){reply({ok:false,waiting:true});return;}
   await prepareResources();reply({ok:true,version:VERSION});await self.skipWaiting();
  })().catch(error=>reply({ok:false,error:error.message})));

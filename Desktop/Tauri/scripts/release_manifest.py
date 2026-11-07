@@ -6,6 +6,7 @@ root=Path(__file__).resolve().parents[3];desktop=root/'Desktop/Tauri'
 version=json.loads((desktop/'src-tauri/tauri.conf.json').read_text())['version']
 tag='v'+'.'.join(version.split('.')[:2]);out=root/'build/release'/tag;out.mkdir(parents=True,exist_ok=True)
 bundle=desktop/'src-tauri/target/release/bundle/macos';source=bundle/'MachDefense Desktop.app.tar.gz'
+subprocess.run(['codesign','--verify','--deep','--strict',str(bundle/'MachDefense Desktop.app')],check=True)
 signature=(bundle/(source.name+'.sig')).read_text().strip()
 signed=base64.b64decode(signature,validate=True).decode()
 assert re.search(r'\tversion:'+re.escape(version)+r'(?:\s|$)',signed),'Signature version differs from app version'

@@ -14,7 +14,9 @@ for entry in manifest['files']:
  shutil.copy2(p,out/p.name)
 shutil.copy2(source/'build.json',out/'build.json')
 shutil.copy2(desktop/'frontend/desktop-host.js',out/'desktop-host.js')
-p=out/'index.html';p.write_text(p.read_text().replace('<script src="app.js">','<script src="desktop-host.js"></script><script src="app.js">'))
+p=out/'index.html';html=p.read_text().replace('<script src="app.js">','<script src="desktop-host.js"></script><script src="app.js">')
+html=html.replace('Progress is saved on this device. Keep a recovery code before removing website data.', 'GET CODE and ENTER CODE are in Select Slot.')
+p.write_text(html)
 (out/'desktop-source.json').write_text(json.dumps({'web_version':manifest['version'],'files':[{k:f[k] for k in ('url','size','sha256')} for f in manifest['files']]},indent=2))
 print('Desktop web product:',manifest['version'])
 notices=desktop/'build/notices'

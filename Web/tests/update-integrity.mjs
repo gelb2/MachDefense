@@ -13,7 +13,7 @@ const changedPartHash=hash(changedPart),changedPartURL='chunks/'+changedPartHash
 function manifest(){const m=structuredClone(original);if(edition){m.version=original.version+'-'+edition;const f=m.files.find(f=>f.url==='title.jpg');const b=Buffer.concat([title,Buffer.from('update'+edition)]);f.size=b.length;f.sha256=hash(b);}if(edition>=3){const d=m.files.find(f=>f.url==='game.data');d.sha256=hash(changedData);Object.assign(d.parts.at(-1),{url:changedPartURL,sha256:changedPartHash});}return m;}
 const types={'.html':'text/html','.js':'text/javascript','.json':'application/json','.wasm':'application/wasm','.css':'text/css','.webmanifest':'application/manifest+json'};
 const server=http.createServer(async(req,res)=>{try{
- const name=decodeURIComponent(new URL(req.url,'http://localhost').pathname.slice(1))||'index.html';if(name.includes('..'))throw Error('path');requests.push(name);
+ const pathname=new URL(req.url,'http://localhost').pathname;if(pathname==='/other/'){res.writeHead(200,{'Content-Type':'text/html'});res.end('<title>Other project</title>');return;}const name=decodeURIComponent(pathname.slice('/MachDefense/'.length))||'index.html';if(name.includes('..'))throw Error('path');requests.push(name);
  let bytes=diskFiles.get(name);if(!bytes)throw Error('missing');const m=manifest();
  if(name==='sw.js')bytes=Buffer.from(sw.replace(`VERSION='${original.version}'`,`VERSION='${m.version}'`).replace(/const MANIFEST=.*;\n/,`const MANIFEST=${JSON.stringify(m)};\n`));
  if(name==='asset-manifest.json')bytes=Buffer.from(JSON.stringify(m));
@@ -23,9 +23,9 @@ const server=http.createServer(async(req,res)=>{try{
  if(name===corrupt)bytes=Buffer.from('damaged');
  res.writeHead(200,{'Content-Type':types[path.extname(name)]||'application/octet-stream','Cache-Control':'no-store'});res.end(bytes);
  }catch{res.writeHead(404);res.end();}});
-await new Promise(r=>server.listen(0,'127.0.0.1',r));const url=`http://127.0.0.1:${server.address().port}/`;
+await new Promise(r=>server.listen(0,'127.0.0.1',r));const url=`http://127.0.0.1:${server.address().port}/MachDefense/`;
 const kind=process.env.MD_BROWSER||'chrome';const browser=await (kind==='webkit'?webkit:chromium).launch(kind==='webkit'?{headless:true}:{channel:'chrome',headless:true});
-const context=await browser.newContext();let page=await context.newPage();const result={browser:kind,errors:[]};page.on("response",async r=>{if(r.status()===503)result.errors.push(r.url()+": "+await r.text().catch(()=>"?"));});page.on("pageerror",e=>result.errors.push(e.message));page.on("console",e=>{if(e.type()==="error")result.errors.push(e.text());});
+const context=await browser.newContext();const unrelated=await context.newPage();await unrelated.goto(new URL('/other/',url).href);let page=await context.newPage();const result={browser:kind,errors:[]};page.on("response",async r=>{if(r.status()===503)result.errors.push(r.url()+": "+await r.text().catch(()=>"?"));});page.on("pageerror",e=>result.errors.push(e.message));page.on("console",e=>{if(e.type()==="error")result.errors.push(e.text());});
 await page.addInitScript(()=>navigator.serviceWorker?.addEventListener('message',e=>{if(e.data.kind==='resource-error')console.error(JSON.stringify(e.data));}));
 async function ready(){await page.goto(url);await page.waitForSelector('#play:not([disabled])',{timeout:180000});}
 try{
@@ -35,10 +35,10 @@ try{
  await page.click('#play');await page.waitForFunction(()=>!!window.MDModule);await page.evaluate(()=>MDTest.advance(60));result.gameStarted=true;
  const seed=Array.from(Buffer.alloc(42496));assert(await page.evaluate(b=>MDStore.write(new Uint8Array(b)),seed));
  // While a game is open, the new worker must wait.
- edition=1;await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update();});await page.waitForFunction(async()=>!!(await navigator.serviceWorker.getRegistration()).waiting,null,{timeout:180000});
+ edition=1;await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update();});await page.evaluate(async()=>{window.MDTestRegistration=await navigator.serviceWorker.getRegistration();});await page.waitForFunction(()=>!!window.MDTestRegistration.waiting,null,{timeout:180000});
  assert.equal(await page.evaluate(async()=>(await(await fetch('build.json')).json()).version),original.version);result.runningVersionHeld=true;
  const other=await context.newPage();await other.goto(url);await other.waitForSelector('#play:not([disabled])',{timeout:180000});assert.equal(await other.evaluate(()=>MDUpdateWaiting),true);await other.close();result.otherPlayingTabHeld=true;
- requests.length=0;await ready();assert.equal(await page.evaluate(()=>MDResourceCheck.version),manifest().version);assert.deepEqual(await page.evaluate(()=>Array.from(MDStore.current)),seed);result.firstLauncherUsesNewVersion=true;result.savePreserved=true;
+ requests.length=0;await ready();assert.equal(await page.evaluate(()=>MDResourceCheck.version),manifest().version);assert.deepEqual(await page.evaluate(()=>Array.from(MDStore.current)),seed);result.firstLauncherUsesNewVersion=true;result.unrelatedProjectDoesNotBlockUpdate=true;result.savePreserved=true;
  assert(!requests.some(n=>['game.data','game.wasm','game.js'].includes(n)||n.startsWith('chunks/')));result.unchangedGameNotDownloaded=true;
  // A broken update leaves the complete previous release playable.
  edition=2;corrupt='title.jpg';await ready();assert.equal(await page.evaluate(()=>MDResourceCheck.version),original.version+'-1');result.badUpdateKeepsPrevious=true;corrupt=null;
