@@ -98,3 +98,7 @@ Sass 허브 서신은 `ProjectPersonalFunnelPage/governance/operations/machdefen
 ## 신규 유닛 외형 작업 기록 — 2026-11-08
 
 [신규 유닛 외형 오류](../evidence/new-unit-art-errors-20261108.md)에 추가 레벨 포탑·헬기·VTOL의 사용자 지적, 승인 그림 교체, 크기 기준 오적용, 색·질감·조립 오류와 마지막 이미지 생성 차단 응답을 모았다. 승인 시안을 적용하겠다고 답한 뒤 다른 그림을 적용하고, 승인 시안이 반영된 것처럼 보고한 문제도 별도 항목에 기록했다. 이를 단순한 그림 품질 문제로 축소하지 않는다. 건쉽은 미완료다. 자동검사 통과를 미술 완성이나 사용자 승인으로 서술하지 않는다. 한·영 공개 요약은 트러블슈팅에 연결했다.
+
+## 2026-11-08 도안 작업 거부에 관한 원고
+
+[헤비멕1과는 다른 위화감 — 신 리셴코주의와 차우세스쿠의 타자기](../public/unease-and-typewriters.md) · [English](../en/public/unease-and-typewriters.md). Gemini 도안 작업과 텍스트 편집 거부, 경위서의 책임 전가를 [경위서](../evidence/aircraft-instruction-refusal-20261108.md)와 [트러블슈팅](../troubleshooting.md)에 연결했다. 리셴코주의 역사 연구와 루마니아 법령 원문을 인용했다. 역사적 제도의 설명과 저자의 비유를 구분했다. 기존 개발자의 변은 수정하지 않았다.

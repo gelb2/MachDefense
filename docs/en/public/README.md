@@ -29,3 +29,5 @@ Historical material: [draft for the first web/PWA release](../../public/web-pwa-
 
 - [How I directed the work](work-method.md)
 - [How I tested the game](testing-method.md)
+
+- [An unease unlike HeavyMach1 — neo-Lysenkoism and Ceaușescu’s typewriter](unease-and-typewriters.md)

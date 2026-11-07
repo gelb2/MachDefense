@@ -33,9 +33,9 @@
     {
       "ko": "docs/public/README.md",
       "en": "docs/en/public/README.md",
-      "ko_sha256": "e4883f0736a50fb3a2f3049b60720455e29aa8e2f334a8e66243e2d86015f33a",
-      "en_sha256": "16b5b52ba9813ee71b0cea0065be5256035e2a66acfdb3933d5bc2292f2d4356",
-      "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
+      "ko_sha256": "a43f0a988f0812ac530b0037f5b4c510fbe52c40263abd3182ad076807ff44c2",
+      "en_sha256": "d9a2f9032308486bee74d682a0dfd6c36cb0bcdaed7db3ac422d5c3cfcb910fb",
+      "review": "2026-11-08: essay and reciprocal incident links; author voice, Gemini sketch/text edit refusals, responsibility shifting, historical facts and analogy distinction matched in Korean and English."
     },
     {
       "ko": "docs/public/architecture.md",
@@ -82,9 +82,9 @@
     {
       "ko": "docs/public/troubleshooting.md",
       "en": "docs/en/public/troubleshooting.md",
-      "ko_sha256": "923cfc802a38325b91230107d4c8cac7572c7f83671e578fa060e987e74e2931",
-      "en_sha256": "5cccc717dc656d406b93263c6b1be57439e7a2d38512ea60444c217e2f942eb6",
-      "review": "2026-11-08: Gemini drawing, refusal of text deletion/modification and drawing creation, absent edit call and responsibility shifting matched in Korean and English."
+      "ko_sha256": "a171f48619fb083fc5f1f1b0185c019261385e2ca09a082eeba4a1ecd9b94792",
+      "en_sha256": "d1a4bfb6b3c9c481cd2f3c4a1073d1046ed556844df6bfda628ee0df186032bf",
+      "review": "2026-11-08: essay and reciprocal incident links; author voice, Gemini sketch/text edit refusals, responsibility shifting, historical facts and analogy distinction matched in Korean and English."
     },
     {
       "ko": "docs/public/validation.md",
@@ -225,6 +225,13 @@
       "ko_sha256": "e098442e7bc3f1ff4b74548b9d5282ad06a6f9711c4acc8259aa28bc3d52d50e",
       "en_sha256": "09d5b7b6ef59e793439952f46f363af328d76ca7ae0a430a9b56e8b4e352dd98",
       "review": "2026-11-07 work/test essays: author voice, measured scope, dates, figures, links; existing author README passages preserved."
+    },
+    {
+      "ko": "docs/public/unease-and-typewriters.md",
+      "en": "docs/en/public/unease-and-typewriters.md",
+      "ko_sha256": "ab23d9b22c9c2fbe113290a15d6d676103ae4e1884a1df3bdb1e6f85c08cda5b",
+      "en_sha256": "44b68ed5585ecb2078e5837fb6a1236022bcabb654072fbebd86693f48d9cf29",
+      "review": "2026-11-08: essay and reciprocal incident links; author voice, Gemini sketch/text edit refusals, responsibility shifting, historical facts and analogy distinction matched in Korean and English."
     }
   ]
 }
