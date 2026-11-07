@@ -24,7 +24,7 @@ v0.3 [원고 모음](github-manuscripts-20261106.md)은 과거 사본이다. 그
 | 검증 방식 | 포팅판→재구현→별도 치트앱, 실제 게임 경로의 대량 조건 검사와 직접 플레이 | [검사 결과](../public/validation.md), [사용자 글감](test-method-material-20261107.md) |
 | 웹·PWA 운영 | 설치·오프라인·IndexedDB 저장, 첫 업데이트에서 구버전 자원이 남은 문제 | [v0.5 운영 결과](../evidence/v05-release-20261107.md), [후속 계획](../research/pwa-tauri-updates-20261107.md) |
 
-Tauri Mac은 같은 웹 게임과 파일 저장으로 구현했고 실기기 결과와 함께 v0.6 배포를 준비했다. [Mac 검사](../evidence/tauri-desktop-20261107.md)와 [PWA 갱신 검사](../evidence/pwa-update-20261107.md)를 함께 읽는다. 신규 락온은 기획 단계다. HeavyMach1의 Tauri 앱이나 fastutlego의 HeavyMach1 PR을 MachDefense에 직접 기여된 코드·출시 결과로 서술하지 않는다.
+Tauri Mac은 같은 웹 게임과 파일 저장으로 구현했고 실기기 결과와 함께 v0.6을 배포했다. [운영 결과](../evidence/v06-release-20261107.md). [Mac 검사](../evidence/tauri-desktop-20261107.md)와 [PWA 갱신 검사](../evidence/pwa-update-20261107.md)를 함께 읽는다. 신규 락온은 기획 단계다. HeavyMach1의 Tauri 앱이나 fastutlego의 HeavyMach1 PR을 MachDefense에 직접 기여된 코드·출시 결과로 서술하지 않는다.
 
 ## Mags: 원문과 질문
 
