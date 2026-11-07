@@ -6,6 +6,7 @@
 #include "Core/Simulation/Projectile.hpp"
 #include "Core/Simulation/SpecialAttack.hpp"
 #include "Core/Simulation/Trail.hpp"
+#include "Core/Simulation/AircraftTactics.hpp"
 #include "Core/Simulation/WeaponController.hpp"
 #include <memory>
 
@@ -23,6 +24,7 @@ struct WorldActor {
     float radius=0,range=0,angle=0,radarAngle=0,attackCheck=0,targetCheck=0,crashTime=0;
     // Visual-only aircraft properties. Original actors retain their original defaults.
     float rotorStep=.2f,artHeadingOffset=0,flightHeight=0;
+    std::optional<AircraftTactics> flightTactics; // New trial aircraft only.
     std::uint32_t statusFlags=0;
     Vec2 position,destination;
     ActorId target=0;
@@ -69,6 +71,8 @@ public:
     bool setValidationHealth(ActorId,int);
     ActorId validationSpawn(std::string_view machineName,bool player,Vec2 position);
     void validationAircraftComparison();
+    void validationAlliedAircraftComparison();
+    ActorId validationAlliedAircraft(unsigned kind,Vec2 position);
     bool activateSpecial(std::string_view ownedBaseName,Vec2 worldPoint);
     void setUIMargin(float);
     void setViewport(float width,float height,float safeTop=0);

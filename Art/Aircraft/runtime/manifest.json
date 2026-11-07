@@ -1,5 +1,8 @@
 {
-  "pipeline": "tools/pack_aircraft_art.sh",
+  "pipeline": [
+    "tools/pack_aircraft_art.sh",
+    "tools/pack_vtol_trial.sh"
+  ],
   "palette_policy": "Full RGBA, unchanged original game PNGs; no fixed palette",
   "inputs": [
     {
@@ -15,18 +18,70 @@
       "sha256": "cd5c4db5a41083f18a53d8994fe6a62a13e47c5662c16330f99932c5105da4d7"
     },
     {
-      "path": "Art/Aircraft/parts/rotor-running-v3.png",
-      "sha256": "46bc8e3e1d596d75be90aa6f4da4de757f6dfd8ee72477401ddc550e2e2e9083"
+      "path": "Art/Aircraft/parts/rotor-light-v2.png",
+      "sha256": "c30325972f0961b61fdbc9078c6df89904cf39c1e9187491adf2f4fe4bed0840"
+    },
+    {
+      "path": "Art/Aircraft/parts/rotor-heavy-v2.png",
+      "sha256": "4194e0458b5644f5c60e5cbf80b102e226ac494971830fae735238e8f6215154"
+    },
+    {
+      "path": "Art/Aircraft/concepts/vtol-ducted-allied-v3.png",
+      "sha256": "b9704d8ee96a104412c3194fb6d411d6394a9340b674f121d29e56964d422fc5"
+    },
+    {
+      "path": "Art/Aircraft/concepts/vtol-transport-allied-v2.png",
+      "sha256": "cd5f77474ed88ba5bee71a59fb43ab4afe4a1a64dad8f78fdb6b3250b6fba45b"
     }
   ],
   "sprites": [
+    {
+      "width": 87,
+      "height": 100,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ADuctBody",
+      "colors": 5465,
+      "alpha_levels": 224,
+      "sha256": "6f804c1756b4a5e67f1ae0242e99df7ef0ae8d9a9edc1cad88d0c264eb7a6b5b"
+    },
+    {
+      "width": 30,
+      "height": 30,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ADuctFan",
+      "colors": 802,
+      "alpha_levels": 100,
+      "sha256": "19048bc6ec631cebb1ba7225d346cef39d96b7c7052750a1b4baec83be1afe91"
+    },
+    {
+      "width": 18,
+      "height": 12,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ADuctGun",
+      "colors": 208,
+      "alpha_levels": 61,
+      "sha256": "ee89a3831d4dda7d6f1f392b9fe5d68d57af1e794aba81f56c4513f87ad42f67"
+    },
+    {
+      "width": 17,
+      "height": 12,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ADuctMissile",
+      "colors": 200,
+      "alpha_levels": 57,
+      "sha256": "c2aded0e03181755a0c9b4cff4403351d5191f1f9a0be46d37df23cc6a146320"
+    },
     {
       "width": 80,
       "height": 87,
       "cgbi": false,
       "interlaced": false,
       "name": "AHeavyBody",
-      "colors": 3281,
+      "colors": 4005,
       "alpha_levels": 207,
       "sha256": "395aa47eeaa4f8374b6b84cd2a00a517ac617d1fa7da39ee4449fab6b3b44979"
     },
@@ -36,7 +91,7 @@
       "cgbi": false,
       "interlaced": false,
       "name": "AHeavyCannon",
-      "colors": 148,
+      "colors": 187,
       "alpha_levels": 62,
       "sha256": "c92be4f1555a016be664d0703c0dfa760525a4052b4051a834685211c0ce1f89"
     },
@@ -46,7 +101,7 @@
       "cgbi": false,
       "interlaced": false,
       "name": "AHeavyGun",
-      "colors": 163,
+      "colors": 207,
       "alpha_levels": 64,
       "sha256": "524b2e8051fcb4e57783c99055075a2e50bdace8aa701f6f8210405a6171c663"
     },
@@ -56,19 +111,19 @@
       "cgbi": false,
       "interlaced": false,
       "name": "AHeavyMissile",
-      "colors": 151,
+      "colors": 170,
       "alpha_levels": 63,
       "sha256": "d9d41eef42e771f2fdb26192e0701cb6bf8edac48ef75cffdd9e3be0af8781a4"
     },
     {
-      "width": 61,
-      "height": 61,
+      "width": 41,
+      "height": 40,
       "cgbi": false,
       "interlaced": false,
       "name": "AHeavyRotor",
-      "colors": 1161,
-      "alpha_levels": 237,
-      "sha256": "5f806478710bef2af768aa58c7659389afdf4e83a4c2ee36b7ef337e30e0b20d"
+      "colors": 958,
+      "alpha_levels": 151,
+      "sha256": "4194e0458b5644f5c60e5cbf80b102e226ac494971830fae735238e8f6215154"
     },
     {
       "width": 57,
@@ -76,7 +131,7 @@
       "cgbi": false,
       "interlaced": false,
       "name": "ALightBody",
-      "colors": 642,
+      "colors": 809,
       "alpha_levels": 129,
       "sha256": "77ba85b3fadc856ee56a0d0d3fa600ad1728ffc7e9eaf338bc81f21d682dfe0b"
     },
@@ -86,7 +141,7 @@
       "cgbi": false,
       "interlaced": false,
       "name": "ALightGun",
-      "colors": 57,
+      "colors": 66,
       "alpha_levels": 36,
       "sha256": "704f2fa1b98f9ec4a591ebe2db5d918b0144fdbad04caa5ebd812b2a30dd0b26"
     },
@@ -96,22 +151,117 @@
       "cgbi": false,
       "interlaced": false,
       "name": "ALightMissile",
-      "colors": 52,
+      "colors": 54,
       "alpha_levels": 28,
       "sha256": "92bb0bfb75e34e92a722d901b5ea63cc848dd4f39cea5f4f6cba64e9847a2daa"
     },
     {
-      "width": 39,
-      "height": 39,
+      "width": 26,
+      "height": 26,
       "cgbi": false,
       "interlaced": false,
       "name": "ALightRotor",
-      "colors": 636,
-      "alpha_levels": 213,
-      "sha256": "6c931dcef883ed5437d4ba16312a2b8092b183f08d1027525dd68e07afc55561"
+      "colors": 498,
+      "alpha_levels": 115,
+      "sha256": "c30325972f0961b61fdbc9078c6df89904cf39c1e9187491adf2f4fe4bed0840"
+    },
+    {
+      "width": 97,
+      "height": 48,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ATransportBody",
+      "colors": 3781,
+      "alpha_levels": 176,
+      "sha256": "ed1dd57af81139be0d8d65f57ff0cc2b291d0227fda4525716e903c742e9dc70"
+    },
+    {
+      "width": 50,
+      "height": 29,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ATransportEngine",
+      "colors": 1308,
+      "alpha_levels": 133,
+      "sha256": "aa2b4d5fae03d15d0ed6a9251d042a660fca5a3889feb320db3ece2ac29bdcf0"
+    },
+    {
+      "width": 18,
+      "height": 11,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ATransportGun",
+      "colors": 192,
+      "alpha_levels": 70,
+      "sha256": "db9d7724c6d058e10fc69c7e8d63c2753578f5b3bc2a35fecbeb9b935dc1a8d2"
+    },
+    {
+      "width": 17,
+      "height": 11,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ATransportMissile",
+      "colors": 179,
+      "alpha_levels": 63,
+      "sha256": "825cf20c6d8b47a2e00606c30b4546958a8f4edf5014f053a00c5d2232376cae"
+    },
+    {
+      "width": 31,
+      "height": 49,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ATransportWingL",
+      "colors": 1167,
+      "alpha_levels": 118,
+      "sha256": "f617bb7cc718a344d93c3eda212263b9b1cf50090a20f022981d6919fbdac6b0"
+    },
+    {
+      "width": 31,
+      "height": 49,
+      "cgbi": false,
+      "interlaced": false,
+      "name": "ATransportWingR",
+      "colors": 1172,
+      "alpha_levels": 125,
+      "sha256": "83e9e938de19d5403c9d8c81a52963690a814900e29f5359bf915f3419d119f9"
     }
   ],
-  "rotor_body_opacity": 0.4,
-  "rotor_shadow_opacity": 0.13,
-  "body_shadow_opacity": 0.55
+  "rotor_body_opacity": 1,
+  "rotor_shadow_opacity": 0.55,
+  "body_shadow_opacity": 0.55,
+  "status": "Four allied validation prototypes; VTOL design provisional; production campaign unchanged",
+  "bounds": [
+    {
+      "name": "AircraftLight",
+      "orientation": "north",
+      "alpha_threshold": 16,
+      "rotor_phases": 360,
+      "max_width": 36.76955262170047,
+      "max_height": 57.0
+    },
+    {
+      "name": "AircraftHeavy",
+      "orientation": "north",
+      "alpha_threshold": 16,
+      "rotor_phases": 360,
+      "max_width": 124.58460826178559,
+      "max_height": 80.0
+    },
+    {
+      "name": "AircraftDuct",
+      "orientation": "north",
+      "alpha_threshold": 16,
+      "rotor_phases": 360,
+      "max_width": 96.0,
+      "max_height": 83.0
+    },
+    {
+      "name": "AircraftTransport",
+      "orientation": "north",
+      "alpha_threshold": 16,
+      "rotor_phases": 360,
+      "max_width": 115.0,
+      "max_height": 101.5
+    }
+  ]
 }

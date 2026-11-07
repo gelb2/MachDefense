@@ -36,7 +36,7 @@ bool World::activateSpecial(std::string_view name,Vec2 point){
         airStrikes_.push_back({weaponName,std::move(motion)});host_.playSound("SFX_AirStrike.wav");
     }else if(prefix.starts_with("CF_")){
         unsigned fired=0;
-        for(const auto& a:actors_)if(a->player&&!a->removed&&a->hp>0&&a->type==0&&a->position.y<point.y){
+        for(const auto& a:actors_)if(a->player&&!a->removed&&a->hp>0&&(a->type==0||a->flightTactics)&&a->position.y<point.y){
             const float distance=distanceSquared(a->position,point);
             if(distance>10000.f&&distance<=float(weapon->shotRange*weapon->shotRange)){
                 auto bullets=crossfireProjectiles(*weapon,a->position,point,a->angle,time(),random_);

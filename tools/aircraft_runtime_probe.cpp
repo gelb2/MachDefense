@@ -21,6 +21,6 @@ void output(const md::Frame& f){bool first=true;std::cout<<"[";for(const auto& s
 #include "Core/Validation/AircraftComparison.hpp"
 int main(int argc,char** argv){assert(argc==2);fs::path root=argv[1];auto models=md::BattleModels::parse(md::Chunk::parse(read(root/"Resources/RawData/PartsInfo.mcb")),md::Chunk::parse(read(root/"Resources/RawData/MachInfo.mcb")));md::validation::appendAircraftModels(models);auto dimensions=[&](std::string_view n){return imageSize(root/"Resources/Images"/n);};
  std::cout<<"{\"aircraft\":[";bool first=true;
- for(const char* name:{"AircraftLight","AircraftHeavy"}){if(!first)std::cout<<",";first=false;std::cout<<"{\"name\":\""<<name<<"\",\"scale\":1,\"frames\":[";for(int phase=0;phase<360;++phase){if(phase)std::cout<<",";md::Frame f;models.appendSprites(f,name,{},1,1.57079632679f,1.57079632679f,float(phase)*6.28318530718f/360,dimensions);output(f);}std::cout<<"]}";}
+ for(const char* name:{"AircraftLight","AircraftHeavy","AircraftDuct","AircraftTransport"}){if(!first)std::cout<<",";first=false;std::cout<<"{\"name\":\""<<name<<"\",\"scale\":1,\"frames\":[";for(int phase=0;phase<360;++phase){if(phase)std::cout<<",";md::Frame f;models.appendSprites(f,name,{},1,1.57079632679f,1.57079632679f,float(phase)*6.28318530718f/360,dimensions);output(f);}std::cout<<"]}";}
  std::cout<<"]}";
 }

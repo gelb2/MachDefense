@@ -23,6 +23,11 @@ int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];Host h
     for(int i=0;i<5;++i){command(ValidationCommand::attackGrant);command(ValidationCommand::attackLevelPlus);command(ValidationCommand::attackCountPlus);command(ValidationCommand::attackInstall);command(ValidationCommand::attackNext);}
     auto special=s.validationSave()->attacks(0);assert(special.size()==5);
     const auto before=w->actors().size();command(ValidationCommand::spawnMachine);assert(w->actors().size()==before+1);
+    // Actual original-sprite NEXT/SPAWN buttons on the new sixth page.
+    for(int i=0;i<5;++i)tap(s,248,434);
+    const auto clickCount=w->actors().size();tap(s,260,120);assert(w->actors().size()==clickCount+1&&w->actors().back()->flightTactics);
+    for(unsigned kind=0;kind<4;++kind){const auto count=w->actors().size();assert(s.applyValidationCommand(600+kind));assert(w->actors().size()==count+1);assert(w->actors().back()->flightTactics&&w->actors().back()->player);}
+    for(unsigned kind=0;kind<4;++kind)assert(!ordinary.applyValidationCommand(600+kind));
     command(ValidationCommand::healthMinus);command(ValidationCommand::healthFull);assert(h.writes==1); // No implicit file writes.
     command(ValidationCommand::save);assert(h.writes==2);auto decoded=SaveData::decode(h.saved);assert(decoded.builds(0).size()==owned.size());assert(decoded.attacks(0).size()==5);
     command(ValidationCommand::win);assert(w->state()==WorldState::cleared&&h.writes==3);assert(!has(s.frame(),"SysMenu_Mid.png"));

@@ -18,7 +18,7 @@ struct Host:md::HostServices{int writes=0,sounds=0;std::optional<md::Bytes>readS
 int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
  auto data=r.read("Tables/WeaponInfo.tsv");auto table=md::DataTable::parse({reinterpret_cast<const char*>(data.data()),data.size()});
  for(bool phone:{false,true}){
-  auto catalog=md::WeaponCatalog::load(table,phone);const auto count=catalog.size();md::validation::appendAircraftWeapons(catalog);assert(catalog.size()==count+5);
+  auto catalog=md::WeaponCatalog::load(table,phone);const auto count=catalog.size();md::validation::appendAircraftWeapons(catalog);assert(catalog.size()==count+std::size(md::validation::aircraftWeapons));
   for(const auto& binding:md::validation::aircraftWeapons){auto a=*catalog.find(binding.part),b=*catalog.find(binding.original);
    assert(a.type==b.type&&a.damage==b.damage&&a.damageRange==b.damageRange&&a.shotRange==b.shotRange&&a.shotCount==b.shotCount&&a.shotDelay==b.shotDelay&&a.reloadDelay==b.reloadDelay&&a.speed==b.speed&&a.aimRate==b.aimRate&&a.special1==b.special1&&a.special2==b.special2&&a.shell==b.shell&&a.uiTile==b.uiTile&&a.bulletImage==b.bulletImage&&a.bulletTile==b.bulletTile&&a.effectImage==b.effectImage&&a.effectType==b.effectType&&a.effectColumns==b.effectColumns&&a.effectRows==b.effectRows&&a.explodeImage==b.explodeImage&&a.explodeScale==b.explodeScale&&a.fireSound==b.fireSound);
   }
@@ -34,7 +34,7 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
   for(const auto& pose:poses)if(pose.definition->type==4){auto m=pose.muzzle();assert(m);auto size=r.imageSize(pose.definition->image);float dx=m->x-pose.localCenter.x,dy=m->y-pose.localCenter.y;float forward=dx*std::cos(angle)+dy*std::sin(angle);assert(std::abs(forward-size.x*.5f)<=.51f);assert(pose.definition->sockets.front().x==0&&pose.definition->sockets.front().y==0);}
  }
 
- for(unsigned mode=0;mode<3;++mode){md::validation::AircraftComparisonScene scene(r,mode);auto& w=*scene.world;assert(w.actors().size()==4);auto before=scene.frame();unsigned heliSprites=0,shadows=0;for(const auto& s:before.sprites)if(s.image.starts_with("ALight")||s.image.starts_with("AHeavy")){assert(s.nearest);++heliSprites;if(s.color.r==0){++shadows;assert(s.color.a==(s.image.find("Rotor")!=std::string::npos?.13f:.55f));}}assert(heliSprites==20&&shadows==10);
+ for(unsigned mode=0;mode<3;++mode){md::validation::AircraftComparisonScene scene(r,mode);auto& w=*scene.world;assert(w.actors().size()==4);auto before=scene.frame();unsigned heliSprites=0,shadows=0;for(const auto& s:before.sprites)if(s.image.starts_with("ALight")||s.image.starts_with("AHeavy")){assert(s.nearest);++heliSprites;if(s.color.r==0){++shadows;assert(s.color.a==.55f);}}assert(heliSprites==20&&shadows==10);
  for(const char* name:{"ALightBody.png","ALightRotor.png","AHeavyBody.png","AHeavyRotor.png","ALightGun.png","ALightMissile.png","AHeavyGun.png","AHeavyMissile.png","AHeavyCannon.png"}){
   const md::Sprite *shadow=nullptr,*body=nullptr;for(const auto& s:before.sprites)if(s.image==name){if(s.color.r==0)shadow=&s;else body=&s;}
   assert(shadow&&body);const float z=mode==0?1.f:(mode==1?.5f:1.375f);const float gap=(std::string_view(name).starts_with("ALight")?16.f:22.f)*z;
@@ -54,10 +54,10 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
  }
  // Every attached weapon fires independently through the original World path.
  for(const auto& binding:md::validation::aircraftWeapons){
-  md::validation::AircraftComparisonScene scene(r,0);scene.fight();auto& w=*scene.world;
+  md::validation::AircraftComparisonScene scene(r,3);scene.fight();auto& w=*scene.world;
   md::WorldActor* shooter=nullptr;
   for(const auto& a:w.actors())if(a->flightHeight>0){
-   auto& guns=a->weapons;std::erase_if(guns,[&](const auto& g){return g.name!=binding.part;});
+   a->flightTactics.reset();auto& guns=a->weapons;std::erase_if(guns,[&](const auto& g){return g.name!=binding.part;});
    if(!guns.empty())shooter=a.get();
   }
   assert(shooter);auto* target=w.actor(shooter->target);int hp=target->hp;
