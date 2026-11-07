@@ -102,3 +102,5 @@ Sass 허브 서신은 `ProjectPersonalFunnelPage/governance/operations/machdefen
 ## 2026-11-08 도안 작업 거부에 관한 원고
 
 [헤비멕1과는 다른 위화감 — 신 리셴코주의와 차우세스쿠의 타자기](../public/unease-and-typewriters.md) · [English](../en/public/unease-and-typewriters.md). Gemini 도안 작업과 텍스트 편집 거부, 경위서의 책임 전가를 [경위서](../evidence/aircraft-instruction-refusal-20261108.md)와 [트러블슈팅](../troubleshooting.md)에 연결했다. 리셴코주의 역사 연구와 루마니아 법령 원문을 인용했다. 역사적 제도의 설명과 저자의 비유를 구분했다. 기존 개발자의 변은 수정하지 않았다.
+
+2026-11-08 추가: [사용자 추가 원문과 편집 내역](unease-addition-source-20261108.md)을 보존했다. 문화적 거리·80%·48시간·세 서비스 비판을 한·영 원고에 반영했고 HeavyMach1의 기존 글과 연결했다.

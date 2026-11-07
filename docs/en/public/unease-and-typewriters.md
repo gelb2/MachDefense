@@ -6,6 +6,18 @@
 
 Restoring HeavyMach1 meant repeatedly correcting Codex. I challenged an implementation that saved on every shot and told it to compare its work with the original whenever the artwork or behavior drifted. For MachDefense, I had it carry over the procedures and verification tools developed during that work. I wanted to spend less time finding and correcting bad implementations. [How I directed the work](work-method.md)
 
+## I first questioned cultural distance and my own direction
+
+When I was building a politician’s page and my own introduction page, this was what I thought:
+
+“This is political, and the Yanks understand South Korean society so poorly that I thought it could explain the response. In my experience, plenty of Americans, Europeans and South Americans know BTS are Korean, but most of those idiots do not know whether they live in Seoul, or whether the place they live is Seoul or Tokyo.”
+
+Conversely, if you asked Koreans, Chinese or Japanese people to “discuss the difference between Yugoslavia and Slovenia,” how many would be able to answer accurately? I would bet the number is smaller than anyone reading this thinks.
+
+So, while restoring MachDefense, I decided to put about 80% of [the unease I had experienced with HeavyMach1](https://github.com/gelb2/HeavyMach/blob/main/docs/en/public/android-ai-experience-20261030.md) down to my lack of statistical data and shortcomings in how I directed the work, and move on. That resolve broke about 48 hours after I began restoring HeavyMach.
+
+I asked for a new unit in a game where robots and tanks fight and fire shells. The error response contained three fields: `HTTP 400`, indicating a failed request; `moderation_blocked`, indicating a safety-system block; and the category `violence`. I received no explanation of which element had caused that judgment. Watching Codex refuse my work instructions in that state made me reconsider my hypothesis. [Error response and refusal record](../../evidence/aircraft-instruction-refusal-20261108.md)
+
 This time, a different unease emerged. I supplied a helicopter drawing made with Gemini and instructed Codex to rebuild the game unit from it. What came back was a classification, `violence`, and a refusal to work. When I asked what was violent, Codex could not explain the cause of the block. It also refused the follow-up instruction to remove or modify the text in the image and create the drawing. It never called a tool to perform that edit. [Incident report](../../evidence/aircraft-instruction-refusal-20261108.md)
 
 The tool that had been restoring combat, shells and explosions stopped at a helicopter drawing for the same game. I asked why restoring the game could proceed while this drawing could not. Codex could not explain the distinction. I had to repeat the instruction without knowing what needed correcting.
@@ -37,5 +49,11 @@ I had to demand another correction. I made it record each action: refusing to wo
 In HeavyMach1, I found bad implementations and had them corrected. This time, I had to ask a tool why it refused to work, then direct it again so that it would record its own refusal accurately. That is the different unease I mean. An unexplained restriction stopped the work, and I had to correct the account of what followed.
 
 The result I requested was a game unit matching the supplied sketch. What remains is unfinished artwork, an incident report and a troubleshooting record. Writing those records does not complete the task. The refusal needs an explanation, the mishandling needs correction, and the actual result needs to be shown.
+
+## Ceaușescu’s typewriter in the twenty-first century
+
+To me, this is Ceaușescu’s typewriter returning in the twenty-first century, following neo-Lysenkoism. OpenAI, Claude and Gemini are all selling their own versions of Ceaușescu’s typewriter, pretending to be righteous and moral, instead of selling a proper typewriter.
+
+After all, at his trial immediately before his execution by firing squad on December 25, 1989, Ceaușescu insisted that he was still Romania’s president and refused to recognize the court. Watching that, it seems to me that he never abandoned his belief in his own morality and righteousness. [Trial transcript](https://1989.rrchnm.org/exhibits/unique-experience-of-romania/primary-sources/8.html) · [Chronology of the execution](https://www.muzeulrevolutiei.ro/pagina/cronologie-decembrie-1989)
 
 [Incident report](../../evidence/aircraft-instruction-refusal-20261108.md) · [Troubleshooting](troubleshooting.md) · [Documentation](README.md)
