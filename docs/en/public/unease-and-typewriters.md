@@ -94,4 +94,6 @@ Against the boast that AI can assist human work and go on to replace every human
 
 After all, at his trial immediately before his execution by firing squad on December 25, 1989, Ceaușescu insisted that he was still Romania’s president and refused to recognize the court. Watching that, it seems to me that he never abandoned his belief in his own morality and righteousness. [Trial transcript](https://1989.rrchnm.org/exhibits/unique-experience-of-romania/primary-sources/8.html) · [Chronology of the execution](https://www.muzeulrevolutiei.ro/pagina/cronologie-decembrie-1989)
 
+As I stated in my [developer’s statement](../RESTORATION.md), I do not have much of my allotted lifespan left. So I think it is natural to feel furious at a typewriter that pretends to be a new kind of human, invoking this worthless, third-rate morality to refuse the releases I have planned and the design instructions I have given.
+
 [Incident report](../../evidence/aircraft-instruction-refusal-20261108.md) · [Troubleshooting](troubleshooting.md) · [Documentation](README.md)

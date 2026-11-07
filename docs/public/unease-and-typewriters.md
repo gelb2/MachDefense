@@ -94,4 +94,6 @@ HeavyMach1에서 나는 잘못된 구현을 찾아 고치게 했다. 이번에�
 
 하긴, 차우세스쿠도 1989년 12월 25일 총살당하기 직전 재판에서 자신이 여전히 루마니아 대통령이라고 주장했고, 재판부를 인정하지 않았다. 그 모습을 보면 자신이 도덕적이고 올바르다는 믿음은 끝까지 버리지 않았던 것 같다. [재판 기록](https://1989.rrchnm.org/exhibits/unique-experience-of-romania/primary-sources/8.html) · [처형일 연표](https://www.muzeulrevolutiei.ro/pagina/cronologie-decembrie-1989)
 
+나는 [개발자의 변](../RESTORATION.md)에서도 밝혔듯이, 내게 주어진 수명이 얼마 남지 않았다. 그러므로 이따위 되지도 않는 삼류도덕을 내세워 내가 구상한 릴리즈와 디자인 명령을 거부하는, 신인류인 척하는 타자기에 화가 치미는 것은 당연하다고 생각한다.
+
 [경위서](../evidence/aircraft-instruction-refusal-20261108.md) · [트러블슈팅](troubleshooting.md) · [문서 목차](README.md)

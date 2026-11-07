@@ -229,9 +229,9 @@
     {
       "ko": "docs/public/unease-and-typewriters.md",
       "en": "docs/en/public/unease-and-typewriters.md",
-      "ko_sha256": "a3801633c3ba494e9c7762c530c0e2aadd60967d789fead21899f559dd4cd484",
-      "en_sha256": "1e9ae729a8a917533b0b9e4bd0e0d540de92cef021e0e4ceeda2487b42027ff3",
-      "review": "2026-11-08 correction: restored scientific socialism and author argument that AI companies can use science to impose oversized egos irrationally; removed unsolicited Korolev imprisonment example from both languages; user corrections and editing history preserved."
+      "ko_sha256": "babe4f87681a4b4f34df56a53f10a820deb5eb8f3053f631c1ea870459839875",
+      "en_sha256": "f7cb724dd06d031090ffe779bd5dbb0553209280f446ae85b7785e2be0900053",
+      "review": "2026-11-08: retained corrected science/ego argument; added author closing on limited remaining lifespan, planned releases/design refusals, third-rate morality and typewriter metaphor; Korean/English meaning and developer-statement links checked, source preserved verbatim."
     }
   ]
 }
