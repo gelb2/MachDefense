@@ -12,8 +12,8 @@
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "f32a9c226af89e997a586d3b8d396f75d90ea48f0c63e00c00a06dba484ec512",
-      "en_sha256": "7317e033e17c444545add0c461b6b3f98819c5038406b1f1f1ecdf3953148b68",
+      "ko_sha256": "525cae7973152c8a5dcbcf5445f0b24dc445dd71750130a6500aa2ba1e0885af",
+      "en_sha256": "c8efdd50261504ce50508d334bf58b748dbd525886bd6dc3ff23083619e58ce0",
       "review": "paragraphs, author voice, figures, status, commands, links"
     },
     {
