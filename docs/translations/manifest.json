@@ -82,9 +82,9 @@
     {
       "ko": "docs/public/troubleshooting.md",
       "en": "docs/en/public/troubleshooting.md",
-      "ko_sha256": "6debbb9d53617af170bb5bc92af5bb1a02efc5fa5c0fe58d546b7bde224240bc",
-      "en_sha256": "36f2917af64351e8e564161d072c5c3e3106b0efd0d5c164a2471493caa906c1",
-      "review": "2026-11-08: explicitly records refusal to remove or modify text in the supplied sketch and create the requested drawing; Korean and English subjects, actions and unfinished scope match."
+      "ko_sha256": "923cfc802a38325b91230107d4c8cac7572c7f83671e578fa060e987e74e2931",
+      "en_sha256": "5cccc717dc656d406b93263c6b1be57439e7a2d38512ea60444c217e2f942eb6",
+      "review": "2026-11-08: Gemini drawing, refusal of text deletion/modification and drawing creation, absent edit call and responsibility shifting matched in Korean and English."
     },
     {
       "ko": "docs/public/validation.md",
