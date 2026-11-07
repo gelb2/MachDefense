@@ -22,7 +22,7 @@ def main():
         raise SystemExit('Refusing to publish the cheat application')
     manifest = json.loads((DIST / 'asset-manifest.json').read_text())
     allowed = {'index.html', 'style.css', 'app.js', 'storage.js', 'audio.js',
-               'manifest.webmanifest', 'icon.png', 'title.jpg', 'game.js', 'game.wasm', 'game.data'}
+               'manifest.webmanifest', 'icon.png', 'title.jpg', 'social-preview.jpg', 'game.js', 'game.wasm', 'game.data'}
     if {f['url'] for f in manifest['files']} != allowed:
         raise SystemExit('Unexpected or missing product files')
     for f in manifest['files']:
