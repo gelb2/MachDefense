@@ -229,9 +229,9 @@
     {
       "ko": "docs/public/unease-and-typewriters.md",
       "en": "docs/en/public/unease-and-typewriters.md",
-      "ko_sha256": "babe4f87681a4b4f34df56a53f10a820deb5eb8f3053f631c1ea870459839875",
-      "en_sha256": "f7cb724dd06d031090ffe779bd5dbb0553209280f446ae85b7785e2be0900053",
-      "review": "2026-11-08: retained corrected science/ego argument; added author closing on limited remaining lifespan, planned releases/design refusals, third-rate morality and typewriter metaphor; Korean/English meaning and developer-statement links checked, source preserved verbatim."
+      "ko_sha256": "5d6bc34fb9cce44b47c7cf1203ddde955a781022088ec0c0381280d6d5b5854b",
+      "en_sha256": "82724d0c3c63905234c19ac2cc94c01335c56a1d4489d0ea1b23e7c1e5fb0c81",
+      "review": "2026-11-08: removed agent-added subheadings from Korean/English essay per author correction; user-supplied main title and body paragraphs unchanged."
     }
   ]
 }
