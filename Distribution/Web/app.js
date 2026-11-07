@@ -58,6 +58,7 @@ function waitInstallation(worker){return new Promise((resolve,reject)=>{
 });}
 async function prepare(){try{
  build=await(await fetch('build.json',{cache:'no-store'})).json();
+ if(window.MDDesktop){await MDStore.open(build.cheat);preparing=false;$('progress').value=100;$('status').textContent='Ready to play';$('install').hidden=true;$('installHelp').textContent='Progress is saved on this Mac. Use a recovery code to move it to another device.';$('play').textContent='PLAY';$('play').disabled=false;MDDesktop.checkUpdate();return;}
  if(!('serviceWorker'in navigator))throw Error('Open this game over HTTPS to enable offline play.');
  navigator.serviceWorker.addEventListener('message',e=>{if(preparing&&e.data.kind==='download'){$('progress').value=100*e.data.done/e.data.total;$('status').textContent='Checking game resources… '+Math.round(e.data.done/1048576)+' / '+Math.round(e.data.total/1048576)+' MB';}});
  const reg=await navigator.serviceWorker.register('sw.js',{updateViaCache:'none'});
