@@ -1,6 +1,6 @@
 {
   "tool": "image_gen.imagegen",
-  "status": "concept-only; not connected to runtime",
+  "status": "rejected by user: original texture, pixel treatment and wear not matched; not connected to runtime",
   "references": [
     {
       "path": "Resources/Images/P_Body_34.png",
@@ -23,5 +23,20 @@
     "Pixel clusters and wear are heavier than the original sprites.",
     "VTOL banking needs fuselage-side exposure, not only nacelle rotation.",
     "Actual-size, socket, muzzle and rotor animation checks are pending."
-  ]
+  ],
+  "user_shape_references": [
+    "Armored Core VI first mission helicopter boss",
+    "Tom Clancy EndWar United States helicopter",
+    "Command & Conquer: all Orca models across the series",
+    "StarCraft II Banshee",
+    "Aliens (1986) dropship",
+    "Avatar (2009) large and small gunships"
+  ],
+  "revision_2": {
+    "path": "Art/Aircraft/concepts/aircraft-v2.png",
+    "sha256": "cd0d989dec506804051d0fe97052ac49da3a00885dabc1aac1f3327404b19245",
+    "prompt": "Art/Aircraft/concepts/aircraft-v2-prompt.txt",
+    "status": "review only; original texture and actual-size parity not approved",
+    "report": "https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-revision-20261107"
+  }
 }

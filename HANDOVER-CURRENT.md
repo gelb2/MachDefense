@@ -1,3 +1,9 @@
+# 헬기 재시안과 후속 대조 — 2026-11-07
+
+작업 브랜치 `feat/art-parity-followup-20261107`, 사본 `.local/worktrees/save-transfer`. 사용자 지시: 헬기 첫 시안 기각. AC6 첫 헬기 보스·EndWar 미국 헬기 형태 참고를 추가하되 MachDefense 원작의 텍스처·도트·녹·화풍을 지킨다. 재시안 보고 뒤 타이틀→원본 iPad 화면→Tauri 추가 검사→비정상 로컬 저장 처리 순서다. 레이저 1.25배 크기 비교와 유닛 판매(손상별75/50/25%, 크레인2개·2초)는 TODO28·29에 조사 과제로 기록했다. [현행 목록](docs/usability-todo.md).
+
+아래는 이전 작업 기록이다.
+
 # PWA·Tauri 후속 작업 — 2026-11-07
 
 작업 위치: `.local/worktrees/save-transfer`, 브랜치 `feat/pwa-tauri-followup-20261107`. 게임 릴리스 v0.6을 main `2f82a09`에 배포했다. [운영 배포 후 검사](docs/evidence/v06-release-20261107.md)를 먼저 읽는다. PWA 자원 검사·변경 조각 갱신, Tauri Mac 파일 저장·종료·서명 업데이트, 레이저 레벨별 생산 가격을 구현했다. iPhone·iPad·Galaxy 정식/치트 0.6 설치와 저장 보존, 웹·실기기 기능 검사를 통과했다. 운영 배포 결과는 [현재 상태](docs/current-status.md)와 [PWA 검사](docs/evidence/pwa-update-20261107.md), [Mac 검사](docs/evidence/tauri-desktop-20261107.md)를 확인한다.
