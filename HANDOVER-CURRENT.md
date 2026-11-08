@@ -1,3 +1,7 @@
+# AH-10·Beluga·Cheyenne 보존 — 2026-11-08
+
+사용자가 현재 세 기체의 크기·디자인 보존을 지정했다. 기준 `8f10fda`, [PNG 해시·조립 배율](Art/Aircraft/runtime/preserved-three-20261108.json). 먼저 보존 기준을 커밋한 뒤 Scout Heli만 Cheyenne과 같은 외곽 폭으로 비례 조정한다. 무장·사거리 등은 변경 없이 현재 값을 조사해 논의한다.
+
 # 기준 유닛에 맞춘 헬기 폭 — 2026-11-08
 
 Beluga 목표 폭 164px, Cheyenne 118px, AH-10 231px. 같은 2배율 웹 실측은 164×173, 118×158, 230×171px이며 AH-10의 반올림 차이는 1px이다. 길이도 같은 배율로 변경했다. PNG 보존, C++ 8개·Safari 전투 검사 통과. [기준·화면·검사](docs/evidence/aircraft-width-20261108.md). 게임 main·기기는 미갱신.
