@@ -4,7 +4,7 @@
 
 ## 원본 패키지에서 확인한 PNG
 
-대조에 사용한 MachDefense 1.0.3 보관 패키지의 SHA-256을 저장된 원본 명세와 대조했다. 값은 `882fe8efa9a0c3d51c23da190ee3d30376a1b6766e16cc6b87daf09b98dc92b1`이다. 아래 파일은 복원 저장소에만 있는 이름이 아니라 **원본 IPA 내부에도 존재한다.** 파일 서명·PNG 청크·크기·픽셀 형식을 직접 읽었다. [검사 기록](../evidence/aircraft-followup-20261109/original-png-audit.json).
+원본의 SHA-256을 저장된 원본 명세와 대조했다. 값은 `882fe8efa9a0c3d51c23da190ee3d30376a1b6766e16cc6b87daf09b98dc92b1`이다. 아래 파일은 복원 저장소에만 있는 이름이 아니라 **원본 IPA 내부에도 존재한다.** 파일 서명·PNG 청크·크기·픽셀 형식을 직접 읽었다. [검사 기록](../evidence/aircraft-followup-20261109/original-png-audit.json).
 
 | 원본 파일 | 역할 | 크기 | 내부 형식 |
 |---|---|---|---|

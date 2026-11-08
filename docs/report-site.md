@@ -1,6 +1,8 @@
 # 헬기 PNG 처리와 검증 누락 경위 — 2026-11-09
 
-문구 정정: 사용자 책임을 가정한 문장을 삭제하고 Codex가 지시와 다른 구현 경로를 선택하고 검증을 빠뜨렸다고 명시했다. 패키지 표기는 ‘대조에 사용한 MachDefense 1.0.3 보관 패키지’로 고쳤다. 본문과 다운로드 원문에 함께 반영했다. 정정 Source `5c499361a9b70bf08648c2eed33f64e4de82a2c1`, Deployment `appgdep_6af0a980352c8191a20b48c2bf15ca9e` succeeded, Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_7683afd8c8908191be977e17ce239392`.
+후속 정정: 경위서와 연결된 기술 보고서의 회사명·판본 표기를 ‘원본’으로 통일했다. 원본 분석·정식 빌드에서 확보한 절차를 헬기 작업에 대조·적용하지 않은 경위와, 검증하지 않은 범위까지 완료한 듯 보고한 잘못을 명시했다. 본문과 다운로드 원문을 함께 갱신했다. Source `560f757f54444941d66ae362d3e5fee6ecb6c420`, Deployment `appgdep_6af0aaad1ea48191a1b577f9959a1545` succeeded, Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_98e91c38268c81919e23ab7f33a7b225`.
+
+문구 정정: 사용자 책임을 가정한 문장을 삭제하고 Codex가 지시와 다른 구현 경로를 선택하고 검증을 빠뜨렸다고 명시했다. 해당 시점의 패키지 표기는 후속 정정에서 ‘원본’으로 통일했다. 본문과 다운로드 원문에 함께 반영했다. 정정 Source `5c499361a9b70bf08648c2eed33f64e4de82a2c1`, Deployment `appgdep_6af0a980352c8191a20b48c2bf15ca9e` succeeded, Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_7683afd8c8908191be977e17ce239392`.
 
 [기술 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-cgbi-20261109)와 [경위서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-resource-incident-20261109)를 게시했다. 원본 PNG 948개의 CgBI·색 메타데이터, 5개 원작 샘플과 헬기 28개의 픽셀 해독 검사, 실제 Release 자원 6개 대조, 질감·로딩·프레임 영향의 확인 범위와 미측정 범위를 기록했다. 원작 절차를 충분히 따르지 않은 구현 선택과 검증 누락의 책임은 Codex에 있음을 경위서에 명시했다.
 
