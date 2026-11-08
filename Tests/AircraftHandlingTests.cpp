@@ -34,6 +34,17 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
    assert(mesh.vertices[3].position.x==10+body.second.x&&mesh.vertices[3].position.y==20+body.second.y);
   }
  }
+ // Separated fixed components must select the same drawn roll without a second shear.
+ for(const char* name:{"ATransportWingL.png","ATransportWingR.png","ATransportEngine.png"}){
+  Sprite s;s.image=name;s.sourcePx=Rect{0,0,140,131};s.destination={10,20,140,131};s.nearest=true;
+  for(unsigned tile=0;tile<7;++tile){
+   float bank=tile==0?0.f:(tile<=3?-float(tile):float(tile-3))*.13962634f;
+   auto mesh=aircraftBankMesh(s,{100,100},.7f,bank,{980,131});
+   assert(std::abs(mesh.vertices[0].uv.x-float(tile)/7)<.000001f);
+   assert(mesh.vertices[0].position.x==10&&mesh.vertices[0].position.y==20);
+   assert(mesh.vertices[3].position.x==150&&mesh.vertices[3].position.y==151);
+  }
+ }
  // A banked part must retain the neutral part's texture sampling.
  for(bool nearest:{false,true}){Sprite s;s.image="ALightBody";s.nearest=nearest;s.destination={0,0,20,60};
   auto m=aircraftBankMesh(s,{10,30},1.5707963f,.5f,{20,60});assert(m.nearest==nearest);

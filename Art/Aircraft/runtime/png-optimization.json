@@ -304,15 +304,15 @@
     },
     {
       "image": "ATransportBody.png",
-      "sourcePath": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
-      "sourceSHA256": "6e476cc8ef23076931e8c23c828112f3e5a821098b7f627d976e76cc6ed9fae6",
-      "outputSHA256": "fad1c95d15d8eebf8138ab7cb00721a769aad45995788310d9cbd15bb6e5e577",
+      "sourcePath": "Art/Aircraft/parts-separation-20261109/beluga/ATransportBody.png",
+      "sourceSHA256": "29937157c127b46a60334824f75ad9d24d8c4da2a05485a5cbac2a056a51959a",
+      "outputSHA256": "905e2f4dd59eb01804c19a004aff074db684da6a08118afc7ce99fea10c9fbad",
       "size": [
         980,
         131
       ],
-      "inputBytes": 238961,
-      "outputBytes": 156460,
+      "inputBytes": 166680,
+      "outputBytes": 82703,
       "cgbi": true,
       "alphaUnchanged": true,
       "opaqueRGBUnchanged": true
@@ -349,15 +349,15 @@
     },
     {
       "image": "ATransportEngine.png",
-      "sourcePath": "Art/Aircraft/runtime/png-source/ATransportEngine.png",
-      "sourceSHA256": "56f6411bc769abb1b215c7f12903c085ea89b20d812a06a3f5d8ae933c209933",
-      "outputSHA256": "8d4f06772fd6477b612c151d104282d8bc387aa141fb4e8c920233fb7c000f9b",
+      "sourcePath": "Art/Aircraft/parts-separation-20261109/beluga/ATransportEngine.png",
+      "sourceSHA256": "4b382190469ca7bd59f7ae472b558ec0e97858c8b10129939e44a9c305b11aca",
+      "outputSHA256": "30a658ee7fea5834d289feadd480b93db472792766f01fdadf33736ee02a9c7a",
       "size": [
-        50,
-        29
+        980,
+        45
       ],
-      "inputBytes": 4479,
-      "outputBytes": 4298,
+      "inputBytes": 16379,
+      "outputBytes": 15573,
       "cgbi": true,
       "alphaUnchanged": true,
       "opaqueRGBUnchanged": true
@@ -409,30 +409,30 @@
     },
     {
       "image": "ATransportWingL.png",
-      "sourcePath": "Art/Aircraft/runtime/png-source/ATransportWingL.png",
-      "sourceSHA256": "eff79f7e4c940a718bfbb7578a1b66405e7f19437bf8832a21d546972e7d6f75",
-      "outputSHA256": "9728aff89208cc375bde3577bc6d1a94b70c0d53c1f8ff9116d840002209c0f7",
+      "sourcePath": "Art/Aircraft/parts-separation-20261109/beluga/ATransportWingL.png",
+      "sourceSHA256": "f257d9c8468172f9b81a72b29ca9e9933337c8e85e50c956da567a69ac679e40",
+      "outputSHA256": "82b42840a4566d502aae31beb85e8451acce4d46bc8726e9aab7f70fd8901e4a",
       "size": [
-        31,
-        49
+        980,
+        55
       ],
-      "inputBytes": 4261,
-      "outputBytes": 3651,
+      "inputBytes": 44474,
+      "outputBytes": 32072,
       "cgbi": true,
       "alphaUnchanged": true,
       "opaqueRGBUnchanged": true
     },
     {
       "image": "ATransportWingR.png",
-      "sourcePath": "Art/Aircraft/runtime/png-source/ATransportWingR.png",
-      "sourceSHA256": "bfa5dc1f2659107303b9e92e3952a04f196ebf7c9a0b14025079781a5d2493f6",
-      "outputSHA256": "1cc22db847b91b057c049973304aaf12a82ca07866ddcaf5beef632609a300e8",
+      "sourcePath": "Art/Aircraft/parts-separation-20261109/beluga/ATransportWingR.png",
+      "sourceSHA256": "d75c6095f84944b458edcaae4ecd333a8e354a8ea6998cdd9a6ac955150701c6",
+      "outputSHA256": "2598eb67540db4586d5de32347e3732b2a6c24074f6d3415c5c847cded7beb68",
       "size": [
-        31,
-        49
+        980,
+        55
       ],
-      "inputBytes": 4225,
-      "outputBytes": 3639,
+      "inputBytes": 44463,
+      "outputBytes": 30856,
       "cgbi": true,
       "alphaUnchanged": true,
       "opaqueRGBUnchanged": true

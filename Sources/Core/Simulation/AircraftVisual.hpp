@@ -5,6 +5,10 @@
 #include <string_view>
 namespace md {
 inline bool helicopterBody(std::string_view name){return name=="ALightBody"||name=="AHeavyBody"||name=="ADuctBody"||name=="ATransportBody";}
+// Fixed Beluga components retain the authored seven roll views and body pivot.
+inline bool helicopterDrawnPart(std::string_view name){
+ return helicopterBody(name)||name=="ATransportWingL"||name=="ATransportWingR"||name=="ATransportEngine";
+}
 inline unsigned aircraftBankTile(float bank){
  const auto step=unsigned(std::clamp(std::lround(std::abs(bank)/.13962634f),0l,3l));
  return !step?0:step+(bank>0?3:0);
@@ -30,7 +34,7 @@ inline TextureMesh aircraftBankMesh(const Sprite& s,Vec2 pivot,float heading,flo
  TextureMesh m;m.image=s.image;m.blend=s.blend;m.nearest=s.nearest;
  auto r=s.sourcePx.value_or(Rect{0,0,imageSize.x,imageSize.y});
  const auto name=std::string_view(s.image);
- const bool body=name.ends_with(".png")&&helicopterBody(name.substr(0,name.size()-4));
+ const bool body=name.ends_with(".png")&&helicopterDrawnPart(name.substr(0,name.size()-4));
  if(body)r.x+=float(aircraftBankTile(bank))*r.width;
  const float angle=-s.rotationDegrees*3.14159265359f/180.f,c=std::cos(angle),t=std::sin(angle);
  const Vec2 center{s.destination.x+s.destination.width*.5f,s.destination.y+s.destination.height*.5f};

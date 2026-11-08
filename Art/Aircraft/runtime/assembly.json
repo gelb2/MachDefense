@@ -300,15 +300,15 @@
         ],
         [
           0.0,
-          0.0
+          38.0
         ],
         [
           0.0,
-          0.0
+          -38.0
         ],
         [
           0.0,
-          0.0
+          -2.0
         ],
         [
           8.0,
@@ -327,7 +327,7 @@
           -47.0
         ]
       ],
-      "preparedImage": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png"
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/beluga/ATransportBody.png"
     },
     {
       "name": "ATransportFan",
@@ -343,35 +343,38 @@
     {
       "name": "ATransportWingL",
       "type": 0,
-      "tileCount": 1,
+      "tileCount": 7,
       "sockets": [
         [
           0.0,
           0.0
         ]
-      ]
+      ],
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/beluga/ATransportWingL.png"
     },
     {
       "name": "ATransportWingR",
       "type": 0,
-      "tileCount": 1,
+      "tileCount": 7,
       "sockets": [
         [
           0.0,
           0.0
         ]
-      ]
+      ],
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/beluga/ATransportWingR.png"
     },
     {
       "name": "ATransportEngine",
       "type": 0,
-      "tileCount": 1,
+      "tileCount": 7,
       "sockets": [
         [
           0.0,
           0.0
         ]
-      ]
+      ],
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/beluga/ATransportEngine.png"
     },
     {
       "name": "ATransportGun",
@@ -595,6 +598,24 @@
               "name": "ATransportMissile",
               "parentSocket": 8,
               "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportWingL",
+              "parentSocket": 2,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportWingR",
+              "parentSocket": 3,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportEngine",
+              "parentSocket": 4,
+              "zOrder": 2,
               "children": []
             }
           ]

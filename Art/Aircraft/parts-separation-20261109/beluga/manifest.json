@@ -1,0 +1,318 @@
+{
+  "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+  "sourceSHA256": "6e476cc8ef23076931e8c23c828112f3e5a821098b7f627d976e76cc6ed9fae6",
+  "method": "Disjoint pixel ownership at measured part seam bands; no repaint, resize, recolor or alpha changes",
+  "seams": [
+    {
+      "wingX": [
+        64,
+        104
+      ],
+      "topEnd": 51,
+      "bottomStart": 82,
+      "engines": [
+        [
+          49,
+          49,
+          75,
+          61
+        ],
+        [
+          49,
+          72,
+          75,
+          85
+        ]
+      ]
+    },
+    {
+      "wingX": [
+        65,
+        104
+      ],
+      "topEnd": 49,
+      "bottomStart": 79,
+      "engines": [
+        [
+          49,
+          47,
+          74,
+          59
+        ],
+        [
+          49,
+          71,
+          74,
+          83
+        ]
+      ]
+    },
+    {
+      "wingX": [
+        65,
+        105
+      ],
+      "topEnd": 48,
+      "bottomStart": 77,
+      "engines": [
+        [
+          49,
+          46,
+          74,
+          58
+        ],
+        [
+          49,
+          69,
+          74,
+          81
+        ]
+      ]
+    },
+    {
+      "wingX": [
+        65,
+        106
+      ],
+      "topEnd": 47,
+      "bottomStart": 76,
+      "engines": [
+        [
+          49,
+          45,
+          74,
+          57
+        ],
+        [
+          49,
+          68,
+          74,
+          80
+        ]
+      ]
+    },
+    {
+      "wingX": [
+        62,
+        103
+      ],
+      "topEnd": 51,
+      "bottomStart": 82,
+      "engines": [
+        [
+          49,
+          49,
+          75,
+          61
+        ],
+        [
+          49,
+          73,
+          75,
+          85
+        ]
+      ]
+    },
+    {
+      "wingX": [
+        60,
+        103
+      ],
+      "topEnd": 53,
+      "bottomStart": 84,
+      "engines": [
+        [
+          49,
+          51,
+          75,
+          63
+        ],
+        [
+          49,
+          75,
+          75,
+          87
+        ]
+      ]
+    },
+    {
+      "wingX": [
+        58,
+        103
+      ],
+      "topEnd": 55,
+      "bottomStart": 86,
+      "engines": [
+        [
+          49,
+          53,
+          75,
+          65
+        ],
+        [
+          49,
+          77,
+          75,
+          89
+        ]
+      ]
+    }
+  ],
+  "nonzeroAlphaPixelsByFrame": [
+    [
+      2904,
+      1199,
+      1198,
+      598
+    ],
+    [
+      6462,
+      1745,
+      1615,
+      559
+    ],
+    [
+      4931,
+      1477,
+      1287,
+      561
+    ],
+    [
+      5246,
+      1341,
+      1366,
+      561
+    ],
+    [
+      4142,
+      1591,
+      1344,
+      575
+    ],
+    [
+      3811,
+      1326,
+      1327,
+      594
+    ],
+    [
+      3619,
+      1259,
+      1340,
+      549
+    ]
+  ],
+  "preparedRecompositionByteIdentical": true,
+  "overlappingNonzeroAlphaPixels": 0,
+  "records": [
+    {
+      "name": "ATransportBody",
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/beluga/ATransportBody.png",
+      "sha256": "29937157c127b46a60334824f75ad9d24d8c4da2a05485a5cbac2a056a51959a",
+      "runtimeSHA256": "905e2f4dd59eb01804c19a004aff074db684da6a08118afc7ce99fea10c9fbad",
+      "tileCount": 7,
+      "cellSize": [
+        140,
+        131
+      ],
+      "commonCrop": [
+        0,
+        0,
+        140,
+        131
+      ],
+      "parentSocket": [
+        0.0,
+        0.0
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "potRGBABytes": 1048576
+    },
+    {
+      "name": "ATransportWingL",
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/beluga/ATransportWingL.png",
+      "sha256": "f257d9c8468172f9b81a72b29ca9e9933337c8e85e50c956da567a69ac679e40",
+      "runtimeSHA256": "82b42840a4566d502aae31beb85e8451acce4d46bc8726e9aab7f70fd8901e4a",
+      "tileCount": 7,
+      "cellSize": [
+        140,
+        55
+      ],
+      "commonCrop": [
+        0,
+        0,
+        140,
+        55
+      ],
+      "parentSocket": [
+        0.0,
+        38.0
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "potRGBABytes": 262144
+    },
+    {
+      "name": "ATransportWingR",
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/beluga/ATransportWingR.png",
+      "sha256": "d75c6095f84944b458edcaae4ecd333a8e354a8ea6998cdd9a6ac955150701c6",
+      "runtimeSHA256": "2598eb67540db4586d5de32347e3732b2a6c24074f6d3415c5c847cded7beb68",
+      "tileCount": 7,
+      "cellSize": [
+        140,
+        55
+      ],
+      "commonCrop": [
+        0,
+        76,
+        140,
+        131
+      ],
+      "parentSocket": [
+        0.0,
+        -38.0
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "potRGBABytes": 262144
+    },
+    {
+      "name": "ATransportEngine",
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/beluga/ATransportEngine.png",
+      "sha256": "4b382190469ca7bd59f7ae472b558ec0e97858c8b10129939e44a9c305b11aca",
+      "runtimeSHA256": "30a658ee7fea5834d289feadd480b93db472792766f01fdadf33736ee02a9c7a",
+      "tileCount": 7,
+      "cellSize": [
+        140,
+        45
+      ],
+      "commonCrop": [
+        0,
+        45,
+        140,
+        90
+      ],
+      "parentSocket": [
+        0.0,
+        -2.0
+      ],
+      "pivot": [
+        0,
+        0
+      ],
+      "potRGBABytes": 262144
+    }
+  ],
+  "runtimeVisualVerification": "pending",
+  "limitations": [
+    "Fixed parts preserve full source X span and crop only common Y bounds; runtime pixel comparison is required.",
+    "Engine split contains both existing nacelles as one fixed part."
+  ]
+}

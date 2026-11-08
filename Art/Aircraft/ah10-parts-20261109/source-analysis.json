@@ -1,0 +1,89 @@
+{
+  "status": "not_integrated",
+  "imagesInspected": [
+    {
+      "path": "Art/Aircraft/banking-20261109/prepared/AHeavyBody.png",
+      "sha256": "1dab8787dbdd4954cc31d8c4fbcf832b5b071ff214c498c7399505866d0c5655"
+    },
+    {
+      "path": "Art/Aircraft/runtime/png-source/AHeavyBody.png",
+      "sha256": "b8d01435bc63725f91498b83b78132a6c175bde40663e04afbe63fdbe67efdb1"
+    },
+    {
+      "path": "Art/Aircraft/parts/user-20261108/ah10-body-v3.png",
+      "sha256": "26ceb3645c6ccc0820842443179357cdfaf5cec059c076ef8406fd061715d169"
+    }
+  ],
+  "assemblyRead": {
+    "path": "Art/Aircraft/runtime/assembly.json",
+    "sha256": "6d29ac7c5c7ef248e4813bc0a1f3d7fdd77f67e83bb698d7f0225f94452219c2"
+  },
+  "bodyTileSize": [
+    76,
+    112
+  ],
+  "tileCount": 7,
+  "protected": [
+    "approved body silhouette and pixels",
+    "all seven bank poses",
+    "existing five weapon behaviors",
+    "existing weapon mount and muzzle positions",
+    "original game assets and source"
+  ],
+  "mounts": [
+    {
+      "part": "AHeavyRocket",
+      "bodySocket": 6,
+      "bodyPoint": [
+        5,
+        34
+      ],
+      "neutralPixelAnchor": [
+        43,
+        22
+      ],
+      "localMuzzle": [
+        12,
+        0
+      ],
+      "neutralPixelMuzzle": [
+        55,
+        22
+      ]
+    },
+    {
+      "part": "AHeavyAirStrike",
+      "bodySocket": 7,
+      "bodyPoint": [
+        26,
+        -18
+      ],
+      "neutralPixelAnchor": [
+        64,
+        74
+      ],
+      "localMuzzle": [
+        10,
+        0
+      ],
+      "neutralPixelMuzzle": [
+        74,
+        74
+      ]
+    }
+  ],
+  "remaining": [
+    "Select exact weapon structures from approved body and separate their painted pixels across all seven poses.",
+    "Reconstruct the obscured support surface so independent type-4 aiming does not expose transparent holes in the body.",
+    "Align new weapon drawing endpoints to preserved socket-derived muzzles; cropping a nearby panel is not sufficient.",
+    "Verify independent aim, recoil, all bank poses and world projectiles in the cheat build before adopting new art."
+  ],
+  "notDone": [
+    "new separate weapon sprites",
+    "body backfill",
+    "runtime asset replacement",
+    "MCB binding change",
+    "visual validation"
+  ],
+  "reasonNotApplied": "A simple rectangular crop and tileCount change would expose holes during type-4 aim and would not prove that the correct visible weapon matches the preserved muzzle. No arbitrary substitute image was installed."
+}

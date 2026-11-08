@@ -1,0 +1,38 @@
+[
+  {
+    "file": "Resources/Images/ATransportBody.png",
+    "bytes": 82703,
+    "sha256": "905e2f4dd59eb01804c19a004aff074db684da6a08118afc7ce99fea10c9fbad",
+    "matchesPreparedResource": true
+  },
+  {
+    "file": "Resources/Images/ATransportEngine.png",
+    "bytes": 14907,
+    "sha256": "fc2f69943201d2433bf9d1d1ae420f81b0d7b2b5b7a5fbbe9bcbf004fc917d9f",
+    "matchesPreparedResource": true
+  },
+  {
+    "file": "Resources/Images/ATransportWingL.png",
+    "bytes": 31081,
+    "sha256": "76f4a7730240f1d118d5d782f1c850413e4775afbc3e9f14d5315136904fef43",
+    "matchesPreparedResource": true
+  },
+  {
+    "file": "Resources/Images/ATransportWingR.png",
+    "bytes": 29912,
+    "sha256": "b5e282ac7813d36390ee2537565897da0450947c586cda3d079ebf7bfb1e3c59",
+    "matchesPreparedResource": true
+  },
+  {
+    "file": "Resources/RawData/Level10Machines.mcb",
+    "bytes": 18639,
+    "sha256": "9dc7f15103083c7b45c7141ef92ae3eda7d7b199dc514cb4f28956eabad4be21",
+    "matchesPreparedResource": true
+  },
+  {
+    "file": "Resources/RawData/Level10Parts.mcb",
+    "bytes": 11507,
+    "sha256": "2a1f6e8052bd8118a9c39dedf7f7a70d673f376eda54d5244c62b9c6d1e1bf86",
+    "matchesPreparedResource": true
+  }
+]
