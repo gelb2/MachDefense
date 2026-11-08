@@ -1,5 +1,7 @@
 # 헬기 PNG 처리와 검증 누락 경위 — 2026-11-09
 
+문구 정정: 사용자 책임을 가정한 문장을 삭제하고 Codex가 지시와 다른 구현 경로를 선택하고 검증을 빠뜨렸다고 명시했다. 패키지 표기는 ‘대조에 사용한 MachDefense 1.0.3 보관 패키지’로 고쳤다. 본문과 다운로드 원문에 함께 반영했다. 정정 Source `5c499361a9b70bf08648c2eed33f64e4de82a2c1`, Deployment `appgdep_6af0a980352c8191a20b48c2bf15ca9e` succeeded, Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_7683afd8c8908191be977e17ce239392`.
+
 [기술 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-cgbi-20261109)와 [경위서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-resource-incident-20261109)를 게시했다. 원본 PNG 948개의 CgBI·색 메타데이터, 5개 원작 샘플과 헬기 28개의 픽셀 해독 검사, 실제 Release 자원 6개 대조, 질감·로딩·프레임 영향의 확인 범위와 미측정 범위를 기록했다. 원작 절차를 충분히 따르지 않은 구현 선택과 검증 누락의 책임은 Codex에 있음을 경위서에 명시했다.
 
 - Source `7a8f00cea9ce30174a47a077df46d26709702f76`.

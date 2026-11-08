@@ -4,7 +4,7 @@
 
 ## 확인한 파일 처리
 
-원본 WeMade 1.0.3 IPA는 기존 SHA-256과 일치한다. 패키지 안의 PNG 948개 모두 `CgBI` 청크가 있다. 그중 `iCCP`는 622개, `gAMA`는 132개, `cHRM`은 668개다. Apple은 당시 Xcode가 앱 번들의 PNG를 iOS용으로 최적화하며, 이를 일반 PNG로 되돌리는 도구를 제공한다고 설명한다. 원본 파일의 CgBI를 단순 확장자 차이로 취급해서는 안 된다. [Apple QA1681](https://developer.apple.com/library/archive/qa/qa1681/_index.html), [당시 PNG 빌드 설정](https://developer.apple.com/library/archive/documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html).
+대조에 사용한 MachDefense 1.0.3 보관 패키지는 기존 SHA-256과 일치한다. 패키지 안의 PNG 948개 모두 `CgBI` 청크가 있다. 그중 `iCCP`는 622개, `gAMA`는 132개, `cHRM`은 668개다. Apple은 당시 Xcode가 앱 번들의 PNG를 iOS용으로 최적화하며, 이를 일반 PNG로 되돌리는 도구를 제공한다고 설명한다. 원본 파일의 CgBI를 단순 확장자 차이로 취급해서는 안 된다. [Apple QA1681](https://developer.apple.com/library/archive/qa/qa1681/_index.html), [당시 PNG 빌드 설정](https://developer.apple.com/library/archive/documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html).
 
 `CgBI`는 PNG의 iOS용 인코딩 변형이다. `RGBA`는 색·알파 채널 구성을 뜻한다. 두 용어는 서로 배타적인 파일 종류가 아니다. 앞선 ‘CgBI 대신 RGBA’라는 설명만으로는 원본의 압축·채널·알파 처리와 현재 경로의 차이를 충분히 설명하지 못했다. 원작 샘플은 PNG 헤더상 8비트 RGBA이며, CgBI 압축 내부의 색은 BGRA 순서와 사전 곱셈 알파로 처리한다. 일반 PNG는 색과 알파를 분리해 저장한다. [PNG 규격의 알파 표현](https://www.w3.org/TR/png-3/#6AlphaRepresentation).
 
