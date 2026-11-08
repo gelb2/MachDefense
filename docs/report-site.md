@@ -357,3 +357,13 @@ Chrome에서 신규 부품 35개의 길이와 비율 보존·텍스처 잘림, �
 [보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#user-aircraft-20261108)에 원본 3장, Beluga 적용 화면, AH-10·Cheyenne 생성 실패 응답과 기존 승인 불이행·허위 완료 보고 기록을 게시했다. 새 그림 완료로 표시한 것은 Beluga뿐이다. 로컬 Chrome 1280·390 폭에서 새 이미지 6개 로드와 가로 넘침 없음을 확인했다.
 
 Sites source `7acf9756f0d5e356d4ceeda99fc98f267995a41f`, deployment `appgdep_6aef85a553e081919184ae0b7d7888ee`, status `succeeded`. 사이트는 기존 소유자 전용 공개 범위를 유지한다. 게임 main·PWA·실기기 배포는 하지 않았다. 보고서 256MiB 제한 때문에 기존 전투 MP4 4개의 인코딩을 압축했다. 원본은 `.local/report-compression-originals/`에 보존했다. 해상도·프레임 수·길이·재생률을 대조했고 오디오는 복사했다. 손실 인코딩이므로 픽셀 일치를 주장하지 않는다.
+
+## 2026-11-09 헬기 이동 복구·선회 결함·잔여 작업
+
+[현재 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-status-20261109)에 이동 복구와 아이폰 재설치, 벨루가 구현 오류, 스카웃·벨루가 재작업 및 샤이엔 보존 지시, 실제 웹 치트빌드 3단계 비교, 표적 밀착 측정과 남은 성능 검사를 게시했다. 전체 수리 완료로 표시하지 않았다.
+
+사이트 소스 `acb5d6dd7e15ee614bfa0c1940362643ae80da53`, 배포 `appgdep_6af0c11034c481919ccad0c7d646e3da`, 버전 239는 `succeeded`다. 기존 소유자 전용 접근을 유지했다. [게시 근거](evidence/aircraft-repair-20261109/report-publication.json). 게임 main·운영 PWA는 배포하지 않았다.
+
+로컬 Safari에서 새 절·표·비교 이미지 표시를 확인했다. 게시 후 Safari 확인은 사용자 조작과 겹쳐 완료하지 않았다. 모바일 화면도 이번에 검사하지 않았다. Sites 배포 결과와 현재 버전은 확인했다.
+
+두 차례 압축 해제 크기 제한으로 거절된 뒤 기존 GIF 2개와 PNG 3개를 무손실 WebP로 변환하고, 바이트가 같은 중복 이미지 참조를 합치고, JSON 106개의 공백을 줄였다. 이미지 픽셀·애니메이션 프레임과 시간·JSON 값 보존을 검사했다. 기존 정적 WebP와 변환 애니메이션의 파일명을 분리했다. 원본은 로컬에 보존했다. 최종 묶음의 압축 해제 크기는 268,327,424바이트다. [형식 변환 검사](evidence/aircraft-repair-20261109/report-media-checks.json).
