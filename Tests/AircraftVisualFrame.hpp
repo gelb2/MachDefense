@@ -13,13 +13,13 @@ inline Frame aircraftVisualFrame(ResourceAccess& r,unsigned mode){
  auto machine=[&](const char* name,Vec2 c,float scale){Frame t;models.appendSprites(t,name,c,scale,1.57079632679f,1.57079632679f,mode>=4?0.f:float(mode)*.5f,dims);for(auto s:t.sprites)if(s.color.r!=0){s.nearest=true;f.sprites.push_back(s);}};
  if(mode==4){
   f.logicalWidth=900;f.logicalHeight=900;
-  // Left: b01d751 size. Right: additional +10% / -10%. Same PNGs and pose.
+  // Left: 1b3afed size. Right: widths matched to original reference units.
   // Cancelling only the documented model multiplier reconstructs the baseline.
-  machine("AircraftHeavy",{225,150},2*1.20f/aircraftAssemblyScale("AHeavyBody"));
+  machine("AircraftHeavy",{225,150},2*1.32f/aircraftAssemblyScale("AHeavyBody"));
   machine("AircraftHeavy",{675,150},2);
-  machine("AircraftTransport",{225,450},2*.85f/aircraftAssemblyScale("ATransportBody"));
+  machine("AircraftTransport",{225,450},2*.765f/aircraftAssemblyScale("ATransportBody"));
   machine("AircraftTransport",{675,450},2);
-  machine("AircraftDuct",{225,750},2*.85f/aircraftAssemblyScale("ADuctBody"));
+  machine("AircraftDuct",{225,750},2*.765f/aircraftAssemblyScale("ADuctBody"));
   machine("AircraftDuct",{675,750},2);
   return f;
  }

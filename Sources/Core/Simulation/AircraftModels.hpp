@@ -7,8 +7,11 @@ namespace md {
 // 2026-11-08 size-only revision, relative to the packed art in 7e7fa8f.
 // Keep the PNG pixels intact; apply this to the whole pose, including muzzles.
 inline constexpr float aircraftAssemblyScale(std::string_view rootPart){
- if(rootPart=="AHeavyBody")return 1.32f;
- if(rootPart=="ADuctBody"||rootPart=="ATransportBody")return .765f;
+ // Same-pose 2x web bounds: MachineGun_10=118px, E_Tank_32=210px.
+ // Preserve aspect ratios; targets are tank*1.10, mech, and their midpoint.
+ if(rootPart=="AHeavyBody")return 1.32f*(231.f/296.f);
+ if(rootPart=="ADuctBody")return .765f*(118.f/134.f);
+ if(rootPart=="ATransportBody")return .765f*(164.f/196.f);
  return 1.f;
 }
 struct AircraftWeaponBinding { const char* part; const char* original; };

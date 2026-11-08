@@ -31,7 +31,7 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
  auto models=md::BattleModels::load(r);md::validation::appendAircraftModels(models);
  // Every campaign level and the copied live assembly use the size-only change.
  // Check texture dimensions and weapon tips together, including phone scaling.
- for(const auto& [name,factor]:std::vector<std::pair<std::string,float>>{{"AircraftLight",1.f},{"AircraftHeavy",1.32f},{"AircraftDuct",.765f},{"AircraftTransport",.765f}})
+ for(const auto& [name,factor]:std::vector<std::pair<std::string,float>>{{"AircraftLight",1.f},{"AircraftHeavy",1.32f*(231.f/296.f)},{"AircraftDuct",.765f*(118.f/134.f)},{"AircraftTransport",.765f*(164.f/196.f)}})
  for(unsigned level=1;level<=10;++level)for(float viewport:{.5f,1.f,1.375f}){
   const auto variant=name+"_"+(level<10?"0":"")+std::to_string(level);
   auto poses=models.pose(*models.machine(variant),viewport,.7f,-.4f,1.1f);
