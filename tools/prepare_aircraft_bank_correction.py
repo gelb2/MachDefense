@@ -15,11 +15,18 @@ PAINT = r'''
 #include "stb_image.h"
 #include "Core/Presentation/AircraftPaint.hpp"
 #include <fstream>
+#include <string>
 int main(int argc,char**argv) {
- if(argc!=4)return 2;
+ if(argc!=4&&argc!=6)return 2;
  int w,h,c;auto*p=stbi_load(argv[1],&w,&h,&c,4);if(!p)return 3;
  // Reuse the approved colour preparation. Existing drawn markings are retained.
- md::prepareAircraftPaint(argv[3],p,std::size_t(w)*h);
+ if(argc==4)md::prepareAircraftPaint(argv[3],p,std::size_t(w)*h);
+ else {
+  const float across=std::stof(argv[4]),center=std::stof(argv[5]);
+  for(int y=0;y<h;++y)for(int x=0;x<w;++x)
+   md::applyAircraftMarking(argv[3],p+(y*w+x)*4,
+       center+((y+.5f)/h-center)/across,1.f-(x+.5f)/w);
+ }
  std::ofstream f(argv[2],std::ios::binary);
  f<<"P7\nWIDTH "<<w<<"\nHEIGHT "<<h<<"\nDEPTH 4\nMAXVAL 255\nTUPLTYPE RGB_ALPHA\nENDHDR\n";
  f.write(reinterpret_cast<char*>(p),std::size_t(w)*h*4);
@@ -51,7 +58,8 @@ def run():
             boxes = [bounds(pixels,sm['width'],(
                 i%3*sm['width']//3,i//3*sm['height']//2,
                 (i%3+1)*sm['width']//3,(i//3+1)*sm['height']//2)) for i in range(6)]
-            scale = nm['width']/max(y1-y0 for x0,y0,x1,y1 in boxes)
+            nb = bounds(original,nm['width'],(0,0,nm['width'],nm['height']))
+            scale = (nb[2]-nb[0])/max(y1-y0 for x0,y0,x1,y1 in boxes)
             px,py = entry['padding']
             cw,ch = nm['width']+px*2,nm['height']+py*2
             sx,sy = entry['rotorSocket']
@@ -85,6 +93,16 @@ def run():
                 subprocess.run(['magick','-size',f'{cw}x{ch}','canvas:none',str(sprite),
                                 '-geometry',f'+{dx}+{dy}','-compose','Copy','-composite',
                                 'PNG32:'+str(frame)],check=True)
+                if tile and entry.get('projectExistingMarkings'):
+                    assert px==0 and py==0
+                    across = (boxes[tile-1][2]-boxes[tile-1][0])*scale/(nb[3]-nb[1])
+                    before_marking = png_pixels(frame.read_bytes())[1]
+                    marked = temp/'marked.pam'
+                    subprocess.run([str(temp/'paint'),str(frame),str(marked),body+'.png',
+                                    str(across),str(target[1]/ch)],check=True)
+                    subprocess.run(['magick',str(marked),'PNG32:'+str(frame)],check=True)
+                    assert png_pixels(frame.read_bytes())[1][3::4] == before_marking[3::4]
+                    frames[-1]['existingMarkingAcrossScale'] = across
                 cells.append(frame)
             dest = out/(body+'.png')
             subprocess.run(['magick',*[str(p) for p in cells],'+append','-strip','PNG32:'+str(dest)],check=True)

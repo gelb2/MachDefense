@@ -1,0 +1,10 @@
+Precise sprite-sheet geometry correction. Edit the attached six-view sheet, preserving all body, cockpit, tail, panel texture, colors, four engines, wing shape and layout. The camera is fixed overhead with a small forward oblique component. All noses and tails still point straight up/down. Correct only the planar wings' projected slope and span so mounted weapons can remain attached. The wings must stay rigid and straight; no sweeping rearward, no bending, no nose or tail pitch.
+At 1536x1024 sheet scale, the six rotor bearing centers are approximately (256,219),(777,219),(1292,219),(257,732),(755,732),(1258,732).
+Use these wing TIP POD CENTER positions (not crop bounds):
+Upper left: left (42,229), right (470,209).
+Upper middle: left (570,239), right (984,199).
+Upper right: left (1092,249), right (1492,189).
+Lower left: left (43,722), right (471,742).
+Lower middle: left (548,712), right (962,752).
+Lower right: left (1058,702), right (1458,762).
+The wing roots remain at the fuselage around rotor height. Draw the same rigid wings following those projected end positions, expose the appropriate upper/lower edge and side of the wing-tip pods at roll. Maintain the original fuselage vertical and exactly the existing length and bearing position; do not rotate the whole aircraft. No paint changes, no extra parts, no brightening. Fully transparent alpha-zero background outside the aircraft, retain antialiased edges, no halo.

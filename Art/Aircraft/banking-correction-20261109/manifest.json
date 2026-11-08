@@ -161,6 +161,173 @@
           ]
         }
       ]
+    },
+    {
+      "body": "ATransportBody",
+      "source": "Art/Aircraft/banking-correction-20261109/beluga-authoritative-06.png",
+      "sourceSHA256": "4dfb23b0e5b4075198e663eccfddce39fa1a0eecc68049726ee3bff8394fc635",
+      "neutralSHA256": "7d3a2604798605783b1b6cdc76419f152deb23d4be4e6f49ba2c2e8c65f2fe79",
+      "preparedSHA256": "6e476cc8ef23076931e8c23c828112f3e5a821098b7f627d976e76cc6ed9fae6",
+      "cellSize": [
+        140,
+        131
+      ],
+      "neutralSize": [
+        140,
+        131
+      ],
+      "neutralPadding": [
+        0,
+        0
+      ],
+      "neutralPixelsExact": true,
+      "colourPreparationAlphaExact": true,
+      "frames": [
+        {
+          "tile": 1,
+          "requestedRollDegrees": -8,
+          "cropXYXY": [
+            25,
+            11,
+            487,
+            495
+          ],
+          "uniformScale": 0.27835051546391754,
+          "pasteOffset": [
+            3,
+            0
+          ],
+          "drawnSize": [
+            135,
+            129
+          ],
+          "rotorAnchorPixelError": [
+            -0.17525773195876582,
+            -0.20103092783504906
+          ],
+          "existingMarkingAcrossScale": 1.0125821901128338
+        },
+        {
+          "tile": 2,
+          "requestedRollDegrees": -16,
+          "cropXYXY": [
+            547,
+            10,
+            988,
+            494
+          ],
+          "uniformScale": 0.27835051546391754,
+          "pasteOffset": [
+            3,
+            0
+          ],
+          "drawnSize": [
+            135,
+            123
+          ],
+          "rotorAnchorPixelError": [
+            -0.4536082474226788,
+            -0.47938144329896204
+          ],
+          "existingMarkingAcrossScale": 0.9665557269258869
+        },
+        {
+          "tile": 3,
+          "requestedRollDegrees": -24,
+          "cropXYXY": [
+            1063,
+            11,
+            1502,
+            495
+          ],
+          "uniformScale": 0.27835051546391754,
+          "pasteOffset": [
+            3,
+            0
+          ],
+          "drawnSize": [
+            135,
+            122
+          ],
+          "rotorAnchorPixelError": [
+            -0.17525773195876582,
+            -0.47938144329896204
+          ],
+          "existingMarkingAcrossScale": 0.9621722542414157
+        },
+        {
+          "tile": 4,
+          "requestedRollDegrees": 8,
+          "cropXYXY": [
+            25,
+            523,
+            487,
+            1007
+          ],
+          "uniformScale": 0.27835051546391754,
+          "pasteOffset": [
+            3,
+            0
+          ],
+          "drawnSize": [
+            135,
+            129
+          ],
+          "rotorAnchorPixelError": [
+            -0.4536082474226788,
+            0.07731958762886393
+          ],
+          "existingMarkingAcrossScale": 1.0125821901128338
+        },
+        {
+          "tile": 5,
+          "requestedRollDegrees": 16,
+          "cropXYXY": [
+            546,
+            523,
+            987,
+            1007
+          ],
+          "uniformScale": 0.27835051546391754,
+          "pasteOffset": [
+            3,
+            6
+          ],
+          "drawnSize": [
+            135,
+            123
+          ],
+          "rotorAnchorPixelError": [
+            -0.4536082474226788,
+            -0.3247422680412342
+          ],
+          "existingMarkingAcrossScale": 0.9665557269258869
+        },
+        {
+          "tile": 6,
+          "requestedRollDegrees": 24,
+          "cropXYXY": [
+            1061,
+            523,
+            1496,
+            1008
+          ],
+          "uniformScale": 0.27835051546391754,
+          "pasteOffset": [
+            3,
+            10
+          ],
+          "drawnSize": [
+            135,
+            121
+          ],
+          "rotorAnchorPixelError": [
+            -0.17525773195876582,
+            0.33505154639175316
+          ],
+          "existingMarkingAcrossScale": 0.9534053088724734
+        }
+      ]
     }
   ]
 }

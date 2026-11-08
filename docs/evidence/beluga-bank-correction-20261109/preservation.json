@@ -1,0 +1,191 @@
+{
+  "baselineCommit": "5d6b872",
+  "protectedFiles": 2652,
+  "protectedMismatches": [],
+  "changedSourcesAndResources": [
+    "Resources/Images/ATransportBody.png"
+  ],
+  "movementExact38903e4": true,
+  "scoutPreparedExact": true,
+  "neutralPixelsExact": true,
+  "canvasUnchanged": [
+    140,
+    131
+  ],
+  "atlasUnchanged": [
+    980,
+    131
+  ],
+  "potRGBA8BytesBeforeAfter": [
+    1048576,
+    1048576
+  ],
+  "pixelComparisons": [
+    {
+      "engine": "chrome",
+      "tile": 0,
+      "changedPixels": 0,
+      "changedBounds": null,
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "chrome",
+      "tile": 1,
+      "changedPixels": 10534,
+      "changedBounds": [
+        602,
+        586,
+        746,
+        736
+      ],
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "chrome",
+      "tile": 2,
+      "changedPixels": 9758,
+      "changedBounds": [
+        602,
+        586,
+        743,
+        736
+      ],
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "chrome",
+      "tile": 3,
+      "changedPixels": 10325,
+      "changedBounds": [
+        602,
+        586,
+        744,
+        735
+      ],
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "chrome",
+      "tile": 4,
+      "changedPixels": 9058,
+      "changedBounds": [
+        602,
+        586,
+        746,
+        736
+      ],
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "chrome",
+      "tile": 5,
+      "changedPixels": 9106,
+      "changedBounds": [
+        604,
+        586,
+        746,
+        735
+      ],
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "chrome",
+      "tile": 6,
+      "changedPixels": 9690,
+      "changedBounds": [
+        603,
+        586,
+        748,
+        735
+      ],
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "webkit",
+      "tile": 0,
+      "changedPixels": 0,
+      "changedBounds": null,
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "webkit",
+      "tile": 1,
+      "changedPixels": 10534,
+      "changedBounds": [
+        602,
+        586,
+        746,
+        736
+      ],
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "webkit",
+      "tile": 2,
+      "changedPixels": 9758,
+      "changedBounds": [
+        602,
+        586,
+        743,
+        736
+      ],
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "webkit",
+      "tile": 3,
+      "changedPixels": 10325,
+      "changedBounds": [
+        602,
+        586,
+        744,
+        735
+      ],
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "webkit",
+      "tile": 4,
+      "changedPixels": 9058,
+      "changedBounds": [
+        602,
+        586,
+        746,
+        736
+      ],
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "webkit",
+      "tile": 5,
+      "changedPixels": 9106,
+      "changedBounds": [
+        604,
+        586,
+        746,
+        735
+      ],
+      "changedPixelsOutsideBeluga": 0
+    },
+    {
+      "engine": "webkit",
+      "tile": 6,
+      "changedPixels": 9690,
+      "changedBounds": [
+        603,
+        586,
+        748,
+        735
+      ],
+      "changedPixelsOutsideBeluga": 0
+    }
+  ],
+  "candidateSourceSHA256": "4dfb23b0e5b4075198e663eccfddce39fa1a0eecc68049726ee3bff8394fc635",
+  "runtimeSHA256": "fad1c95d15d8eebf8138ab7cb00721a769aad45995788310d9cbd15bb6e5e577",
+  "verificationLimits": [
+    "No new iPhone installation or device capture",
+    "No new frame performance measurement",
+    "Requested roll angles are drawing targets, not measured 3D angles",
+    "Visual acceptance by user remains pending"
+  ]
+}
