@@ -100,7 +100,9 @@ void World::updateWeapons(WorldActor& a){
                     if(!sniper&&geometry_.deviceScale==.5f)speed*=.5f;
                     const float lifeRandom=float(random_.next())*0x1p-31f;
                     const float lifeBase=sniper?.7f:.3f;p->life=lifeRandom*lifeBase+lifeBase;
-                    p->position={a.position.x+(pose?pose->localCenter.x:0),a.position.y+(pose?pose->localCenter.y:0)};
+                    auto eject=pose?pose->localCenter:Vec2{};
+                    if(a.flightTactics)eject=aircraftBankPoint(eject,a.angle,a.flightTactics->bank);
+                    p->position={a.position.x+eject.x,a.position.y+eject.y};
                     const float shellScale=sniper?.7f:.6f;p->scale={shellScale,shellScale};p->scaleVelocity=-.004f;p->rotationVelocity=.4f;
                     p->velocity={std::cos(shellAngle)*speed,std::sin(shellAngle)*speed};p->velocityAdd=-.05f;
                     setParticleImage(p,"BulletShell.png",2,1);p->start(float(time()));
