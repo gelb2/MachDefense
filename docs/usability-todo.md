@@ -19,8 +19,8 @@
 | 1 | 원본 절차와 헬기 C++ 전체 전수진단 | 30개 관련 소스의 정적 진단 완료, 실제 출력·성능 검증 남음 | 정의 작성·읽기, 파츠·객체 조립, 생산·강화·저장, 표적·이동·발사·효과·사운드·파괴·생명주기의 대응표와 수정 범위. `MD-AIRCRAFT-LOGIC-AUDIT-01`, `MD-AIRCRAFT-ASSET-PARITY-01` |
 | 2 | 원본 절차에 맞춘 헬기 파일·최적화·정의·조립 경로 수정 | MCB 파일 정의·Apple PNG 준비 적용, 코어·웹 검사 통과. 아트 파츠 분리·실기기 비교 남음. [결과](research/aircraft-definition-png-20261109.md) | 원본 근거에 따른 헬기 전용 수정안과 적용 결과. C++ 안의 직접 조립 정의, 색·알파·필터·메타데이터 차이, 미연결 파츠를 함께 처리. `MD-AIRCRAFT-ASSET-PARITY-01`, `MD-AIRCRAFT-CGBI-PERF-01` |
 | 3 | 입체감 비교와 4종 좌우 선회 에셋 재제작 | 새 그림 24장·정면 포함 7칸 연결, 코어·웹 검사 완료. 실기기·최종 외형 검수 남음. [결과](research/aircraft-banking-20261109.md) | 원본 지상 유닛과 같은 배율의 정지·이동 비교, 측면·가림·명암·그림자, 로터·무장·총구 정렬. `MD-AIRCRAFT-DEPTH-01`, `MD-AIRCRAFT-TURN-ASSETS-01` |
-| 4 | 사거리 안에서 공격하며 멈추고, 표적 이탈 시 재접근 | 헬기 전용 수정·코어 55개·Chrome/WebKit 검사 완료. [결과](research/aircraft-range-stop-20261109.md) | 지정 사거리를 유지한 4종 Lv.1·10 접근·정지·재탐색·회피 전환. `MD-AIRCRAFT-RANGE-STOP-01` |
-| 5 | 긴급회피 전반 가속·후반 감속 | 구현·64조건 전후 대조·코어 56개·Chrome/WebKit 검사 완료. [결과](research/aircraft-dodge-curve-20261109.md) | 중간 지점 최고속도·목적지 정지, 거리·시간·무적·회피 성능 비교. `MD-AIRCRAFT-EVASION-SPEED-02` |
+| 4 | 사거리 안에서 공격하며 멈추고, 표적 이탈 시 재접근 | 지상 유닛식 정지 구현 철회·기존 이동 복구. 표적 밀착 방지만 다시 조사. [복구](research/aircraft-movement-restore-20261109.md) | 지정 사거리를 유지한 4종 Lv.1·10 접근·정지·재탐색·회피 전환. `MD-AIRCRAFT-RANGE-STOP-01` |
+| 5 | 긴급회피 전반 가속·후반 감속 | 속도 곡선 변경 철회·기존 회피 복구. 추가 변경 보류. [복구](research/aircraft-movement-restore-20261109.md) | 중간 지점 최고속도·목적지 정지, 거리·시간·무적·회피 성능 비교. `MD-AIRCRAFT-EVASION-SPEED-02` |
 | 6 | 실제 설치본의 도장·질감·성능·게임 동작 최종 대조 | 일부 웹·아이폰 확인 완료, 전체 비교 미완료 | 4종 정지·이동·사격·회피 화면, 초기 로딩과 준비 후 전투의 CPU·GPU·메모리·프레임 계측, 대량 효과, 생산·강화·저장 회귀. `MD-AIRCRAFT-PAINT-VERIFY-02`, `MD-AIRCRAFT-FLARE-SPREAD-02`, `MD-AIRCRAFT-CGBI-PERF-01` |
 
 웹 검사를 아이폰·Android·Tauri 실기기 검사로 대체하지 않는다. 수정 후 웹 치트 검사를 거쳐 아이폰 정식 빌드에서 다시 비교한다. 게임 main·운영 PWA에는 최신 헬기 작업을 아직 배포하지 않았다. 보고 사이트 게시와 게임 배포를 구분한다. 위 작업 뒤 헬기 시안 개선을 다시 논의한다.
