@@ -23,7 +23,7 @@ inline constexpr std::uint8_t aircraftPaintChannel(unsigned value,unsigned midpo
         ? (value*midpoint+64)/128
         : midpoint+((value-128)*(255-midpoint)+63)/127);
 }
-inline void applyAircraftPaint(std::string_view image,std::uint8_t* rgba,std::size_t pixels,
+inline void prepareAircraftPaint(std::string_view image,std::uint8_t* rgba,std::size_t pixels,
                                unsigned width=0,unsigned height=0) {
     const auto mid=aircraftPaintMidpoint(image);
     if(mid==std::array<unsigned,3>{128,128,128})return;
@@ -43,4 +43,8 @@ inline void applyAircraftPaint(std::string_view image,std::uint8_t* rgba,std::si
         }
     }
 }
+// Approved colours/markings are now baked into helicopter-only PNGs by
+// tools/bake_aircraft_paint.py. Retain the platform hook without repainting.
+inline void applyAircraftPaint(std::string_view,std::uint8_t*,std::size_t,
+                               unsigned=0,unsigned=0) {}
 }

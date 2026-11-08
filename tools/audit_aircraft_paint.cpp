@@ -7,7 +7,7 @@
 #include <iostream>
 #include <vector>
 int main(int argc,char** argv){
-    assert(argc==2);unsigned originals=0,aircraft=0,markedBodies=0;
+    assert(argc==2||argc==3);unsigned originals=0,aircraft=0,markedBodies=0;
     std::cout<<"{\"textures\":[";bool first=true;
     for(const auto& f:std::filesystem::directory_iterator(argv[1])){
         if(f.path().extension()!=".png")continue;
@@ -16,8 +16,8 @@ int main(int argc,char** argv){
         const std::size_t count=std::size_t(w)*h;
         std::vector<std::uint8_t> before(p,p+count*4),base=before,paint=before;
         stbi_image_free(p);
-        md::applyAircraftPaint(name,base.data(),count);
-        md::applyAircraftPaint(name,paint.data(),count,w,h);
+        md::prepareAircraftPaint(name,base.data(),count);
+        md::prepareAircraftPaint(name,paint.data(),count,w,h);
         unsigned visible=0,changed=0,marked=0;
         for(std::size_t i=0;i<count;++i){
             assert(before[4*i+3]==paint[4*i+3]);
@@ -30,6 +30,13 @@ int main(int argc,char** argv){
         const bool target=md::aircraftPaintMidpoint(name)!=std::array<unsigned,3>{128,128,128};
         if(!target){assert(before==paint);++originals;continue;}
         ++aircraft;assert(marked<=visible/8+1);
+        if(argc==3){
+            int ow,oh,oc;auto output=std::filesystem::path(argv[2])/name;
+            auto* q=stbi_load(output.c_str(),&ow,&oh,&oc,4);assert(q&&ow==w&&oh==h);
+            assert(std::equal(paint.begin(),paint.end(),q));
+            md::applyAircraftPaint(name,q,count,w,h);
+            assert(std::equal(paint.begin(),paint.end(),q));stbi_image_free(q);
+        }
         if(name=="ALightBody.png"||name=="ATransportBody.png"||name=="AHeavyBody.png"||name=="ADuctBody.png"){
             assert(marked>0);++markedBodies;
         }

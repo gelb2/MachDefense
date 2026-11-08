@@ -32,7 +32,7 @@ try{
    const end=await MDTest.state(),heapEnd=MDModule.HEAPU8.buffer.byteLength;times.sort((a,b)=>a-b);cpu.sort((a,b)=>a-b);const pct=(a,p)=>a[Math.floor((a.length-1)*p)];
    return {count,enabled,frames:600,p50:pct(times,.5),p95:pct(times,.95),p99:pct(times,.99),over25ms:times.filter(x=>x>25).length,cpuP99:pct(cpu,.99),maxParticles,uploadsDuring:end.uploads-start.uploads,heapStart,heapEnd,writes:state.writes};
   },{count,enabled});
-  assert.equal(metric.writes,0);assert.equal(metric.uploadsDuring,0);assert.equal(metric.heapEnd,metric.heapStart);assert(metric.maxParticles<=96);if(enabled)assert.equal(metric.maxParticles,84);
+  assert.equal(metric.writes,0);assert.equal(metric.uploadsDuring,0);assert.equal(metric.heapEnd,metric.heapStart);assert(metric.maxParticles<=132);if(enabled)assert.equal(metric.maxParticles,132);
   result.performance.push(metric);
   if(enabled){await call(22);for(let j=0;j<20;++j)await call(1);await page.locator('#game').screenshot({path:`${out}/stress-${count}.png`});}
  }

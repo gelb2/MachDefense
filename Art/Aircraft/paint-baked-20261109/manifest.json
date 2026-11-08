@@ -1,0 +1,146 @@
+{
+  "source_commit": "5eefc3e",
+  "transform": "prepareAircraftPaint; approved palette and markings unchanged",
+  "textures": [
+    {
+      "image": "ADuctBody.png",
+      "source_sha256": "c8bf2a2288f4c8bbf295e9c609116e549950ee1691af485a3d1c3e931780a932",
+      "output_sha256": "6a30422b8880203bbebb4b9611f0478f7fdd084c4e50918818f6194b882da944"
+    },
+    {
+      "image": "ADuctBodyBankL.png",
+      "source_sha256": "b9ca7c1e20580ccf1daecbf7afb194ff8a50217bb8557e0e4d97ba3e87ffbb5e",
+      "output_sha256": "e55a2ac1d44fd59cb4d83ce0274b3e2f2ac5a7d3112b1f0fa8a670dc7ed39a84"
+    },
+    {
+      "image": "ADuctBodyBankR.png",
+      "source_sha256": "8a93e14cb68d58fc5670649701d6c56aae955dd6c93c21b6d6de68a7438ae5c4",
+      "output_sha256": "9a9f4dd2d68f69567bba54da9f5087dc80a99ca5cb8368bda88111c5272d40b9"
+    },
+    {
+      "image": "ADuctFan.png",
+      "source_sha256": "897937e733d22400f768faf3038852ca77d36b5a5a88bddbcd3812398396cab5",
+      "output_sha256": "efa174f55a2192975f48efbb9cbbf44927b24ce4037f103f85f166f965eb1f3c"
+    },
+    {
+      "image": "ADuctGun.png",
+      "source_sha256": "9af767d12a692a9008a94673cf9a5263f84bfab3dd295dfc43c9124cba376dcb",
+      "output_sha256": "35e556d49dda882335c0c18e622da8e0bbf1c46fe61eb9953311562c97d8fac1"
+    },
+    {
+      "image": "ADuctMissile.png",
+      "source_sha256": "9131514459b01d5860aa63ed5e2503c5144ea06852755e80843a2dddef605a4a",
+      "output_sha256": "8c2895c24ab3c8c06444bae2db9e8c713479a809c2a8ba56a8fde960177d6643"
+    },
+    {
+      "image": "AHeavyBody.png",
+      "source_sha256": "fbc13c890b6c219caae6a716c509d464abd0ef0c5bb142dbdc21696203a5612e",
+      "output_sha256": "b8d01435bc63725f91498b83b78132a6c175bde40663e04afbe63fdbe67efdb1"
+    },
+    {
+      "image": "AHeavyBodyBankL.png",
+      "source_sha256": "a7a81903fd1b97ccda3be13abddbfbb1ca30b854ef11f96e9c766cf5a226f40e",
+      "output_sha256": "a2b38f2ad3c320d0e95208ef2b48e127765ec880cb50c7b3915489f56d8e6a47"
+    },
+    {
+      "image": "AHeavyBodyBankR.png",
+      "source_sha256": "a9f30bde15fc9683a5676dc623277325f289990346199254b80621fa666f515e",
+      "output_sha256": "07608b629752dbc0eeb795bade01a7e3ddc1c467b86715388cd64c4a151b408b"
+    },
+    {
+      "image": "AHeavyCannon.png",
+      "source_sha256": "024fefa4e564c200ac1550f73ab5067b28a793eeba52bc63ba1b0c1068acfc36",
+      "output_sha256": "c7c9d49d206d1bee66e2c776c3e69c8f808081c93563584bd52c4e7f5c572c83"
+    },
+    {
+      "image": "AHeavyGun.png",
+      "source_sha256": "0fef699a66c670bfdaf4e3c928939f0f4d5e573fff54782fb5e5eca660234c82",
+      "output_sha256": "79cbbef8d6dc6327e6fb3f05e95c020f35e0edc817136c45a7435f9f9f34d8c6"
+    },
+    {
+      "image": "AHeavyMissile.png",
+      "source_sha256": "1d9ae6eaad9bbf2e09212dfd03728218ee70b992b08eef6fed66c14e3b4473c6",
+      "output_sha256": "850a332ffa7beabb0a2b7b61c47703c3467959cd157d5df15568f22288e5834a"
+    },
+    {
+      "image": "AHeavyRotor.png",
+      "source_sha256": "0e7c095a85ce5aabb8c470d0795e6bd7d59e7a690f2f991279b01001ee82374b",
+      "output_sha256": "061cbbd13d9e7af0a67761dc317fe9e2360add534eaa4ef208b5d84620265055"
+    },
+    {
+      "image": "ALightBody.png",
+      "source_sha256": "8e90729121e037158c94804bba64b05facd0e5e99bfa7b2059805e278468badd",
+      "output_sha256": "4a11f4410fc41474b15e590cfdf18dfbee6bd5dacdb3b8f769875e283fca502c"
+    },
+    {
+      "image": "ALightBodyBankL.png",
+      "source_sha256": "5f16c980af5e420d4e20e0734b56b9178453489e69213cb0a128eedfa0af7129",
+      "output_sha256": "c335668f58b608743ddd76ceb18060682d3aa49358dcfc6f68dc853f7da18de9"
+    },
+    {
+      "image": "ALightBodyBankR.png",
+      "source_sha256": "6b9dbe295b8624d63bbc69e2a3665463c2184f3de3cb7c874bf904a358da1c45",
+      "output_sha256": "82567a02f68d0c6f93cfb6fdb6d012e7bd1f35922313b6efcaf0da1ff12ad768"
+    },
+    {
+      "image": "ALightGun.png",
+      "source_sha256": "de20d0d6a910c78021b7f0678b25af08bc0f9b4b637c14cc1e1929c657792e25",
+      "output_sha256": "327840749a0cc303e3f3be02ec11a5d746801b115094c7161bda22f93b7e248f"
+    },
+    {
+      "image": "ALightMissile.png",
+      "source_sha256": "98bbf1000fa443a4c74f1cc36446c587c783a7572867c9c9885b8800a3a86f9a",
+      "output_sha256": "ac1988f4313083c4532d73b92c0e483de2bac6cf8f65f8d800f2e6ad24d09933"
+    },
+    {
+      "image": "ALightRotor.png",
+      "source_sha256": "d148cb52b07ec832882fa6c15b5cbe8e628d028f0295f0baa11a9ec22635e5d2",
+      "output_sha256": "d26175975e6f8b217bcdb71c5f7d53f1186ea2e6044780823950aa1d771f54bf"
+    },
+    {
+      "image": "ATransportBody.png",
+      "source_sha256": "6e844ce3217f9756ff6a99fdd64b2f120e001896974c6164cf59c228c1c4244e",
+      "output_sha256": "7d3a2604798605783b1b6cdc76419f152deb23d4be4e6f49ba2c2e8c65f2fe79"
+    },
+    {
+      "image": "ATransportBodyBankL.png",
+      "source_sha256": "33adc052b5935b683d2db4c4c61d3e2177610dcf46b68f1abbe5327cfa3f1b2d",
+      "output_sha256": "290817428de955eb650fc516e9ab38c574de3d471fa498209547d5f274d028b0"
+    },
+    {
+      "image": "ATransportBodyBankR.png",
+      "source_sha256": "8da434a1bb74b54006a5a803b8ffa3892a23c4ff0028d7de22d0fc4f7837a96f",
+      "output_sha256": "dd7812de258f0a21b92bd2a28773dd050f450edfb87c82d7a4216b2e3cbe854c"
+    },
+    {
+      "image": "ATransportEngine.png",
+      "source_sha256": "aa2b4d5fae03d15d0ed6a9251d042a660fca5a3889feb320db3ece2ac29bdcf0",
+      "output_sha256": "56f6411bc769abb1b215c7f12903c085ea89b20d812a06a3f5d8ae933c209933"
+    },
+    {
+      "image": "ATransportFan.png",
+      "source_sha256": "c6e3bf23fe4df716ad29fdf3478b0cac30edb5b159d0028753dc9ead96bee9c6",
+      "output_sha256": "2144e966c4dfd9de063dd669e1b55eb335aaa949b27ab4afd69e878392fda0e2"
+    },
+    {
+      "image": "ATransportGun.png",
+      "source_sha256": "208f427acd9e8d125753f314879dedbe12fd74634cf46d2c9a72e56c48dbab7d",
+      "output_sha256": "766b02b9882933a7a5653ecd0038bb71e45b80e3cf93de016e64f04d5ea57dfd"
+    },
+    {
+      "image": "ATransportMissile.png",
+      "source_sha256": "596b9f041a74b7e3233323906e67066e01095cde205595934bca3bbd2a43baf9",
+      "output_sha256": "c0b338dea164899ada6f9e8f08fccd51023138e9079037b3d442ac33af719425"
+    },
+    {
+      "image": "ATransportWingL.png",
+      "source_sha256": "f617bb7cc718a344d93c3eda212263b9b1cf50090a20f022981d6919fbdac6b0",
+      "output_sha256": "eff79f7e4c940a718bfbb7578a1b66405e7f19437bf8832a21d546972e7d6f75"
+    },
+    {
+      "image": "ATransportWingR.png",
+      "source_sha256": "83e9e938de19d5403c9d8c81a52963690a814900e29f5359bf915f3419d119f9",
+      "output_sha256": "bfa5dc1f2659107303b9e92e3952a04f196ebf7c9a0b14025079781a5d2493f6"
+    }
+  ]
+}

@@ -1,3 +1,24 @@
+# 헬기와 지상 유닛의 부품·입체감 비교 — 2026-11-09
+
+[부품·그림자·선회 변환 조사](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-depth-20261109)를 추가 게시했다. 사용자 관찰과 가설, 실제 조립 파츠 수, 벨루가의 미연결 별도 부품, AH-10의 비표시 무장, 정면 이미지를 변형하는 선회 경로를 구분했다. 4종의 선회 스프라이트 재제작과 정지·이동 입체감 비교는 TODO에 남겼다.
+
+- Source `2f8e41728cef9e2472fea0ee952c9013509503fd`.
+- Deployment `appgdep_6af0a2670f988191844f40a327bc1b6e`, succeeded.
+- Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_a9d1e80b60c8819182e9e7edb090ddf7`.
+- Safari 로컬 제목·목차·비교 표·본문 표시와 로컬 자료 링크를 확인했다. 기존 소유자 전용 접근과 이전 게시물을 보존했다.
+
+# 헬기 효과·도장과 다음 작업 — 2026-11-09
+
+[수정 결과와 후속 계획](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-followup-20261109)을 기존 소유자 전용 사이트에 게시했다. 좌우 각 7개 플레어, 승인 도장 PNG 적용, 정지·선회·회피 이동 계획, 실제 웹 렌더 캡처와 검사 자료를 포함한다. 아이폰 정식 Release 설치와 저장 진척 보존을 확인했다. 기존 미적용 원인과 아이폰 대량 발동 성능 계측은 미확정·미완료로 구분했다.
+
+- Source `69f35c7285e39ac6796d631d0a821c1fa7e8c256`.
+- Deployment `appgdep_6af0a10d5d6c8191870a9d6c8866b20b`, succeeded.
+- Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_3a0e895bda2481918ac15e604b3ded69`.
+- Safari 로컬 화면에서 새 제목·본문·목차를 확인했다. 보고서 전체 로컬 파일 링크 누락은 0개다. 새 캡처 3개는 원본 RGBA와 같은 무손실 WebP다. 이전 보고서와 접근 범위를 보존했다.
+- 사용자가 뒤이어 요청한 헬기·지상 유닛의 입체감 비교 조사는 `MD-AIRCRAFT-DEPTH-01` TODO에 기록했다.
+
+아래는 이전 게시 기록이다.
+
 # 헬기 4종 도장과 채프·플레어 확대 시안 — 2026-11-09
 
 [도장·실제 웹 비교·확대 시안 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-markings-20261108)를 기존 소유자 전용 사이트에 게시했다. 도장 코드 `fa75480`, 확대 시안 `ca22c89`. 게임 채프·플레어 구현과 성능 검사는 아직 하지 않았다.

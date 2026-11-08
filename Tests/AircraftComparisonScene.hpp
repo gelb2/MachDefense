@@ -23,7 +23,7 @@ struct AircraftComparisonScene {
   static const char* names[]{"AircraftLight","AircraftHeavy","AircraftDuct","AircraftTransport"};
   char suffix[8];std::snprintf(suffix,8,"_%02u",std::clamp(level,1u,10u));
   for(unsigned i=0;i<count;++i){
-   float x=count==4?-165.f+110.f*i:-220.f+48.f*(i%10);float y=count==4?-90.f:-220.f+45.f*(i/10);
+   float x=count==1?0.f:count==4?-165.f+110.f*i:-220.f+48.f*(i%10);float y=count==1?-90.f:count==4?-90.f:-220.f+45.f*(i/10);
    auto id=world->validationSpawn(std::string(names[i%4])+suffix,true,{x,y});auto* a=world->actor(id);
    if(!firing){a->weapons.clear();a->flightTactics->speed=0;a->aircraft.moveSpeed=0;}
    else{auto target=world->validationSpawn("E_Tank_32",false,{x,110});auto* t=world->actor(target);t->weapons.clear();t->enemyAI.stopDelay=t->attackCheck=1e9f;t->hp=t->maxHP=10000000;a->target=target;}
