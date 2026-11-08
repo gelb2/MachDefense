@@ -64,7 +64,8 @@ void World::updateWeapons(WorldActor& a){
         if(target)frame.target=WeaponTarget{target->position,target->hp};
         frame.weaponReady=gun.controller.track(frame);
         if(a.type==0){gun.controller.setAngle(part.reverse&2?a.bipod.rightWeaponAngle:a.bipod.leftWeaponAngle);}
-        part.angle=gun.controller.angle();part.addPosition.x=gun.recoil;if(a.type==0)part.addPosition.y=a.bipod.bodyAddPosY;
+        const bool embedded=gun.name.starts_with("AHeavyRocket")||gun.name.starts_with("AHeavyAirStrike");
+        part.angle=embedded?a.angle:gun.controller.angle();part.addPosition.x=embedded?0:gun.recoil;if(a.type==0)part.addPosition.y=a.bipod.bodyAddPosY;
         const auto poses=models_.pose(a.assembly,geometry_.deviceScale,a.angle,gun.controller.angle(),a.radarAngle);
         // Flattened pose order is traversal order before stable z sorting; match
         // the part's complete path by its ordinal among identical weapon names.
@@ -73,6 +74,7 @@ void World::updateWeapons(WorldActor& a){
         auto muzzle=pose?pose->muzzle(gun.muzzle):std::nullopt;
         if(muzzle&&a.flightTactics)*muzzle=aircraftBankPoint(*muzzle,a.angle,a.flightTactics->bank);
         frame.muzzlePosition={a.position.x+(muzzle?muzzle->x:0),a.position.y+(muzzle?muzzle->y:0)};
+        unsigned salvoIndex=0;
         const auto fired=gun.controller.tick(*definition,frame,random_,[&](const WeaponFire& shot){
             // Original muzzle flash is allocated before damage/projectile creation.
             if(auto* p=particles_->acquire(float(time()),random_)){
@@ -105,7 +107,22 @@ void World::updateWeapons(WorldActor& a){
                 }
                 if(target&&target->hp>0)damage(target->id,definition->damage,a.id);
             }
-            else {WorldProjectile p{gun.name,Projectile::fire(*definition,shot.origin,shot.destination,shot.angle,time(),random_),a.id,{}};p.motion.toPlayer=!a.player;addProjectile(p.weapon,std::move(p.motion),a.id);}
+            else {
+                auto destination=shot.destination;
+                if(target&&gun.name.starts_with("ADuctMissile")){
+                    destination=target->position;
+                    // Left pod: center + 3. Right pod: 3. One simultaneous seven-missile fan.
+                    if(gun.name.starts_with("ADuctMissileR")||salvoIndex>0){
+                        const float theta=float(random_.next())*0x1p-31f*6.28318530718f;
+                        const float radius=float(definition->damageRange)*.5f;
+                        destination.x+=std::cos(theta)*radius;destination.y+=std::sin(theta)*radius;
+                    }
+                }
+                const float angle=gun.name.starts_with("ADuctMissile")?float(std::atan2(double(destination.y-shot.origin.y),double(destination.x-shot.origin.x))):shot.angle;
+                WorldProjectile p{gun.name,Projectile::fire(*definition,shot.origin,destination,angle,time(),random_),a.id,{}};
+                p.motion.toPlayer=!a.player;addProjectile(p.weapon,std::move(p.motion),a.id);
+            }
+            ++salvoIndex;
         });
         if(fired.advanceMuzzle&&pose)gun.muzzle=pose->nextMuzzle(gun.muzzle);
         if(fired.playFireSound)host_.playSound(definition->fireSound);

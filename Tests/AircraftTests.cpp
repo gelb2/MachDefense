@@ -23,10 +23,10 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
    assert(a.type==b.type&&a.damage==b.damage&&a.damageRange==b.damageRange&&a.shotRange==b.shotRange&&a.shotCount==b.shotCount&&a.shotDelay==b.shotDelay&&a.reloadDelay==b.reloadDelay&&a.speed==b.speed&&a.aimRate==b.aimRate&&a.special1==b.special1&&a.special2==b.special2&&a.shell==b.shell&&a.uiTile==b.uiTile&&a.bulletImage==b.bulletImage&&a.bulletTile==b.bulletTile&&a.effectImage==b.effectImage&&a.effectType==b.effectType&&a.effectColumns==b.effectColumns&&a.effectRows==b.effectRows&&a.explodeImage==b.explodeImage&&a.explodeScale==b.explodeScale&&a.fireSound==b.fireSound);
   }
   bool rejected=false;try{catalog.addAlias("E_Tank31_Wpn","E_Turret_Wpn_02");}catch(const std::runtime_error&){rejected=true;}assert(rejected&&catalog.find("E_Tank31_Wpn")->damage==120);
-  // First medium missile burst is exactly two, with the original one-second spacing.
+  // First missile-mech burst: two rounds at the copied original half-second spacing.
   auto missile=*catalog.find("AHeavyMissile");md::WeaponController controller;md::DarwinRandom random(12);md::WeaponFrame frame;frame.manualFire=true;frame.muzzlePosition={17,23};unsigned shots=0;std::vector<double> times;
   for(int i=0;i<240;++i){frame.time=i/60.;controller.tick(missile,frame,random,[&](const md::WeaponFire& f){assert(f.origin.x==17&&f.origin.y==23);++shots;times.push_back(frame.time);});}
-  assert(shots==2&&times[1]-times[0]>=1.&&times[1]-times[0]<1.02);
+  assert(shots==2&&times[1]-times[0]>=.5&&times[1]-times[0]<.52);
  }
  auto models=md::BattleModels::load(r);md::validation::appendAircraftModels(models);
  // Every campaign level and the copied live assembly use the size-only change.
@@ -39,6 +39,7 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
   for(const auto& pose:poses){
    assert(std::abs(pose.deviceScale-viewport*factor)<.00001f);
    if(pose.definition->type==4){auto muzzle=pose.muzzle();assert(muzzle);auto size=r.imageSize(pose.definition->image);
+    if(size.x==0){assert(pose.definition->name.starts_with("AHeavyRocket")||pose.definition->name.starts_with("AHeavyAirStrike"));continue;}
     float dx=muzzle->x-pose.localCenter.x,dy=muzzle->y-pose.localCenter.y;
     assert(std::abs(dx*std::cos(pose.angle)+dy*std::sin(pose.angle)-size.x*.5f*viewport*factor)<=.51f*viewport*factor);
    }
@@ -50,7 +51,7 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
  }
  for(const char* name:{"AircraftLight","AircraftHeavy","AircraftDuct","AircraftTransport"})for(float angle:{0.f,1.57079632679f,3.14159265359f,4.71238898038f}){
   auto poses=models.pose(name,1,angle,angle,angle);
-  for(const auto& pose:poses)if(pose.definition->type==4){auto m=pose.muzzle();assert(m);auto size=r.imageSize(pose.definition->image);float dx=m->x-pose.localCenter.x,dy=m->y-pose.localCenter.y;float forward=dx*std::cos(angle)+dy*std::sin(angle);assert(std::abs(forward-size.x*.5f*pose.deviceScale)<=.51f*pose.deviceScale);assert(pose.definition->sockets.front().x==0&&pose.definition->sockets.front().y==0);}
+  for(const auto& pose:poses)if(pose.definition->type==4){auto m=pose.muzzle();assert(m);auto size=r.imageSize(pose.definition->image);if(size.x==0){assert(pose.definition->name.starts_with("AHeavyRocket")||pose.definition->name.starts_with("AHeavyAirStrike"));continue;}float dx=m->x-pose.localCenter.x,dy=m->y-pose.localCenter.y;float forward=dx*std::cos(angle)+dy*std::sin(angle);assert(std::abs(forward-size.x*.5f*pose.deviceScale)<=.51f*pose.deviceScale);assert(pose.definition->sockets.front().x==0&&pose.definition->sockets.front().y==0);}
  }
 
  for(unsigned mode=0;mode<3;++mode){md::validation::AircraftComparisonScene scene(r,mode);auto& w=*scene.world;assert(w.actors().size()==4);auto before=scene.frame();unsigned heliSprites=0,shadows=0;for(const auto& s:before.sprites)if(s.image.starts_with("ALight")||s.image.starts_with("AHeavy")){assert(s.nearest);++heliSprites;if(s.color.r==0){++shadows;assert(s.color.a==.55f);}}assert(heliSprites==20&&shadows==10);

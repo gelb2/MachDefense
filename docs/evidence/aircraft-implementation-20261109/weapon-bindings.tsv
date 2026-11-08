@@ -1,0 +1,111 @@
+unit	level	weapon	source	count	dpsShare	damage	rawRange	sound	bullet	effect
+Scout Heli	1	ALightGun_01	P_Wpn_Gun_401	1	0.6	11	200	MachineGun03.wav	-	-
+Scout Heli	2	ALightGun_02	P_Wpn_Gun_101	1	0.6	13	210	MachineGun03.wav	-	-
+Scout Heli	3	ALightGun_03	P_Wpn_Gun_402	1	0.6	16	220	MachineGun03.wav	-	-
+Scout Heli	4	ALightGun_04	P_Wpn_Gun_102	1	0.6	18	230	MachineGun04.wav	-	-
+Scout Heli	5	ALightGun_05	P_Wpn_Gun_103	1	0.6	22	240	MachineGun05.wav	-	-
+Scout Heli	6	ALightGun_06	P_Wpn_Gun_407	1	0.6	25	250	MachineGun06.wav	-	-
+Scout Heli	7	ALightGun_07	P_Wpn_Gun_104	1	0.6	29	260	MachineGun07.wav	-	-
+Scout Heli	8	ALightGun_08	P_Wpn_Gun_403	1	0.6	32	270	MachineGun08.wav	-	-
+Scout Heli	9	ALightGun_09	P_Wpn_Gun_105	1	0.6	36	280	MachineGun09.wav	-	-
+Scout Heli	10	ALightGun_10	P_Wpn_Gun_106	1	0.6	37	290	MachineGun10.wav	-	-
+Scout Heli	1	ALightMissile_01	P_Wpn_Msl_101	1	0.4	18	200	Missile01.wav	Bullet_15	Efx_Trail01
+Scout Heli	2	ALightMissile_02	P_Wpn_Msl_108	1	0.4	30	210	Missile02.wav	Bullet_15	Efx_Trail01
+Scout Heli	3	ALightMissile_03	P_Wpn_Msl_102	1	0.4	33	220	Missile03.wav	Bullet_15	Efx_Trail01
+Scout Heli	4	ALightMissile_04	P_Wpn_Msl_105	1	0.4	44	230	Missile04.wav	Bullet_15	Efx_Trail01
+Scout Heli	5	ALightMissile_05	P_Wpn_Msl_106	1	0.4	43	240	Missile05.wav	Bullet_16	Efx_Trail01
+Scout Heli	6	ALightMissile_06	P_Wpn_Msl_302	1	0.4	54	250	Missile06.wav	Bullet_16	Efx_Trail01
+Scout Heli	7	ALightMissile_07	P_Wpn_Msl_303	1	0.4	60	260	Missile07.wav	Bullet_16	Efx_Trail01
+Scout Heli	8	ALightMissile_08	P_Wpn_Msl_304	1	0.4	71	270	Missile08.wav	Bullet_17	Efx_Trail01
+Scout Heli	9	ALightMissile_09	P_Wpn_Msl_305	1	0.4	64	280	Missile09.wav	Bullet_17	Efx_Trail01
+Scout Heli	10	ALightMissile_10	P_Wpn_Msl_307	1	0.4	73	290	Missile10.wav	Bullet_17	Efx_Trail01
+Cheyenne	1	ADuctMissile_01	P_Wpn_Msl_101	1	0.5714285714285714	23	233	Missile01.wav	Bullet_15	Efx_Trail01
+Cheyenne	2	ADuctMissile_02	P_Wpn_Msl_108	1	0.5714285714285714	34	247	Missile02.wav	Bullet_15	Efx_Trail01
+Cheyenne	3	ADuctMissile_03	P_Wpn_Msl_102	1	0.5714285714285714	50	260	Missile03.wav	Bullet_15	Efx_Trail01
+Cheyenne	4	ADuctMissile_04	P_Wpn_Msl_105	1	0.5714285714285714	64	273	Missile04.wav	Bullet_15	Efx_Trail01
+Cheyenne	5	ADuctMissile_05	P_Wpn_Msl_106	1	0.5714285714285714	91	287	Missile05.wav	Bullet_16	Efx_Trail01
+Cheyenne	6	ADuctMissile_06	P_Wpn_Msl_302	1	0.5714285714285714	109	300	Missile06.wav	Bullet_16	Efx_Trail01
+Cheyenne	7	ADuctMissile_07	P_Wpn_Msl_303	1	0.5714285714285714	131	313	Missile07.wav	Bullet_16	Efx_Trail01
+Cheyenne	8	ADuctMissile_08	P_Wpn_Msl_304	1	0.5714285714285714	157	327	Missile08.wav	Bullet_17	Efx_Trail01
+Cheyenne	9	ADuctMissile_09	P_Wpn_Msl_305	1	0.5714285714285714	179	340	Missile09.wav	Bullet_17	Efx_Trail01
+Cheyenne	10	ADuctMissile_10	P_Wpn_Msl_307	1	0.5714285714285714	205	353	Missile10.wav	Bullet_17	Efx_Trail01
+Cheyenne	1	ADuctMissileR_01	P_Wpn_Msl_101	1	0.42857142857142855	23	233	Missile01.wav	Bullet_15	Efx_Trail01
+Cheyenne	2	ADuctMissileR_02	P_Wpn_Msl_108	1	0.42857142857142855	33	247	Missile02.wav	Bullet_15	Efx_Trail01
+Cheyenne	3	ADuctMissileR_03	P_Wpn_Msl_102	1	0.42857142857142855	50	260	Missile03.wav	Bullet_15	Efx_Trail01
+Cheyenne	4	ADuctMissileR_04	P_Wpn_Msl_105	1	0.42857142857142855	63	273	Missile04.wav	Bullet_15	Efx_Trail01
+Cheyenne	5	ADuctMissileR_05	P_Wpn_Msl_106	1	0.42857142857142855	91	287	Missile05.wav	Bullet_16	Efx_Trail01
+Cheyenne	6	ADuctMissileR_06	P_Wpn_Msl_302	1	0.42857142857142855	109	300	Missile06.wav	Bullet_16	Efx_Trail01
+Cheyenne	7	ADuctMissileR_07	P_Wpn_Msl_303	1	0.42857142857142855	131	313	Missile07.wav	Bullet_16	Efx_Trail01
+Cheyenne	8	ADuctMissileR_08	P_Wpn_Msl_304	1	0.42857142857142855	156	327	Missile08.wav	Bullet_17	Efx_Trail01
+Cheyenne	9	ADuctMissileR_09	P_Wpn_Msl_305	1	0.42857142857142855	178	340	Missile09.wav	Bullet_17	Efx_Trail01
+Cheyenne	10	ADuctMissileR_10	P_Wpn_Msl_307	1	0.42857142857142855	204	353	Missile10.wav	Bullet_17	Efx_Trail01
+Beluga	1	ATransportGun_01	P_Wpn_HMG_01	2	0.6	23	267	HMG01.wav	-	-
+Beluga	2	ATransportGun_02	P_Wpn_HMG_02	2	0.6	29	283	HMG02.wav	-	-
+Beluga	3	ATransportGun_03	P_Wpn_HMG_03	2	0.6	42	300	HMG03.wav	-	-
+Beluga	4	ATransportGun_04	P_Wpn_HMG_04	2	0.6	43	317	HMG04.wav	-	-
+Beluga	5	ATransportGun_05	P_Wpn_HMG_05	2	0.6	62	333	HMG05.wav	-	-
+Beluga	6	ATransportGun_06	P_Wpn_HMG_06	2	0.6	71	350	HMG06.wav	-	-
+Beluga	7	ATransportGun_07	P_Wpn_HMG_07	2	0.6	66	367	HMG07.wav	-	-
+Beluga	8	ATransportGun_08	P_Wpn_HMG_08	2	0.6	76	383	HMG08.wav	-	-
+Beluga	9	ATransportGun_09	P_Wpn_HMG_09	2	0.6	84	400	HMG09.wav	-	-
+Beluga	10	ATransportGun_10	P_Wpn_HMG_10	2	0.6	93	417	HMG10.wav	-	-
+Beluga	1	ATransportMissile_01	Turret_msl_01	2	0.4	22	267	Missile01.wav	Bullet_15	Efx_Trail01
+Beluga	2	ATransportMissile_02	Turret_msl_02	2	0.4	31	283	Missile03.wav	Bullet_15	Efx_Trail01
+Beluga	3	ATransportMissile_03	Turret_msl_03	2	0.4	33	300	Missile05.wav	Bullet_16	Efx_Trail01
+Beluga	4	ATransportMissile_04	Turret_msl_04	2	0.4	41	317	Missile07.wav	Bullet_16	Efx_Trail01
+Beluga	5	ATransportMissile_05	Turret_msl_05	2	0.4	52	333	Missile09.wav	Bullet_17	Efx_Trail01
+Beluga	6	ATransportMissile_06	Turret_msl_06	2	0.4	54	350	Missile09.wav	Bullet_17	Efx_Trail01
+Beluga	7	ATransportMissile_07	Turret_msl_07	2	0.4	61	367	Missile09.wav	Bullet_17	Efx_Trail01
+Beluga	8	ATransportMissile_08	Turret_msl_08	2	0.4	65	383	Missile09.wav	Bullet_17	Efx_Trail01
+Beluga	9	ATransportMissile_09	Turret_msl_09	2	0.4	70	400	Missile09.wav	Bullet_17	Efx_Trail01
+Beluga	10	ATransportMissile_10	Turret_msl_10	2	0.4	73	417	Missile09.wav	Bullet_17	Efx_Trail01
+AH-10	1	AHeavyGun_01	Turret_mg_01	1	0.3	5	300	HMG02.wav	-	-
+AH-10	2	AHeavyGun_02	Turret_mg_02	1	0.3	7	320	HMG04.wav	-	-
+AH-10	3	AHeavyGun_03	Turret_mg_03	1	0.3	8	340	HMG06.wav	-	-
+AH-10	4	AHeavyGun_04	Turret_mg_04	1	0.3	9	360	HMG08.wav	-	-
+AH-10	5	AHeavyGun_05	Turret_mg_05	1	0.3	11	380	HMG10.wav	-	-
+AH-10	6	AHeavyGun_06	Turret_mg_06	1	0.3	12	400	HMG10.wav	-	-
+AH-10	7	AHeavyGun_07	Turret_mg_07	1	0.3	13	420	HMG10.wav	-	-
+AH-10	8	AHeavyGun_08	Turret_mg_08	1	0.3	15	440	HMG10.wav	-	-
+AH-10	9	AHeavyGun_09	Turret_mg_09	1	0.3	16	460	HMG10.wav	-	-
+AH-10	10	AHeavyGun_10	Turret_mg_10	1	0.3	18	480	HMG10.wav	-	-
+AH-10	1	AHeavyMissile_01	P_Wpn_Msl_101	1	0.15	29	300	Missile01.wav	Bullet_15	Efx_Trail01
+AH-10	2	AHeavyMissile_02	P_Wpn_Msl_108	1	0.15	41	320	Missile02.wav	Bullet_15	Efx_Trail01
+AH-10	3	AHeavyMissile_03	P_Wpn_Msl_102	1	0.15	46	340	Missile03.wav	Bullet_15	Efx_Trail01
+AH-10	4	AHeavyMissile_04	P_Wpn_Msl_105	1	0.15	57	360	Missile04.wav	Bullet_15	Efx_Trail01
+AH-10	5	AHeavyMissile_05	P_Wpn_Msl_106	1	0.15	60	380	Missile05.wav	Bullet_16	Efx_Trail01
+AH-10	6	AHeavyMissile_06	P_Wpn_Msl_302	1	0.15	70	400	Missile06.wav	Bullet_16	Efx_Trail01
+AH-10	7	AHeavyMissile_07	P_Wpn_Msl_303	1	0.15	68	420	Missile07.wav	Bullet_16	Efx_Trail01
+AH-10	8	AHeavyMissile_08	P_Wpn_Msl_304	1	0.15	71	440	Missile08.wav	Bullet_17	Efx_Trail01
+AH-10	9	AHeavyMissile_09	P_Wpn_Msl_305	1	0.15	60	460	Missile09.wav	Bullet_17	Efx_Trail01
+AH-10	10	AHeavyMissile_10	P_Wpn_Msl_307	1	0.15	64	480	Missile10.wav	Bullet_17	Efx_Trail01
+AH-10	1	AHeavyRocket_01	E_Turret17_Wpn_01	1	0.15	26	300	Wpn_EnMissile.wav	Bullet_19	Efx_Flame
+AH-10	2	AHeavyRocket_02	E_Turret17_Wpn_01	1	0.15	36	320	Wpn_EnMissile.wav	Bullet_19	Efx_Flame
+AH-10	3	AHeavyRocket_03	E_Turret17_Wpn_01	1	0.15	54	340	Wpn_EnMissile.wav	Bullet_19	Efx_Flame
+AH-10	4	AHeavyRocket_04	E_Turret17_Wpn_01	1	0.15	67	360	Wpn_EnMissile.wav	Bullet_19	Efx_Flame
+AH-10	5	AHeavyRocket_05	E_Turret17_Wpn_01	1	0.15	99	380	Wpn_EnMissile.wav	Bullet_19	Efx_Flame
+AH-10	6	AHeavyRocket_06	E_Turret17_Wpn_01	1	0.15	115	400	Wpn_EnMissile.wav	Bullet_19	Efx_Flame
+AH-10	7	AHeavyRocket_07	E_Turret17_Wpn_01	1	0.15	132	420	Wpn_EnMissile.wav	Bullet_19	Efx_Flame
+AH-10	8	AHeavyRocket_08	E_Turret17_Wpn_01	1	0.15	149	440	Wpn_EnMissile.wav	Bullet_19	Efx_Flame
+AH-10	9	AHeavyRocket_09	E_Turret17_Wpn_01	1	0.15	165	460	Wpn_EnMissile.wav	Bullet_19	Efx_Flame
+AH-10	10	AHeavyRocket_10	E_Turret17_Wpn_01	1	0.15	183	480	Wpn_EnMissile.wav	Bullet_19	Efx_Flame
+AH-10	1	AHeavyCannon_01	E_Tank31_Wpn	1	0.25	46	300	Wpn_EnCanon.wav	Bullet_14	Efx_Flame
+AH-10	2	AHeavyCannon_02	E_Tank31_Wpn	1	0.25	63	320	Wpn_EnCanon.wav	Bullet_14	Efx_Flame
+AH-10	3	AHeavyCannon_03	E_Tank31_Wpn	1	0.25	95	340	Wpn_EnCanon.wav	Bullet_14	Efx_Flame
+AH-10	4	AHeavyCannon_04	E_Tank31_Wpn	1	0.25	118	360	Wpn_EnCanon.wav	Bullet_14	Efx_Flame
+AH-10	5	AHeavyCannon_05	E_Tank31_Wpn	1	0.25	174	380	Wpn_EnCanon.wav	Bullet_14	Efx_Flame
+AH-10	6	AHeavyCannon_06	E_Tank31_Wpn	1	0.25	203	400	Wpn_EnCanon.wav	Bullet_14	Efx_Flame
+AH-10	7	AHeavyCannon_07	E_Tank31_Wpn	1	0.25	232	420	Wpn_EnCanon.wav	Bullet_14	Efx_Flame
+AH-10	8	AHeavyCannon_08	E_Tank31_Wpn	1	0.25	262	440	Wpn_EnCanon.wav	Bullet_14	Efx_Flame
+AH-10	9	AHeavyCannon_09	E_Tank31_Wpn	1	0.25	291	460	Wpn_EnCanon.wav	Bullet_14	Efx_Flame
+AH-10	10	AHeavyCannon_10	E_Tank31_Wpn	1	0.25	322	480	Wpn_EnCanon.wav	Bullet_14	Efx_Flame
+AH-10	1	AHeavyAirStrike_01	AS_MISSILE_01	1	0.15	13	300	Missile01.wav	Bullet_15	Efx_Trail01
+AH-10	2	AHeavyAirStrike_02	AS_MISSILE_02	1	0.15	18	320	Missile01.wav	Bullet_15	Efx_Trail01
+AH-10	3	AHeavyAirStrike_03	AS_MISSILE_03	1	0.15	26	340	Missile01.wav	Bullet_16	Efx_Trail01
+AH-10	4	AHeavyAirStrike_04	AS_MISSILE_04	1	0.15	32	360	Missile01.wav	Bullet_16	Efx_Trail01
+AH-10	5	AHeavyAirStrike_05	AS_MISSILE_05	1	0.15	46	380	Missile01.wav	Bullet_17	Efx_Trail01
+AH-10	6	AHeavyAirStrike_06	AS_MISSILE_06	1	0.15	53	400	Missile01.wav	Bullet_17	Efx_Trail01
+AH-10	7	AHeavyAirStrike_07	AS_MISSILE_07	1	0.15	60	420	Missile01.wav	Bullet_17	Efx_Trail01
+AH-10	8	AHeavyAirStrike_08	AS_MISSILE_08	1	0.15	67	440	Missile01.wav	Bullet_17	Efx_Trail01
+AH-10	9	AHeavyAirStrike_09	AS_MISSILE_09	1	0.15	74	460	Missile01.wav	Bullet_17	Efx_Trail01
+AH-10	10	AHeavyAirStrike_10	AS_MISSILE_10	1	0.15	81	480	Missile01.wav	Bullet_17	Efx_Trail01

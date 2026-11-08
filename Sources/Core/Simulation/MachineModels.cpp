@@ -62,6 +62,10 @@ BattleModels BattleModels::load(ResourceAccess& r) {
     }
     return result;
 }
+void BattleModels::appendPartAlias(std::string name,std::string_view source,unsigned type){
+    const auto* original=part(source);if(!original||parts_.contains(name))throw std::runtime_error("Invalid additional part alias");
+    auto copy=*original;copy.name=name;copy.type=type;parts_.emplace(std::move(name),std::move(copy));
+}
 void BattleModels::appendMachineVariant(std::string name,std::string_view source,std::string_view weaponSuffix){
     if(machines_.contains(name))throw std::runtime_error("Duplicate machine variant");
     const auto* original=machine(source);if(!original)throw std::runtime_error("Missing machine variant source");

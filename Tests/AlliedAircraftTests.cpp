@@ -39,7 +39,7 @@ int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];
  for(unsigned mode=3;mode<6;++mode){
   md::validation::AircraftComparisonScene scene(r,mode);auto& w=*scene.world;assert(w.actors().size()==8);
   auto before=scene.save.encode();const float scale=mode==3?1.f:.5f;std::vector<double> ms;std::array<float,4> minX{},maxX{};
-  for(unsigned k=0;k<4;++k){auto& a=*w.actors()[k*2+1];assert(a.player&&a.type==2&&a.flightTactics);assert(a.hp==md::validation::aircraftTrialEconomy(k,1,builds,items,md::BattleGeometry::pad()).hp);assert(a.weapons.size()==(k==0?2:k==1?3:k==2?3:4));minX[k]=maxX[k]=a.position.x;}
+  for(unsigned k=0;k<4;++k){auto& a=*w.actors()[k*2+1];assert(a.player&&a.type==2&&a.flightTactics);assert(a.hp==md::validation::aircraftTrialEconomy(k,1,builds,items,md::BattleGeometry::pad()).hp);assert(a.weapons.size()==(k==0?2:k==1?5:k==2?2:4));minX[k]=maxX[k]=a.position.x;}
   bool shots=false;
   for(int tick=0;tick<3600;++tick){auto start=std::chrono::steady_clock::now();w.tick();auto f=scene.frame();ms.push_back(std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-start).count());shots|=!w.projectiles().empty();
    for(unsigned k=0;k<4;++k){auto& a=*w.actors()[k*2+1];assert(a.hp>0&&std::isfinite(a.position.x)&&std::isfinite(a.position.y));assert(std::abs(a.position.x)<256*scale);minX[k]=std::min(minX[k],a.position.x);maxX[k]=std::max(maxX[k],a.position.x);assert(!a.collision);}
