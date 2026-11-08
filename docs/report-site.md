@@ -1,3 +1,7 @@
+# 헬기 레벨 정의 수정·누락 범위 정정 — 2026-11-09
+
+[기존 개선 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-surface-plan-20261109)를 Sites 버전 245로 갱신했다. 기존 계획이 누락한 Lv.1–10 외형과 남아 있던 실행 중 조립 복제 처리를 명시했다. 40레벨 정의 파일 이전과 새 웹 치트빌드 검사 결과를 기록했다. 벨루가·AH-10 미연결 그림과 4종 강화 외형·도색·질감·입체감은 미완료로 남겼다. 기존 그림과 소유자 전용 접근을 유지했다. [게시 근거](evidence/aircraft-assembly-followup-20261109/report-publication.json).
+
 # 헬기 도색·질감·입체감 개선 과제 — 2026-11-09
 
 [개선 과제 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-surface-plan-20261109)를 Sites 버전 244로 게시했다. 아이폰 정식 Release 설치 결과, 원작 도장·파츠 참조, 네 기체의 수정 부위, 보존 조건과 검사 순서를 담았다. 현재 웹 조립 비교를 기준 이미지로 사용하며 새 도색 시안이나 아이폰 캡처로 표시하지 않았다. 새 미술 변경은 아직 적용하지 않았다.
