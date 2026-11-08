@@ -1,0 +1,23 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/build/save-transfer
+    Start  1: AircraftPaint
+1/9 Test  #1: AircraftPaint ....................   Passed    0.30 sec
+    Start  2: AlliedAircraft
+2/9 Test  #2: AlliedAircraft ...................   Passed    0.19 sec
+    Start  3: Aircraft
+3/9 Test  #3: Aircraft .........................   Passed    0.06 sec
+    Start 21: GameHUD
+4/9 Test #21: GameHUD ..........................   Passed    0.03 sec
+    Start 26: GameSession
+5/9 Test #26: GameSession ......................   Passed    0.34 sec
+    Start 46: AircraftHandling
+6/9 Test #46: AircraftHandling .................   Passed    0.07 sec
+    Start 47: AircraftCampaign
+7/9 Test #47: AircraftCampaign .................   Passed    0.31 sec
+    Start 48: AircraftEvasion
+8/9 Test #48: AircraftEvasion ..................   Passed    0.03 sec
+    Start 49: AircraftDodge
+9/9 Test #49: AircraftDodge ....................   Passed    0.02 sec
+
+100% tests passed out of 9
+
+Total Test time (real) =   1.36 sec

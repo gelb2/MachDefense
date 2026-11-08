@@ -1,0 +1,316 @@
+{
+  "textures": [
+    {
+      "name": "AHeavyRotor.png",
+      "size": [
+        88,
+        88
+      ],
+      "visible": 829,
+      "colourChanged": 786,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ADuctFan.png",
+      "size": [
+        24,
+        24
+      ],
+      "visible": 466,
+      "colourChanged": 459,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ATransportBodyBankL.png",
+      "size": [
+        72,
+        71
+      ],
+      "visible": 2677,
+      "colourChanged": 2642,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ALightGun.png",
+      "size": [
+        14,
+        7
+      ],
+      "visible": 76,
+      "colourChanged": 74,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ALightBody.png",
+      "size": [
+        62,
+        39
+      ],
+      "visible": 1043,
+      "colourChanged": 1025,
+      "markingPixels": 8,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ADuctBody.png",
+      "size": [
+        110,
+        88
+      ],
+      "visible": 4403,
+      "colourChanged": 4311,
+      "markingPixels": 51,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ATransportEngine.png",
+      "size": [
+        50,
+        29
+      ],
+      "visible": 1148,
+      "colourChanged": 1128,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ATransportFan.png",
+      "size": [
+        80,
+        80
+      ],
+      "visible": 1504,
+      "colourChanged": 1412,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "AHeavyBodyBankR.png",
+      "size": [
+        108,
+        154
+      ],
+      "visible": 10008,
+      "colourChanged": 9972,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ATransportWingR.png",
+      "size": [
+        31,
+        49
+      ],
+      "visible": 961,
+      "colourChanged": 946,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ADuctMissile.png",
+      "size": [
+        18,
+        13
+      ],
+      "visible": 214,
+      "colourChanged": 210,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "AHeavyGun.png",
+      "size": [
+        25,
+        10
+      ],
+      "visible": 200,
+      "colourChanged": 197,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ATransportGun.png",
+      "size": [
+        21,
+        11
+      ],
+      "visible": 159,
+      "colourChanged": 154,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ADuctBodyBankL.png",
+      "size": [
+        65,
+        62
+      ],
+      "visible": 2276,
+      "colourChanged": 2248,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ADuctGun.png",
+      "size": [
+        18,
+        7
+      ],
+      "visible": 98,
+      "colourChanged": 93,
+      "markingPixels": 3,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ALightBodyBankR.png",
+      "size": [
+        82,
+        35
+      ],
+      "visible": 1498,
+      "colourChanged": 1472,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ALightRotor.png",
+      "size": [
+        59,
+        59
+      ],
+      "visible": 952,
+      "colourChanged": 899,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ATransportWingL.png",
+      "size": [
+        31,
+        49
+      ],
+      "visible": 961,
+      "colourChanged": 943,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ATransportBody.png",
+      "size": [
+        140,
+        131
+      ],
+      "visible": 5899,
+      "colourChanged": 5825,
+      "markingPixels": 88,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "AHeavyCannon.png",
+      "size": [
+        18,
+        10
+      ],
+      "visible": 146,
+      "colourChanged": 143,
+      "markingPixels": 8,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ADuctBodyBankR.png",
+      "size": [
+        65,
+        62
+      ],
+      "visible": 2275,
+      "colourChanged": 2245,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ALightBodyBankL.png",
+      "size": [
+        82,
+        35
+      ],
+      "visible": 1479,
+      "colourChanged": 1446,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ATransportMissile.png",
+      "size": [
+        21,
+        13
+      ],
+      "visible": 169,
+      "colourChanged": 169,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "AHeavyMissile.png",
+      "size": [
+        16,
+        12
+      ],
+      "visible": 169,
+      "colourChanged": 166,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ALightMissile.png",
+      "size": [
+        13,
+        8
+      ],
+      "visible": 89,
+      "colourChanged": 87,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "ATransportBodyBankR.png",
+      "size": [
+        72,
+        71
+      ],
+      "visible": 2666,
+      "colourChanged": 2636,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "AHeavyBody.png",
+      "size": [
+        76,
+        112
+      ],
+      "visible": 4742,
+      "colourChanged": 4581,
+      "markingPixels": 33,
+      "alphaUnchanged": true
+    },
+    {
+      "name": "AHeavyBodyBankL.png",
+      "size": [
+        108,
+        154
+      ],
+      "visible": 10182,
+      "colourChanged": 10121,
+      "markingPixels": 0,
+      "alphaUnchanged": true
+    }
+  ],
+  "originalTexturesUnchanged": 992,
+  "aircraftTextures": 28,
+  "markedBodies": 4,
+  "allAlphaUnchanged": true
+}
