@@ -43,9 +43,12 @@ prepared=root/'Art/Aircraft/runtime/png-source';prepared.mkdir(exist_ok=True)
 for p in output.glob('*.png'):
  if p.name.startswith(('ALight','AHeavy','ADuct','ATransport')):
   shutil.copy2(p,prepared/p.name)
+if (root/'Art/Aircraft/banking-20261109/manifest.json').exists():
+ from pack_aircraft_banking import run as pack_aircraft_banking
+ pack_aircraft_banking()
 optimize_aircraft_png()
 
 for row in rows:
  row['painted_source_sha256']=row['output_sha256']
  row['output_sha256']=hashlib.sha256((output/row['image']).read_bytes()).hexdigest()
-(source.parent/'manifest.json').write_text(json.dumps({'source_commit':'5eefc3e','transform':'prepareAircraftPaint then Apple pngcrush -iphone -f 0; alpha and opaque RGB verified','painted_source_directory':'Art/Aircraft/runtime/png-source','textures':rows},indent=2)+'\n')
+(source.parent/'manifest.json').write_text(json.dumps({'source_commit':'5eefc3e','transform':'prepareAircraftPaint; preserve neutral tile; append six drawn body roll tiles; Apple pngcrush -iphone -f 0','painted_source_directory':'Art/Aircraft/runtime/png-source','textures':rows},indent=2)+'\n')

@@ -14,6 +14,26 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
   w.damage(id,a->hp);w.tick();assert(a->hp==0&&a->flightHeight==0&&a->flightTactics->bank==0&&a->aircraft.speed==0);
   Frame dead;w.appendSprites(dead);bool shadow=false;for(const auto& s:dead.sprites)if(s.image.starts_with(spec.model=="AircraftLight"?"ALight":spec.model=="AircraftHeavy"?"AHeavy":spec.model=="AircraftDuct"?"ADuct":"ATransport")&&s.color.r==0){assert(s.color.a==.18f);shadow=true;}assert(shadow);
  }
+ // Seven original-style tiles: neutral uses the approved dimensions; rolls
+ // select six distinct source rectangles without shearing the drawn body.
+ for(const auto& body:std::array<std::pair<const char*,Vec2>,4>{{
+  {"ALightBody",{62,39}},{"AHeavyBody",{76,112}},
+  {"ADuctBody",{110,88}},{"ATransportBody",{140,131}}}}){
+  const auto models=BattleModels::load(r);const auto* definition=models.part(body.first);
+  assert(definition&&definition->tileCount==7&&definition->splitX==7);
+  const auto size=r.imageSize(definition->image);assert(size.x==body.second.x*7&&size.y==body.second.y);
+  Sprite sprite;sprite.image=definition->image;sprite.sourcePx=Rect{0,0,body.second.x,body.second.y};
+  sprite.destination={10,20,body.second.x,body.second.y};sprite.nearest=true;
+  for(unsigned tile=0;tile<7;++tile){
+   const float bank=tile==0?0.f:(tile<=3?-float(tile):float(tile-3))*.13962634f;
+   auto mesh=aircraftBankMesh(sprite,{100,100},0,bank,size);
+   assert(mesh.nearest&&mesh.image==sprite.image&&mesh.vertices.size()==4);
+   assert(std::abs(mesh.vertices[0].uv.x-float(tile)/7)<.000001f);
+   assert(std::abs(mesh.vertices[1].uv.x-float(tile+1)/7)<.000001f);
+   assert(mesh.vertices[0].position.x==10&&mesh.vertices[0].position.y==20);
+   assert(mesh.vertices[3].position.x==10+body.second.x&&mesh.vertices[3].position.y==20+body.second.y);
+  }
+ }
  // A banked part must retain the neutral part's texture sampling.
  for(bool nearest:{false,true}){Sprite s;s.image="ALightBody";s.nearest=nearest;s.destination={0,0,20,60};
   auto m=aircraftBankMesh(s,{10,30},1.5707963f,.5f,{20,60});assert(m.nearest==nearest);

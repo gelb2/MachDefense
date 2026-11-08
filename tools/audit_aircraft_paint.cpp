@@ -33,20 +33,21 @@ int main(int argc,char** argv){
         ++aircraft;assert(marked<=visible/8+1);
         if(argc==3){
             int ow,oh,oc;auto output=std::filesystem::path(argv[2])/name;
-            auto* q=stbi_load(output.c_str(),&ow,&oh,&oc,4);assert(q&&ow==w&&oh==h);
+            auto* q=stbi_load(output.c_str(),&ow,&oh,&oc,4);assert(q&&(ow==w||ow==w*7)&&oh==h);
             // Apple CgBI stores premultiplied integer channels. Keep exact alpha
             // and opaque pixels; partial-alpha rounding stays below one output
             // channel level after compositing, verified by the decode audit.
             for(std::size_t i=0;i<count;++i){
-                const auto a=paint[i*4+3];assert(q[i*4+3]==a);
+                const auto j=(i/std::size_t(w)*ow+i%w)*4;
+                const auto a=paint[i*4+3];assert(q[j+3]==a);
                 for(unsigned c=0;c<3;++c){
-                    const auto difference=std::abs(int(paint[i*4+c])-int(q[i*4+c]));
+                    const auto difference=std::abs(int(paint[i*4+c])-int(q[j+c]));
                     if(a==255)assert(difference==0);
                     assert(difference*unsigned(a)<=255);
                 }
             }
-            std::vector<std::uint8_t> decoded(q,q+count*4);
-            md::applyAircraftPaint(name,q,count,w,h);
+            std::vector<std::uint8_t> decoded(q,q+std::size_t(ow)*oh*4);
+            md::applyAircraftPaint(name,q,std::size_t(ow)*oh,ow,oh);
             assert(std::equal(decoded.begin(),decoded.end(),q));stbi_image_free(q);
         }
         if(name=="ALightBody.png"||name=="ATransportBody.png"||name=="AHeavyBody.png"||name=="ADuctBody.png"){

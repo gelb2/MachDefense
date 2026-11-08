@@ -1,10 +1,10 @@
 {
-  "source": "Approved assembly at 26da2db; numeric values preserved, serialized using original QChunk layout",
+  "source": "Approved sockets and assembly at 26da2db; neutral plus six drawn roll tiles per body; original QChunk layout",
   "parts": [
     {
       "name": "ALightBody",
       "type": 0,
-      "tileCount": 1,
+      "tileCount": 7,
       "sockets": [
         [
           0.0,
@@ -22,7 +22,8 @@
           3.71,
           15.6
         ]
-      ]
+      ],
+      "preparedImage": "Art/Aircraft/banking-20261109/prepared/ALightBody.png"
     },
     {
       "name": "ALightRotor",
@@ -76,7 +77,7 @@
     {
       "name": "AHeavyBody",
       "type": 0,
-      "tileCount": 1,
+      "tileCount": 7,
       "sockets": [
         [
           0.0,
@@ -110,7 +111,8 @@
           26.0,
           -18.0
         ]
-      ]
+      ],
+      "preparedImage": "Art/Aircraft/banking-20261109/prepared/AHeavyBody.png"
     },
     {
       "name": "AHeavyRotor",
@@ -209,7 +211,7 @@
     {
       "name": "ADuctBody",
       "type": 0,
-      "tileCount": 1,
+      "tileCount": 7,
       "sockets": [
         [
           0.0,
@@ -235,7 +237,8 @@
           -13.0,
           -19.0
         ]
-      ]
+      ],
+      "preparedImage": "Art/Aircraft/banking-20261109/prepared/ADuctBody.png"
     },
     {
       "name": "ADuctFan",
@@ -285,7 +288,7 @@
     {
       "name": "ATransportBody",
       "type": 0,
-      "tileCount": 1,
+      "tileCount": 7,
       "sockets": [
         [
           0.0,
@@ -323,7 +326,8 @@
           -2.0,
           -47.0
         ]
-      ]
+      ],
+      "preparedImage": "Art/Aircraft/banking-20261109/prepared/ATransportBody.png"
     },
     {
       "name": "ATransportFan",

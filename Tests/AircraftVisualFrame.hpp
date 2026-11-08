@@ -3,13 +3,26 @@
 #include "Core/Simulation/AircraftModels.hpp"
 #include "Core/Simulation/PlayerParts.hpp"
 #include <algorithm>
+#include "AircraftComparisonScene.hpp"
 namespace md::validation {
 // Cheat-only measured sheet: production parts and sprite assembly, uniform scale.
 inline Frame aircraftVisualFrame(ResourceAccess& r,unsigned mode){
+ if(mode>=10&&mode<=16){
+  AircraftComparisonScene scene(r,3);scene.production(1,4,false);
+  static constexpr float banks[]{0,-.13962634f,-.27925268f,-.41887902f,.13962634f,.27925268f,.41887902f};
+  static constexpr Vec2 positions[]{{-150,140},{-150,-140},{150,140},{150,-140}};
+  unsigned index=0;for(const auto& a:scene.world->actors())if(!a->removed&&a->flightTactics){
+   a->position=a->aircraft.position=positions[index++];a->angle=a->aircraft.angle=1.57079632679f;
+   a->flightTactics->bank=banks[mode-10];a->radarAngle=0;
+  }
+  auto reference=scene.world->validationSpawn("E_Tank_32",false,{0,0});
+  scene.world->actor(reference)->weapons.clear();
+  return scene.frame();
+ }
  auto models=BattleModels::load(r);appendAircraftModels(models);
  auto dims=[&](std::string_view n){return r.imageSize(n);};
  Frame f;f.logicalWidth=640;f.logicalHeight=800;f.background={.18f,.20f,.20f,1};
- auto one=[&](std::string_view image,Vec2 center,float scale){scale*=aircraftAssemblyScale(image.substr(0,image.size()-4));auto d=dims(image);Sprite s;s.image=image;s.destination={center.x-d.x*scale/2,center.y-d.y*scale/2,d.x*scale,d.y*scale};s.rotationDegrees=-90;s.nearest=true;f.sprites.push_back(s);};
+ auto one=[&](std::string_view image,Vec2 center,float scale){scale*=aircraftAssemblyScale(image.substr(0,image.size()-4));auto d=dims(image);Sprite s;s.image=image;if(auto part=models.part(image.substr(0,image.size()-4))){d.x/=part->splitX;d.y/=part->splitY;s.sourcePx=Rect{0,0,d.x,d.y};}s.destination={center.x-d.x*scale/2,center.y-d.y*scale/2,d.x*scale,d.y*scale};s.rotationDegrees=-90;s.nearest=true;f.sprites.push_back(s);};
  auto machine=[&](const char* name,Vec2 c,float scale){Frame t;models.appendSprites(t,name,c,scale,1.57079632679f,1.57079632679f,mode>=4?0.f:float(mode)*.5f,dims);for(auto s:t.sprites)if(s.color.r!=0){s.nearest=true;f.sprites.push_back(s);}};
  if(mode==7){
   f.logicalWidth=900;f.logicalHeight=900;

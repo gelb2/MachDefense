@@ -4,11 +4,17 @@ import hashlib,json,subprocess,tempfile
 from pathlib import Path
 from prepare_resources import png_pixels
 ROOT=Path(__file__).resolve().parents[1]
+def prepared_source(path):
+ spec=json.loads((ROOT/'Art/Aircraft/runtime/assembly.json').read_text())
+ part=next((p for p in spec['parts'] if p['name']==path.stem),{})
+ return ROOT/part['preparedImage'] if part.get('preparedImage') else path
+
 def run():
  source=ROOT/'Art/Aircraft/runtime/png-source';dest=ROOT/'Resources/Images'
  pngcrush=subprocess.check_output(['xcrun','--find','pngcrush'],text=True).strip();rows=[]
  for p in sorted(source.glob('*.png')):
   assert p.name.startswith(('ALight','AHeavy','ADuct','ATransport'))
+  p=prepared_source(p)
   meta,before=png_pixels(p.read_bytes());assert not meta['cgbi']
   output=dest/p.name
   with tempfile.TemporaryDirectory(prefix='md-heli-png-') as td:
@@ -18,7 +24,7 @@ def run():
    assert before[3::4]==after[3::4]
    assert all(before[i+c]==after[i+c] for i in range(0,len(before),4) if before[i+3]==255 for c in range(3))
    output.write_bytes(temp.read_bytes())
-  rows.append({'image':p.name,'sourceSHA256':hashlib.sha256(p.read_bytes()).hexdigest(),'outputSHA256':hashlib.sha256(output.read_bytes()).hexdigest(),'size':[meta['width'],meta['height']],'inputBytes':p.stat().st_size,'outputBytes':output.stat().st_size,'cgbi':True,'alphaUnchanged':True,'opaqueRGBUnchanged':True})
+  rows.append({'image':p.name,'sourcePath':str(p.relative_to(ROOT)),'sourceSHA256':hashlib.sha256(p.read_bytes()).hexdigest(),'outputSHA256':hashlib.sha256(output.read_bytes()).hexdigest(),'size':[meta['width'],meta['height']],'inputBytes':p.stat().st_size,'outputBytes':output.stat().st_size,'cgbi':True,'alphaUnchanged':True,'opaqueRGBUnchanged':True})
  report={'tool':'Apple pngcrush -iphone -f 0','scope':'Helicopter-only build preparation; original images and renderer unchanged','textures':rows}
  (ROOT/'Art/Aircraft/runtime/png-optimization.json').write_text(json.dumps(report,indent=2)+'\n');print('Optimized',len(rows),'helicopter textures with Apple pngcrush')
 if __name__=='__main__':run()

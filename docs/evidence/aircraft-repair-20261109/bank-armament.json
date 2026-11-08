@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "levels": [
+    1,
+    10
+  ],
+  "dodge": true,
+  "audio": {
+    "created": 2,
+    "closed": 0
+  },
+  "errors": [],
+  "performanceMeasured": false
+}

@@ -1,12 +1,12 @@
 {
   "source_commit": "5eefc3e",
-  "transform": "prepareAircraftPaint then Apple pngcrush -iphone -f 0; alpha and opaque RGB verified",
+  "transform": "prepareAircraftPaint; preserve neutral tile; append six drawn body roll tiles; Apple pngcrush -iphone -f 0",
   "painted_source_directory": "Art/Aircraft/runtime/png-source",
   "textures": [
     {
       "image": "ADuctBody.png",
       "source_sha256": "c8bf2a2288f4c8bbf295e9c609116e549950ee1691af485a3d1c3e931780a932",
-      "output_sha256": "77765d79fd6014eea89e12b341c7ecf43582d95befb0d6c64674b703ea8edc99",
+      "output_sha256": "1731952753ea0b5a1197512b63efd4153a9079c1050dbf141a7c1d5d38d055c5",
       "painted_source_sha256": "6a30422b8880203bbebb4b9611f0478f7fdd084c4e50918818f6194b882da944"
     },
     {
@@ -42,7 +42,7 @@
     {
       "image": "AHeavyBody.png",
       "source_sha256": "fbc13c890b6c219caae6a716c509d464abd0ef0c5bb142dbdc21696203a5612e",
-      "output_sha256": "a26f14826ec58ed1a2952cc3e8e54ccbadda0ce18e12cde2b6bf4d315530552d",
+      "output_sha256": "32fb830199458230ef62dfca08c3a0337d4bee595574fcbdb7c4fabe6e087a9d",
       "painted_source_sha256": "b8d01435bc63725f91498b83b78132a6c175bde40663e04afbe63fdbe67efdb1"
     },
     {
@@ -84,7 +84,7 @@
     {
       "image": "ALightBody.png",
       "source_sha256": "8e90729121e037158c94804bba64b05facd0e5e99bfa7b2059805e278468badd",
-      "output_sha256": "4337939c25a3fbd130ff84089f3b91910d849663d254c1a738bad3338ea5b1db",
+      "output_sha256": "a2e67664a75c7bca729dcca4640fb6b8f54a3eb54ffe674f6910c1df70273c2b",
       "painted_source_sha256": "4a11f4410fc41474b15e590cfdf18dfbee6bd5dacdb3b8f769875e283fca502c"
     },
     {
@@ -120,7 +120,7 @@
     {
       "image": "ATransportBody.png",
       "source_sha256": "6e844ce3217f9756ff6a99fdd64b2f120e001896974c6164cf59c228c1c4244e",
-      "output_sha256": "e743a56f5f491e11e537bae277c3ed83bdabe7a86423b2498b3ec90a0d28f010",
+      "output_sha256": "1ac48df861e9287789e0796236f0606d93cf6fa0795ac3291d57035172f69995",
       "painted_source_sha256": "7d3a2604798605783b1b6cdc76419f152deb23d4be4e6f49ba2c2e8c65f2fe79"
     },
     {

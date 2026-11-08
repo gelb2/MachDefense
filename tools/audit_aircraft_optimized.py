@@ -8,6 +8,7 @@ import tempfile
 from pathlib import Path
 from audit_aircraft_cgbi import CPP
 from prepare_resources import png_pixels
+from optimize_aircraft_png import prepared_source
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -19,6 +20,7 @@ def audit():
         subprocess.run(['c++', '-std=c++20', '-O2', '-I'+str(ROOT/'Modules/ThirdParty/stb'),
                         str(work/'decode.cpp'), '-o', str(work/'decode')], check=True)
         for source in sorted((ROOT/'Art/Aircraft/runtime/png-source').glob('*.png')):
+            source = prepared_source(source)
             destination = ROOT/'Resources/Images'/source.name
             metadata, pixels = png_pixels(source.read_bytes())
             optimized, premultiplied = png_pixels(destination.read_bytes())
