@@ -4,6 +4,13 @@
 #include <bit>
 #include <stdexcept>
 namespace md {
+// 2026-11-08 size-only revision, relative to the packed art in 7e7fa8f.
+// Keep the PNG pixels intact; apply this to the whole pose, including muzzles.
+inline constexpr float aircraftAssemblyScale(std::string_view rootPart){
+ if(rootPart=="AHeavyBody")return 1.20f;
+ if(rootPart=="ADuctBody"||rootPart=="ATransportBody")return .85f;
+ return 1.f;
+}
 struct AircraftWeaponBinding { const char* part; const char* original; };
 inline constexpr AircraftWeaponBinding aircraftWeapons[]{
  {"ALightGun","E_Turret_Wpn_02"}, {"ALightMissile","E_Turret17_Wpn_01"},

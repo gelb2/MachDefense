@@ -1,3 +1,9 @@
+# 헬기 크기 변경 — 2026-11-08
+
+`7e7fa8f` 기준 AH-10 1.20배, Beluga·Cheyenne 0.85배를 적용했다. 당분간 디자인 디테일과 색조를 유지한다. PNG 1,020개는 동일하다. 360각도 측정·C++ 8개·Safari 전투 검사가 통과했다. [크기와 근거](docs/evidence/aircraft-size-20261108.md). 게임 main·운영 PWA·기기 미갱신.
+
+아래는 이전 기록이다.
+
 # 헬기 에셋 후속 제작 — 2026-11-08
 
 Cheyenne 생성·분리·조립과 Beluga 로터 중심 수정을 마쳤다. AH-10 기존 재작업을 함께 보존했다. C++ 8개와 Safari 실제 World 검사가 통과했다. 기기·게임 main·운영 PWA는 갱신하지 않았다. [파일·조립 비교·검사·남은 범위](docs/evidence/aircraft-resume-20261108.md).

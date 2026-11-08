@@ -73,7 +73,11 @@ void World::appendSprites(Frame& frame)const{
             if(part.sprites.size()==2){
                 if(a->flightHeight>0){
                     // The silhouette follows the same moving part on the ground.
-                    auto& shadow=part.sprites[0];shadow.destination.x+=a->flightHeight*scale;shadow.destination.y+=a->flightHeight*scale;shadow.color.a=.55f;
+                    // Resizing the silhouette must not change its flight height
+                    // or the original four-pixel ground-shadow offset.
+                    auto& shadow=part.sprites[0];
+                    const float offset=a->flightHeight*scale+4*(scale-pose.deviceScale);
+                    shadow.destination.x+=offset;shadow.destination.y+=offset;shadow.color.a=.55f;
                     shadow.nearest=part.sprites[1].nearest=true;
 
                 }
@@ -89,7 +93,7 @@ void World::appendSprites(Frame& frame)const{
                     // Use the preserved body texture throughout a roll. Switching
                     // to a separately generated pose changed the approved design.
                     for(unsigned i=0;i<2;++i){auto& dst=layers[i?layer:0];auto pivot=origin;
-                        if(!i){pivot.x+=a->flightHeight*scale+4*pose.deviceScale;pivot.y+=a->flightHeight*scale+4*pose.deviceScale;}
+                        if(!i){pivot.x+=(a->flightHeight+4)*scale;pivot.y+=(a->flightHeight+4)*scale;}
                         auto mesh=aircraftBankMesh(part.sprites[i],pivot,a->angle,bank,resources_.imageSize(part.sprites[i].image));
                         mesh.beforeSpriteIndex=dst.sprites.size();dst.meshes.push_back(std::move(mesh));
                     }

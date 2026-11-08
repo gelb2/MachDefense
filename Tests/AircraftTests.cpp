@@ -29,6 +29,25 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
   assert(shots==2&&times[1]-times[0]>=1.&&times[1]-times[0]<1.02);
  }
  auto models=md::BattleModels::load(r);md::validation::appendAircraftModels(models);
+ // Every campaign level and the copied live assembly use the size-only change.
+ // Check texture dimensions and weapon tips together, including phone scaling.
+ for(const auto& [name,factor]:std::vector<std::pair<std::string,float>>{{"AircraftLight",1.f},{"AircraftHeavy",1.2f},{"AircraftDuct",.85f},{"AircraftTransport",.85f}})
+ for(unsigned level=1;level<=10;++level)for(float viewport:{.5f,1.f,1.375f}){
+  const auto variant=name+"_"+(level<10?"0":"")+std::to_string(level);
+  auto poses=models.pose(*models.machine(variant),viewport,.7f,-.4f,1.1f);
+  md::Frame frame;models.appendSprites(frame,poses,{},[&](std::string_view n){return r.imageSize(n);});
+  for(const auto& pose:poses){
+   assert(std::abs(pose.deviceScale-viewport*factor)<.00001f);
+   if(pose.definition->type==4){auto muzzle=pose.muzzle();assert(muzzle);auto size=r.imageSize(pose.definition->image);
+    float dx=muzzle->x-pose.localCenter.x,dy=muzzle->y-pose.localCenter.y;
+    assert(std::abs(dx*std::cos(pose.angle)+dy*std::sin(pose.angle)-size.x*.5f*viewport*factor)<=.51f*viewport*factor);
+   }
+  }
+  for(const auto& sprite:frame.sprites){auto size=r.imageSize(sprite.image);
+   assert(std::abs(sprite.destination.width-size.x*viewport*factor)<.0001f);
+   assert(std::abs(sprite.destination.height-size.y*viewport*factor)<.0001f);
+  }
+ }
  for(const char* name:{"AircraftLight","AircraftHeavy","AircraftDuct","AircraftTransport"})for(float angle:{0.f,1.57079632679f,3.14159265359f,4.71238898038f}){
   auto poses=models.pose(name,1,angle,angle,angle);
   for(const auto& pose:poses)if(pose.definition->type==4){auto m=pose.muzzle();assert(m);auto size=r.imageSize(pose.definition->image);float dx=m->x-pose.localCenter.x,dy=m->y-pose.localCenter.y;float forward=dx*std::cos(angle)+dy*std::sin(angle);assert(std::abs(forward-size.x*.5f*pose.deviceScale)<=.51f*pose.deviceScale);assert(pose.definition->sockets.front().x==0&&pose.definition->sockets.front().y==0);}

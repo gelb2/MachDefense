@@ -96,7 +96,7 @@ std::vector<PartPose> BattleModels::pose(std::string_view name,float scale,float
     return pose(*tree,scale,bodyAngle,weaponAngle,radarAngle);
 }
 std::vector<PartPose> BattleModels::pose(const std::vector<AssemblyPart>& tree,float scale,float bodyAngle,float weaponAngle,float radarAngle) const {
-    // Aircraft PNGs are packed at their measured final size; no hidden art scale.
+    // Build the original pose first, then apply the documented aircraft size.
     std::vector<PartPose> poses;
     auto rotate=[](Vec2 v,float a){float c=std::cos(a),s=std::sin(a);return Vec2{v.x*c-v.y*s,v.x*s+v.y*c};};
     std::function<void(const AssemblyPart&,Vec2,float,bool)> append=[&](const AssemblyPart& a,Vec2 basePos,float parentAngle,bool hasParent){
@@ -112,6 +112,11 @@ std::vector<PartPose> BattleModels::pose(const std::vector<AssemblyPart>& tree,f
         }
     };
     for(const auto& a:tree) append(a,{},bodyAngle,false);
+    const float assemblyScale=tree.empty()?1.f:aircraftAssemblyScale(tree.front().name);
+    for(auto& p:poses){
+        p.localCenter.x*=assemblyScale;p.localCenter.y*=assemblyScale;
+        p.deviceScale*=assemblyScale;
+    }
     std::stable_sort(poses.begin(),poses.end(),[](const auto& a,const auto& b){return a.zOrder<b.zOrder;});
     return poses;
 }

@@ -9,7 +9,7 @@ inline Frame aircraftVisualFrame(ResourceAccess& r,unsigned mode){
  auto models=BattleModels::load(r);appendAircraftModels(models);
  auto dims=[&](std::string_view n){return r.imageSize(n);};
  Frame f;f.logicalWidth=640;f.logicalHeight=800;f.background={.18f,.20f,.20f,1};
- auto one=[&](std::string_view image,Vec2 center,float scale){auto d=dims(image);Sprite s;s.image=image;s.destination={center.x-d.x*scale/2,center.y-d.y*scale/2,d.x*scale,d.y*scale};s.rotationDegrees=-90;s.nearest=true;f.sprites.push_back(s);};
+ auto one=[&](std::string_view image,Vec2 center,float scale){scale*=aircraftAssemblyScale(image.substr(0,image.size()-4));auto d=dims(image);Sprite s;s.image=image;s.destination={center.x-d.x*scale/2,center.y-d.y*scale/2,d.x*scale,d.y*scale};s.rotationDegrees=-90;s.nearest=true;f.sprites.push_back(s);};
  auto machine=[&](const char* name,Vec2 c,float scale){Frame t;models.appendSprites(t,name,c,scale,1.57079632679f,1.57079632679f,float(mode)*.5f,dims);for(auto s:t.sprites)if(s.color.r!=0){s.nearest=true;f.sprites.push_back(s);}};
  if(mode==3){
   f.logicalWidth=900;f.logicalHeight=900;
