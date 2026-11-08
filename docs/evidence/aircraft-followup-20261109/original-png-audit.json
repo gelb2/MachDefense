@@ -1,0 +1,124 @@
+{
+  "archiveSHA256": "882fe8efa9a0c3d51c23da190ee3d30376a1b6766e16cc6b87daf09b98dc92b1",
+  "sourceVersion": "WeMade MachDefense 1.0.3",
+  "images": [
+    {
+      "file": "E_Tank32_Body.png",
+      "sourceMember": "Payload/MachDefense.app/E_Tank32_Body.png",
+      "signature": "PNG",
+      "chunks": [
+        "CgBI",
+        "IHDR",
+        "iCCP",
+        "pHYs",
+        "IDAT",
+        "IEND"
+      ],
+      "IHDR": [
+        100,
+        105,
+        8,
+        6,
+        0,
+        0,
+        0
+      ],
+      "sha256": "326593c9e0c5d25345e58d1774f4b54bd1d5187bdae7052fa601f37c7dbfaaf9"
+    },
+    {
+      "file": "E_Tank32_Wpn.png",
+      "sourceMember": "Payload/MachDefense.app/E_Tank32_Wpn.png",
+      "signature": "PNG",
+      "chunks": [
+        "CgBI",
+        "IHDR",
+        "iCCP",
+        "pHYs",
+        "IDAT",
+        "IEND"
+      ],
+      "IHDR": [
+        67,
+        65,
+        8,
+        6,
+        0,
+        0,
+        0
+      ],
+      "sha256": "4f56c6de4704acc129fbac71d0e66b9cd052b0b2d5324d17ad50aaf27b5ed537"
+    },
+    {
+      "file": "P_Body_18.png",
+      "sourceMember": "Payload/MachDefense.app/P_Body_18.png",
+      "signature": "PNG",
+      "chunks": [
+        "CgBI",
+        "IHDR",
+        "iCCP",
+        "cHRM",
+        "pHYs",
+        "IDAT",
+        "IEND"
+      ],
+      "IHDR": [
+        64,
+        64,
+        8,
+        6,
+        0,
+        0,
+        0
+      ],
+      "sha256": "9714ad1d7e0d5f9b1b2a029b4e18038b3f9e09304afbd6cbaff245b938325b41"
+    },
+    {
+      "file": "P_Wpn_Gun_106.png",
+      "sourceMember": "Payload/MachDefense.app/P_Wpn_Gun_106.png",
+      "signature": "PNG",
+      "chunks": [
+        "CgBI",
+        "IHDR",
+        "iCCP",
+        "cHRM",
+        "pHYs",
+        "IDAT",
+        "IEND"
+      ],
+      "IHDR": [
+        64,
+        16,
+        8,
+        6,
+        0,
+        0,
+        0
+      ],
+      "sha256": "2a883e4010e1280bff6d7ae8cab5758c84b572cde468fc15332b51021051a2bd"
+    },
+    {
+      "file": "P_Foot_32x16.png",
+      "sourceMember": "Payload/MachDefense.app/P_Foot_32x16.png",
+      "signature": "PNG",
+      "chunks": [
+        "CgBI",
+        "IHDR",
+        "iCCP",
+        "cHRM",
+        "pHYs",
+        "IDAT",
+        "IEND"
+      ],
+      "IHDR": [
+        256,
+        64,
+        8,
+        6,
+        0,
+        0,
+        0
+      ],
+      "sha256": "51f5f4577323b82818856943a5ac30c88f8406232507630215f3e5ba8ef5c699"
+    }
+  ]
+}

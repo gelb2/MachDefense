@@ -1,3 +1,12 @@
+# 헬기와 원작 유닛의 파일·렌더링 경로 — 2026-11-09
+
+[원본 PNG와 파일·렌더링 대조](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-asset-parity-20261109)를 추가 게시했다. 원본 IPA의 PNG 서명·CgBI·IHDR 검사, 헬기 28개 파일과 실제 조립 참조 17개, 공통점·차이·남은 전수 대조 범위를 담았다. 원본 패키지·실행 파일은 올리지 않았다. 생성한 전체 로컬 자료 링크를 검사했다.
+
+- Source `671424c74d1d255085e20cd17fcf9fcb84a7d0b8`.
+- Deployment `appgdep_6af0a3be500c8191a88c34ddf13eca56`, succeeded.
+- Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_bbced09a04588191801e12a356729e0e`.
+- 기존 소유자 전용 접근과 이전 보고서는 보존했다. 추가 조사는 앱 변경을 포함하지 않는다.
+
 # 헬기와 지상 유닛의 부품·입체감 비교 — 2026-11-09
 
 [부품·그림자·선회 변환 조사](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-depth-20261109)를 추가 게시했다. 사용자 관찰과 가설, 실제 조립 파츠 수, 벨루가의 미연결 별도 부품, AH-10의 비표시 무장, 정면 이미지를 변형하는 선회 경로를 구분했다. 4종의 선회 스프라이트 재제작과 정지·이동 입체감 비교는 TODO에 남겼다.
