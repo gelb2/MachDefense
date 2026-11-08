@@ -1,3 +1,13 @@
+# 헬기 PNG 처리와 검증 누락 경위 — 2026-11-09
+
+[기술 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-cgbi-20261109)와 [경위서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-resource-incident-20261109)를 게시했다. 원본 PNG 948개의 CgBI·색 메타데이터, 5개 원작 샘플과 헬기 28개의 픽셀 해독 검사, 실제 Release 자원 6개 대조, 질감·로딩·프레임 영향의 확인 범위와 미측정 범위를 기록했다. 원작 절차를 충분히 따르지 않은 구현 선택과 검증 누락의 책임은 Codex에 있음을 경위서에 명시했다.
+
+- Source `7a8f00cea9ce30174a47a077df46d26709702f76`.
+- Deployment `appgdep_6af0a83790a0819183c3daabe8f7f47e`, succeeded.
+- Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_5acea5c5dd0c819198e74a98f4a66f86`.
+- Safari 로컬 화면에서 경위서 제목·본문·표·목차를 확인하고 전체 로컬 자료 링크를 검사했다. 기존 소유자 전용 접근과 이전 보고서를 보존했다.
+- 원작 패키지·실행 파일·계정 정보는 게시하지 않았다. 실기기 성능 계측과 헬기 C++ 로직 전수진단은 TODO에 남겼다. 이번 게시에 게임 코드·자원 변경은 없다.
+
 # 헬기와 원작 유닛의 파일·렌더링 경로 — 2026-11-09
 
 [원본 PNG와 파일·렌더링 대조](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-asset-parity-20261109)를 추가 게시했다. 원본 IPA의 PNG 서명·CgBI·IHDR 검사, 헬기 28개 파일과 실제 조립 참조 17개, 공통점·차이·남은 전수 대조 범위를 담았다. 원본 패키지·실행 파일은 올리지 않았다. 생성한 전체 로컬 자료 링크를 검사했다.
