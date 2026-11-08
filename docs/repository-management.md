@@ -13,3 +13,9 @@ ignore·훅을 강제로 우회하거나 Git 밖에서 업로드하면 Git 검�
 ## 웹 배포
 
 정식 게임은 `Web/tools/package.py`로 포장하고 `Web/tools/publish.py`로 독립 `gh-pages` 브랜치에 게시한다. GitHub Pages는 이 브랜치의 루트를 배포한다. 제품 파일 허용 목록과 SHA-256을 검사하며 소스·개인 저장·원본 패키지를 배포 폴더에 섞지 않는다. 게임 소스의 main 병합 규칙은 그대로 유지한다.
+
+## develop·main 갱신 권한 — 2026-11-09
+
+[GitHub 규칙 26816831](https://github.com/gelb2/MachDefense/rules/26816831)은 `develop`과 `main`의 갱신을 제한한다. 예외는 사용자 계정 `gelb2` 하나다. 다른 계정은 직접 push하거나 PR을 병합할 수 없다. 소유자에게도 적용하던 관리자 강제 제한은 해제했다. 기존 PR·`check` 검사·대화 해결 조건은 유지하며 소유자는 예외를 사용할 수 있다.
+
+GitHub API에서 두 브랜치의 활성 `update` 규칙과 단일 사용자 예외를 재조회했다. 다른 계정으로 실제 거절을 발생시키는 실험은 수행하지 않았다. 같은 `gelb2` 인증을 쓰는 도구와 사람은 GitHub가 구분하지 못한다. 개발 작업은 계속 작업 브랜치→develop→main 순서를 따른다.
