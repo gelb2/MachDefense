@@ -1,4 +1,5 @@
 #include "Renderer.hpp"
+#include "Core/Presentation/AircraftPaint.hpp"
 #include "stb_image.h"
 #include <algorithm>
 #include <cmath>
@@ -24,6 +25,7 @@ Renderer::Texture& Renderer::texture(const std::string& name,bool premult){
  auto b=assets.read(Assets::imagePath(name));Texture t;int c=0;
  stbi_convert_iphone_png_to_rgb(1);stbi_set_unpremultiply_on_load(1);
  auto* p=stbi_load_from_memory(b.data(),b.size(),&t.w,&t.h,&c,4);if(!p)throw std::runtime_error("Cannot decode "+name);
+ applyAircraftPaint(name,p,size_t(t.w)*t.h);
  t.sw=t.sh=1;while(t.sw<t.w)t.sw*=2;while(t.sh<t.h)t.sh*=2;
  std::vector<unsigned char> padded(size_t(t.sw)*t.sh*4,0);
  for(int y=0;y<t.h;++y)for(int x=0;x<t.w;++x){auto* src=p+(y*t.w+x)*4;auto* dst=padded.data()+(y*t.sw+x)*4;for(int k=0;k<4;++k)dst[k]=k<3&&premult?static_cast<unsigned char>(float(src[k])*(float(src[3])/255.f)):src[k];}

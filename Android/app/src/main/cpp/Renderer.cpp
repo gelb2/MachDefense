@@ -1,4 +1,5 @@
 #include "Renderer.hpp"
+#include "Core/Presentation/AircraftPaint.hpp"
 #include "stb_image.h"
 #include <algorithm>
 #include <cmath>
@@ -15,6 +16,7 @@ Texture* Renderer::texture(const std::string& name,bool premultiplied){
     struct Free{unsigned char* p;~Free(){stbi_image_free(p);}} free{pixels};
     GLint maximum=0;glGetIntegerv(GL_MAX_TEXTURE_SIZE,&maximum);
     if(t.width<=0||t.height<=0||t.width>maximum||t.height>maximum)throw std::runtime_error("Texture exceeds GPU limit");
+    applyAircraftPaint(name,pixels,std::size_t(t.width)*t.height);
     if(premultiplied)for(std::size_t i=0;i<std::size_t(t.width)*t.height;++i){auto* p=pixels+i*4;for(int c=0;c<3;++c)p[c]=static_cast<unsigned char>(float(p[c])*(float(p[3])/255.f));}
     t.storageWidth=1;t.storageHeight=1;while(t.storageWidth<t.width)t.storageWidth*=2;while(t.storageHeight<t.height)t.storageHeight*=2;
     if(t.storageWidth>maximum||t.storageHeight>maximum)throw std::runtime_error("Padded texture exceeds GPU limit");

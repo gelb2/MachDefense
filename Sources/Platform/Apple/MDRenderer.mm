@@ -1,4 +1,5 @@
 #import "MDRenderer.h"
+#include "Core/Presentation/AircraftPaint.hpp"
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/ES1/gl.h>
 #import <OpenGLES/ES1/glext.h>
@@ -59,6 +60,7 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
     GLint maximum=0;glGetIntegerv(GL_MAX_TEXTURE_SIZE,&maximum);
     if(t.width<=0||t.height<=0||t.width>maximum||t.height>maximum){stbi_image_free(pixels);[self fail:@"Texture exceeds GPU limit"];return nullptr;}
     _imageSizes[name]={float(t.width),float(t.height)};
+    md::applyAircraftPaint(name,pixels,std::size_t(t.width)*t.height);
     if(premultiplied)for(std::size_t i=0;i<std::size_t(t.width)*t.height;++i){auto* p=pixels+i*4;for(int channel=0;channel<3;++channel)p[channel]=static_cast<unsigned char>(float(p[channel])*(float(p[3])/255.f));}
     // Texture2D(Image)::initWithImage 0x4b590 pads to powers of two and
     // uploads cleared pixels outside the original image. Preserve its edge sampling.
