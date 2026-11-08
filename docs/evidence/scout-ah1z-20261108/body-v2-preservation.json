@@ -1,0 +1,31 @@
+{
+  "bodyOnlyRelativeToV1": true,
+  "otherHelicopterFilesUnchanged": [
+    "Resources/Images/AHeavyRotor.png",
+    "Resources/Images/ADuctFan.png",
+    "Resources/Images/ATransportBodyBankL.png",
+    "Resources/Images/ADuctBody.png",
+    "Resources/Images/ATransportEngine.png",
+    "Resources/Images/ATransportFan.png",
+    "Resources/Images/AHeavyBodyBankR.png",
+    "Resources/Images/ATransportWingR.png",
+    "Resources/Images/ADuctMissile.png",
+    "Resources/Images/AHeavyGun.png",
+    "Resources/Images/ATransportGun.png",
+    "Resources/Images/ADuctBodyBankL.png",
+    "Resources/Images/ADuctGun.png",
+    "Resources/Images/ATransportWingL.png",
+    "Resources/Images/ATransportBody.png",
+    "Resources/Images/AHeavyCannon.png",
+    "Resources/Images/ADuctBodyBankR.png",
+    "Resources/Images/ATransportMissile.png",
+    "Resources/Images/AHeavyMissile.png",
+    "Resources/Images/ATransportBodyBankR.png",
+    "Resources/Images/AHeavyBody.png",
+    "Resources/Images/AHeavyBodyBankL.png"
+  ],
+  "otherHelicopterAssemblyDefinitionsUnchanged": true,
+  "scoutRotorGunPodByteIdentical": true,
+  "allTablesUnchanged": true,
+  "webResourcesByteIdentical": true
+}

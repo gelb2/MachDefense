@@ -1,0 +1,38 @@
+{
+  "changed": [
+    "Resources/Images/ALightGun.png",
+    "Resources/Images/ALightBody.png",
+    "Resources/Images/ALightRotor.png",
+    "Resources/Images/ALightMissile.png",
+    "Sources/Core/Simulation/AircraftModels.hpp"
+  ],
+  "otherHelicopterImagesPreserved": true,
+  "tablesPreserved": true,
+  "existingSourceFilesChangedOnlyAssembly": true,
+  "packedResourceChecks": [
+    {
+      "name": "ALightBody.png",
+      "start": 20673520,
+      "end": 20680520,
+      "sha256": "7140d9491db655924aca70912f557a309afbbfbe28a1b9cb3277b1cf2422ce5a"
+    },
+    {
+      "name": "ALightRotor.png",
+      "start": 20696168,
+      "end": 20705599,
+      "sha256": "d148cb52b07ec832882fa6c15b5cbe8e628d028f0295f0baa11a9ec22635e5d2"
+    },
+    {
+      "name": "ALightGun.png",
+      "start": 20694809,
+      "end": 20695481,
+      "sha256": "de20d0d6a910c78021b7f0678b25af08bc0f9b4b637c14cc1e1929c657792e25"
+    },
+    {
+      "name": "ALightMissile.png",
+      "start": 20695481,
+      "end": 20696168,
+      "sha256": "98bbf1000fa443a4c74f1cc36446c587c783a7572867c9c9885b8800a3a86f9a"
+    }
+  ]
+}

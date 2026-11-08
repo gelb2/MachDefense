@@ -1,0 +1,34 @@
+[
+  {
+    "name": "AircraftLight",
+    "orientation": "north",
+    "alpha_threshold": 16,
+    "rotor_phases": 360,
+    "max_width": 78.51507243566763,
+    "max_height": 78.51507243566765
+  },
+  {
+    "name": "AircraftHeavy",
+    "orientation": "north",
+    "alpha_threshold": 16,
+    "rotor_phases": 360,
+    "max_width": 115.41884273878097,
+    "max_height": 104.08729273878097
+  },
+  {
+    "name": "AircraftDuct",
+    "orientation": "north",
+    "alpha_threshold": 16,
+    "rotor_phases": 360,
+    "max_width": 59.2818,
+    "max_height": 78.81784363636365
+  },
+  {
+    "name": "AircraftTransport",
+    "orientation": "north",
+    "alpha_threshold": 16,
+    "rotor_phases": 360,
+    "max_width": 81.29299083969465,
+    "max_height": 86.41378928571429
+  }
+]

@@ -4,13 +4,13 @@
 #include <bit>
 #include <stdexcept>
 namespace md {
-// 2026-11-08 size-only revision, relative to the packed art in 7e7fa8f.
-// Keep the PNG pixels intact; apply this to the whole pose, including muzzles.
+// Whole-assembly scale, including muzzles. The three larger aircraft retain
+// their approved 2026-11-08 art; Scout uses the later AH-1Z design candidate.
 inline constexpr float aircraftAssemblyScale(std::string_view rootPart){
  // Same-pose 2x web bounds: MachineGun_10=118px, E_Tank_32=210px.
  // Preserve aspect ratios; targets are tank*1.10, mech, and their midpoint.
- // Scout rotor-inclusive width: 114px -> Cheyenne 118px at the same pose.
- if(rootPart=="ALightBody")return 118.f/114.f;
+ // Scout's new rotor-inclusive target remains Cheyenne's 118px at world 2x.
+ if(rootPart=="ALightBody")return 1.f;
  if(rootPart=="AHeavyBody")return 1.32f*(231.f/296.f);
  if(rootPart=="ADuctBody")return .765f*(118.f/134.f);
  if(rootPart=="ATransportBody")return .765f*(164.f/196.f);
@@ -37,8 +37,12 @@ inline void appendAircraftModels(BattleModels& models){
  auto item=[&](const char* name,unsigned socket,unsigned z){auto c=named(4,name);c.data.push_back(socket);c.data.push_back(z);return c;};
  Chunk parts;parts.type=0;
  parts.children={
-  part("ALightBody",0,{{0,0},{0,0},{12,15},{12,-15}}), part("ALightRotor",7,{{0,0}}),
-  part("ALightGun",4,{{0,0},{8,2},{8,-2}}), part("ALightMissile",4,{{0,0},{7,2},{7,-2}}),
+  // AH-1Z Scout: hub on the spine, chin gun, one existing wing rocket pod.
+  // These are sprite attachment/muzzle coordinates, not weapon-stat changes.
+  // User's body-only aspect change: length *.70, width *1.30. Move mounts
+  // with the fuselage; keep rotor and weapon image dimensions unchanged.
+  part("ALightBody",0,{{0,0},{7.21f,0},{28,0},{3.71f,15.6f}}), part("ALightRotor",7,{{0,0}}),
+  part("ALightGun",4,{{0,0},{7,1},{7,-1}}), part("ALightMissile",4,{{0,0},{6.5f,1},{6.5f,-1}}),
   part("AHeavyBody",0,{{0,0},{-10,10},{-10,-10},{8,10},{5,-34},{36,0}}), part("AHeavyRotor",7,{{0,0}}),
   part("AHeavyGun",4,{{0,0},{12,2},{12,-2}}), part("AHeavyMissile",4,{{0,0},{8,2},{8,-2}}),
   part("AHeavyCannon",4,{{0,0},{9,0}}),

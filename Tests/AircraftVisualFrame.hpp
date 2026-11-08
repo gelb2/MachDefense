@@ -11,6 +11,24 @@ inline Frame aircraftVisualFrame(ResourceAccess& r,unsigned mode){
  Frame f;f.logicalWidth=640;f.logicalHeight=800;f.background={.18f,.20f,.20f,1};
  auto one=[&](std::string_view image,Vec2 center,float scale){scale*=aircraftAssemblyScale(image.substr(0,image.size()-4));auto d=dims(image);Sprite s;s.image=image;s.destination={center.x-d.x*scale/2,center.y-d.y*scale/2,d.x*scale,d.y*scale};s.rotationDegrees=-90;s.nearest=true;f.sprites.push_back(s);};
  auto machine=[&](const char* name,Vec2 c,float scale){Frame t;models.appendSprites(t,name,c,scale,1.57079632679f,1.57079632679f,mode>=4?0.f:float(mode)*.5f,dims);for(auto s:t.sprites)if(s.color.r!=0){s.nearest=true;f.sprites.push_back(s);}};
+ if(mode==7){
+  f.logicalWidth=900;f.logicalHeight=900;
+  // The web review places the preserved prior-game capture in the empty
+  // top-left cell. All other cells use the current production renderer.
+  machine("AircraftLight",{450,150},2);machine("AircraftDuct",{750,150},2);
+  // Middle-left is the prior Scout BODY capture. Middle-center is current
+  // BODY only: compare its opaque bounds separately from the unchanged rotor.
+  one("ALightBody.png",{450,450},2);
+  const float partScale=2*aircraftAssemblyScale("ALightBody");
+  one("ALightRotor.png",{750,450},partScale);
+  machine("AircraftHeavy",{150,750},2);machine("AircraftTransport",{450,750},2);
+  auto table=[&](const char* n){auto b=r.read(std::string("Tables/")+n+".tsv");return DataTable::parse({reinterpret_cast<const char*>(b.data()),b.size()});};
+  auto builds=BuildCatalog::load(table("MachBuild_Parts"),table("MachBuild_Name"));
+  auto player=PlayerLoadout::fromBuild(*builds.find("MachineGun_10"),table("ItemInfo"),BattleGeometry::pad());
+  auto poses=models.pose(player.assembly,2,1.57079632679f,1.57079632679f,0);
+  Frame t;models.appendSprites(t,poses,{750,750},dims);for(auto s:t.sprites)if(s.color.r!=0){s.nearest=true;f.sprites.push_back(s);}
+  return f;
+ }
  if(mode==4){
   f.logicalWidth=900;f.logicalHeight=900;
   // Left: 1b3afed size. Right: widths matched to original reference units.

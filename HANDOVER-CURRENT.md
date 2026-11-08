@@ -1,3 +1,13 @@
+# 스카웃 AH-1Z 몸체 비율 수정 — 2026-11-08
+
+스카웃 AH-1Z 시안을 만든 뒤 같은 색·조형의 몸체만 폭 +30%, 길이 약 −30%로 포장했다. Safari 웹 치트빌드 실측은 몸체 60×176→78×124px, 전체 조립 118×182→118×135px다. 로터·기관총·포드 그림은 초안과 바이트가 같고, 샤이엔·벨루가·AH-10의 이미지 22개·조립 설정은 보존했다. C++ 8개와 Safari 전투 8항목 통과. 게임 main·운영 PWA·기기에는 배포하지 않았다.
+
+[도안·웹 비교·실측·생성 오류 전문](docs/research/scout-ah1z-20261108.md). 몸체 편집 도구는 입력 단계 HTTP 400 `moderation_blocked`·`violence`를 반환했다. 새 편집 이미지는 받지 못했으며, 기존 생성 원본에 사용자가 지정한 비율을 적용했다.
+
+[TODO](docs/usability-todo.md)에 MD-TITLE-ART-03(플랫폼별 Tap to Start 원본 비율·좌우 왜곡 조사 및 시정), MD-README-ORDER-01(글 단락을 README 하단으로 이동)을 등록했다. 두 후속 과제는 실행 전이다.
+
+[게시 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#scout-ah1z-20261108). Site source `2d2abbdc1650242a97da91282ea9aebde3afa1e5`, deployment `appgdep_6af077344a308191853b20ee1b7d415e`, succeeded.
+
 # 헬기 4종 Lv.1–10 수치안 — 2026-11-08
 
 사용자 지정 사거리·생산 셀·AH-10 HP 비율과 최대 Lv.10을 충족하는 [전체 수치안](docs/research/aircraft-balance-20261108.md)을 작성했다. 40개 기체 레벨·90개 무장 행, 수치 검사 439개·C++ 로더 대조 540개 통과. 미지정 HP·화력·강화 크레딧은 제안으로 표시했다. 게임 적용·캠페인 검증은 하지 않았다. 승인한 크기·디자인과 게임 소스·자원을 보존했다.

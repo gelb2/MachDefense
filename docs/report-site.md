@@ -1,3 +1,13 @@
+# 스카웃 AH-1Z 몸체 비율 수정 — 2026-11-08
+
+[스카웃 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#scout-ah1z-20261108)를 기존 소유자 전용 사이트에 게시했다. 생성 부품·몸체 비율 수정안·실제 웹 치트빌드 전후 비교·외곽 실측·검사 결과와 몸체 편집 도구 오류 전문을 제공한다. Safari 로컬 화면에서 제목·비교 이미지를 확인하고 새 자료 링크를 파일과 대조했다. 게시 상태는 succeeded다.
+
+- Source `2d2abbdc1650242a97da91282ea9aebde3afa1e5`.
+- Deployment `appgdep_6af077344a308191853b20ee1b7d415e`.
+- 이미지 3개는 원본과 RGBA 픽셀이 같은 무손실 WebP다. 기존 보고서 내용·이미지·오류 전문과 접근 범위는 보존했다.
+- 첫 업로드는 256MiB 확장 제한으로 거절됐다. 기존 PNG 13개의 무손실 변환은 용량이 줄지 않아 적용하지 않았다. 재포장 때 `COPYFILE_DISABLE=1`로 macOS 부가 메타데이터를 제외해 확장 크기를 269,067,264→267,851,776바이트로 줄였다. 보고 자료를 삭제하거나 해상도를 낮추지 않았다.
+- 게임 main·운영 PWA·실기기 앱은 이번 결과로 배포하지 않았다. [작업 근거](research/scout-ah1z-20261108.md).
+
 # 헬기 4종 Lv.1–10 수치안 — 2026-11-08
 
 [수치안](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-balance-20261108)을 기존 소유자 전용 보고서에 게시했다. 40개 기체 레벨·90개 무장 행과 강화 비용·증가율·고정 동작 수치, TSV·JSON·조회 코드를 제공한다. 수치 조건 439개·C++ 로더 540개 대조 통과. Safari 로컬 본문·표와 게시 주소의 새 제목 링크를 확인했다. 게임 적용·캠페인 검증은 하지 않았다.
