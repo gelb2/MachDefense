@@ -1,3 +1,7 @@
+# Scout 폭 조정과 4종 사양 — 2026-11-08
+
+먼저 세 기체 보존 기준을 ce58bd0에 커밋했다. Scout는 114×156→118×162px로 비례 조정해 Cheyenne과 외곽 폭이 같다. 다른 세 기체 크기·디자인, 전체 PNG·전투 수치 보존. C++ 8개·Safari 전투 통과. [비교·검사](docs/evidence/scout-width-20261108.md), [현행 사양·논의](docs/research/aircraft-specs-20261108.md). 게임 main·기기는 미갱신.
+
 # AH-10·Beluga·Cheyenne 보존 — 2026-11-08
 
 사용자가 현재 세 기체의 크기·디자인 보존을 지정했다. 기준 `8f10fda`, [PNG 해시·조립 배율](Art/Aircraft/runtime/preserved-three-20261108.json). 먼저 보존 기준을 커밋한 뒤 Scout Heli만 Cheyenne과 같은 외곽 폭으로 비례 조정한다. 무장·사거리 등은 변경 없이 현재 값을 조사해 논의한다.

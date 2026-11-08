@@ -1,3 +1,7 @@
+# Scout 폭 조정과 4종 사양 — 2026-11-08
+
+먼저 세 기체 보존 기준을 ce58bd0에 커밋했다. Scout는 114×156→118×162px로 비례 조정해 Cheyenne과 외곽 폭이 같다. 다른 세 기체 크기·디자인, 전체 PNG·전투 수치 보존. C++ 8개·Safari 전투 통과. [비교·검사](evidence/scout-width-20261108.md), [현행 사양·논의](research/aircraft-specs-20261108.md). 게임 main·기기는 미갱신.
+
 # 기준 유닛에 맞춘 헬기 폭 — 2026-11-08
 
 Beluga 목표 폭 164px, Cheyenne 118px, AH-10 231px. 같은 2배율 웹 실측은 164×173, 118×158, 230×171px이며 AH-10의 반올림 차이는 1px이다. 길이도 같은 배율로 변경했다. PNG 보존, C++ 8개·Safari 전투 검사 통과. [기준·화면·검사](evidence/aircraft-width-20261108.md). 게임 main·기기는 미갱신.

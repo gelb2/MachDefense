@@ -1,0 +1,57 @@
+{
+  "baseline": "ce58bd0",
+  "worldZoom": 2,
+  "rotorAngle": 0,
+  "shadows": false,
+  "cells": [
+    {
+      "name": "Scout BEFORE",
+      "left": 94,
+      "top": 72,
+      "width": 114,
+      "height": 156
+    },
+    {
+      "name": "Scout AFTER",
+      "left": 392,
+      "top": 69,
+      "width": 118,
+      "height": 162
+    },
+    {
+      "name": "Cheyenne",
+      "left": 691,
+      "top": 65,
+      "width": 118,
+      "height": 158
+    },
+    {
+      "name": "AH-10 preserved",
+      "left": 35,
+      "top": 357,
+      "width": 230,
+      "height": 171
+    },
+    {
+      "name": "Beluga preserved",
+      "left": 369,
+      "top": 364,
+      "width": 164,
+      "height": 173
+    },
+    {
+      "name": "Cheyenne preserved",
+      "left": 691,
+      "top": 365,
+      "width": 118,
+      "height": 158
+    }
+  ],
+  "checks": {
+    "sameWidth": true,
+    "preservedAH10": true,
+    "preservedBeluga": true,
+    "preservedCheyenne": true
+  },
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15"
+}

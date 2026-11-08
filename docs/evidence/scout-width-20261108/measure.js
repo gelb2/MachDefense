@@ -1,0 +1,27 @@
+let boxResult=null;const boxOut=document.getElementById('boxresult'),boxCanvas=document.getElementById('boxcanvas');
+let reviewData={}; const output=document.getElementById("reviewresult");
+const scene=async(c,m=3)=>JSON.parse(await MDTest.call('md_aircraft_scene',['number','number'],[c,m],'string'));
+async function ready(){if(!window.MDModule)throw Error('먼저 PLAY IN BROWSER를 누르세요.');boxCanvas.hidden=true;await MDTest.advance(1);const c=document.getElementById('game');c.width=900;c.height=900;await MDTest.call('md_resize',['number','number','number','number','number','number'],[900,900,900,900,0,0]);}
+async function compare(){await MDTest.call('md_aircraft_scene',['number','number'],[8,3],'string');}
+function run(id,fn){document.getElementById(id).onclick=async()=>{try{await fn();}catch(e){output.textContent=String(e);}};}
+function download(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),5000);}
+run('check',async()=>{await ready();output.textContent='검사 실행 중';const initial=await scene(0),before=await MDTest.state();await scene(2);const frozen=await scene(1);await scene(3);await scene(4);let moving;for(let i=0;i<240;i++)moving=await scene(1);await scene(6);let combat;for(let i=0;i<600;i++)combat=await scene(1);for(let i=0;i<1200;i++)await scene(1);const warm=await MDTest.state();for(let i=0;i<240;i++)await scene(1);const end=await MDTest.state();const checks={pause:frozen.time===initial.time&&frozen.actors[1].rotor===initial.actors[1].rotor,movement:moving.actors[1].x!==initial.actors[1].x,actors:moving.actors.length===8,damage:combat.actors[0].hp<100000&&combat.actors[2].hp<100000,sound:combat.sounds>0,noSceneWrites:combat.writes===0,noSaveWrites:end.writes===before.writes,noWarmUploads:end.uploads===warm.uploads};reviewData={checks,initial,moving,combat,before,warm,end,userAgent:navigator.userAgent};output.textContent=JSON.stringify(checks,null,2);});
+
+run('savedata',async()=>download(new Blob([JSON.stringify(reviewData,null,2)],{type:'application/json'}),'machdefense-scout-combat-20261108.json'));
+async function scoutSheet(){try{
+ await MDTest.advance(1);const game=document.getElementById('game');game.width=900;game.height=600;boxCanvas.width=900;boxCanvas.height=600;
+ await MDTest.call('md_resize',['number','number','number','number','number','number'],[900,600,900,600,0,0]);
+ await MDTest.call('md_aircraft_scene',['number','number'],[8,6],'string');
+ const ctx=boxCanvas.getContext('2d');ctx.drawImage(game,0,0);const pixels=ctx.getImageData(0,0,900,600).data,background=Array.from(pixels.slice(0,3)),cells=[];
+ const labels=['Scout BEFORE','Scout AFTER','Cheyenne','AH-10 preserved','Beluga preserved','Cheyenne preserved'];
+ for(let i=0;i<6;i++){
+ const row=Math.floor(i/3),col=i%3;let left=900,top=600,right=-1,bottom=-1;
+ for(let y=row*300;y<(row+1)*300;y++)for(let x=col*300;x<(col+1)*300;x++){const p=(y*900+x)*4;if(pixels[p]!==background[0]||pixels[p+1]!==background[1]||pixels[p+2]!==background[2]){left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);}}
+ if(right<0)throw Error('No unit pixels');const width=right-left+1,height=bottom-top+1;
+ cells.push({name:labels[i],left,top,width,height});ctx.strokeStyle=i===1?'#6effa3':'#ffcf68';ctx.lineWidth=1;ctx.strokeRect(left-.5,top-.5,width+1,height+1);ctx.fillStyle=ctx.strokeStyle;ctx.font='14px monospace';ctx.textAlign='center';ctx.fillText(width+' x '+height,col*300+150,Math.min(row*300+285,bottom+20));ctx.fillStyle='white';ctx.font='15px sans-serif';ctx.fillText(labels[i],col*300+150,row*300+20);
+ }
+ boxResult={baseline:'ce58bd0',worldZoom:2,rotorAngle:0,shadows:false,cells,checks:{sameWidth:cells[1].width===cells[2].width,preservedAH10:cells[3].width===230&&cells[3].height===171,preservedBeluga:cells[4].width===164&&cells[4].height===173,preservedCheyenne:cells[5].width===118&&cells[5].height===158},userAgent:navigator.userAgent};boxCanvas.hidden=false;boxOut.textContent=JSON.stringify(boxResult,null,2);
+ }catch(e){boxOut.textContent=String(e);}}
+document.getElementById('refs').onclick=scoutSheet;document.getElementById('boxes').onclick=scoutSheet;
+document.getElementById('exportboxes').onclick=()=>boxCanvas.toBlob(b=>download(b,'machdefense-scout-width-final-20261108.png'));
+document.getElementById('exportstats').onclick=()=>download(new Blob([JSON.stringify(boxResult,null,2)],{type:'application/json'}),'machdefense-scout-width-final-20261108.json');

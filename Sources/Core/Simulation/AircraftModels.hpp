@@ -9,6 +9,8 @@ namespace md {
 inline constexpr float aircraftAssemblyScale(std::string_view rootPart){
  // Same-pose 2x web bounds: MachineGun_10=118px, E_Tank_32=210px.
  // Preserve aspect ratios; targets are tank*1.10, mech, and their midpoint.
+ // Scout rotor-inclusive width: 114px -> Cheyenne 118px at the same pose.
+ if(rootPart=="ALightBody")return 118.f/114.f;
  if(rootPart=="AHeavyBody")return 1.32f*(231.f/296.f);
  if(rootPart=="ADuctBody")return .765f*(118.f/134.f);
  if(rootPart=="ATransportBody")return .765f*(164.f/196.f);

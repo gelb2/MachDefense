@@ -23,6 +23,16 @@ inline Frame aircraftVisualFrame(ResourceAccess& r,unsigned mode){
   machine("AircraftDuct",{675,750},2);
   return f;
  }
+ if(mode==6){
+  f.logicalWidth=900;f.logicalHeight=600;
+  machine("AircraftLight",{150,150},2/aircraftAssemblyScale("ALightBody"));
+  machine("AircraftLight",{450,150},2);
+  machine("AircraftDuct",{750,150},2);
+  machine("AircraftHeavy",{150,450},2);
+  machine("AircraftTransport",{450,450},2);
+  machine("AircraftDuct",{750,450},2);
+  return f;
+ }
  if(mode==5){
   f.logicalWidth=900;f.logicalHeight=900;
   auto table=[&](const char* n){auto b=r.read(std::string("Tables/")+n+".tsv");return DataTable::parse({reinterpret_cast<const char*>(b.data()),b.size()});};
