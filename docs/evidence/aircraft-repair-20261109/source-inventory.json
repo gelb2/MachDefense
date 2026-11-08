@@ -1,0 +1,893 @@
+{
+  "baseline": "26da2db",
+  "files": [
+    {
+      "path": "Sources/Core/Presentation/AircraftMarkings.hpp",
+      "sha256": "cb5f69952ba0f5831160ed3199155437b5903e45daf4415857c61be1653ab888",
+      "references": [
+        {
+          "line": 11,
+          "text": "inline void applyAircraftMarking(std::string_view image,std::uint8_t* p,"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Presentation/AircraftPaint.hpp",
+      "sha256": "e3e67f257a45efbb1b31a6ff1b964cfd6463c20b887f633e9c85d85c73834c4b",
+      "references": [
+        {
+          "line": 6,
+          "text": "#include \"Core/Presentation/AircraftMarkings.hpp\""
+        },
+        {
+          "line": 12,
+          "text": "inline constexpr std::array<unsigned,3> aircraftPaintMidpoint(std::string_view image) {"
+        },
+        {
+          "line": 19,
+          "text": "inline constexpr std::uint8_t aircraftPaintChannel(unsigned value,unsigned midpoint) {"
+        },
+        {
+          "line": 26,
+          "text": "inline void prepareAircraftPaint(std::string_view image,std::uint8_t* rgba,std::size_t pixels,"
+        },
+        {
+          "line": 28,
+          "text": "const auto mid=aircraftPaintMidpoint(image);"
+        },
+        {
+          "line": 36,
+          "text": "p[c]=aircraftPaintChannel(steel?(p[c]+3u*light+2u)/4u:p[c],mid[c]);"
+        },
+        {
+          "line": 42,
+          "text": "applyAircraftMarking(image,p,heavy?1.f-y:y,heavy?x:1.f-x);"
+        },
+        {
+          "line": 46,
+          "text": "// Approved colours/markings are now baked into helicopter-only PNGs by"
+        },
+        {
+          "line": 47,
+          "text": "// tools/bake_aircraft_paint.py. Retain the platform hook without repainting."
+        },
+        {
+          "line": 48,
+          "text": "inline void applyAircraftPaint(std::string_view,std::uint8_t*,std::size_t,"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Presentation/WorldPresentation.cpp",
+      "sha256": "22947136b498f08ec65c8fa0c7ac81f04cde43b8a742676d1fa0c3b26bfc3f3a",
+      "references": [
+        {
+          "line": 1,
+          "text": "#include \"Core/Simulation/AircraftVisual.hpp\""
+        },
+        {
+          "line": 85,
+          "text": "if(a->flightTactics&&a->hp<=0){"
+        },
+        {
+          "line": 90,
+          "text": "const float bank=a->flightTactics&&a->hp>0?a->flightTactics->bank:0;"
+        },
+        {
+          "line": 91,
+          "text": "if(a->flightTactics&&std::abs(bank)>.001f){"
+        },
+        {
+          "line": 97,
+          "text": "auto mesh=aircraftBankMesh(part.sprites[i],pivot,a->angle,bank,resources_.imageSize(part.sprites[i].image));"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Session/GameSession.cpp",
+      "sha256": "11282ae5f31e8ac68f76d1a9047a174fd1b55ee5f8e2c411ce3fbb2ead21384d",
+      "references": [
+        {
+          "line": 10,
+          "text": "#include \"Core/Simulation/AlliedAircraft.hpp\""
+        },
+        {
+          "line": 81,
+          "text": "menu.setProfilePreparation([this](std::size_t selected){settlement.grantCampaignUnlock(save,selected,save.stage(selected));settlement.grantAircraftUnlocks(save,selected,save.stage(selected));});"
+        },
+        {
+          "line": 94,
+          "text": "std::unordered_map<std::string,float> aircraftPreviewScales;"
+        },
+        {
+          "line": 100,
+          "text": "if(const auto* aircraft=alliedAircraftForModel(d->machine)){"
+        },
+        {
+          "line": 101,
+          "text": "auto [it,inserted]=aircraftPreviewScales.try_emplace(std::string(aircraft->model),1.f);"
+        },
+        {
+          "line": 233,
+          "text": "if(const auto* parts=models.machine(d.machine)){auto walk=[&](auto&& self,const auto& list)->void{for(const auto& part:list){if(const auto* w=weapons.find(part.name)){if(alliedAircraftForModel(d.machine)){attack+=w->attackPoint();range=std::max(range,int(w->shotRange));}else{attack=w->attackPoint();range=w->shotRange;}}self(self,part.children);}};walk(walk,*parts);}"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Session/Settlement.cpp",
+      "sha256": "e9c6230f41dd0ed1c14e7734e69b247a3d4b39859b243323a0fdfa6301ed3e58",
+      "references": [
+        {
+          "line": 2,
+          "text": "#include \"Core/Simulation/AlliedAircraft.hpp\""
+        },
+        {
+          "line": 54,
+          "text": "std::vector<std::string> Settlement::grantAircraftUnlocks(SaveData& save,std::size_t slot,unsigned completed)const{"
+        },
+        {
+          "line": 56,
+          "text": "for(const auto& a:alliedAircraftCatalog)if(completed>=a.mission&&catalog_.find(levelName(a.name,0))&&awardBuild(save,slot,a.name))acquired.emplace_back(a.name);"
+        },
+        {
+          "line": 69,
+          "text": "auto aircraft=grantAircraftUnlocks(save,slot,std::max(save.stage(slot),result.mission+1));"
+        },
+        {
+          "line": 71,
+          "text": "else if(!aircraft.empty())result.build=aircraft.front();"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Session/Settlement.hpp",
+      "sha256": "ce23457f5520aed86d8bba54381e6e07f5071c691cfd0701b1d1b321bce3e947",
+      "references": [
+        {
+          "line": 20,
+          "text": "std::vector<std::string> grantAircraftUnlocks(SaveData&,std::size_t slot,unsigned completedMissions)const;"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/AircraftCountermeasures.hpp",
+      "sha256": "355672e562739665ca758c34f89e33facba64673064c9ce9f7f11c08a1c97e56",
+      "references": [
+        {
+          "line": 11,
+          "text": "class AircraftCountermeasures {"
+        },
+        {
+          "line": 14,
+          "text": "explicit AircraftCountermeasures(float scale):scale_(scale){"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/AircraftDodge.hpp",
+      "sha256": "aba4395dd1011066cfa61f524c4fd594630db18af4b3e70d9388e3a1e569d1bc",
+      "references": [
+        {
+          "line": 7,
+          "text": "// Rebuilt once per world step, reused by all new aircraft. No actor timers,"
+        },
+        {
+          "line": 9,
+          "text": "class AircraftThreatGrid {"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/AircraftModels.hpp",
+      "sha256": "e2a5b24b0447ac8a705cf78bf3c878f025ff1ac1e9e9ae5bfaff1ab3422fefd7",
+      "references": [
+        {
+          "line": 7,
+          "text": "// Whole-assembly scale, including muzzles. The three larger aircraft retain"
+        },
+        {
+          "line": 9,
+          "text": "inline constexpr float aircraftAssemblyScale(std::string_view rootPart){"
+        },
+        {
+          "line": 19,
+          "text": "struct AircraftWeaponBinding { const char* part; const char* original; };"
+        },
+        {
+          "line": 20,
+          "text": "inline constexpr AircraftWeaponBinding aircraftWeapons[]{"
+        },
+        {
+          "line": 27,
+          "text": "inline void appendAircraftWeapons(WeaponCatalog& weapons){"
+        },
+        {
+          "line": 28,
+          "text": "for(const auto& b:aircraftWeapons)if(!weapons.find(b.part))weapons.addAlias(b.part,b.original);"
+        },
+        {
+          "line": 33,
+          "text": "inline void appendAircraftModels(BattleModels& models){"
+        },
+        {
+          "line": 34,
+          "text": "if(models.machine(\"AircraftLight\"))return;"
+        },
+        {
+          "line": 58,
+          "text": "auto light=named(3,\"AircraftLight\");auto lb=item(\"ALightBody\",0,1);"
+        },
+        {
+          "line": 60,
+          "text": "auto heavy=named(3,\"AircraftHeavy\");auto hb=item(\"AHeavyBody\",0,1);"
+        },
+        {
+          "line": 62,
+          "text": "auto duct=named(3,\"AircraftDuct\");auto db=item(\"ADuctBody\",0,1);"
+        },
+        {
+          "line": 64,
+          "text": "auto transport=named(3,\"AircraftTransport\");auto tb=item(\"ATransportBody\",0,1);"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/AircraftTactics.hpp",
+      "sha256": "abb18af26083ced0b84e4036621989b48567f86cfe5d0e859a670c5680323101",
+      "references": [
+        {
+          "line": 3,
+          "text": "#include \"Core/Simulation/AircraftDodge.hpp\""
+        },
+        {
+          "line": 8,
+          "text": "// Experimental routes and inertial movement for the four trial aircraft only."
+        },
+        {
+          "line": 10,
+          "text": "struct AircraftTactics {"
+        },
+        {
+          "line": 20,
+          "text": "void face(AircraftMotion& motion,float desired){"
+        },
+        {
+          "line": 35,
+          "text": "float radius,float mapWidth,float halfLength,const AircraftThreatGrid& threats){"
+        },
+        {
+          "line": 42,
+          "text": "const AircraftThreatGrid::Threat* danger=nullptr;float closest=1e30f;"
+        },
+        {
+          "line": 74,
+          "text": "// aircraft's existing movement envelope and its weapon acquisition range."
+        },
+        {
+          "line": 95,
+          "text": "// New aircraft only. Velocity changes by bounded acceleration at the"
+        },
+        {
+          "line": 98,
+          "text": "void advance(AircraftMotion& motion){"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/AircraftVisual.hpp",
+      "sha256": "a9beaa4aab659d42246aac7f1170bb1c0a7cab9260799ccd3d130c422aae61ac",
+      "references": [
+        {
+          "line": 6,
+          "text": "inline bool helicopterBody(std::string_view name){return name==\"ALightBody\"||name==\"AHeavyBody\"||name==\"ADuctBody\"||name==\"ATransportBody\";}"
+        },
+        {
+          "line": 9,
+          "text": "inline Vec2 aircraftBankPoint(Vec2 p,float heading,float bank){"
+        },
+        {
+          "line": 19,
+          "text": "inline TextureMesh aircraftBankMesh(const Sprite& s,Vec2 pivot,float heading,float bank,Vec2 imageSize){"
+        },
+        {
+          "line": 26,
+          "text": "auto p=aircraftBankPoint({center.x-pivot.x+x*c-y*t,pivot.y-center.y+x*t+y*c},heading,bank);"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/AlliedAircraft.hpp",
+      "sha256": "984623000501810276ff0c8957d102ae6edd31452acb898c5a17cb2b3d2b1db7",
+      "references": [
+        {
+          "line": 5,
+          "text": "struct AlliedAircraftDefinition {std::string_view name,model,label;unsigned mission;float widthFraction,height; float noseDegreesPerSecond,weaponDegreesPerSecond;};"
+        },
+        {
+          "line": 6,
+          "text": "inline constexpr std::array<AlliedAircraftDefinition,4> alliedAircraftCatalog{{"
+        },
+        {
+          "line": 7,
+          "text": "{\"ScoutHeli\",\"AircraftLight\",\"Scout Heli\",8,.50f,12,100,180},"
+        },
+        {
+          "line": 8,
+          "text": "{\"Gunship\",\"AircraftHeavy\",\"AH-10\",36,.425f,18,45,90},"
+        },
+        {
+          "line": 9,
+          "text": "{\"Orca\",\"AircraftDuct\",\"Cheyenne\",16,.425f,14,80,150},"
+        },
+        {
+          "line": 10,
+          "text": "{\"OrcaBomber\",\"AircraftTransport\",\"Beluga\",24,.25f,16,60,120}"
+        },
+        {
+          "line": 12,
+          "text": "inline const AlliedAircraftDefinition* alliedAircraftForModel(std::string_view model){"
+        },
+        {
+          "line": 13,
+          "text": "for(const auto& a:alliedAircraftCatalog)if(model.starts_with(a.model)&&(model.size()==a.model.size()+3||model==a.model))return &a;"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/Battle.hpp",
+      "sha256": "ea39a9fa3f2107c4654e8fc299b47800cf0c3cadf348ea20a93f3ab271b714d5",
+      "references": [
+        {
+          "line": 91,
+          "text": "struct AircraftMotion {"
+        },
+        {
+          "line": 116,
+          "text": "std::optional<Vec2> aircraft(double time,int movementState,DarwinRandom& random);"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/MachineModels.cpp",
+      "sha256": "fa3ecaf233589cdf26734b66aa034bd2856a90c050f9652b7e8ad5ea16a9dce6",
+      "references": [
+        {
+          "line": 3,
+          "text": "#include \"Core/Simulation/AircraftModels.hpp\""
+        },
+        {
+          "line": 4,
+          "text": "#include \"Core/Simulation/AircraftVisual.hpp\""
+        },
+        {
+          "line": 58,
+          "text": "appendAircraftModels(result);"
+        },
+        {
+          "line": 59,
+          "text": "for(const char* name:{\"AircraftLight\",\"AircraftHeavy\",\"AircraftDuct\",\"AircraftTransport\"})for(unsigned level=1;level<=10;++level){"
+        },
+        {
+          "line": 103,
+          "text": "// Build the original pose first, then apply the documented aircraft size."
+        },
+        {
+          "line": 119,
+          "text": "const float assemblyScale=tree.empty()?1.f:aircraftAssemblyScale(tree.front().name);"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/Movement.cpp",
+      "sha256": "bc88f56328b996a59fa9baf8e5b8dd21c647ce82572f343c403c1e86f118992b",
+      "references": [
+        {
+          "line": 70,
+          "text": "void AircraftMotion::tick() {"
+        },
+        {
+          "line": 107,
+          "text": "std::optional<Vec2> EnemySteering::aircraft(double time,int state,DarwinRandom& random) {"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/Production.cpp",
+      "sha256": "68cb4b8c5a4847742e22627ffe056fce8db167c2ebf3309b0c950d2d1580689c",
+      "references": [
+        {
+          "line": 2,
+          "text": "#include \"Core/Simulation/AlliedAircraft.hpp\""
+        },
+        {
+          "line": 46,
+          "text": "// New aircraft use the same runway width as walkers, but a separate RNG."
+        },
+        {
+          "line": 48,
+          "text": "else if(alliedAircraftForModel(i->definition.machine))position.x=(float(aircraftSpawnRandom_.next())*0x1p-31f*440.f-220.f)*geometry.deviceScale;"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/Production.hpp",
+      "sha256": "284f9eb1ffc3b709885e5cf668ab8746eb124e7f2e2cc7496be3cd21cf7df8ce",
+      "references": [
+        {
+          "line": 35,
+          "text": "void clear(){jobs_.clear();aircraftSpawnRandom_=DarwinRandom(0x41a7);}"
+        },
+        {
+          "line": 39,
+          "text": "DarwinRandom aircraftSpawnRandom_{0x41a7};"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/WeaponController.hpp",
+      "sha256": "b6277e6aa4fa75cf2a500901859b4f283a6138d1e836a8f2e0a8a95c8f02f653",
+      "references": [
+        {
+          "line": 14,
+          "text": "float maxAimStep=0; // 0 keeps the original controller; set only by added aircraft."
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/World.cpp",
+      "sha256": "11b7ba4081e9bba67388a528a36ec1c703dd8eabee2591697855506911786e9f",
+      "references": [
+        {
+          "line": 3,
+          "text": "#include \"Core/Simulation/AlliedAircraft.hpp\""
+        },
+        {
+          "line": 22,
+          "text": "countermeasures_=std::make_unique<AircraftCountermeasures>(geometry_.deviceScale);"
+        },
+        {
+          "line": 37,
+          "text": "a.vehicle.moveSpeed=info.speed;a.aircraft.moveSpeed=info.speed;a.train.moveSpeed=info.speed;"
+        },
+        {
+          "line": 38,
+          "text": "a.bipod.setStepSize(info.speed);a.bipod.position=a.vehicle.position=a.aircraft.position=a.train.position=position;"
+        },
+        {
+          "line": 39,
+          "text": "a.bipod.destination=a.vehicle.destination=a.aircraft.destination=a.train.destination=position;"
+        },
+        {
+          "line": 40,
+          "text": "a.bipod.angle=a.bipod.bodyAngle=a.bipod.baseAngle=a.vehicle.angle=a.aircraft.angle=a.angle;"
+        },
+        {
+          "line": 41,
+          "text": "if(player)if(const auto* aircraft=alliedAircraftForModel(name)){"
+        },
+        {
+          "line": 42,
+          "text": "a.flightTactics=AircraftTactics{aircraft->widthFraction,info.speed/geometry_.deviceScale,std::uint32_t(a.id*2654435761u)|1u};"
+        },
+        {
+          "line": 43,
+          "text": "a.flightTactics->noseStep=aircraft->noseDegreesPerSecond*3.14159265f/10800.f;a.flightTactics->weaponStep=aircraft->weaponDegreesPerSecond*3.14159265f/10800.f;"
+        },
+        {
+          "line": 44,
+          "text": "a.flightHeight=aircraft->height;a.rotorStep=7.3f*6.28318530718f/60.f;a.aircraft.rotationDivisor=12;"
+        },
+        {
+          "line": 46,
+          "text": "if(a.flightTactics){"
+        },
+        {
+          "line": 117,
+          "text": "aircraftThreats_.clear(geometry_.deviceScale);"
+        },
+        {
+          "line": 118,
+          "text": "const bool aircraftActive=std::any_of(actors_.begin(),actors_.end(),[](const auto& a){return a->flightTactics&&a->hp>0&&!a->removed;});"
+        },
+        {
+          "line": 119,
+          "text": "if(aircraftActive)for(const auto& p:projectiles_)if(const auto* w=weapons_.find(p.weapon))aircraftThreats_.add(p.motion,*w);"
+        },
+        {
+          "line": 136,
+          "text": "// New aircraft can be built repeatedly. Release their assembly/weapons and"
+        },
+        {
+          "line": 139,
+          "text": "std::erase_if(actors_,[](const auto& a){return a->flightTactics&&a->removed;});"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/World.hpp",
+      "sha256": "677cc9f4e283198a88eb0c24051803f2f747690404dafffd7f14b27606d47f15",
+      "references": [
+        {
+          "line": 9,
+          "text": "#include \"Core/Simulation/AircraftTactics.hpp\""
+        },
+        {
+          "line": 12,
+          "text": "#include \"Core/Simulation/AircraftCountermeasures.hpp\""
+        },
+        {
+          "line": 26,
+          "text": "// Visual-only aircraft properties. Original actors retain their original defaults."
+        },
+        {
+          "line": 28,
+          "text": "std::optional<AircraftTactics> flightTactics; // New trial aircraft only."
+        },
+        {
+          "line": 32,
+          "text": "BipodMotion bipod; VehicleMotion vehicle; AircraftMotion aircraft; TrainMotion train;"
+        },
+        {
+          "line": 74,
+          "text": "void validationAircraftComparison();"
+        },
+        {
+          "line": 75,
+          "text": "void validationAlliedAircraftComparison();"
+        },
+        {
+          "line": 76,
+          "text": "void validationAircraftDodgeComparison();"
+        },
+        {
+          "line": 78,
+          "text": "ActorId validationAlliedAircraft(unsigned kind,Vec2 position);"
+        },
+        {
+          "line": 119,
+          "text": "AircraftThreatGrid aircraftThreats_;"
+        },
+        {
+          "line": 122,
+          "text": "std::unique_ptr<AircraftCountermeasures> countermeasures_;"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/WorldCombat.cpp",
+      "sha256": "922c03588cc8973c195cf4563f22425757498c1782db2fb84150d0df11aa8cbf",
+      "references": [
+        {
+          "line": 1,
+          "text": "#include \"Core/Simulation/AircraftVisual.hpp\""
+        },
+        {
+          "line": 19,
+          "text": "actor.weapons.push_back(std::move(w));actor.range=actor.flightTactics?std::max(actor.range,float(weapon->shotRange)):float(weapon->shotRange);"
+        },
+        {
+          "line": 40,
+          "text": "for(const auto& a:actors_)if(a->player&&!a->removed&&a->hp>0&&(a->type==0||a->flightTactics)&&a->position.y<point.y){"
+        },
+        {
+          "line": 62,
+          "text": "if(a.flightTactics)frame.maxAimStep=a.flightTactics->weaponStep;"
+        },
+        {
+          "line": 75,
+          "text": "if(muzzle&&a.flightTactics)*muzzle=aircraftBankPoint(*muzzle,a.angle,a.flightTactics->bank);"
+        },
+        {
+          "line": 104,
+          "text": "if(a.flightTactics)eject=aircraftBankPoint(eject,a.angle,a.flightTactics->bank);"
+        },
+        {
+          "line": 167,
+          "text": "for(const auto& hit:hits){auto id=(hit.player?playerIds:enemyIds).at(hit.index);damage(id,hit.damage,p.attacker);if(hit.special){auto* a=actor(id);if(a&&a->hp>0&&!(a->flightTactics&&a->flightTactics->invulnerable(time()))&&a->specialDamage.add(*hit.special)){a->target=0;setDestination(*a,a->position);}}if(hit.secondary)if(const auto* a=actor(id))emitSecondaryImpact(*weapon,p.motion.position,a->position);}"
+        },
+        {
+          "line": 187,
+          "text": "// Latest user rule includes hitscan. Original actors have no flightTactics."
+        },
+        {
+          "line": 188,
+          "text": "if(a->flightTactics&&a->flightTactics->invulnerable(time())){playHit();return;}"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/WorldEffects.cpp",
+      "sha256": "0f1d2c95f59ed10ba872ee0ac532da6183d43e5c4601c0458b024012f1904f42",
+      "references": [
+        {
+          "line": 38,
+          "text": "if(a.flightTactics){a.flightHeight=0;a.flightTactics->bank=0;a.aircraft.direction={};a.aircraft.speed=0;}"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/WorldMovement.cpp",
+      "sha256": "ba2642f6c2ffdce0ff3cadb6fad981386333e962034b02520d5405c06e554dd6",
+      "references": [
+        {
+          "line": 12,
+          "text": "void World::setDestination(WorldActor& a,Vec2 point){a.destination=point;a.bipod.setDestination(point);a.vehicle.setDestination(point);a.aircraft.setDestination(point);a.train.setDestination(point);}"
+        },
+        {
+          "line": 19,
+          "text": "if(aiEnabled&&a.flightTactics){"
+        },
+        {
+          "line": 20,
+          "text": "auto& tactic=*a.flightTactics;a.moveToTarget=false;"
+        },
+        {
+          "line": 21,
+          "text": "a.aircraft.moveSpeed=tactic.speed*geometry_.deviceScale;"
+        },
+        {
+          "line": 23,
+          "text": "if(tactic.updateDodge(time(),a.position,a.player,a.aircraft.moveSpeed,a.radius,512*geometry_.deviceScale,geometry_.halfLength(),aircraftThreats_)){"
+        },
+        {
+          "line": 40,
+          "text": "}else if(aiEnabled&&a.type==2&&!a.player){if(auto d=a.enemyAI.aircraft(time(),a.aircraft.state,random_))setDestination(a,*d);}"
+        },
+        {
+          "line": 41,
+          "text": "if(a.type==5&&a.player&&!a.postBuild.empty()&&a.aircraft.state==0&&std::abs(a.position.x-a.destination.x)<=4&&std::abs(a.position.y-a.destination.y)<=4){"
+        },
+        {
+          "line": 51,
+          "text": "else if(a.type==2||a.type==5){a.aircraft.position=a.position;if(a.flightTactics)a.flightTactics->advance(a.aircraft);else a.aircraft.tick();a.position=a.aircraft.position;"
+        },
+        {
+          "line": 52,
+          "text": "if(a.flightTactics&&target){"
+        },
+        {
+          "line": 55,
+          "text": "a.flightTactics->face(a.aircraft,std::atan2(target->position.y-a.position.y,target->position.x-a.position.x));"
+        },
+        {
+          "line": 57,
+          "text": "a.angle=a.aircraft.angle;}"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Simulation/WorldTargeting.cpp",
+      "sha256": "623af7989f62edbd83449e12b057141edde47c0e4662f79807fa356167312ad0",
+      "references": [
+        {
+          "line": 15,
+          "text": "if(aiEnabled&&(!a.player||a.type==0||a.type==1||a.type==3||a.flightTactics)&&!target&&time()>a.attackCheck){"
+        },
+        {
+          "line": 24,
+          "text": "if(a.flightTactics)return;"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Validation/AircraftComparison.hpp",
+      "sha256": "52c0506ea9ad4a158d445e182a9a9e9e271395b0c552f6eb46b2fa304ad91a34",
+      "references": [
+        {
+          "line": 2,
+          "text": "#include \"Core/Simulation/AircraftModels.hpp\""
+        },
+        {
+          "line": 4,
+          "text": "using md::appendAircraftModels;"
+        },
+        {
+          "line": 5,
+          "text": "using md::appendAircraftWeapons;"
+        },
+        {
+          "line": 6,
+          "text": "using md::aircraftWeapons;"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Validation/AlliedAircraft.hpp",
+      "sha256": "51685de388e2e5a0ef2f219eef2ae43e72320b99cbd434b2b1013942d947397e",
+      "references": [
+        {
+          "line": 8,
+          "text": "struct AlliedAircraftTrial {const char* model;const char* reference;float widthFraction,speed,height;};"
+        },
+        {
+          "line": 11,
+          "text": "inline constexpr std::array<AlliedAircraftTrial,4> alliedAircraft{{"
+        },
+        {
+          "line": 12,
+          "text": "{\"AircraftLight\",\"MachineGun\",.50f,2.0f,12},"
+        },
+        {
+          "line": 13,
+          "text": "{\"AircraftHeavy\",\"HMG\",.425f,1.0f,18},"
+        },
+        {
+          "line": 14,
+          "text": "{\"AircraftDuct\",\"HeavyMissile\",.425f,1.6f,18},"
+        },
+        {
+          "line": 15,
+          "text": "{\"AircraftTransport\",\"IonRifle\",.25f,1.4f,22}"
+        },
+        {
+          "line": 17,
+          "text": "struct AircraftTrialEconomy {int cells=0,upgradeCredits=0,hp=0;float duration=0;};"
+        },
+        {
+          "line": 18,
+          "text": "inline AircraftTrialEconomy aircraftTrialEconomy(unsigned kind,unsigned level,const BuildCatalog& builds,const DataTable& items,BattleGeometry g){"
+        },
+        {
+          "line": 19,
+          "text": "if(kind>=alliedAircraft.size()||level<1||level>10)throw std::out_of_range(\"Aircraft trial kind/level\");"
+        },
+        {
+          "line": 20,
+          "text": "char name[48];std::snprintf(name,sizeof name,\"%s_%02u\",alliedAircraft[kind].reference,level);"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Validation/ValidationTools.cpp",
+      "sha256": "4c6e73e67d6a7268b647e96f72a05a2697c97032c14f0c83dc269739eb74b0bb",
+      "references": [
+        {
+          "line": 60,
+          "text": "add(\"LIGHT HELI\",\"LEVEL 1 / ALLIED\",{},{},ValidationCommand::aircraftLight,running,\"SPAWN\");"
+        },
+        {
+          "line": 61,
+          "text": "add(\"MEDIUM HELI\",\"LEVEL 1 / ALLIED\",{},{},ValidationCommand::aircraftHeavy,running,\"SPAWN\");"
+        },
+        {
+          "line": 62,
+          "text": "add(\"DUCT VTOL\",\"LEVEL 1 / ALLIED\",{},{},ValidationCommand::aircraftDuct,running,\"SPAWN\");"
+        },
+        {
+          "line": 63,
+          "text": "add(\"CARGO VTOL\",\"LEVEL 1 / ALLIED\",{},{},ValidationCommand::aircraftTransport,running,\"SPAWN\");"
+        },
+        {
+          "line": 117,
+          "text": "if(raw>=600&&raw<604){w->validationAlliedAircraft(raw-600,w->screenToWorld({160,240}));result.changed=true;}"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Validation/ValidationTools.hpp",
+      "sha256": "2a87f037b4f6167e8a366885bc6e114699ac7e38341fa6cd93f1a3c3a6df6681",
+      "references": [
+        {
+          "line": 15,
+          "text": "save=500,aircraftLight=600,aircraftHeavy,aircraftDuct,aircraftTransport"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Core/Validation/WorldValidation.cpp",
+      "sha256": "09e012467a1ffaed313edb7cca8d67be2be3c00ed334aa707c2968ae664d65dc",
+      "references": [
+        {
+          "line": 10,
+          "text": "#include \"Core/Validation/AircraftComparison.hpp\""
+        },
+        {
+          "line": 11,
+          "text": "#include \"Core/Validation/AlliedAircraft.hpp\""
+        },
+        {
+          "line": 12,
+          "text": "#include \"Core/Simulation/AlliedAircraft.hpp\""
+        },
+        {
+          "line": 28,
+          "text": "void World::validationAircraftComparison(){"
+        },
+        {
+          "line": 30,
+          "text": "validation::appendAircraftModels(models_);validation::appendAircraftWeapons(weapons_);validationArtScene_=true;"
+        },
+        {
+          "line": 39,
+          "text": "a.angle=a.vehicle.angle=a.aircraft.angle=1.57079632679f;"
+        },
+        {
+          "line": 41,
+          "text": "if(heli){a.name=heavy?\"AircraftHeavy\":\"AircraftLight\";a.assembly=*models_.machine(a.name);a.type=2;a.player=true;a.artHeadingOffset=0;a.flightHeight=heavy?18.f:12.f;a.rotorStep=7.3f*6.28318530718f/60.f;configureWeapons(a);}"
+        },
+        {
+          "line": 45,
+          "text": "ActorId World::validationAlliedAircraft(unsigned kind,Vec2 position){"
+        },
+        {
+          "line": 46,
+          "text": "if(!started_||kind>=validation::alliedAircraft.size()||!std::isfinite(position.x)||!std::isfinite(position.y))throw std::invalid_argument(\"Aircraft trial spawn\");"
+        },
+        {
+          "line": 47,
+          "text": "auto economy=validation::aircraftTrialEconomy(kind,1,builds_,itemsTable_,geometry_);"
+        },
+        {
+          "line": 48,
+          "text": "validation::appendAircraftModels(models_);validation::appendAircraftWeapons(weapons_);"
+        },
+        {
+          "line": 49,
+          "text": "const auto& trial=validation::alliedAircraft[kind];"
+        },
+        {
+          "line": 55,
+          "text": "a.aircraft.rotationDivisor=12;a.aircraft.moveSpeed=trial.speed*geometry_.deviceScale;"
+        },
+        {
+          "line": 56,
+          "text": "a.flightTactics=AircraftTactics{trial.widthFraction,trial.speed,std::uint32_t(a.id*2654435761u)|1u};"
+        },
+        {
+          "line": 57,
+          "text": "if(const auto* policy=alliedAircraftForModel(a.name)){a.flightTactics->noseStep=policy->noseDegreesPerSecond*3.14159265f/10800.f;a.flightTactics->weaponStep=policy->weaponDegreesPerSecond*3.14159265f/10800.f;}"
+        },
+        {
+          "line": 59,
+          "text": "// Only these new aircraft acquire using the longest attached weapon."
+        },
+        {
+          "line": 64,
+          "text": "void World::validationAlliedAircraftComparison(){"
+        },
+        {
+          "line": 65,
+          "text": "validationAircraftComparison();actors_.clear();"
+        },
+        {
+          "line": 72,
+          "text": "validationAlliedAircraft(i,{x,-90*scale});"
+        },
+        {
+          "line": 76,
+          "text": "void World::validationAircraftDodgeComparison(){"
+        },
+        {
+          "line": 77,
+          "text": "validationAircraftComparison();actors_.clear();"
+        },
+        {
+          "line": 84,
+          "text": "for(unsigned i=0;i<3;++i)addNamed(\"AircraftLight_10\",{float(int(i)*80-80)*scale,-80*scale},true);"
+        },
+        {
+          "line": 85,
+          "text": "addNamed(\"AircraftHeavy_10\",{0,-200*scale},true);"
+        },
+        {
+          "line": 89,
+          "text": "for(const auto& a:actors_)if(a->flightTactics&&a->hp>0&&!a->removed)countermeasures_->emit(float(time()),a->position,a->angle,a->countermeasureWidth);"
+        }
+      ]
+    },
+    {
+      "path": "Sources/Platform/Apple/MDRenderer.mm",
+      "sha256": "6e09f807df2d8d37ad776d843b8dc2ea9c74afa2868c3d9c66b51d5c653ae238",
+      "references": [
+        {
+          "line": 2,
+          "text": "#include \"Core/Presentation/AircraftPaint.hpp\""
+        },
+        {
+          "line": 63,
+          "text": "md::applyAircraftPaint(name,pixels,std::size_t(t.width)*t.height,t.width,t.height);"
+        }
+      ]
+    }
+  ]
+}
