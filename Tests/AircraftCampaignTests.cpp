@@ -29,15 +29,15 @@ int main(int argc,char** argv){assert(argc>=2);Resources r;r.root=argv[1];
    if(level<10){auto prior=save.credits(0);char key[48];std::snprintf(key,sizeof key,"%s_%02u",std::string(spec.name).c_str(),level);assert(policy.upgradeBuild(save,0,spec.name));assert(save.builds(0)[0].level==level&&save.credits(0)==prior-builds.find(key)->upgradeCost);}else assert(!policy.upgradeBuild(save,0,spec.name));
   }
  }
- // Largest effective range among every production assembly; total multiweapon attack estimate.
+ // User-specified same-level references, across actual production assemblies.
  for(unsigned level=1;level<=10;++level){int maxRange=0;std::array<int,4> attack{};char suffix[8];std::snprintf(suffix,sizeof suffix,"_%02u",level);
   auto visit=[&](auto&& self,const auto& nodes,int& atk,int& rng)->void{for(auto& p:nodes){if(auto w=weapons.find(p.name)){atk+=w->attackPoint();rng=std::max(rng,int(w->shotRange));}self(self,p.children,atk,rng);}};
   for(auto file:{"MachBuild_Parts","MachBuild_Name"}){auto t=table(file);for(auto& row:t.rows())if(row[0].ends_with(suffix)){auto d=builds.find(row[0]);if(alliedAircraftForModel(d->machine))continue;int a=0,b=0;if(d->setType==0){auto p=PlayerLoadout::fromBuild(*d,table("ItemInfo"),BattleGeometry::phone());b=weapons.find(p.weapon)->shotRange;}else visit(visit,*models.machine(d->machine),a,b);maxRange=std::max(maxRange,b);}}
-  for(unsigned k=0;k<4;++k){auto& spec=alliedAircraftCatalog[k];int range=0;visit(visit,*models.machine(std::string(spec.model)+suffix),attack[k],range);if(k==1)assert(range==maxRange);if(k==0){auto d=builds.find(std::string("MachineGun")+suffix);auto p=PlayerLoadout::fromBuild(*d,table("ItemInfo"),BattleGeometry::phone());assert(range==weapons.find(p.weapon)->shotRange);}}
+  for(unsigned k=0;k<4;++k){auto& spec=alliedAircraftCatalog[k];int range=0;visit(visit,*models.machine(std::string(spec.model)+suffix),attack[k],range);if(k==1){int va=0,vr=0;visit(visit,*models.machine(builds.find(std::string("Vulcan")+suffix)->machine),va,vr);assert(range==vr);}if(k==0){auto d=builds.find(std::string("MachineGun")+suffix);auto p=PlayerLoadout::fromBuild(*d,table("ItemInfo"),BattleGeometry::phone());assert(range==weapons.find(p.weapon)->shotRange);}}
   assert(attack[1]>attack[0]&&attack[1]>attack[2]&&attack[1]>attack[3]);
  }
  // Existing advanced profile: all grants once, no level/money reset; recovery remains byte-identical.
  auto s=fixture();s.setBuilds(0,std::vector<OwnedBuild>{{"MachineGun",9,true},{"RifleTurret",7,false}});auto credits=s.credits(0);assert(policy.grantAircraftUnlocks(s,0,44).size()==4);auto bytes=s.encode();assert(policy.grantAircraftUnlocks(s,0,44).empty()&&s.encode()==bytes&&s.credits(0)==credits);transfer::validate(transfer::decode(transfer::encode(s)),r);
  if(argc==3){std::ifstream f(argv[2],std::ios::binary);Bytes b{std::istreambuf_iterator<char>(f),{}};auto local=SaveData::decode(b);for(size_t slot=0;slot<5;++slot)if(local.active(slot))policy.grantAircraftUnlocks(local,slot,local.stage(slot));transfer::validate(local,r);assert(transfer::decode(transfer::encode(local)).encode()==local.encode());std::cout<<"Local iPhone save copy + aircraft + recovery validated; original not modified\n";}
- std::cout<<"AircraftCampaign: 4 mission boundaries, original clear rewards, 40 production/fire/heading/upgrade/recovery cases, longest ranges and strongest gunship passed\n";
+ std::cout<<"AircraftCampaign: 4 mission boundaries, original clear rewards, 40 production/fire/heading/upgrade/recovery cases, specified reference ranges and gunship attack passed\n";
 }
