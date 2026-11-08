@@ -1,6 +1,6 @@
 # 벨루가 선회 웹 수정 — 2026-11-09
 
-[새 그림·보존·웹 검사](docs/research/beluga-bank-correction-20261109.md)를 적용했다. 이번 실제 게임 자원 변경은 ATransportBody.png 하나다. 정면·다른 세 기체·원본 2,652개·이동 코드는 보존했다. 스카웃은 `5d6b872`에 커밋돼 있다. 두 기체의 아이폰 설치·실기기 확인·사용자 시각 확인은 남았다. 기기는 조작하지 않았다. 기존 지상 유닛식 정지와 회피 곡선을 재적용하지 않는다. 나머지 작업 순서는 TODO 상단을 따른다.
+[새 그림·보존·웹 검사](docs/research/beluga-bank-correction-20261109.md)를 `e9c95ba`에 커밋했다. [비교 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-bank-correction-20261109)도 Sites 버전 243으로 게시했다. 이번 실제 게임 자원 변경은 ATransportBody.png 하나다. 정면·다른 세 기체·원본 2,652개·이동 코드는 보존했다. 스카웃은 `5d6b872`에 커밋돼 있다. 두 기체의 아이폰 설치·실기기 확인·사용자 시각 확인은 남았다. 기기는 조작하지 않았다. 기존 지상 유닛식 정지와 회피 곡선을 재적용하지 않는다. 나머지 작업 순서는 TODO 상단을 따른다.
 
 # 스카웃 선회 웹 수정 — 2026-11-09
 

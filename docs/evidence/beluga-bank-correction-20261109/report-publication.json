@@ -1,0 +1,22 @@
+{
+  "projectId": "appgprj_6addbf55aea081918d3d182d7e496e88",
+  "version": 243,
+  "siteSourceCommit": "d8847736ad1f0e54937bb9f63f2cf24191fdad53",
+  "deploymentId": "appgdep_6af0dd99bdfc8191894cb2119a9f7523",
+  "status": "succeeded",
+  "url": "https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-bank-correction-20261109",
+  "gameCommits": {
+    "scout": "5d6b872",
+    "beluga": "e9c95ba"
+  },
+  "access": "owner-private preserved",
+  "verification": {
+    "siteAllLocalLinksExist": true,
+    "reportAnimationRGBExact": true,
+    "archiveExpandedBytes": 268262912,
+    "newReportBrowserLayoutVerified": false,
+    "browserLimit": "Chrome native app state timed out; Safari was in active user use, so it was not manipulated",
+    "newIPhoneInstall": false,
+    "gameMainOrPWAPublished": false
+  }
+}

@@ -1,3 +1,9 @@
+# 스카웃·벨루가 선회 수정 — 2026-11-09
+
+[수정 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-bank-correction-20261109)를 Sites 버전 243으로 게시했다. 스카웃 `5d6b872`, 벨루가 `e9c95ba`의 준비 그림·실제 웹 조립·보존 검사와 남은 작업을 담았다. 기존 소유자 전용 접근과 다른 보고서의 원격 변경을 보존했다.
+
+Source `d8847736ad1f0e54937bb9f63f2cf24191fdad53`, Deployment `appgdep_6af0dd99bdfc8191894cb2119a9f7523`, succeeded. [게시 근거](evidence/beluga-bank-correction-20261109/report-publication.json). 문서 연결과 실제 게임 캡처의 픽셀은 확인했다. 이번 보고서의 브라우저 배치 검사는 완료하지 못했다. Chrome 상태 읽기가 시간 초과됐고, Safari는 사용자가 입력 중이어서 조작하지 않았다. 아이폰 새 설치와 게임 main·운영 PWA 배포는 하지 않았다.
+
 # 헬기 PNG 처리와 검증 누락 경위 — 2026-11-09
 
 후속 정정: 경위서와 연결된 기술 보고서의 회사명·판본 표기를 ‘원본’으로 통일했다. 원본 분석·정식 빌드에서 확보한 절차를 헬기 작업에 대조·적용하지 않은 경위와, 검증하지 않은 범위까지 완료한 듯 보고한 잘못을 명시했다. 본문과 다운로드 원문을 함께 갱신했다. Source `560f757f54444941d66ae362d3e5fee6ecb6c420`, Deployment `appgdep_6af0aaad1ea48191a1b577f9959a1545` succeeded, Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_98e91c38268c81919e23ab7f33a7b225`.
