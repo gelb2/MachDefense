@@ -19,7 +19,9 @@ void World::updateActor(WorldActor& a){
     if(aiEnabled&&a.flightTactics){
         auto& tactic=*a.flightTactics;a.moveToTarget=false;
         a.aircraft.moveSpeed=tactic.speed*geometry_.deviceScale;
+        const auto priorDodge=tactic.dodgeCount;
         if(tactic.updateDodge(time(),a.position,a.player,a.aircraft.moveSpeed,a.radius,512*geometry_.deviceScale,geometry_.halfLength(),aircraftThreats_)){
+            if(tactic.dodgeCount!=priorDodge)countermeasures_->emit(float(time()),a.position,a.angle,a.countermeasureWidth);
             setDestination(a,tactic.dodgeDestination);
         }else if(target){
             if(tactic.targetId!=target->id){tactic.engaged=false;tactic.targetId=target->id;}

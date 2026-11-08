@@ -19,6 +19,7 @@ World::World(ResourceAccess& r,HostServices& h,SaveData& s,std::size_t slot,Batt
     uiMargin_=g.deviceScale==.5f?62.f:178.f;
     if(slot>=SaveData::slotCount||!s.active(slot))throw std::invalid_argument("World requires an original active save slot");
     particles_=std::make_unique<ParticlePool>(float(time()),random_);
+    countermeasures_=std::make_unique<AircraftCountermeasures>(geometry_.deviceScale);
     for(std::size_t i=0;i<itemsTable_.rowCount();++i){auto d=LootDefinition::fromTable(itemsTable_,i);if(d.type!=LootType::other)lootDefinitions_.emplace(d.code,std::move(d));}
 }
 WorldActor& World::addNamed(std::string_view name,Vec2 position,bool player){
@@ -42,6 +43,14 @@ WorldActor& World::addNamed(std::string_view name,Vec2 position,bool player){
         a.flightTactics->noseStep=aircraft->noseDegreesPerSecond*3.14159265f/10800.f;a.flightTactics->weaponStep=aircraft->weaponDegreesPerSecond*3.14159265f/10800.f;
         a.flightHeight=aircraft->height;a.rotorStep=7.3f*6.28318530718f/60.f;a.aircraft.rotationDivisor=12;
     }
+    if(a.flightTactics){
+        float low=0,high=0;
+        for(const auto& pose:models_.pose(a.assembly,geometry_.deviceScale,0,0,0)){
+            const auto size=resources_.imageSize(pose.definition->image);const float half=size.y/pose.definition->splitY*pose.deviceScale*.5f;
+            low=std::min(low,pose.localCenter.y-half);high=std::max(high,pose.localCenter.y+half);
+        }
+        a.countermeasureWidth=high-low;
+    }
     configureWeapons(a);actors_.push_back(std::move(value));return a;
 }
 WorldActor& World::addParts(const BuildDefinition& definition,Vec2 position){
@@ -57,6 +66,7 @@ void World::start(unsigned stage){
     validationArtScene_=false;
     stage_=stage;startTime_=time();statistics_={};actors_.clear();loot_.clear();projectiles_.clear();trails_.clear();airStrikes_.clear();spawners_.clear();production_.clear();events_.clear();
     for(auto& p:particles_->particles())p.shown=false;
+    countermeasures_->clear();
     cellLevel_=0;state_=WorldState::running;paused_=false;started_=true;cameraTouch_.reset();radarTouch_.reset();cameraVelocity_=0;
     save_.writeWord(SaveData::slotStart+slot_*SaveData::slotStride+0x34,stage);
     capacity_=upgradeParameter(upgrades_,save_,slot_,BaseUpgrade::cellStorage);
@@ -115,6 +125,7 @@ void World::tick(){
     std::erase_if(trails_,[](const auto& trail){return trail.motion->removed();});
     updateProjectiles();
     for(auto& p:particles_->particles())p.tick(float(time()),geometry_.deviceScale==.5f?240.f:512.f);
+    countermeasures_->tick(float(time()));
     std::vector<LootCollector> collectors;for(const auto& a:actors_)if(a->player&&!a->removed)collectors.push_back({a->id,a->position,a->type,a->hp});
     for(auto& item:loot_)if(auto pickup=item.tick(time(),collectors,random_)){
         host_.playSound("Game_GetItem.wav");

@@ -110,3 +110,9 @@
 ## 플레어 채도 조정 — 2026-11-09
 
 사용자 지시에 따라 큰 부채꼴·밝은 중심·은색 채프를 유지하고 노랑·빨강 채도를 낮췄다. [v3 시안](../../Art/Aircraft/countermeasures-20261108/storyboard-v3-muted.png). v2 원본은 보존한다. 게임 구현과 실전 성능 확인은 별도 단계다.
+
+## 게임 효과 연결 — 2026-11-09
+
+회피 시작 횟수가 증가할 때 기존 ParticleState와 Trail로 플레어 6개·은색 채프 반짝임 4개·점화광 2개·연기 2개를 표시한다. 원작 Efx_Fire·Efx_Trail01·Efx_Smoke를 재사용한다. 궤적 저장 공간은 World 생성 때 확보하고 반복해서 쓴다. 전투 난수와 원작 입자 256개 풀은 사용하지 않는다. 전체 효과 저장은 96개이며, 14개짜리 묶음 6개까지만 동시에 수용한다. 일시정지에는 효과도 멈춘다. 저장 호출과 오디오 생성·삭제는 추가하지 않았다.
+
+[관련 검사 11개](../evidence/aircraft-implementation-20261109/countermeasure-tests.txt)와 [40·100기 동시 발동 코어 측정](../evidence/aircraft-implementation-20261109/countermeasure-stress.txt)을 통과했다. 이 수치는 렌더 GPU 측정을 포함하지 않는다. 웹 치트 실전 검사는 무장 연결 후 수행한다.

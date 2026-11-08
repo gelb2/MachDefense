@@ -9,6 +9,7 @@
 #include "Core/Simulation/AircraftTactics.hpp"
 #include "Core/Simulation/WeaponController.hpp"
 #include <memory>
+#include "Core/Simulation/AircraftCountermeasures.hpp"
 
 namespace md {
 using ActorId=std::uint64_t;
@@ -23,7 +24,7 @@ struct WorldActor {
     int hp=0,maxHP=0,type=0,referenceType=0,experience=0,coin=0,coinRate=0;
     float radius=0,range=0,angle=0,radarAngle=0,attackCheck=0,targetCheck=0,crashTime=0;
     // Visual-only aircraft properties. Original actors retain their original defaults.
-    float rotorStep=.2f,artHeadingOffset=0,flightHeight=0;
+    float rotorStep=.2f,artHeadingOffset=0,flightHeight=0,countermeasureWidth=0;
     std::optional<AircraftTactics> flightTactics; // New trial aircraft only.
     std::uint32_t statusFlags=0;
     Vec2 position,destination;
@@ -88,6 +89,8 @@ public:
     void appendSprites(Frame&)const;
     const std::vector<std::unique_ptr<WorldActor>>& actors()const{return actors_;}
     const std::vector<WorldProjectile>& projectiles()const{return projectiles_;}
+    unsigned countermeasureBursts()const{return countermeasures_->bursts();}
+    unsigned countermeasureParticles()const{return countermeasures_->active();}
     std::vector<WorldEvent> takeEvents();
     WorldActor* actor(ActorId);
     const WorldActor* actor(ActorId)const;
@@ -115,6 +118,7 @@ private:
     AircraftThreatGrid aircraftThreats_;
     std::unordered_map<std::string,LootDefinition> lootDefinitions_;std::vector<LootState> loot_;
     std::unique_ptr<ParticlePool> particles_;
+    std::unique_ptr<AircraftCountermeasures> countermeasures_;
     struct ParticleImage {std::string image;unsigned columns=1,rows=1;Vec2 origin;float assetScale=0;};
     std::array<ParticleImage,ParticlePool::capacity> particleImages_;
     void setParticleImage(ParticleState*,std::string,unsigned,unsigned);

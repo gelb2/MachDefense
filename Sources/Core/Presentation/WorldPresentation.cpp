@@ -118,6 +118,7 @@ void World::appendSprites(Frame& frame)const{
         }
         if(!w->effectImage.empty())if(auto effect=p.motion.attachedEffect(*w,resources_.imageSize(w->effectImage),worldToView(p.motion.position),scale))layers[p.layer].sprites.push_back(std::move(*effect));
     }
+    countermeasures_->append(layers[6],float(time()),[&](Vec2 p){return worldToView(p);},[&](std::string_view n){return resources_.imageSize(n);});
     for(const auto& strike:airStrikes_)strike.motion.appendSprite(layers[7],worldToView(strike.motion.position),resources_.imageSize("Airplane.png"),scale);
     for(auto& layer:layers){const auto offset=frame.sprites.size();for(auto& mesh:layer.meshes){mesh.beforeSpriteIndex+=offset;frame.meshes.push_back(std::move(mesh));}for(auto& sprite:layer.sprites)frame.sprites.push_back(std::move(sprite));}
 
