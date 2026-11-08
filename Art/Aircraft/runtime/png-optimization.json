@@ -214,15 +214,15 @@
     },
     {
       "image": "ALightBody.png",
-      "sourcePath": "Art/Aircraft/banking-20261109/prepared/ALightBody.png",
-      "sourceSHA256": "9ab3ad49495f4b9541f0eeef38e723ecf9d2cf34084d2e57cdd4bc9fc3ce5adc",
-      "outputSHA256": "a2e67664a75c7bca729dcca4640fb6b8f54a3eb54ffe674f6910c1df70273c2b",
+      "sourcePath": "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+      "sourceSHA256": "c0e800b5bacb41ed1b9e8035f8ead5147122ef4c00756ffad900de95c4701ba5",
+      "outputSHA256": "1080dd9446eb0fcadb7edcc483da204d4f560aaf18722d7a27a687676cb537ff",
       "size": [
-        434,
-        39
+        448,
+        47
       ],
-      "inputBytes": 37396,
-      "outputBytes": 30021,
+      "inputBytes": 43295,
+      "outputBytes": 28224,
       "cgbi": true,
       "alphaUnchanged": true,
       "opaqueRGBUnchanged": true

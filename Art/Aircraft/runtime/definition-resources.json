@@ -1,6 +1,6 @@
 {
   "source": "Art/Aircraft/runtime/assembly.json",
-  "sourceSHA256": "a3d1cd56da69197db348072a241956fccabd1bd5bd5de77d7d7baa7c7ec3d525",
+  "sourceSHA256": "663ff4fef6e478b4195c32d74e28a84b6b63bb5c48fe306d3a4996af742be840",
   "parts": 23,
   "machines": 4,
   "containers": [

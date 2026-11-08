@@ -48,7 +48,7 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
   for(const auto& sprite:frame.sprites){auto size=r.imageSize(sprite.image);
    const bool body=sprite.image=="ALightBody.png"||sprite.image=="AHeavyBody.png"||sprite.image=="ADuctBody.png"||sprite.image=="ATransportBody.png";
    const float cellWidth=body?size.x/7:size.x;
-   if(body){const float expected=sprite.image=="ALightBody.png"?62.f:sprite.image=="AHeavyBody.png"?76.f:sprite.image=="ADuctBody.png"?110.f:140.f;assert(cellWidth==expected&&sprite.sourcePx&&sprite.sourcePx->x==0);}
+   if(body){const float expected=sprite.image=="ALightBody.png"?64.f:sprite.image=="AHeavyBody.png"?76.f:sprite.image=="ADuctBody.png"?110.f:140.f;assert(cellWidth==expected&&sprite.sourcePx&&sprite.sourcePx->x==0);}
    assert(std::abs(sprite.destination.width-cellWidth*viewport*factor)<.0001f);
    assert(std::abs(sprite.destination.height-size.y*viewport*factor)<.0001f);
   }

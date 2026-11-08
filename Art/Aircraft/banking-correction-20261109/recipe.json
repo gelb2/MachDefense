@@ -1,0 +1,53 @@
+{
+  "scope": "Scout only; preserve approved neutral pixels and all motion, other aircraft and original unit assets",
+  "aircraft": [
+    {
+      "name": "scout",
+      "body": "ALightBody",
+      "source": "Art/Aircraft/banking-correction-20261109/scout-candidate-02.png",
+      "paint": "existing prepareAircraftPaint colour curves; no new coordinate markings",
+      "padding": [
+        1,
+        4
+      ],
+      "rotorSocket": [
+        7.21,
+        0
+      ],
+      "rotorCenters": [
+        [
+          267,
+          192
+        ],
+        [
+          789,
+          192
+        ],
+        [
+          1307,
+          192
+        ],
+        [
+          265,
+          705
+        ],
+        [
+          755,
+          705
+        ],
+        [
+          1242,
+          705
+        ]
+      ],
+      "angles": [
+        -8,
+        -16,
+        -24,
+        8,
+        16,
+        24
+      ]
+    }
+  ]
+}

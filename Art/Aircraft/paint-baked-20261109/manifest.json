@@ -84,8 +84,9 @@
     {
       "image": "ALightBody.png",
       "source_sha256": "8e90729121e037158c94804bba64b05facd0e5e99bfa7b2059805e278468badd",
-      "output_sha256": "a2e67664a75c7bca729dcca4640fb6b8f54a3eb54ffe674f6910c1df70273c2b",
-      "painted_source_sha256": "4a11f4410fc41474b15e590cfdf18dfbee6bd5dacdb3b8f769875e283fca502c"
+      "output_sha256": "1080dd9446eb0fcadb7edcc483da204d4f560aaf18722d7a27a687676cb537ff",
+      "painted_source_sha256": "4a11f4410fc41474b15e590cfdf18dfbee6bd5dacdb3b8f769875e283fca502c",
+      "bankCorrectionManifest": "Art/Aircraft/banking-correction-20261109/manifest.json"
     },
     {
       "image": "ALightBodyBankL.png",

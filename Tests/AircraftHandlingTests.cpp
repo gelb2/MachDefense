@@ -14,10 +14,10 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
   w.damage(id,a->hp);w.tick();assert(a->hp==0&&a->flightHeight==0&&a->flightTactics->bank==0&&a->aircraft.speed==0);
   Frame dead;w.appendSprites(dead);bool shadow=false;for(const auto& s:dead.sprites)if(s.image.starts_with(spec.model=="AircraftLight"?"ALight":spec.model=="AircraftHeavy"?"AHeavy":spec.model=="AircraftDuct"?"ADuct":"ATransport")&&s.color.r==0){assert(s.color.a==.18f);shadow=true;}assert(shadow);
  }
- // Seven original-style tiles: neutral uses the approved dimensions; rolls
+ // Seven original-style tiles: Scout has transparent padding around unchanged neutral pixels; rolls
  // select six distinct source rectangles without shearing the drawn body.
  for(const auto& body:std::array<std::pair<const char*,Vec2>,4>{{
-  {"ALightBody",{62,39}},{"AHeavyBody",{76,112}},
+  {"ALightBody",{64,47}},{"AHeavyBody",{76,112}},
   {"ADuctBody",{110,88}},{"ATransportBody",{140,131}}}}){
   const auto models=BattleModels::load(r);const auto* definition=models.part(body.first);
   assert(definition&&definition->tileCount==7&&definition->splitX==7);

@@ -1,0 +1,166 @@
+{
+  "method": "Drawn roll views, original paint curves, uniform scale, fixed rotor sockets; neutral pixels retained",
+  "textures": [
+    {
+      "body": "ALightBody",
+      "source": "Art/Aircraft/banking-correction-20261109/scout-candidate-02.png",
+      "sourceSHA256": "cc099a9a2786dcfeb08087eb964c010aab6e3dcf6acb77a5203e06563942926b",
+      "neutralSHA256": "4a11f4410fc41474b15e590cfdf18dfbee6bd5dacdb3b8f769875e283fca502c",
+      "preparedSHA256": "c0e800b5bacb41ed1b9e8035f8ead5147122ef4c00756ffad900de95c4701ba5",
+      "cellSize": [
+        64,
+        47
+      ],
+      "neutralSize": [
+        62,
+        39
+      ],
+      "neutralPadding": [
+        1,
+        4
+      ],
+      "neutralPixelsExact": true,
+      "colourPreparationAlphaExact": true,
+      "frames": [
+        {
+          "tile": 1,
+          "requestedRollDegrees": -8,
+          "cropXYXY": [
+            111,
+            8,
+            424,
+            484
+          ],
+          "uniformScale": 0.129979035639413,
+          "pasteOffset": [
+            1,
+            3
+          ],
+          "drawnSize": [
+            62,
+            41
+          ],
+          "rotorAnchorPixelError": [
+            -0.25612159329141093,
+            -0.22327044025157505
+          ]
+        },
+        {
+          "tile": 2,
+          "requestedRollDegrees": -16,
+          "cropXYXY": [
+            615,
+            9,
+            916,
+            484
+          ],
+          "uniformScale": 0.129979035639413,
+          "pasteOffset": [
+            1,
+            1
+          ],
+          "drawnSize": [
+            62,
+            39
+          ],
+          "rotorAnchorPixelError": [
+            -0.25612159329141093,
+            0.11635220125786105
+          ]
+        },
+        {
+          "tile": 3,
+          "requestedRollDegrees": -24,
+          "cropXYXY": [
+            1127,
+            12,
+            1393,
+            483
+          ],
+          "uniformScale": 0.129979035639413,
+          "pasteOffset": [
+            1,
+            0
+          ],
+          "drawnSize": [
+            61,
+            35
+          ],
+          "rotorAnchorPixelError": [
+            -0.3861006289308193,
+            -0.1037735849056638
+          ]
+        },
+        {
+          "tile": 4,
+          "requestedRollDegrees": 8,
+          "cropXYXY": [
+            111,
+            519,
+            422,
+            996
+          ],
+          "uniformScale": 0.129979035639413,
+          "pasteOffset": [
+            1,
+            3
+          ],
+          "drawnSize": [
+            62,
+            40
+          ],
+          "rotorAnchorPixelError": [
+            -0.3861006289308193,
+            -0.4832285115303989
+          ]
+        },
+        {
+          "tile": 5,
+          "requestedRollDegrees": 16,
+          "cropXYXY": [
+            617,
+            520,
+            916,
+            996
+          ],
+          "uniformScale": 0.129979035639413,
+          "pasteOffset": [
+            1,
+            6
+          ],
+          "drawnSize": [
+            62,
+            39
+          ],
+          "rotorAnchorPixelError": [
+            -0.3861006289308193,
+            0.4371069182389924
+          ]
+        },
+        {
+          "tile": 6,
+          "requestedRollDegrees": 24,
+          "cropXYXY": [
+            1126,
+            520,
+            1407,
+            996
+          ],
+          "uniformScale": 0.129979035639413,
+          "pasteOffset": [
+            1,
+            8
+          ],
+          "drawnSize": [
+            62,
+            37
+          ],
+          "rotorAnchorPixelError": [
+            -0.3861006289308193,
+            -0.422431865828095
+          ]
+        }
+      ]
+    }
+  ]
+}

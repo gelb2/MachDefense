@@ -46,6 +46,9 @@ for p in output.glob('*.png'):
 if (root/'Art/Aircraft/banking-20261109/manifest.json').exists():
  from pack_aircraft_banking import run as pack_aircraft_banking
  pack_aircraft_banking()
+if (root/'Art/Aircraft/banking-correction-20261109/recipe.json').exists():
+ from prepare_aircraft_bank_correction import run as prepare_aircraft_bank_correction
+ prepare_aircraft_bank_correction()
 optimize_aircraft_png()
 
 for row in rows:
