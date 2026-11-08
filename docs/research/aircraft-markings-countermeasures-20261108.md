@@ -106,3 +106,7 @@
 [WorldCombat.cpp](../../Sources/Core/Simulation/WorldCombat.cpp)는 발사 이벤트에서 공통 `Efx_Fire.png`를 생성하고, 직접 피해형 무장의 탄피에 `BulletShell.png`를 사용한다. [WeaponController.cpp](../../Sources/Core/Simulation/WeaponController.cpp)는 공통 주퇴를 반환하고 `WorldCombat`이 무기 파츠 위치에 적용한다. 따라서 원작 공통 경로가 이미 있으며, 헬기별 실제 무장·배출 위치·선회 중 총구 정렬의 전수 대조가 남았다. 이번 도장 작업에서 이 원작 모듈을 수정하지 않았다.
 
 [생성 프롬프트·파일 해시](../../Art/Aircraft/paint-v2-20261108/manifest.json). 내장 이미지 생성 도구를 사용했다. 최초 도색 3종 시안과 오류 기록 등 기존 자료는 보존한다.
+
+## 플레어 채도 조정 — 2026-11-09
+
+사용자 지시에 따라 큰 부채꼴·밝은 중심·은색 채프를 유지하고 노랑·빨강 채도를 낮췄다. [v3 시안](../../Art/Aircraft/countermeasures-20261108/storyboard-v3-muted.png). v2 원본은 보존한다. 게임 구현과 실전 성능 확인은 별도 단계다.
