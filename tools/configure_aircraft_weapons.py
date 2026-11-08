@@ -39,5 +39,5 @@ prefixes=(b'ALightGun',b'ALightMissile',b'AHeavyGun',b'AHeavyMissile',b'AHeavyCa
 retained=[line for line in raw if not line.split(b'\t')[0].startswith(prefixes)]
 path.write_bytes(b''.join(retained+output))
 with (E/'weapon-bindings.tsv').open('w') as f:
- writer=csv.writer(f,delimiter='\t');writer.writerow(['unit','level','weapon','source','count','dpsShare','damage','rawRange','sound','bullet','effect']);writer.writerows(mapping)
+ writer=csv.writer(f,delimiter='\t',lineterminator='\n');writer.writerow(['unit','level','weapon','source','count','dpsShare','damage','rawRange','sound','bullet','effect']);writer.writerows(mapping)
 print(f'{len(output)} helicopter weapon rows; original rows retained')

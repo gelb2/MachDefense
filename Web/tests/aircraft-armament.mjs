@@ -19,7 +19,7 @@ try{
  for(let i=0;i<900;++i){let s=await call(1);if(!seen&&s.countermeasureBursts>0){for(let j=0;j<15;++j)s=await call(1);await page.locator('#game').screenshot({path:`${out}/dodge-flare.png`});seen=true;}}
  assert(seen);result.dodge=true;
  result.performance=[];
- for(const count of [40,100])for(const enabled of [false,true]){
+ for(const count of (process.env.MD_SKIP_PERF?[]:[40,100]))for(const enabled of [false,true]){
   await call(21,count);
   if(enabled)await call(22);
   for(let i=0;i<120;++i)await call(1);
