@@ -1,0 +1,91 @@
+{
+  "status": "implemented; web visual/performance verification pending",
+  "tests": {
+    "ctest": {
+      "passed": 5,
+      "failed": 0,
+      "names": [
+        "AircraftDefinition",
+        "AircraftFireEffects",
+        "AircraftArmament",
+        "Aircraft",
+        "AircraftHandling"
+      ]
+    },
+    "fixedMuzzleCases": 1260,
+    "persistedAssemblyCases": 240,
+    "preparedRecompositionByteIdentical": true,
+    "CgBIDecodedChannelDifferencesAgainstPreviousHEAD": 0,
+    "gitDiffCheckPassed": true
+  },
+  "behavior": "WorldCombat existing embedded angle/body alignment and recoil=0 untouched",
+  "rendering": "Full 76x112 canvas for all seven poses; source texture lattice retained; helicopterDrawnPart recognizes both image names",
+  "muzzles": {
+    "rocket": {
+      "mount": [
+        5,
+        34
+      ],
+      "definitionSocket0": [
+        5,
+        34
+      ],
+      "definitionSocket1": [
+        22,
+        68
+      ],
+      "retainedBodyLocalMuzzle": [
+        17,
+        34
+      ],
+      "neutralImageMuzzle": [
+        55,
+        22
+      ],
+      "gapToAlphaAtSameRow": 7
+    },
+    "airstrike": {
+      "mount": [
+        26,
+        -18
+      ],
+      "definitionSocket0": [
+        26,
+        -18
+      ],
+      "definitionSocket1": [
+        62,
+        -36
+      ],
+      "retainedBodyLocalMuzzle": [
+        36,
+        -18
+      ],
+      "neutralImageMuzzle": [
+        74,
+        74
+      ],
+      "gapToAlphaAtSameRow": 6
+    }
+  },
+  "cost": {
+    "additionalRGBABytesPOT": 1048576,
+    "compressedImageBytesDelta": 2407,
+    "additionalSpritesPerAH10IncludingShadow": 4
+  },
+  "notChanged": [
+    "weapon behavior or recoil",
+    "aircraft movement",
+    "stats",
+    "other three aircraft",
+    "original assets or unit code",
+    "body visual silhouette or pixel colors"
+  ],
+  "notImplemented": [
+    "upgrade appearance differentiation",
+    "new paint treatment",
+    "muzzle gap correction",
+    "independent pod aim or recoil"
+  ],
+  "candidate2": "not applied; generated support backfill unnecessary for existing fixed mounts"
+}

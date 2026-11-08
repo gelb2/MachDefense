@@ -1,5 +1,6 @@
 #include "PNGTestSize.hpp"
 #include "Core/Simulation/World.hpp"
+#include "Core/Simulation/AircraftVisual.hpp"
 #include <cassert>
 #include <cmath>
 #include <filesystem>
@@ -40,26 +41,26 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
   for(const auto& pose:poses){
    assert(std::abs(pose.deviceScale-viewport*factor)<.00001f);
    if(pose.definition->type==4){auto muzzle=pose.muzzle();assert(muzzle);auto size=r.imageSize(pose.definition->image);
-    if(size.x==0){assert(pose.definition->name.starts_with("AHeavyRocket")||pose.definition->name.starts_with("AHeavyAirStrike"));continue;}
+    if(pose.definition->name.starts_with("AHeavyRocket")||pose.definition->name.starts_with("AHeavyAirStrike")){assert(size.x==532&&size.y==112&&pose.definition->tileCount==7);continue;}
     float dx=muzzle->x-pose.localCenter.x,dy=muzzle->y-pose.localCenter.y;
     assert(std::abs(dx*std::cos(pose.angle)+dy*std::sin(pose.angle)-size.x*.5f*viewport*factor)<=.51f*viewport*factor);
    }
   }
   for(const auto& sprite:frame.sprites){auto size=r.imageSize(sprite.image);
-   const bool body=sprite.image=="ALightBody.png"||sprite.image=="AHeavyBody.png"||sprite.image=="ADuctBody.png"||sprite.image=="ATransportBody.png";
+   const bool body=md::helicopterDrawnPart(std::string_view(sprite.image).substr(0,sprite.image.size()-4));
    const float cellWidth=body?size.x/7:size.x;
-   if(body){const float expected=sprite.image=="ALightBody.png"?64.f:sprite.image=="AHeavyBody.png"?76.f:sprite.image=="ADuctBody.png"?110.f:140.f;assert(cellWidth==expected&&sprite.sourcePx&&sprite.sourcePx->x==0);}
+   if(body){const float expected=sprite.image=="ALightBody.png"?64.f:sprite.image.starts_with("AHeavy")?76.f:sprite.image=="ADuctBody.png"?110.f:140.f;assert(cellWidth==expected&&sprite.sourcePx&&sprite.sourcePx->x==0);}
    assert(std::abs(sprite.destination.width-cellWidth*viewport*factor)<.0001f);
    assert(std::abs(sprite.destination.height-size.y*viewport*factor)<.0001f);
   }
  }
  for(const char* name:{"AircraftLight","AircraftHeavy","AircraftDuct","AircraftTransport"})for(float angle:{0.f,1.57079632679f,3.14159265359f,4.71238898038f}){
   auto poses=models.pose(name,1,angle,angle,angle);
-  for(const auto& pose:poses)if(pose.definition->type==4){auto m=pose.muzzle();assert(m);auto size=r.imageSize(pose.definition->image);if(size.x==0){assert(pose.definition->name.starts_with("AHeavyRocket")||pose.definition->name.starts_with("AHeavyAirStrike"));continue;}float dx=m->x-pose.localCenter.x,dy=m->y-pose.localCenter.y;float forward=dx*std::cos(angle)+dy*std::sin(angle);assert(std::abs(forward-size.x*.5f*pose.deviceScale)<=.51f*pose.deviceScale);assert(pose.definition->sockets.front().x==0&&pose.definition->sockets.front().y==0);}
+  for(const auto& pose:poses)if(pose.definition->type==4){auto m=pose.muzzle();assert(m);auto size=r.imageSize(pose.definition->image);if(pose.definition->name.starts_with("AHeavyRocket")||pose.definition->name.starts_with("AHeavyAirStrike")){assert(size.x==532&&size.y==112&&pose.definition->tileCount==7);continue;}float dx=m->x-pose.localCenter.x,dy=m->y-pose.localCenter.y;float forward=dx*std::cos(angle)+dy*std::sin(angle);assert(std::abs(forward-size.x*.5f*pose.deviceScale)<=.51f*pose.deviceScale);assert(pose.definition->sockets.front().x==0&&pose.definition->sockets.front().y==0);}
  }
 
- for(unsigned mode=0;mode<3;++mode){md::validation::AircraftComparisonScene scene(r,mode);auto& w=*scene.world;assert(w.actors().size()==4);auto before=scene.frame();unsigned heliSprites=0,shadows=0;for(const auto& s:before.sprites)if(s.image.starts_with("ALight")||s.image.starts_with("AHeavy")){assert(s.nearest);++heliSprites;if(s.color.r==0){++shadows;assert(s.color.a==.55f);}}assert(heliSprites==20&&shadows==10);
- for(const char* name:{"ALightBody.png","ALightRotor.png","AHeavyBody.png","AHeavyRotor.png","ALightGun.png","ALightMissile.png","AHeavyGun.png","AHeavyMissile.png","AHeavyCannon.png"}){
+ for(unsigned mode=0;mode<3;++mode){md::validation::AircraftComparisonScene scene(r,mode);auto& w=*scene.world;assert(w.actors().size()==4);auto before=scene.frame();unsigned heliSprites=0,shadows=0;for(const auto& s:before.sprites)if(s.image.starts_with("ALight")||s.image.starts_with("AHeavy")){assert(s.nearest);++heliSprites;if(s.color.r==0){++shadows;assert(s.color.a==.55f);}}assert(heliSprites==24&&shadows==12);
+ for(const char* name:{"ALightBody.png","ALightRotor.png","AHeavyBody.png","AHeavyRotor.png","ALightGun.png","ALightMissile.png","AHeavyGun.png","AHeavyMissile.png","AHeavyCannon.png","AHeavyRocket.png","AHeavyAirStrike.png"}){
   const md::Sprite *shadow=nullptr,*body=nullptr;for(const auto& s:before.sprites)if(s.image==name){if(s.color.r==0)shadow=&s;else body=&s;}
   assert(shadow&&body);const float z=mode==0?1.f:(mode==1?.5f:1.375f);const float gap=(std::string_view(name).starts_with("ALight")?16.f:22.f)*z;
   assert(std::abs(shadow->destination.x-body->destination.x-gap)<.001f&&std::abs(shadow->destination.y-body->destination.y-gap)<.001f);assert(shadow->rotationDegrees==body->rotationDegrees);

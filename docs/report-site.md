@@ -1,3 +1,9 @@
+# 벨루가·AH-10 파츠 분리 — 2026-11-09
+
+[AH-10 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#ah10-parts-20261109)와 [벨루가 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-parts-20261109)를 게시했다. AH-10 로켓·공습 파츠 연결, 승인 그림과 웹 전투 비교, 크롭 후보 기각, 100기 전투에서 증가한 GPU 처리 시간과 남은 작업을 기록했다. 4종 레벨별 외형·도색·질감 개선은 완료되지 않았다.
+
+Source `a9b1a8174fb5beae59cac9fffc5348349483f4b8`, Deployment `appgdep_6af0ffd753c48191a905d3859d493131`, succeeded. [게시 근거](evidence/ah10-parts-20261109/report-publication.json). 기존 보고서와 다른 세션의 Kamov 보고서, 소유자 전용 접근을 보존했다. 로컬 1280·390px 배치와 자료 링크를 검사했다. 새 웹 비교 그림만 RGBA가 같은 무손실 WebP로 저장하고 USTAR 포장으로 256MiB 제한 안에 맞췄다. 게임 main·운영 PWA·아이폰 앱 배포는 이번 작업에 포함하지 않았다.
+
 # 헬기 레벨 정의 수정·누락 범위 정정 — 2026-11-09
 
 [기존 개선 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-surface-plan-20261109)를 Sites 버전 245로 갱신했다. 기존 계획이 누락한 Lv.1–10 외형과 남아 있던 실행 중 조립 복제 처리를 명시했다. 40레벨 정의 파일 이전과 새 웹 치트빌드 검사 결과를 기록했다. 벨루가·AH-10 미연결 그림과 4종 강화 외형·도색·질감·입체감은 미완료로 남겼다. 기존 그림과 소유자 전용 접근을 유지했다. [게시 근거](evidence/aircraft-assembly-followup-20261109/report-publication.json).

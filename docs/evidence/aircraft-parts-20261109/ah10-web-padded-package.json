@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Images/AHeavyRocket.png",
+    "match": true,
+    "sha256": "40359461eec609a75c9ae79285e5a5a10a3b9b636c04c1f5eec1898aaaae1b54"
+  },
+  {
+    "name": "Images/AHeavyAirStrike.png",
+    "match": true,
+    "sha256": "125e459e8542f40f3afb28077a5180c18a936f8c4a944fba7f9929346b484187"
+  },
+  {
+    "name": "RawData/Level10Parts.mcb",
+    "match": true,
+    "sha256": "392906fcdde075cb50e7c2c89e47052d7e703d408863f68ec445a6b2859db131"
+  }
+]

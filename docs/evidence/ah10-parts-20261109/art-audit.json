@@ -1,0 +1,1291 @@
+{
+  "scope": "Static consumption audit; no game assets or runtime code changed by this audit",
+  "runtimeMachineVariantCallInLoader": false,
+  "persistedAircraftMachineCount": 44,
+  "originalPartDefinitions": 463,
+  "originalNamedMachines": 126,
+  "unusedAuthoredParts": [],
+  "aircraft": [
+    {
+      "unit": "Scout",
+      "model": "AircraftLight",
+      "nodeCount": 4,
+      "visibleNodeCount": 4,
+      "nodes": [
+        {
+          "part": "ALightBody",
+          "type": 0,
+          "tileCount": 7,
+          "sockets": 4,
+          "image": "ALightBody.png",
+          "grid": [
+            7,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": null,
+          "parentSocket": 0,
+          "zOrder": 1
+        },
+        {
+          "part": "ALightGun",
+          "type": 4,
+          "tileCount": 1,
+          "sockets": 3,
+          "image": "ALightGun.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ALightBody",
+          "parentSocket": 2,
+          "zOrder": 2
+        },
+        {
+          "part": "ALightMissile",
+          "type": 4,
+          "tileCount": 1,
+          "sockets": 3,
+          "image": "ALightMissile.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ALightBody",
+          "parentSocket": 3,
+          "zOrder": 2
+        },
+        {
+          "part": "ALightRotor",
+          "type": 7,
+          "tileCount": 1,
+          "sockets": 1,
+          "image": "ALightRotor.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ALightBody",
+          "parentSocket": 1,
+          "zOrder": 3
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "machine": "AircraftLight_01",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ALightBody.png",
+            "ALightGun.png",
+            "ALightMissile.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "level": 2,
+          "machine": "AircraftLight_02",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ALightBody.png",
+            "ALightGun.png",
+            "ALightMissile.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "level": 3,
+          "machine": "AircraftLight_03",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ALightBody.png",
+            "ALightGun.png",
+            "ALightMissile.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "level": 4,
+          "machine": "AircraftLight_04",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ALightBody.png",
+            "ALightGun.png",
+            "ALightMissile.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "level": 5,
+          "machine": "AircraftLight_05",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ALightBody.png",
+            "ALightGun.png",
+            "ALightMissile.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "level": 6,
+          "machine": "AircraftLight_06",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ALightBody.png",
+            "ALightGun.png",
+            "ALightMissile.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "level": 7,
+          "machine": "AircraftLight_07",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ALightBody.png",
+            "ALightGun.png",
+            "ALightMissile.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "level": 8,
+          "machine": "AircraftLight_08",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ALightBody.png",
+            "ALightGun.png",
+            "ALightMissile.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "level": 9,
+          "machine": "AircraftLight_09",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ALightBody.png",
+            "ALightGun.png",
+            "ALightMissile.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "level": 10,
+          "machine": "AircraftLight_10",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ALightBody.png",
+            "ALightGun.png",
+            "ALightMissile.png",
+            "ALightRotor.png"
+          ]
+        }
+      ],
+      "distinctLevelImageSequences": 1,
+      "levelAppearanceChangesPresent": false
+    },
+    {
+      "unit": "Cheyenne",
+      "model": "AircraftDuct",
+      "nodeCount": 6,
+      "visibleNodeCount": 6,
+      "nodes": [
+        {
+          "part": "ADuctBody",
+          "type": 0,
+          "tileCount": 7,
+          "sockets": 6,
+          "image": "ADuctBody.png",
+          "grid": [
+            7,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": null,
+          "parentSocket": 0,
+          "zOrder": 1
+        },
+        {
+          "part": "ADuctFan",
+          "type": 7,
+          "tileCount": 1,
+          "sockets": 1,
+          "image": "ADuctFan.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ADuctBody",
+          "parentSocket": 1,
+          "zOrder": 2
+        },
+        {
+          "part": "ADuctFan",
+          "type": 7,
+          "tileCount": 1,
+          "sockets": 1,
+          "image": "ADuctFan.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ADuctBody",
+          "parentSocket": 2,
+          "zOrder": 2
+        },
+        {
+          "part": "ADuctGun",
+          "type": 0,
+          "tileCount": 1,
+          "sockets": 2,
+          "image": "ADuctGun.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ADuctBody",
+          "parentSocket": 3,
+          "zOrder": 3
+        },
+        {
+          "part": "ADuctMissile",
+          "type": 4,
+          "tileCount": 1,
+          "sockets": 3,
+          "image": "ADuctMissile.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ADuctBody",
+          "parentSocket": 4,
+          "zOrder": 3
+        },
+        {
+          "part": "ADuctMissileR",
+          "type": 4,
+          "tileCount": 1,
+          "sockets": 3,
+          "image": "ADuctMissileR.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ADuctBody",
+          "parentSocket": 5,
+          "zOrder": 3
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "machine": "AircraftDuct_01",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ADuctBody.png",
+            "ADuctFan.png",
+            "ADuctFan.png",
+            "ADuctGun.png",
+            "ADuctMissile.png",
+            "ADuctMissileR.png"
+          ]
+        },
+        {
+          "level": 2,
+          "machine": "AircraftDuct_02",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ADuctBody.png",
+            "ADuctFan.png",
+            "ADuctFan.png",
+            "ADuctGun.png",
+            "ADuctMissile.png",
+            "ADuctMissileR.png"
+          ]
+        },
+        {
+          "level": 3,
+          "machine": "AircraftDuct_03",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ADuctBody.png",
+            "ADuctFan.png",
+            "ADuctFan.png",
+            "ADuctGun.png",
+            "ADuctMissile.png",
+            "ADuctMissileR.png"
+          ]
+        },
+        {
+          "level": 4,
+          "machine": "AircraftDuct_04",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ADuctBody.png",
+            "ADuctFan.png",
+            "ADuctFan.png",
+            "ADuctGun.png",
+            "ADuctMissile.png",
+            "ADuctMissileR.png"
+          ]
+        },
+        {
+          "level": 5,
+          "machine": "AircraftDuct_05",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ADuctBody.png",
+            "ADuctFan.png",
+            "ADuctFan.png",
+            "ADuctGun.png",
+            "ADuctMissile.png",
+            "ADuctMissileR.png"
+          ]
+        },
+        {
+          "level": 6,
+          "machine": "AircraftDuct_06",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ADuctBody.png",
+            "ADuctFan.png",
+            "ADuctFan.png",
+            "ADuctGun.png",
+            "ADuctMissile.png",
+            "ADuctMissileR.png"
+          ]
+        },
+        {
+          "level": 7,
+          "machine": "AircraftDuct_07",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ADuctBody.png",
+            "ADuctFan.png",
+            "ADuctFan.png",
+            "ADuctGun.png",
+            "ADuctMissile.png",
+            "ADuctMissileR.png"
+          ]
+        },
+        {
+          "level": 8,
+          "machine": "AircraftDuct_08",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ADuctBody.png",
+            "ADuctFan.png",
+            "ADuctFan.png",
+            "ADuctGun.png",
+            "ADuctMissile.png",
+            "ADuctMissileR.png"
+          ]
+        },
+        {
+          "level": 9,
+          "machine": "AircraftDuct_09",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ADuctBody.png",
+            "ADuctFan.png",
+            "ADuctFan.png",
+            "ADuctGun.png",
+            "ADuctMissile.png",
+            "ADuctMissileR.png"
+          ]
+        },
+        {
+          "level": 10,
+          "machine": "AircraftDuct_10",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ADuctBody.png",
+            "ADuctFan.png",
+            "ADuctFan.png",
+            "ADuctGun.png",
+            "ADuctMissile.png",
+            "ADuctMissileR.png"
+          ]
+        }
+      ],
+      "distinctLevelImageSequences": 1,
+      "levelAppearanceChangesPresent": false
+    },
+    {
+      "unit": "Beluga",
+      "model": "AircraftTransport",
+      "nodeCount": 9,
+      "visibleNodeCount": 9,
+      "nodes": [
+        {
+          "part": "ATransportBody",
+          "type": 0,
+          "tileCount": 7,
+          "sockets": 9,
+          "image": "ATransportBody.png",
+          "grid": [
+            7,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": null,
+          "parentSocket": 0,
+          "zOrder": 1
+        },
+        {
+          "part": "ATransportFan",
+          "type": 7,
+          "tileCount": 1,
+          "sockets": 1,
+          "image": "ATransportFan.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ATransportBody",
+          "parentSocket": 1,
+          "zOrder": 4
+        },
+        {
+          "part": "ATransportGun",
+          "type": 4,
+          "tileCount": 1,
+          "sockets": 3,
+          "image": "ATransportGun.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ATransportBody",
+          "parentSocket": 5,
+          "zOrder": 3
+        },
+        {
+          "part": "ATransportGun",
+          "type": 4,
+          "tileCount": 1,
+          "sockets": 3,
+          "image": "ATransportGun.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ATransportBody",
+          "parentSocket": 6,
+          "zOrder": 3
+        },
+        {
+          "part": "ATransportMissile",
+          "type": 4,
+          "tileCount": 1,
+          "sockets": 3,
+          "image": "ATransportMissile.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ATransportBody",
+          "parentSocket": 7,
+          "zOrder": 3
+        },
+        {
+          "part": "ATransportMissile",
+          "type": 4,
+          "tileCount": 1,
+          "sockets": 3,
+          "image": "ATransportMissile.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ATransportBody",
+          "parentSocket": 8,
+          "zOrder": 3
+        },
+        {
+          "part": "ATransportWingL",
+          "type": 0,
+          "tileCount": 7,
+          "sockets": 1,
+          "image": "ATransportWingL.png",
+          "grid": [
+            7,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ATransportBody",
+          "parentSocket": 2,
+          "zOrder": 1
+        },
+        {
+          "part": "ATransportWingR",
+          "type": 0,
+          "tileCount": 7,
+          "sockets": 1,
+          "image": "ATransportWingR.png",
+          "grid": [
+            7,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ATransportBody",
+          "parentSocket": 3,
+          "zOrder": 1
+        },
+        {
+          "part": "ATransportEngine",
+          "type": 0,
+          "tileCount": 7,
+          "sockets": 1,
+          "image": "ATransportEngine.png",
+          "grid": [
+            7,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "ATransportBody",
+          "parentSocket": 4,
+          "zOrder": 2
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "machine": "AircraftTransport_01",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ATransportBody.png",
+            "ATransportFan.png",
+            "ATransportGun.png",
+            "ATransportGun.png",
+            "ATransportMissile.png",
+            "ATransportMissile.png",
+            "ATransportWingL.png",
+            "ATransportWingR.png",
+            "ATransportEngine.png"
+          ]
+        },
+        {
+          "level": 2,
+          "machine": "AircraftTransport_02",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ATransportBody.png",
+            "ATransportFan.png",
+            "ATransportGun.png",
+            "ATransportGun.png",
+            "ATransportMissile.png",
+            "ATransportMissile.png",
+            "ATransportWingL.png",
+            "ATransportWingR.png",
+            "ATransportEngine.png"
+          ]
+        },
+        {
+          "level": 3,
+          "machine": "AircraftTransport_03",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ATransportBody.png",
+            "ATransportFan.png",
+            "ATransportGun.png",
+            "ATransportGun.png",
+            "ATransportMissile.png",
+            "ATransportMissile.png",
+            "ATransportWingL.png",
+            "ATransportWingR.png",
+            "ATransportEngine.png"
+          ]
+        },
+        {
+          "level": 4,
+          "machine": "AircraftTransport_04",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ATransportBody.png",
+            "ATransportFan.png",
+            "ATransportGun.png",
+            "ATransportGun.png",
+            "ATransportMissile.png",
+            "ATransportMissile.png",
+            "ATransportWingL.png",
+            "ATransportWingR.png",
+            "ATransportEngine.png"
+          ]
+        },
+        {
+          "level": 5,
+          "machine": "AircraftTransport_05",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ATransportBody.png",
+            "ATransportFan.png",
+            "ATransportGun.png",
+            "ATransportGun.png",
+            "ATransportMissile.png",
+            "ATransportMissile.png",
+            "ATransportWingL.png",
+            "ATransportWingR.png",
+            "ATransportEngine.png"
+          ]
+        },
+        {
+          "level": 6,
+          "machine": "AircraftTransport_06",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ATransportBody.png",
+            "ATransportFan.png",
+            "ATransportGun.png",
+            "ATransportGun.png",
+            "ATransportMissile.png",
+            "ATransportMissile.png",
+            "ATransportWingL.png",
+            "ATransportWingR.png",
+            "ATransportEngine.png"
+          ]
+        },
+        {
+          "level": 7,
+          "machine": "AircraftTransport_07",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ATransportBody.png",
+            "ATransportFan.png",
+            "ATransportGun.png",
+            "ATransportGun.png",
+            "ATransportMissile.png",
+            "ATransportMissile.png",
+            "ATransportWingL.png",
+            "ATransportWingR.png",
+            "ATransportEngine.png"
+          ]
+        },
+        {
+          "level": 8,
+          "machine": "AircraftTransport_08",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ATransportBody.png",
+            "ATransportFan.png",
+            "ATransportGun.png",
+            "ATransportGun.png",
+            "ATransportMissile.png",
+            "ATransportMissile.png",
+            "ATransportWingL.png",
+            "ATransportWingR.png",
+            "ATransportEngine.png"
+          ]
+        },
+        {
+          "level": 9,
+          "machine": "AircraftTransport_09",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ATransportBody.png",
+            "ATransportFan.png",
+            "ATransportGun.png",
+            "ATransportGun.png",
+            "ATransportMissile.png",
+            "ATransportMissile.png",
+            "ATransportWingL.png",
+            "ATransportWingR.png",
+            "ATransportEngine.png"
+          ]
+        },
+        {
+          "level": 10,
+          "machine": "AircraftTransport_10",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "ATransportBody.png",
+            "ATransportFan.png",
+            "ATransportGun.png",
+            "ATransportGun.png",
+            "ATransportMissile.png",
+            "ATransportMissile.png",
+            "ATransportWingL.png",
+            "ATransportWingR.png",
+            "ATransportEngine.png"
+          ]
+        }
+      ],
+      "distinctLevelImageSequences": 1,
+      "levelAppearanceChangesPresent": false
+    },
+    {
+      "unit": "AH-10",
+      "model": "AircraftHeavy",
+      "nodeCount": 8,
+      "visibleNodeCount": 8,
+      "nodes": [
+        {
+          "part": "AHeavyBody",
+          "type": 0,
+          "tileCount": 7,
+          "sockets": 8,
+          "image": "AHeavyBody.png",
+          "grid": [
+            7,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": null,
+          "parentSocket": 0,
+          "zOrder": 1
+        },
+        {
+          "part": "AHeavyGun",
+          "type": 4,
+          "tileCount": 1,
+          "sockets": 3,
+          "image": "AHeavyGun.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "AHeavyBody",
+          "parentSocket": 3,
+          "zOrder": 2
+        },
+        {
+          "part": "AHeavyMissile",
+          "type": 4,
+          "tileCount": 1,
+          "sockets": 3,
+          "image": "AHeavyMissile.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "AHeavyBody",
+          "parentSocket": 4,
+          "zOrder": 2
+        },
+        {
+          "part": "AHeavyCannon",
+          "type": 4,
+          "tileCount": 1,
+          "sockets": 2,
+          "image": "AHeavyCannon.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "AHeavyBody",
+          "parentSocket": 5,
+          "zOrder": 2
+        },
+        {
+          "part": "AHeavyRocket",
+          "type": 4,
+          "tileCount": 7,
+          "sockets": 2,
+          "image": "AHeavyRocket.png",
+          "grid": [
+            7,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "AHeavyBody",
+          "parentSocket": 6,
+          "zOrder": 2
+        },
+        {
+          "part": "AHeavyAirStrike",
+          "type": 4,
+          "tileCount": 7,
+          "sockets": 2,
+          "image": "AHeavyAirStrike.png",
+          "grid": [
+            7,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "AHeavyBody",
+          "parentSocket": 7,
+          "zOrder": 2
+        },
+        {
+          "part": "AHeavyRotor",
+          "type": 7,
+          "tileCount": 1,
+          "sockets": 1,
+          "image": "AHeavyRotor.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "AHeavyBody",
+          "parentSocket": 1,
+          "zOrder": 3
+        },
+        {
+          "part": "AHeavyRotor",
+          "type": 7,
+          "tileCount": 1,
+          "sockets": 1,
+          "image": "AHeavyRotor.png",
+          "grid": [
+            1,
+            1
+          ],
+          "imageExists": true,
+          "visible": true,
+          "parent": "AHeavyBody",
+          "parentSocket": 2,
+          "zOrder": 3
+        }
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "machine": "AircraftHeavy_01",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "AHeavyBody.png",
+            "AHeavyGun.png",
+            "AHeavyMissile.png",
+            "AHeavyCannon.png",
+            "AHeavyRocket.png",
+            "AHeavyAirStrike.png",
+            "AHeavyRotor.png",
+            "AHeavyRotor.png"
+          ]
+        },
+        {
+          "level": 2,
+          "machine": "AircraftHeavy_02",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "AHeavyBody.png",
+            "AHeavyGun.png",
+            "AHeavyMissile.png",
+            "AHeavyCannon.png",
+            "AHeavyRocket.png",
+            "AHeavyAirStrike.png",
+            "AHeavyRotor.png",
+            "AHeavyRotor.png"
+          ]
+        },
+        {
+          "level": 3,
+          "machine": "AircraftHeavy_03",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "AHeavyBody.png",
+            "AHeavyGun.png",
+            "AHeavyMissile.png",
+            "AHeavyCannon.png",
+            "AHeavyRocket.png",
+            "AHeavyAirStrike.png",
+            "AHeavyRotor.png",
+            "AHeavyRotor.png"
+          ]
+        },
+        {
+          "level": 4,
+          "machine": "AircraftHeavy_04",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "AHeavyBody.png",
+            "AHeavyGun.png",
+            "AHeavyMissile.png",
+            "AHeavyCannon.png",
+            "AHeavyRocket.png",
+            "AHeavyAirStrike.png",
+            "AHeavyRotor.png",
+            "AHeavyRotor.png"
+          ]
+        },
+        {
+          "level": 5,
+          "machine": "AircraftHeavy_05",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "AHeavyBody.png",
+            "AHeavyGun.png",
+            "AHeavyMissile.png",
+            "AHeavyCannon.png",
+            "AHeavyRocket.png",
+            "AHeavyAirStrike.png",
+            "AHeavyRotor.png",
+            "AHeavyRotor.png"
+          ]
+        },
+        {
+          "level": 6,
+          "machine": "AircraftHeavy_06",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "AHeavyBody.png",
+            "AHeavyGun.png",
+            "AHeavyMissile.png",
+            "AHeavyCannon.png",
+            "AHeavyRocket.png",
+            "AHeavyAirStrike.png",
+            "AHeavyRotor.png",
+            "AHeavyRotor.png"
+          ]
+        },
+        {
+          "level": 7,
+          "machine": "AircraftHeavy_07",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "AHeavyBody.png",
+            "AHeavyGun.png",
+            "AHeavyMissile.png",
+            "AHeavyCannon.png",
+            "AHeavyRocket.png",
+            "AHeavyAirStrike.png",
+            "AHeavyRotor.png",
+            "AHeavyRotor.png"
+          ]
+        },
+        {
+          "level": 8,
+          "machine": "AircraftHeavy_08",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "AHeavyBody.png",
+            "AHeavyGun.png",
+            "AHeavyMissile.png",
+            "AHeavyCannon.png",
+            "AHeavyRocket.png",
+            "AHeavyAirStrike.png",
+            "AHeavyRotor.png",
+            "AHeavyRotor.png"
+          ]
+        },
+        {
+          "level": 9,
+          "machine": "AircraftHeavy_09",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "AHeavyBody.png",
+            "AHeavyGun.png",
+            "AHeavyMissile.png",
+            "AHeavyCannon.png",
+            "AHeavyRocket.png",
+            "AHeavyAirStrike.png",
+            "AHeavyRotor.png",
+            "AHeavyRotor.png"
+          ]
+        },
+        {
+          "level": 10,
+          "machine": "AircraftHeavy_10",
+          "persistedDefinition": true,
+          "renderedImages": [
+            "AHeavyBody.png",
+            "AHeavyGun.png",
+            "AHeavyMissile.png",
+            "AHeavyCannon.png",
+            "AHeavyRocket.png",
+            "AHeavyAirStrike.png",
+            "AHeavyRotor.png",
+            "AHeavyRotor.png"
+          ]
+        }
+      ],
+      "distinctLevelImageSequences": 1,
+      "levelAppearanceChangesPresent": false
+    }
+  ],
+  "textures": {
+    "ALightBody.png": {
+      "path": "Resources/Images/ALightBody.png",
+      "sha256": "1080dd9446eb0fcadb7edcc483da204d4f560aaf18722d7a27a687676cb537ff",
+      "cgbi": true,
+      "size": [
+        448,
+        47
+      ]
+    },
+    "ALightGun.png": {
+      "path": "Resources/Images/ALightGun.png",
+      "sha256": "a2ecf277cccf9d67d4d9dce5cc7ad68d9a68f1bf216f5cd9823b84790b164c65",
+      "cgbi": true,
+      "size": [
+        14,
+        7
+      ]
+    },
+    "ALightMissile.png": {
+      "path": "Resources/Images/ALightMissile.png",
+      "sha256": "f900f0f1c5f299eef82a7fae9ffb4c97d74bbeba042b8b0b7f1473960415fa20",
+      "cgbi": true,
+      "size": [
+        13,
+        8
+      ]
+    },
+    "ALightRotor.png": {
+      "path": "Resources/Images/ALightRotor.png",
+      "sha256": "a4ee0d905afb2607f72ef96b4a4518101647dd30c09b36e1de64fc3ec3efa405",
+      "cgbi": true,
+      "size": [
+        59,
+        59
+      ]
+    },
+    "ADuctBody.png": {
+      "path": "Resources/Images/ADuctBody.png",
+      "sha256": "1731952753ea0b5a1197512b63efd4153a9079c1050dbf141a7c1d5d38d055c5",
+      "cgbi": true,
+      "size": [
+        770,
+        88
+      ]
+    },
+    "ADuctFan.png": {
+      "path": "Resources/Images/ADuctFan.png",
+      "sha256": "7d27159d1c310f29bd377b75a9288318affcfae1c3213b6d0d2e472188d8e551",
+      "cgbi": true,
+      "size": [
+        24,
+        24
+      ]
+    },
+    "ADuctGun.png": {
+      "path": "Resources/Images/ADuctGun.png",
+      "sha256": "7d9bee093f414a82f498b028e62a5cdc08f7a3705b128f39db41c38f7c24dd53",
+      "cgbi": true,
+      "size": [
+        18,
+        7
+      ]
+    },
+    "ADuctMissile.png": {
+      "path": "Resources/Images/ADuctMissile.png",
+      "sha256": "3820ef8b43aa43d085bedc5073e0a9bdfd83a99c782f6fb62de44ee3e052fffd",
+      "cgbi": true,
+      "size": [
+        18,
+        13
+      ]
+    },
+    "ADuctMissileR.png": {
+      "path": "Resources/Images/ADuctMissileR.png",
+      "sha256": "3820ef8b43aa43d085bedc5073e0a9bdfd83a99c782f6fb62de44ee3e052fffd",
+      "cgbi": true,
+      "size": [
+        18,
+        13
+      ]
+    },
+    "ATransportBody.png": {
+      "path": "Resources/Images/ATransportBody.png",
+      "sha256": "905e2f4dd59eb01804c19a004aff074db684da6a08118afc7ce99fea10c9fbad",
+      "cgbi": true,
+      "size": [
+        980,
+        131
+      ]
+    },
+    "ATransportFan.png": {
+      "path": "Resources/Images/ATransportFan.png",
+      "sha256": "d3da6d1eb4ee4a91e4fec53bbbfd6fca2e073fce950d8f98199f6a75ba244b65",
+      "cgbi": true,
+      "size": [
+        80,
+        80
+      ]
+    },
+    "ATransportGun.png": {
+      "path": "Resources/Images/ATransportGun.png",
+      "sha256": "bd5aeafceadf08195e59b62c8cc1ecc9666f3520fef341c508a1be6afd164a8b",
+      "cgbi": true,
+      "size": [
+        21,
+        11
+      ]
+    },
+    "ATransportMissile.png": {
+      "path": "Resources/Images/ATransportMissile.png",
+      "sha256": "6e12e1c522ffc13cc3e5dabe0e3f58c83a1e8ece0f9a0ce43933c854f161cf24",
+      "cgbi": true,
+      "size": [
+        21,
+        13
+      ]
+    },
+    "ATransportWingL.png": {
+      "path": "Resources/Images/ATransportWingL.png",
+      "sha256": "82b42840a4566d502aae31beb85e8451acce4d46bc8726e9aab7f70fd8901e4a",
+      "cgbi": true,
+      "size": [
+        980,
+        55
+      ]
+    },
+    "ATransportWingR.png": {
+      "path": "Resources/Images/ATransportWingR.png",
+      "sha256": "2598eb67540db4586d5de32347e3732b2a6c24074f6d3415c5c847cded7beb68",
+      "cgbi": true,
+      "size": [
+        980,
+        55
+      ]
+    },
+    "ATransportEngine.png": {
+      "path": "Resources/Images/ATransportEngine.png",
+      "sha256": "30a658ee7fea5834d289feadd480b93db472792766f01fdadf33736ee02a9c7a",
+      "cgbi": true,
+      "size": [
+        980,
+        45
+      ]
+    },
+    "AHeavyBody.png": {
+      "path": "Resources/Images/AHeavyBody.png",
+      "sha256": "57c6a2a66a9eb95de2eac68470ad7cc06f99f78538818d4930e4ff064a43184c",
+      "cgbi": true,
+      "size": [
+        532,
+        112
+      ]
+    },
+    "AHeavyGun.png": {
+      "path": "Resources/Images/AHeavyGun.png",
+      "sha256": "e881d01f4fc9870fe692b3076d07a7773798c4ce85edda42d3ddf7f9c119770e",
+      "cgbi": true,
+      "size": [
+        25,
+        10
+      ]
+    },
+    "AHeavyMissile.png": {
+      "path": "Resources/Images/AHeavyMissile.png",
+      "sha256": "4199a072ece32db503cfb1e36f167be86b20e1b11c7b232293d0088adc795d3d",
+      "cgbi": true,
+      "size": [
+        16,
+        12
+      ]
+    },
+    "AHeavyCannon.png": {
+      "path": "Resources/Images/AHeavyCannon.png",
+      "sha256": "01a59447875d67daae1b7aede450d6c7f1ecffee67127c7c494ff061ade0b6da",
+      "cgbi": true,
+      "size": [
+        18,
+        10
+      ]
+    },
+    "AHeavyRocket.png": {
+      "path": "Resources/Images/AHeavyRocket.png",
+      "sha256": "adfe0c008760a6ae05f79bcbf30f6c5ee68cbde10a9ae9870b8af30613b13c49",
+      "cgbi": true,
+      "size": [
+        532,
+        112
+      ]
+    },
+    "AHeavyAirStrike.png": {
+      "path": "Resources/Images/AHeavyAirStrike.png",
+      "sha256": "a63573c2fd078c3085ca5786f1a461819a00b5394dd785a63744b3f0718dd894",
+      "cgbi": true,
+      "size": [
+        532,
+        112
+      ]
+    },
+    "AHeavyRotor.png": {
+      "path": "Resources/Images/AHeavyRotor.png",
+      "sha256": "d049e683583bd48886d3a034c6822c58080b3915c9ea7df167cab3c9d1d13c25",
+      "cgbi": true,
+      "size": [
+        88,
+        88
+      ]
+    }
+  },
+  "inputSHA256": {
+    "Art/Aircraft/runtime/assembly.json": "cd53f1dde15b7705d275646ac66207fddeb88de844887110ac989ed9fd41eec0",
+    "Resources/RawData/PartsInfo.mcb": "65159d5bf83353672a1a85067df4b43456a40270827f4ac3f0224fe87bf35c33",
+    "Resources/RawData/MachInfo.mcb": "37765a20228a945958dc15cea8561f421a04914c3d57d5ffc3a5ae7ef005e69f",
+    "Resources/RawData/AircraftParts.mcb": "dbdf3042528993911051546785778b600d9b5d3f160e12ee9ad03f8ba26a1848",
+    "Resources/RawData/AircraftMachines.mcb": "1e07ba771948642a5b88870e0b1250e683f6a90589feca67688eabd28b778b63",
+    "Resources/RawData/Level10Parts.mcb": "5a091aad4f7ec419904f92213b8e0c9fa08bad48f918a91d14089cd913f07e3f",
+    "Resources/RawData/Level10Machines.mcb": "9dc7f15103083c7b45c7141ef92ae3eda7d7b199dc514cb4f28956eabad4be21",
+    "Resources/Tables/PartsList.tsv": "29abea12bb1e8b9a5368c6c951d85f69f87a11169ef689f3390a21ae52163fef",
+    "Resources/Tables/TileList.tsv": "95e686bec5dc310ea94dcd15bea9712274117dec20c1cbea5d5656213c2eefda",
+    "Sources/Core/Simulation/MachineModels.cpp": "77bd5879355aff446342dd8367eda3f5e6237700e27ed6f664182630d39cf281",
+    "Sources/Core/Simulation/AircraftVisual.hpp": "01e14cfd4e123b24462a018058c74345bc02281396ca8db332a1f05d9abe7b96",
+    "Resources/Images/ALightBody.png": "1080dd9446eb0fcadb7edcc483da204d4f560aaf18722d7a27a687676cb537ff",
+    "Resources/Images/ALightGun.png": "a2ecf277cccf9d67d4d9dce5cc7ad68d9a68f1bf216f5cd9823b84790b164c65",
+    "Resources/Images/ALightMissile.png": "f900f0f1c5f299eef82a7fae9ffb4c97d74bbeba042b8b0b7f1473960415fa20",
+    "Resources/Images/ALightRotor.png": "a4ee0d905afb2607f72ef96b4a4518101647dd30c09b36e1de64fc3ec3efa405",
+    "Resources/Images/ADuctBody.png": "1731952753ea0b5a1197512b63efd4153a9079c1050dbf141a7c1d5d38d055c5",
+    "Resources/Images/ADuctFan.png": "7d27159d1c310f29bd377b75a9288318affcfae1c3213b6d0d2e472188d8e551",
+    "Resources/Images/ADuctGun.png": "7d9bee093f414a82f498b028e62a5cdc08f7a3705b128f39db41c38f7c24dd53",
+    "Resources/Images/ADuctMissile.png": "3820ef8b43aa43d085bedc5073e0a9bdfd83a99c782f6fb62de44ee3e052fffd",
+    "Resources/Images/ADuctMissileR.png": "3820ef8b43aa43d085bedc5073e0a9bdfd83a99c782f6fb62de44ee3e052fffd",
+    "Resources/Images/ATransportBody.png": "905e2f4dd59eb01804c19a004aff074db684da6a08118afc7ce99fea10c9fbad",
+    "Resources/Images/ATransportFan.png": "d3da6d1eb4ee4a91e4fec53bbbfd6fca2e073fce950d8f98199f6a75ba244b65",
+    "Resources/Images/ATransportGun.png": "bd5aeafceadf08195e59b62c8cc1ecc9666f3520fef341c508a1be6afd164a8b",
+    "Resources/Images/ATransportMissile.png": "6e12e1c522ffc13cc3e5dabe0e3f58c83a1e8ece0f9a0ce43933c854f161cf24",
+    "Resources/Images/ATransportWingL.png": "82b42840a4566d502aae31beb85e8451acce4d46bc8726e9aab7f70fd8901e4a",
+    "Resources/Images/ATransportWingR.png": "2598eb67540db4586d5de32347e3732b2a6c24074f6d3415c5c847cded7beb68",
+    "Resources/Images/ATransportEngine.png": "30a658ee7fea5834d289feadd480b93db472792766f01fdadf33736ee02a9c7a",
+    "Resources/Images/AHeavyBody.png": "57c6a2a66a9eb95de2eac68470ad7cc06f99f78538818d4930e4ff064a43184c",
+    "Resources/Images/AHeavyGun.png": "e881d01f4fc9870fe692b3076d07a7773798c4ce85edda42d3ddf7f9c119770e",
+    "Resources/Images/AHeavyMissile.png": "4199a072ece32db503cfb1e36f167be86b20e1b11c7b232293d0088adc795d3d",
+    "Resources/Images/AHeavyCannon.png": "01a59447875d67daae1b7aede450d6c7f1ecffee67127c7c494ff061ade0b6da",
+    "Resources/Images/AHeavyRocket.png": "adfe0c008760a6ae05f79bcbf30f6c5ee68cbde10a9ae9870b8af30613b13c49",
+    "Resources/Images/AHeavyAirStrike.png": "a63573c2fd078c3085ca5786f1a461819a00b5394dd785a63744b3f0718dd894",
+    "Resources/Images/AHeavyRotor.png": "d049e683583bd48886d3a034c6822c58080b3915c9ea7df167cab3c9d1d13c25"
+  },
+  "limitations": [
+    "No visual-quality acceptance",
+    "No web or device rendering performed by this audit",
+    "No performance equivalence measurement",
+    "Same file format or parser does not establish full original production-process parity"
+  ]
+}

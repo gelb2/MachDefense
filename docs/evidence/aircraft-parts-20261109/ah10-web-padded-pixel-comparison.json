@@ -1,0 +1,114 @@
+[
+  {
+    "engine": "chrome",
+    "tile": 0,
+    "exact": false,
+    "AE": "50 (6.17284e-05)",
+    "PAE": "23130 (0.352941)",
+    "bbox": "1x54+198+628"
+  },
+  {
+    "engine": "chrome",
+    "tile": 1,
+    "exact": false,
+    "AE": "51 (6.2963e-05)",
+    "PAE": "9766 (0.14902)",
+    "bbox": "1x53+198+625"
+  },
+  {
+    "engine": "chrome",
+    "tile": 2,
+    "exact": false,
+    "AE": "53 (6.54321e-05)",
+    "PAE": "25957 (0.396078)",
+    "bbox": "1x53+198+628"
+  },
+  {
+    "engine": "chrome",
+    "tile": 3,
+    "exact": false,
+    "AE": "61 (7.53086e-05)",
+    "PAE": "29812 (0.454902)",
+    "bbox": "110x59+198+625"
+  },
+  {
+    "engine": "chrome",
+    "tile": 4,
+    "exact": false,
+    "AE": "52 (6.41975e-05)",
+    "PAE": "21074 (0.321569)",
+    "bbox": "1x56+198+627"
+  },
+  {
+    "engine": "chrome",
+    "tile": 5,
+    "exact": false,
+    "AE": "54 (6.66667e-05)",
+    "PAE": "9509 (0.145098)",
+    "bbox": "1x60+198+625"
+  },
+  {
+    "engine": "chrome",
+    "tile": 6,
+    "exact": false,
+    "AE": "51 (6.2963e-05)",
+    "PAE": "5654 (0.0862745)",
+    "bbox": "1x59+198+625"
+  },
+  {
+    "engine": "webkit",
+    "tile": 0,
+    "exact": false,
+    "AE": "50 (6.17284e-05)",
+    "PAE": "23130 (0.352941)",
+    "bbox": "1x54+198+628"
+  },
+  {
+    "engine": "webkit",
+    "tile": 1,
+    "exact": false,
+    "AE": "51 (6.2963e-05)",
+    "PAE": "9766 (0.14902)",
+    "bbox": "1x53+198+625"
+  },
+  {
+    "engine": "webkit",
+    "tile": 2,
+    "exact": false,
+    "AE": "53 (6.54321e-05)",
+    "PAE": "25957 (0.396078)",
+    "bbox": "1x53+198+628"
+  },
+  {
+    "engine": "webkit",
+    "tile": 3,
+    "exact": false,
+    "AE": "61 (7.53086e-05)",
+    "PAE": "29812 (0.454902)",
+    "bbox": "110x59+198+625"
+  },
+  {
+    "engine": "webkit",
+    "tile": 4,
+    "exact": false,
+    "AE": "52 (6.41975e-05)",
+    "PAE": "21074 (0.321569)",
+    "bbox": "1x56+198+627"
+  },
+  {
+    "engine": "webkit",
+    "tile": 5,
+    "exact": false,
+    "AE": "54 (6.66667e-05)",
+    "PAE": "9509 (0.145098)",
+    "bbox": "1x60+198+625"
+  },
+  {
+    "engine": "webkit",
+    "tile": 6,
+    "exact": false,
+    "AE": "51 (6.2963e-05)",
+    "PAE": "5654 (0.0862745)",
+    "bbox": "1x59+198+625"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "engine": "chrome",
+    "tile": 0,
+    "exact": false,
+    "AE": "50 (6.17284e-05)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 1,
+    "exact": false,
+    "AE": "51 (6.2963e-05)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 2,
+    "exact": false,
+    "AE": "53 (6.54321e-05)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 3,
+    "exact": false,
+    "AE": "61 (7.53086e-05)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 4,
+    "exact": false,
+    "AE": "52 (6.41975e-05)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 5,
+    "exact": false,
+    "AE": "54 (6.66667e-05)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 6,
+    "exact": false,
+    "AE": "51 (6.2963e-05)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 0,
+    "exact": false,
+    "AE": "50 (6.17284e-05)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 1,
+    "exact": false,
+    "AE": "51 (6.2963e-05)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 2,
+    "exact": false,
+    "AE": "53 (6.54321e-05)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 3,
+    "exact": false,
+    "AE": "61 (7.53086e-05)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 4,
+    "exact": false,
+    "AE": "52 (6.41975e-05)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 5,
+    "exact": false,
+    "AE": "54 (6.66667e-05)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 6,
+    "exact": false,
+    "AE": "51 (6.2963e-05)"
+  }
+]

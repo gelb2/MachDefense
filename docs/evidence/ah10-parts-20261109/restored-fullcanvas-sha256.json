@@ -1,0 +1,95 @@
+{
+  "allSame": true,
+  "records": [
+    {
+      "path": "Art/Aircraft/runtime/assembly.json",
+      "expectedFullCanvasSHA256": "cd53f1dde15b7705d275646ac66207fddeb88de844887110ac989ed9fd41eec0",
+      "actualSHA256": "cd53f1dde15b7705d275646ac66207fddeb88de844887110ac989ed9fd41eec0",
+      "same": true
+    },
+    {
+      "path": "Sources/Core/Simulation/AircraftVisual.hpp",
+      "expectedFullCanvasSHA256": "01e14cfd4e123b24462a018058c74345bc02281396ca8db332a1f05d9abe7b96",
+      "actualSHA256": "01e14cfd4e123b24462a018058c74345bc02281396ca8db332a1f05d9abe7b96",
+      "same": true
+    },
+    {
+      "path": "Tests/AircraftDefinitionTests.cpp",
+      "expectedFullCanvasSHA256": "9ffc7c0a41d89be2f023442523c4e6ba26556ef2998c34f011daa7a2a3db96b7",
+      "actualSHA256": "9ffc7c0a41d89be2f023442523c4e6ba26556ef2998c34f011daa7a2a3db96b7",
+      "same": true
+    },
+    {
+      "path": "Tests/AircraftTests.cpp",
+      "expectedFullCanvasSHA256": "c8e3dcb148ffbee14173b505413c4618ca69bb0eef4758b79330250aca09d615",
+      "actualSHA256": "c8e3dcb148ffbee14173b505413c4618ca69bb0eef4758b79330250aca09d615",
+      "same": true
+    },
+    {
+      "path": "Resources/RawData/AircraftParts.mcb",
+      "expectedFullCanvasSHA256": "dbdf3042528993911051546785778b600d9b5d3f160e12ee9ad03f8ba26a1848",
+      "actualSHA256": "dbdf3042528993911051546785778b600d9b5d3f160e12ee9ad03f8ba26a1848",
+      "same": true
+    },
+    {
+      "path": "Resources/RawData/Level10Parts.mcb",
+      "expectedFullCanvasSHA256": "5a091aad4f7ec419904f92213b8e0c9fa08bad48f918a91d14089cd913f07e3f",
+      "actualSHA256": "5a091aad4f7ec419904f92213b8e0c9fa08bad48f918a91d14089cd913f07e3f",
+      "same": true
+    },
+    {
+      "path": "Resources/Tables/PartsList.tsv",
+      "expectedFullCanvasSHA256": "29abea12bb1e8b9a5368c6c951d85f69f87a11169ef689f3390a21ae52163fef",
+      "actualSHA256": "29abea12bb1e8b9a5368c6c951d85f69f87a11169ef689f3390a21ae52163fef",
+      "same": true
+    },
+    {
+      "path": "Resources/Tables/TileList.tsv",
+      "expectedFullCanvasSHA256": "95e686bec5dc310ea94dcd15bea9712274117dec20c1cbea5d5656213c2eefda",
+      "actualSHA256": "95e686bec5dc310ea94dcd15bea9712274117dec20c1cbea5d5656213c2eefda",
+      "same": true
+    },
+    {
+      "path": "Resources/Images/AHeavyBody.png",
+      "expectedFullCanvasSHA256": "57c6a2a66a9eb95de2eac68470ad7cc06f99f78538818d4930e4ff064a43184c",
+      "actualSHA256": "57c6a2a66a9eb95de2eac68470ad7cc06f99f78538818d4930e4ff064a43184c",
+      "same": true
+    },
+    {
+      "path": "Resources/Images/AHeavyRocket.png",
+      "expectedFullCanvasSHA256": "adfe0c008760a6ae05f79bcbf30f6c5ee68cbde10a9ae9870b8af30613b13c49",
+      "actualSHA256": "adfe0c008760a6ae05f79bcbf30f6c5ee68cbde10a9ae9870b8af30613b13c49",
+      "same": true
+    },
+    {
+      "path": "Resources/Images/AHeavyAirStrike.png",
+      "expectedFullCanvasSHA256": "a63573c2fd078c3085ca5786f1a461819a00b5394dd785a63744b3f0718dd894",
+      "actualSHA256": "a63573c2fd078c3085ca5786f1a461819a00b5394dd785a63744b3f0718dd894",
+      "same": true
+    },
+    {
+      "path": "tools/prepare_ah10_parts.py",
+      "expectedFullCanvasSHA256": "f09edb75dde68b431493a14af5f8c0f68e90cf711fe63e6ce362703767911d89",
+      "actualSHA256": "f09edb75dde68b431493a14af5f8c0f68e90cf711fe63e6ce362703767911d89",
+      "same": true
+    },
+    {
+      "path": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyBody.png",
+      "expectedFullCanvasSHA256": "34af4cc0b8c48df0424cd281d44795f00ac471c630f5f9e2dd32ac64be3e03c1",
+      "actualSHA256": "34af4cc0b8c48df0424cd281d44795f00ac471c630f5f9e2dd32ac64be3e03c1",
+      "same": true
+    },
+    {
+      "path": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyRocket.png",
+      "expectedFullCanvasSHA256": "cb2154ad6152e898d3461e6cf25a564b8dcc429abbb23cd6bfef4b34737a1102",
+      "actualSHA256": "cb2154ad6152e898d3461e6cf25a564b8dcc429abbb23cd6bfef4b34737a1102",
+      "same": true
+    },
+    {
+      "path": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyAirStrike.png",
+      "expectedFullCanvasSHA256": "ebebb0d6820b7cf4154041ee25df79ab5bec87bb2a581a732c44c870d641bf8d",
+      "actualSHA256": "ebebb0d6820b7cf4154041ee25df79ab5bec87bb2a581a732c44c870d641bf8d",
+      "same": true
+    }
+  ]
+}

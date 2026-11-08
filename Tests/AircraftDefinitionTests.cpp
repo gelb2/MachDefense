@@ -1,5 +1,7 @@
 #include "SessionTestSupport.hpp"
 #include <algorithm>
+#include "Core/Simulation/AircraftVisual.hpp"
+#include "Core/Simulation/AircraftModels.hpp"
 // A data-only load must contain every campaign level without runtime cloning.
 // Compare against the previous assembly path to protect geometry and image use.
 int main(int argc,char**argv){
@@ -25,5 +27,29 @@ int main(int argc,char**argv){
    }++cases;
   }
  }
+ // Fixed AH-10 pods use the original muzzle coordinates despite moving their
+ // image pivot to the complete body canvas. Check every level/roll/heading.
+ unsigned fixedCases=0;
+ for(unsigned level=1;level<=10;++level)for(float scale:{.5f,1.f,1.375f})for(float angle:{0.f,.7f,1.57f}){
+  char suffix[8];snprintf(suffix,sizeof suffix,"_%02u",level);
+  auto tree=*actual.machine(std::string("AircraftHeavy")+suffix);
+  for(auto& child:tree.front().children)if(child.name.starts_with("AHeavyRocket")||child.name.starts_with("AHeavyAirStrike"))child.angle=angle;
+  auto poses=actual.pose(tree,scale,angle,angle+.8f,angle+.2f);
+  const float k=scale*aircraftAssemblyScale("AHeavyBody");
+  for(const auto& p:poses){
+   bool rocket=p.definition->name.starts_with("AHeavyRocket"),strike=p.definition->name.starts_with("AHeavyAirStrike");
+   if(!rocket&&!strike)continue;
+   assert(std::abs(p.localCenter.x)<.0001f&&std::abs(p.localCenter.y)<.0001f&&p.angle==angle);
+   assert(p.definition->tileCount==7&&p.definition->splitX==7);
+   auto muzzle=p.muzzle();assert(muzzle);const Vec2 old=rocket?Vec2{17,34}:Vec2{36,-18};
+   const Vec2 expected{(old.x*std::cos(angle)-old.y*std::sin(angle))*k,(old.x*std::sin(angle)+old.y*std::cos(angle))*k};
+   assert(std::abs(muzzle->x-expected.x)<.0001f&&std::abs(muzzle->y-expected.y)<.0001f);
+   for(float bank:{-.41887902f,-.27925268f,-.13962634f,0.f,.13962634f,.27925268f,.41887902f}){
+    auto a=aircraftBankPoint(*muzzle,angle,bank),b=aircraftBankPoint(expected,angle,bank);
+    assert(std::abs(a.x-b.x)<.0001f&&std::abs(a.y-b.y)<.0001f);++fixedCases;
+   }
+  }
+ }
+ std::cout<<fixedCases<<" AH-10 fixed pod muzzle cases retained across levels, scales, headings and bank poses\n";
  std::cout<<"40 persisted level assemblies; "<<cases<<" phone/pad pose cases match previous images, geometry, sockets and muzzles\n";
 }

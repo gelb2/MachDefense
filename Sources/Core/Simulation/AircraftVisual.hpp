@@ -5,9 +5,9 @@
 #include <string_view>
 namespace md {
 inline bool helicopterBody(std::string_view name){return name=="ALightBody"||name=="AHeavyBody"||name=="ADuctBody"||name=="ATransportBody";}
-// Fixed Beluga components retain the authored seven roll views and body pivot.
+// Fixed components retain the authored seven roll views and body pivot.
 inline bool helicopterDrawnPart(std::string_view name){
- return helicopterBody(name)||name=="ATransportWingL"||name=="ATransportWingR"||name=="ATransportEngine";
+ return helicopterBody(name)||name=="ATransportWingL"||name=="ATransportWingR"||name=="ATransportEngine"||name=="AHeavyRocket"||name=="AHeavyAirStrike";
 }
 inline unsigned aircraftBankTile(float bank){
  const auto step=unsigned(std::clamp(std::lround(std::abs(bank)/.13962634f),0l,3l));
