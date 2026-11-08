@@ -1,0 +1,72 @@
+[
+  {
+    "path": "Resources/Images/ADuctBody.png",
+    "bytesEqual": true,
+    "sha256": "c8bf2a2288f4c8bbf295e9c609116e549950ee1691af485a3d1c3e931780a932"
+  },
+  {
+    "path": "Resources/Images/ADuctBodyBankL.png",
+    "bytesEqual": true,
+    "sha256": "b9ca7c1e20580ccf1daecbf7afb194ff8a50217bb8557e0e4d97ba3e87ffbb5e"
+  },
+  {
+    "path": "Resources/Images/ADuctBodyBankR.png",
+    "bytesEqual": true,
+    "sha256": "8a93e14cb68d58fc5670649701d6c56aae955dd6c93c21b6d6de68a7438ae5c4"
+  },
+  {
+    "path": "Resources/Images/ADuctFan.png",
+    "bytesEqual": true,
+    "sha256": "897937e733d22400f768faf3038852ca77d36b5a5a88bddbcd3812398396cab5"
+  },
+  {
+    "path": "Resources/Images/ADuctGun.png",
+    "bytesEqual": true,
+    "sha256": "9af767d12a692a9008a94673cf9a5263f84bfab3dd295dfc43c9124cba376dcb"
+  },
+  {
+    "path": "Resources/Images/ADuctMissile.png",
+    "bytesEqual": true,
+    "sha256": "9131514459b01d5860aa63ed5e2503c5144ea06852755e80843a2dddef605a4a"
+  },
+  {
+    "path": "Resources/Images/AHeavyBody.png",
+    "bytesEqual": true,
+    "sha256": "fbc13c890b6c219caae6a716c509d464abd0ef0c5bb142dbdc21696203a5612e"
+  },
+  {
+    "path": "Resources/Images/AHeavyBodyBankL.png",
+    "bytesEqual": true,
+    "sha256": "a7a81903fd1b97ccda3be13abddbfbb1ca30b854ef11f96e9c766cf5a226f40e"
+  },
+  {
+    "path": "Resources/Images/AHeavyBodyBankR.png",
+    "bytesEqual": true,
+    "sha256": "a9f30bde15fc9683a5676dc623277325f289990346199254b80621fa666f515e"
+  },
+  {
+    "path": "Resources/Images/AHeavyCannon.png",
+    "bytesEqual": true,
+    "sha256": "024fefa4e564c200ac1550f73ab5067b28a793eeba52bc63ba1b0c1068acfc36"
+  },
+  {
+    "path": "Resources/Images/AHeavyGun.png",
+    "bytesEqual": true,
+    "sha256": "0fef699a66c670bfdaf4e3c928939f0f4d5e573fff54782fb5e5eca660234c82"
+  },
+  {
+    "path": "Resources/Images/AHeavyMissile.png",
+    "bytesEqual": true,
+    "sha256": "1d9ae6eaad9bbf2e09212dfd03728218ee70b992b08eef6fed66c14e3b4473c6"
+  },
+  {
+    "path": "Resources/Images/AHeavyRotor.png",
+    "bytesEqual": true,
+    "sha256": "0e7c095a85ce5aabb8c470d0795e6bd7d59e7a690f2f991279b01001ee82374b"
+  },
+  {
+    "path": "Resources/Images/ATransportFan.png",
+    "bytesEqual": true,
+    "sha256": "c6e3bf23fe4df716ad29fdf3478b0cac30edb5b159d0028753dc9ead96bee9c6"
+  }
+]

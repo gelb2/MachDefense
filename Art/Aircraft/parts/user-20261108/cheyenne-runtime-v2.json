@@ -1,0 +1,131 @@
+{
+  "source": "IMG_1168.PNG upper-left top view",
+  "sourceFacing": "north",
+  "runtimeFacing": "east",
+  "rotationDegrees": 90,
+  "referenceStyle": [
+    "P_Body_01",
+    "P_Body_13",
+    "P_Body_34"
+  ],
+  "bodyCrop": [
+    880,
+    1100,
+    30,
+    125
+  ],
+  "bodyScale": 0.1,
+  "fanCrop": [
+    210,
+    210,
+    960,
+    365
+  ],
+  "fanOutput": [
+    24,
+    24
+  ],
+  "gunCrop": [
+    86,
+    234,
+    1022,
+    643
+  ],
+  "gunOutput": [
+    18,
+    7
+  ],
+  "podCrop": [
+    130,
+    180,
+    1000,
+    943
+  ],
+  "podScale": 0.1,
+  "bodyOriginOnSheet": [
+    470,
+    675
+  ],
+  "fanCentersOnSheet": [
+    [
+      184,
+      565
+    ],
+    [
+      756,
+      565
+    ]
+  ],
+  "bodySockets": [
+    [
+      0,
+      0
+    ],
+    [
+      11,
+      28.6
+    ],
+    [
+      11,
+      -28.6
+    ],
+    [
+      54,
+      0
+    ],
+    [
+      -13,
+      19
+    ],
+    [
+      -13,
+      -19
+    ]
+  ],
+  "gunMuzzle": [
+    9,
+    0
+  ],
+  "podMuzzles": [
+    [
+      9,
+      1
+    ],
+    [
+      9,
+      -1
+    ]
+  ],
+  "notes": [
+    "Uniform XY scale per part; detached fan scaled to inner diameter of body duct.",
+    "Body duplicates removed by image edit; separate weapon parts used by runtime.",
+    "Supplied outline guided generation; no claim of exact pixel reproduction.",
+    "Beluga rotor original pixels cropped to square centered on hub (766,488)."
+  ],
+  "files": {
+    "Art/Aircraft/parts/user-20261108/cheyenne-sheet-v2.png": {
+      "sha256": "4d21fa5a6a4e58c838a839f9bd93835533f3e562fe164dd906ff06a1161c059e",
+      "size": "1207x1303"
+    },
+    "Resources/Images/ADuctBody.png": {
+      "sha256": "c8bf2a2288f4c8bbf295e9c609116e549950ee1691af485a3d1c3e931780a932",
+      "size": "110x88"
+    },
+    "Resources/Images/ADuctFan.png": {
+      "sha256": "897937e733d22400f768faf3038852ca77d36b5a5a88bddbcd3812398396cab5",
+      "size": "24x24"
+    },
+    "Resources/Images/ADuctGun.png": {
+      "sha256": "9af767d12a692a9008a94673cf9a5263f84bfab3dd295dfc43c9124cba376dcb",
+      "size": "18x7"
+    },
+    "Resources/Images/ADuctMissile.png": {
+      "sha256": "9131514459b01d5860aa63ed5e2503c5144ea06852755e80843a2dddef605a4a",
+      "size": "18x13"
+    },
+    "Resources/Images/ATransportFan.png": {
+      "sha256": "c6e3bf23fe4df716ad29fdf3478b0cac30edb5b159d0028753dc9ead96bee9c6",
+      "size": "80x80"
+    }
+  }
+}

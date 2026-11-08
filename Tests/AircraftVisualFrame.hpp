@@ -11,6 +11,15 @@ inline Frame aircraftVisualFrame(ResourceAccess& r,unsigned mode){
  Frame f;f.logicalWidth=640;f.logicalHeight=800;f.background={.18f,.20f,.20f,1};
  auto one=[&](std::string_view image,Vec2 center,float scale){auto d=dims(image);Sprite s;s.image=image;s.destination={center.x-d.x*scale/2,center.y-d.y*scale/2,d.x*scale,d.y*scale};s.rotationDegrees=-90;s.nearest=true;f.sprites.push_back(s);};
  auto machine=[&](const char* name,Vec2 c,float scale){Frame t;models.appendSprites(t,name,c,scale,1.57079632679f,1.57079632679f,float(mode)*.5f,dims);for(auto s:t.sprites)if(s.color.r!=0){s.nearest=true;f.sprites.push_back(s);}};
+ if(mode==3){
+  f.logicalWidth=900;f.logicalHeight=900;
+  // Each row: original game reference, generated fixed body, runtime assembly.
+  // All three columns use the same 2x world scale, without fitting each image.
+  machine("E_Tank_28",{150,150},2);one("AHeavyBody.png",{450,150},2);machine("AircraftHeavy",{750,150},2);
+  one("P_Body_34.png",{150,450},2);one("ATransportBody.png",{450,450},2);machine("AircraftTransport",{750,450},2);
+  one("P_Body_13.png",{150,750},2);one("ADuctBody.png",{450,750},2);machine("AircraftDuct",{750,750},2);
+  return f;
+ }
  if(mode==2){
   one("P_Body_18.png",{160,140},2);one("ATransportBody.png",{450,180},2);
   machine("E_Tank_28",{160,470},2);machine("AircraftTransport",{450,470},2);

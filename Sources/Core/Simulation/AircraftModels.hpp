@@ -27,11 +27,11 @@ inline void appendAircraftModels(BattleModels& models){
  parts.children={
   part("ALightBody",0,{{0,0},{0,0},{12,15},{12,-15}}), part("ALightRotor",7,{{0,0}}),
   part("ALightGun",4,{{0,0},{8,2},{8,-2}}), part("ALightMissile",4,{{0,0},{7,2},{7,-2}}),
-  part("AHeavyBody",0,{{0,0},{43,40},{43,-40},{2,-40},{4,53},{20,0}}), part("AHeavyRotor",7,{{0,0}}),
-  part("AHeavyGun",4,{{0,0},{15,3},{15,-3}}), part("AHeavyMissile",4,{{0,0},{13,3},{13,-3}}),
-  part("AHeavyCannon",4,{{0,0},{14,0}}),
-  part("ADuctBody",0,{{0,0},{0,0},{0,0},{41,0},{22,13},{22,-13}}),
-  part("ADuctFan",7,{{0,0}}),part("ADuctGun",4,{{0,0},{6,0}}),part("ADuctMissile",4,{{0,0},{6,1},{6,-1}}),
+  part("AHeavyBody",0,{{0,0},{-10,10},{-10,-10},{8,10},{5,-34},{36,0}}), part("AHeavyRotor",7,{{0,0}}),
+  part("AHeavyGun",4,{{0,0},{12,2},{12,-2}}), part("AHeavyMissile",4,{{0,0},{8,2},{8,-2}}),
+  part("AHeavyCannon",4,{{0,0},{9,0}}),
+  part("ADuctBody",0,{{0,0},{11,28.6f},{11,-28.6f},{54,0},{-13,19},{-13,-19}}),
+  part("ADuctFan",7,{{0,0}}),part("ADuctGun",4,{{0,0},{9,0}}),part("ADuctMissile",4,{{0,0},{9,1},{9,-1}}),
   part("ATransportBody",0,{{0,0},{10,1},{0,0},{0,0},{0,0},{8,32},{8,-32},{-2,47},{-2,-47}}),part("ATransportFan",7,{{0,0}}),
   part("ATransportWingL",0,{{0,0}}),part("ATransportWingR",0,{{0,0}}),part("ATransportEngine",0,{{0,0}}),
   part("ATransportGun",4,{{0,0},{10,1},{10,-1}}),part("ATransportMissile",4,{{0,0},{10,1},{10,-1}})
@@ -42,7 +42,7 @@ inline void appendAircraftModels(BattleModels& models){
  auto heavy=named(3,"AircraftHeavy");auto hb=item("AHeavyBody",0,1);
  hb.children={item("AHeavyGun",3,2),item("AHeavyMissile",4,2),item("AHeavyCannon",5,2),item("AHeavyRotor",1,3),item("AHeavyRotor",2,3)};heavy.children={hb};
  auto duct=named(3,"AircraftDuct");auto db=item("ADuctBody",0,1);
- db.children={item("ADuctGun",3,3),item("ADuctMissile",4,3),item("ADuctMissile",5,3)};duct.children={db};
+ db.children={item("ADuctFan",1,2),item("ADuctFan",2,2),item("ADuctGun",3,3),item("ADuctMissile",4,3),item("ADuctMissile",5,3)};duct.children={db};
  auto transport=named(3,"AircraftTransport");auto tb=item("ATransportBody",0,1);
  tb.children={item("ATransportFan",1,4),item("ATransportGun",5,3),item("ATransportGun",6,3),item("ATransportMissile",7,3),item("ATransportMissile",8,3)};transport.children={tb};
  machines.children={light,heavy,duct,transport};models.append(parts,machines);

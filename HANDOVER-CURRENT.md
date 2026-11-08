@@ -1,3 +1,15 @@
+# 헬기 에셋 후속 제작 — 2026-11-08
+
+Cheyenne 생성·분리·조립과 Beluga 로터 중심 수정을 마쳤다. AH-10 기존 재작업을 함께 보존했다. C++ 8개와 Safari 실제 World 검사가 통과했다. 기기·게임 main·운영 PWA는 갱신하지 않았다. [파일·조립 비교·검사·남은 범위](docs/evidence/aircraft-resume-20261108.md).
+
+아래는 이전 기록이다.
+
+# 도안 재작업 후속 — 2026-11-08
+
+AH-10 몸체·3엽 로터·무장을 새 도안에서 만들어 로컬 게임에 연결했다. C++ 8개와 Chrome·WebKit 각 3화면 검사 통과. Cheyenne은 출력 단계 생성 차단으로 미완료다. Beluga는 기존 적용본을 유지했다. 기기·운영판 미배포. [결과·비율 차이·파일·오류](docs/evidence/aircraft-rework-20261108.md).
+
+아래는 이전 기록이다.
+
 ## 2026-11-08 IMG_1168 Cheyenne
 
 IMG_1168 원본과 비율 유지 지시를 보존했다. 표시 이름은 Cheyenne으로 변경했다. 새 그림은 생성하지 못했다. 이미지 도구가 입력 단계에서 400 / moderation_blocked / violence를 반환했다. AH-10도 출력 단계에서 차단됐다. Beluga만 새 사용자 도안을 적용했다. 상세: [사용자 도안 작업](docs/evidence/user-aircraft-20261108.md). 이름 변경 후 C++ 관련 8개 검사는 통과했고 웹 묶음의 PNG 4개와 이름 테이블 바이트가 현재 Resources와 일치한다. main·실기기 배포는 하지 않았다.
