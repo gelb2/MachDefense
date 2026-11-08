@@ -22,7 +22,48 @@ struct AircraftTactics {
     std::uint64_t targetId=0;
     bool dodging=false;
     double dodgeEnd=0, dodgeReady=0;
-    Vec2 dodgeDestination{};
+    Vec2 dodgeDestination{},dodgeOrigin{},dodgeAxis{},flightVelocity{};
+    double dodgeStart=0,dodgeNow=0,dodgeArrival=0;
+    float dodgeTicks=0,dodgeLength=0,dodgeInitialSpeed=0,dodgePeakSpeed=0,dodgeRiseTicks=0;
+    static constexpr double stepSeconds=double(.0166f);
+    // Bound preparation to the previous 0.45-second maneuver. Predict its
+    // arrival tick so changing the speed curve does not extend immunity.
+    static unsigned priorArrivalTicks(Vec2 position,Vec2 destination,Vec2 velocity,float cruise,float arrival){
+        const float maximum=cruise*2.5f,acceleration=maximum/6.f;
+        for(unsigned tick=0;tick<28;++tick){
+            const Vec2 delta{destination.x-position.x,destination.y-position.y};
+            const float distance=std::hypot(delta.x,delta.y);
+            if(tick&&distance<=arrival)return tick;
+            const float wanted=std::min(maximum,std::sqrt(std::max(0.f,2*acceleration*distance)));
+            const Vec2 goal=distance>.001f?Vec2{delta.x/distance*wanted,delta.y/distance*wanted}:Vec2{};
+            Vec2 change{goal.x-velocity.x,goal.y-velocity.y};const float length=std::hypot(change.x,change.y);
+            if(length<=acceleration)velocity=goal;
+            else{velocity.x+=change.x/length*acceleration;velocity.y+=change.y/length*acceleration;}
+            position.x+=velocity.x;position.y+=velocity.y;
+        }
+        return 28;
+    }
+    void prepareDodgeCurve(double now,Vec2 position,float cruise,float arrival){
+        dodgeOrigin=position;dodgeStart=dodgeNow=now;
+        dodgeLength=std::hypot(dodgeDestination.x-position.x,dodgeDestination.y-position.y);
+        dodgeAxis={(dodgeDestination.x-position.x)/dodgeLength,(dodgeDestination.y-position.y)/dodgeLength};
+        const auto priorTicks=priorArrivalTicks(position,dodgeDestination,flightVelocity,cruise,arrival);
+        const double duration=std::min(.45,double(priorTicks)*stepSeconds);
+        dodgeArrival=now+duration;dodgeTicks=float(duration/stepSeconds);
+        dodgeInitialSpeed=std::clamp(flightVelocity.x*dodgeAxis.x+flightVelocity.y*dodgeAxis.y,0.f,dodgeLength/dodgeTicks);
+        const float initialTravel=dodgeTicks*dodgeInitialSpeed;
+        dodgePeakSpeed=(2*dodgeLength-initialTravel+std::sqrt(initialTravel*initialTravel+4*dodgeLength*dodgeLength))/(2*dodgeTicks);
+        dodgeRiseTicks=dodgeLength/(dodgeInitialSpeed+dodgePeakSpeed);
+    }
+    void updateBank(AircraftMotion& motion,Vec2 previous,float deceleration,float cruise){
+        velocityChange={motion.direction.x-previous.x,motion.direction.y-previous.y};
+        const Vec2 left{-std::sin(motion.angle),std::cos(motion.angle)};
+        const float lateral=(velocityChange.x*left.x+velocityChange.y*left.y)/std::max(.0001f,deceleration);
+        const float drag=(motion.direction.x*left.x+motion.direction.y*left.y)/std::max(.0001f,cruise);
+        const float requested=std::clamp(lateral*.38f+drag*.07f,-.4f,.4f);
+        bank+=std::clamp((requested-bank)*.18f,-.035f,.035f);
+        flightVelocity=motion.direction;
+    }
     unsigned dodgeCount=0;
     bool invulnerable(double now)const{return dodging&&now<dodgeEnd;}
     void finishDodge(double now){
@@ -32,11 +73,12 @@ struct AircraftTactics {
     bool updateDodge(double now,Vec2 position,bool player,float cruise,
                      float radius,float mapWidth,float halfLength,const AircraftThreatGrid& threats){
         if(dodging){
-            const float arrival=std::max(mapWidth/512.f,cruise*1.2f);
-            if(now>=dodgeEnd||std::hypot(position.x-dodgeDestination.x,position.y-dodgeDestination.y)<=arrival)finishDodge(now);
+            dodgeNow=now;
+            if(now>=dodgeEnd||(dodgeTicks>0&&now>=dodgeArrival)||
+               std::hypot(position.x-dodgeDestination.x,position.y-dodgeDestination.y)<=.0001f)finishDodge(now);
             return dodging;
         }
-        if(now<dodgeReady)return false;
+        if(now<dodgeReady||!(cruise>0)||!std::isfinite(cruise))return false;
         const AircraftThreatGrid::Threat* danger=nullptr;float closest=1e30f;
         threats.near(position,cruise*21,radius,player,[&](const auto& t){
             // Existing weapons impact their fixed destination. Check the current
@@ -63,6 +105,7 @@ struct AircraftTactics {
         }
         if(std::hypot(selected.x-position.x,selected.y-position.y)<cruise)return false;
         dodgeDestination=selected;dodging=true;dodgeEnd=now+.45;++dodgeCount;braking=false;
+        prepareDodgeCurve(now,position,cruise,std::max(mapWidth/512.f,cruise*1.2f));
         return true;
     }
     std::uint32_t next(){random^=random<<13;random^=random>>17;random^=random<<5;return random;}
@@ -89,8 +132,28 @@ struct AircraftTactics {
     // existing fixed 60 Hz simulation step. Opposite lateral orders brake to
     // zero for one simulation step before acceleration resumes.
     void advance(AircraftMotion& motion){
-        if(motion.state!=1){bank*=.88f;velocityChange={};return;}
+        if(motion.state!=1){bank*=.88f;velocityChange={};flightVelocity=motion.direction;return;}
         const auto previousVelocity=motion.direction;
+        if(dodging&&dodgeTicks>0){
+            const float tick=std::clamp(float((dodgeNow-dodgeStart)/stepSeconds+1),0.f,dodgeTicks);
+            float distance,velocity;
+            if(tick<=dodgeRiseTicks){
+                const float acceleration=(dodgePeakSpeed-dodgeInitialSpeed)/dodgeRiseTicks;
+                distance=dodgeInitialSpeed*tick+.5f*acceleration*tick*tick;
+                velocity=dodgeInitialSpeed+acceleration*tick;
+            }else{
+                const float remaining=dodgeTicks-tick;
+                const float deceleration=dodgePeakSpeed/(dodgeTicks-dodgeRiseTicks);
+                distance=dodgeLength-.5f*deceleration*remaining*remaining;velocity=deceleration*remaining;
+            }
+            distance=std::clamp(distance,0.f,dodgeLength);
+            motion.position={dodgeOrigin.x+dodgeAxis.x*distance,dodgeOrigin.y+dodgeAxis.y*distance};
+            motion.direction={dodgeAxis.x*velocity,dodgeAxis.y*velocity};motion.speed=velocity;
+            if(tick>=dodgeTicks){motion.position=dodgeDestination;motion.direction={};motion.speed=0;}
+            updateBank(motion,previousVelocity,motion.moveSpeed*2.5f/4.f,motion.moveSpeed*2.5f);
+            if(!engaged&&velocity>0)face(motion,std::atan2(dodgeAxis.y,dodgeAxis.x));
+            return;
+        }
         const Vec2 delta{motion.destination.x-motion.position.x,motion.destination.y-motion.position.y};
         const float distance=std::hypot(delta.x,delta.y),cruise=motion.moveSpeed*(dodging?2.5f:1.f);
         const float acceleration=cruise/(dodging?6.f:30.f),deceleration=cruise/(dodging?4.f:24.f);
@@ -102,12 +165,7 @@ struct AircraftTactics {
         Vec2 change{goal.x-motion.direction.x,goal.y-motion.direction.y};const float length=std::hypot(change.x,change.y);
         if(length<=step)motion.direction=goal;
         else{motion.direction.x+=change.x/length*step;motion.direction.y+=change.y/length*step;}
-        velocityChange={motion.direction.x-previousVelocity.x,motion.direction.y-previousVelocity.y};
-        const Vec2 left{-std::sin(motion.angle),std::cos(motion.angle)};
-        const float lateral=(velocityChange.x*left.x+velocityChange.y*left.y)/std::max(.0001f,deceleration);
-        const float drag=(motion.direction.x*left.x+motion.direction.y*left.y)/std::max(.0001f,cruise);
-        const float requested=std::clamp(lateral*.38f+drag*.07f,-.4f,.4f);
-        bank+=std::clamp((requested-bank)*.18f,-.035f,.035f);
+        updateBank(motion,previousVelocity,deceleration,cruise);
         motion.speed=std::hypot(motion.direction.x,motion.direction.y);
         if(braking&&motion.speed==0){braking=false;return;}
         if(!engaged&&!braking&&wantedSpeed>0){
