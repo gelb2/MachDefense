@@ -10,10 +10,8 @@ namespace md {
 struct AircraftTactics {
     float widthFraction=.5f, speed=2.f;
     std::uint32_t random=1;
-    unsigned leg=0, sector=0, sectorStep=1;
-    double nextChange=0;
     Vec2 anchor{}, waypoint{};
-    bool engaged=false, braking=false;
+    bool engaged=false, braking=false, holdingRange=false;
     float bank=0; // radians, positive toward the local left side
     Vec2 velocityChange{};
     float noseStep=.02908882f, weaponStep=.05235988f;
@@ -68,28 +66,23 @@ struct AircraftTactics {
         return true;
     }
     std::uint32_t next(){random^=random<<13;random^=random>>17;random^=random<<5;return random;}
-    Vec2 destination(double time,Vec2 position,Vec2 target,float range,float mapWidth,float mapHalfLength,float radius){
+    Vec2 destination(double,Vec2 position,Vec2 target,float range,float mapWidth,float mapHalfLength,float radius){
         const float edge=std::max(0.f,mapWidth*.5f-radius);
-        // Twelve clock positions around the target. The sweep stays inside the
-        // aircraft's existing movement envelope and its weapon acquisition range.
-        const float orbit=std::max(0.f,std::min(mapWidth*widthFraction*.5f,range*.72f));
         const float top=std::max(0.f,mapHalfLength-radius);
-        const bool starting=!engaged;
-        const float turnDistance=std::max(mapWidth/128.f,radius*.35f);
-        const float dx=position.x-waypoint.x,dy=position.y-waypoint.y;
-        if(starting||time>=nextChange||dx*dx+dy*dy<=turnDistance*turnDistance){
-            if(starting){sector=next()%12;sectorStep=(next()&1u)?1u:11u;engaged=true;}
-            else sector=(sector+sectorStep)%12;
-            ++leg;
-            // Each actor owns its phase/direction/timing; simultaneous builds
-            // do not share a left-first route or a world RNG draw.
-            nextChange=time+2.4+double(next()%1601)*.001;
-            if(!starting&&leg%12==0)sectorStep=(next()&1u)?1u:11u;
-        }
-        anchor=target;
-        const float angle=float(sector)*6.28318530718f/12.f;
-        waypoint={std::clamp(target.x+std::sin(angle)*orbit,-edge,edge),
-                  std::clamp(target.y+std::cos(angle)*orbit,-top,top)};
+        const float dx=position.x-target.x,dy=position.y-target.y;
+        const float distance=std::hypot(dx,dy);
+        range=std::max(0.f,range);anchor=target;
+        // An acquired target is already in the assigned unit range. Brake at
+        // that point instead of generating another orbit leg through the target.
+        if(!engaged){holdingRange=distance<=range;engaged=true;}
+        else if(holdingRange&&distance>range)holdingRange=false;
+        else if(!holdingRange&&distance<=range*.9f)holdingRange=true;
+        if(holdingRange)return waypoint=position;
+        // Reapproach toward a standoff point, not the target centre. The inner
+        // stop and outer resume distances prevent boundary oscillation.
+        const float standoff=std::min(distance,range*.8f);
+        waypoint={std::clamp(target.x+(distance>0?dx/distance*standoff:0.f),-edge,edge),
+                  std::clamp(target.y+(distance>0?dy/distance*standoff:0.f),-top,top)};
         return waypoint;
     }
     // New aircraft only. Velocity changes by bounded acceleration at the

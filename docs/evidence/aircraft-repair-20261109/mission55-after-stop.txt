@@ -1,0 +1,24 @@
+placed enemy=E_Turret_13 x=-101 y=-177.5 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Turret_13 x=5 y=-229 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Turret_13 x=102 y=-172.5 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Turret_13 x=-94.5 y=244 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Turret_13 x=6 y=181.5 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Turret_13 x=101 y=244 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Base x=0 y=487
+spawn level=1 id=11 x=-50.8849 y=-511.967 hp=210
+spawn level=1 id=12 x=9.61948 y=-511.967 hp=210
+spawn level=1 id=13 x=17.8972 y=-511.967 hp=210
+mission55 level=1 produced=3 deaths=2 damageFrames=22 enemyDestroyed=0 writes=0
+death id=11 second=108.448
+death id=12 second=63.8934
+placed enemy=E_Turret_13 x=-101 y=-177.5 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Turret_13 x=5 y=-229 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Turret_13 x=102 y=-172.5 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Turret_13 x=-94.5 y=244 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Turret_13 x=6 y=181.5 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Turret_13 x=101 y=244 weapon=E_Turret13_Wpn_02 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446 weapon=E_Turret13_Wpn_01 type=9 damage=36 splash=30 speedPerTick=3.61446
+placed enemy=E_Base x=0 y=487
+spawn level=10 id=13 x=-50.8849 y=-511.962 hp=644
+spawn level=10 id=14 x=9.61948 y=-511.962 hp=644
+spawn level=10 id=15 x=17.8972 y=-511.962 hp=644
+mission55 level=10 produced=3 deaths=0 damageFrames=26 enemyDestroyed=7 writes=0
