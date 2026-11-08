@@ -1,3 +1,9 @@
+# 헬기 4종 Lv.1–10 수치안 — 2026-11-08
+
+사용자 지정 사거리·생산 셀·AH-10 HP 비율과 최대 Lv.10을 충족하는 [전체 수치안](docs/research/aircraft-balance-20261108.md)을 작성했다. 40개 기체 레벨·90개 무장 행, 수치 검사 439개·C++ 로더 대조 540개 통과. 미지정 HP·화력·강화 크레딧은 제안으로 표시했다. 게임 적용·캠페인 검증은 하지 않았다. 승인한 크기·디자인과 게임 소스·자원을 보존했다.
+
+[게시 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-balance-20261108). Site source `7df630a0da0378b20006b349aacb2e8563227c09`, deployment `appgdep_6af06b5d5364819190e0cfded372c441`, succeeded.
+
 # Scout 폭 조정과 4종 사양 — 2026-11-08
 
 먼저 세 기체 보존 기준을 ce58bd0에 커밋했다. Scout는 114×156→118×162px로 비례 조정해 Cheyenne과 외곽 폭이 같다. 다른 세 기체 크기·디자인, 전체 PNG·전투 수치 보존. C++ 8개·Safari 전투 통과. [비교·검사](docs/evidence/scout-width-20261108.md), [현행 사양·논의](docs/research/aircraft-specs-20261108.md). 게임 main·기기는 미갱신.

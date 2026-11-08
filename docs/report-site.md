@@ -1,3 +1,11 @@
+# 헬기 4종 Lv.1–10 수치안 — 2026-11-08
+
+[수치안](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-balance-20261108)을 기존 소유자 전용 보고서에 게시했다. 40개 기체 레벨·90개 무장 행과 강화 비용·증가율·고정 동작 수치, TSV·JSON·조회 코드를 제공한다. 수치 조건 439개·C++ 로더 540개 대조 통과. Safari 로컬 본문·표와 게시 주소의 새 제목 링크를 확인했다. 게임 적용·캠페인 검증은 하지 않았다.
+
+- Source `7df630a0da0378b20006b349aacb2e8563227c09`.
+- Deployment `appgdep_6af06b5d5364819190e0cfded372c441`, succeeded.
+- 기존 보고서·이미지·오류 전문과 소유자 전용 접근을 보존했다.
+
 # 승인한 헬기 형상 복구 — 2026-11-08
 
 [보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-approved-20261108)에 승인본 링크·현재 World 캡처·회색 오르카 원본·몸체 측정·검사·아이폰 설치 범위를 추가했다.
