@@ -1,3 +1,11 @@
+# 헬기 도색·질감·입체감 개선 과제 — 2026-11-09
+
+[개선 과제 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-surface-plan-20261109)를 Sites 버전 244로 게시했다. 아이폰 정식 Release 설치 결과, 원작 도장·파츠 참조, 네 기체의 수정 부위, 보존 조건과 검사 순서를 담았다. 현재 웹 조립 비교를 기준 이미지로 사용하며 새 도색 시안이나 아이폰 캡처로 표시하지 않았다. 새 미술 변경은 아직 적용하지 않았다.
+
+Source `76acb5b2a5099e13f54789f32c8b623b273b7308`, Deployment `appgdep_6af0e4616ca08191b3ba3a241e7d3037`, succeeded. [게시 근거](evidence/aircraft-iphone-banks-20261109/report-publication.json), [원고](research/aircraft-surface-plan-20261109.md). 기존 소유자 전용 접근을 유지했다. 새 기사 자료 링크 9개를 검사했고 누락은 없다. 브라우저 배치 검사는 완료하지 못했다. Chrome 상태 조회가 시간 초과됐고 Safari는 사용 중이어서 추가 조작하지 않았다. 아이폰 설치는 완료했으며 실제 헬기 선회 평가와 성능 측정은 남았다.
+
+아래는 이전 게시 당시의 기록이다.
+
 # 스카웃·벨루가 선회 수정 — 2026-11-09
 
 [수정 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-bank-correction-20261109)를 Sites 버전 243으로 게시했다. 스카웃 `5d6b872`, 벨루가 `e9c95ba`의 준비 그림·실제 웹 조립·보존 검사와 남은 작업을 담았다. 기존 소유자 전용 접근과 다른 보고서의 원격 변경을 보존했다.
