@@ -1,0 +1,54 @@
+{
+  "candidate": "ScoutLv2\u201310 cover9andweaponhousing18; final socket[-1,-1]",
+  "servedRegularProbe": "http://127.0.0.1:8956/",
+  "servedLevelPoseProbe": "http://127.0.0.1:8957/",
+  "user8953Unchanged": true,
+  "browserChecks": {
+    "chrome": {
+      "poseOK": true,
+      "poseCaptures": 70,
+      "warmUploads": 0,
+      "allLevelCombatOK": true,
+      "testedLevels": 10,
+      "aircraftPerLevel": 4,
+      "dodge": true,
+      "audioBefore": {
+        "created": 2,
+        "closed": 0
+      },
+      "audioAfter": {
+        "created": 2,
+        "closed": 0
+      },
+      "errors": []
+    },
+    "webkit": {
+      "poseOK": true,
+      "poseCaptures": 70,
+      "warmUploads": 0,
+      "allLevelCombatOK": true,
+      "testedLevels": 10,
+      "aircraftPerLevel": 4,
+      "dodge": true,
+      "audioBefore": {
+        "created": 2,
+        "closed": 0
+      },
+      "audioAfter": {
+        "created": 2,
+        "closed": 0
+      },
+      "errors": []
+    }
+  },
+  "preservation": "scout-web-preservation.json",
+  "package": "scout-web-package.json",
+  "sourcePreservation": "scout-source-preservation.json",
+  "testOnlyProbe": "Main-levels.cpp uses copied AircraftVisualFrame-levels.hpp to encodelevel in mode/1000; core productobjects same as regular probe",
+  "limits": [
+    "Art acceptance not inferred from functional checks",
+    "Production/upgrade UI icons not separately opened in this web pass",
+    "Per-weapon muzzle/recoil coordinate assertions belong to assembly agent core tests; web observes actual firing and damage",
+    "AH10 GPU atlas comparison uses fe72d80 before Scout upgrades and does not measure Scout upgrade performance"
+  ]
+}

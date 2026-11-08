@@ -18,9 +18,30 @@ int main(int argc,char**argv){
   char suffix[8];snprintf(suffix,sizeof suffix,"_%02u",level);auto name=std::string(base)+suffix;
   assert(persisted.machine(name));legacy.appendMachineVariant(name,base,suffix);
   for(float scale:{.5f,1.f})for(float angle:{0.f,.7f,1.57f}){
-   auto a=actual.pose(name,scale,angle,angle+.1f,angle+.2f),b=legacy.pose(name,scale,angle,angle+.1f,angle+.2f);assert(a.size()==b.size());
+   auto a=actual.pose(name,scale,angle,angle+.1f,angle+.2f),b=legacy.pose(name,scale,angle,angle+.1f,angle+.2f);
+   const bool scoutUpgrade=std::string_view(base)=="AircraftLight"&&level>1;
+   auto covers=std::count_if(a.begin(),a.end(),[](const auto& p){return p.definition->name.starts_with("ALightCover_");});assert(covers==(scoutUpgrade?1:0));
+   for(const auto& p:a)if(scoutUpgrade&&p.definition->type==4)assert(p.definition->image==p.definition->name+".png");
+   for(const auto& p:a)if(p.definition->name.starts_with("ALightCover_")){
+    assert(p.definition->name=="ALightCover"+std::string(suffix)&&p.definition->tileCount==7&&p.definition->splitX==7);
+    assert(p.definition->image==p.definition->name+".png");
+    assert(std::abs(p.localCenter.x-scale*(std::cos(angle)-std::sin(angle)))<.0001f&&std::abs(p.localCenter.y-scale*(std::sin(angle)+std::cos(angle)))<.0001f&&p.angle==angle);
+   }
+   if(scoutUpgrade&&angle==0){
+    Frame f;actual.appendSprites(f,a,{},[&](std::string_view n){return r.imageSize(n);});
+    const Sprite *body=nullptr,*cover=nullptr;
+    for(const auto& sprite:f.sprites)if(sprite.color.r>0){if(sprite.image=="ALightBody.png")body=&sprite;if(sprite.image.starts_with("ALightCover_"))cover=&sprite;}
+    assert(body&&cover);assert(std::abs(body->destination.height-47*scale)<.0001f);
+    assert(std::abs(cover->destination.x-body->destination.x-25*scale)<.0001f&&std::abs(cover->destination.y-body->destination.y-14*scale)<.0001f);
+    for(float bank:{-.41887902f,-.27925268f,-.13962634f,0.f,.13962634f,.27925268f,.41887902f}){
+     const auto mesh=aircraftBankMesh(*cover,{},0,bank,r.imageSize(cover->image));
+     assert(std::abs(mesh.vertices.front().position.x-cover->destination.x)<.0001f&&std::abs(mesh.vertices.front().position.y-cover->destination.y)<.0001f);
+     assert(std::abs(mesh.vertices.front().uv.x-float(aircraftBankTile(bank))/7.f)<.0001f);
+    }
+   }
+   std::erase_if(a,[](const auto& p){return p.definition->name.starts_with("ALightCover_");});assert(a.size()==b.size());
    for(std::size_t i=0;i<a.size();++i){const auto& x=a[i];const auto& y=b[i];const auto& xd=*x.definition;const auto& yd=*y.definition;
-    assert(xd.name==yd.name&&xd.image==yd.image&&xd.type==yd.type&&xd.tileCount==yd.tileCount&&xd.splitX==yd.splitX&&xd.splitY==yd.splitY&&xd.tileNo==yd.tileNo);
+    assert(xd.name==yd.name&&(xd.image==yd.image||(scoutUpgrade&&xd.type==4&&xd.image==xd.name+".png"))&&xd.type==yd.type&&xd.tileCount==yd.tileCount&&xd.splitX==yd.splitX&&xd.splitY==yd.splitY&&xd.tileNo==yd.tileNo);
     assert(x.localCenter.x==y.localCenter.x&&x.localCenter.y==y.localCenter.y&&x.angle==y.angle&&x.deviceScale==y.deviceScale&&x.visualScale==y.visualScale&&x.zOrder==y.zOrder&&x.reverse==y.reverse&&x.hasParent==y.hasParent);
     assert(xd.sockets.size()==yd.sockets.size());
     for(unsigned j=1;j<xd.sockets.size();++j){auto xm=x.muzzle(j),ym=y.muzzle(j);assert(xm&&ym&&xm->x==ym->x&&xm->y==ym->y);}
@@ -51,5 +72,5 @@ int main(int argc,char**argv){
   }
  }
  std::cout<<fixedCases<<" AH-10 fixed pod muzzle cases retained across levels, scales, headings and bank poses\n";
- std::cout<<"40 persisted level assemblies; "<<cases<<" phone/pad pose cases match previous images, geometry, sockets and muzzles\n";
+ std::cout<<"40 persisted level assemblies; "<<cases<<" phone/pad pose cases preserve existing geometry, sockets and muzzles; only explicit Scout upgrade art differs\n";
 }

@@ -67,6 +67,12 @@ def png(blob):
         pos += 12 + length
     return result
 
+def classify_authored_usage(authored_names, base_rows, level_rows):
+    base_used = {r['part'] for rows in base_rows for r in rows}
+    level_used = {r['part'] for rows in level_rows for r in rows}
+    authored = set(authored_names)
+    return sorted(authored - base_used - level_used), sorted((authored & level_used) - base_used)
+
 def audit():
     inputs = {}
     def read(path):
@@ -123,16 +129,19 @@ def audit():
         walk(tree)
         return rows
     summaries = []
-    used = set()
+    base_rows, level_rows = [], []
     for model, label in MODELS.items():
         base = describe_machine(model)
-        used.update(r['part'] for r in base)
+        base_rows.append(base)
         levels = []
         for level in range(1, 11):
             model_name = f'{model}_{level:02d}'
             persisted = model_name in machines
             rows = describe_machine(model_name) if persisted else base
+            level_rows.append(rows)
             levels.append({'level': level, 'machine': model_name,
+                           'nodeCount': len(rows), 'visibleNodeCount': sum(r['visible'] for r in rows),
+                           'nodes': rows,
                            'persistedDefinition': persisted,
                            'renderedImages': [r['image'] for r in rows if r['visible']]})
         signatures = {tuple(l['renderedImages']) for l in levels}
@@ -141,14 +150,14 @@ def audit():
                           'nodes': base, 'levels': levels,
                           'distinctLevelImageSequences': len(signatures),
                           'levelAppearanceChangesPresent': len(signatures) > 1})
-    unused = [p['name'] for p in spec['parts'] if p['name'] not in used]
+    unused, level_only = classify_authored_usage([p['name'] for p in spec['parts']], base_rows, level_rows)
     for p in unused: describe(p)
     return {'scope': 'Static consumption audit; no game assets or runtime code changed by this audit',
             'runtimeMachineVariantCallInLoader': runtime_variants,
             'persistedAircraftMachineCount': len(nodes(trees['AircraftMachines'], 3)),
             'originalPartDefinitions': len(nodes(trees['PartsInfo'], 1)),
             'originalNamedMachines': len(nodes(trees['MachInfo'], 3)),
-            'unusedAuthoredParts': unused, 'aircraft': summaries,
+            'unusedAuthoredParts': unused, 'levelOnlyAuthoredParts': level_only, 'aircraft': summaries,
             'textures': textures, 'inputSHA256': inputs,
             'limitations': ['No visual-quality acceptance', 'No web or device rendering performed by this audit',
                            'No performance equivalence measurement',

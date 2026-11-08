@@ -1,0 +1,484 @@
+{
+  "scope": "Scout level 2\u201310 resources listed below; level1 preserved",
+  "coverPoseHashes": {
+    "ALightCover_02": [
+      "7e12ea31a73dc0522ff5c523b58332e4f23899bbae334d56c8555e0318223c77",
+      "925c0f14a06e44243b4d3c66501dcf2d77ae7340c1a65373b81d2eaae418c065",
+      "16327a1e728788077beeab06de13c14087f31f4975998699b05e5b09a0da4d35",
+      "53e56d8b6cf915dd5d3c000550f25e5dcc91ca5fd78f0a34bc41c9191ed4c826",
+      "1c0ced67cee3152d4a3603338e39909988349af44cde08d6c94c133c5cb90e43",
+      "d7db03896aa9b3e53247812473ba322cf73ec0f712748eccc6a68b29b3549639",
+      "9243b4c66fdda61a4e8462c5240a39026c91703ea7f4e698a05e14829fbef8f8"
+    ],
+    "ALightCover_03": [
+      "5fc394f4dc61cc1ce6fb11576a7ab6454cbc4ab40b372a8e17427eba9edf37f9",
+      "8450deeac49ad474de41a8357ebc9aad05264c0245137af8fdae63c11955b9a8",
+      "e839a788268280590ab6f786f2d8b8b54444d3fff5019814e6730aac7e802403",
+      "1caa6bf27a08b1385eb6ca21651d192eb4e37b39029789ef41daa3a55e5483f8",
+      "fcb5b6fda8bb08c8d6c8d10c7fa85cb3f01c6bd58931243a5181a1b2ea2d0937",
+      "6ca8e7eb1c44d6c7e504a7a7b8bcd0ec672963b82f55336f411d90f3498b4b1e",
+      "a6638f51fcfacd4769e344edc817d5de879098ea52b0cffa9efed2eae2c57c03"
+    ],
+    "ALightCover_04": [
+      "aeb03f3ae0c2e0a876f7dc17796c791201c5ec8491d35a9e49f3017303b1ef97",
+      "0f259294c3c7caa6ae4ca46177ae18824d641bd463bfcff0c2719ab6d040d927",
+      "51d1aa8f7b12b3225b08c106c8131a61147cba73c538dd3bed104c8e904e712f",
+      "ae9840a3508c1065586f5cfa8db939ceb06fba263ceb7e3ca7ac76ad26186c6b",
+      "75c9491a42380b1ba18bc63a676e26db789cd72a9e49e19b7c1d6e91d3be7f83",
+      "7e4d32d866370f43b1bca871fd286a8c2bcb9cede40d05a05f2b49274f0fac5b",
+      "2e1ab2ec1ebac93d9515e9198b11d42eaa87634d6dafe0a2d9f40c4553cf4a9f"
+    ],
+    "ALightCover_05": [
+      "30fadbc093c01e4280a763cf01066741764180bab5fc6e4e4fdcdce36723ab6f",
+      "81624e0d69fc8b148a1ecad2c9fdebae51c9245d2f4e0ada34f4559d86394b6b",
+      "9ceb7d333c0d6340e2a6f4bc6c733fefb6a9f89f9fad2b9cdd53346397eacb8e",
+      "d4bc143f0bfa700c965243419e7e0d82ed6a656699ccf0b6631e51570632802b",
+      "0e29ff590fdd28d3a3d1fb551858206e3364c4ae63daa76a5a78a34cf323ad45",
+      "cc9d32ebb3764d42e9a175ba4ff179c5b58110c9e30fea5ad76d4d0f9f11a6cd",
+      "f82ec96fa830766330eed93d81f8c6a55b4a95334c891cca0935a1d88d709051"
+    ],
+    "ALightCover_06": [
+      "cbe9222f6a2039669911c8030c036c0bcb93e9bbd172484c559e2b17e2d3e492",
+      "d8ed2d531c9573a6faae0d9b9b100023cc501002d659ff9ac820f70f8568df9b",
+      "7d9fdd544e9fdb5c673a009efd540c973757278c7338f92dbf66e0e9b69c62ff",
+      "7049d74599392dae2eb66fddb3a3239be880a60689b760484b110aac439968c0",
+      "eaad9ada6d7284a64cfb19e153d886cdac68589e1ba739b81666d1c92bd86e7a",
+      "48a29a1b28201eec2746a9e94b44a4b36aa6479371567e4650c92dd332722aa5",
+      "4c40835e70507eb66b5132957ad8f2b96b84bb26dd740fce9fa580b4d6bb2658"
+    ],
+    "ALightCover_07": [
+      "7645b055803c70db3117aabe0e8671a666319d9779eb5f7631be36c845b8aa4e",
+      "9ca7048f7ebe562ad9ded0adabf44562fb1a67cb61202e96cdfa1b08819c4a6c",
+      "45aa64acf326cd66049e9817320b1f94f9a1680582e4561c82b21e8ff1a5cb60",
+      "d2f3e8d3d8d309a91211327a7dddab1c18c439dcff8d6ba58edbf931fe5f0def",
+      "c014c17acff6a330063bbe6f805c092d8dcf7dec6460a600899d23663000b844",
+      "f04c36564a9917850731ae8243f2e4505d4533b17c51232ea4fe8c55814d6d2a",
+      "2b19467240fd06ca0640a04fbc8dcc3d1b4cfa1d197eb0f100fb08cb3ba152a6"
+    ],
+    "ALightCover_08": [
+      "366fda674bdfe18798548de3febc96b24a704c5a755765ebea1bb9b774639bfd",
+      "0ef22649bbde2386e3d169da45fafcffcbc3631e0659fad8b38594ba08cb2c33",
+      "e8d1dbe52a3f6b906913c107a2a01b6010085409c409456ddbaffbf68f1f1f60",
+      "1c9c786a131602863d9b9588e82bb691db2f1abf7ab12d73c7411e0c87d3efa2",
+      "fc075a3d61ac861c18e49cc3ce6d7f5813d3bdd7c9e0cc972c41e2d127474015",
+      "41cb1b3f1ed0c7f0771c9f294e84d27b2be3d8fd81e4315e6a7104f8a9e7a66a",
+      "7a4901191c14b09c5635c2f3355c4af2af5c2aa517993c991020cf993938a4b3"
+    ],
+    "ALightCover_09": [
+      "30f2fa44d28a8d8cb38b4b734a66de284bbe932055e5cbc1ba42a187dcbb9bd3",
+      "f63483dc208e7d860adb4f728c8c9a49c674ff98fafcc0ca84347c7f9a49b0d7",
+      "75509c08b8335a5743f7f0b8ed7df253f09098c084e69c94dec91bbf62714018",
+      "66bc2634d9da17b17aedbfb0828d0c8373e5da58469ea0352ca97f223761da72",
+      "824995ebe520584c3604430c2d22fe01772b1ed941da13271c76df081062211b",
+      "21afcb81c767d71d05f2cf5cff6922a8a9f45ee23a56d3ee46bbac11701fa84f",
+      "f0e2f8009b75cd12cfe728a145ed09a35a722d1f517dd0f9321b4ddc2b47b952"
+    ],
+    "ALightCover_10": [
+      "5da6ca52d8a39b006cdefb7db1da52ad74b939515de8159f67c8a42db7b6ecbd",
+      "9a18f07c0c08ccc0fc8d121ff8cb893728d158d4e6350a4b6862bf6eda80a660",
+      "a4b5a1ca4e4fd15f8d641917604b0764407682631c9b9b74422432031b72cdcc",
+      "ea653e348c0c92aab7b07dbe43f9629ab2c65be332ae81036e8361f3fcac6281",
+      "d30c255ac20965038fecb0c4b7ec553c08975cdc17c1d805930f2abe4a09e124",
+      "9ec75413168c5084886ba6c2824101955aa18f27c77794609eac81aa078a38f9",
+      "1e77f63ec39b5f141b4d6af8770fe281b0748a3658f1a66330c071ee54ae8692"
+    ]
+  },
+  "coverRegistration": {
+    "actualBodyCell": [
+      64,
+      47
+    ],
+    "coverCell": [
+      16,
+      17
+    ],
+    "bodyTopLeft": [
+      25,
+      14
+    ],
+    "bodyLocalCenter": [
+      1,
+      1
+    ],
+    "socket0": [
+      -1,
+      -1
+    ],
+    "outsideApprovedAlphaPixels": 0
+  },
+  "weaponHousingsPrepared": [
+    "ALightGun_02",
+    "ALightGun_03",
+    "ALightGun_04",
+    "ALightGun_05",
+    "ALightGun_06",
+    "ALightGun_07",
+    "ALightGun_08",
+    "ALightGun_09",
+    "ALightGun_10",
+    "ALightMissile_02",
+    "ALightMissile_03",
+    "ALightMissile_04",
+    "ALightMissile_05",
+    "ALightMissile_06",
+    "ALightMissile_07",
+    "ALightMissile_08",
+    "ALightMissile_09",
+    "ALightMissile_10"
+  ],
+  "records": [
+    {
+      "name": "ALightCover_02",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_02.png",
+      "sourceSHA256": "c8de9e62121829773cd8f27e1248bec0faa49ebe87a36268f01538ef575884d6",
+      "runtimeSHA256": "0c657a4dc40d25db76aceb758944a0d06b73fb42cf6d48d8d32e1f32be2e3e86",
+      "size": [
+        112,
+        17
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ALightCover_03",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_03.png",
+      "sourceSHA256": "af10bb0c369f0cc1a08b2f5772ffc23c8a7bda0cd5a3e9f01913c13b64fc3884",
+      "runtimeSHA256": "64e26a6602e8b7257543b2ced2be1f2ce5d72312414505e7360a343dd3d1a639",
+      "size": [
+        112,
+        17
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ALightCover_04",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_04.png",
+      "sourceSHA256": "b3218190a8a5765778834433e870c392044f75ab3f3ca1a4364f9d1c4135784a",
+      "runtimeSHA256": "aaa8bc0a5ccc7133a873b1032c0af4d515ef095f6bea29bcc95487af386c8895",
+      "size": [
+        112,
+        17
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ALightCover_05",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_05.png",
+      "sourceSHA256": "bb03242d5a9d4fb987a62cc2d6a3baeeab8f548a473cf65f2046ecd911153e97",
+      "runtimeSHA256": "3a86a1afa1b801d87957d70e0e2a269e23e48ca41c030ebde94b0dcb7086202c",
+      "size": [
+        112,
+        17
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ALightCover_06",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_06.png",
+      "sourceSHA256": "f6d528193adf4a43c8425e8460a5ed295e630fef2bb444e9ce88b8a58a838ada",
+      "runtimeSHA256": "e1bd9b7f6067845a0e730babca32075bdf2e8d740900efeba332fb2ffb4d3d0d",
+      "size": [
+        112,
+        17
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ALightCover_07",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_07.png",
+      "sourceSHA256": "9f40dbff7702308fd6d55eaddb29015bda12637b797d41fc32f60155393f6c30",
+      "runtimeSHA256": "28f7b25f6492eb7331546ea87c204696fd9813a74cab095242215ca21b8a2a74",
+      "size": [
+        112,
+        17
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ALightCover_08",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_08.png",
+      "sourceSHA256": "065d9b8898118ab6a0ec38614a3cf9846702eef368080550c4f649198eb9ef5d",
+      "runtimeSHA256": "e6b1e7d2181e87fc8044508c003e585788ceb038f60ac306d2cfd708b93411ce",
+      "size": [
+        112,
+        17
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ALightCover_09",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_09.png",
+      "sourceSHA256": "f5ca1c6cd666974116e7f75d3ca6140158bf75abc9deb3c09c51f4ff5bea90ce",
+      "runtimeSHA256": "79eac651559d978db45b921166118882cb604271d1eedb22bc1ce3d74b618226",
+      "size": [
+        112,
+        17
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ALightCover_10",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_10.png",
+      "sourceSHA256": "27e9572c408dcfe4e0a8198a4716aa2a5f0996978fbe01c899fe2cb1f8826415",
+      "runtimeSHA256": "e21850166af8f1cdef7e11f4c2fb95bc3ff28d18eb634a108444ed1298553a7c",
+      "size": [
+        112,
+        17
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ALightGun_02",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_02.png",
+      "sourceSHA256": "e088f4fa3c25fde960a598f74208f8160d3fb71a5266442f6562e8c7b37b686b",
+      "runtimeSHA256": "b6b8ad8c4859ac2125345297456c1b34fead5043dfce0d09b8b748ddb0dee4d3",
+      "size": [
+        14,
+        7
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightGun_03",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_03.png",
+      "sourceSHA256": "994eed17881cdd076668e7dbe1ce0dba37fb9c7ea85c9bc2dd64ef7df4bbbea8",
+      "runtimeSHA256": "b7b2b321ae86ae41ac670dae22fb38b426eec54f3f31336c57c1a36dd767b4fd",
+      "size": [
+        14,
+        7
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightGun_04",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_04.png",
+      "sourceSHA256": "120481d992b0af0dfb07eb760a5b4ea0e86f902dfe43fba15238540b457fe7e6",
+      "runtimeSHA256": "768341d37670e2fffeb51ea6e6273a877751737583ddc4834f225af5e29fdb48",
+      "size": [
+        14,
+        7
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightGun_05",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_05.png",
+      "sourceSHA256": "a63011436e56cd12c9e66b65f04aa2a789f983cda424c99f45afbfcec29146e3",
+      "runtimeSHA256": "9cb619a918bf14b45e26911a29cfa25eda008e3ad4e79f3a28587f5459f90172",
+      "size": [
+        14,
+        7
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightGun_06",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_06.png",
+      "sourceSHA256": "268b81f340c0202f3949ad2fa03f4236e962c560fbe1bc4bfa140ec75de82911",
+      "runtimeSHA256": "e7422f137f87e37c4c0ed466b7078fec08ef81333200c99c74d46d1536bfe5a2",
+      "size": [
+        14,
+        7
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightGun_07",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_07.png",
+      "sourceSHA256": "e1fe8ab09224537c015ad9f9559335f3a78504a4051eddca1dcbdbc3b1ad87d1",
+      "runtimeSHA256": "3bee377eb540475bd7ddb2e9cf0419c44499fca5f6aff704a0c88859765c1cbe",
+      "size": [
+        14,
+        7
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightGun_08",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_08.png",
+      "sourceSHA256": "60272f63b5d35bc221588b6606c613a282daff8fa446df1019184be218636143",
+      "runtimeSHA256": "d1283d1ef795848bf07769edf22bdbfc7b722854015d0632ebc74f20c36a8c1a",
+      "size": [
+        14,
+        7
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightGun_09",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_09.png",
+      "sourceSHA256": "23e8d707de46bde0a2e88197ecd30f2b847b62c56cf23af9bc4032ed30bf3dc6",
+      "runtimeSHA256": "1f58ec7f3924ec983a08976254d748fc0b9bf4f5f5af6985256545c048ef8b33",
+      "size": [
+        14,
+        7
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightGun_10",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_10.png",
+      "sourceSHA256": "19bf50942b100f77e42682fbd8a6eb49feac80fb1ea4c423853ab097cebc54de",
+      "runtimeSHA256": "31834591cc55a6e2fa3cd0f81ea8147ea82636171fab20ae0fab6a2240f4af89",
+      "size": [
+        14,
+        7
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightMissile_02",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_02.png",
+      "sourceSHA256": "437fd1ea5a3208656674e95c9aab59de8feba4a5d65b822ee415ed2d3577183e",
+      "runtimeSHA256": "33b35275ec95ea5ca81e8dfb89321a4c358b7a8af5cdeef2e161bc1ad32df4db",
+      "size": [
+        13,
+        8
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightMissile_03",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_03.png",
+      "sourceSHA256": "fdbbd35908c3c7c254862f84b300401b9ac9f58e2d5bb005b961b78db6497a8a",
+      "runtimeSHA256": "03de5fce36a0260d3053960a804fcd07afb9796a7d635ed5d487da9614f55b24",
+      "size": [
+        13,
+        8
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightMissile_04",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_04.png",
+      "sourceSHA256": "d0cd67a2f1692d21c6e63db7656124c37e3802d1a6c8d4470b0d281f04f407ac",
+      "runtimeSHA256": "2245b0a3343eaf6ddcb1edecffe51d8214c4092d2f52db92d21585d578706bfb",
+      "size": [
+        13,
+        8
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightMissile_05",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_05.png",
+      "sourceSHA256": "c1548bfd725b5802c83b399420245880c82c0e47b139579f0ed61ab5299930c4",
+      "runtimeSHA256": "3a19515c76babce9c368bbdeb2a9bcedfede04a581eb3e4189e8d8c39ac7539d",
+      "size": [
+        13,
+        8
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightMissile_06",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_06.png",
+      "sourceSHA256": "b03a9217a8c54515ccca2575286d066530e20a6ad99a48bb2c08c80a9cc62951",
+      "runtimeSHA256": "732c3f745978e54fad99892c0cd58fba6bd6f837e36a434b86dca54b01f12c6f",
+      "size": [
+        13,
+        8
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightMissile_07",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_07.png",
+      "sourceSHA256": "7d9eb7f9f3ac540a50663a13938c5671815e0904194787d4cf77b4afb6dbef79",
+      "runtimeSHA256": "1f800f41aee9b8832703a4632023c53de66077ede136cec33505dbf8a9ae2b93",
+      "size": [
+        13,
+        8
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightMissile_08",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_08.png",
+      "sourceSHA256": "76261dfb1a1eb68d9ca5732ba147f39877f1589a5f4eefb243d052d7dfb102d3",
+      "runtimeSHA256": "24be6f495db9360258d65723c9012ca4a2d46e2fbee374056972768048ebc7f6",
+      "size": [
+        13,
+        8
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightMissile_09",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_09.png",
+      "sourceSHA256": "cbf2cda1481d0caf6cbe7cf263c7db900af1d828ca59655697270729839cc06d",
+      "runtimeSHA256": "b5a1a017bf115862f29a3cf235412736b879dafc37fb3823f185d36de0edea2d",
+      "size": [
+        13,
+        8
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightMissile_10",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_10.png",
+      "sourceSHA256": "cf70d0bfea944618f9bcca9c7b261bfb49722f5c94f7627b34a0f4c852d6426a",
+      "runtimeSHA256": "52bff3a210b15cb4e83618817beae6dd83bf39e3fb931b52b00cd9ab291f02db",
+      "size": [
+        13,
+        8
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    }
+  ],
+  "potRGBABytes": 156672,
+  "runtimeVisualVerification": "pending"
+}

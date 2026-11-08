@@ -1,0 +1,139 @@
+{
+  "all33EntriesMatchResources": true,
+  "entries": [
+    {
+      "path": "Images/ALightCover_02.png",
+      "sha256": "0c657a4dc40d25db76aceb758944a0d06b73fb42cf6d48d8d32e1f32be2e3e86"
+    },
+    {
+      "path": "Images/ALightGun_02.png",
+      "sha256": "b6b8ad8c4859ac2125345297456c1b34fead5043dfce0d09b8b748ddb0dee4d3"
+    },
+    {
+      "path": "Images/ALightMissile_02.png",
+      "sha256": "33b35275ec95ea5ca81e8dfb89321a4c358b7a8af5cdeef2e161bc1ad32df4db"
+    },
+    {
+      "path": "Images/ALightCover_03.png",
+      "sha256": "64e26a6602e8b7257543b2ced2be1f2ce5d72312414505e7360a343dd3d1a639"
+    },
+    {
+      "path": "Images/ALightGun_03.png",
+      "sha256": "b7b2b321ae86ae41ac670dae22fb38b426eec54f3f31336c57c1a36dd767b4fd"
+    },
+    {
+      "path": "Images/ALightMissile_03.png",
+      "sha256": "03de5fce36a0260d3053960a804fcd07afb9796a7d635ed5d487da9614f55b24"
+    },
+    {
+      "path": "Images/ALightCover_04.png",
+      "sha256": "aaa8bc0a5ccc7133a873b1032c0af4d515ef095f6bea29bcc95487af386c8895"
+    },
+    {
+      "path": "Images/ALightGun_04.png",
+      "sha256": "768341d37670e2fffeb51ea6e6273a877751737583ddc4834f225af5e29fdb48"
+    },
+    {
+      "path": "Images/ALightMissile_04.png",
+      "sha256": "2245b0a3343eaf6ddcb1edecffe51d8214c4092d2f52db92d21585d578706bfb"
+    },
+    {
+      "path": "Images/ALightCover_05.png",
+      "sha256": "3a86a1afa1b801d87957d70e0e2a269e23e48ca41c030ebde94b0dcb7086202c"
+    },
+    {
+      "path": "Images/ALightGun_05.png",
+      "sha256": "9cb619a918bf14b45e26911a29cfa25eda008e3ad4e79f3a28587f5459f90172"
+    },
+    {
+      "path": "Images/ALightMissile_05.png",
+      "sha256": "3a19515c76babce9c368bbdeb2a9bcedfede04a581eb3e4189e8d8c39ac7539d"
+    },
+    {
+      "path": "Images/ALightCover_06.png",
+      "sha256": "e1bd9b7f6067845a0e730babca32075bdf2e8d740900efeba332fb2ffb4d3d0d"
+    },
+    {
+      "path": "Images/ALightGun_06.png",
+      "sha256": "e7422f137f87e37c4c0ed466b7078fec08ef81333200c99c74d46d1536bfe5a2"
+    },
+    {
+      "path": "Images/ALightMissile_06.png",
+      "sha256": "732c3f745978e54fad99892c0cd58fba6bd6f837e36a434b86dca54b01f12c6f"
+    },
+    {
+      "path": "Images/ALightCover_07.png",
+      "sha256": "28f7b25f6492eb7331546ea87c204696fd9813a74cab095242215ca21b8a2a74"
+    },
+    {
+      "path": "Images/ALightGun_07.png",
+      "sha256": "3bee377eb540475bd7ddb2e9cf0419c44499fca5f6aff704a0c88859765c1cbe"
+    },
+    {
+      "path": "Images/ALightMissile_07.png",
+      "sha256": "1f800f41aee9b8832703a4632023c53de66077ede136cec33505dbf8a9ae2b93"
+    },
+    {
+      "path": "Images/ALightCover_08.png",
+      "sha256": "e6b1e7d2181e87fc8044508c003e585788ceb038f60ac306d2cfd708b93411ce"
+    },
+    {
+      "path": "Images/ALightGun_08.png",
+      "sha256": "d1283d1ef795848bf07769edf22bdbfc7b722854015d0632ebc74f20c36a8c1a"
+    },
+    {
+      "path": "Images/ALightMissile_08.png",
+      "sha256": "24be6f495db9360258d65723c9012ca4a2d46e2fbee374056972768048ebc7f6"
+    },
+    {
+      "path": "Images/ALightCover_09.png",
+      "sha256": "79eac651559d978db45b921166118882cb604271d1eedb22bc1ce3d74b618226"
+    },
+    {
+      "path": "Images/ALightGun_09.png",
+      "sha256": "1f58ec7f3924ec983a08976254d748fc0b9bf4f5f5af6985256545c048ef8b33"
+    },
+    {
+      "path": "Images/ALightMissile_09.png",
+      "sha256": "b5a1a017bf115862f29a3cf235412736b879dafc37fb3823f185d36de0edea2d"
+    },
+    {
+      "path": "Images/ALightCover_10.png",
+      "sha256": "e21850166af8f1cdef7e11f4c2fb95bc3ff28d18eb634a108444ed1298553a7c"
+    },
+    {
+      "path": "Images/ALightGun_10.png",
+      "sha256": "31834591cc55a6e2fa3cd0f81ea8147ea82636171fab20ae0fab6a2240f4af89"
+    },
+    {
+      "path": "Images/ALightMissile_10.png",
+      "sha256": "52bff3a210b15cb4e83618817beae6dd83bf39e3fb931b52b00cd9ab291f02db"
+    },
+    {
+      "path": "RawData/AircraftParts.mcb",
+      "sha256": "ceca2ad1b25c266d57cac2c4363ac8816f6399dc007be493f347e59cc6abe81e"
+    },
+    {
+      "path": "RawData/AircraftMachines.mcb",
+      "sha256": "d330a553d118c702c4bed3acc2060272c403afa4b9ec89a92f2bac12c01e62c2"
+    },
+    {
+      "path": "RawData/Level10Parts.mcb",
+      "sha256": "cacc513a5d6df7d769bb75356743486efda9f01830db957e34909ac35661da5d"
+    },
+    {
+      "path": "RawData/Level10Machines.mcb",
+      "sha256": "ec5e24857c582f918e2fda9f9a30f53c7ee0dbd6e14ec700cb961fb6155d4bc2"
+    },
+    {
+      "path": "Tables/PartsList.tsv",
+      "sha256": "2d02119409b858553758ed1dee362d74870ea13d5bbb330e74d22e56640abed7"
+    },
+    {
+      "path": "Tables/TileList.tsv",
+      "sha256": "de7f8adf70295d170cb846a3c34b720f8d7eab39eff66899fdeb3d7ec0116191"
+    }
+  ],
+  "wasmSha256": "fc07f5c24c18e3be964ee92b7a4e03f8eda5c9f70f9f1f2ecb4d02d9ea4d4eb2",
+  "dataSha256": "1e3051576cbbb1902fb4a5b42f11b10ba87ab9e5af598b0386bb45a0f945eb88"
+}

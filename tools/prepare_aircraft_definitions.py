@@ -25,7 +25,7 @@ def run():
  src=ROOT/'Art/Aircraft/runtime/assembly.json';spec=json.loads(src.read_text());parts=[]
  baseparts={p['name']:p for p in spec['parts']}
  basemachines={m['name']:m for m in spec['machines']}
- authored_parts=list(spec['parts']);authored_machines=list(spec['machines']);aliases={}
+ authored_parts=list(spec['parts']);authored_machines=list(spec['machines']);aliases={};alias_images={}
  for variant in spec['levelVariants']:
   machine=copy.deepcopy(basemachines[variant['source']]);machine['name']=variant['name']
   def visit(nodes):
@@ -36,16 +36,25 @@ def run():
      if alias not in aliases:
       p=copy.deepcopy(source);p['name']=alias;p.pop('imageSource',None)
       authored_parts.append(p);aliases[alias]=source
+      alias_images[alias]=variant.get('weaponImages',{}).get(source['name'],source['name'])
     visit(node['children'])
-  visit(machine['parts']);authored_machines.append(machine)
+  visit(machine['parts'])
+  if 'parts' in variant:
+   machine['parts']=copy.deepcopy(variant['parts'])
+   def validate(nodes):
+    for node in nodes:
+     assert node['name'] in baseparts or node['name'] in aliases,node['name']
+     validate(node['children'])
+   validate(machine['parts'])
+  authored_machines.append(machine)
  # Existing table aliases select the original image without copying pixels.
  # Keep all pre-existing rows byte-identical, including original unit aliases.
  marker=b'// Aircraft persisted level aliases 2026-11-09'
  table_rows={'PartsList':[],'TileList':[]};tile_names=set()
  for alias,source in aliases.items():
   if not source['tileCount']:continue
-  table_rows['PartsList'].append(f"{alias}\tWPON\t0\t{source['name']}\n".encode())
-  image=source['name']+'.png'
+  table_rows['PartsList'].append(f"{alias}\tWPON\t0\t{alias_images[alias]}\n".encode())
+  image=alias_images[alias]+'.png'
   if image not in tile_names:
    table_rows['TileList'].append(f"{image}\t{source['tileCount']}\t1\n".encode());tile_names.add(image)
  for table,rows in table_rows.items():
@@ -61,7 +70,7 @@ def run():
    original=ROOT/'Resources/Images'/(p['imageSource']+'.png');dest=ROOT/'Resources/Images'/(p['name']+'.png');dest.write_bytes(original.read_bytes())
  def part(p):return encode(4,named(p['name'])+bytes([p['parentSocket'],p['zOrder']]),[part(c) for c in p['children']])
  machines=[encode(3,named(m['name']),[part(p) for p in m['parts']]) for m in authored_machines]
- report={'source':str(src.relative_to(ROOT)),'sourceSHA256':hashlib.sha256(src.read_bytes()).hexdigest(),'parts':len(parts),'machines':len(machines),'persistedLevelVariants':len(spec['levelVariants']),'runtimeVariantGeneration':False,'visualLevelVariationImplemented':False,'containers':[]}
+ report={'source':str(src.relative_to(ROOT)),'sourceSHA256':hashlib.sha256(src.read_bytes()).hexdigest(),'parts':len(parts),'machines':len(machines),'persistedLevelVariants':len(spec['levelVariants']),'runtimeVariantGeneration':False,'visualLevelVariationImplemented':any('parts' in v for v in spec['levelVariants']),'visualLevelVariationScope':[v['name'] for v in spec['levelVariants'] if 'parts' in v and v['name']!='AircraftLight_01'],'containers':[]}
  for name,kind,additions in [('Parts',0,parts),('Machines',2,machines)]:
   standalone=ROOT/'Resources/RawData'/('Aircraft'+name+'.mcb');standalone.write_bytes(encode(kind,children=additions))
   path=ROOT/'Resources/RawData'/('Level10'+name+'.mcb');tree,end=decode(path.read_bytes());assert end==path.stat().st_size

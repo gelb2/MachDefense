@@ -435,6 +435,114 @@
         ]
       ],
       "imageSource": "ADuctMissile"
+    },
+    {
+      "name": "ALightCover_02",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_02.png"
+    },
+    {
+      "name": "ALightCover_03",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_03.png"
+    },
+    {
+      "name": "ALightCover_04",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_04.png"
+    },
+    {
+      "name": "ALightCover_05",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_05.png"
+    },
+    {
+      "name": "ALightCover_06",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_06.png"
+    },
+    {
+      "name": "ALightCover_07",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_07.png"
+    },
+    {
+      "name": "ALightCover_08",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_08.png"
+    },
+    {
+      "name": "ALightCover_09",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_09.png"
+    },
+    {
+      "name": "ALightCover_10",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_10.png"
     }
   ],
   "machines": [
@@ -629,52 +737,412 @@
     {
       "name": "AircraftLight_01",
       "source": "AircraftLight",
-      "weaponSuffix": "_01"
+      "weaponSuffix": "_01",
+      "parts": [
+        {
+          "name": "ALightBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ALightGun_01",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightMissile_01",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "AircraftLight_02",
       "source": "AircraftLight",
-      "weaponSuffix": "_02"
+      "weaponSuffix": "_02",
+      "parts": [
+        {
+          "name": "ALightBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ALightCover_02",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightGun_02",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightMissile_02",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ALightGun": "ALightGun_02",
+        "ALightMissile": "ALightMissile_02"
+      }
     },
     {
       "name": "AircraftLight_03",
       "source": "AircraftLight",
-      "weaponSuffix": "_03"
+      "weaponSuffix": "_03",
+      "parts": [
+        {
+          "name": "ALightBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ALightCover_03",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightGun_03",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightMissile_03",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ALightGun": "ALightGun_03",
+        "ALightMissile": "ALightMissile_03"
+      }
     },
     {
       "name": "AircraftLight_04",
       "source": "AircraftLight",
-      "weaponSuffix": "_04"
+      "weaponSuffix": "_04",
+      "parts": [
+        {
+          "name": "ALightBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ALightCover_04",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightGun_04",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightMissile_04",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ALightGun": "ALightGun_04",
+        "ALightMissile": "ALightMissile_04"
+      }
     },
     {
       "name": "AircraftLight_05",
       "source": "AircraftLight",
-      "weaponSuffix": "_05"
+      "weaponSuffix": "_05",
+      "parts": [
+        {
+          "name": "ALightBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ALightCover_05",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightGun_05",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightMissile_05",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ALightGun": "ALightGun_05",
+        "ALightMissile": "ALightMissile_05"
+      }
     },
     {
       "name": "AircraftLight_06",
       "source": "AircraftLight",
-      "weaponSuffix": "_06"
+      "weaponSuffix": "_06",
+      "parts": [
+        {
+          "name": "ALightBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ALightCover_06",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightGun_06",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightMissile_06",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ALightGun": "ALightGun_06",
+        "ALightMissile": "ALightMissile_06"
+      }
     },
     {
       "name": "AircraftLight_07",
       "source": "AircraftLight",
-      "weaponSuffix": "_07"
+      "weaponSuffix": "_07",
+      "parts": [
+        {
+          "name": "ALightBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ALightCover_07",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightGun_07",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightMissile_07",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ALightGun": "ALightGun_07",
+        "ALightMissile": "ALightMissile_07"
+      }
     },
     {
       "name": "AircraftLight_08",
       "source": "AircraftLight",
-      "weaponSuffix": "_08"
+      "weaponSuffix": "_08",
+      "parts": [
+        {
+          "name": "ALightBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ALightCover_08",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightGun_08",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightMissile_08",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ALightGun": "ALightGun_08",
+        "ALightMissile": "ALightMissile_08"
+      }
     },
     {
       "name": "AircraftLight_09",
       "source": "AircraftLight",
-      "weaponSuffix": "_09"
+      "weaponSuffix": "_09",
+      "parts": [
+        {
+          "name": "ALightBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ALightCover_09",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightGun_09",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightMissile_09",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ALightGun": "ALightGun_09",
+        "ALightMissile": "ALightMissile_09"
+      }
     },
     {
       "name": "AircraftLight_10",
       "source": "AircraftLight",
-      "weaponSuffix": "_10"
+      "weaponSuffix": "_10",
+      "parts": [
+        {
+          "name": "ALightBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ALightCover_10",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightGun_10",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightMissile_10",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ALightGun": "ALightGun_10",
+        "ALightMissile": "ALightMissile_10"
+      }
     },
     {
       "name": "AircraftHeavy_01",

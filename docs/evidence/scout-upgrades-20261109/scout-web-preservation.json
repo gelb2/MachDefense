@@ -1,0 +1,995 @@
+{
+  "baseline": "fe72d80 accepted AH10 fullcanvas screenshots",
+  "excludedScoutScreenRect": [
+    150,
+    150,
+    350,
+    350
+  ],
+  "checkedFrames": 140,
+  "level1FramesCompletelyExact": 14,
+  "allOtherScreenPixelsExact": true,
+  "all27UpgradeImagesActuallyOpenedEachBrowser": true,
+  "frames": [
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": true
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 0,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 1,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 2,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 3,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 4,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 5,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 6,
+      "outsideScoutRegionChangedPixels": 0,
+      "fullFrameExact": false
+    }
+  ]
+}
