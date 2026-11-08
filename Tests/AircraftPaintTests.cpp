@@ -13,7 +13,7 @@ int main(){
     for(auto name:{"E_Tank32_Body.png","E_Turret_Body_01.png","P_Body_01.png","Turret_mg_05.png","GameUI_MachSlot.png","unknown.png"}){
         auto pixels=samples;md::applyAircraftPaint(name,pixels.data(),pixels.size()/4);assert(pixels==samples);
     }
-    for(auto name:{"ALightBody.png","AHeavyBody.png","ATransportBody.png"}){
+    for(auto name:{"ALightBody.png","AHeavyBody.png","ATransportBody.png","ADuctBody.png"}){
         auto pixels=samples;md::applyAircraftPaint(name,pixels.data(),pixels.size()/4);assert(pixels!=samples);
         for(std::size_t i=0;i<pixels.size();i+=4){
             assert(pixels[i+3]==samples[i+3]);

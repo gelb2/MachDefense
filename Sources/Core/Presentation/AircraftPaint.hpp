@@ -12,6 +12,7 @@ inline constexpr std::array<unsigned,3> aircraftPaintMidpoint(std::string_view i
     if(image.starts_with("ALight")) return {124,130,117}; // muted grey olive
     if(image.starts_with("ATransport")) return {181,181,169}; // warm ivory
     if(image.starts_with("AHeavy")) return {132,141,168}; // neutral grey from warm source
+    if(image.starts_with("ADuct")) return {112,124,166}; // Cheyenne cool steel grey
     return {128,128,128};
 }
 inline constexpr std::uint8_t aircraftPaintChannel(unsigned value,unsigned midpoint) {
