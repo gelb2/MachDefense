@@ -91,3 +91,9 @@ files=[table.path for table in t.values()]+[ROOT/'Resources/RawData/Level10Parts
 manifest={'source_proposal':'docs/research/level10/proposal.json','source_proposal_sha256':hashlib.sha256((ROOT/'docs/research/level10/proposal.json').read_bytes()).hexdigest(),'generator':'tools/apply_level10.py','original_mcb_preserved':True,'files':[{'path':str(p.relative_to(ROOT/'Resources')),'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size} for p in files]}
 (ROOT/'Resources/level10-extension.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print(json.dumps({'new_levels':59,'part_definitions':len(newparts),'machine_definitions':len(newmachines),'tables':list(t)}))
+
+# Aircraft definitions use the same additional QChunk containers. Preserve them
+# when regenerating the pre-existing level extension.
+if (ROOT/"Art/Aircraft/runtime/assembly.json").exists():
+ from prepare_aircraft_definitions import run as prepare_aircraft_definitions
+ prepare_aircraft_definitions()

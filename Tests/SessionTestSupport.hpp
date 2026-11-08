@@ -1,3 +1,4 @@
+#include "PNGTestSize.hpp"
 #pragma once
 #include "Core/Session/GameSession.hpp"
 #include "Core/Simulation/World.hpp"
@@ -15,7 +16,7 @@ struct Resources:ResourceAccess {
         auto path=n.starts_with("Generated/")?std::string(n):"Images/"+std::string(n);
         if(!std::filesystem::exists(root/path))return {};
         auto b=read(path);auto u16=[&](std::size_t i){return unsigned(b.at(i))*256+b.at(i+1);};
-        if(b.size()>24&&b[0]==137){auto u32=[&](int i){return unsigned(b[i])<<24|unsigned(b[i+1])<<16|unsigned(b[i+2])<<8|b[i+3];};return sizes[std::string(n)]={float(u32(16)),float(u32(20))};}
+        if(b.size()>24&&b[0]==137){return sizes[std::string(n)]=mdtest::pngSize(b);}
         for(std::size_t i=2;i+4<b.size();){if(b[i++]!=255)continue;unsigned marker=b[i++];if(marker==0xd9||marker==0xda)break;auto len=u16(i);if(marker==0xc0||marker==0xc1||marker==0xc2)return sizes[std::string(n)]={float(u16(i+5)),float(u16(i+3))};if(len<2)break;i+=len;}
         throw std::runtime_error("Image size: "+std::string(n));
     }

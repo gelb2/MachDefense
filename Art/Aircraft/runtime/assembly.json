@@ -1,0 +1,601 @@
+{
+  "source": "Approved assembly at 26da2db; numeric values preserved, serialized using original QChunk layout",
+  "parts": [
+    {
+      "name": "ALightBody",
+      "type": 0,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          7.21,
+          0.0
+        ],
+        [
+          28.0,
+          0.0
+        ],
+        [
+          3.71,
+          15.6
+        ]
+      ]
+    },
+    {
+      "name": "ALightRotor",
+      "type": 7,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "ALightGun",
+      "type": 4,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          7.0,
+          1.0
+        ],
+        [
+          7.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "name": "ALightMissile",
+      "type": 4,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          6.5,
+          1.0
+        ],
+        [
+          6.5,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "name": "AHeavyBody",
+      "type": 0,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -10.0,
+          10.0
+        ],
+        [
+          -10.0,
+          -10.0
+        ],
+        [
+          8.0,
+          10.0
+        ],
+        [
+          5.0,
+          -34.0
+        ],
+        [
+          36.0,
+          0.0
+        ],
+        [
+          5.0,
+          34.0
+        ],
+        [
+          26.0,
+          -18.0
+        ]
+      ]
+    },
+    {
+      "name": "AHeavyRotor",
+      "type": 7,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "AHeavyGun",
+      "type": 4,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          12.0,
+          2.0
+        ],
+        [
+          12.0,
+          -2.0
+        ]
+      ]
+    },
+    {
+      "name": "AHeavyMissile",
+      "type": 4,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          8.0,
+          2.0
+        ],
+        [
+          8.0,
+          -2.0
+        ]
+      ]
+    },
+    {
+      "name": "AHeavyCannon",
+      "type": 4,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          9.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "AHeavyRocket",
+      "type": 4,
+      "tileCount": 0,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          12.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "AHeavyAirStrike",
+      "type": 4,
+      "tileCount": 0,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "ADuctBody",
+      "type": 0,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          11.0,
+          28.6
+        ],
+        [
+          11.0,
+          -28.6
+        ],
+        [
+          54.0,
+          0.0
+        ],
+        [
+          -13.0,
+          19.0
+        ],
+        [
+          -13.0,
+          -19.0
+        ]
+      ]
+    },
+    {
+      "name": "ADuctFan",
+      "type": 7,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "ADuctGun",
+      "type": 0,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          9.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "ADuctMissile",
+      "type": 4,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          9.0,
+          1.0
+        ],
+        [
+          9.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "name": "ATransportBody",
+      "type": 0,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          8.0,
+          32.0
+        ],
+        [
+          8.0,
+          -32.0
+        ],
+        [
+          -2.0,
+          47.0
+        ],
+        [
+          -2.0,
+          -47.0
+        ]
+      ]
+    },
+    {
+      "name": "ATransportFan",
+      "type": 7,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "ATransportWingL",
+      "type": 0,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "ATransportWingR",
+      "type": 0,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "ATransportEngine",
+      "type": 0,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "name": "ATransportGun",
+      "type": 4,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          1.0
+        ],
+        [
+          10.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "name": "ATransportMissile",
+      "type": 4,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          1.0
+        ],
+        [
+          10.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "name": "ADuctMissileR",
+      "type": 4,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          9.0,
+          1.0
+        ],
+        [
+          9.0,
+          -1.0
+        ]
+      ],
+      "imageSource": "ADuctMissile"
+    }
+  ],
+  "machines": [
+    {
+      "name": "AircraftLight",
+      "parts": [
+        {
+          "name": "ALightBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ALightGun",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightMissile",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ALightRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftHeavy",
+      "parts": [
+        {
+          "name": "AHeavyBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "AHeavyGun",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyMissile",
+              "parentSocket": 4,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyCannon",
+              "parentSocket": 5,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRocket",
+              "parentSocket": 6,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyAirStrike",
+              "parentSocket": 7,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 2,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftDuct",
+      "parts": [
+        {
+          "name": "ADuctBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ADuctFan",
+              "parentSocket": 1,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctGun",
+              "parentSocket": 3,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissile",
+              "parentSocket": 4,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissileR",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftTransport",
+      "parts": [
+        {
+          "name": "ATransportBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ATransportFan",
+              "parentSocket": 1,
+              "zOrder": 4,
+              "children": []
+            },
+            {
+              "name": "ATransportGun",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportGun",
+              "parentSocket": 6,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile",
+              "parentSocket": 7,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile",
+              "parentSocket": 8,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

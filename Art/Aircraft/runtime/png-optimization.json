@@ -1,0 +1,412 @@
+{
+  "tool": "Apple pngcrush -iphone -f 0",
+  "scope": "Helicopter-only build preparation; original images and renderer unchanged",
+  "textures": [
+    {
+      "image": "ADuctBody.png",
+      "sourceSHA256": "6a30422b8880203bbebb4b9611f0478f7fdd084c4e50918818f6194b882da944",
+      "outputSHA256": "77765d79fd6014eea89e12b341c7ecf43582d95befb0d6c64674b703ea8edc99",
+      "size": [
+        110,
+        88
+      ],
+      "inputBytes": 17098,
+      "outputBytes": 14942,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ADuctBodyBankL.png",
+      "sourceSHA256": "e55a2ac1d44fd59cb4d83ce0274b3e2f2ac5a7d3112b1f0fa8a670dc7ed39a84",
+      "outputSHA256": "c5140e726bf033ad27630e72f7fc6854148d5686b165b53c408ebb444f2a194c",
+      "size": [
+        65,
+        62
+      ],
+      "inputBytes": 8323,
+      "outputBytes": 8008,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ADuctBodyBankR.png",
+      "sourceSHA256": "9a9f4dd2d68f69567bba54da9f5087dc80a99ca5cb8368bda88111c5272d40b9",
+      "outputSHA256": "1d377b535bf30955522fa2c39aaab2d53f175bc1bf6967a9e0750358da6eeddf",
+      "size": [
+        65,
+        62
+      ],
+      "inputBytes": 8341,
+      "outputBytes": 8001,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ADuctFan.png",
+      "sourceSHA256": "efa174f55a2192975f48efbb9cbbf44927b24ce4037f103f85f166f965eb1f3c",
+      "outputSHA256": "7d27159d1c310f29bd377b75a9288318affcfae1c3213b6d0d2e472188d8e551",
+      "size": [
+        24,
+        24
+      ],
+      "inputBytes": 2083,
+      "outputBytes": 1827,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ADuctGun.png",
+      "sourceSHA256": "35e556d49dda882335c0c18e622da8e0bbf1c46fe61eb9953311562c97d8fac1",
+      "outputSHA256": "7d9bee093f414a82f498b028e62a5cdc08f7a3705b128f39db41c38f7c24dd53",
+      "size": [
+        18,
+        7
+      ],
+      "inputBytes": 539,
+      "outputBytes": 462,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ADuctMissile.png",
+      "sourceSHA256": "8c2895c24ab3c8c06444bae2db9e8c713479a809c2a8ba56a8fde960177d6643",
+      "outputSHA256": "3820ef8b43aa43d085bedc5073e0a9bdfd83a99c782f6fb62de44ee3e052fffd",
+      "size": [
+        18,
+        13
+      ],
+      "inputBytes": 865,
+      "outputBytes": 936,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ADuctMissileR.png",
+      "sourceSHA256": "8c2895c24ab3c8c06444bae2db9e8c713479a809c2a8ba56a8fde960177d6643",
+      "outputSHA256": "3820ef8b43aa43d085bedc5073e0a9bdfd83a99c782f6fb62de44ee3e052fffd",
+      "size": [
+        18,
+        13
+      ],
+      "inputBytes": 865,
+      "outputBytes": 936,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "AHeavyBody.png",
+      "sourceSHA256": "b8d01435bc63725f91498b83b78132a6c175bde40663e04afbe63fdbe67efdb1",
+      "outputSHA256": "a26f14826ec58ed1a2952cc3e8e54ccbadda0ce18e12cde2b6bf4d315530552d",
+      "size": [
+        76,
+        112
+      ],
+      "inputBytes": 16678,
+      "outputBytes": 16358,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "AHeavyBodyBankL.png",
+      "sourceSHA256": "a2b38f2ad3c320d0e95208ef2b48e127765ec880cb50c7b3915489f56d8e6a47",
+      "outputSHA256": "cc831ad36449bb3ad01807eb6360ecbfe1599c86cb4785dc2af95d07487657be",
+      "size": [
+        108,
+        154
+      ],
+      "inputBytes": 29335,
+      "outputBytes": 32668,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "AHeavyBodyBankR.png",
+      "sourceSHA256": "07608b629752dbc0eeb795bade01a7e3ddc1c467b86715388cd64c4a151b408b",
+      "outputSHA256": "8b8f15256a6d9d800fe2f530b30a5e3ffcd97162d2e9c0bab36a51e14816195c",
+      "size": [
+        108,
+        154
+      ],
+      "inputBytes": 28968,
+      "outputBytes": 32623,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "AHeavyCannon.png",
+      "sourceSHA256": "c7c9d49d206d1bee66e2c776c3e69c8f808081c93563584bd52c4e7f5c572c83",
+      "outputSHA256": "01a59447875d67daae1b7aede450d6c7f1ecffee67127c7c494ff061ade0b6da",
+      "size": [
+        18,
+        10
+      ],
+      "inputBytes": 659,
+      "outputBytes": 639,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "AHeavyGun.png",
+      "sourceSHA256": "79cbbef8d6dc6327e6fb3f05e95c020f35e0edc817136c45a7435f9f9f34d8c6",
+      "outputSHA256": "e881d01f4fc9870fe692b3076d07a7773798c4ce85edda42d3ddf7f9c119770e",
+      "size": [
+        25,
+        10
+      ],
+      "inputBytes": 910,
+      "outputBytes": 829,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "AHeavyMissile.png",
+      "sourceSHA256": "850a332ffa7beabb0a2b7b61c47703c3467959cd157d5df15568f22288e5834a",
+      "outputSHA256": "4199a072ece32db503cfb1e36f167be86b20e1b11c7b232293d0088adc795d3d",
+      "size": [
+        16,
+        12
+      ],
+      "inputBytes": 691,
+      "outputBytes": 727,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "AHeavyRotor.png",
+      "sourceSHA256": "061cbbd13d9e7af0a67761dc317fe9e2360add534eaa4ef208b5d84620265055",
+      "outputSHA256": "d049e683583bd48886d3a034c6822c58080b3915c9ea7df167cab3c9d1d13c25",
+      "size": [
+        88,
+        88
+      ],
+      "inputBytes": 5620,
+      "outputBytes": 2960,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ALightBody.png",
+      "sourceSHA256": "4a11f4410fc41474b15e590cfdf18dfbee6bd5dacdb3b8f769875e283fca502c",
+      "outputSHA256": "4337939c25a3fbd130ff84089f3b91910d849663d254c1a738bad3338ea5b1db",
+      "size": [
+        62,
+        39
+      ],
+      "inputBytes": 6287,
+      "outputBytes": 3755,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ALightBodyBankL.png",
+      "sourceSHA256": "c335668f58b608743ddd76ceb18060682d3aa49358dcfc6f68dc853f7da18de9",
+      "outputSHA256": "9eb749b28031f7acec3313422414c78ee1a2b49c21ebca1b0c1de6000ebea97d",
+      "size": [
+        82,
+        35
+      ],
+      "inputBytes": 6882,
+      "outputBytes": 5333,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ALightBodyBankR.png",
+      "sourceSHA256": "82567a02f68d0c6f93cfb6fdb6d012e7bd1f35922313b6efcaf0da1ff12ad768",
+      "outputSHA256": "0a9a2d342985bce4b86d388c0047a2dc370f1d745d6c19e13206047d4d0dacd1",
+      "size": [
+        82,
+        35
+      ],
+      "inputBytes": 6941,
+      "outputBytes": 5366,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ALightGun.png",
+      "sourceSHA256": "327840749a0cc303e3f3be02ec11a5d746801b115094c7161bda22f93b7e248f",
+      "outputSHA256": "a2ecf277cccf9d67d4d9dce5cc7ad68d9a68f1bf216f5cd9823b84790b164c65",
+      "size": [
+        14,
+        7
+      ],
+      "inputBytes": 442,
+      "outputBytes": 368,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ALightMissile.png",
+      "sourceSHA256": "ac1988f4313083c4532d73b92c0e483de2bac6cf8f65f8d800f2e6ad24d09933",
+      "outputSHA256": "f900f0f1c5f299eef82a7fae9ffb4c97d74bbeba042b8b0b7f1473960415fa20",
+      "size": [
+        13,
+        8
+      ],
+      "inputBytes": 455,
+      "outputBytes": 457,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ALightRotor.png",
+      "sourceSHA256": "d26175975e6f8b217bcdb71c5f7d53f1186ea2e6044780823950aa1d771f54bf",
+      "outputSHA256": "a4ee0d905afb2607f72ef96b4a4518101647dd30c09b36e1de64fc3ec3efa405",
+      "size": [
+        59,
+        59
+      ],
+      "inputBytes": 9191,
+      "outputBytes": 3300,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ATransportBody.png",
+      "sourceSHA256": "7d3a2604798605783b1b6cdc76419f152deb23d4be4e6f49ba2c2e8c65f2fe79",
+      "outputSHA256": "e743a56f5f491e11e537bae277c3ed83bdabe7a86423b2498b3ec90a0d28f010",
+      "size": [
+        140,
+        131
+      ],
+      "inputBytes": 26588,
+      "outputBytes": 20492,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ATransportBodyBankL.png",
+      "sourceSHA256": "290817428de955eb650fc516e9ab38c574de3d471fa498209547d5f274d028b0",
+      "outputSHA256": "f412caaa01fd412e95a06f5f846c4cb04e454d32565e910f70088f7af1692170",
+      "size": [
+        72,
+        71
+      ],
+      "inputBytes": 10733,
+      "outputBytes": 10050,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ATransportBodyBankR.png",
+      "sourceSHA256": "dd7812de258f0a21b92bd2a28773dd050f450edfb87c82d7a4216b2e3cbe854c",
+      "outputSHA256": "a258ab5c2c3b5b7e8be0034c7f4f6a820658d1af94cda6303824892cc3936ec6",
+      "size": [
+        72,
+        71
+      ],
+      "inputBytes": 10799,
+      "outputBytes": 10006,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ATransportEngine.png",
+      "sourceSHA256": "56f6411bc769abb1b215c7f12903c085ea89b20d812a06a3f5d8ae933c209933",
+      "outputSHA256": "8d4f06772fd6477b612c151d104282d8bc387aa141fb4e8c920233fb7c000f9b",
+      "size": [
+        50,
+        29
+      ],
+      "inputBytes": 4479,
+      "outputBytes": 4298,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ATransportFan.png",
+      "sourceSHA256": "2144e966c4dfd9de063dd669e1b55eb335aaa949b27ab4afd69e878392fda0e2",
+      "outputSHA256": "d3da6d1eb4ee4a91e4fec53bbbfd6fca2e073fce950d8f98199f6a75ba244b65",
+      "size": [
+        80,
+        80
+      ],
+      "inputBytes": 10764,
+      "outputBytes": 5463,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ATransportGun.png",
+      "sourceSHA256": "766b02b9882933a7a5653ecd0038bb71e45b80e3cf93de016e64f04d5ea57dfd",
+      "outputSHA256": "bd5aeafceadf08195e59b62c8cc1ecc9666f3520fef341c508a1be6afd164a8b",
+      "size": [
+        21,
+        11
+      ],
+      "inputBytes": 757,
+      "outputBytes": 633,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ATransportMissile.png",
+      "sourceSHA256": "c0b338dea164899ada6f9e8f08fccd51023138e9079037b3d442ac33af719425",
+      "outputSHA256": "6e12e1c522ffc13cc3e5dabe0e3f58c83a1e8ece0f9a0ce43933c854f161cf24",
+      "size": [
+        21,
+        13
+      ],
+      "inputBytes": 944,
+      "outputBytes": 718,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ATransportWingL.png",
+      "sourceSHA256": "eff79f7e4c940a718bfbb7578a1b66405e7f19437bf8832a21d546972e7d6f75",
+      "outputSHA256": "9728aff89208cc375bde3577bc6d1a94b70c0d53c1f8ff9116d840002209c0f7",
+      "size": [
+        31,
+        49
+      ],
+      "inputBytes": 4261,
+      "outputBytes": 3651,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    },
+    {
+      "image": "ATransportWingR.png",
+      "sourceSHA256": "bfa5dc1f2659107303b9e92e3952a04f196ebf7c9a0b14025079781a5d2493f6",
+      "outputSHA256": "1cc22db847b91b057c049973304aaf12a82ca07866ddcaf5beef632609a300e8",
+      "size": [
+        31,
+        49
+      ],
+      "inputBytes": 4225,
+      "outputBytes": 3639,
+      "cgbi": true,
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true
+    }
+  ]
+}

@@ -31,5 +31,21 @@ with tempfile.TemporaryDirectory(prefix='machdefense-paint-') as td:
   subprocess.run(['magick',str(td/'paint.pam'),'-strip','PNG32:'+str(target)],check=True)
   rows.append({'image':p.name,'source_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'output_sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
 assert len(rows)==28
-(source.parent/'manifest.json').write_text(json.dumps({'source_commit':'5eefc3e','transform':'prepareAircraftPaint; approved palette and markings unchanged','textures':rows},indent=2)+'\n')
+
 print('Baked 28 helicopter textures from preserved sources.')
+
+# Preserve the approved painted pixels, then use the original iOS PNG optimizer.
+import shutil
+from prepare_aircraft_definitions import run as prepare_aircraft_definitions
+from optimize_aircraft_png import run as optimize_aircraft_png
+prepare_aircraft_definitions()
+prepared=root/'Art/Aircraft/runtime/png-source';prepared.mkdir(exist_ok=True)
+for p in output.glob('*.png'):
+ if p.name.startswith(('ALight','AHeavy','ADuct','ATransport')):
+  shutil.copy2(p,prepared/p.name)
+optimize_aircraft_png()
+
+for row in rows:
+ row['painted_source_sha256']=row['output_sha256']
+ row['output_sha256']=hashlib.sha256((output/row['image']).read_bytes()).hexdigest()
+(source.parent/'manifest.json').write_text(json.dumps({'source_commit':'5eefc3e','transform':'prepareAircraftPaint then Apple pngcrush -iphone -f 0; alpha and opaque RGB verified','painted_source_directory':'Art/Aircraft/runtime/png-source','textures':rows},indent=2)+'\n')

@@ -1,3 +1,4 @@
+#include "PNGTestSize.hpp"
 #include "Core/Presentation/Menu.hpp"
 #include <algorithm>
 #include <cassert>
@@ -22,8 +23,8 @@ struct Resources:ResourceAccess {
         auto b=read("Images/"+std::string(n));
         if(n.ends_with(".jpg"))return sizes[std::string(n)]={640,960}; // These menu tests use the two 640x960 JPEGs.
         if(b.size()<24||b[0]!=137||b[1]!='P')throw std::runtime_error("Invalid menu PNG");
-        auto u32=[&](int at){return std::uint32_t(b[at])<<24|std::uint32_t(b[at+1])<<16|std::uint32_t(b[at+2])<<8|b[at+3];};
-        return sizes[std::string(n)]={float(u32(16)),float(u32(20))};
+
+        return sizes[std::string(n)]=mdtest::pngSize(b);
     }
 };
 struct Host:HostServices{

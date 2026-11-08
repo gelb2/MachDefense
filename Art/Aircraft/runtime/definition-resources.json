@@ -1,0 +1,22 @@
+{
+  "source": "Art/Aircraft/runtime/assembly.json",
+  "sourceSHA256": "7ecc6cbaf9203409bf105f4517d10f997a287d382807206f0be4227bc4fec5bf",
+  "parts": 23,
+  "machines": 4,
+  "containers": [
+    {
+      "path": "Resources/RawData/Level10Parts.mcb",
+      "retainedNodes": 44,
+      "retainedNodeSHA256": "3fefe3b71a62b0e4202991ed60c6e07720a89f5cc6d6046f62a715c41d498ab2",
+      "addedNodes": 23,
+      "sha256": "043234c1f595104b63caf0c75901db5d07620bbc43dcf69db29fd377ce1787d1"
+    },
+    {
+      "path": "Resources/RawData/Level10Machines.mcb",
+      "retainedNodes": 33,
+      "retainedNodeSHA256": "7e8c94c527093ea53716892f3dc4643e35013f3942c75296fc1c4ee54902fee5",
+      "addedNodes": 4,
+      "sha256": "c36b0baccd2ef4c5f9cf68d5f22069de48c530783ddd1302acc5da008cefc4e9"
+    }
+  ]
+}

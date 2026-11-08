@@ -1,3 +1,4 @@
+#include "../Tests/PNGTestSize.hpp"
 #include "Core/Simulation/Battle.hpp"
 #include <cassert>
 #include <cmath>
@@ -25,8 +26,8 @@ int main(int argc,char** argv) {
         if(!std::filesystem::exists(resourceRoot/"Images"/name)) return md::Vec2{};
         auto bytes=read(resourceRoot/"Images"/name);
         assert(bytes.size()>=24);
-        auto be=[&](unsigned offset) { return std::uint32_t(bytes[offset])<<24 | std::uint32_t(bytes[offset+1])<<16 | std::uint32_t(bytes[offset+2])<<8 | bytes[offset+3]; };
-        return md::Vec2{float(be(16)),float(be(20))};
+
+        return mdtest::pngSize(bytes);
     };
     std::cout<<"["; bool first=true;
     for(const char* name:{"E_Tank_01","E_Tank_07","E_Tank_32"}) {
