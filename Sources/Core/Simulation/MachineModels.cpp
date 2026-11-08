@@ -56,10 +56,6 @@ BattleModels BattleModels::load(ResourceAccess& r) {
     auto table=[&](const char* name){auto bytes=r.read(std::string("Tables/")+name+".tsv");return DataTable::parse({reinterpret_cast<const char*>(bytes.data()),bytes.size()});};
     result.configureTiles(table("PartsList"),table("TileList"));
     appendAircraftModels(result);
-    for(const char* name:{"AircraftLight","AircraftHeavy","AircraftDuct","AircraftTransport"})for(unsigned level=1;level<=10;++level){
-        char suffix[8];std::snprintf(suffix,sizeof suffix,"_%02u",level);
-        result.appendMachineVariant(std::string(name)+suffix,name,suffix);
-    }
     return result;
 }
 void BattleModels::appendPartAlias(std::string name,std::string_view source,unsigned type){

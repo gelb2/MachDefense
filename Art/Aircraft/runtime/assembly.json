@@ -601,5 +601,207 @@
         }
       ]
     }
+  ],
+  "levelVariants": [
+    {
+      "name": "AircraftLight_01",
+      "source": "AircraftLight",
+      "weaponSuffix": "_01"
+    },
+    {
+      "name": "AircraftLight_02",
+      "source": "AircraftLight",
+      "weaponSuffix": "_02"
+    },
+    {
+      "name": "AircraftLight_03",
+      "source": "AircraftLight",
+      "weaponSuffix": "_03"
+    },
+    {
+      "name": "AircraftLight_04",
+      "source": "AircraftLight",
+      "weaponSuffix": "_04"
+    },
+    {
+      "name": "AircraftLight_05",
+      "source": "AircraftLight",
+      "weaponSuffix": "_05"
+    },
+    {
+      "name": "AircraftLight_06",
+      "source": "AircraftLight",
+      "weaponSuffix": "_06"
+    },
+    {
+      "name": "AircraftLight_07",
+      "source": "AircraftLight",
+      "weaponSuffix": "_07"
+    },
+    {
+      "name": "AircraftLight_08",
+      "source": "AircraftLight",
+      "weaponSuffix": "_08"
+    },
+    {
+      "name": "AircraftLight_09",
+      "source": "AircraftLight",
+      "weaponSuffix": "_09"
+    },
+    {
+      "name": "AircraftLight_10",
+      "source": "AircraftLight",
+      "weaponSuffix": "_10"
+    },
+    {
+      "name": "AircraftHeavy_01",
+      "source": "AircraftHeavy",
+      "weaponSuffix": "_01"
+    },
+    {
+      "name": "AircraftHeavy_02",
+      "source": "AircraftHeavy",
+      "weaponSuffix": "_02"
+    },
+    {
+      "name": "AircraftHeavy_03",
+      "source": "AircraftHeavy",
+      "weaponSuffix": "_03"
+    },
+    {
+      "name": "AircraftHeavy_04",
+      "source": "AircraftHeavy",
+      "weaponSuffix": "_04"
+    },
+    {
+      "name": "AircraftHeavy_05",
+      "source": "AircraftHeavy",
+      "weaponSuffix": "_05"
+    },
+    {
+      "name": "AircraftHeavy_06",
+      "source": "AircraftHeavy",
+      "weaponSuffix": "_06"
+    },
+    {
+      "name": "AircraftHeavy_07",
+      "source": "AircraftHeavy",
+      "weaponSuffix": "_07"
+    },
+    {
+      "name": "AircraftHeavy_08",
+      "source": "AircraftHeavy",
+      "weaponSuffix": "_08"
+    },
+    {
+      "name": "AircraftHeavy_09",
+      "source": "AircraftHeavy",
+      "weaponSuffix": "_09"
+    },
+    {
+      "name": "AircraftHeavy_10",
+      "source": "AircraftHeavy",
+      "weaponSuffix": "_10"
+    },
+    {
+      "name": "AircraftDuct_01",
+      "source": "AircraftDuct",
+      "weaponSuffix": "_01"
+    },
+    {
+      "name": "AircraftDuct_02",
+      "source": "AircraftDuct",
+      "weaponSuffix": "_02"
+    },
+    {
+      "name": "AircraftDuct_03",
+      "source": "AircraftDuct",
+      "weaponSuffix": "_03"
+    },
+    {
+      "name": "AircraftDuct_04",
+      "source": "AircraftDuct",
+      "weaponSuffix": "_04"
+    },
+    {
+      "name": "AircraftDuct_05",
+      "source": "AircraftDuct",
+      "weaponSuffix": "_05"
+    },
+    {
+      "name": "AircraftDuct_06",
+      "source": "AircraftDuct",
+      "weaponSuffix": "_06"
+    },
+    {
+      "name": "AircraftDuct_07",
+      "source": "AircraftDuct",
+      "weaponSuffix": "_07"
+    },
+    {
+      "name": "AircraftDuct_08",
+      "source": "AircraftDuct",
+      "weaponSuffix": "_08"
+    },
+    {
+      "name": "AircraftDuct_09",
+      "source": "AircraftDuct",
+      "weaponSuffix": "_09"
+    },
+    {
+      "name": "AircraftDuct_10",
+      "source": "AircraftDuct",
+      "weaponSuffix": "_10"
+    },
+    {
+      "name": "AircraftTransport_01",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_01"
+    },
+    {
+      "name": "AircraftTransport_02",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_02"
+    },
+    {
+      "name": "AircraftTransport_03",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_03"
+    },
+    {
+      "name": "AircraftTransport_04",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_04"
+    },
+    {
+      "name": "AircraftTransport_05",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_05"
+    },
+    {
+      "name": "AircraftTransport_06",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_06"
+    },
+    {
+      "name": "AircraftTransport_07",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_07"
+    },
+    {
+      "name": "AircraftTransport_08",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_08"
+    },
+    {
+      "name": "AircraftTransport_09",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_09"
+    },
+    {
+      "name": "AircraftTransport_10",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_10"
+    }
   ]
 }

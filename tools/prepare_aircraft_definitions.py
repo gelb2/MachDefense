@@ -5,7 +5,7 @@ The existing loader reads the Level10 extension containers. Append aircraft node
 there at build preparation time, without editing shared/original loader sources.
 Standalone aircraft MCB files retain the exact authored aircraft definitions.
 """
-import hashlib,json,struct
+import copy,hashlib,json,struct
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 PREFIXES=('ALight','AHeavy','ADuct','ATransport','Aircraft')
@@ -23,14 +23,45 @@ def decode(blob,pos=0):
 def node_name(n):return n['data'][:24].split(b'\0')[0].decode('ascii') if n['data'] else ''
 def run():
  src=ROOT/'Art/Aircraft/runtime/assembly.json';spec=json.loads(src.read_text());parts=[]
- for p in spec['parts']:
+ baseparts={p['name']:p for p in spec['parts']}
+ basemachines={m['name']:m for m in spec['machines']}
+ authored_parts=list(spec['parts']);authored_machines=list(spec['machines']);aliases={}
+ for variant in spec['levelVariants']:
+  machine=copy.deepcopy(basemachines[variant['source']]);machine['name']=variant['name']
+  def visit(nodes):
+   for node in nodes:
+    source=baseparts[node['name']]
+    if source['type']==4:
+     alias=source['name']+variant['weaponSuffix'];node['name']=alias
+     if alias not in aliases:
+      p=copy.deepcopy(source);p['name']=alias;p.pop('imageSource',None)
+      authored_parts.append(p);aliases[alias]=source
+    visit(node['children'])
+  visit(machine['parts']);authored_machines.append(machine)
+ # Existing table aliases select the original image without copying pixels.
+ # Keep all pre-existing rows byte-identical, including original unit aliases.
+ marker=b'// Aircraft persisted level aliases 2026-11-09'
+ table_rows={'PartsList':[],'TileList':[]};tile_names=set()
+ for alias,source in aliases.items():
+  if not source['tileCount']:continue
+  table_rows['PartsList'].append(f"{alias}\tWPON\t0\t{source['name']}\n".encode())
+  image=source['name']+'.png'
+  if image not in tile_names:
+   table_rows['TileList'].append(f"{image}\t{source['tileCount']}\t1\n".encode());tile_names.add(image)
+ for table,rows in table_rows.items():
+  path=ROOT/'Resources/Tables'/(table+'.tsv');before=path.read_bytes().split(marker)[0]
+  existing={line.split(b'\t')[0].strip() for line in before.splitlines() if line and not line.startswith(b'//')}
+  additions=[row for row in rows if row.split(b'\t')[0] not in existing]
+  separator=b'' if before.endswith(b'\n') else b'\n'
+  path.write_bytes(before+separator+marker+b'\n'+b''.join(additions))
+ for p in authored_parts:
   sockets=b''.join(struct.pack('<ff',*xy) for xy in p['sockets'])
   parts.append(encode(1,named(p['name'])+bytes([p['type'],p['tileCount'],len(p['sockets'])])+sockets))
   if p.get('imageSource'):
    original=ROOT/'Resources/Images'/(p['imageSource']+'.png');dest=ROOT/'Resources/Images'/(p['name']+'.png');dest.write_bytes(original.read_bytes())
  def part(p):return encode(4,named(p['name'])+bytes([p['parentSocket'],p['zOrder']]),[part(c) for c in p['children']])
- machines=[encode(3,named(m['name']),[part(p) for p in m['parts']]) for m in spec['machines']]
- report={'source':str(src.relative_to(ROOT)),'sourceSHA256':hashlib.sha256(src.read_bytes()).hexdigest(),'parts':len(parts),'machines':len(machines),'containers':[]}
+ machines=[encode(3,named(m['name']),[part(p) for p in m['parts']]) for m in authored_machines]
+ report={'source':str(src.relative_to(ROOT)),'sourceSHA256':hashlib.sha256(src.read_bytes()).hexdigest(),'parts':len(parts),'machines':len(machines),'persistedLevelVariants':len(spec['levelVariants']),'runtimeVariantGeneration':False,'visualLevelVariationImplemented':False,'containers':[]}
  for name,kind,additions in [('Parts',0,parts),('Machines',2,machines)]:
   standalone=ROOT/'Resources/RawData'/('Aircraft'+name+'.mcb');standalone.write_bytes(encode(kind,children=additions))
   path=ROOT/'Resources/RawData'/('Level10'+name+'.mcb');tree,end=decode(path.read_bytes());assert end==path.stat().st_size
