@@ -85,4 +85,8 @@ void World::validationAircraftDodgeComparison(){
     addNamed("AircraftHeavy_10",{0,-200*scale},true);
 }
 
+void World::validationCountermeasureBurst(){
+    for(const auto& a:actors_)if(a->flightTactics&&a->hp>0&&!a->removed)countermeasures_->emit(float(time()),a->position,a->angle,a->countermeasureWidth);
+}
+
 }

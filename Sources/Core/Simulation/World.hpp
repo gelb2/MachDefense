@@ -74,6 +74,7 @@ public:
     void validationAircraftComparison();
     void validationAlliedAircraftComparison();
     void validationAircraftDodgeComparison();
+    void validationCountermeasureBurst();
     ActorId validationAlliedAircraft(unsigned kind,Vec2 position);
     bool activateSpecial(std::string_view ownedBaseName,Vec2 worldPoint);
     void setUIMargin(float);

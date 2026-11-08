@@ -29,3 +29,15 @@ AH-10의 로켓과 공습 미사일은 기체 그림에 포함된 발사대의 �
 ## 공통 발사 효과 확인
 
 Lv.1·10의 실제 장착 무장 26개를 하나씩 분리해 World에서 발사했다. 기존 Efx_Fire 총구 효과, 기관총/HMG/발칸의 BulletShell, 주퇴, 무장별 피격·폭발, 미사일의 Efx_Trail01, 원작 발사음 호출을 확인했다. 미사일·로켓·캐논에는 원작 정의에 없는 기관총 탄피를 추가하지 않았다. 회피 중 기관총 탄피 배출점에도 기체와 같은 기울임 변환을 적용했다. 원작 유닛의 좌표 처리는 유지한다. [효과·회귀 검사 15개](../evidence/aircraft-implementation-20261109/fire-effects-tests.txt)가 통과했다.
+
+## 웹 치트 확인
+
+로컬 웹 치트빌드에서 Lv.1·10의 4종을 실제 생산용 모델·무장 정의로 불러 전투를 실행했다. 네 기체의 피해 발생과 발사음, 실제 회피의 플레어 발동을 확인했다. 검수 장면도 게임의 prepareDraw를 거쳐 미사일 궤적을 표시하고 기존 오디오 재생기에 발사음을 전달하도록 고쳤다.
+
+Chrome에서 화면 안에 고정한 40기·100기 각각의 효과 표시 전후를 600프레임씩 비교했다. 네 조건 모두 p99 약 16.8ms, 25ms 초과 0회였다. 준비 이후 추가 텍스처 업로드 0회, WASM 메모리 128MiB 유지, 저장 호출 0회, 오디오 컨텍스트 추가 생성·종료 0회를 확인했다. [측정 원본과 전투 결과](../evidence/aircraft-implementation-20261109/web-chrome/result.json). 첫 측정은 기체가 화면 밖으로 이동해 렌더 성능 근거에서 제외했다.
+
+[Lv.1](../evidence/aircraft-implementation-20261109/web-chrome/level-1.png) · [Lv.10](../evidence/aircraft-implementation-20261109/web-chrome/level-10.png) · [실제 회피](../evidence/aircraft-implementation-20261109/web-chrome/dodge-flare.png) · [40기](../evidence/aircraft-implementation-20261109/web-chrome/stress-40.png) · [100기](../evidence/aircraft-implementation-20261109/web-chrome/stress-100.png)
+
+이 결과는 로컬 데스크톱 웹 치트 검사다. iOS·Android·Tauri 실기기 성능과 운영 배포를 완료했다는 뜻은 아니다.
+
+WebKit의 같은 4조건에서는 p99 19–20ms, 25ms 초과 0회였다. 추가 업로드 0회·WASM 메모리 128MiB·저장 0회·오디오 컨텍스트 수 유지도 확인했다. [WebKit 측정 원본](../evidence/aircraft-implementation-20261109/web-webkit/result.json). Playwright의 데스크톱 WebKit 검사이며 iPhone Safari 실기기 측정을 대신하지 않는다.

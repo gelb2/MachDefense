@@ -89,7 +89,10 @@ EMSCRIPTEN_KEEPALIVE const char* md_aircraft_scene(int command,int mode){
 #if MD_WEB_CHEAT
  try {
   if(command==8){renderer.draw(validation::aircraftVisualFrame(assets,unsigned(mode)),pw,ph);status="visual comparison at uniform 2x";return status.c_str();}
+  if(command==20||command==21){aircraftScene=std::make_unique<validation::AircraftComparisonScene>(assets,3);aircraftScene->production(command==20?unsigned(mode):10,command==20?4:unsigned(std::clamp(mode,1,100)),command==20);}
   if(command==0||!aircraftScene)aircraftScene=std::make_unique<validation::AircraftComparisonScene>(assets,unsigned(mode));
+  aircraftScene->host.audio=[](std::string_view name,float gain,float pan){effects.play(name,gain,pan);};
+  if(command==22)aircraftScene->world->validationCountermeasureBurst();
   if(command==1)aircraftScene->world->tick();
   if(command==2)aircraftScene->world->setPaused(true);
   if(command==3)aircraftScene->world->setPaused(false);
