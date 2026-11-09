@@ -1,5 +1,7 @@
 #include "Core/Presentation/UpgradeDialog.hpp"
 #include <cassert>
+#include <algorithm>
+#include <cmath>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -46,5 +48,45 @@ int main(int argc,char** argv){
  state.selectedAttack=999;d.setState(state);f={};d.append(f);validate(f,r);
  assert(!d.touch({91,TouchPhase::began,{292,52}}));assert(!d.touch({91,TouchPhase::ended,{292,52}}));
  assert(!d.touch({92,TouchPhase::began,{161,443}}));assert(d.touch({93,TouchPhase::began,{150,330}}));
+ // Full catalog: preserve 64px cards, grow on tall screens, otherwise scroll
+ // only the clipped list. Detail/action buttons never move during scrolling.
+ UpgradeDialog catalog(r);UpgradeDialogState all;all.kind=UpgradeDialogState::Kind::units;
+ for(unsigned i=0;i<18;++i){auto entry=u;entry.name="Unit"+std::to_string(i);all.units.push_back(entry);}all.selectedUnit=0;
+ auto find=[](const Frame& frame,std::string_view name)->const Sprite&{auto it=std::find_if(frame.sprites.begin(),frame.sprites.end(),[&](const auto& sprite){return sprite.image==name;});assert(it!=frame.sprites.end());return *it;};
+ auto cardCount=[](const Frame& frame){return std::count_if(frame.sprites.begin(),frame.sprites.end(),[](const auto& sprite){return sprite.image=="Btn_MachBuild.png"&&sprite.sourcePx->x==0;});};
+ for(const auto size:std::array<Vec2,4>{{{320,480},{390,844},{844,390},{320,568}}}){
+  FrameLayout layout;layout.resize(size.x,size.y);catalog.setLayout(layout);catalog.setState(all);
+  Frame before;catalog.append(before);validate(before,r);
+  const auto first=find(before,"Btn_MachBuild.png");assert(first.clip&&first.destination.width==64&&first.destination.height==64);
+  const auto clip=*first.clip;const bool tall=layout.height-layout.top-layout.bottom>=562;
+  assert(cardCount(before)==(tall?18:15));assert(clip.height==(tall?250:168));
+  const auto detail=find(before,"UpgradeMachBG.png").destination;
+  assert(std::abs(detail.y-(clip.y+clip.height+7.5f))<.001f);
+  for(const auto& sprite:before.sprites)if(sprite.clip){assert(sprite.clip->y==clip.y&&sprite.clip->height==clip.height);}
+  assert(!catalog.scrollUnits({198,detail.y+83},500));
+  assert(catalog.scrollUnits({32,clip.y+32},10000));Frame after;catalog.append(after);
+  assert(find(after,"UpgradeMachBG.png").destination.y==detail.y);
+  const float lastY=clip.y+32+186-(tall?0:82);
+  tap(catalog,124,lastY);auto selected=catalog.takeActions();assert(selected.size()==1&&selected[0].buttonId==0x411&&selected[0].row==17);
+  assert(catalog.scrollUnits({32,clip.y+32},-10000));
+  // A list drag ending on an upgrade button must not select or buy anything.
+  catalog.touch({20,TouchPhase::began,{32,clip.y+32}});
+  catalog.touch({20,TouchPhase::moved,{198,detail.y+83}});
+  catalog.touch({21,TouchPhase::began,{198,detail.y+83}});
+  catalog.touch({21,TouchPhase::ended,{198,detail.y+83}});
+  catalog.touch({20,TouchPhase::ended,{198,detail.y+83}});assert(catalog.takeActions().empty());
+  // Scrolling drag survives setState refreshes; release is not a card tap.
+  catalog.touch({22,TouchPhase::began,{124,clip.y+120}});catalog.setState(all);
+  catalog.touch({22,TouchPhase::moved,{124,clip.y+20}});catalog.setState(all);
+  catalog.touch({22,TouchPhase::ended,{124,clip.y+20}});assert(catalog.takeActions().empty());
+  // Rotation cancels the held card, including its eventual release.
+  catalog.touch({23,TouchPhase::began,{124,clip.y+32}});catalog.setLayout(layout);
+  catalog.touch({23,TouchPhase::ended,{124,clip.y+32}});assert(catalog.takeActions().empty());
+ }
+ // Safe areas shift art and hit boxes together in session-local coordinates.
+ FrameLayout safe;safe.resize(390,844,44,34);catalog.setLayout(safe);catalog.setState(all);Frame safeFrame;catalog.append(safeFrame);
+ const auto firstSafe=find(safeFrame,"Btn_MachBuild.png");assert(cardCount(safeFrame)==18);
+ assert(std::abs(firstSafe.clip->y+safe.center().y-(safe.top+38.25f))<.001f);
+ tap(catalog,32,firstSafe.destination.y+32);assert(catalog.takeActions().at(0).row==0);
  std::cout<<"UpgradeDialog original base and unit actions, blocked upgrades, glyphs and asset bounds passed\n";
 }
