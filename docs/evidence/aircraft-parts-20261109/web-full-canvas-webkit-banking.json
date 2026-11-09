@@ -1,0 +1,37 @@
+{
+  "engine": "webkit",
+  "url": "http://127.0.0.1:8953/",
+  "poses": [
+    {
+      "tile": 0,
+      "bankInputDegrees": 0
+    },
+    {
+      "tile": 1,
+      "bankInputDegrees": -8
+    },
+    {
+      "tile": 2,
+      "bankInputDegrees": -16
+    },
+    {
+      "tile": 3,
+      "bankInputDegrees": -24
+    },
+    {
+      "tile": 4,
+      "bankInputDegrees": 8
+    },
+    {
+      "tile": 5,
+      "bankInputDegrees": 16
+    },
+    {
+      "tile": 6,
+      "bankInputDegrees": 24
+    }
+  ],
+  "uploadsAfterWarmup": 0,
+  "ok": true,
+  "errors": []
+}

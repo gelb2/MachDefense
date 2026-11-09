@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
         const auto maps = md::DataTable::load(root / "MapList.tsv");
         check(maps.rowCount() == 80 && maps.value(0, "ImageFile") == "BG_01" && maps.value(79, "ImageFile") == "BG_04", "80 original missions");
         const auto weapons = md::DataTable::load(root / "WeaponInfo.tsv");
-        check(weapons.rowCount() == 267, "211 original weapons plus 56 level extension rows");
+        check(weapons.rowCount() == 377, "211 original weapons plus 56 level extension rows and 110 aircraft rows");
         const auto upgrades = md::DataTable::load(root / "BaseUpgrade.tsv");
         check(upgrades.rowCount() == 60, "54 original base upgrade rows plus 6 level extension rows");
         const auto cannon = upgrades.findRow("BaseCannon_01").value();

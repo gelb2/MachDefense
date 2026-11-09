@@ -22,6 +22,9 @@ struct WeaponDefinition {
 class WeaponCatalog {
 public:
     static WeaponCatalog load(const DataTable&,bool phone);
+    // Reuse an existing complete weapon definition for a newly drawn part.
+    // Existing entries are immutable; aliases cannot replace an original name.
+    void addAlias(std::string name,std::string_view source);
     [[nodiscard]] const WeaponDefinition* find(std::string_view name) const;
     [[nodiscard]] std::size_t size() const { return definitions_.size(); }
 private:

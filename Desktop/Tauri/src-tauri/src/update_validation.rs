@@ -11,7 +11,7 @@ pub fn run(app: &tauri::AppHandle, dir: &Path) -> Value {
         let before = fs::read(&exe)?;
         let bytes = fs::read(dir.join("update.app.tar.gz"))?;
         let signature = fs::read_to_string(dir.join("update.app.tar.gz.sig"))?;
-        let metadata = json!({"version":"0.6.0","platforms":{"darwin-aarch64":{"url":"https://localhost.invalid/update.app.tar.gz","signature":signature.trim()}}});
+        let metadata = json!({"version":env!("CARGO_PKG_VERSION"),"platforms":{"darwin-aarch64":{"url":"https://localhost.invalid/update.app.tar.gz","signature":signature.trim()}}});
         let updater = app
             .updater_builder()
             .executable_path(&exe)
@@ -29,7 +29,7 @@ pub fn run(app: &tauri::AppHandle, dir: &Path) -> Value {
         assert!(update.install(&bytes[..bytes.len() / 2]).is_err());
         assert_eq!(fs::read(&exe)?, before);
         let mut wrong = metadata.clone();
-        wrong["version"] = json!("0.6.1");
+        wrong["version"] = json!("999.0.0");
         assert!(updater
             .restore_update(wrong)?
             .unwrap()

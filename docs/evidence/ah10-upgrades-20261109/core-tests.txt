@@ -1,0 +1,17 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/cheyenne-salvo-clock/build/ah10-upgrades
+    Start  2: AircraftDefinition
+1/6 Test  #2: AircraftDefinition ...............   Passed    0.04 sec
+    Start  5: AircraftFireEffects
+2/6 Test  #5: AircraftFireEffects ..............   Passed    0.16 sec
+    Start  8: AircraftArmament
+3/6 Test  #8: AircraftArmament .................   Passed    0.14 sec
+    Start 12: Aircraft
+4/6 Test #12: Aircraft .........................   Passed    0.33 sec
+    Start 55: AircraftHandling
+5/6 Test #55: AircraftHandling .................   Passed    0.08 sec
+    Start 56: AircraftCampaign
+6/6 Test #56: AircraftCampaign .................   Passed    0.39 sec
+
+100% tests passed out of 6
+
+Total Test time (real) =   1.15 sec

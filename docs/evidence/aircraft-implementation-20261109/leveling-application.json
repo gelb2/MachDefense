@@ -1,0 +1,13 @@
+{
+  "source": "aircraft-balance-20261108",
+  "appliedRows": {
+    "MachList": 40,
+    "MachBuild_Name": 40,
+    "WeaponInfo": 90
+  },
+  "scope": "aircraft HP, production/upgrade price, weapon damage and range only",
+  "finalRangeFollowup": {
+    "Cheyenne": "same-level Shotgun mech x 1.1",
+    "Beluga": "same-level Plasma mech"
+  }
+}

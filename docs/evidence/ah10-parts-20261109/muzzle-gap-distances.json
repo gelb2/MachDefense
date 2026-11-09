@@ -1,0 +1,30 @@
+{
+  "AHeavyRocket": {
+    "oldMuzzlePixel": [
+      55,
+      22
+    ],
+    "forwardAlphaEdge": 51,
+    "forwardAlphaOnMuzzleRow": 48,
+    "nearestAlphaPixel": [
+      50,
+      24
+    ],
+    "gapOnMuzzleRow": 7,
+    "nearestAlphaDistancePixels": 5.385164807134504
+  },
+  "AHeavyAirStrike": {
+    "oldMuzzlePixel": [
+      74,
+      74
+    ],
+    "forwardAlphaEdge": 68,
+    "forwardAlphaOnMuzzleRow": 68,
+    "nearestAlphaPixel": [
+      68,
+      74
+    ],
+    "gapOnMuzzleRow": 6,
+    "nearestAlphaDistancePixels": 6.0
+  }
+}

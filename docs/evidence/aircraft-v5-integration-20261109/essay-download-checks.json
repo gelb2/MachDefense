@@ -1,0 +1,22 @@
+{
+  "ko": {
+    "2": {
+      "downloadExact": true,
+      "sha256": "a6c9b87265e22a9c67a54314b883a932bea52c76b9d8f069655753c41bfd5c93"
+    },
+    "3": {
+      "downloadExact": true,
+      "sha256": "c2b7809c2684461b1346ebc81a25a5714826a952925915e712293dd348ef04e9"
+    }
+  },
+  "en": {
+    "2": {
+      "downloadExact": true,
+      "sha256": "f03e626d873a939eaedbe7e376370d8b79cf5828550b8d61bcd01036b1cdb60f"
+    },
+    "3": {
+      "downloadExact": true,
+      "sha256": "95edb3cb481cc55d74f9803df0193ac306aeb6c76e07329785f3cf6967f4deca"
+    }
+  }
+}

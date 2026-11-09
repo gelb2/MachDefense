@@ -1,0 +1,20 @@
+{
+  "base": "a5f7a04",
+  "integratedChanges": [
+    "b680ecb Cheyenne art",
+    "e3118d0 Cheyenne clock",
+    "a5f7a04 target approach",
+    "16013e6 AH10 atlas"
+  ],
+  "resolution": "Retained Cheyenne authored entries, regenerated tables from merged assembly, retained ADuctCover width and AH atlas offsets in tests.",
+  "coreTestsPassed": 10,
+  "files": {
+    "Sources/Core/Simulation/AircraftTactics.hpp": "0af95356ddd2da64914b535dedff478033912b099859a3c64341b35321b766f5",
+    "Sources/Core/Simulation/AircraftVisual.hpp": "8ec1e90798f0db5ae84d16690133d9aed44dbfd5b3013a65d7054b1ca8d8aa93",
+    "Tests/AircraftTests.cpp": "126d9ed15d87fc7052d66c12fee5b8ee8cdfdba11731e6aa8f53985c503ac125",
+    "Tests/AircraftDefinitionTests.cpp": "8ec2d6f2f1aadc0339a91d0e6e733c2a7b4621945386bd4a7bb9c99c928a73a0",
+    "Art/Aircraft/runtime/assembly.json": "c135ea12072b7b1971ae51cb6c71c9ad6361f52c5d208b84036dd0a6c4f97f52",
+    "Resources/Tables/PartsList.tsv": "af8af3b8afcba06a7bd049a175a29078ff22afb6a86361f60bc94a3a65bd5581",
+    "Resources/Tables/TileList.tsv": "0df2bda756cac7d8491b659eb474b8989080431bcd6a8491e205019c667961a1"
+  }
+}

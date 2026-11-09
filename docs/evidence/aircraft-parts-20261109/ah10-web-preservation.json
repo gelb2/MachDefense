@@ -1,0 +1,14 @@
+{
+  "baseline": "06410eebfa3effd24b0f842d60cf7519ff9ee98f",
+  "changedTrackedSourcesResources": [
+    "Resources/Images/AHeavyBody.png",
+    "Resources/RawData/AircraftParts.mcb",
+    "Resources/RawData/Level10Parts.mcb",
+    "Resources/Tables/PartsList.tsv",
+    "Resources/Tables/TileList.tsv",
+    "Sources/Core/Simulation/AircraftVisual.hpp"
+  ],
+  "count": 2681,
+  "adopted": "fullcanvas",
+  "sourceRestoreEvidence": ".local/ah10-integration-20261109/restored-fullcanvas-sha256.json"
+}

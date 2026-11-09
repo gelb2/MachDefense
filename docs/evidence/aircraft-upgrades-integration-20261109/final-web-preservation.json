@@ -1,0 +1,1000 @@
+{
+  "baseline": "629cd49 Beluga fixture; pre-integration ScoutLv1 and AH10 upgrade art",
+  "comparisonRectanglesExclusive": [
+    [
+      150,
+      160,
+      350,
+      360
+    ],
+    [
+      120,
+      530,
+      390,
+      780
+    ]
+  ],
+  "outsideChangedAircraftAllExact": true,
+  "images": [
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.439216,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.431373,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.427451,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.45098,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.372549,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.380392,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.458824,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.458824,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.431373,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.45098,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.435294,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.454902,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.376471,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.372549,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.431373,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.388235,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.415686,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.388235,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.388235,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.427451,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.372549,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.415686,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.411765,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.34902,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.4,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.423529,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.376471,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.423529,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.454902,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.360784,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.380392,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.392157,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.411765,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.435294,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.376471,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.454902,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.435294,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.45098,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.380392,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.403922,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.458824,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.415686,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.47451,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.4,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.454902,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.360784,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.4,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.439216,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.431373,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.427451,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.45098,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.372549,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.380392,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.458824,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.458824,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.431373,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.45098,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.435294,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.454902,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.376471,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.372549,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.431373,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.388235,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.415686,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.388235,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.388235,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.427451,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.372549,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.415686,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.411765,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.34902,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.4,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.423529,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.376471,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.423529,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.454902,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.360784,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.380392,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.392157,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.411765,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.435294,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.376471,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.454902,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.435294,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.45098,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.380392,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.403922,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.458824,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.415686,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.47451,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.4,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.454902,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.360784,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.4,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideScoutAH10Maximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideScoutAH10Maximum": 0.0
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/.local/aircraft-repair-20261109/build
+      Start  1: AircraftBalance
+      Start  2: AircraftFireEffects
+      Start  3: AircraftArmament
+      Start  4: AircraftCountermeasure
+ 1/53 Test  #1: AircraftBalance ..................   Passed    0.36 sec
+      Start  5: AircraftPaint
+ 2/53 Test  #3: AircraftArmament .................   Passed    0.48 sec
+      Start  6: AlliedAircraft
+ 3/53 Test  #2: AircraftFireEffects ..............   Passed    0.49 sec
+      Start  7: Aircraft
+ 4/53 Test  #4: AircraftCountermeasure ...........   Passed    0.54 sec
+      Start  8: ModuleParity
+ 5/53 Test  #5: AircraftPaint ....................   Passed    0.24 sec
+      Start  9: SaveData
+ 6/53 Test  #7: Aircraft .........................   Passed    0.31 sec
+      Start 10: EmergencySupport
+ 7/53 Test  #9: SaveData .........................   Passed    0.22 sec
+      Start 11: ActionAudio
+ 8/53 Test  #6: AlliedAircraft ...................   Passed    0.46 sec
+      Start 12: DataTable
+ 9/53 Test #11: ActionAudio ......................   Passed    0.26 sec
+      Start 13: Battle
+10/53 Test #12: DataTable ........................   Passed    0.24 sec
+      Start 14: Button
+11/53 Test #13: Battle ...........................   Passed    0.27 sec
+      Start 15: Combat
+12/53 Test #14: Button ...........................   Passed    0.24 sec
+      Start 16: Economy
+13/53 Test #10: EmergencySupport .................   Passed    0.77 sec
+      Start 17: WeaponController
+14/53 Test #15: Combat ...........................   Passed    0.23 sec
+      Start 18: Menu
+15/53 Test #16: Economy ..........................   Passed    0.24 sec
+      Start 19: Production
+16/53 Test #17: WeaponController .................   Passed    0.23 sec
+      Start 20: Bipod
+17/53 Test #18: Menu .............................   Passed    0.25 sec
+      Start 21: Projectile
+18/53 Test #19: Production .......................   Passed    0.23 sec
+      Start 22: Transition
+19/53 Test #20: Bipod ............................   Passed    0.23 sec
+      Start 23: PlayerParts
+20/53 Test #21: Projectile .......................   Passed    0.22 sec
+      Start 24: Settlement
+21/53 Test #23: PlayerParts ......................   Passed    0.24 sec
+      Start 25: GameHUD
+22/53 Test #24: Settlement .......................   Passed    0.23 sec
+      Start 26: World
+23/53 Test #25: GameHUD ..........................   Passed    0.24 sec
+      Start 27: UpgradeDialog
+24/53 Test #26: World ............................   Passed    0.25 sec
+      Start 28: SummaryDialog
+25/53 Test #27: UpgradeDialog ....................   Passed    0.26 sec
+      Start 29: Loot
+26/53 Test #28: SummaryDialog ....................   Passed    0.24 sec
+      Start 30: GameSession
+27/53 Test #22: Transition .......................   Passed    0.88 sec
+      Start 31: CoreContent
+28/53 Test #29: Loot .............................   Passed    0.23 sec
+      Start 32: WorldEffects
+29/53 Test #32: WorldEffects .....................   Passed    0.25 sec
+      Start 33: NaturalCampaign
+30/53 Test #30: GameSession ......................   Passed    0.55 sec
+      Start 34: FrameIO
+31/53 Test #31: CoreContent ......................   Passed    0.68 sec
+      Start 35: SaveFailure
+32/53 Test #34: FrameIO ..........................   Passed    0.29 sec
+      Start 36: Trail
+33/53 Test #35: SaveFailure ......................   Passed    0.37 sec
+      Start 37: Formation
+34/53 Test #36: Trail ............................   Passed    0.23 sec
+      Start 38: ValidationPanel
+35/53 Test #38: ValidationPanel ..................   Passed    0.24 sec
+      Start 39: ValidationTools
+36/53 Test #37: Formation ........................   Passed    0.25 sec
+      Start 40: Campaign
+37/53 Test #39: ValidationTools ..................   Passed    0.28 sec
+      Start 41: SpecialAttack
+38/53 Test #41: SpecialAttack ....................   Passed    0.23 sec
+      Start 42: WorldSpecial
+39/53 Test  #8: ModuleParity .....................   Passed    4.10 sec
+      Start 43: SaveTransfer
+40/53 Test #43: SaveTransfer .....................   Passed    0.31 sec
+      Start 44: TransferMenu
+41/53 Test #42: WorldSpecial .....................   Passed    0.60 sec
+      Start 45: TransferFileStore
+42/53 Test #44: TransferMenu .....................   Passed    0.25 sec
+      Start 46: Level10Data
+43/53 Test #45: TransferFileStore ................   Passed    0.25 sec
+      Start 47: Level10HUDSweep
+44/53 Test #46: Level10Data ......................   Passed    0.93 sec
+      Start 48: TransferLevel10
+45/53 Test #40: Campaign .........................   Passed    2.45 sec
+      Start 49: LaserUnlock
+46/53 Test #49: LaserUnlock ......................   Passed    0.34 sec
+      Start 50: AircraftHandling
+47/53 Test #50: AircraftHandling .................   Passed    0.28 sec
+      Start 51: AircraftCampaign
+48/53 Test #51: AircraftCampaign .................   Passed    0.52 sec
+      Start 52: AircraftEvasion
+49/53 Test #52: AircraftEvasion ..................   Passed    0.24 sec
+      Start 53: AircraftDodge
+50/53 Test #53: AircraftDodge ....................   Passed    0.25 sec
+51/53 Test #48: TransferLevel10 ..................   Passed    2.26 sec
+52/53 Test #47: Level10HUDSweep ..................   Passed    3.44 sec
+53/53 Test #33: NaturalCampaign ..................   Passed   13.86 sec
+
+100% tests passed out of 53
+
+Total Test time (real) =  17.10 sec

@@ -1,0 +1,34 @@
+{
+  "preservationBaseline": "16d230c",
+  "approvalCheckpoint": "93a9847",
+  "ResourcesSourcesTestsDiffEmpty": true,
+  "browser": "Safari local report http://127.0.0.1:8985/machdefense.html#aircraft-paint-20261108",
+  "visibleChecks": [
+    "Scout before and concept loaded; equal-width small comparison rendered",
+    "Beluga before and concept loaded; equal-width small comparison rendered",
+    "AH-10 before and concept loaded; equal-width small comparison rendered"
+  ],
+  "reportLinks": "all newly added image/download destinations exist",
+  "runtimePaintApplied": false,
+  "newCombatTests": false,
+  "siteMediaSpace": {
+    "conversion": "two existing GIF animations to lossless animated WebP",
+    "verification": [
+      {
+        "frames": 72,
+        "beforeBytes": 10329535,
+        "afterBytes": 8490196,
+        "allRGBAEqual": true,
+        "durationsAndLoopEqual": true
+      },
+      {
+        "frames": 72,
+        "beforeBytes": 9437212,
+        "afterBytes": 7769224,
+        "allRGBAEqual": true,
+        "durationsAndLoopEqual": true
+      }
+    ],
+    "backup": "MachDefense/.local/paint-report-gif-backup"
+  }
+}

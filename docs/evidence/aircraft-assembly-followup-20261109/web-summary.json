@@ -1,0 +1,117 @@
+{
+  "tests": {
+    "chrome-banking": true,
+    "chrome-armament": true,
+    "webkit-banking": true,
+    "webkit-armament": true,
+    "chrome-all-levels": true,
+    "webkit-all-levels": true
+  },
+  "url": "http://127.0.0.1:8953/",
+  "gameWasmSHA256": "c1dc3084b8e4e6c16e36a2782731370f3ae025ab3da1f2a4f17fe54d358e0215",
+  "gameDataSHA256": "828c65197f6c5904030c68c887312d146ca4e8c05132ea794b8a6003161b437e",
+  "preservedInputs": 37,
+  "changedPreservedInputs": [],
+  "bankingPixelComparisons": [
+    {
+      "engine": "chrome",
+      "tile": 0,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "chrome",
+      "tile": 1,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "chrome",
+      "tile": 2,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "chrome",
+      "tile": 3,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "chrome",
+      "tile": 4,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "chrome",
+      "tile": 5,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "chrome",
+      "tile": 6,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "webkit",
+      "tile": 0,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "webkit",
+      "tile": 1,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "webkit",
+      "tile": 2,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "webkit",
+      "tile": 3,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "webkit",
+      "tile": 4,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "webkit",
+      "tile": 5,
+      "sameDimensions": true,
+      "pixelEqual": true
+    },
+    {
+      "engine": "webkit",
+      "tile": 6,
+      "sameDimensions": true,
+      "pixelEqual": true
+    }
+  ],
+  "performanceMeasured": false,
+  "testLevels": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "newUpgradeArtImplemented": false,
+  "allLevelMethod": "Existing Web/tests/aircraft-armament.mjs, level loop expanded from [1,10] to 1..10. 600 simulation ticks per level, all four aircraft; existing dodge and no-save/no-audio-recreation assertions retained; performance disabled.",
+  "allLevelRunnerSHA256": "4d36242d0487627dc4acf2e05fa76e181cd19ac2dbf63ad55ce49d563cdc1f03"
+}

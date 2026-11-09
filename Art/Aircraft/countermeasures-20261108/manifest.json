@@ -1,0 +1,14 @@
+{
+  "method": "built-in imagegen edit",
+  "revision": "v3 reduced yellow/red saturation requested 2026-11-09",
+  "reference": "storyboard-v2-cinematic.png",
+  "runtimeImplemented": false,
+  "files": {
+    "storyboard-v1.png": "d3a1a53430aee4f8f0074773a5fcdeece948a6255e5bfcd013c38510a1e5f002",
+    "prompt.txt": "5300b6fe710eb9e4ed6117c797dd699a7fc1710a6dd69b41ff17b4f0f6d9c790",
+    "storyboard-v2-cinematic.png": "59663b528f0f9a4b9fb105a71eac3c08e26a242bf45cb02593ff042b4f63d79e",
+    "prompt-v2.txt": "1c1c5dd5532b1b92f1c5296a8e4fa2ff20bccb65c86433abc2cb1d658e093866",
+    "storyboard-v3-muted.png": "016b288d1e5c47b10a0d39681b51d9157717d95d7a94de98246059c4bc3d7041",
+    "prompt-v3.txt": "1ac4d838c000bea2f9c148bf9cdb95c921f7bdb9a9dc09037db02ea71b45b0ce"
+  }
+}

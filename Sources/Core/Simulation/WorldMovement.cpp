@@ -13,10 +13,24 @@ void World::setDestination(WorldActor& a,Vec2 point){a.destination=point;a.bipod
 void World::updateActor(WorldActor& a){
     if(a.removed)return;
     if(a.hp<=0){updateCrash(a);return;}
-    a.radarAngle+=.2f;if(a.radarAngle>0x1.921fb6p+2f)a.radarAngle-=0x1.921fb6p+2f;
+    a.radarAngle+=a.rotorStep;if(a.radarAngle>0x1.921fb6p+2f)a.radarAngle-=0x1.921fb6p+2f;
     auto* target=selectTarget(a);
     const bool aiEnabled=a.player||!(a.statusFlags&2);
-    if(aiEnabled&&((a.player&&a.type==0)||a.type==1)){
+    if(aiEnabled&&a.flightTactics){
+        auto& tactic=*a.flightTactics;a.moveToTarget=false;
+        a.aircraft.moveSpeed=tactic.speed*geometry_.deviceScale;
+        const auto priorDodge=tactic.dodgeCount;
+        if(tactic.updateDodge(time(),a.position,a.player,a.aircraft.moveSpeed,a.radius,512*geometry_.deviceScale,geometry_.halfLength(),aircraftThreats_)){
+            if(tactic.dodgeCount!=priorDodge)countermeasures_->emit(float(time()),a.position,a.angle,a.countermeasureWidth);
+            setDestination(a,tactic.dodgeDestination);
+        }else if(target){
+            if(tactic.targetId!=target->id){tactic.engaged=false;tactic.targetId=target->id;}
+            setDestination(a,tactic.destination(time(),a.position,target->position,a.range,512*geometry_.deviceScale,geometry_.halfLength(),a.radius));
+        }else{
+            tactic.engaged=false;
+            setDestination(a,{a.position.x,baseBoundary_});
+        }
+    }else if(aiEnabled&&((a.player&&a.type==0)||a.type==1)){
         std::optional<Vec2> destination;
         if(a.player){std::vector<AlliedObstacle> others;for(const auto& b:actors_)if(b.get()!=&a&&b->player&&!b->removed)others.push_back({b->position,b->radius,b->hp});
             destination=a.playerAI.tick({time(),a.position,a.destination,a.range,baseBoundary_,geometry_.deviceScale,a.radius,target!=nullptr,a.moveToTarget},random_,others);
@@ -34,7 +48,13 @@ void World::updateActor(WorldActor& a){
             else if(part.parentSocket==3){part.angle=a.bipod.bodyAngle;part.visualScale=a.bipod.bodyScale;part.addPosition.y=a.bipod.bodyAddPosY;}
         }}
     }else if(a.type==1){a.vehicle.position=a.position;a.vehicle.tick(random_,a.collision);a.position=a.vehicle.position;a.angle=a.vehicle.angle;}
-    else if(a.type==2||a.type==5){a.aircraft.position=a.position;a.aircraft.tick();a.position=a.aircraft.position;a.angle=a.aircraft.angle;}
+    else if(a.type==2||a.type==5){a.aircraft.position=a.position;if(a.flightTactics)a.flightTactics->advance(a.aircraft);else a.aircraft.tick();a.position=a.aircraft.position;
+        if(a.flightTactics&&target){
+            // The flight velocity is independent of the nose bearing, including
+            // the stopped frame between opposite strafing directions.
+            a.flightTactics->face(a.aircraft,std::atan2(target->position.y-a.position.y,target->position.x-a.position.x));
+        }
+        a.angle=a.aircraft.angle;}
     else if(a.type==4){a.train.position=a.position;a.train.tick();a.position=a.train.position;}
     if(a.type!=2&&a.type!=5&&double(a.collisionCheck+.02f)<time()){collideTerrain(a);collideGroundBodies(a);a.collisionCheck=float(time());}
     updatePursuit(a,target);

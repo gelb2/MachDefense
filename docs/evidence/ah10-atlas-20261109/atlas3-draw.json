@@ -1,0 +1,203 @@
+{
+  "kind": "single frame of existing stationary100aircraft render fixture; weaponsdisabled; NOT combat/GPU duration",
+  "bindCalls": 1352,
+  "textureSwitches": 1102,
+  "byTexture": {
+    "/assets/Images/BG_01_01.jpg": {
+      "draws": 1,
+      "logicalQuadArea": 524288,
+      "texture": {
+        "width": 512,
+        "height": 1024
+      }
+    },
+    "/assets/Images/BG_01_02.jpg": {
+      "draws": 1,
+      "logicalQuadArea": 524288,
+      "texture": {
+        "width": 512,
+        "height": 1024
+      }
+    },
+    "/assets/Images/ALightBody.png": {
+      "draws": 50,
+      "logicalQuadArea": 150400,
+      "texture": {
+        "width": 512,
+        "height": 64
+      }
+    },
+    "/assets/Images/ALightGun.png": {
+      "draws": 50,
+      "logicalQuadArea": 4900,
+      "texture": {
+        "width": 16,
+        "height": 8
+      }
+    },
+    "/assets/Images/ALightMissile.png": {
+      "draws": 50,
+      "logicalQuadArea": 5200,
+      "texture": {
+        "width": 16,
+        "height": 8
+      }
+    },
+    "/assets/Images/ALightRotor.png": {
+      "draws": 50,
+      "logicalQuadArea": 174049.98234853894,
+      "texture": {
+        "width": 64,
+        "height": 64
+      }
+    },
+    "/assets/Images/AHeavyBody.png": {
+      "draws": 150,
+      "logicalQuadArea": 1354912.6545782983,
+      "texture": {
+        "width": 2048,
+        "height": 128
+      }
+    },
+    "/assets/Images/AHeavyGun.png": {
+      "draws": 50,
+      "logicalQuadArea": 13264.732545197941,
+      "texture": {
+        "width": 32,
+        "height": 16
+      }
+    },
+    "/assets/Images/AHeavyMissile.png": {
+      "draws": 50,
+      "logicalQuadArea": 10187.31595028285,
+      "texture": {
+        "width": 16,
+        "height": 16
+      }
+    },
+    "/assets/Images/AHeavyCannon.png": {
+      "draws": 50,
+      "logicalQuadArea": 9550.601924740244,
+      "texture": {
+        "width": 32,
+        "height": 16
+      }
+    },
+    "/assets/Images/AHeavyRotor.png": {
+      "draws": 100,
+      "logicalQuadArea": 821776.8201248511,
+      "texture": {
+        "width": 128,
+        "height": 128
+      }
+    },
+    "/assets/Images/ADuctBody.png": {
+      "draws": 50,
+      "logicalQuadArea": 219645.67253083177,
+      "texture": {
+        "width": 1024,
+        "height": 128
+      }
+    },
+    "/assets/Images/ADuctFan.png": {
+      "draws": 100,
+      "logicalQuadArea": 26139.682097331155,
+      "texture": {
+        "width": 32,
+        "height": 32
+      }
+    },
+    "/assets/Images/ADuctGun.png": {
+      "draws": 50,
+      "logicalQuadArea": 2859.0141390990466,
+      "texture": {
+        "width": 32,
+        "height": 8
+      }
+    },
+    "/assets/Images/ADuctMissile.png": {
+      "draws": 50,
+      "logicalQuadArea": 5309.601268453989,
+      "texture": {
+        "width": 32,
+        "height": 16
+      }
+    },
+    "/assets/Images/ADuctMissileR.png": {
+      "draws": 50,
+      "logicalQuadArea": 5309.603118706495,
+      "texture": {
+        "width": 32,
+        "height": 16
+      }
+    },
+    "/assets/Images/ATransportBody.png": {
+      "draws": 50,
+      "logicalQuadArea": 375722.978786021,
+      "texture": {
+        "width": 1024,
+        "height": 256
+      }
+    },
+    "/assets/Images/ATransportWingL.png": {
+      "draws": 50,
+      "logicalQuadArea": 157746.2906299776,
+      "texture": {
+        "width": 1024,
+        "height": 64
+      }
+    },
+    "/assets/Images/ATransportWingR.png": {
+      "draws": 50,
+      "logicalQuadArea": 157746.27011889964,
+      "texture": {
+        "width": 1024,
+        "height": 64
+      }
+    },
+    "/assets/Images/ATransportEngine.png": {
+      "draws": 50,
+      "logicalQuadArea": 129065.04867451754,
+      "texture": {
+        "width": 1024,
+        "height": 64
+      }
+    },
+    "/assets/Images/ATransportGun.png": {
+      "draws": 100,
+      "logicalQuadArea": 9464.784426216036,
+      "texture": {
+        "width": 32,
+        "height": 16
+      }
+    },
+    "/assets/Images/ATransportMissile.png": {
+      "draws": 100,
+      "logicalQuadArea": 11185.649581700563,
+      "texture": {
+        "width": 32,
+        "height": 16
+      }
+    },
+    "/assets/Images/ATransportFan.png": {
+      "draws": 50,
+      "logicalQuadArea": 131113.79339678213,
+      "texture": {
+        "width": 128,
+        "height": 128
+      }
+    }
+  },
+  "debug": {
+    "ready": true,
+    "cheat": true,
+    "ticks": 2,
+    "writes": 0,
+    "sounds": 1,
+    "uploads": 27,
+    "draws": 1352,
+    "width": 480,
+    "height": 480
+  },
+  "actors": 100
+}

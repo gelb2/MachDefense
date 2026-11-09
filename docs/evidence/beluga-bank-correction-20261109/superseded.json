@@ -1,0 +1,36 @@
+{
+  "preservedLocally": true,
+  "files": [
+    {
+      "file": "beluga-authoritative-01.png",
+      "sha256": "a095e51851e45727bf302ad9d9aac58326ef6a2c1b51012e1292b574b1e37d9c",
+      "status": "superseded local trial",
+      "reason": "wing span, transparency, material tone or mount alignment needed correction"
+    },
+    {
+      "file": "beluga-authoritative-02.png",
+      "sha256": "73aba475071d86349fd8ff64123528d0da9cc1316fdae23bfe4647a47e3dcabd",
+      "status": "superseded local trial",
+      "reason": "wing span, transparency, material tone or mount alignment needed correction"
+    },
+    {
+      "file": "beluga-authoritative-03.png",
+      "sha256": "e63125cfffad5b8d18c23d3d63e1ceabbd22e68d36a2bebee4baf4d987e1cbd3",
+      "status": "superseded local trial",
+      "reason": "wing span, transparency, material tone or mount alignment needed correction"
+    },
+    {
+      "file": "beluga-authoritative-04.png",
+      "sha256": "0b3201d64141194d4384a6041a49f7c121894ed5f2bf4d320e6597ff08472ffc",
+      "status": "superseded local trial",
+      "reason": "wing span, transparency, material tone or mount alignment needed correction"
+    },
+    {
+      "file": "beluga-authoritative-05.png",
+      "sha256": "6ab20e8cb6c766c0b8c8456ee4780b7d12441605af7d08feb6ca7233afb413eb",
+      "status": "superseded local trial",
+      "reason": "wing span, transparency, material tone or mount alignment needed correction"
+    }
+  ],
+  "trialWebEvidencePreserved": true
+}

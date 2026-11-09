@@ -1,0 +1,117 @@
+{
+  "worldZoom": 2,
+  "rotorAngle": 0,
+  "shadows": false,
+  "targets": {
+    "AH-10": 231,
+    "Beluga": 164,
+    "Cheyenne": 118
+  },
+  "widthChecks": [
+    {
+      "name": "AH-10",
+      "target": 231,
+      "actual": 230,
+      "error": -1,
+      "pass": true
+    },
+    {
+      "name": "Beluga",
+      "target": 164,
+      "actual": 164,
+      "error": 0,
+      "pass": true
+    },
+    {
+      "name": "Cheyenne",
+      "target": 118,
+      "actual": 118,
+      "error": 0,
+      "pass": true
+    }
+  ],
+  "cells": [
+    {
+      "row": 0,
+      "column": 0,
+      "name": "E_Tank_32",
+      "left": 45,
+      "top": 50,
+      "width": 210,
+      "height": 200
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "name": "MachineGun Lv.10",
+      "left": 390,
+      "top": 102,
+      "width": 118,
+      "height": 88
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "name": "AH-10",
+      "left": 635,
+      "top": 57,
+      "width": 230,
+      "height": 171
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "name": "E_Tank_32",
+      "left": 45,
+      "top": 350,
+      "width": 210,
+      "height": 200
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "name": "MachineGun Lv.10",
+      "left": 390,
+      "top": 402,
+      "width": 118,
+      "height": 88
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "name": "Beluga",
+      "left": 669,
+      "top": 364,
+      "width": 164,
+      "height": 173
+    },
+    {
+      "row": 2,
+      "column": 0,
+      "name": "E_Tank_32",
+      "left": 45,
+      "top": 650,
+      "width": 210,
+      "height": 200
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "name": "MachineGun Lv.10",
+      "left": 390,
+      "top": 702,
+      "width": 118,
+      "height": 88
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "name": "Cheyenne",
+      "left": 691,
+      "top": 665,
+      "width": 118,
+      "height": 158
+    }
+  ],
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15"
+}

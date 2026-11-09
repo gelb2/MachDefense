@@ -1,0 +1,26 @@
+{
+  "changedPartDefinitions": [
+    "AHeavyBody",
+    "AHeavyRocket",
+    "AHeavyAirStrike"
+  ],
+  "machineAssembliesUnchanged": true,
+  "levelVariantsUnchanged": true,
+  "gameplayFiles": [
+    {
+      "path": "Sources/Core/Simulation/AircraftTactics.hpp",
+      "sha256": "abb18af26083ced0b84e4036621989b48567f86cfe5d0e859a670c5680323101",
+      "unchanged": true
+    },
+    {
+      "path": "Sources/Core/Simulation/WorldMovement.cpp",
+      "sha256": "ba2642f6c2ffdce0ff3cadb6fad981386333e962034b02520d5405c06e554dd6",
+      "unchanged": true
+    },
+    {
+      "path": "Sources/Core/Simulation/WorldCombat.cpp",
+      "sha256": "922c03588cc8973c195cf4563f22425757498c1782db2fb84150d0df11aa8cbf",
+      "unchanged": true
+    }
+  ]
+}

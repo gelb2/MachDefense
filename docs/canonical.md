@@ -2,6 +2,10 @@
 
 최신 사용자 지시 → 원본 및 [복원 계약](restoration-contract.md)·[기획](game-design.md) → [설계](design.md)·분야 정책 → 코드·검사 → [실행 상태](current-status.md) 순서로 대조한다.
 
+## 헬기 추가의 원작 절차 준수 — 2026-11-09
+
+사용자가 확정한 기준은 원작의 파일 준비·최적화, 정의 데이터 생성·읽기, 파츠·로직 조립과 렌더링 절차다. 구현자의 편의나 선호를 근거로 이를 다른 절차로 대체하지 않는다. 공통 함수를 호출하거나 같은 확장자를 사용하는 것만으로 원작 절차를 준수했다고 판단하지 않는다. 사용자 지정 신규 기능은 원작의 생성·조립 절차에 연결하고, 필요한 차이는 원작 근거와 함께 먼저 드러낸다. 원작 유닛의 코드·에셋은 보존한다. 현행 헬기의 파일·최적화·정의·조립·렌더링 및 C++ 로직 전수진단은 [TODO](usability-todo.md)의 후속 과제다.
+
 현재 소스 재개발과 대조 기준은 **위메이드 1.0.3**이다. 최초 호환 실행에는 Mach Defense 1.0.5(kr.indieapps.MachDefense)를 썼다. HeavyMach 1의 함수 주소·프레임 시간·해상도·저장 슬롯·밸런스는 MachDefense 정본이 아니다. [원본 명세](source-provenance.md)와 새 분석 결과로 확정한다.
 
 [문서 위계](document-governance.md), [업무 연결표](document-map.json), [복원 단계](restoration-plan.md), [TODO](usability-todo.md)를 따른다. 이전 프로젝트의 정책 사본은 docs/reference/heavymach1 아래에 출처로 보존한다. 그곳의 완료 기록·과거 지시·기기 식별자·도구 세션은 이 프로젝트에 적용하지 않는다.

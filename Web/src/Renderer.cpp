@@ -1,4 +1,5 @@
 #include "Renderer.hpp"
+#include "Core/Presentation/AircraftPaint.hpp"
 #include "stb_image.h"
 #include <algorithm>
 #include <cmath>
@@ -24,6 +25,7 @@ Renderer::Texture& Renderer::texture(const std::string& name,bool premult){
  auto b=assets.read(Assets::imagePath(name));Texture t;int c=0;
  stbi_convert_iphone_png_to_rgb(1);stbi_set_unpremultiply_on_load(1);
  auto* p=stbi_load_from_memory(b.data(),b.size(),&t.w,&t.h,&c,4);if(!p)throw std::runtime_error("Cannot decode "+name);
+ applyAircraftPaint(name,p,size_t(t.w)*t.h,t.w,t.h);
  t.sw=t.sh=1;while(t.sw<t.w)t.sw*=2;while(t.sh<t.h)t.sh*=2;
  std::vector<unsigned char> padded(size_t(t.sw)*t.sh*4,0);
  for(int y=0;y<t.h;++y)for(int x=0;x<t.w;++x){auto* src=p+(y*t.w+x)*4;auto* dst=padded.data()+(y*t.sw+x)*4;for(int k=0;k<4;++k)dst[k]=k<3&&premult?static_cast<unsigned char>(float(src[k])*(float(src[3])/255.f)):src[k];}
@@ -40,7 +42,7 @@ void Renderer::draw(const Frame& f,int w,int h){
  pixelW=w;pixelH=h;logicalW=f.logicalWidth;logicalH=f.logicalHeight;draws=0;
  glViewport(0,0,w,h);glDisable(GL_SCISSOR_TEST);glClearColor(f.background.r,f.background.g,f.background.b,f.background.a);glClear(GL_COLOR_BUFFER_BIT);glDisable(GL_DEPTH_TEST);glDisable(GL_CULL_FACE);glUseProgram(program);glUniform2f(scale,logicalW,logicalH);glActiveTexture(GL_TEXTURE0);glBindVertexArray(vao);glBindBuffer(GL_ARRAY_BUFFER,vbo);
  std::vector<const TextureMesh*> meshes;for(auto& m:f.meshes)meshes.push_back(&m);std::stable_sort(meshes.begin(),meshes.end(),[](auto a,auto b){return a->beforeSpriteIndex<b->beforeSpriteIndex;});size_t mi=0;
- auto mesh=[&](const TextureMesh& m){bool pre=m.blend==Blend::premultipliedAlpha;auto& t=texture(m.image,pre);auto v=m.vertices;for(auto& x:v){x.uv.x*=float(t.w)/t.sw;x.uv.y*=float(t.h)/t.sh;if(pre){x.color.r*=x.color.a;x.color.g*=x.color.a;x.color.b*=x.color.a;}}submit(v,t,m.blend,false,{});};
+ auto mesh=[&](const TextureMesh& m){bool pre=m.blend==Blend::premultipliedAlpha;auto& t=texture(m.image,pre);auto v=m.vertices;for(auto& x:v){x.uv.x*=float(t.w)/t.sw;x.uv.y*=float(t.h)/t.sh;if(pre){x.color.r*=x.color.a;x.color.g*=x.color.a;x.color.b*=x.color.a;}}submit(v,t,m.blend,m.nearest,{});};
  for(size_t i=0;i<=f.sprites.size();++i){while(mi<meshes.size()&&meshes[mi]->beforeSpriteIndex<=i)mesh(*meshes[mi++]);if(i==f.sprites.size())break;
  auto& s=f.sprites[i];auto d=s.destination;if(!std::isfinite(d.x)||!std::isfinite(d.y)||!std::isfinite(d.width)||!std::isfinite(d.height)||d.width==0||d.height==0)continue;
  bool pre=s.blend==Blend::premultipliedAlpha;Texture solid{white,1,1,1,1};const auto& t=s.image.empty()?solid:texture(s.image,pre);auto r=s.sourcePx.value_or(Rect{0,0,float(t.w),float(t.h)});

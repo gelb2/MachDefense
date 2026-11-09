@@ -1,0 +1,99 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/build/level10
+      Start  1: AlliedAircraft
+ 1/47 Test  #1: AlliedAircraft ...................   Passed    0.16 sec
+      Start  2: Aircraft
+ 2/47 Test  #2: Aircraft .........................   Passed    0.05 sec
+      Start  3: ModuleParity
+ 3/47 Test  #3: ModuleParity .....................   Passed    4.16 sec
+      Start  4: SaveData
+ 4/47 Test  #4: SaveData .........................   Passed    0.25 sec
+      Start  5: EmergencySupport
+ 5/47 Test  #5: EmergencySupport .................   Passed    0.80 sec
+      Start  6: ActionAudio
+ 6/47 Test  #6: ActionAudio ......................   Passed    0.31 sec
+      Start  7: DataTable
+ 7/47 Test  #7: DataTable ........................   Passed    0.26 sec
+      Start  8: Battle
+ 8/47 Test  #8: Battle ...........................   Passed    0.32 sec
+      Start  9: Button
+ 9/47 Test  #9: Button ...........................   Passed    0.25 sec
+      Start 10: Combat
+10/47 Test #10: Combat ...........................   Passed    0.25 sec
+      Start 11: Economy
+11/47 Test #11: Economy ..........................   Passed    0.26 sec
+      Start 12: WeaponController
+12/47 Test #12: WeaponController .................   Passed    0.01 sec
+      Start 13: Menu
+13/47 Test #13: Menu .............................   Passed    0.30 sec
+      Start 14: Production
+14/47 Test #14: Production .......................   Passed    0.00 sec
+      Start 15: Bipod
+15/47 Test #15: Bipod ............................   Passed    0.27 sec
+      Start 16: Projectile
+16/47 Test #16: Projectile .......................   Passed    0.01 sec
+      Start 17: Transition
+17/47 Test #17: Transition .......................   Passed    0.60 sec
+      Start 18: PlayerParts
+18/47 Test #18: PlayerParts ......................   Passed    0.26 sec
+      Start 19: Settlement
+19/47 Test #19: Settlement .......................   Passed    0.26 sec
+      Start 20: GameHUD
+20/47 Test #20: GameHUD ..........................   Passed    0.27 sec
+      Start 21: World
+21/47 Test #21: World ............................   Passed    0.29 sec
+      Start 22: UpgradeDialog
+22/47 Test #22: UpgradeDialog ....................   Passed    0.26 sec
+      Start 23: SummaryDialog
+23/47 Test #23: SummaryDialog ....................   Passed    0.25 sec
+      Start 24: Loot
+24/47 Test #24: Loot .............................   Passed    0.25 sec
+      Start 25: GameSession
+25/47 Test #25: GameSession ......................   Passed    0.58 sec
+      Start 26: CoreContent
+26/47 Test #26: CoreContent ......................   Passed    0.72 sec
+      Start 27: WorldEffects
+27/47 Test #27: WorldEffects .....................   Passed    0.29 sec
+      Start 28: NaturalCampaign
+28/47 Test #28: NaturalCampaign ..................   Passed   13.65 sec
+      Start 29: FrameIO
+29/47 Test #29: FrameIO ..........................   Passed    0.35 sec
+      Start 30: SaveFailure
+30/47 Test #30: SaveFailure ......................   Passed    0.42 sec
+      Start 31: Trail
+31/47 Test #31: Trail ............................   Passed    0.25 sec
+      Start 32: Formation
+32/47 Test #32: Formation ........................   Passed    0.24 sec
+      Start 33: ValidationPanel
+33/47 Test #33: ValidationPanel ..................   Passed    0.25 sec
+      Start 34: ValidationTools
+34/47 Test #34: ValidationTools ..................   Passed    0.33 sec
+      Start 35: Campaign
+35/47 Test #35: Campaign .........................   Passed    2.49 sec
+      Start 36: SpecialAttack
+36/47 Test #36: SpecialAttack ....................   Passed    0.24 sec
+      Start 37: WorldSpecial
+37/47 Test #37: WorldSpecial .....................   Passed    0.61 sec
+      Start 38: SaveTransfer
+38/47 Test #38: SaveTransfer .....................   Passed    0.34 sec
+      Start 39: TransferMenu
+39/47 Test #39: TransferMenu .....................   Passed    0.28 sec
+      Start 40: TransferFileStore
+40/47 Test #40: TransferFileStore ................   Passed    0.29 sec
+      Start 41: Level10Data
+41/47 Test #41: Level10Data ......................   Passed    0.97 sec
+      Start 42: Level10HUDSweep
+42/47 Test #42: Level10HUDSweep ..................   Passed    3.37 sec
+      Start 43: TransferLevel10
+43/47 Test #43: TransferLevel10 ..................   Passed    2.20 sec
+      Start 44: LaserUnlock
+44/47 Test #44: LaserUnlock ......................   Passed    0.37 sec
+      Start 45: AircraftHandling
+45/47 Test #45: AircraftHandling .................   Passed    0.04 sec
+      Start 46: AircraftCampaign
+46/47 Test #46: AircraftCampaign .................   Passed    0.28 sec
+      Start 47: AircraftEvasion
+47/47 Test #47: AircraftEvasion ..................   Passed    0.26 sec
+
+100% tests passed out of 47
+
+Total Test time (real) =  38.94 sec

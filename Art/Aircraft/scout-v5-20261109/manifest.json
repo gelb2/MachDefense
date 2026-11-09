@@ -1,0 +1,726 @@
+{
+  "scope": "Scout level 10 only",
+  "source": {
+    "path": "Art/Aircraft/scout-v5-20261109/source/approved-v5.png",
+    "sha256": "88be80a565c140bdb24bc316f450873a623381142d4dbcf2fc63c998adde972e",
+    "canvas": [
+      1199,
+      1312
+    ],
+    "alphaBounds16": [
+      297,
+      96,
+      895,
+      1007
+    ],
+    "cgbi": false,
+    "partialAlphaPixels": 246974
+  },
+  "disassembly": {
+    "path": "Art/Aircraft/scout-v5-20261109/source/components-clean.png",
+    "sha256": "de4d414ce34ec0e2e531495e54e6982d8039763114b596035f777c845c1484d8",
+    "canvas": [
+      1983,
+      793
+    ],
+    "alphaBounds16": [
+      156,
+      12,
+      1893,
+      760
+    ],
+    "cgbi": false,
+    "partialAlphaPixels": 276730
+  },
+  "orientation": "+X (north-facing input rotated clockwise 90 degrees)",
+  "bankOrder": [
+    0,
+    -8,
+    -16,
+    -24,
+    8,
+    16,
+    24
+  ],
+  "targetNorthWidth": 59.0,
+  "widthBasis": "current 2x web comparison 118px / 2; rotor-inclusive neutral X pose",
+  "adoptedAlphaBounds16": [
+    297,
+    96,
+    895,
+    1007
+  ],
+  "adoptedUniformScale": 0.09866220735785954,
+  "bodySourceUniformScale": 0.2510650025223744,
+  "annotationNote": "Bearing centers and weapon lengths/attachment pads are manually annotated; alpha bounds are measured. Rounded integer placement error is at most 0.5px per axis.",
+  "frames": [
+    {
+      "tile": 0,
+      "bankDegrees": 0,
+      "sourceBounds": [
+        154,
+        10,
+        320,
+        368
+      ],
+      "sourceBearingCenter": [
+        239,
+        195
+      ],
+      "bearingCanvas": [
+        50,
+        27
+      ],
+      "placement": [
+        7,
+        6
+      ],
+      "image": {
+        "path": "Art/Aircraft/scout-v5-20261109/poses/body-0-+00.png",
+        "sha256": "aa512f508961864afefffebabb8283bbe205fb263e9346231f777926d1163e6e",
+        "canvas": [
+          100,
+          54
+        ],
+        "alphaBounds16": [
+          7,
+          6,
+          97,
+          48
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 1933
+      }
+    },
+    {
+      "tile": 1,
+      "bankDegrees": -8,
+      "sourceBounds": [
+        535,
+        10,
+        701,
+        367
+      ],
+      "sourceBearingCenter": [
+        628,
+        195
+      ],
+      "bearingCanvas": [
+        50,
+        27
+      ],
+      "placement": [
+        7,
+        4
+      ],
+      "image": {
+        "path": "Art/Aircraft/scout-v5-20261109/poses/body-1--08.png",
+        "sha256": "97ada430907410a45700502f063dae8f39d70d4a22e95d512835ba13c73fcbfb",
+        "canvas": [
+          100,
+          54
+        ],
+        "alphaBounds16": [
+          7,
+          4,
+          97,
+          46
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 1954
+      }
+    },
+    {
+      "tile": 2,
+      "bankDegrees": -16,
+      "sourceBounds": [
+        914,
+        10,
+        1076,
+        367
+      ],
+      "sourceBearingCenter": [
+        1013,
+        195
+      ],
+      "bearingCanvas": [
+        50,
+        27
+      ],
+      "placement": [
+        7,
+        2
+      ],
+      "image": {
+        "path": "Art/Aircraft/scout-v5-20261109/poses/body-2--16.png",
+        "sha256": "84306ff1b339555050f34db4ae13a4594e8a48f1249089164f81e67039050081",
+        "canvas": [
+          100,
+          54
+        ],
+        "alphaBounds16": [
+          7,
+          2,
+          97,
+          43
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 1960
+      }
+    },
+    {
+      "tile": 3,
+      "bankDegrees": -24,
+      "sourceBounds": [
+        1295,
+        10,
+        1449,
+        368
+      ],
+      "sourceBearingCenter": [
+        1395,
+        195
+      ],
+      "bearingCanvas": [
+        50,
+        27
+      ],
+      "placement": [
+        7,
+        2
+      ],
+      "image": {
+        "path": "Art/Aircraft/scout-v5-20261109/poses/body-3--24.png",
+        "sha256": "61574221616b312c0b359ae500ee8df016ed2aa8c23fc573272dc61b528201eb",
+        "canvas": [
+          100,
+          54
+        ],
+        "alphaBounds16": [
+          7,
+          2,
+          97,
+          41
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 1925
+      }
+    },
+    {
+      "tile": 4,
+      "bankDegrees": 8,
+      "sourceBounds": [
+        1673,
+        10,
+        1840,
+        368
+      ],
+      "sourceBearingCenter": [
+        1757,
+        195
+      ],
+      "bearingCanvas": [
+        50,
+        27
+      ],
+      "placement": [
+        7,
+        6
+      ],
+      "image": {
+        "path": "Art/Aircraft/scout-v5-20261109/poses/body-4-+08.png",
+        "sha256": "120d8f912e12f3526cac034c75f8bb2ccb503f03c6b62f653e129d58c7a9af51",
+        "canvas": [
+          100,
+          54
+        ],
+        "alphaBounds16": [
+          7,
+          6,
+          97,
+          48
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 1920
+      }
+    },
+    {
+      "tile": 5,
+      "bankDegrees": 16,
+      "sourceBounds": [
+        161,
+        404,
+        318,
+        762
+      ],
+      "sourceBearingCenter": [
+        220,
+        587
+      ],
+      "bearingCanvas": [
+        50,
+        27
+      ],
+      "placement": [
+        6,
+        12
+      ],
+      "image": {
+        "path": "Art/Aircraft/scout-v5-20261109/poses/body-5-+16.png",
+        "sha256": "c2af98254db6be0b9874956fdcf0cc4c41412d90c0904ec958aa0b5b9fe0ad05",
+        "canvas": [
+          100,
+          54
+        ],
+        "alphaBounds16": [
+          6,
+          12,
+          96,
+          51
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 1872
+      }
+    },
+    {
+      "tile": 6,
+      "bankDegrees": 24,
+      "sourceBounds": [
+        555,
+        404,
+        702,
+        761
+      ],
+      "sourceBearingCenter": [
+        604,
+        587
+      ],
+      "bearingCanvas": [
+        50,
+        27
+      ],
+      "placement": [
+        6,
+        15
+      ],
+      "image": {
+        "path": "Art/Aircraft/scout-v5-20261109/poses/body-6-+24.png",
+        "sha256": "c2223944289009a09a5511532c32b9700894e263c755be1c5e5d58fdc338707b",
+        "canvas": [
+          100,
+          54
+        ],
+        "alphaBounds16": [
+          6,
+          15,
+          96,
+          52
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 1862
+      }
+    }
+  ],
+  "components": [
+    {
+      "name": "ALightGunV5_10",
+      "sourceBounds": [
+        968,
+        503,
+        1020,
+        660
+      ],
+      "sourceUniformScale": 0.1382527746415866,
+      "placement": [
+        20,
+        2
+      ],
+      "image": {
+        "path": "Art/Aircraft/scout-v5-20261109/rgba/ALightGunV5_10.png",
+        "sha256": "5d7b4a502d6a2a6886378de1bfc8b10c36acab297e0c7276cd18af2f50da5c6c",
+        "canvas": [
+          46,
+          10
+        ],
+        "alphaBounds16": [
+          20,
+          2,
+          42,
+          9
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 93
+      }
+    },
+    {
+      "name": "ALightMissileV5_10",
+      "sourceBounds": [
+        1337,
+        507,
+        1401,
+        660
+      ],
+      "sourceUniformScale": 0.1321944608389621,
+      "placement": [
+        19,
+        2
+      ],
+      "image": {
+        "path": "Art/Aircraft/scout-v5-20261109/rgba/ALightMissileV5_10.png",
+        "sha256": "9bc6f9190597ef7b80beffd0cf500d2a6f843743e308bdedf098da835a57d6de",
+        "canvas": [
+          44,
+          12
+        ],
+        "alphaBounds16": [
+          19,
+          2,
+          39,
+          10
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 102
+      }
+    },
+    {
+      "name": "ALightRotorV5_10",
+      "sourceBounds": [
+        1620,
+        449,
+        1895,
+        719
+      ],
+      "sourceUniformScale": 0.21454545454545454,
+      "placement": [
+        3,
+        2
+      ],
+      "image": {
+        "path": "Art/Aircraft/scout-v5-20261109/rgba/ALightRotorV5_10.png",
+        "sha256": "1639aa2fd4527980009fb10092dcee8e876cf2a2bdfdd17e7e4009726c72b169",
+        "canvas": [
+          64,
+          64
+        ],
+        "alphaBounds16": [
+          3,
+          2,
+          61,
+          61
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 1039
+      }
+    }
+  ],
+  "disconnectedDebrisCleanup": [
+    {
+      "cell": 0,
+      "removedDisconnectedPixels": 2586
+    },
+    {
+      "cell": 1,
+      "removedDisconnectedPixels": 2732
+    },
+    {
+      "cell": 2,
+      "removedDisconnectedPixels": 2738
+    },
+    {
+      "cell": 3,
+      "removedDisconnectedPixels": 2440
+    },
+    {
+      "cell": 4,
+      "removedDisconnectedPixels": 2801
+    },
+    {
+      "cell": 5,
+      "removedDisconnectedPixels": 2585
+    },
+    {
+      "cell": 6,
+      "removedDisconnectedPixels": 2558
+    },
+    {
+      "cell": 7,
+      "removedDisconnectedPixels": 717
+    },
+    {
+      "cell": 8,
+      "removedDisconnectedPixels": 605
+    },
+    {
+      "cell": 9,
+      "removedDisconnectedPixels": 2242
+    }
+  ],
+  "assets": [
+    {
+      "rgba": {
+        "path": "Art/Aircraft/scout-v5-20261109/rgba/ALightBodyV5_10.png",
+        "sha256": "fbef091e47e6a79264eb74aaff7bc591259e6f4bf77b512c877a4f36b606a72d",
+        "canvas": [
+          700,
+          54
+        ],
+        "alphaBounds16": [
+          7,
+          2,
+          696,
+          52
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 13426
+      },
+      "cgbi": {
+        "path": "Art/Aircraft/scout-v5-20261109/cgbi/ALightBodyV5_10.png",
+        "sha256": "5cfbd2e1d7c205d23850c07beb3fd4cf5e7d36d18b7306767e0171b3a92e486f",
+        "canvas": [
+          700,
+          54
+        ],
+        "alphaBounds16": [
+          7,
+          2,
+          696,
+          52
+        ],
+        "cgbi": true,
+        "partialAlphaPixels": 13426
+      },
+      "alphaExact": true,
+      "opaqueRGBExact": true
+    },
+    {
+      "rgba": {
+        "path": "Art/Aircraft/scout-v5-20261109/rgba/ALightGunV5_10.png",
+        "sha256": "5d7b4a502d6a2a6886378de1bfc8b10c36acab297e0c7276cd18af2f50da5c6c",
+        "canvas": [
+          46,
+          10
+        ],
+        "alphaBounds16": [
+          20,
+          2,
+          42,
+          9
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 93
+      },
+      "cgbi": {
+        "path": "Art/Aircraft/scout-v5-20261109/cgbi/ALightGunV5_10.png",
+        "sha256": "0da7de8e424c73eed81d6ef7c8655922ed1d3084343ab9df7ae6985d286e9a50",
+        "canvas": [
+          46,
+          10
+        ],
+        "alphaBounds16": [
+          20,
+          2,
+          42,
+          9
+        ],
+        "cgbi": true,
+        "partialAlphaPixels": 93
+      },
+      "alphaExact": true,
+      "opaqueRGBExact": true
+    },
+    {
+      "rgba": {
+        "path": "Art/Aircraft/scout-v5-20261109/rgba/ALightMissileV5_10.png",
+        "sha256": "9bc6f9190597ef7b80beffd0cf500d2a6f843743e308bdedf098da835a57d6de",
+        "canvas": [
+          44,
+          12
+        ],
+        "alphaBounds16": [
+          19,
+          2,
+          39,
+          10
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 102
+      },
+      "cgbi": {
+        "path": "Art/Aircraft/scout-v5-20261109/cgbi/ALightMissileV5_10.png",
+        "sha256": "dfbafdfb5070ae12dfbb9673d1c0efda209ff952430c1b93c961c4a3837e85b8",
+        "canvas": [
+          44,
+          12
+        ],
+        "alphaBounds16": [
+          19,
+          2,
+          39,
+          10
+        ],
+        "cgbi": true,
+        "partialAlphaPixels": 102
+      },
+      "alphaExact": true,
+      "opaqueRGBExact": true
+    },
+    {
+      "rgba": {
+        "path": "Art/Aircraft/scout-v5-20261109/rgba/ALightRotorV5_10.png",
+        "sha256": "1639aa2fd4527980009fb10092dcee8e876cf2a2bdfdd17e7e4009726c72b169",
+        "canvas": [
+          64,
+          64
+        ],
+        "alphaBounds16": [
+          3,
+          2,
+          61,
+          61
+        ],
+        "cgbi": false,
+        "partialAlphaPixels": 1039
+      },
+      "cgbi": {
+        "path": "Art/Aircraft/scout-v5-20261109/cgbi/ALightRotorV5_10.png",
+        "sha256": "c411dc878758d7b803dc61a0fe9d30f362663360ebec5dee505989f4e6dae22b",
+        "canvas": [
+          64,
+          64
+        ],
+        "alphaBounds16": [
+          3,
+          2,
+          61,
+          61
+        ],
+        "cgbi": true,
+        "partialAlphaPixels": 1039
+      },
+      "alphaExact": true,
+      "opaqueRGBExact": true
+    }
+  ],
+  "assemblyProposal": {
+    "parts": [
+      {
+        "name": "ALightBodyV5_10",
+        "type": 0,
+        "tileCount": 7,
+        "sockets": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            -13
+          ],
+          [
+            6,
+            12
+          ]
+        ],
+        "texture": {
+          "image": "ALightBodyV5_10",
+          "grid": [
+            7,
+            1
+          ],
+          "firstTile": 0
+        }
+      },
+      {
+        "name": "ALightRotorV5_10",
+        "type": 7,
+        "tileCount": 1,
+        "sockets": [
+          [
+            0,
+            0
+          ]
+        ],
+        "texture": {
+          "image": "ALightRotorV5_10",
+          "grid": [
+            1,
+            1
+          ],
+          "firstTile": 0
+        }
+      }
+    ],
+    "weaponImages": {
+      "ALightGun": "ALightGunV5_10",
+      "ALightMissile": "ALightMissileV5_10"
+    },
+    "weaponSockets": {
+      "ALightGun": [
+        [
+          0,
+          0
+        ],
+        [
+          18,
+          0
+        ],
+        [
+          18,
+          0
+        ]
+      ],
+      "ALightMissile": [
+        [
+          0,
+          0
+        ],
+        [
+          17,
+          -1
+        ],
+        [
+          17,
+          1
+        ]
+      ]
+    },
+    "machineParts": [
+      {
+        "name": "ALightBodyV5_10",
+        "parentSocket": 0,
+        "zOrder": 1,
+        "children": [
+          {
+            "name": "ALightGun_10",
+            "parentSocket": 2,
+            "zOrder": 2,
+            "children": []
+          },
+          {
+            "name": "ALightMissile_10",
+            "parentSocket": 3,
+            "zOrder": 2,
+            "children": []
+          },
+          {
+            "name": "ALightRotorV5_10",
+            "parentSocket": 1,
+            "zOrder": 3,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "sourceUnmodified": true,
+    "sevenDrawnBankPoses": true,
+    "bodyContainsNoWeaponBarrelsOrRotorBlades": true,
+    "gameRuntimeTested": false,
+    "wholeRotationWidthNotYetMeasured": true
+  }
+}

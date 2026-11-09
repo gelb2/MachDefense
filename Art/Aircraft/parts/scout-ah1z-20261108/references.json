@@ -1,0 +1,108 @@
+{
+  "game": "MachDefense",
+  "version": "Wemade 1.0.3 prepared resources",
+  "baselineCommit": "cf6f68f",
+  "references": [
+    {
+      "file": "Resources/Images/P_Body_01.png",
+      "role": "original MachDefense reference",
+      "sha256": "bfa5d07f6ca5a1d1514e5f60a1f25b888ad7a66053e4113d5fd435b989a5e742",
+      "canvas": [
+        32,
+        64
+      ],
+      "alphaBounds16": [
+        0,
+        14,
+        31,
+        35
+      ]
+    },
+    {
+      "file": "Resources/Images/P_Body_05.png",
+      "role": "original MachDefense reference",
+      "sha256": "618cc67d79f0b5062329022442efff683861ce760274dcfbd7bee698b0382874",
+      "canvas": [
+        64,
+        64
+      ],
+      "alphaBounds16": [
+        12,
+        14,
+        40,
+        35
+      ]
+    },
+    {
+      "file": "Resources/Images/P_Body_34.png",
+      "role": "original MachDefense reference",
+      "sha256": "b4f5f69579a37381e42146c6418447ec23853170e674353ca930974eed84d3d5",
+      "canvas": [
+        64,
+        64
+      ],
+      "alphaBounds16": [
+        7,
+        12,
+        50,
+        40
+      ]
+    },
+    {
+      "file": "Resources/Images/ADuctBody.png",
+      "role": "approved helicopter texture reference",
+      "sha256": "c8bf2a2288f4c8bbf295e9c609116e549950ee1691af485a3d1c3e931780a932",
+      "canvas": [
+        110,
+        88
+      ],
+      "alphaBounds16": [
+        1,
+        0,
+        109,
+        88
+      ]
+    },
+    {
+      "file": "Resources/Images/ATransportBody.png",
+      "role": "approved helicopter texture reference",
+      "sha256": "6e844ce3217f9756ff6a99fdd64b2f120e001896974c6164cf59c228c1c4244e",
+      "canvas": [
+        140,
+        131
+      ],
+      "alphaBounds16": [
+        2,
+        3,
+        135,
+        127
+      ]
+    },
+    {
+      "file": "Resources/Images/AHeavyBody.png",
+      "role": "approved helicopter texture reference",
+      "sha256": "fbc13c890b6c219caae6a716c509d464abd0ef0c5bb142dbdc21696203a5612e",
+      "canvas": [
+        76,
+        112
+      ],
+      "alphaBounds16": [
+        0,
+        0,
+        76,
+        112
+      ]
+    }
+  ],
+  "realAircraftSources": [
+    {
+      "url": "https://www.bellflight.com/products/bell-ah-1z",
+      "image": "https://cdn.prod.website-files.com/6978d5f2a9c9b84d0424a948/69cfb4b5583279d4adfab613_bell-ah-1z-5.jpg",
+      "role": "AH-1Z outline only; photo not published in report"
+    },
+    {
+      "url": "https://www.navair.navy.mil/product/AH-1Z-Viper",
+      "role": "four-bladed rotor confirmation"
+    }
+  ]
+}

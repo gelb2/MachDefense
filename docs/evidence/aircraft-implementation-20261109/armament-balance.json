@@ -1,0 +1,285 @@
+{
+  "originalWeaponRowsByteIdentical": true,
+  "units": [
+    {
+      "unit": "Scout Heli",
+      "level": 1,
+      "idealDps": 30.3721530955,
+      "target": 30.2104838396,
+      "deviationPct": 0.5351428886686271
+    },
+    {
+      "unit": "Scout Heli",
+      "level": 2,
+      "idealDps": 49.1007863795,
+      "target": 49.5007927858,
+      "deviationPct": -0.808080807980005
+    },
+    {
+      "unit": "Scout Heli",
+      "level": 3,
+      "idealDps": 73.3828419383,
+      "target": 72.3244916548,
+      "deviationPct": 1.46333594510617
+    },
+    {
+      "unit": "Scout Heli",
+      "level": 4,
+      "idealDps": 96.58154681330001,
+      "target": 96.8015503368,
+      "deviationPct": -0.22727272728023662
+    },
+    {
+      "unit": "Scout Heli",
+      "level": 5,
+      "idealDps": 133.2654676623,
+      "target": 131.522106408,
+      "deviationPct": 1.3255271694720738
+    },
+    {
+      "unit": "Scout Heli",
+      "level": 6,
+      "idealDps": 165.0893106742,
+      "target": 165.762654792,
+      "deviationPct": -0.4062097814763743
+    },
+    {
+      "unit": "Scout Heli",
+      "level": 7,
+      "idealDps": 216.6651366932,
+      "target": 215.44345046,
+      "deviationPct": 0.5670565666264338
+    },
+    {
+      "unit": "Scout Heli",
+      "level": 8,
+      "idealDps": 276.997769625,
+      "target": 279.724479961,
+      "deviationPct": -0.9747843078947382
+    },
+    {
+      "unit": "Scout Heli",
+      "level": 9,
+      "idealDps": 329.438609497,
+      "target": 329.505277231,
+      "deviationPct": -0.02023267565248732
+    },
+    {
+      "unit": "Scout Heli",
+      "level": 10,
+      "idealDps": 391.412935387,
+      "target": 392.879625544,
+      "deviationPct": -0.3733179482059312
+    },
+    {
+      "unit": "AH-10",
+      "level": 1,
+      "idealDps": 126.87369862739999,
+      "target": 129.96208142280003,
+      "deviationPct": -2.376372216872036
+    },
+    {
+      "unit": "AH-10",
+      "level": 2,
+      "idealDps": 182.1695842252,
+      "target": 179.4028732479,
+      "deviationPct": 1.542177629160335
+    },
+    {
+      "unit": "AH-10",
+      "level": 3,
+      "idealDps": 268.1259608699,
+      "target": 268.2492961788,
+      "deviationPct": -0.04597786859348307
+    },
+    {
+      "unit": "AH-10",
+      "level": 4,
+      "idealDps": 330.0319523326,
+      "target": 334.4303561094,
+      "deviationPct": -1.3151927438552313
+    },
+    {
+      "unit": "AH-10",
+      "level": 5,
+      "idealDps": 496.0829450759,
+      "target": 494.0479124829,
+      "deviationPct": 0.4119099669448456
+    },
+    {
+      "unit": "AH-10",
+      "level": 6,
+      "idealDps": 572.8408410672,
+      "target": 575.7167204595,
+      "deviationPct": -0.4995302880911101
+    },
+    {
+      "unit": "AH-10",
+      "level": 7,
+      "idealDps": 649.9220755713001,
+      "target": 657.2355260337,
+      "deviationPct": -1.1127594557365672
+    },
+    {
+      "unit": "AH-10",
+      "level": 8,
+      "idealDps": 744.626925661,
+      "target": 743.5019076435,
+      "deviationPct": 0.15131340026628415
+    },
+    {
+      "unit": "AH-10",
+      "level": 9,
+      "idealDps": 821.456489468,
+      "target": 825.6732236676,
+      "deviationPct": -0.5107025489902051
+    },
+    {
+      "unit": "AH-10",
+      "level": 10,
+      "idealDps": 920.0630687130001,
+      "target": 912.61461609,
+      "deviationPct": 0.8161662646728463
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 1,
+      "idealDps": 63.7110203714,
+      "target": 63.46101636733334,
+      "deviationPct": 0.3939489443716804
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 2,
+      "idealDps": 92.99148931619999,
+      "target": 92.80148627316666,
+      "deviationPct": 0.20474137932882108
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 3,
+      "idealDps": 138.5022181988,
+      "target": 137.63275982946666,
+      "deviationPct": 0.6317234141134831
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 4,
+      "idealDps": 176.0928202352,
+      "target": 176.011152261,
+      "deviationPct": 0.04639931796985852
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 5,
+      "idealDps": 252.074037122,
+      "target": 252.3640417663,
+      "deviationPct": -0.11491520038681147
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 6,
+      "idealDps": 301.934835673,
+      "target": 302.41401001450004,
+      "deviationPct": -0.1584497826264908
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 7,
+      "idealDps": 362.87581168099996,
+      "target": 362.7074756512333,
+      "deviationPct": 0.04641096229527353
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 8,
+      "idealDps": 433.706946085,
+      "target": 434.3169558551666,
+      "deviationPct": -0.14045267216553636
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 9,
+      "idealDps": 494.64792209300003,
+      "target": 494.89459270986663,
+      "deviationPct": -0.049843061633769725
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 10,
+      "idealDps": 566.669075556,
+      "target": 566.1246223926667,
+      "deviationPct": 0.0961719631681568
+    },
+    {
+      "unit": "Beluga",
+      "level": 1,
+      "idealDps": 96.46154489130001,
+      "target": 96.71154889506668,
+      "deviationPct": -0.25850480798103037
+    },
+    {
+      "unit": "Beluga",
+      "level": 2,
+      "idealDps": 134.7754918462,
+      "target": 136.10217976053332,
+      "deviationPct": -0.9747734508496309
+    },
+    {
+      "unit": "Beluga",
+      "level": 3,
+      "idealDps": 203.9632665978,
+      "target": 202.94102800413333,
+      "deviationPct": 0.5037121392948984
+    },
+    {
+      "unit": "Beluga",
+      "level": 4,
+      "idealDps": 252.79738204,
+      "target": 255.2207541852,
+      "deviationPct": -0.9495200156964922
+    },
+    {
+      "unit": "Beluga",
+      "level": 5,
+      "idealDps": 374.99933918,
+      "target": 373.2059771246,
+      "deviationPct": 0.4805287603422359
+    },
+    {
+      "unit": "Beluga",
+      "level": 6,
+      "idealDps": 438.140350423,
+      "target": 439.06536523700004,
+      "deviationPct": -0.21067815574584703
+    },
+    {
+      "unit": "Beluga",
+      "level": 7,
+      "idealDps": 509.194821737,
+      "target": 509.97150084246664,
+      "deviationPct": -0.15229853122843418
+    },
+    {
+      "unit": "Beluga",
+      "level": 8,
+      "idealDps": 591.0961334379999,
+      "target": 588.9094317493333,
+      "deviationPct": 0.37131374890211344
+    },
+    {
+      "unit": "Beluga",
+      "level": 9,
+      "idealDps": 661.650596744,
+      "target": 660.2839081887333,
+      "deviationPct": 0.20698498605180582
+    },
+    {
+      "unit": "Beluga",
+      "level": 10,
+      "idealDps": 738.4984941770001,
+      "target": 739.3696192413333,
+      "deviationPct": -0.11781997010197331
+    }
+  ]
+}

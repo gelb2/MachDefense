@@ -1,0 +1,1 @@
+{"parts": 40, "potRGBABytes": 378880}

@@ -1,0 +1,694 @@
+{
+  "sourceArchiveSHA256": "882fe8efa9a0c3d51c23da190ee3d30376a1b6766e16cc6b87daf09b98dc92b1",
+  "scope": "PNG metadata inventory; five original unit images; 28 helicopter images; CPU decode and interpolation model, not a GPU capture",
+  "originalMetadata": {
+    "png": 948,
+    "CgBI": 948,
+    "iCCP": 622,
+    "sRGB": 0,
+    "gAMA": 132,
+    "cHRM": 668
+  },
+  "originalSamples": [
+    {
+      "image": "E_Tank32_Body.png",
+      "size": [
+        100,
+        105
+      ],
+      "originalSHA256": "326593c9e0c5d25345e58d1774f4b54bd1d5187bdae7052fa601f37c7dbfaaf9",
+      "preparedSHA256": "c884a2536c8ebf8b86c25c50a66670ed9ce9122f83d31766772837ddcbf6486b",
+      "originalChunks": [
+        "CgBI",
+        "IHDR",
+        "iCCP",
+        "pHYs",
+        "IDAT",
+        "IEND"
+      ],
+      "preparedChunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "preparedEqualsPreparationFormula": true,
+      "stbDirectCgbiVersusPrepared": {
+        "differentChannels": 0,
+        "maxDifference": 0
+      },
+      "stbPreparedVersusPython": {
+        "differentChannels": 0,
+        "maxDifference": 0
+      },
+      "alphaChanged": 0,
+      "opaquePixels": 6239,
+      "opaqueRGBChanged": 0,
+      "partialAlphaPixels": 2464,
+      "reconstructedPremultipliedRGB": {
+        "differentChannels": 2996,
+        "maxDifference": 1
+      },
+      "icc": {
+        "name": "ICC Profile",
+        "compressionObserved": "raw-deflate",
+        "bytes": 3144,
+        "sha256": "3f6d674174f3804eb0dabdac90ae17486e898c5063a66f861c116ea033da8301",
+        "colorSpace": "RGB "
+      },
+      "cpuHorizontalMidpointModel": {
+        "background": "black",
+        "maxRGBDifference": 36.272549,
+        "samplesOver1": 401
+      }
+    },
+    {
+      "image": "E_Tank32_Wpn.png",
+      "size": [
+        67,
+        65
+      ],
+      "originalSHA256": "4f56c6de4704acc129fbac71d0e66b9cd052b0b2d5324d17ad50aaf27b5ed537",
+      "preparedSHA256": "aca52d22d708fc6ae8a648d92ec20a702849434ab272a49c1776c06e9a1a67ef",
+      "originalChunks": [
+        "CgBI",
+        "IHDR",
+        "iCCP",
+        "pHYs",
+        "IDAT",
+        "IEND"
+      ],
+      "preparedChunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "preparedEqualsPreparationFormula": true,
+      "stbDirectCgbiVersusPrepared": {
+        "differentChannels": 0,
+        "maxDifference": 0
+      },
+      "stbPreparedVersusPython": {
+        "differentChannels": 0,
+        "maxDifference": 0
+      },
+      "alphaChanged": 0,
+      "opaquePixels": 1990,
+      "opaqueRGBChanged": 0,
+      "partialAlphaPixels": 1280,
+      "reconstructedPremultipliedRGB": {
+        "differentChannels": 1425,
+        "maxDifference": 1
+      },
+      "icc": {
+        "name": "ICC Profile",
+        "compressionObserved": "raw-deflate",
+        "bytes": 3144,
+        "sha256": "3f6d674174f3804eb0dabdac90ae17486e898c5063a66f861c116ea033da8301",
+        "colorSpace": "RGB "
+      },
+      "cpuHorizontalMidpointModel": {
+        "background": "black",
+        "maxRGBDifference": 46.0,
+        "samplesOver1": 376
+      }
+    },
+    {
+      "image": "P_Body_18.png",
+      "size": [
+        64,
+        64
+      ],
+      "originalSHA256": "9714ad1d7e0d5f9b1b2a029b4e18038b3f9e09304afbd6cbaff245b938325b41",
+      "preparedSHA256": "b0962cc7192096964019f938606ee5d9e80b598681c9d730a82916e3a2b5918e",
+      "originalChunks": [
+        "CgBI",
+        "IHDR",
+        "iCCP",
+        "cHRM",
+        "pHYs",
+        "IDAT",
+        "IEND"
+      ],
+      "preparedChunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "preparedEqualsPreparationFormula": true,
+      "stbDirectCgbiVersusPrepared": {
+        "differentChannels": 0,
+        "maxDifference": 0
+      },
+      "stbPreparedVersusPython": {
+        "differentChannels": 0,
+        "maxDifference": 0
+      },
+      "alphaChanged": 0,
+      "opaquePixels": 734,
+      "opaqueRGBChanged": 0,
+      "partialAlphaPixels": 351,
+      "reconstructedPremultipliedRGB": {
+        "differentChannels": 345,
+        "maxDifference": 1
+      },
+      "icc": {
+        "name": "Photoshop ICC profile",
+        "compressionObserved": "raw-deflate",
+        "bytes": 3144,
+        "sha256": "3f6d674174f3804eb0dabdac90ae17486e898c5063a66f861c116ea033da8301",
+        "colorSpace": "RGB "
+      },
+      "cpuHorizontalMidpointModel": {
+        "background": "black",
+        "maxRGBDifference": 59.75,
+        "samplesOver1": 206
+      }
+    },
+    {
+      "image": "P_Wpn_Gun_106.png",
+      "size": [
+        64,
+        16
+      ],
+      "originalSHA256": "2a883e4010e1280bff6d7ae8cab5758c84b572cde468fc15332b51021051a2bd",
+      "preparedSHA256": "eaeacdd1b3aaf2883d93dd8c8866983d65e9e8887c30b9122eaf5c0e5df7db6d",
+      "originalChunks": [
+        "CgBI",
+        "IHDR",
+        "iCCP",
+        "cHRM",
+        "pHYs",
+        "IDAT",
+        "IEND"
+      ],
+      "preparedChunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "preparedEqualsPreparationFormula": true,
+      "stbDirectCgbiVersusPrepared": {
+        "differentChannels": 0,
+        "maxDifference": 0
+      },
+      "stbPreparedVersusPython": {
+        "differentChannels": 0,
+        "maxDifference": 0
+      },
+      "alphaChanged": 0,
+      "opaquePixels": 148,
+      "opaqueRGBChanged": 0,
+      "partialAlphaPixels": 184,
+      "reconstructedPremultipliedRGB": {
+        "differentChannels": 186,
+        "maxDifference": 1
+      },
+      "icc": {
+        "name": "Photoshop ICC profile",
+        "compressionObserved": "raw-deflate",
+        "bytes": 3144,
+        "sha256": "3f6d674174f3804eb0dabdac90ae17486e898c5063a66f861c116ea033da8301",
+        "colorSpace": "RGB "
+      },
+      "cpuHorizontalMidpointModel": {
+        "background": "black",
+        "maxRGBDifference": 56.25,
+        "samplesOver1": 122
+      }
+    },
+    {
+      "image": "P_Foot_32x16.png",
+      "size": [
+        256,
+        64
+      ],
+      "originalSHA256": "51f5f4577323b82818856943a5ac30c88f8406232507630215f3e5ba8ef5c699",
+      "preparedSHA256": "b1d6cb4377f49d5c854a50c9bad027ccc04ec6fa0ec9a13c1494b4b44f82324b",
+      "originalChunks": [
+        "CgBI",
+        "IHDR",
+        "iCCP",
+        "cHRM",
+        "pHYs",
+        "IDAT",
+        "IEND"
+      ],
+      "preparedChunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "preparedEqualsPreparationFormula": true,
+      "stbDirectCgbiVersusPrepared": {
+        "differentChannels": 0,
+        "maxDifference": 0
+      },
+      "stbPreparedVersusPython": {
+        "differentChannels": 0,
+        "maxDifference": 0
+      },
+      "alphaChanged": 0,
+      "opaquePixels": 4041,
+      "opaqueRGBChanged": 0,
+      "partialAlphaPixels": 2479,
+      "reconstructedPremultipliedRGB": {
+        "differentChannels": 2896,
+        "maxDifference": 1
+      },
+      "icc": {
+        "name": "Photoshop ICC profile",
+        "compressionObserved": "raw-deflate",
+        "bytes": 3144,
+        "sha256": "3f6d674174f3804eb0dabdac90ae17486e898c5063a66f861c116ea033da8301",
+        "colorSpace": "RGB "
+      },
+      "cpuHorizontalMidpointModel": {
+        "background": "black",
+        "maxRGBDifference": 63.75,
+        "samplesOver1": 1350
+      }
+    }
+  ],
+  "helicopters": [
+    {
+      "image": "ADuctBody.png",
+      "size": [
+        110,
+        88
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 9680,
+      "partialAlphaPixels": 4017,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ADuctBodyBankL.png",
+      "size": [
+        65,
+        62
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 4030,
+      "partialAlphaPixels": 2015,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ADuctBodyBankR.png",
+      "size": [
+        65,
+        62
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 4030,
+      "partialAlphaPixels": 2017,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ADuctFan.png",
+      "size": [
+        24,
+        24
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 576,
+      "partialAlphaPixels": 414,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ADuctGun.png",
+      "size": [
+        18,
+        7
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 126,
+      "partialAlphaPixels": 74,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ADuctMissile.png",
+      "size": [
+        18,
+        13
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 234,
+      "partialAlphaPixels": 172,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "AHeavyBody.png",
+      "size": [
+        76,
+        112
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 8512,
+      "partialAlphaPixels": 4350,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "AHeavyBodyBankL.png",
+      "size": [
+        108,
+        154
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 16632,
+      "partialAlphaPixels": 9882,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "AHeavyBodyBankR.png",
+      "size": [
+        108,
+        154
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 16632,
+      "partialAlphaPixels": 9712,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "AHeavyCannon.png",
+      "size": [
+        18,
+        10
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 180,
+      "partialAlphaPixels": 119,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "AHeavyGun.png",
+      "size": [
+        25,
+        10
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 250,
+      "partialAlphaPixels": 160,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "AHeavyMissile.png",
+      "size": [
+        16,
+        12
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 192,
+      "partialAlphaPixels": 134,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "AHeavyRotor.png",
+      "size": [
+        88,
+        88
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 7744,
+      "partialAlphaPixels": 638,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ALightBody.png",
+      "size": [
+        62,
+        39
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 2418,
+      "partialAlphaPixels": 888,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ALightBodyBankL.png",
+      "size": [
+        82,
+        35
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 2870,
+      "partialAlphaPixels": 1334,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ALightBodyBankR.png",
+      "size": [
+        82,
+        35
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 2870,
+      "partialAlphaPixels": 1352,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ALightGun.png",
+      "size": [
+        14,
+        7
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 98,
+      "partialAlphaPixels": 60,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ALightMissile.png",
+      "size": [
+        13,
+        8
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 104,
+      "partialAlphaPixels": 69,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ALightRotor.png",
+      "size": [
+        59,
+        59
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 3481,
+      "partialAlphaPixels": 746,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ATransportBody.png",
+      "size": [
+        140,
+        131
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 18340,
+      "partialAlphaPixels": 5361,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ATransportBodyBankL.png",
+      "size": [
+        72,
+        71
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 5112,
+      "partialAlphaPixels": 2442,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ATransportBodyBankR.png",
+      "size": [
+        72,
+        71
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 5112,
+      "partialAlphaPixels": 2419,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ATransportEngine.png",
+      "size": [
+        50,
+        29
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 1450,
+      "partialAlphaPixels": 1050,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ATransportFan.png",
+      "size": [
+        80,
+        80
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 6400,
+      "partialAlphaPixels": 1193,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ATransportGun.png",
+      "size": [
+        21,
+        11
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 231,
+      "partialAlphaPixels": 128,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ATransportMissile.png",
+      "size": [
+        21,
+        13
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 273,
+      "partialAlphaPixels": 134,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ATransportWingL.png",
+      "size": [
+        31,
+        49
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 1519,
+      "partialAlphaPixels": 872,
+      "stbEqualsPython": true
+    },
+    {
+      "image": "ATransportWingR.png",
+      "size": [
+        31,
+        49
+      ],
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "totalPixels": 1519,
+      "partialAlphaPixels": 863,
+      "stbEqualsPython": true
+    }
+  ]
+}

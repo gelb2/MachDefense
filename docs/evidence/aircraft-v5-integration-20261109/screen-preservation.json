@@ -1,0 +1,797 @@
+{
+  "baseline": "/Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/.local/remaining-20261109/final-web-check/chrome-poses",
+  "current": "/Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/.local/v5-game-integration/web/chrome-final-poses-8960",
+  "regions": {
+    "originalGroundUnit": [
+      340,
+      350,
+      560,
+      535
+    ],
+    "Cheyenne": [
+      580,
+      150,
+      770,
+      370
+    ],
+    "AH10": [
+      120,
+      530,
+      390,
+      790
+    ],
+    "ScoutLv1to9": [
+      130,
+      130,
+      370,
+      390
+    ]
+  },
+  "images": [
+    {
+      "level": 1,
+      "pose": 0,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 1,
+      "pose": 1,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 1,
+      "pose": 2,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 1,
+      "pose": 3,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 1,
+      "pose": 4,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 1,
+      "pose": 5,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 1,
+      "pose": 6,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 2,
+      "pose": 0,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 2,
+      "pose": 1,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 2,
+      "pose": 2,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 2,
+      "pose": 3,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 2,
+      "pose": 4,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 2,
+      "pose": 5,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 2,
+      "pose": 6,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 3,
+      "pose": 0,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 3,
+      "pose": 1,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 3,
+      "pose": 2,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 3,
+      "pose": 3,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 3,
+      "pose": 4,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 3,
+      "pose": 5,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 3,
+      "pose": 6,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 4,
+      "pose": 0,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 4,
+      "pose": 1,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 4,
+      "pose": 2,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 4,
+      "pose": 3,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 4,
+      "pose": 4,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 4,
+      "pose": 5,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 4,
+      "pose": 6,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 5,
+      "pose": 0,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 5,
+      "pose": 1,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 5,
+      "pose": 2,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 5,
+      "pose": 3,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 5,
+      "pose": 4,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 5,
+      "pose": 5,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 5,
+      "pose": 6,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 6,
+      "pose": 0,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 6,
+      "pose": 1,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 6,
+      "pose": 2,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 6,
+      "pose": 3,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 6,
+      "pose": 4,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 6,
+      "pose": 5,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 6,
+      "pose": 6,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 7,
+      "pose": 0,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 7,
+      "pose": 1,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 7,
+      "pose": 2,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 7,
+      "pose": 3,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 7,
+      "pose": 4,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 7,
+      "pose": 5,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 7,
+      "pose": 6,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 8,
+      "pose": 0,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 8,
+      "pose": 1,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 8,
+      "pose": 2,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 8,
+      "pose": 3,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 8,
+      "pose": 4,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 8,
+      "pose": 5,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 8,
+      "pose": 6,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 9,
+      "pose": 0,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 9,
+      "pose": 1,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 9,
+      "pose": 2,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 9,
+      "pose": 3,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 9,
+      "pose": 4,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 9,
+      "pose": 5,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 9,
+      "pose": 6,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0,
+        "ScoutLv1to9": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 10,
+      "pose": 0,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 10,
+      "pose": 1,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 10,
+      "pose": 2,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 10,
+      "pose": 3,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 10,
+      "pose": 4,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 10,
+      "pose": 5,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    },
+    {
+      "level": 10,
+      "pose": 6,
+      "regionDifferenceMaximum": {
+        "originalGroundUnit": 0.0,
+        "Cheyenne": 0.0,
+        "AH10": 0.0
+      },
+      "outsideAdoptedAircraftDifferenceMaximum": 0.0
+    }
+  ],
+  "preservedRegionsExact": true,
+  "outsideAdoptedAircraftExact": true
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "name": "reference",
+    "w": 320,
+    "h": 480,
+    "originalTitleCount": 1,
+    "originalSize": [
+      320,
+      480
+    ],
+    "slotsOpened": true,
+    "writes": 0,
+    "errors": []
+  },
+  {
+    "name": "iphone",
+    "w": 390,
+    "h": 844,
+    "originalTitleCount": 3,
+    "originalSize": [
+      320,
+      480
+    ],
+    "slotsOpened": true,
+    "writes": 0,
+    "errors": []
+  },
+  {
+    "name": "ipad",
+    "w": 820,
+    "h": 1180,
+    "originalTitleCount": 9,
+    "originalSize": [
+      320,
+      480
+    ],
+    "slotsOpened": true,
+    "writes": 0,
+    "errors": []
+  },
+  {
+    "name": "desktop",
+    "w": 1280,
+    "h": 800,
+    "originalTitleCount": 9,
+    "originalSize": [
+      320,
+      480
+    ],
+    "slotsOpened": true,
+    "writes": 0,
+    "errors": []
+  },
+  {
+    "name": "wide",
+    "w": 1600,
+    "h": 900,
+    "originalTitleCount": 9,
+    "originalSize": [
+      320,
+      480
+    ],
+    "slotsOpened": true,
+    "writes": 0,
+    "errors": []
+  }
+]

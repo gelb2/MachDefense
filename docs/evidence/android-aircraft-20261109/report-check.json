@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "width": 1280,
+      "rows": 40,
+      "imageDecoded": true,
+      "allNumericCellsMatch": true,
+      "iosInstallPresent": true
+    },
+    {
+      "width": 390,
+      "rows": 40,
+      "imageDecoded": true,
+      "allNumericCellsMatch": true,
+      "iosInstallPresent": true
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "scope": "Cheyenne level 1\u201310 independent armor and missile housings",
+  "coverRegistration": {
+    "bodyCell": [
+      110,
+      88
+    ],
+    "coverCell": [
+      28,
+      14
+    ],
+    "bodyTopLeft": [
+      35,
+      37
+    ],
+    "socket0": [
+      6,
+      0
+    ],
+    "outsideApprovedAlphaPixels": 0
+  },
+  "records": [
+    {
+      "name": "ADuctCover_01",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_01.png",
+      "sourceSHA256": "3f027def1c2a4287bd24b80d8f8a4a97dd92e2bea110c103000f4bc3fd1eca41",
+      "runtimeSHA256": "50755b8afcaacf85602e3b33e92f38576fe2d77ab1c72822fda18627a10ea8c9",
+      "size": [
+        196,
+        14
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ADuctCover_02",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_02.png",
+      "sourceSHA256": "a5d4309ca9d8e36e9f61183d953468a3aa31cbe18c3f2eb95773820c9a7f9552",
+      "runtimeSHA256": "3a4c52b5eaedf32c02e2395068c5de5d6495110327db7dfca2dfe48b91988d2a",
+      "size": [
+        196,
+        14
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ADuctCover_03",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_03.png",
+      "sourceSHA256": "07bd52cc1eb30486f6b592c07ac0a09bba1c7eb5584c4e5257ba320dee5ca929",
+      "runtimeSHA256": "6c9cbee15bb31237a9b0338f51e657bda79d10acf6f87bb5319d4f4b7cd86e28",
+      "size": [
+        196,
+        14
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ADuctCover_04",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_04.png",
+      "sourceSHA256": "76a6cd0d55edc7d6267633c62bb218b30f368b1fd900ff14fadb4a2eb8e9a65b",
+      "runtimeSHA256": "cd1654eaa072df4471d81fc899448e1e850e2d08feeb50b18d5027f9b29b5065",
+      "size": [
+        196,
+        14
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ADuctCover_05",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_05.png",
+      "sourceSHA256": "2c2a64e7d087779ec3d25ab298d7e741673ea56ab91cee35b0f3a07c9b1390c5",
+      "runtimeSHA256": "ef15fafa79d72e50d9e2958ffd5c25c6c8e3859c8857f1a80400423bd1b587b9",
+      "size": [
+        196,
+        14
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ADuctCover_06",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_06.png",
+      "sourceSHA256": "3d6aafb3f3f3bb3375b623e767eda820f27b3103e4b0707283165338a26194cb",
+      "runtimeSHA256": "d62d1221d31d6dfcb1d9b47f0c26a97fb64770a61c6cc4bc56d7807005ab6429",
+      "size": [
+        196,
+        14
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ADuctCover_07",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_07.png",
+      "sourceSHA256": "179adb89bee22e6873d1225dbb7b97fb3728f1838481096317300a7c99b90450",
+      "runtimeSHA256": "a00ec6f95864e4a6c4080aeefb67da33b255fa286c25c5df4419e96a608fcac0",
+      "size": [
+        196,
+        14
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ADuctCover_08",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_08.png",
+      "sourceSHA256": "f7abce13c023935377b3be419a2baf02588d43f13883c4c9a62316b81c4f413b",
+      "runtimeSHA256": "343a40135f49b30f0cd396b38d7f5ae78ddfc9d20962287f0865c09bcfe5981e",
+      "size": [
+        196,
+        14
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ADuctCover_09",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_09.png",
+      "sourceSHA256": "7f5a2151276e08602cb3d297a636d4bb91de3c392f08167d860b92e6fec6d9c2",
+      "runtimeSHA256": "41eeb73d0fae4444d09099a6f1e060cfe4e1e4eb3579d41a81e7c65c3fd2e1de",
+      "size": [
+        196,
+        14
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ADuctCover_10",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_10.png",
+      "sourceSHA256": "3fd0133690264ffc0b9cf7daa22bfe069cab293fd80ecec49ed3677186c05b46",
+      "runtimeSHA256": "d5dd02ba1f13b99f9a48d2f35210394905950f2a84cdc72b2f80a71a32056835",
+      "size": [
+        196,
+        14
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
+    {
+      "name": "ADuctMissile_01",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctMissile_01.png",
+      "sourceSHA256": "bd1cf73f51d8def922c5a4595823b68816c4e0343779c5394230e2acb94aab74",
+      "runtimeSHA256": "5293eb5e7a302029cf533c7e1883b18af4b34825ff39d165beccccbe0e61a0dd",
+      "size": [
+        18,
+        13
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 2048
+    },
+    {
+      "name": "ADuctMissile_02",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctMissile_02.png",
+      "sourceSHA256": "5c954bb37945adda492fbc78fe0bc9be6455d42b0e179150247a9cc28aec02f0",
+      "runtimeSHA256": "dce1b4a38392139aa7606f8046b69728a6065839add231b502fecb40437726a2",
+      "size": [
+        18,
+        13
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 2048
+    },
+    {
+      "name": "ADuctMissile_03",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctMissile_03.png",
+      "sourceSHA256": "6f1dad16a4877f8fc9c5433ed96e01fc33dac5b9cc4eabe45d5854ff1ae90744",
+      "runtimeSHA256": "edaf32ba6359dc7e140caf6e8ccaae38594c71fde59b0fafe798b7e455d9e3f2",
+      "size": [
+        18,
+        13
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 2048
+    },
+    {
+      "name": "ADuctMissile_04",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctMissile_04.png",
+      "sourceSHA256": "3d9d4a62f3ef3eaee5dae72c72f8da0a319f7252f0c961f9f28c1d266dae02bc",
+      "runtimeSHA256": "59733e6df82788081d3adbc4bb2dbb90164827d2b2ed90e66dc7ca1378a9ba3c",
+      "size": [
+        18,
+        13
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 2048
+    },
+    {
+      "name": "ADuctMissile_05",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctMissile_05.png",
+      "sourceSHA256": "89c17cd7143e4cf58d4338e19a2af317629453a1b943a0aefa90310ff1438411",
+      "runtimeSHA256": "1d4de13765b4752bc2c3b939419e0867ef898cb59e6d9783f858e4d69725378a",
+      "size": [
+        18,
+        13
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 2048
+    },
+    {
+      "name": "ADuctMissile_06",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctMissile_06.png",
+      "sourceSHA256": "d1957067e5557c9bc9ea0a7eba7eb563a281211ccc5468d3f9f701207c15950c",
+      "runtimeSHA256": "92737c4508ec17d1ed9af0123c983601702e11e8a149eb0b6f89944d8d7d1502",
+      "size": [
+        18,
+        13
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 2048
+    },
+    {
+      "name": "ADuctMissile_07",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctMissile_07.png",
+      "sourceSHA256": "9f3a3ea6c7097ef01e0d2cb1c76b1a733a7aa2168c7c036a66f3593516b14bef",
+      "runtimeSHA256": "0cc17c211dd387e056af02efd2452c6296f117ffc881c3b5eded40f5ad479a63",
+      "size": [
+        18,
+        13
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 2048
+    },
+    {
+      "name": "ADuctMissile_08",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctMissile_08.png",
+      "sourceSHA256": "416aa33ff80ee3c01dad9bfaf0671b5e5164eee55625af263c32526a0765b3e9",
+      "runtimeSHA256": "55183c0e5242b1cbc627ea077908a19a242797fc797ae55e085f12217d420ee7",
+      "size": [
+        18,
+        13
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 2048
+    },
+    {
+      "name": "ADuctMissile_09",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctMissile_09.png",
+      "sourceSHA256": "dcb85f9bc385ccedeeea6c595f72ad41056919686e90dc02d7c5987b9119e878",
+      "runtimeSHA256": "370e2af078d762ec8e6c9a66d90a06560f432a6e0950bc198afc12d83f3b519f",
+      "size": [
+        18,
+        13
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 2048
+    },
+    {
+      "name": "ADuctMissile_10",
+      "source": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctMissile_10.png",
+      "sourceSHA256": "e7cd7bbc94817f5826cdde08664aa311007e134cff480e42c6132d60d30cec9f",
+      "runtimeSHA256": "6c6f426441ef8bcb4aeab9ac042e9ee693cfec4a54e9f294aacec5d17dbae180",
+      "size": [
+        18,
+        13
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 2048
+    }
+  ],
+  "potRGBABytes": 184320,
+  "runtimeVisualVerification": "separate evidence report"
+}

@@ -1,0 +1,60 @@
+{
+  "preservedLocally": true,
+  "files": [
+    {
+      "file": "beluga-prompt.txt",
+      "sha256": "1b769c7071ff0d65e70a7b8cfcf4ca5c84a97ce8563921a39fce8dae25bfcaf8",
+      "status": "not applied",
+      "reason": "Beluga geometry/paint not preserved"
+    },
+    {
+      "file": "beluga-single-left24-prompt.txt",
+      "sha256": "688bbacca2f223e301a81e17258f84b6ac2fd9fa5575d967c1cdefc908103c60",
+      "status": "not applied",
+      "reason": "Beluga geometry/paint not preserved"
+    },
+    {
+      "file": "beluga-reference-north.png",
+      "sha256": "6dff76960b9bdea25a60a5f86542e456577a5a6173546aa5674740c20e9bb64b",
+      "status": "not applied",
+      "reason": "Beluga geometry/paint not preserved"
+    },
+    {
+      "file": "beluga-prompt-03.txt",
+      "sha256": "4839a929f846177efa8b073848d5d1e7fa64cc82da32ccb41f569dc703bce9ff",
+      "status": "not applied",
+      "reason": "Beluga geometry/paint not preserved"
+    },
+    {
+      "file": "beluga-prompt-02.txt",
+      "sha256": "a2ef599133c08e284b312db6a0ceab7a6465aba69f49c694852f0e5cc3b1fca4",
+      "status": "not applied",
+      "reason": "Beluga geometry/paint not preserved"
+    },
+    {
+      "file": "beluga-candidate-02.png",
+      "sha256": "965c6c25196b854d9b4a4358e8e63797567d53bf5302099e43bfeda6bc970e12",
+      "status": "not applied",
+      "reason": "Beluga geometry/paint not preserved"
+    },
+    {
+      "file": "beluga-candidate-03.png",
+      "sha256": "bf6d988d1d89fc98f35e00fa33945d91db4a5a21773d0722ba02d7ba40cbe3bb",
+      "status": "not applied",
+      "reason": "Beluga geometry/paint not preserved"
+    },
+    {
+      "file": "beluga-candidate-01.png",
+      "sha256": "59565e147c5143021efe73c1d4420cd987eb41d3644f0f59ffd871ba32947efe",
+      "status": "not applied",
+      "reason": "Beluga geometry/paint not preserved"
+    },
+    {
+      "file": "scout-candidate-01.png",
+      "sha256": "0072467f60bfa19adf90ed05bba6f98c3d6c9fc0090ea97c4c019aa069fb9901",
+      "status": "not applied",
+      "reason": "Scout first candidate narrower than approved proportions"
+    }
+  ],
+  "singleBelugaCandidate": "also preserved locally; perspective/proportions not accepted"
+}

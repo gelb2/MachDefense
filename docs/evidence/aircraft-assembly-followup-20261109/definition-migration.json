@@ -1,0 +1,68 @@
+{
+  "sourceBaseline": "73be6dc73e6233e0dde0bfdc6aec1c9bb812100f",
+  "scope": "Persist existing helicopter level definitions in QChunk resources; remove helicopter-only runtime cloning loop",
+  "persistedLevelAssemblies": 40,
+  "baseAssembliesRetained": 4,
+  "partDefinitionsIncludingLevelAliases": 133,
+  "newPartAliases": 110,
+  "imageFilesChanged": 0,
+  "runtimeCloneCallsRemoved": true,
+  "productionPoseComparison": {
+    "levels": 40,
+    "scales": [
+      0.5,
+      1.0
+    ],
+    "bodyAnglesRadians": [
+      0,
+      0.7,
+      1.57
+    ],
+    "cases": 240,
+    "byteIdenticalText": true,
+    "sha256": "e09f91b4d9a8c876453a70666155db6cbbcec9b484185543e0fca43e987fe578",
+    "fields": [
+      "part name",
+      "image path",
+      "tile grid",
+      "position",
+      "angle",
+      "scale",
+      "layer",
+      "reverse",
+      "muzzle positions"
+    ]
+  },
+  "coreTestsPassed": [
+    "AircraftBalance",
+    "AircraftArmament",
+    "AircraftFireEffects",
+    "Battle",
+    "AircraftDefinition"
+  ],
+  "definitionTest": "Tests/AircraftDefinitionTests.cpp: 40 persisted assemblies and 240 pose cases passed",
+  "preservation": [
+    {
+      "path": "Resources/RawData/Level10Parts.mcb",
+      "retainedNodes": 44,
+      "byteIdentical": true
+    },
+    {
+      "path": "Resources/RawData/Level10Machines.mcb",
+      "retainedNodes": 33,
+      "byteIdentical": true
+    },
+    {
+      "path": "Resources/Tables/PartsList.tsv",
+      "originalBytesPreserved": true
+    },
+    {
+      "path": "Resources/Tables/TileList.tsv",
+      "originalBytesPreserved": true
+    }
+  ],
+  "upgradeVisualArtImplemented": false,
+  "missingBelugaAndAH10ArtResolved": false,
+  "webVerification": "separate worker; pending at receipt creation",
+  "definitionTestRegisteredInCMake": true
+}

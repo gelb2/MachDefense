@@ -1,0 +1,7479 @@
+{
+  "status": "structural reuse candidate; not visually approved or product connected",
+  "source_sha256": "6e476cc8ef23076931e8c23c828112f3e5a821098b7f627d976e76cc6ed9fae6",
+  "method": "literal approved bank-specific metal fragments, no repaint/rescale/shear; new local bracket configurations",
+  "rows": [
+    {
+      "level": 1,
+      "pose": 0,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            43
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "325550a90973969e060d2245cfae126c89462a373c23f6955e1275cb6b750afd"
+    },
+    {
+      "level": 1,
+      "pose": 0,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            88
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "3e5a5d1708ea4b93acd7ac9f97097fc21d92de8f2236e8b726f11656910fde34"
+    },
+    {
+      "level": 1,
+      "pose": 1,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            41
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "d77d838abb07bee5a1dc948a28aaeb216a6a8052609a184ff7d3696cdd3716b6"
+    },
+    {
+      "level": 1,
+      "pose": 1,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            85
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "3fb63d5d0377bbb1a637eb452517699766cd3f56f274c09a84e67558a37b4a86"
+    },
+    {
+      "level": 1,
+      "pose": 2,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            40
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "91c37a1fa680864f15f3b82e1c52e861854c19e292503bd8a432320cb75b71f1"
+    },
+    {
+      "level": 1,
+      "pose": 2,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            83
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "97b8825de54327c9831033936ee94c593014d60c6e0dcca05b3e84a1521549df"
+    },
+    {
+      "level": 1,
+      "pose": 3,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            39
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "b239933b632c4e2e7b13199bcc82af1a3eb3ef89dbe1d9ee29fe7261d4c4f08b"
+    },
+    {
+      "level": 1,
+      "pose": 3,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "b02a9a8b3809d8dedd72b66255e494ffdd4b7349fa9f5952296fe03cd6d3351c"
+    },
+    {
+      "level": 1,
+      "pose": 4,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            43
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "708db494b62d8a998f979abf3b679615ea295791d94084da535590a9619cbc85"
+    },
+    {
+      "level": 1,
+      "pose": 4,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            88
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "e361b690114d134ed5788087995d8733f4f7bd43dcda6f7e1a6541b230a6fc54"
+    },
+    {
+      "level": 1,
+      "pose": 5,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            45
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "9c66e64eae67c62e9d29b710a21c41c6d6ce578cff5bd6f607e9b4d9e68b2245"
+    },
+    {
+      "level": 1,
+      "pose": 5,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            90
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "7036ecb3b7c8abcae423c30fa546272513babdb6db1be6af782573581a7989ef"
+    },
+    {
+      "level": 1,
+      "pose": 6,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            47
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "5bfd6e222a4b449f34a127dbe83b3cfe842a7af69f47a1e40240e465af7d7187"
+    },
+    {
+      "level": 1,
+      "pose": 6,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            92
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "e98811c1c9f0129b2b98b313110b7641ea9f42486398adf028e708f232b61c77"
+    },
+    {
+      "level": 2,
+      "pose": 0,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            46
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            39
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "d410e7666786f3868e23bac541fbd1482112f0274b255d9a15b6e13a2c965914"
+    },
+    {
+      "level": 2,
+      "pose": 0,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            91
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            84
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "ea9e097c670772c46501cd912e10b57346f98d085558366db780f7c3764fef5d"
+    },
+    {
+      "level": 2,
+      "pose": 1,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            44
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "9740651a42bc3615e78549a6a77147594cc471008f99c210d32562ce1b434477"
+    },
+    {
+      "level": 2,
+      "pose": 1,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            88
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            81
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "f1ce41a3304882aa495fdef583b2f20c46f7c29641a1dd82892148da0128eb46"
+    },
+    {
+      "level": 2,
+      "pose": 2,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            43
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            36
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "4d94a31dbe704d09a526dc3f7e4702ea2d39bb2ac7241940b5761d6d06e433bf"
+    },
+    {
+      "level": 2,
+      "pose": 2,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            86
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            79
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "57bab9390ee63e603a857e202f47daff1738fc986d4f51056aa292410829fe1f"
+    },
+    {
+      "level": 2,
+      "pose": 3,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            42
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            35
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "1ba2f918d2873b8524fd56447dba929d75dffe6994f8b9894dd093d3b2bba261"
+    },
+    {
+      "level": 2,
+      "pose": 3,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            85
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            78
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "4afa6bc47745c46bcc86a28cacf64eefd83fc37992de544c1c30038803f31a73"
+    },
+    {
+      "level": 2,
+      "pose": 4,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            46
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            39
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "45f5bfa7c53f96674dc1d468f3fd6727f57cb3527f0bb528e5412457c86ca9bd"
+    },
+    {
+      "level": 2,
+      "pose": 4,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            91
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            84
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "9920efe918c7d9b33846562f08f7641759c595b33b39ebaca1fe2c47c4c5eeae"
+    },
+    {
+      "level": 2,
+      "pose": 5,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            48
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            41
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "f6fa414ea7421b1a9db91efb7a9c18ac57b21aeb996c838e5bc18956e92fac93"
+    },
+    {
+      "level": 2,
+      "pose": 5,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            93
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            86
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "d86661873f4129ebe45da07856fda74313f188a38891a98c0ba68111c416ae3c"
+    },
+    {
+      "level": 2,
+      "pose": 6,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            50
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            43
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "ed03e8a832d911b97dcfe666d24788be44932e417b4f8aee7fead08c1ce103b3"
+    },
+    {
+      "level": 2,
+      "pose": 6,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            95
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            88
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "736bf3176c48dcb14ef298621e4b06d1788a605ba44991dd60d04b25c5b681e7"
+    },
+    {
+      "level": 3,
+      "pose": 0,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            46
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "601df19c64a5f992a1b7ac384fc61fc5e8e7d4802800ce0f6c37b43fa910f683"
+    },
+    {
+      "level": 3,
+      "pose": 0,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            91
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "e35a54c784fadd448585d0fcc701bc53b98720fb7407c6122f5319ba99ed534f"
+    },
+    {
+      "level": 3,
+      "pose": 1,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            44
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            35,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            35
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "3aa8bd3e18f27184228140dedf191766256b4e2117af47a7e5d10a03eaecfd6a"
+    },
+    {
+      "level": 3,
+      "pose": 1,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            88
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            79,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            79
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "b003a890aeadf57a79d49d87f39dcf54bd940b12419973a0260205ea7f2b32f7"
+    },
+    {
+      "level": 3,
+      "pose": 2,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            43
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            34,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            34
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "2ba45883f4a10032460f16b04c9ae907a379b2e99eb5fe33f45d9dd3d7c62a56"
+    },
+    {
+      "level": 3,
+      "pose": 2,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            86
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            77,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            77
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "6e95f92f3253f107862efdc9d85ab17efc5be2b3396cb2e942dc473bf984c5cd"
+    },
+    {
+      "level": 3,
+      "pose": 3,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            42
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            33,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            33
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "e681ac5401a35be0ed4419307b0941d98d55bdca89c043e73a3770c2fa36fcac"
+    },
+    {
+      "level": 3,
+      "pose": 3,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            85
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            76,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            76
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "417fe19d58a84c4486b62bd2d83b42e1a61c6687d730c9c1794434b92c4c3780"
+    },
+    {
+      "level": 3,
+      "pose": 4,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            46
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "dd88659b657fdec6a9c39811a3fe3adeb56bec45962da755fd061add2cbfc57b"
+    },
+    {
+      "level": 3,
+      "pose": 4,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            91
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "10f07e55d8859833933586494c94d1b364c39a4727b4015672ccbe3c8af7f873"
+    },
+    {
+      "level": 3,
+      "pose": 5,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            48
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            39,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            39
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "72b5505d80ad47d4d3bb4fabe70c2fc0de93c5d6c75c0b6c9c8f84cdab6b6f9f"
+    },
+    {
+      "level": 3,
+      "pose": 5,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            93
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            84,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            84
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "2dba8d0727b1169ce3f4d91a4a74da9707fd35317a5d819c22919bea2e06c853"
+    },
+    {
+      "level": 3,
+      "pose": 6,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            50
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            41,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            41
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "f680296dad0f0ceb98ce7bc5f9e8fc4d5e2174f245c54a51fc031d1134d533a2"
+    },
+    {
+      "level": 3,
+      "pose": 6,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            95
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            72,
+            86,
+            3,
+            10
+          ],
+          "target": [
+            74,
+            86
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "e4acc487fc802f8f773a053200019f2e654de3aa53e6dc2d4bdfe903e9b78161"
+    },
+    {
+      "level": 4,
+      "pose": 0,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            46
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "155a4d3f0834cbca199ee824f289df5c5e1af2c53c69a77bf88032ba4d169c1f"
+    },
+    {
+      "level": 4,
+      "pose": 0,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            91
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "084448f01cfe43a2e9ea4efc6f392e821f95e0f90fc943ff7f627e3c48c9ba29"
+    },
+    {
+      "level": 4,
+      "pose": 1,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            44
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            35,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            35
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "bf95a50d7cf0132a6c1aa7263a8041e7b4d9078077e5f0c610acc8a15613c60a"
+    },
+    {
+      "level": 4,
+      "pose": 1,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            88
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            79,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            79
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "2cf7d5666792e93e825bffb3257c2aa3ca06629830b84e397ca8ac6647539b40"
+    },
+    {
+      "level": 4,
+      "pose": 2,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            43
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            34,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            34
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "d47282dfcf4cbd4e615f0d41f12327ae108b612058d1c649859a10c258fe3a33"
+    },
+    {
+      "level": 4,
+      "pose": 2,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            86
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            77,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            77
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "481ee34473cbd63bd8039c0e5beaf2789a6f8b3c74a9bd3d575778e281dade7e"
+    },
+    {
+      "level": 4,
+      "pose": 3,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            42
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            33,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            33
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "e3aee20f3ca088e0cb1e0cebbe7f49b1e8b17760e4674d277652b61919098cb1"
+    },
+    {
+      "level": 4,
+      "pose": 3,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            85
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            76,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            76
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "6769146c4b656e37e2fe1b83fb00d5d80a9a75ed0caaa352b7222525a2723de6"
+    },
+    {
+      "level": 4,
+      "pose": 4,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            46
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "ffd5cb87603a710f4bdb1ccd34c79f49e49271c2dad6c8a9612bfed185e8c173"
+    },
+    {
+      "level": 4,
+      "pose": 4,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            91
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "a9fcbab34cb9b7135599e4b2db2475677ca34a1f6021c6b242b7845ac6abafbe"
+    },
+    {
+      "level": 4,
+      "pose": 5,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            48
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            39,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            39
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "36335646222cd6f18cee3201f05b3b3cadacf457c54d8de1736b7285f089b866"
+    },
+    {
+      "level": 4,
+      "pose": 5,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            93
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            84,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            84
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "182ed655e40090baabadba40026b75eedc0058b1814603db390eff3964e2a29d"
+    },
+    {
+      "level": 4,
+      "pose": 6,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            50
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            41,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            41
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "0b694a7c5c6d009b8f6987effe27f24e6afef4c008a3f3523f7e9af56e888c71"
+    },
+    {
+      "level": 4,
+      "pose": 6,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            95
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            72,
+            86,
+            3,
+            10
+          ],
+          "target": [
+            83,
+            86
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "f9d2e59844f32c46b4fdb3ecfe6b6aaf7dd73b5b8b12b43838ab2c67624ef73a"
+    },
+    {
+      "level": 5,
+      "pose": 0,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            37
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            37
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "080128e86f497e177e03d98886d7fef34a2bb1114a428120cf4f30d0956a589c"
+    },
+    {
+      "level": 5,
+      "pose": 0,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            82
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            82
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "9a68fd740e4c2abe112608ca51fe0e42efc9eb803a4a02a335612a413be6f8a6"
+    },
+    {
+      "level": 5,
+      "pose": 1,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            75,
+            35,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            35
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            35,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            35
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            35
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "b21eced3e77189508065fb2e95a88a1cb7f8c9276ff27486972d1d553e9c2cc2"
+    },
+    {
+      "level": 5,
+      "pose": 1,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            74,
+            79,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            79
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            79,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            79
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            79
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "0df6c28f9dc94eac3563bb7ade17d5bb702e9f5d4386b519a20651b3e4d129ff"
+    },
+    {
+      "level": 5,
+      "pose": 2,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            75,
+            34,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            34
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            34,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            34
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            34
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "c51a3d43c5ca612cbe249e90962b151379cd6eaa2740bf8ec5bc991cc3c0cbbb"
+    },
+    {
+      "level": 5,
+      "pose": 2,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            73,
+            77,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            77
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            77,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            77
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            77
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "3251992e63094e62b5adf0ce6abca83f856481ef28b5e561c6052defaf29ac51"
+    },
+    {
+      "level": 5,
+      "pose": 3,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            75,
+            33,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            33
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            33,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            33
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            33
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "8226302e2d6ac3472d7aa9bb78e54b5fc63cb6eaf41c1d1b0cde328011663f72"
+    },
+    {
+      "level": 5,
+      "pose": 3,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            73,
+            76,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            76
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            76,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            76
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            76
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "8c9f112c68ffae298608e54eae52d530e2295539b5b41f7b4e132fe131251fac"
+    },
+    {
+      "level": 5,
+      "pose": 4,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            37
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            37
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "c86be0d7b68563478fbc5324e7747144ebcdd2ebe9bfd2d72152b3046a80c1b2"
+    },
+    {
+      "level": 5,
+      "pose": 4,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            82
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            82
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "121f10df7e6ee657055dd66ce531857e026d8d91da3dbc352ddbd1214cad0556"
+    },
+    {
+      "level": 5,
+      "pose": 5,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            74,
+            39,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            39
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            39,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            39
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            39
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "9d1e40806ffff31cdd618788d0c4d273974cd40d1e045bc6a374920f3e96cf99"
+    },
+    {
+      "level": 5,
+      "pose": 5,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            73,
+            84,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            84
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            84,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            84
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            84
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "382af4064bba1ab87d6abcadcd5e9216fde2d51a2fc6ae4e99ee3144cd7f4686"
+    },
+    {
+      "level": 5,
+      "pose": 6,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            74,
+            41,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            41
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            41,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            41
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            41
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "c0e2c126c78a194be935de9834395a9574c9e7ae6e31b9328023580cdc95fc45"
+    },
+    {
+      "level": 5,
+      "pose": 6,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "v",
+          "source": [
+            72,
+            86,
+            3,
+            10
+          ],
+          "target": [
+            74,
+            86
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            72,
+            86,
+            3,
+            10
+          ],
+          "target": [
+            83,
+            86
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            86
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "8552e97fed7cd6f7649671ef25cc70dd4ecca9ad259cd0f9357e195392b99fd3"
+    },
+    {
+      "level": 6,
+      "pose": 0,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            37
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            46
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            81,
+            38
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "060718e7b0d2c2284ae66df9dc40c9980fc18ef621c8f13c7218a488d8dd70e5"
+    },
+    {
+      "level": 6,
+      "pose": 0,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            82
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            91
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            81,
+            83
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "54a5d5616fc704c5dff557e6aaf0834a346698ba739deb1acaa8463f73be8354"
+    },
+    {
+      "level": 6,
+      "pose": 1,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            35
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            44
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            35,
+            3,
+            10
+          ],
+          "target": [
+            82,
+            36
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "998f914195307a9853490899f3c86a5b6b9b5921776c88f4875a9316c750b891"
+    },
+    {
+      "level": 6,
+      "pose": 1,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            79
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            88
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            79,
+            3,
+            10
+          ],
+          "target": [
+            81,
+            80
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "d8965308344cff098e3a249e5d073876679b00cba666199396b137cdbc992122"
+    },
+    {
+      "level": 6,
+      "pose": 2,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            34
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            43
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            34,
+            3,
+            10
+          ],
+          "target": [
+            82,
+            35
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "075b1e945b9293ce7e6636560679b6152ce40c19dee9a6c624aebf256088ca9a"
+    },
+    {
+      "level": 6,
+      "pose": 2,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            77
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            86
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            77,
+            3,
+            10
+          ],
+          "target": [
+            80,
+            78
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "542b302cc0cb0b718fcc2699e35e9725e1bb845417843603db22fbfa6876ec66"
+    },
+    {
+      "level": 6,
+      "pose": 3,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            33
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            42
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            33,
+            3,
+            10
+          ],
+          "target": [
+            82,
+            34
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "8afe619c6be765c55047b2e4de33488880c21be5f2c3b46c56f1f2ecc2b85d09"
+    },
+    {
+      "level": 6,
+      "pose": 3,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            76
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            85
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            76,
+            3,
+            10
+          ],
+          "target": [
+            80,
+            77
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "ebbbc440fee76d36011a94f5e3f8aa149a78b75d633f8c5d9c2fb7488c9fc5ef"
+    },
+    {
+      "level": 6,
+      "pose": 4,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            37
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            46
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            81,
+            38
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "a72c2a5f656e37e0766c64438f61bfedbb02881b62fbf849cdd399f906e89933"
+    },
+    {
+      "level": 6,
+      "pose": 4,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            82
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            91
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            81,
+            83
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "f4b9369de5003e7c98c879495a979b815e903b0225221fb79c32151ca797cd9c"
+    },
+    {
+      "level": 6,
+      "pose": 5,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            39
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            48
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            39,
+            3,
+            10
+          ],
+          "target": [
+            81,
+            40
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "1ab454a9be04997dd8056c78a1525f052c65f2dffcac9a8fbceb45eb43aed08b"
+    },
+    {
+      "level": 6,
+      "pose": 5,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            84
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            93
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            84,
+            3,
+            10
+          ],
+          "target": [
+            80,
+            85
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "8e84288fcff0060418a9cce7349df4ad2434efa752f3589bdc1ebac4e0198323"
+    },
+    {
+      "level": 6,
+      "pose": 6,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            41
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            50
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            41,
+            3,
+            10
+          ],
+          "target": [
+            81,
+            42
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "b252a6973a8bde177f430038f09efc5ee7db573e66542887106a5c577b04d587"
+    },
+    {
+      "level": 6,
+      "pose": 6,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            86
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            95
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            72,
+            86,
+            3,
+            10
+          ],
+          "target": [
+            79,
+            87
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "81ed326501e7e690de5c35af3a6e33cb90cd0f04b5e61ddb5f36c80dd22993bb"
+    },
+    {
+      "level": 7,
+      "pose": 0,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            37
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            46
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            37
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "f924f808afb8ebc63e02da1786dfb6ec55d4607f6fffc523b38472355488cb49"
+    },
+    {
+      "level": 7,
+      "pose": 0,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            82
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            91
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            82
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "a4e317e61b49c183839776f7c54f05bc435c0190e5bed8e6580bd7ae172eb193"
+    },
+    {
+      "level": 7,
+      "pose": 1,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            35
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            44
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            35,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            35
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            35,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            35
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "ded470709d3c6a2b16aecc37777f1cb4c5168189e344bcf9979908512f76c927"
+    },
+    {
+      "level": 7,
+      "pose": 1,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            79
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            88
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            79,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            79
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            79,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            79
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "d3b4e530c9f4afbfa815aed8506e6f5cd13743e374c159daec014a8a32226adb"
+    },
+    {
+      "level": 7,
+      "pose": 2,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            34
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            43
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            34,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            34
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            34,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            34
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "4a2d27b7b21aece77a7f32f81a525ba3053d28e68775573a2a8372ad9811a31a"
+    },
+    {
+      "level": 7,
+      "pose": 2,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            77
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            86
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            77,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            77
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            77,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            77
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "a39443052bfb0f0990112348fe8adf401026d62b60a6b8944ae10eb1e08eff42"
+    },
+    {
+      "level": 7,
+      "pose": 3,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            33
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            42
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            33,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            33
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            33,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            33
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "71180496cf33809cad358775314472e90825f1c24d671c7cfcee9a02aa279280"
+    },
+    {
+      "level": 7,
+      "pose": 3,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            76
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            85
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            76,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            76
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            76,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            76
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "b96eccb9841178c4ce9802133948bed1ab53dc58bda859d936adcced1fbae6ef"
+    },
+    {
+      "level": 7,
+      "pose": 4,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            37
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            46
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            37
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "c4f2c1a0b4d284cc344846b3c15d25091caa1c16d21fb970eaf3fc49960e6d72"
+    },
+    {
+      "level": 7,
+      "pose": 4,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            82
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            91
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            82
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "5feb2cc42e8569f2a8f71c603082c24045dc9ec07e6cef33b1680cdb9f3e4a7d"
+    },
+    {
+      "level": 7,
+      "pose": 5,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            39
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            48
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            39,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            39
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            39,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            39
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "eb42041891c4114d7ca41fd922185b0021c7ebea029ceb0c68a94adec61a43bc"
+    },
+    {
+      "level": 7,
+      "pose": 5,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            84
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            93
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            84,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            84
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            84,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            84
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "19bb82ab994542aecbb9982ccb7dfe6a9a4c6d2f4271d85a6e9eb397b4a057cc"
+    },
+    {
+      "level": 7,
+      "pose": 6,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            41
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            50
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            41,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            41
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            41,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            41
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "49ebf74251c64ea58c1312000253c505bd88c167f8936eae549b8672714df035"
+    },
+    {
+      "level": 7,
+      "pose": 6,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            86
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            95
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            72,
+            86,
+            3,
+            10
+          ],
+          "target": [
+            74,
+            86
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            72,
+            86,
+            3,
+            10
+          ],
+          "target": [
+            83,
+            86
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "75fb31f74c3d3167854ea5b34e3e9c3ea26b16b22d2dd436c2f33bd5f7c5e485"
+    },
+    {
+      "level": 8,
+      "pose": 0,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            37
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            43
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "60f8dde57d608c0de5ae5272f17cecb49e5794ab137d8768c2a7a94638cb4316"
+    },
+    {
+      "level": 8,
+      "pose": 0,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            82
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            88
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "a3fd599530de1ba553ff9792acea726ba5841cb8c1e1862fe8be491f71cdab84"
+    },
+    {
+      "level": 8,
+      "pose": 1,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            79,
+            36,
+            6,
+            6
+          ],
+          "target": [
+            78,
+            35
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            36,
+            6,
+            6
+          ],
+          "target": [
+            83,
+            41
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            35,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            35
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "a785b23a417b842114a596128fc8cc3c6ea7a68cd72f972b6cc346e589af82d8"
+    },
+    {
+      "level": 8,
+      "pose": 1,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            80,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            79
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            80,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            85
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            79,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            79
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "31500b710f52a7d15fee38e8c5417213ea5e113986435408192331b7e222ff7d"
+    },
+    {
+      "level": 8,
+      "pose": 2,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            79,
+            35,
+            6,
+            6
+          ],
+          "target": [
+            78,
+            34
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            35,
+            6,
+            6
+          ],
+          "target": [
+            83,
+            40
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            34,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            34
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "b44f8d491cd9b4545f39f7f64b9f08eefdae15323a72681208a6f9239e595f55"
+    },
+    {
+      "level": 8,
+      "pose": 2,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            77,
+            78,
+            6,
+            6
+          ],
+          "target": [
+            76,
+            77
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            78,
+            6,
+            6
+          ],
+          "target": [
+            81,
+            83
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            77,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            77
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "a6f42569dd77d22546e2ae7ca22a7156ae64c3843c91e15f97bc60b7958e71fa"
+    },
+    {
+      "level": 8,
+      "pose": 3,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            79,
+            34,
+            6,
+            6
+          ],
+          "target": [
+            78,
+            33
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            34,
+            6,
+            6
+          ],
+          "target": [
+            83,
+            39
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            33,
+            3,
+            10
+          ],
+          "target": [
+            77,
+            33
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "921ca163adea9d0c22bf71f6a8b3f3aa9866e5dbfcf9adb1bede3b1746939421"
+    },
+    {
+      "level": 8,
+      "pose": 3,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            77,
+            77,
+            6,
+            6
+          ],
+          "target": [
+            76,
+            76
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            77,
+            6,
+            6
+          ],
+          "target": [
+            81,
+            82
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            76,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            76
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "51e96ee772094cc705467330756ff1cd3df4d0687bd5364cfb9ef57cebd130ab"
+    },
+    {
+      "level": 8,
+      "pose": 4,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            37
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            43
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "696f7ef505fe82502ce97acc7dc1fc45b875cb88a1f17b11b4dc06529fb02299"
+    },
+    {
+      "level": 8,
+      "pose": 4,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            82
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            88
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "81a8489db005717b2886a28ee3b0376e5912729696dbd978420e2476f3bc9c0c"
+    },
+    {
+      "level": 8,
+      "pose": 5,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            40,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            39
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            40,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            45
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            39,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            39
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "0486c482555b65626fc8d93aaeae50249598f79d9840eb9e952f7151ba868121"
+    },
+    {
+      "level": 8,
+      "pose": 5,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            77,
+            85,
+            6,
+            6
+          ],
+          "target": [
+            76,
+            84
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            85,
+            6,
+            6
+          ],
+          "target": [
+            81,
+            90
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            84,
+            3,
+            10
+          ],
+          "target": [
+            75,
+            84
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "9412507d43fb5ae7d4968644a7472298e4fe31aa76a022e0d09c4651ddacb09c"
+    },
+    {
+      "level": 8,
+      "pose": 6,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            42,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            41
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            42,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            47
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            41,
+            3,
+            10
+          ],
+          "target": [
+            76,
+            41
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "10c7ae6ac481a6ec3a5049ef0e207ae673d66537b3e34c7a437a20c22a722589"
+    },
+    {
+      "level": 8,
+      "pose": 6,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            76,
+            87,
+            6,
+            6
+          ],
+          "target": [
+            75,
+            86
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            76,
+            87,
+            6,
+            6
+          ],
+          "target": [
+            80,
+            92
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            72,
+            86,
+            3,
+            10
+          ],
+          "target": [
+            74,
+            86
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "52adb6404508033da58ec84bce6216089bdff9c7f4694e6cd5cd071cb0e55d0a"
+    },
+    {
+      "level": 9,
+      "pose": 0,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            43
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            37
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "2ef7c942016168306f7b7236f0fa481eef5a40ec875f3eb5f049d5fec06d0fa1"
+    },
+    {
+      "level": 9,
+      "pose": 0,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            88
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            82
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "8263260d50d92f7ebbaf62a08b7cfe855beb7a7a306bef70375e4c58b4cb1358"
+    },
+    {
+      "level": 9,
+      "pose": 1,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            79,
+            36,
+            6,
+            6
+          ],
+          "target": [
+            78,
+            41
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            36,
+            6,
+            6
+          ],
+          "target": [
+            83,
+            35
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            35,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            35
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "50dcb8e814852df98d90e1a0b47db0a79629d48c3f4351f9693a219a11649b89"
+    },
+    {
+      "level": 9,
+      "pose": 1,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            80,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            85
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            80,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            79
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            79,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            79
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "24065acc20fb0a964a4c64e3bef8610b6967aff4c71c1bc6e3e03db28229ce85"
+    },
+    {
+      "level": 9,
+      "pose": 2,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            79,
+            35,
+            6,
+            6
+          ],
+          "target": [
+            78,
+            40
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            35,
+            6,
+            6
+          ],
+          "target": [
+            83,
+            34
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            34,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            34
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "3be9d2b4eac7e4ceb8ff9c0b6f22d216e735783f20de2a95beeb7f1ae5f61007"
+    },
+    {
+      "level": 9,
+      "pose": 2,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            77,
+            78,
+            6,
+            6
+          ],
+          "target": [
+            76,
+            83
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            78,
+            6,
+            6
+          ],
+          "target": [
+            81,
+            77
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            77,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            77
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "ccdd04c9d2968e4540e38d58f84a828a4cbe0cfff2cf9f30d3a40eb44b4ad8c4"
+    },
+    {
+      "level": 9,
+      "pose": 3,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            79,
+            34,
+            6,
+            6
+          ],
+          "target": [
+            78,
+            39
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            34,
+            6,
+            6
+          ],
+          "target": [
+            83,
+            33
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            75,
+            33,
+            3,
+            10
+          ],
+          "target": [
+            86,
+            33
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "2b0d8a25d0cfbf7c6c0c24daecac1f8e5100ece788147129909b1f0ee74ca298"
+    },
+    {
+      "level": 9,
+      "pose": 3,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            77,
+            77,
+            6,
+            6
+          ],
+          "target": [
+            76,
+            82
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            77,
+            6,
+            6
+          ],
+          "target": [
+            81,
+            76
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            76,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            76
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "3b2504523dcbf1808470e16a58def52734c0887f75066f76f5d4d62a7a77d74d"
+    },
+    {
+      "level": 9,
+      "pose": 4,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            43
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            37
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            37,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            37
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "cc9a4ce94c8594cf933459624e74c7aea36e8dbf1a27038ef080429fc1dffd59"
+    },
+    {
+      "level": 9,
+      "pose": 4,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            88
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            82
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            82,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            82
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "d68e259b58eaa28fac07a2666f93d078aacc58137971831127b1406644c70e6c"
+    },
+    {
+      "level": 9,
+      "pose": 5,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            40,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            45
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            40,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            39
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            39,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            39
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "05d67fc27dcf16005e04ae2579fa1342b16880aaab6238d595daeb82a57b1ce2"
+    },
+    {
+      "level": 9,
+      "pose": 5,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            77,
+            85,
+            6,
+            6
+          ],
+          "target": [
+            76,
+            90
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            85,
+            6,
+            6
+          ],
+          "target": [
+            81,
+            84
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            73,
+            84,
+            3,
+            10
+          ],
+          "target": [
+            84,
+            84
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "becc53bb252720a7beb651180f1555c6e8468738763e3caa5399efeeef0ee687"
+    },
+    {
+      "level": 9,
+      "pose": 6,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            78,
+            42,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            47
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            42,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            41
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            74,
+            41,
+            3,
+            10
+          ],
+          "target": [
+            85,
+            41
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "1990e669ea781b8df070d23df23d2b9f41bcb8cc88feb5a3b2f818921294898b"
+    },
+    {
+      "level": 9,
+      "pose": 6,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "p",
+          "source": [
+            76,
+            87,
+            6,
+            6
+          ],
+          "target": [
+            75,
+            92
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            76,
+            87,
+            6,
+            6
+          ],
+          "target": [
+            80,
+            86
+          ]
+        },
+        {
+          "piece": "v",
+          "source": [
+            72,
+            86,
+            3,
+            10
+          ],
+          "target": [
+            83,
+            86
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "96797d1d0be712bb2c7d483eeb15cd7d57a89a3defa48aa5bc418d6d5dddc460"
+    },
+    {
+      "level": 10,
+      "pose": 0,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            37
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            41
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            41
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            47
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "c5133ca14f902c9ed4634a9c707b228b6c8069ee29dca545a10d2f37fc0eb551"
+    },
+    {
+      "level": 10,
+      "pose": 0,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            82
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            86
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            86
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            92
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "18eda6369648e004ce1ae495f5c0d5746c5b78f8a55f9dfe14f59e3eafb0a4f0"
+    },
+    {
+      "level": 10,
+      "pose": 1,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            35
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            36,
+            6,
+            6
+          ],
+          "target": [
+            78,
+            39
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            36,
+            6,
+            6
+          ],
+          "target": [
+            83,
+            39
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            44,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            45
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "6251a1228969d412c229eb50fabd1c95be4cebd603edc8ed793099a542df085f"
+    },
+    {
+      "level": 10,
+      "pose": 1,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            79
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            80,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            83
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            80,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            83
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            88,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            89
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "9ea3b479c58be4d883bd0721a366c35e6d1b6f77ba2df88f6908f39bef5240f9"
+    },
+    {
+      "level": 10,
+      "pose": 2,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            34
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            35,
+            6,
+            6
+          ],
+          "target": [
+            78,
+            38
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            35,
+            6,
+            6
+          ],
+          "target": [
+            83,
+            38
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            43,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            44
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "0502fd1b373ac693f3b984512d5cb054e7f962375a9bbab7cbec477082899fb5"
+    },
+    {
+      "level": 10,
+      "pose": 2,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            77
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            78,
+            6,
+            6
+          ],
+          "target": [
+            76,
+            81
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            78,
+            6,
+            6
+          ],
+          "target": [
+            81,
+            81
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            86,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            87
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "99b84bc91c1bbc3c552a599ea39ab3ef71da6d62008303fb4200a386851fe713"
+    },
+    {
+      "level": 10,
+      "pose": 3,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            33
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            34,
+            6,
+            6
+          ],
+          "target": [
+            78,
+            37
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            79,
+            34,
+            6,
+            6
+          ],
+          "target": [
+            83,
+            37
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            77,
+            42,
+            12,
+            3
+          ],
+          "target": [
+            77,
+            43
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "1924b3e28969549d790809207a01b512281a2e320d7d4e16737560a3b4dbc0ff"
+    },
+    {
+      "level": 10,
+      "pose": 3,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            76
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            77,
+            6,
+            6
+          ],
+          "target": [
+            76,
+            80
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            77,
+            6,
+            6
+          ],
+          "target": [
+            81,
+            80
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            85,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            86
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "896f00afebcd3b1b1fbfe3c99a7bfaabd4eb13a5653f43344066c5ccd5b31716"
+    },
+    {
+      "level": 10,
+      "pose": 4,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            37
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            41
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            38,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            41
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            46,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            47
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "ea5acf6fd56e163fe2e26fa113f14bfdc1cd4aed22307c6d4a5e040513ecdcce"
+    },
+    {
+      "level": 10,
+      "pose": 4,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            82
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            86
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            83,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            86
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            91,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            92
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "7b64ee83f6cd77668ee0d7bea972c887da1df510ef0eb451a3938edfc3bf4111"
+    },
+    {
+      "level": 10,
+      "pose": 5,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            39
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            40,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            43
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            40,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            43
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            48,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            49
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "4926c9ddab03049a7dc2e1d393e899cabfc5f9a31f77f31b659e051c284943e0"
+    },
+    {
+      "level": 10,
+      "pose": 5,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            84
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            85,
+            6,
+            6
+          ],
+          "target": [
+            76,
+            88
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            77,
+            85,
+            6,
+            6
+          ],
+          "target": [
+            81,
+            88
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            75,
+            93,
+            12,
+            3
+          ],
+          "target": [
+            75,
+            94
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "93909356aba6d8898348e6069adfb1d31bcf61f013890ace06c299baac305d5c"
+    },
+    {
+      "level": 10,
+      "pose": 6,
+      "side": 0,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            41
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            42,
+            6,
+            6
+          ],
+          "target": [
+            77,
+            45
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            78,
+            42,
+            6,
+            6
+          ],
+          "target": [
+            82,
+            45
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            76,
+            50,
+            12,
+            3
+          ],
+          "target": [
+            76,
+            51
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "b146b9c8e046000892b39e37726137dabcd58d15d67192121ff7499be7988b2b"
+    },
+    {
+      "level": 10,
+      "pose": 6,
+      "side": 1,
+      "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+      "placements": [
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            86
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            76,
+            87,
+            6,
+            6
+          ],
+          "target": [
+            75,
+            90
+          ]
+        },
+        {
+          "piece": "p",
+          "source": [
+            76,
+            87,
+            6,
+            6
+          ],
+          "target": [
+            80,
+            90
+          ]
+        },
+        {
+          "piece": "h",
+          "source": [
+            74,
+            95,
+            12,
+            3
+          ],
+          "target": [
+            74,
+            96
+          ]
+        }
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ],
+      "outside_original_alpha": 0,
+      "sha256": "3d044f1caca92a52eb03c137baa44a51beff7466023aad5892c25eafdd18d175"
+    }
+  ],
+  "registration": {
+    "tile": [
+      32,
+      29
+    ],
+    "parentSocket": 0,
+    "top": {
+      "selfSocket": [
+        -10,
+        -23
+      ],
+      "body_cell_top_left": [
+        64,
+        28
+      ]
+    },
+    "bottom": {
+      "selfSocket": [
+        -10,
+        25
+      ],
+      "body_cell_top_left": [
+        64,
+        76
+      ]
+    },
+    "z": 1
+  },
+  "baseActualChangedPixelsByPose": [
+    71,
+    72,
+    72,
+    72,
+    72,
+    72,
+    72
+  ],
+  "baseCorrection": "Translate bank-specific approved strip upward3px; original identical-position overlay rejected."
+}

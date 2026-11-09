@@ -1,0 +1,993 @@
+{
+  "baseline": "10ae41c resources with level*1000 fixture; additional AH10cover name support unused by baseline resources",
+  "candidate": "root Beluga20parts fixture at8958",
+  "comparisonRectExclusive": [
+    570,
+    540,
+    790,
+    770
+  ],
+  "outsideBelugaAllExact": true,
+  "images": [
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.258824,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.364706,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.364706,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.337255,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.360784,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.388235,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.435294,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.152941,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.372549,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.470588,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.458824,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.341176,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.196078,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.423529,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.411765,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.333333,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.215686,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.384314,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.517647,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.482353,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.337255,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.517647,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.360784,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.482353,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.482353,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.501961,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.337255,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.517647,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.482353,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.341176,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.423529,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.411765,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.45098,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.364706,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.517647,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.533333,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.337255,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.482353,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.411765,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.392157,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.419608,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.258824,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.364706,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.364706,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.337255,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.360784,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.388235,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.435294,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.152941,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.372549,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.470588,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.458824,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.341176,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.447059,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.196078,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.423529,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.411765,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.333333,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.215686,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.384314,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.517647,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.482353,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.337255,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.517647,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.360784,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.482353,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.482353,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.501961,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.337255,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.443137,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.517647,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.482353,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.341176,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.423529,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.411765,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.45098,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.364706,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.396078,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.466667,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.517647,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.407843,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.486275,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.533333,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 0,
+      "fullDifferenceMaximum": 0.337255,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 1,
+      "fullDifferenceMaximum": 0.490196,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 2,
+      "fullDifferenceMaximum": 0.462745,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 3,
+      "fullDifferenceMaximum": 0.482353,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 4,
+      "fullDifferenceMaximum": 0.411765,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 5,
+      "fullDifferenceMaximum": 0.392157,
+      "outsideBelugaMaximum": 0.0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "tile": 6,
+      "fullDifferenceMaximum": 0.419608,
+      "outsideBelugaMaximum": 0.0
+    }
+  ]
+}

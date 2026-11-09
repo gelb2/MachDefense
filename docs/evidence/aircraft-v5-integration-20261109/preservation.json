@@ -1,0 +1,142 @@
+{
+  "baselineCommit": "12dd96f3424281a4a6bfece2e90f3695f59c7b8d",
+  "readOnly": true,
+  "groups": {
+    "Resources/Images/": {
+      "count": 1294,
+      "changed": [],
+      "missing": [],
+      "allowedChanges": [],
+      "ok": true
+    },
+    "Resources/OriginalImages/": {
+      "count": 1109,
+      "changed": [],
+      "missing": [],
+      "allowedChanges": [],
+      "ok": true
+    },
+    "Resources/Audio/": {
+      "count": 80,
+      "changed": [],
+      "missing": [],
+      "allowedChanges": [],
+      "ok": true
+    },
+    "Sources/": {
+      "count": 98,
+      "changed": [
+        "Sources/Core/Simulation/AircraftModels.hpp",
+        "Sources/Core/Simulation/AircraftVisual.hpp"
+      ],
+      "missing": [],
+      "allowedChanges": [
+        "Sources/Core/Simulation/AircraftModels.hpp",
+        "Sources/Core/Simulation/AircraftVisual.hpp"
+      ],
+      "ok": true
+    },
+    "Resources/Tables/": {
+      "count": 94,
+      "changed": [
+        "Resources/Tables/PartsList.tsv",
+        "Resources/Tables/TileList.tsv"
+      ],
+      "missing": [],
+      "allowedChanges": [
+        "Resources/Tables/PartsList.tsv",
+        "Resources/Tables/TileList.tsv"
+      ],
+      "ok": true
+    },
+    "Resources/RawData/": {
+      "count": 102,
+      "changed": [
+        "Resources/RawData/AircraftMachines.mcb",
+        "Resources/RawData/AircraftParts.mcb",
+        "Resources/RawData/Level10Machines.mcb",
+        "Resources/RawData/Level10Parts.mcb"
+      ],
+      "missing": [],
+      "allowedChanges": [
+        "Resources/RawData/AircraftParts.mcb",
+        "Resources/RawData/AircraftMachines.mcb",
+        "Resources/RawData/Level10Parts.mcb",
+        "Resources/RawData/Level10Machines.mcb"
+      ],
+      "ok": true
+    }
+  },
+  "tableRows": {
+    "PartsList": {
+      "retainedLines": 505,
+      "beforeSHA256": "6fe9f59dccfe30d80573ea0ef8a16575a6a0ca3e765ff6bdd62bdb987ae266df",
+      "afterSHA256": "6fe9f59dccfe30d80573ea0ef8a16575a6a0ca3e765ff6bdd62bdb987ae266df",
+      "ok": true
+    },
+    "TileList": {
+      "retainedLines": 56,
+      "beforeSHA256": "91dfa1a5c53177d5a6f369769752c0885b3469e48d8b49616fea98f4980109a2",
+      "afterSHA256": "91dfa1a5c53177d5a6f369769752c0885b3469e48d8b49616fea98f4980109a2",
+      "ok": true
+    }
+  },
+  "nonAircraftMCBNodes": {
+    "Level10Parts": {
+      "count": 44,
+      "beforeSHA256": "3fefe3b71a62b0e4202991ed60c6e07720a89f5cc6d6046f62a715c41d498ab2",
+      "afterSHA256": "3fefe3b71a62b0e4202991ed60c6e07720a89f5cc6d6046f62a715c41d498ab2",
+      "ok": true
+    },
+    "Level10Machines": {
+      "count": 33,
+      "beforeSHA256": "7e8c94c527093ea53716892f3dc4643e35013f3942c75296fc1c4ee54902fee5",
+      "afterSHA256": "7e8c94c527093ea53716892f3dc4643e35013f3942c75296fc1c4ee54902fee5",
+      "ok": true
+    }
+  },
+  "nonAircraftMCBNodeCount": 77,
+  "criticalFiles": {
+    "Sources/Core/Simulation/World.cpp": {
+      "sha256": "11b7ba4081e9bba67388a528a36ec1c703dd8eabee2591697855506911786e9f",
+      "unchanged": true
+    },
+    "Sources/Core/Simulation/WorldMovement.cpp": {
+      "sha256": "ba2642f6c2ffdce0ff3cadb6fad981386333e962034b02520d5405c06e554dd6",
+      "unchanged": true
+    },
+    "Sources/Core/Simulation/WorldTargeting.cpp": {
+      "sha256": "623af7989f62edbd83449e12b057141edde47c0e4662f79807fa356167312ad0",
+      "unchanged": true
+    },
+    "Sources/Core/Simulation/WorldCombat.cpp": {
+      "sha256": "7c1c6399610fb568eced31b641b750d8c1285055337f4c0b074aba50f3bee27b",
+      "unchanged": true
+    },
+    "Sources/Core/Simulation/AircraftTactics.hpp": {
+      "sha256": "0af95356ddd2da64914b535dedff478033912b099859a3c64341b35321b766f5",
+      "unchanged": true
+    },
+    "Sources/Core/Simulation/AircraftDodge.hpp": {
+      "sha256": "aba4395dd1011066cfa61f524c4fd594630db18af4b3e70d9388e3a1e569d1bc",
+      "unchanged": true
+    },
+    "Sources/Core/Simulation/AircraftCountermeasures.hpp": {
+      "sha256": "355672e562739665ca758c34f89e33facba64673064c9ce9f7f11c08a1c97e56",
+      "unchanged": true
+    },
+    "Sources/Core/Simulation/WeaponController.cpp": {
+      "sha256": "7c68e237ace2f1b8d25c6326fb6974356b8ab72001eb8e673eca0c55188fba41",
+      "unchanged": true
+    },
+    "Resources/Tables/MachList.tsv": {
+      "sha256": "0e8f931041517a6038a04e315452f630b3991afa716c8d18036ada149d420410",
+      "unchanged": true
+    },
+    "Resources/Tables/WeaponInfo.tsv": {
+      "sha256": "0523c47548ad1470b040aec7af49d6d66212212bfc5c8631fc5c54ca448deb87",
+      "unchanged": true
+    }
+  },
+  "ok": true
+}

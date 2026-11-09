@@ -1,0 +1,4 @@
+level=1 wait=18 time=0.3154 scale=0.5 shots=2
+Assertion failed: (shots.size()==7), function main, file CheyenneSalvoClockTests.cpp, line 35.
+
+exit=-6

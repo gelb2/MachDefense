@@ -1,0 +1,43 @@
+{
+  "sourceCommit": "9e97637bdd3a7fe6041822da7b693dd428eb44d2",
+  "regularRelease": true,
+  "bundleId": "com.gelb2.machdefense.source",
+  "signatureVerified": true,
+  "testBundlesAbsent": true,
+  "binarySHA256": "c8194cf433a2b684d92a5804fe63ec978a0d26f83581ab785c5a074dcfeb0306",
+  "textures": [
+    {
+      "file": "ALightBody.png",
+      "sha256": "1080dd9446eb0fcadb7edcc483da204d4f560aaf18722d7a27a687676cb537ff",
+      "matchesCurrentResource": true
+    },
+    {
+      "file": "ATransportBody.png",
+      "sha256": "fad1c95d15d8eebf8138ab7cb00721a769aad45995788310d9cbd15bb6e5e577",
+      "matchesCurrentResource": true
+    },
+    {
+      "file": "ADuctBody.png",
+      "sha256": "1731952753ea0b5a1197512b63efd4153a9079c1050dbf141a7c1d5d38d055c5",
+      "matchesCurrentResource": true
+    },
+    {
+      "file": "AHeavyBody.png",
+      "sha256": "32fb830199458230ef62dfca08c3a0337d4bee595574fcbdb7c4fabe6e087a9d",
+      "matchesCurrentResource": true
+    }
+  ],
+  "projectConfigurationRestored": true,
+  "buildAction": "Xcode Build For Profiling; existing ProfileAction Release; no profiler or debugger attached",
+  "transport": "localNetwork",
+  "installSucceeded": true,
+  "launchSucceeded": true,
+  "saveByteIdentical": true,
+  "saveBytes": 42496,
+  "deviceUIObserved": "Stage selection screen visible after launch",
+  "deviceControl": "No stage or combat input performed; left available for user play",
+  "userVisualAcceptance": "pending",
+  "profilingPerformed": false,
+  "protectedFileCount": 2652,
+  "protectedMismatches": []
+}

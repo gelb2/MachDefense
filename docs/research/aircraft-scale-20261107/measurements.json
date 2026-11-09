@@ -1,0 +1,218 @@
+[
+  {
+    "machine": "E_Tank_01",
+    "first_stage": 1,
+    "scale": 1,
+    "angle": 0,
+    "visible": {
+      "bounds": [
+        -27.5,
+        -16.0,
+        29.5,
+        16.0
+      ],
+      "size": [
+        57.0,
+        32.0
+      ]
+    },
+    "with_shadow": {
+      "bounds": [
+        -27.5,
+        -16.0,
+        33.5,
+        20.0
+      ],
+      "size": [
+        61.0,
+        36.0
+      ]
+    },
+    "parts": [
+      {
+        "image": "E_Tank_Body_01.png",
+        "sha256": "415592d9b7df8081b368d8c38df22e30fb4a1e1ffcb0d6da22512cbfe61df49f",
+        "canvas": [
+          55,
+          32
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          55,
+          32
+        ],
+        "placed_alpha_bounds": [
+          -27.5,
+          -16.0,
+          27.5,
+          16.0
+        ]
+      },
+      {
+        "image": "E_Tank_Wpn_01.png",
+        "sha256": "51d480e646fffe09208051a48cfbdf03a077104ceff05fc7a293ccc5fbc7acf8",
+        "canvas": [
+          33,
+          22
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          33,
+          22
+        ],
+        "placed_alpha_bounds": [
+          -3.5,
+          -10.0,
+          29.5,
+          12.0
+        ]
+      }
+    ]
+  },
+  {
+    "machine": "E_Tank_07",
+    "first_stage": 5,
+    "scale": 1,
+    "angle": 0,
+    "visible": {
+      "bounds": [
+        -31.0,
+        -22.0,
+        32.0,
+        20.0
+      ],
+      "size": [
+        63.0,
+        42.0
+      ]
+    },
+    "with_shadow": {
+      "bounds": [
+        -31.0,
+        -22.0,
+        36.0,
+        24.0
+      ],
+      "size": [
+        67.0,
+        46.0
+      ]
+    },
+    "parts": [
+      {
+        "image": "E_Tank_Body_07.png",
+        "sha256": "61f4de4c45ecb8c1043eda8e1af99cefe14fe7a700a191cd966e01c5e3161848",
+        "canvas": [
+          60,
+          42
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          60,
+          42
+        ],
+        "placed_alpha_bounds": [
+          -31.0,
+          -22.0,
+          29.0,
+          20.0
+        ]
+      },
+      {
+        "image": "E_Tank_Wpn_07.png",
+        "sha256": "8818e7a996c2f6b1c9d5a4861646cfd5d5fa3512b4a2bcae79e028d2c2a2c5e9",
+        "canvas": [
+          56,
+          28
+        ],
+        "alpha_bounds": [
+          3,
+          0,
+          56,
+          28
+        ],
+        "placed_alpha_bounds": [
+          -21.0,
+          -14.0,
+          32.0,
+          14.0
+        ]
+      }
+    ]
+  },
+  {
+    "machine": "E_Tank_32",
+    "first_stage": 47,
+    "scale": 1,
+    "angle": 0,
+    "visible": {
+      "bounds": [
+        -50.0,
+        -52.5,
+        50.0,
+        52.5
+      ],
+      "size": [
+        100.0,
+        105.0
+      ]
+    },
+    "with_shadow": {
+      "bounds": [
+        -50.0,
+        -52.5,
+        54.0,
+        56.5
+      ],
+      "size": [
+        104.0,
+        109.0
+      ]
+    },
+    "parts": [
+      {
+        "image": "E_Tank32_Body.png",
+        "sha256": "c884a2536c8ebf8b86c25c50a66670ed9ce9122f83d31766772837ddcbf6486b",
+        "canvas": [
+          100,
+          105
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          100,
+          105
+        ],
+        "placed_alpha_bounds": [
+          -50.0,
+          -52.5,
+          50.0,
+          52.5
+        ]
+      },
+      {
+        "image": "E_Tank32_Wpn.png",
+        "sha256": "aca52d22d708fc6ae8a648d92ec20a702849434ab272a49c1776c06e9a1a67ef",
+        "canvas": [
+          67,
+          65
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          67,
+          65
+        ],
+        "placed_alpha_bounds": [
+          -28.5,
+          -31.5,
+          38.5,
+          33.5
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "baselineHEAD": "06410eebfa3effd24b0f842d60cf7519ff9ee98f",
+  "baselinePath": "Resources/Images/AHeavyBody.png",
+  "decodedRuntimeDifferentChannels": 0,
+  "rgbaBytes": 238336,
+  "bodySize": [
+    532,
+    112
+  ],
+  "records": [
+    {
+      "path": "Resources/Images/AHeavyBody.png",
+      "sha256": "57c6a2a66a9eb95de2eac68470ad7cc06f99f78538818d4930e4ff064a43184c",
+      "restoreRows": [
+        0,
+        112
+      ]
+    },
+    {
+      "path": "Resources/Images/AHeavyRocket.png",
+      "sha256": "883d6dd8d6e873a81aa62efe2bc00189d6ea0343d2dc78359037ba5f31bfc979",
+      "restoreRows": [
+        18,
+        38
+      ]
+    },
+    {
+      "path": "Resources/Images/AHeavyAirStrike.png",
+      "sha256": "510f57fad4d874641f067ebb6443933f52ba57556a6fe1193828846c65eac4c1",
+      "restoreRows": [
+        64,
+        82
+      ]
+    }
+  ]
+}

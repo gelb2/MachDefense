@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "always": [
+    "instructions"
+  ],
+  "categories": {
+    "instructions": [
+      "docs/evidence/aircraft-work-failure-20261109.md",
+      "docs/evidence/aircraft-instruction-refusal-20261108.md"
+    ],
+    "code": [
+      "docs/evidence/aircraft-resource-process-incident-20261109.md",
+      "docs/research/aircraft-movement-restore-20261109.md"
+    ],
+    "graphics": [
+      "docs/evidence/new-unit-art-errors-20261108.md",
+      "docs/evidence/aircraft-resource-process-incident-20261109.md",
+      "docs/evidence/aircraft-assembly-followup-20261109/art-audit.md"
+    ]
+  }
+}

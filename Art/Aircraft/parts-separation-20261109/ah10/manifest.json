@@ -1,0 +1,459 @@
+{
+  "decodedRuntimeDifferentChannels": 0,
+  "existingMuzzleArtGaps": {
+    "AHeavyRocket": {
+      "oldMuzzlePixel": [
+        55,
+        22
+      ],
+      "forwardAlphaEdge": 51,
+      "forwardAlphaOnMuzzleRow": 48,
+      "nearestAlphaPixel": [
+        50,
+        24
+      ],
+      "gapOnMuzzleRow": 7
+    },
+    "AHeavyAirStrike": {
+      "oldMuzzlePixel": [
+        74,
+        74
+      ],
+      "forwardAlphaEdge": 68,
+      "forwardAlphaOnMuzzleRow": 68,
+      "nearestAlphaPixel": [
+        68,
+        74
+      ],
+      "gapOnMuzzleRow": 6
+    }
+  },
+  "source": "Art/Aircraft/banking-20261109/prepared/AHeavyBody.png",
+  "sourceSHA256": "1dab8787dbdd4954cc31d8c4fbcf832b5b071ff214c498c7399505866d0c5655",
+  "preparedRecompositionByteIdentical": true,
+  "overlappingNonzeroAlphaPixels": 0,
+  "counts": [
+    [
+      3961,
+      514,
+      267
+    ],
+    [
+      3777,
+      541,
+      271
+    ],
+    [
+      3787,
+      592,
+      281
+    ],
+    [
+      3902,
+      609,
+      290
+    ],
+    [
+      3816,
+      528,
+      292
+    ],
+    [
+      3761,
+      546,
+      316
+    ],
+    [
+      3720,
+      507,
+      341
+    ]
+  ],
+  "rocketPolygons": [
+    [
+      [
+        14,
+        21
+      ],
+      [
+        19,
+        18
+      ],
+      [
+        36,
+        18
+      ],
+      [
+        47,
+        21
+      ],
+      [
+        52,
+        25
+      ],
+      [
+        52,
+        30
+      ],
+      [
+        44,
+        34
+      ],
+      [
+        17,
+        34
+      ],
+      [
+        13,
+        31
+      ],
+      [
+        13,
+        24
+      ]
+    ],
+    [
+      [
+        12,
+        22
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        36,
+        20
+      ],
+      [
+        48,
+        22
+      ],
+      [
+        53,
+        26
+      ],
+      [
+        53,
+        31
+      ],
+      [
+        43,
+        35
+      ],
+      [
+        15,
+        35
+      ],
+      [
+        11,
+        32
+      ],
+      [
+        11,
+        25
+      ]
+    ],
+    [
+      [
+        11,
+        23
+      ],
+      [
+        18,
+        20
+      ],
+      [
+        35,
+        21
+      ],
+      [
+        48,
+        23
+      ],
+      [
+        54,
+        27
+      ],
+      [
+        54,
+        33
+      ],
+      [
+        43,
+        37
+      ],
+      [
+        14,
+        37
+      ],
+      [
+        10,
+        33
+      ],
+      [
+        10,
+        26
+      ]
+    ],
+    [
+      [
+        11,
+        24
+      ],
+      [
+        18,
+        21
+      ],
+      [
+        35,
+        22
+      ],
+      [
+        48,
+        24
+      ],
+      [
+        54,
+        28
+      ],
+      [
+        54,
+        34
+      ],
+      [
+        43,
+        38
+      ],
+      [
+        14,
+        38
+      ],
+      [
+        10,
+        34
+      ],
+      [
+        10,
+        27
+      ]
+    ],
+    [
+      [
+        12,
+        22
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        36,
+        19
+      ],
+      [
+        48,
+        21
+      ],
+      [
+        53,
+        25
+      ],
+      [
+        53,
+        30
+      ],
+      [
+        43,
+        34
+      ],
+      [
+        15,
+        34
+      ],
+      [
+        11,
+        31
+      ],
+      [
+        11,
+        25
+      ]
+    ],
+    [
+      [
+        11,
+        21
+      ],
+      [
+        18,
+        18
+      ],
+      [
+        36,
+        18
+      ],
+      [
+        48,
+        20
+      ],
+      [
+        54,
+        24
+      ],
+      [
+        54,
+        29
+      ],
+      [
+        43,
+        33
+      ],
+      [
+        14,
+        33
+      ],
+      [
+        10,
+        30
+      ],
+      [
+        10,
+        24
+      ]
+    ],
+    [
+      [
+        10,
+        21
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        36,
+        18
+      ],
+      [
+        48,
+        20
+      ],
+      [
+        54,
+        24
+      ],
+      [
+        54,
+        28
+      ],
+      [
+        43,
+        32
+      ],
+      [
+        13,
+        32
+      ],
+      [
+        9,
+        29
+      ],
+      [
+        9,
+        24
+      ]
+    ]
+  ],
+  "airstrikeBoxes": [
+    [
+      42,
+      68,
+      69,
+      80
+    ],
+    [
+      42,
+      68,
+      69,
+      80
+    ],
+    [
+      42,
+      69,
+      69,
+      81
+    ],
+    [
+      42,
+      70,
+      69,
+      82
+    ],
+    [
+      41,
+      67,
+      69,
+      79
+    ],
+    [
+      41,
+      65,
+      69,
+      78
+    ],
+    [
+      40,
+      64,
+      69,
+      77
+    ]
+  ],
+  "records": [
+    {
+      "name": "AHeavyBody",
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyBody.png",
+      "sha256": "34af4cc0b8c48df0424cd281d44795f00ac471c630f5f9e2dd32ac64be3e03c1",
+      "runtimeSHA256": "57c6a2a66a9eb95de2eac68470ad7cc06f99f78538818d4930e4ff064a43184c",
+      "cellSize": [
+        76,
+        112
+      ],
+      "tileCount": 7
+    },
+    {
+      "name": "AHeavyRocket",
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyRocket.png",
+      "sha256": "cb2154ad6152e898d3461e6cf25a564b8dcc429abbb23cd6bfef4b34737a1102",
+      "runtimeSHA256": "adfe0c008760a6ae05f79bcbf30f6c5ee68cbde10a9ae9870b8af30613b13c49",
+      "cellSize": [
+        76,
+        112
+      ],
+      "tileCount": 7
+    },
+    {
+      "name": "AHeavyAirStrike",
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyAirStrike.png",
+      "sha256": "ebebb0d6820b7cf4154041ee25df79ab5bec87bb2a581a732c44c870d641bf8d",
+      "runtimeSHA256": "a63573c2fd078c3085ca5786f1a461819a00b5394dd785a63744b3f0718dd894",
+      "cellSize": [
+        76,
+        112
+      ],
+      "tileCount": 7
+    }
+  ],
+  "mountBehavior": "Existing WorldCombat embedded body angle and recoil zero retained; no independently rotating weapon or support backfill added.",
+  "muzzlePixelsNeutral": {
+    "AHeavyRocket": [
+      55,
+      22
+    ],
+    "AHeavyAirStrike": [
+      74,
+      74
+    ]
+  },
+  "runtimeVisualVerification": "pending"
+}

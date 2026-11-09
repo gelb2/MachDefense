@@ -1,0 +1,47 @@
+{
+  "stage": "final full-X / cropped-Y Beluga parts",
+  "bankingPixelComparisons": "web-fullx-pixel-comparison.json",
+  "pixelIdenticalFrames": 14,
+  "uploadsAfterWarmup": {
+    "chrome": 0,
+    "webkit": 0
+  },
+  "combat": {
+    "chrome": {
+      "levels": 10,
+      "unitsPerLevel": 4,
+      "ticksPerLevel": 600,
+      "ok": true,
+      "dodge": true,
+      "audioLifetime": {
+        "created": 2,
+        "closed": 0
+      },
+      "runtimeErrors": []
+    },
+    "webkit": {
+      "levels": 10,
+      "unitsPerLevel": 4,
+      "ticksPerLevel": 600,
+      "ok": true,
+      "dodge": true,
+      "audioLifetime": {
+        "created": 2,
+        "closed": 0
+      },
+      "runtimeErrors": []
+    }
+  },
+  "packageResourcesMatch": 6,
+  "performanceMeasured": false,
+  "additionalTextureBackingEstimateBytes": 786432,
+  "extraVisibleAndShadowSubmissionsPerBeluga": 6,
+  "newUpgradeArtImplemented": false,
+  "gameWasmSHA256": "310bc66d58ff871fd04bbb6cbaf96ff531f083e6a03e3a93469768714a0cd7c2",
+  "gameDataSHA256": "eb5f91c3bf7277cace365a3d65595d1f7e6bdea7d39b4d9bfcbbe222132e0d51",
+  "url": "http://127.0.0.1:8953/",
+  "intermediateIssues": [
+    "Full XY crop caused 9\u201344 changed shadow-edge pixels per pose; retained as rejected comparison evidence. Full X / crop Y restored exact pixels.",
+    "Full-canvas Chromium all-level concurrent run timed out before PLAY readiness. Final two browser tests ran sequentially and passed."
+  ]
+}

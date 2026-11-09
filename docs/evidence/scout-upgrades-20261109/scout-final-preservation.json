@@ -1,0 +1,98 @@
+{
+  "baseHEAD": "fe72d80d8f86ec3bde709aa4ae66946f756f1fe3",
+  "containers": {
+    "AircraftParts": {
+      "existingNodesByteIdentical": 133,
+      "changed": [],
+      "added": [
+        "ALightCover_02",
+        "ALightCover_03",
+        "ALightCover_04",
+        "ALightCover_05",
+        "ALightCover_06",
+        "ALightCover_07",
+        "ALightCover_08",
+        "ALightCover_09",
+        "ALightCover_10"
+      ]
+    },
+    "AircraftMachines": {
+      "existingNodesByteIdentical": 35,
+      "changed": [
+        "AircraftLight_02",
+        "AircraftLight_03",
+        "AircraftLight_04",
+        "AircraftLight_05",
+        "AircraftLight_06",
+        "AircraftLight_07",
+        "AircraftLight_08",
+        "AircraftLight_09",
+        "AircraftLight_10"
+      ],
+      "added": []
+    },
+    "Level10Parts": {
+      "existingNodesByteIdentical": 177,
+      "changed": [],
+      "added": [
+        "ALightCover_02",
+        "ALightCover_03",
+        "ALightCover_04",
+        "ALightCover_05",
+        "ALightCover_06",
+        "ALightCover_07",
+        "ALightCover_08",
+        "ALightCover_09",
+        "ALightCover_10"
+      ]
+    },
+    "Level10Machines": {
+      "existingNodesByteIdentical": 68,
+      "changed": [
+        "AircraftLight_02",
+        "AircraftLight_03",
+        "AircraftLight_04",
+        "AircraftLight_05",
+        "AircraftLight_06",
+        "AircraftLight_07",
+        "AircraftLight_08",
+        "AircraftLight_09",
+        "AircraftLight_10"
+      ],
+      "added": []
+    }
+  },
+  "tables": {
+    "PartsList": {
+      "preexistingOriginalRowsByteIdentical": true,
+      "changedGeneratedAliases": [
+        "ALightGun_02",
+        "ALightMissile_02",
+        "ALightGun_03",
+        "ALightMissile_03",
+        "ALightGun_04",
+        "ALightMissile_04",
+        "ALightGun_05",
+        "ALightMissile_05",
+        "ALightGun_06",
+        "ALightMissile_06",
+        "ALightGun_07",
+        "ALightMissile_07",
+        "ALightGun_08",
+        "ALightMissile_08",
+        "ALightGun_09",
+        "ALightMissile_09",
+        "ALightGun_10",
+        "ALightMissile_10"
+      ]
+    },
+    "TileList": {
+      "preexistingOriginalRowsByteIdentical": true,
+      "changedGeneratedAliases": []
+    }
+  },
+  "modifiedPreexistingImagePaths": [],
+  "newTexturePOTRGBABytes": 156672,
+  "newTextures": 27,
+  "extraVisibleNodesPerUpgradedScout": 1
+}

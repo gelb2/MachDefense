@@ -1,0 +1,28 @@
+{
+  "performance": [
+    {
+      "count": 100,
+      "enabled": false,
+      "frames": 600,
+      "p99": 16.80000000000109,
+      "over25ms": 0,
+      "maxParticles": 0,
+      "uploads": 0,
+      "heapStable": true,
+      "writes": 0
+    },
+    {
+      "count": 100,
+      "enabled": true,
+      "frames": 600,
+      "p99": 16.80000000000109,
+      "over25ms": 0,
+      "maxParticles": 132,
+      "uploads": 0,
+      "heapStable": true,
+      "writes": 0
+    }
+  ],
+  "ok": true,
+  "errors": []
+}

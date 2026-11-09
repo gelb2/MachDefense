@@ -1,0 +1,100 @@
+{
+  "baselineCommit": "06410eebfa3effd24b0f842d60cf7519ff9ee98f",
+  "url": "http://127.0.0.1:8953/",
+  "banking": {
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "captures": 14,
+    "exactCaptures": 12,
+    "remainingCaptures": 2,
+    "differentPixelsEach": 3,
+    "maxChannelDifference8bit": 1,
+    "tile": 3,
+    "bankDegrees": -24,
+    "otherAircraftAndOriginalTankPixelDifferences": 0,
+    "uploadsAfterWarmupEach": 0,
+    "explanation": "All three pixels lie at pod edges/shadow overlap. Source reconstruction is exact; shadow compositing order/rounding is suspected, not confirmed."
+  },
+  "combat": {
+    "levelsPerEngine": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "aircraftPerLevel": 4,
+    "weaponCountsScoutAH10CheyenneBeluga": [
+      2,
+      5,
+      2,
+      4
+    ],
+    "ticksPerLevel": 600,
+    "captureTick": 181,
+    "baselineCaptureSource": ".local/aircraft-parts-20261109/web-fullx-{chrome,webkit}-all-levels",
+    "attackCapturesCompared": 20,
+    "attackCapturesPixelExact": 20,
+    "targetDamageAndSoundObserved": true,
+    "writes": 0,
+    "audioContextLifetimeChanged": false,
+    "dodgeAndFlareObserved": true,
+    "limitation": "Weapon instance count and combat activity were checked; this web probe does not expose per-weapon shot counters."
+  },
+  "package": "ah10-web-package.json",
+  "preservation": "ah10-web-preservation.json",
+  "memoryEstimate": {
+    "newImageDimensions": [
+      532,
+      112
+    ],
+    "newTextureBackingEachBytes": 524288,
+    "newTextures": 2,
+    "addedBackingBytesAssumingOneBlendKeyEach": 1048576,
+    "additionalDrawSubmissionsPerAH10": 4,
+    "limitation": "Power-of-two RGBA texture backing estimate, not total driver memory measurement."
+  },
+  "performance": "ah10-web-performance.json",
+  "performanceConclusion": "In two alternating rounds the fullcanvas candidate GPU p95 was higher in every corresponding pair. RAF p95 remained16.7\u201316.8ms, but stalls33.3\u201366.8ms occurred. No claim of performance equivalence, zero frame drops, or mobile performance. Additional texture backing estimate1MiB and4 draw submissions perAH10.",
+  "candidateStage": "ADOPTED fullcanvas; both Y-crop experiments rejected",
+  "restoredPackageVerified": true,
+  "reusedEvidenceReason": "All saved regular package files byte-identical and seven resource entries match final Resources. Assembly agent separately verified all15 implementation/input hashes match first fullcanvas candidate.",
+  "rejectedCandidates": [
+    {
+      "stage": "tight Y crop20/18rows",
+      "bankingChangedPixelsEach": [
+        50,
+        51,
+        53,
+        61,
+        52,
+        54,
+        51
+      ],
+      "status": "rejected; source reconstruction exact but rendered edge changed"
+    },
+    {
+      "stage": "Y crop32rows with transparent margins",
+      "bankingChangedPixelsEach": [
+        50,
+        51,
+        53,
+        61,
+        52,
+        54,
+        51
+      ],
+      "status": "rejected; padding did not change failed pixels, so insufficient alpha margin hypothesis not supported"
+    }
+  ],
+  "discardedTimingDiagnostic": "Initial unflushed first-RAF readings around1second are excluded from finalcomparison. Final measurements explicitly wait two RAF boundaries after synchronous warmup; all raw timing diagnostic files are retained locally.",
+  "rejectedCropEvidence": "ah10-web-ycrop-rejected.json; ah10-web-padded-pixel-comparison.json",
+  "finalServedURL": "http://127.0.0.1:8953/"
+}

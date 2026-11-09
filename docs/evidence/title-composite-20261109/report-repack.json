@@ -1,0 +1,607 @@
+{
+  "saved_bytes": 853638,
+  "files": [
+    {
+      "path": "dist/assets/android-20261030/galaxy-title.webp",
+      "before": 1603040,
+      "after": 1589926,
+      "rgba_sha256": "4b2f8b09a513db7bd3de174f76ecb70aed483930789e272b660592c801c72682",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/menu-art/title-a.webp",
+      "before": 1561730,
+      "after": 1546650,
+      "rgba_sha256": "2e469db28257fca21507f27b68039c1b32cf7d4e45094562fc3ee1caf378f490",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/app-icon-source/master.webp",
+      "before": 1531248,
+      "after": 1518544,
+      "rgba_sha256": "dc0c56e845628f114a053982f3ee29cc3e48b204c6816cdacb4699c5b1c662b4",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/machdefense-module-cheat-ipad.webp",
+      "before": 1523488,
+      "after": 1495014,
+      "rgba_sha256": "825ff3cd6e198e17c23141a9dc1236a486ddb1e85c0ec11e523ec08178bcce72",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/assets/button-incident/galaxy-slots.webp",
+      "before": 1514204,
+      "after": 1492300,
+      "rgba_sha256": "5c20220ee3158112969800e9c91ed2e7be6312574484058eff2634d2ed3554a7",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/assets/android-20261030/tablet-editor.webp",
+      "before": 1336544,
+      "after": 1317118,
+      "rgba_sha256": "dabafd578ac3a1e25082c50429c53affd6fbd6f9fa66dc9a02882e179be98039",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/runtime-style/tunguska.webp",
+      "before": 1290712,
+      "after": 1269764,
+      "rgba_sha256": "3d42d68dc2ca393776d39b12f8863deb55eff634bba6d41939c6666473d0601c",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/runtime-style/shilka.webp",
+      "before": 1210604,
+      "after": 1195972,
+      "rgba_sha256": "43dbf367d8c46c2245e7150997cde2ddc6f8035e932c7d668796855e01f9b694",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/assets/machdefense-og-20261107/original-title.webp",
+      "before": 1177518,
+      "after": 1158362,
+      "rgba_sha256": "7a329cad61bd57454b14bf07ec127b7d25cd563b38e2a86d16e891681045a10d",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/app-icon-20261029/icon.webp",
+      "before": 1069754,
+      "after": 1051342,
+      "rgba_sha256": "f4edb57435dcb58c3c3617cc8ed4a189dd6f547d29370b921e45e583bb606c51",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-allied-20261108/ducted.webp",
+      "before": 1061198,
+      "after": 1043758,
+      "rgba_sha256": "d33716f55fd5a1aba8b96852033f8777879cf105aeaf23edf30c8989debaa837",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/shilka-turret/turret-v3.webp",
+      "before": 1057278,
+      "after": 1040406,
+      "rgba_sha256": "189977600797faac6b8d32e5eb6c57d22702d7e6eed75b2d1d9c56d166f27a7d",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-paint-20261108/ah10-concept-v1.webp",
+      "before": 1038178,
+      "after": 1024050,
+      "rgba_sha256": "bdfa196d0ba1123630566bbb29e23dd2ec024d73a74f68afc6b188218485b529",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-resume-20261108/ah10-body-v3.webp",
+      "before": 1038088,
+      "after": 1024598,
+      "rgba_sha256": "c781afa255536efa0feff781602297a390e34245e24ec14b2d2e0de5ace1be27",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/texture-proposal/tunguska.webp",
+      "before": 1016554,
+      "after": 1008096,
+      "rgba_sha256": "eda6a42766121737b5818d5f788255e46aeaf9a35238353090483e944f78e86a",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/integrated/tunguska-radar.webp",
+      "before": 1016204,
+      "after": 1006890,
+      "rgba_sha256": "4bc4e79791b1f15518387009ebe7c9e02838443d90f1a8e9f1c0beba42ae7d14",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/aircraft-style/tunguska.webp",
+      "before": 1010408,
+      "after": 990572,
+      "rgba_sha256": "081c45da58fed38a17057c29c22174bcac279af9172d94877b27dd1129ebb462",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-modular/vtol-ducted.webp",
+      "before": 978454,
+      "after": 959694,
+      "rgba_sha256": "097eee668b179607edf9ade19ea9d0420d029180d62ec9b321cc4ede0a26cca7",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-modular/vtol-transport.webp",
+      "before": 966340,
+      "after": 950798,
+      "rgba_sha256": "297348ad64c61ab30f9863bde23276e8f8796b81626a1f55feb3d90fb7ac0581",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/aircraft-style/shilka.webp",
+      "before": 916202,
+      "after": 903136,
+      "rgba_sha256": "26b5dd89a382dd07ab8429e8a657d906a5f8bf5f07d2c4decf35a4fb7eeadd23",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/texture-proposal/shilka.webp",
+      "before": 909024,
+      "after": 896516,
+      "rgba_sha256": "1d607912267d897632aaf84d3724a29ee6dffd7ea229b1f9ec7799477fc29620",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-allied-20261108/transport.webp",
+      "before": 905242,
+      "after": 891370,
+      "rgba_sha256": "60b1031e926295c6fe379c1720b658dd52617ad7c7e076906a77354e00063f27",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/hud-editor/release-iphone-menu.webp",
+      "before": 887514,
+      "after": 875800,
+      "rgba_sha256": "8cc616d51bd0a7f02b5f2e7b8315548607528777f97b77c29abc79649338c456",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/vtol/harrier-concept.webp",
+      "before": 882508,
+      "after": 870430,
+      "rgba_sha256": "1d6d86cb79d02a5ab9ccd1fa465149c591a88882b0cac859715269cffd63227f",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/hud-editor/release-iphone-trim.webp",
+      "before": 851384,
+      "after": 838572,
+      "rgba_sha256": "7b41bee167a93c01819836006150801714fd37c17aa36d2ff8362fe909c3a115",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/vtol/f35b-concept.webp",
+      "before": 837682,
+      "after": 825348,
+      "rgba_sha256": "4e1ac3f81c00afebf2212a352492b4a262b5db6e1a4f2c934ebba02d9275e12b",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/hud-editor/physical-iphone-cheat-weapon.webp",
+      "before": 835822,
+      "after": 819602,
+      "rgba_sha256": "6534ea1917c5ab653bd694c2cb8f75eb79e63193df064724f78e386e11fe7e78",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/hud-editor/physical-iphone-cheat-selected.webp",
+      "before": 815536,
+      "after": 804678,
+      "rgba_sha256": "4add356aa2e9a6fc739af22615398eca51602730feef6b04dc3b0b5269a66e72",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/hud-editor/physical-iphone-ordinary-gauges.webp",
+      "before": 794464,
+      "after": 778228,
+      "rgba_sha256": "dfce26c2add096f629b9c040b47fa541f6b6ed53ef72b851f67a3922c3a5bd30",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-paint-20261108/scout-concept-v1.webp",
+      "before": 768734,
+      "after": 759706,
+      "rgba_sha256": "67f672e32ffbbd4b93f15432ed6e44183bbc138865a362ca57c37d4c5b93a4fb",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/v2/body.webp",
+      "before": 748770,
+      "after": 742760,
+      "rgba_sha256": "886d66d1475b9e509a96caef06bdcc4dee715d5f1ec570a6ecaaca61d4b59c61",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/clone/HeavyMachValidation-title.webp",
+      "before": 746190,
+      "after": 725766,
+      "rgba_sha256": "28eb9a835ca4af7ca7647a9632995c2db7c9f356d393f9bcf3886c0ed2e9c676",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/independence/HeavyMachValidation-title.webp",
+      "before": 742374,
+      "after": 722306,
+      "rgba_sha256": "a8f270f91ef24ae21cc78e00eaab4432d9a7bf14b1f17dc41440a56e1473234f",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/clone/HeavyMachRestored-title.webp",
+      "before": 739942,
+      "after": 718100,
+      "rgba_sha256": "9c993a78251d85700087bc8900a220522d00b686a78ede3ca5b87d815b2d64cf",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/runtime-style/HeavyMachRestored-fresh-clone.webp",
+      "before": 738036,
+      "after": 717550,
+      "rgba_sha256": "7be8cf9c08ec3f8bf6201e2791625b4c650314c256250c25a4642a56470c8bfe",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/runtime-style/HeavyMachValidation-fresh-clone.webp",
+      "before": 737604,
+      "after": 716484,
+      "rgba_sha256": "2c1936a4013b103de2c49e3db72b3cfd33e8ffbc165ed02249372e4f4d1ad8a0",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/independence/HeavyMachRestored-title.webp",
+      "before": 732660,
+      "after": 713776,
+      "rgba_sha256": "e88c1d501dcc68735a27a5ef841a491614b4d1e52b308ef5200dec3cd1543658",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-resume-20261108/ah10-sheet-v2.webp",
+      "before": 707040,
+      "after": 701476,
+      "rgba_sha256": "78b907171251e802f64576a8a2be247cc0bd4c61a6cfb20e8505f7a4a12e451e",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/shilka-gun-v2.webp",
+      "before": 685734,
+      "after": 677786,
+      "rgba_sha256": "134e9d937612f37415332e0687a5206a2cb3e033492ab042d3bafc384afdbdcc",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/vtol/yak141-concept.webp",
+      "before": 667712,
+      "after": 656560,
+      "rgba_sha256": "7c29307a389b9506ca34f3df18799f8657786093f6cf18150c0bfc2169bb6fa7",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-resume-20261108/cheyenne-sheet-v2.webp",
+      "before": 651102,
+      "after": 644712,
+      "rgba_sha256": "526539cbd2783d1514a8e408ccdd7824f3fdfc666d34358a1adbdf28232d9b24",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/machdefense/turret-design-v5/body-sheet.webp",
+      "before": 618720,
+      "after": 612862,
+      "rgba_sha256": "6f66858250f210507bc5b572c870fc82b8acf239c2893b761b3a7f6b29737a3d",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/github-social-preview.webp",
+      "before": 607674,
+      "after": 604068,
+      "rgba_sha256": "69f1e7330d6d05a5655abfa6ccf3e8e0c660c00d041d12556a3063f1ebcd8afb",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/lux-lunae/su57-concept.webp",
+      "before": 592880,
+      "after": 586656,
+      "rgba_sha256": "297778e050298b5f8ba2925e744bd95fe692a076f41c59190999189b56b54325",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/vtol/v2/yak141-concept.webp",
+      "before": 590306,
+      "after": 586376,
+      "rgba_sha256": "2fc6d0544260441ba7deb65467c682cc2b0e13dce35089512fe90269f97324e7",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/lux-lunae/mig31-concept.webp",
+      "before": 583278,
+      "after": 579272,
+      "rgba_sha256": "c17828e04f7c90f02cd05819e361d9dc0b076615a88f3539f7c48750827a22af",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/github-social-preview-gameplay.webp",
+      "before": 571922,
+      "after": 554224,
+      "rgba_sha256": "5f831241ac26484b711a0878ee32378916844180379b2ee20d21721180d5894c",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/vtol/v2/f35b-concept.webp",
+      "before": 567544,
+      "after": 564150,
+      "rgba_sha256": "d644c4692e1ce14330fbbfe8a44ab8b0703df8247f66eb0eb78af20182661fb3",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/vtol/v2/harrier-concept.webp",
+      "before": 561924,
+      "after": 556590,
+      "rgba_sha256": "44611f3d7e43edacc9c911431f77a70248631e29a2259284099bffbfc2b951df",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/tunguska-gun-v2.webp",
+      "before": 561586,
+      "after": 555564,
+      "rgba_sha256": "3a6a14dea41cb783ef09814c77148c3989a81da43f498ac4cff6fa1b629ef5f6",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/lux-lunae/f22-concept.webp",
+      "before": 557494,
+      "after": 554326,
+      "rgba_sha256": "92d7f988b561b9802a57769fe7c586a1276bc7c4c924a87fe32b00b56dac5c45",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/vtol/refined/VTOL_Harrier.webp",
+      "before": 555442,
+      "after": 549100,
+      "rgba_sha256": "69a343a1b2822561c4b9215469a19b4e97b095293242414276337220d50f1cdc",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/vtol/refined/VTOL_Yak141.webp",
+      "before": 545834,
+      "after": 540612,
+      "rgba_sha256": "597b236ccd7017ea281819fe37cf4cca4edb262c68881bb01a5ec66b1c95744d",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/lux-lunae/Su57-gold.webp",
+      "before": 540976,
+      "after": 533754,
+      "rgba_sha256": "73278544590d56335c13a2279d78667ea7baf2991460ef16977b47521a02056f",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-approved-20261108/orca-gray.webp",
+      "before": 540002,
+      "after": 533868,
+      "rgba_sha256": "a7b917cca8bd44133e925a9957cc5af1840c4c6b8a9c85280cc2bd738c45769d",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/lux-lunae/MiG31-gold.webp",
+      "before": 535038,
+      "after": 530480,
+      "rgba_sha256": "5c319763e5959fb3f7e79c65d8d11afbfe6beb51f139fe71fd03359338ba57d7",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/v2/rifle.webp",
+      "before": 532888,
+      "after": 529230,
+      "rgba_sha256": "12e89a4ccdb0612e5949573df3ca94cb6896c53283a4c99118dbf60e2571fe22",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/lux-lunae/F22-gold.webp",
+      "before": 516836,
+      "after": 513516,
+      "rgba_sha256": "59902bbcae6abd3bc092d1022cf298502d5c7ea8d2959c0531d94d98d1fa04d0",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-user-aircraft-20261108/beluga-sheet.webp",
+      "before": 484690,
+      "after": 482830,
+      "rgba_sha256": "cbc698a6e2b88e7f2740074d7bda06adfd5ec7506db2af30d1b559cb165bfa08",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/threads-media/android-preview.webp",
+      "before": 469438,
+      "after": 460616,
+      "rgba_sha256": "367bd9b8c1d107b1bf77abe9f0706f9316a98308b4dceb2d3dadf466f7e885e0",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-level10-art-20261107/laser.webp",
+      "before": 442304,
+      "after": 438826,
+      "rgba_sha256": "a191af26862eb0987fc261740723895e4188ccfc934be4c529284397ef85f4f6",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/v2/missile.webp",
+      "before": 436450,
+      "after": 430712,
+      "rgba_sha256": "08a56d5d301385fe47132c65873abdfb1cf44095348bc49c4898c4086349e6d3",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-allied-20261108/world.webp",
+      "before": 419856,
+      "after": 417498,
+      "rgba_sha256": "af7ea08678c2398cc35768fc14fe1ee1497126c3225059e77579d06604c52022",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-approved-20261108/world.webp",
+      "before": 417534,
+      "after": 414614,
+      "rgba_sha256": "aff24b43b65d67358f03126a11f38c2c85bdeda0148e54660617a9d80346f7d5",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/v2/laser.webp",
+      "before": 408964,
+      "after": 403674,
+      "rgba_sha256": "28367621bfbf510ec9e50f7ec9834dea7f8923ee41f4f4bfcc68bd671a813921",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-runtime/world.webp",
+      "before": 406338,
+      "after": 401714,
+      "rgba_sha256": "92ddd23db5fdd01e708d69d9f69f44081cdd850f08dd7c854f6e8ea345228de5",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-aircraft-modular/world.webp",
+      "before": 405026,
+      "after": 400738,
+      "rgba_sha256": "651163d4d818de314b59765e4e8a1d99714b854325bbd0927d0e573f2d601782",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/machdefense/turret-design-v5/rifle-sheet.webp",
+      "before": 404524,
+      "after": 399698,
+      "rgba_sha256": "00d5efe6c6cfee3a9975368e280581f806ac65c17d384e3451e52964e83b6604",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/v2/plasma.webp",
+      "before": 373876,
+      "after": 370534,
+      "rgba_sha256": "9a1933f8bc6506f75396735491f1547347d83f7e9488d121f56f0e4c99bbb747",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/v2/vulcan.webp",
+      "before": 340544,
+      "after": 335430,
+      "rgba_sha256": "ac61f1241fc525e6449ca22f81d2705b36675a386688357b8545cad00cf52344",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/assets/machdefense-og-20261107/webkit-battle.webp",
+      "before": 325742,
+      "after": 323656,
+      "rgba_sha256": "06608a16fe658b0063f29b38d26a40620a25b3ca08567bd8391f1f2f536d5e13",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/assets/machdefense-og-20261107/chromium-battle.webp",
+      "before": 325678,
+      "after": 323718,
+      "rgba_sha256": "494dc3723f76975de3cd3a46b7fc51be3f0e8b0340a89875f034ddd4e5200ce5",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/menu-art/wide-title-956-1.webp",
+      "before": 290954,
+      "after": 288122,
+      "rgba_sha256": "7e70517da22dd71027f29e0b525fb798d2106b6b2de0879dcec41b096164ac38",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/v2/ion.webp",
+      "before": 280640,
+      "after": 277292,
+      "rgba_sha256": "9692edaa8991e5b3763cda8cf33894d7c5ca04494d2a274fd4e5a5121fc93b03",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/tunguska-game-240.webp",
+      "before": 247700,
+      "after": 243786,
+      "rgba_sha256": "8979425bb6d82b377e26d3ee8f5fa373e0c50baaeddf30fb64259df9a24df2b9",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/tunguska-game-120.webp",
+      "before": 243084,
+      "after": 239408,
+      "rgba_sha256": "d08db42070c092f20d72e406df6ed4beba2d443509d32ecb32ca5c1f7c26946b",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/tunguska-ipad.webp",
+      "before": 243016,
+      "after": 239146,
+      "rgba_sha256": "08b962add69bc9900e1b14115e3efdf09c643ee2cfe4ae310acd71cfb936b096",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/shilka-game-240.webp",
+      "before": 242062,
+      "after": 238586,
+      "rgba_sha256": "1e9c18d0503f96df926c81dede552c027a402e14d69e08141bf43f3f345ffdeb",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/shilka-iphone.webp",
+      "before": 241886,
+      "after": 238326,
+      "rgba_sha256": "82d548e8375250fdb3434da80dcc26a823082473fe07024f2151ed2de901e07e",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/shilka-medium-slope.webp",
+      "before": 240086,
+      "after": 236558,
+      "rgba_sha256": "4dd2c0efa4b47ff010da64e3f7c739142b2acafa9a95b3a96f1a8b313e6d9ce2",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/shilka-game-120.webp",
+      "before": 239082,
+      "after": 235354,
+      "rgba_sha256": "c7b50660d20909d06d33b97fc6c52dddc288660ccdbf80954e61c370114cbfb3",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/shilka-height/shilka.webp",
+      "before": 238128,
+      "after": 234130,
+      "rgba_sha256": "4f01d1a52bbf2fd24fc3e7d577173eebf81286e8d889c9b35f6e3141363cdeee",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/shilka-turret/iphone-shilka.webp",
+      "before": 237528,
+      "after": 233596,
+      "rgba_sha256": "be54b1863b8ff57c271f7ac259fa5eee5023b3302a902b017ed708ffd8a93971",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/integrated/iphone-shilka.webp",
+      "before": 237498,
+      "after": 233442,
+      "rgba_sha256": "25a0e8bf8a13d67f9c487057ca950bf19cbac2138899e376d3834bde8b5e7a11",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/media/ground-aa/integrated/ipad-tunguska.webp",
+      "before": 236992,
+      "after": 232874,
+      "rgba_sha256": "e4199c16b852d23c78f841a2fc7d97997d1120eaa54551b03dcf253f87ab338f",
+      "metadata_unchanged": true
+    },
+    {
+      "path": "dist/assets/machdefense-issue-review-20261107/hyperhle-issue-405.webp",
+      "before": 201512,
+      "after": 166616,
+      "rgba_sha256": "94854714129d9b0f177b8f63c0838a131ec06313bc1612498893d31e703c94bc",
+      "metadata_unchanged": true
+    }
+  ]
+}

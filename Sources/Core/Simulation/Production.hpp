@@ -32,9 +32,10 @@ public:
     std::size_t size()const{return jobs_.size();}
     std::vector<ProductionProgress> rows(double time)const;
     unsigned occupied(std::string_view definitionName)const;
-    void clear(){jobs_.clear();}
+    void clear(){jobs_.clear();aircraftSpawnRandom_=DarwinRandom(0x41a7);}
 private:
     struct Job { BuildDefinition definition;ProductionJob timer;std::optional<Vec2> destination; };
     std::vector<Job> jobs_;
+    DarwinRandom aircraftSpawnRandom_{0x41a7};
 };
 }

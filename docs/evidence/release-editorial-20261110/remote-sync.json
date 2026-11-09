@@ -1,0 +1,123 @@
+{
+  "base": "859fb67",
+  "remote_main": "c7cfd8a",
+  "unchanged_sources_and_incidents": {
+    "docs/editorial/helicopter-work-record-20261109.md": true,
+    "docs/editorial/aircraft-refusal-materials-20261109.md": true,
+    "docs/editorial/ai-argument-method-material-20261109.md": true,
+    "docs/evidence/aircraft-work-failure-20261109.md": true,
+    "docs/evidence/aircraft-instruction-refusal-20261108.md": true
+  },
+  "author_correction": "역사상 가장 불투명하고",
+  "readme_lower_unease_sections_once": true,
+  "runtime_and_art_unchanged": true,
+  "paragraph_resolution_log": [
+    {
+      "path": "docs/editorial/sass-publication-guide.md",
+      "block": 1,
+      "resolution": "retain newer local paragraph; remote has no added content"
+    },
+    {
+      "path": "docs/editorial/sass-publication-guide.md",
+      "block": 2,
+      "resolution": "retain remote added paragraph"
+    },
+    {
+      "path": "docs/editorial/unease-addition-source-20261108.md",
+      "block": 1,
+      "resolution": "same text, equivalent link destinations; retain local repository-relative links"
+    },
+    {
+      "path": "docs/editorial/unease-addition-source-20261108.md",
+      "block": 2,
+      "resolution": "retain remote added paragraph"
+    },
+    {
+      "path": "docs/editorial/unease-and-typewriters-draft-20261108.md",
+      "block": 1,
+      "resolution": "retain remote added paragraph"
+    },
+    {
+      "path": "docs/editorial/unease-and-typewriters-draft-20261108.md",
+      "block": 2,
+      "resolution": "retain remote added paragraph"
+    },
+    {
+      "path": "docs/en/public/README.md",
+      "block": 1,
+      "resolution": "retain newer local paragraph; remote has no added content"
+    },
+    {
+      "path": "docs/en/public/unease-and-typewriters.md",
+      "block": 1,
+      "resolution": "retain newer local paragraph; remote has no added content"
+    },
+    {
+      "path": "docs/en/public/unease-and-typewriters.md",
+      "block": 2,
+      "resolution": "same text, equivalent link destinations; retain local repository-relative links"
+    },
+    {
+      "path": "docs/en/public/unease-and-typewriters.md",
+      "block": 3,
+      "resolution": "preserve newer reference material and append remote overseer paragraph"
+    },
+    {
+      "path": "docs/evidence/new-unit-art-errors-20261108.md",
+      "block": 1,
+      "resolution": "same text, equivalent link destinations; retain local repository-relative links"
+    },
+    {
+      "path": "docs/evidence/user-aircraft-20261108.md",
+      "block": 1,
+      "resolution": "same text, equivalent link destinations; retain local repository-relative links"
+    },
+    {
+      "path": "docs/public/README.md",
+      "block": 1,
+      "resolution": "retain newer local paragraph; remote has no added content"
+    },
+    {
+      "path": "docs/public/unease-and-typewriters.md",
+      "block": 1,
+      "resolution": "retain newer local paragraph; remote has no added content"
+    },
+    {
+      "path": "docs/public/unease-and-typewriters.md",
+      "block": 2,
+      "resolution": "same text, equivalent link destinations; retain local repository-relative links"
+    },
+    {
+      "path": "docs/public/unease-and-typewriters.md",
+      "block": 3,
+      "resolution": "preserve newer reference material and append remote overseer paragraph"
+    },
+    {
+      "path": "docs/report-site.md",
+      "block": 1,
+      "resolution": "preserve current publication history and remote 11/8 correction entry"
+    },
+    {
+      "path": "docs/translations/manifest.json",
+      "resolution": "union translation pairs by Korean path; preserve current rows; refresh actual hashes after review"
+    },
+    {
+      "path": "docs/translations/scope.json",
+      "resolution": "union translation pairs by Korean path; preserve current rows; refresh actual hashes after review"
+    },
+    {
+      "path": "docs/troubleshooting.md",
+      "block": 1,
+      "resolution": "retain newer local paragraph; remote has no added content"
+    }
+  ],
+  "reviewed_translation_pairs": [
+    "README.md",
+    "CHANGELOG.md",
+    "docs/public/README.md",
+    "docs/public/roadmap.md",
+    "docs/public/unease-and-typewriters.md",
+    "docs/editorial/unease-and-typewriters-draft-20261108.md",
+    "docs/editorial/unease-integration-20261110.md"
+  ]
+}

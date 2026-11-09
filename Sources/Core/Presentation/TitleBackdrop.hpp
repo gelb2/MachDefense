@@ -2,47 +2,40 @@
 #include "Core/Contracts/FrameLayout.hpp"
 
 namespace md {
-// Keep the shipped title intact. Only the area outside its rectangle gets
-// extension art; a short outer feather joins it without editing the source.
+// These prepared textures contain the adopted report composition. Only the
+// rectangles outside its original 640x960 title are sampled. All color matching
+// is baked by prepare_title_art.mjs; no pixel work or upload occurs per frame.
 inline void appendTitleBackdrop(Frame& frame, Sprite title, const FrameLayout& layout) {
     const auto c=layout.center();
-    auto piece=[&](std::string image,Rect src,Rect dst){
-        if(dst.width<=0||dst.height<=0)return;
-        Sprite s;s.image=std::move(image);s.sourcePx=src;s.destination=dst;
+    auto margin=[&](const char* image,Rect src,Rect dst,float anchorX,float anchorY){
+        if(dst.width<=.001f||dst.height<=.001f)return;
+        // Uniform cover crops scenery for other aspect ratios, never stretches it.
+        const float scale=std::max(dst.width/src.width,dst.height/src.height);
+        const float sw=dst.width/scale,sh=dst.height/scale;
+        src.x+=(src.width-sw)*anchorX;src.y+=(src.height-sh)*anchorY;
+        src.width=sw;src.height=sh;
+        Sprite s;s.image=image;s.sourcePx=src;s.destination=dst;
         s.blend=Blend::opaque;frame.sprites.push_back(std::move(s));
     };
-    // Each candidate was painted around a registered 320x480 original crop.
-    // Sample only the newly painted margins. Smaller windows crop those margins.
-    constexpr float wideW=1586,wideH=992,wideScale=480/wideH;
-    constexpr float left=wideW*7/24,right=wideW*17/24;
-    const float leftWidth=std::min(left,c.x/wideScale);
-    const float rightWidth=std::min(wideW-right,(layout.width-c.x-320)/wideScale);
-    piece("Generated/Title/Wide.png",{left-leftWidth,0,leftWidth,wideH},{0,c.y,c.x,480});
-    piece("Generated/Title/Wide.png",{right,0,rightWidth,wideH},{c.x+320,c.y,layout.width-c.x-320,480});
-    constexpr float tallW=852,tallH=1846,tallScale=320/tallW;
-    constexpr float upper=(tallH-480/tallScale)/2,lower=tallH-upper;
-    const float topHeight=std::min(upper,c.y/tallScale);
-    const float bottomHeight=std::min(upper,(layout.height-c.y-480)/tallScale);
-    piece("Generated/Title/Tall.png",{0,upper-topHeight,tallW,topHeight},{0,0,layout.width,c.y});
-    piece("Generated/Title/Tall.png",{0,lower,tallW,bottomHeight},{0,c.y+480,layout.width,layout.height-c.y-480});
-    constexpr float feather=8;
-    const float x[]={c.x-feather,c.x,c.x+320,c.x+320+feather};
-    const float y[]={c.y-feather,c.y,c.y+480,c.y+480+feather};
-    // Half-texel clamping avoids sampling the transparent POT padding.
-    const float u[]={.5f/640,.5f/640,1-.5f/640,1-.5f/640};
-    const float v[]={.5f/960,.5f/960,1-.5f/960,1-.5f/960};
+    // Wide: 3200x900, original rectangle [1300,0,600,900].
+    // The adopted 1600x900 is preserved at x=800. Extra natural scenery
+    // supports 32:9 while keeping the full 900px vertical registration.
+    margin("Generated/Title/Wide.png",{0,0,1300,900},{0,0,c.x,layout.height},1,.5f);
+    margin("Generated/Title/Wide.png",{1900,0,1300,900},{c.x+320,0,layout.width-c.x-320,layout.height},0,.5f);
+    // Tall: 390x844, original rectangle [0,129.5,390,585].
+    margin("Generated/Title/Tall.png",{0,0,390,129.5f},{c.x,0,320,c.y},.5f,1);
+    margin("Generated/Title/Tall.png",{0,714.5f,390,129.5f},{c.x,c.y+480,320,layout.height-c.y-480},.5f,0);
+    // Clamp only the outside half-texel border of the original. The interior
+    // source-to-destination mapping stays 2:1, unlike shrinking the full UV box.
+    // This prevents transparent POT padding from darkening fractional edges.
+    const float dx[]={c.x,c.x+.25f,c.x+319.75f,c.x+320};
+    const float dy[]={c.y,c.y+.25f,c.y+479.75f,c.y+480};
+    const float sx[]={.5f,.5f,639.5f,639.5f};
+    const float sy[]={.5f,.5f,959.5f,959.5f};
     for(int row=0;row<3;++row)for(int col=0;col<3;++col){
-        if(row==1&&col==1)continue;
-        TextureMesh edge;edge.image=title.image;edge.beforeSpriteIndex=frame.sprites.size();
-        for(const auto corner:{std::pair{0,0},std::pair{0,1},std::pair{1,0},std::pair{1,1}}){
-            const auto ix=col+corner.first,iy=row+corner.second;
-            const float a=(ix==0||ix==3||iy==0||iy==3)?0.f:1.f;
-            edge.vertices.push_back({{x[ix],y[iy]},{u[ix],v[iy]},{1,1,1,a}});
-        }
-        frame.meshes.push_back(std::move(edge));
+        auto piece=title;piece.sourcePx=Rect{sx[col],sy[row],sx[col+1]-sx[col],sy[row+1]-sy[row]};
+        piece.destination={dx[col],dy[row],dx[col+1]-dx[col],dy[row+1]-dy[row]};
+        frame.sprites.push_back(std::move(piece));
     }
-    title.destination.x=c.x;title.destination.y=c.y;
-    title.sourcePx=Rect{.5f,.5f,639,959};
-    frame.sprites.push_back(std::move(title));
 }
 }

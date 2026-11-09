@@ -1,0 +1,456 @@
+{
+  "status": "ready for actual World visual validation; not gameplay verified",
+  "method": "independently generated rear housing only; preserve approved weapon alpha and entire front region; original source images unchanged",
+  "rows": [
+    {
+      "part": "ALightGun",
+      "level": 2,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightGun_02.png",
+      "sha256": "e088f4fa3c25fde960a598f74208f8160d3fb71a5266442f6562e8c7b37b686b",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightGun.png",
+      "approved_source_sha256": "5cfcb56570ae49120f6ea3ffabc19f57ee934cf2843b55df85537f90a5ccee42",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv02-gun-crop.png",
+      "drawn_source_sha256": "fca8443f0507e5ef8fd7a36c39d4b9601849c51af318014b7475683717e24f40",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 38,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightGun_02.png"
+    },
+    {
+      "part": "ALightMissile",
+      "level": 2,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightMissile_02.png",
+      "sha256": "437fd1ea5a3208656674e95c9aab59de8feba4a5d65b822ee415ed2d3577183e",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightMissile.png",
+      "approved_source_sha256": "8f795c0899c9bd019cb289313371d2fe9019d019e92767af27889f95216d5e5a",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv02-missile-crop.png",
+      "drawn_source_sha256": "f7ce3f9a637eefd9f754b5628cd5c6b70068628c1890faf32a16d3d5344c4759",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 34,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightMissile_02.png"
+    },
+    {
+      "part": "ALightGun",
+      "level": 3,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightGun_03.png",
+      "sha256": "994eed17881cdd076668e7dbe1ce0dba37fb9c7ea85c9bc2dd64ef7df4bbbea8",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightGun.png",
+      "approved_source_sha256": "5cfcb56570ae49120f6ea3ffabc19f57ee934cf2843b55df85537f90a5ccee42",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        6
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv03-gun-crop.png",
+      "drawn_source_sha256": "56c8f11682f692e9022df8bada4ed34c529ce70b9333d186dcec4d80d51b0c1f",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 42,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightGun_03.png"
+    },
+    {
+      "part": "ALightMissile",
+      "level": 3,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightMissile_03.png",
+      "sha256": "fdbbd35908c3c7c254862f84b300401b9ac9f58e2d5bb005b961b78db6497a8a",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightMissile.png",
+      "approved_source_sha256": "8f795c0899c9bd019cb289313371d2fe9019d019e92767af27889f95216d5e5a",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        6
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv03-missile-crop.png",
+      "drawn_source_sha256": "07f2bb8054d5ef558b0ded23722ec95e24c68abf4a1ee6d77481c5cd3000847a",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 31,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightMissile_03.png"
+    },
+    {
+      "part": "ALightGun",
+      "level": 4,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightGun_04.png",
+      "sha256": "120481d992b0af0dfb07eb760a5b4ea0e86f902dfe43fba15238540b457fe7e6",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightGun.png",
+      "approved_source_sha256": "5cfcb56570ae49120f6ea3ffabc19f57ee934cf2843b55df85537f90a5ccee42",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv04-gun-crop.png",
+      "drawn_source_sha256": "67dab42bc3febf327bad3f4f94543a399c9f1ab6a6dfe40612a43f0d3f63e256",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 38,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightGun_04.png"
+    },
+    {
+      "part": "ALightMissile",
+      "level": 4,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightMissile_04.png",
+      "sha256": "d0cd67a2f1692d21c6e63db7656124c37e3802d1a6c8d4470b0d281f04f407ac",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightMissile.png",
+      "approved_source_sha256": "8f795c0899c9bd019cb289313371d2fe9019d019e92767af27889f95216d5e5a",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv04-missile-crop.png",
+      "drawn_source_sha256": "dbbc81f43232dbb307c627e5a9928197ef851394cdff983fc8ddbb4be2ff3387",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 36,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightMissile_04.png"
+    },
+    {
+      "part": "ALightGun",
+      "level": 5,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightGun_05.png",
+      "sha256": "a63011436e56cd12c9e66b65f04aa2a789f983cda424c99f45afbfcec29146e3",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightGun.png",
+      "approved_source_sha256": "5cfcb56570ae49120f6ea3ffabc19f57ee934cf2843b55df85537f90a5ccee42",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv05-gun-crop.png",
+      "drawn_source_sha256": "8661e2b93ae356848edb415223558bc72a5cf3ec5192e032de6a6958ed66a915",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 38,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightGun_05.png"
+    },
+    {
+      "part": "ALightMissile",
+      "level": 5,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightMissile_05.png",
+      "sha256": "c1548bfd725b5802c83b399420245880c82c0e47b139579f0ed61ab5299930c4",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightMissile.png",
+      "approved_source_sha256": "8f795c0899c9bd019cb289313371d2fe9019d019e92767af27889f95216d5e5a",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv05-missile-crop.png",
+      "drawn_source_sha256": "8e8fe5146785ce151fede0527c6b268fa9d665df706785d0e6983ba8a2b05040",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 34,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightMissile_05.png"
+    },
+    {
+      "part": "ALightGun",
+      "level": 6,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightGun_06.png",
+      "sha256": "268b81f340c0202f3949ad2fa03f4236e962c560fbe1bc4bfa140ec75de82911",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightGun.png",
+      "approved_source_sha256": "5cfcb56570ae49120f6ea3ffabc19f57ee934cf2843b55df85537f90a5ccee42",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        6
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv06-gun-crop.png",
+      "drawn_source_sha256": "c59df54d54c722d17c0bc5e072a534c26083356b7a2f6768de005c8be91c6326",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 42,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightGun_06.png"
+    },
+    {
+      "part": "ALightMissile",
+      "level": 6,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightMissile_06.png",
+      "sha256": "b03a9217a8c54515ccca2575286d066530e20a6ad99a48bb2c08c80a9cc62951",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightMissile.png",
+      "approved_source_sha256": "8f795c0899c9bd019cb289313371d2fe9019d019e92767af27889f95216d5e5a",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv06-missile-crop.png",
+      "drawn_source_sha256": "05d8be90d63aa95e0326dc7cc032ed05ea7dc4e27699634916ebb04a22ee122b",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 34,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightMissile_06.png"
+    },
+    {
+      "part": "ALightGun",
+      "level": 7,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightGun_07.png",
+      "sha256": "e1fe8ab09224537c015ad9f9559335f3a78504a4051eddca1dcbdbc3b1ad87d1",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightGun.png",
+      "approved_source_sha256": "5cfcb56570ae49120f6ea3ffabc19f57ee934cf2843b55df85537f90a5ccee42",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        6
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv07-gun-crop.png",
+      "drawn_source_sha256": "3df07ae174bf7928e6bd0337823e1ef654f74e2b9fab56761267b67d05d7cc1b",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 42,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightGun_07.png"
+    },
+    {
+      "part": "ALightMissile",
+      "level": 7,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightMissile_07.png",
+      "sha256": "7d9eb7f9f3ac540a50663a13938c5671815e0904194787d4cf77b4afb6dbef79",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightMissile.png",
+      "approved_source_sha256": "8f795c0899c9bd019cb289313371d2fe9019d019e92767af27889f95216d5e5a",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        8
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv07-missile-crop.png",
+      "drawn_source_sha256": "b72c35bbd2925b3953a219cd70764dc404e59ecbca26de71754814c12e359091",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 41,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightMissile_07.png"
+    },
+    {
+      "part": "ALightGun",
+      "level": 8,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightGun_08.png",
+      "sha256": "60272f63b5d35bc221588b6606c613a282daff8fa446df1019184be218636143",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightGun.png",
+      "approved_source_sha256": "5cfcb56570ae49120f6ea3ffabc19f57ee934cf2843b55df85537f90a5ccee42",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        7,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv08-gun-crop.png",
+      "drawn_source_sha256": "211c0887ac05ce9e57d7ad97f783960432e42464c9b2fbcafa086e201c6cda2a",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 43,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightGun_08.png"
+    },
+    {
+      "part": "ALightMissile",
+      "level": 8,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightMissile_08.png",
+      "sha256": "76261dfb1a1eb68d9ca5732ba147f39877f1589a5f4eefb243d052d7dfb102d3",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightMissile.png",
+      "approved_source_sha256": "8f795c0899c9bd019cb289313371d2fe9019d019e92767af27889f95216d5e5a",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        8
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv08-missile-crop.png",
+      "drawn_source_sha256": "34e2e4c17970429bc89157020dd55824ae6fd850bb2e110fb6cd821738d1a3e0",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 41,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightMissile_08.png"
+    },
+    {
+      "part": "ALightGun",
+      "level": 9,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightGun_09.png",
+      "sha256": "23e8d707de46bde0a2e88197ecd30f2b847b62c56cf23af9bc4032ed30bf3dc6",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightGun.png",
+      "approved_source_sha256": "5cfcb56570ae49120f6ea3ffabc19f57ee934cf2843b55df85537f90a5ccee42",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        7,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv09-gun-crop.png",
+      "drawn_source_sha256": "2459946cd087995cf2dfb65710638a420bbfe53f524394d78b2bb99f5256ecb5",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 43,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightGun_09.png"
+    },
+    {
+      "part": "ALightMissile",
+      "level": 9,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightMissile_09.png",
+      "sha256": "cbf2cda1481d0caf6cbe7cf263c7db900af1d828ca59655697270729839cc06d",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightMissile.png",
+      "approved_source_sha256": "8f795c0899c9bd019cb289313371d2fe9019d019e92767af27889f95216d5e5a",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        8
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv09-missile-crop.png",
+      "drawn_source_sha256": "ed1aedfc43cb6cb368184e65b8c636f57cb47a8bf785e1fdc41ff1c5188b9c03",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 39,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightMissile_09.png"
+    },
+    {
+      "part": "ALightGun",
+      "level": 10,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightGun_10.png",
+      "sha256": "19bf50942b100f77e42682fbd8a6eb49feac80fb1ea4c423853ab097cebc54de",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightGun.png",
+      "approved_source_sha256": "5cfcb56570ae49120f6ea3ffabc19f57ee934cf2843b55df85537f90a5ccee42",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        6
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv10-gun-crop.png",
+      "drawn_source_sha256": "0145abf4c58c47f52262d1f88e43e4daad37736622465a58d35ef6603e5ca415",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 42,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightGun_10.png"
+    },
+    {
+      "part": "ALightMissile",
+      "level": 10,
+      "path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ALightMissile_10.png",
+      "sha256": "cf70d0bfea944618f9bcca9c7b261bfb49722f5c94f7627b34a0f4c852d6426a",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightMissile.png",
+      "approved_source_sha256": "8f795c0899c9bd019cb289313371d2fe9019d019e92767af27889f95216d5e5a",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        8
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/prepared/lv10-missile-crop.png",
+      "drawn_source_sha256": "2eda394e9fb779b9067a31a135b359cd226637bdb9036052e599962835a56842",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 40,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter",
+      "ready_path": ".local/upgrade-plan-20261109/scout-weapons-final-candidate/ready/ALightMissile_10.png"
+    }
+  ]
+}

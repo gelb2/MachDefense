@@ -1,0 +1,652 @@
+{
+  "environment": "Headless installed Chrome / Apple M4 Pro / ANGLE Metal, 800x800 viewport",
+  "sequence": [
+    "baseline",
+    "candidate",
+    "baseline",
+    "candidate"
+  ],
+  "scenario": "Test-only command21 sets production firing=true: 4 helicopter species x25 =100 aircraft;100 passive 10000000HP targets; no source edits to product. Same seed/layout/ticks/settings.",
+  "warmup": "120 synchronous ticks then two requestAnimationFrame callbacks to flush stale pre-warmup RAF timestamp.600 measured frames per flare state.",
+  "gpu": "EXT_disjoint_timer_query_webgl2 around each md_aircraft_scene tick/render call; discard disjoint queries; await availability; milliseconds. Does not measure browser compositor/display latency.",
+  "cpu": "performance.now around synchronous simulation/render/JSON call.",
+  "raf": "requestAnimationFrame callback timestamp intervals; includes host scheduling.",
+  "limits": [
+    "Synthetic fixture has repeated overlapping targets and no enemy return fire; not Campaign/iPhone",
+    "Other host activity not controlled; two alternating rounds insufficient to attribute a regression or generalize overall performance",
+    "Frame stalls and first Efx_Flame texture upload retained; no claim of zero frame drop",
+    "Earlier measurements lacking RAF-boundary flush retained only in local diagnostics; excluded from this comparison"
+  ],
+  "buildLogUTC": [
+    "2026-11-08T22:42:19Z",
+    "2026-11-08T22:42:25Z"
+  ],
+  "runs": [
+    {
+      "startUTC": "2026-11-08T22:43:56.155Z",
+      "endUTC": "2026-11-08T22:44:07.283Z",
+      "imageReadsDuring": [
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177836168
+        },
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177836168
+        },
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177836204
+        }
+      ],
+      "longFrames": [
+        {
+          "frame": 1,
+          "ms": 33.400000000000546,
+          "at": "2026-11-08T22:43:56.201Z"
+        },
+        {
+          "frame": 2,
+          "ms": 33.29999999999927,
+          "at": "2026-11-08T22:43:56.232Z"
+        },
+        {
+          "frame": 8,
+          "ms": 33.400000000000546,
+          "at": "2026-11-08T22:43:56.365Z"
+        },
+        {
+          "frame": 9,
+          "ms": 66.69999999999982,
+          "at": "2026-11-08T22:43:56.419Z"
+        },
+        {
+          "frame": 10,
+          "ms": 49.899999999999636,
+          "at": "2026-11-08T22:43:56.470Z"
+        },
+        {
+          "frame": 11,
+          "ms": 50,
+          "at": "2026-11-08T22:43:56.524Z"
+        },
+        {
+          "frame": 12,
+          "ms": 50.100000000000364,
+          "at": "2026-11-08T22:43:56.578Z"
+        },
+        {
+          "frame": 13,
+          "ms": 66.59999999999945,
+          "at": "2026-11-08T22:43:56.634Z"
+        },
+        {
+          "frame": 14,
+          "ms": 49.900000000000546,
+          "at": "2026-11-08T22:43:56.692Z"
+        },
+        {
+          "frame": 15,
+          "ms": 66.80000000000018,
+          "at": "2026-11-08T22:43:56.750Z"
+        },
+        {
+          "frame": 16,
+          "ms": 50,
+          "at": "2026-11-08T22:43:56.811Z"
+        },
+        {
+          "frame": 17,
+          "ms": 66.59999999999945,
+          "at": "2026-11-08T22:43:56.872Z"
+        },
+        {
+          "frame": 18,
+          "ms": 50,
+          "at": "2026-11-08T22:43:56.930Z"
+        },
+        {
+          "frame": 19,
+          "ms": 66.60000000000036,
+          "at": "2026-11-08T22:43:56.990Z"
+        },
+        {
+          "frame": 20,
+          "ms": 66.69999999999982,
+          "at": "2026-11-08T22:43:57.053Z"
+        },
+        {
+          "frame": 21,
+          "ms": 50,
+          "at": "2026-11-08T22:43:57.107Z"
+        },
+        {
+          "frame": 22,
+          "ms": 50.100000000000364,
+          "at": "2026-11-08T22:43:57.162Z"
+        },
+        {
+          "frame": 23,
+          "ms": 66.59999999999945,
+          "at": "2026-11-08T22:43:57.223Z"
+        },
+        {
+          "frame": 24,
+          "ms": 50,
+          "at": "2026-11-08T22:43:57.282Z"
+        },
+        {
+          "frame": 25,
+          "ms": 66.69999999999982,
+          "at": "2026-11-08T22:43:57.346Z"
+        },
+        {
+          "frame": 26,
+          "ms": 66.60000000000036,
+          "at": "2026-11-08T22:43:57.408Z"
+        },
+        {
+          "frame": 27,
+          "ms": 66.69999999999982,
+          "at": "2026-11-08T22:43:57.467Z"
+        },
+        {
+          "frame": 28,
+          "ms": 50,
+          "at": "2026-11-08T22:43:57.522Z"
+        },
+        {
+          "frame": 29,
+          "ms": 66.60000000000036,
+          "at": "2026-11-08T22:43:57.585Z"
+        },
+        {
+          "frame": 30,
+          "ms": 50.099999999999454,
+          "at": "2026-11-08T22:43:57.640Z"
+        },
+        {
+          "frame": 31,
+          "ms": 50,
+          "at": "2026-11-08T22:43:57.690Z"
+        },
+        {
+          "frame": 32,
+          "ms": 49.900000000000546,
+          "at": "2026-11-08T22:43:57.740Z"
+        },
+        {
+          "frame": 33,
+          "ms": 50,
+          "at": "2026-11-08T22:43:57.792Z"
+        },
+        {
+          "frame": 34,
+          "ms": 50.099999999999454,
+          "at": "2026-11-08T22:43:57.841Z"
+        }
+      ],
+      "enabled": false,
+      "count": 100,
+      "frameMs": {
+        "samples": 599,
+        "p50": 16.69999999999891,
+        "p95": 16.80000000000109,
+        "p99": 66.60000000000036,
+        "max": 66.80000000000018
+      },
+      "cpuCallMs": {
+        "samples": 600,
+        "p50": 6.099999904632568,
+        "p95": 22,
+        "p99": 60.30000019073486,
+        "max": 63.5
+      },
+      "gpuDrawMs": {
+        "samples": 600,
+        "p50": 2.002791,
+        "p95": 6.808208,
+        "p99": 8.706166,
+        "max": 12.519374
+      },
+      "over25ms": 29,
+      "gpuTimerSupported": true,
+      "disjoint": 0,
+      "uncollected": 0,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+      "maxParticles": 0,
+      "maxProjectiles": 198,
+      "uploadsDuring": 1,
+      "heapStart": 134217728,
+      "heapEnd": 134217728,
+      "writes": 0,
+      "run": "compare1-baseline",
+      "damagedTargets": 98,
+      "sounds": 38265
+    },
+    {
+      "startUTC": "2026-11-08T22:44:08.249Z",
+      "endUTC": "2026-11-08T22:44:18.347Z",
+      "imageReadsDuring": [],
+      "longFrames": [
+        {
+          "frame": 1,
+          "ms": 33.39999999999782,
+          "at": "2026-11-08T22:44:08.311Z"
+        },
+        {
+          "frame": 2,
+          "ms": 66.60000000000218,
+          "at": "2026-11-08T22:44:08.366Z"
+        }
+      ],
+      "enabled": true,
+      "count": 100,
+      "frameMs": {
+        "samples": 599,
+        "p50": 16.69999999999709,
+        "p95": 16.799999999999272,
+        "p99": 16.80000000000291,
+        "max": 66.60000000000218
+      },
+      "cpuCallMs": {
+        "samples": 600,
+        "p50": 6.400000095367432,
+        "p95": 7.300000190734863,
+        "p99": 8.199999809265137,
+        "max": 55.299999713897705
+      },
+      "gpuDrawMs": {
+        "samples": 600,
+        "p50": 2.231874,
+        "p95": 9.956249,
+        "p99": 11.600374,
+        "max": 12.850791
+      },
+      "over25ms": 2,
+      "gpuTimerSupported": true,
+      "disjoint": 0,
+      "uncollected": 0,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+      "maxParticles": 132,
+      "maxProjectiles": 198,
+      "uploadsDuring": 0,
+      "heapStart": 134217728,
+      "heapEnd": 134217728,
+      "writes": 0,
+      "run": "compare1-baseline",
+      "damagedTargets": 98,
+      "sounds": 38265
+    },
+    {
+      "startUTC": "2026-11-08T22:44:28.710Z",
+      "endUTC": "2026-11-08T22:44:38.780Z",
+      "imageReadsDuring": [
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177868721
+        },
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177868721
+        },
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177868776
+        }
+      ],
+      "longFrames": [
+        {
+          "frame": 1,
+          "ms": 49.900000000000546,
+          "at": "2026-11-08T22:44:28.773Z"
+        },
+        {
+          "frame": 2,
+          "ms": 33.30000000000018,
+          "at": "2026-11-08T22:44:28.803Z"
+        }
+      ],
+      "enabled": false,
+      "count": 100,
+      "frameMs": {
+        "samples": 599,
+        "p50": 16.69999999999891,
+        "p95": 16.700000000000728,
+        "p99": 16.800000000000182,
+        "max": 49.900000000000546
+      },
+      "cpuCallMs": {
+        "samples": 600,
+        "p50": 6.200000286102295,
+        "p95": 7.199999809265137,
+        "p99": 7.800000190734863,
+        "max": 55.299999713897705
+      },
+      "gpuDrawMs": {
+        "samples": 600,
+        "p50": 2.769041,
+        "p95": 10.773875,
+        "p99": 11.974375,
+        "max": 12.841958
+      },
+      "over25ms": 2,
+      "gpuTimerSupported": true,
+      "disjoint": 0,
+      "uncollected": 0,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+      "maxParticles": 0,
+      "maxProjectiles": 198,
+      "uploadsDuring": 1,
+      "heapStart": 134217728,
+      "heapEnd": 134217728,
+      "writes": 0,
+      "run": "compare1-candidate",
+      "damagedTargets": 98,
+      "sounds": 38265
+    },
+    {
+      "startUTC": "2026-11-08T22:44:39.770Z",
+      "endUTC": "2026-11-08T22:44:49.880Z",
+      "imageReadsDuring": [],
+      "longFrames": [
+        {
+          "frame": 1,
+          "ms": 66.70000000000073,
+          "at": "2026-11-08T22:44:39.851Z"
+        },
+        {
+          "frame": 2,
+          "ms": 33.29999999999927,
+          "at": "2026-11-08T22:44:39.896Z"
+        },
+        {
+          "frame": 3,
+          "ms": 33.399999999999636,
+          "at": "2026-11-08T22:44:39.917Z"
+        }
+      ],
+      "enabled": true,
+      "count": 100,
+      "frameMs": {
+        "samples": 599,
+        "p50": 16.69999999999891,
+        "p95": 16.799999999999272,
+        "p99": 16.80000000000291,
+        "max": 66.70000000000073
+      },
+      "cpuCallMs": {
+        "samples": 600,
+        "p50": 6.400000095367432,
+        "p95": 7.800000190734863,
+        "p99": 8.900000095367432,
+        "max": 67
+      },
+      "gpuDrawMs": {
+        "samples": 600,
+        "p50": 3.652374,
+        "p95": 11.537499,
+        "p99": 12.648416,
+        "max": 13.187333
+      },
+      "over25ms": 3,
+      "gpuTimerSupported": true,
+      "disjoint": 0,
+      "uncollected": 0,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+      "maxParticles": 132,
+      "maxProjectiles": 198,
+      "uploadsDuring": 0,
+      "heapStart": 134217728,
+      "heapEnd": 134217728,
+      "writes": 0,
+      "run": "compare1-candidate",
+      "damagedTargets": 98,
+      "sounds": 38265
+    },
+    {
+      "startUTC": "2026-11-08T22:45:00.274Z",
+      "endUTC": "2026-11-08T22:45:10.337Z",
+      "imageReadsDuring": [
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177900290
+        },
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177900290
+        },
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177900328
+        }
+      ],
+      "longFrames": [
+        {
+          "frame": 1,
+          "ms": 33.30000000000018,
+          "at": "2026-11-08T22:45:00.326Z"
+        },
+        {
+          "frame": 2,
+          "ms": 33.30000000000018,
+          "at": "2026-11-08T22:45:00.360Z"
+        }
+      ],
+      "enabled": false,
+      "count": 100,
+      "frameMs": {
+        "samples": 599,
+        "p50": 16.69999999999891,
+        "p95": 16.799999999999272,
+        "p99": 16.80000000000109,
+        "max": 33.30000000000018
+      },
+      "cpuCallMs": {
+        "samples": 600,
+        "p50": 6,
+        "p95": 6.800000190734863,
+        "p99": 7.400000095367432,
+        "max": 37.80000019073486
+      },
+      "gpuDrawMs": {
+        "samples": 600,
+        "p50": 0.631249,
+        "p95": 8.433208,
+        "p99": 8.910291,
+        "max": 9.948499
+      },
+      "over25ms": 2,
+      "gpuTimerSupported": true,
+      "disjoint": 0,
+      "uncollected": 0,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+      "maxParticles": 0,
+      "maxProjectiles": 198,
+      "uploadsDuring": 1,
+      "heapStart": 134217728,
+      "heapEnd": 134217728,
+      "writes": 0,
+      "run": "compare2-baseline",
+      "damagedTargets": 98,
+      "sounds": 38265
+    },
+    {
+      "startUTC": "2026-11-08T22:45:11.237Z",
+      "endUTC": "2026-11-08T22:45:21.304Z",
+      "imageReadsDuring": [],
+      "longFrames": [
+        {
+          "frame": 2,
+          "ms": 49.900000000001455,
+          "at": "2026-11-08T22:45:11.328Z"
+        }
+      ],
+      "enabled": true,
+      "count": 100,
+      "frameMs": {
+        "samples": 599,
+        "p50": 16.69999999999891,
+        "p95": 16.700000000000728,
+        "p99": 16.799999999999272,
+        "max": 49.900000000001455
+      },
+      "cpuCallMs": {
+        "samples": 600,
+        "p50": 6.100000381469727,
+        "p95": 7,
+        "p99": 7.599999904632568,
+        "max": 41.200000286102295
+      },
+      "gpuDrawMs": {
+        "samples": 600,
+        "p50": 0.851874,
+        "p95": 8.371875,
+        "p99": 9.152625,
+        "max": 15.962124
+      },
+      "over25ms": 1,
+      "gpuTimerSupported": true,
+      "disjoint": 0,
+      "uncollected": 0,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+      "maxParticles": 132,
+      "maxProjectiles": 198,
+      "uploadsDuring": 0,
+      "heapStart": 134217728,
+      "heapEnd": 134217728,
+      "writes": 0,
+      "run": "compare2-baseline",
+      "damagedTargets": 98,
+      "sounds": 38265
+    },
+    {
+      "startUTC": "2026-11-08T22:45:31.647Z",
+      "endUTC": "2026-11-08T22:45:41.721Z",
+      "imageReadsDuring": [
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177931658
+        },
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177931658
+        },
+        {
+          "path": "/assets/Images/Efx_Flame.png",
+          "at": 1794177931708
+        }
+      ],
+      "longFrames": [
+        {
+          "frame": 1,
+          "ms": 50,
+          "at": "2026-11-08T22:45:31.705Z"
+        },
+        {
+          "frame": 2,
+          "ms": 33.400000000000546,
+          "at": "2026-11-08T22:45:31.747Z"
+        }
+      ],
+      "enabled": false,
+      "count": 100,
+      "frameMs": {
+        "samples": 599,
+        "p50": 16.69999999999891,
+        "p95": 16.700000000000728,
+        "p99": 16.800000000000182,
+        "max": 50
+      },
+      "cpuCallMs": {
+        "samples": 600,
+        "p50": 6.199999809265137,
+        "p95": 7.099999904632568,
+        "p99": 7.700000286102295,
+        "max": 49.80000019073486
+      },
+      "gpuDrawMs": {
+        "samples": 600,
+        "p50": 1.099375,
+        "p95": 8.731374,
+        "p99": 10.913874,
+        "max": 24.588958
+      },
+      "over25ms": 2,
+      "gpuTimerSupported": true,
+      "disjoint": 0,
+      "uncollected": 0,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+      "maxParticles": 0,
+      "maxProjectiles": 198,
+      "uploadsDuring": 1,
+      "heapStart": 134217728,
+      "heapEnd": 134217728,
+      "writes": 0,
+      "run": "compare2-candidate",
+      "damagedTargets": 98,
+      "sounds": 38265
+    },
+    {
+      "startUTC": "2026-11-08T22:45:42.637Z",
+      "endUTC": "2026-11-08T22:45:52.736Z",
+      "imageReadsDuring": [],
+      "longFrames": [
+        {
+          "frame": 1,
+          "ms": 50,
+          "at": "2026-11-08T22:45:42.710Z"
+        },
+        {
+          "frame": 2,
+          "ms": 50,
+          "at": "2026-11-08T22:45:42.764Z"
+        }
+      ],
+      "enabled": true,
+      "count": 100,
+      "frameMs": {
+        "samples": 599,
+        "p50": 16.69999999999891,
+        "p95": 16.799999999999272,
+        "p99": 16.80000000000291,
+        "max": 50
+      },
+      "cpuCallMs": {
+        "samples": 600,
+        "p50": 6.400000095367432,
+        "p95": 7.200000286102295,
+        "p99": 8.300000190734863,
+        "max": 56.90000009536743
+      },
+      "gpuDrawMs": {
+        "samples": 600,
+        "p50": 3.399083,
+        "p95": 11.215,
+        "p99": 12.317374,
+        "max": 12.644583
+      },
+      "over25ms": 2,
+      "gpuTimerSupported": true,
+      "disjoint": 0,
+      "uncollected": 0,
+      "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4 Pro, Unspecified Version)",
+      "maxParticles": 132,
+      "maxProjectiles": 198,
+      "uploadsDuring": 0,
+      "heapStart": 134217728,
+      "heapEnd": 134217728,
+      "writes": 0,
+      "run": "compare2-candidate",
+      "damagedTargets": 98,
+      "sounds": 38265
+    }
+  ],
+  "artifactSha256": {
+    "baseline-combat/game.wasm": "a0f5d6c85ed09ea0bba432d7205bc8c1a3338c4ce8e90201fffbf98cddd0a635",
+    "baseline-combat/game.data": "eb5f91c3bf7277cace365a3d65595d1f7e6bdea7d39b4d9bfcbbe222132e0d51",
+    "candidate-combat/game.wasm": "f70fca6b8ce9a8a662df2c4998c23f2fcefcb43af212043d651b7595a9c8cf29",
+    "candidate-combat/game.data": "fb955e1a31dd652100b64cd8c8ce2213450e39c4e2be1c192052aad2afa73cae"
+  },
+  "buildTimingNote": "Regular candidate build ended before the final alternating comparison began. The discarded first-frame1000ms RAF reading occurred before this build began; no causal attribution to compilation."
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "tile": 0,
+    "differenceBounds": "113x10+634+670",
+    "maximumChannelErrorPAE": "19275 (0.294118)",
+    "leftTopIncludesScoutAndTerrain": "0 (0)"
+  },
+  {
+    "tile": 1,
+    "differenceBounds": "75x1+631+679",
+    "maximumChannelErrorPAE": "10537 (0.160784)",
+    "leftTopIncludesScoutAndTerrain": "0 (0)"
+  },
+  {
+    "tile": 2,
+    "differenceBounds": "42x1+630+679",
+    "maximumChannelErrorPAE": "20817 (0.317647)",
+    "leftTopIncludesScoutAndTerrain": "0 (0)"
+  },
+  {
+    "tile": 3,
+    "differenceBounds": "41x1+630+679",
+    "maximumChannelErrorPAE": "21588 (0.329412)",
+    "leftTopIncludesScoutAndTerrain": "0 (0)"
+  },
+  {
+    "tile": 4,
+    "differenceBounds": "73x10+673+670",
+    "maximumChannelErrorPAE": "19275 (0.294118)",
+    "leftTopIncludesScoutAndTerrain": "0 (0)"
+  },
+  {
+    "tile": 5,
+    "differenceBounds": "72x10+674+670",
+    "maximumChannelErrorPAE": "19018 (0.290196)",
+    "leftTopIncludesScoutAndTerrain": "0 (0)"
+  },
+  {
+    "tile": 6,
+    "differenceBounds": "69x10+678+670",
+    "maximumChannelErrorPAE": "19018 (0.290196)",
+    "leftTopIncludesScoutAndTerrain": "0 (0)"
+  }
+]

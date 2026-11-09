@@ -1,0 +1,15 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/build/save-transfer
+    Start  4: AircraftFireEffects
+    Start  5: AircraftArmament
+    Start  3: AircraftBalance
+    Start  2: AircraftDefinition
+    Start 52: AircraftHandling
+1/5 Test  #2: AircraftDefinition ...............   Passed    0.00 sec
+2/5 Test  #3: AircraftBalance ..................   Passed    0.01 sec
+3/5 Test #52: AircraftHandling .................   Passed    0.06 sec
+4/5 Test  #5: AircraftArmament .................   Passed    0.12 sec
+5/5 Test  #4: AircraftFireEffects ..............   Passed    0.13 sec
+
+100% tests passed out of 5
+
+Total Test time (real) =   0.13 sec

@@ -1,3 +1,4 @@
+#include "PNGTestSize.hpp"
 #include "Core/Simulation/World.hpp"
 #include "Core/Session/Settlement.hpp"
 #include "../Modules/SaveTransfer/Validate.hpp"
@@ -10,7 +11,10 @@
 struct Resources:md::ResourceAccess {
  std::filesystem::path root;
  md::Bytes read(std::string_view path)override {std::ifstream f(root/path,std::ios::binary);if(!f)throw std::runtime_error(std::string(path));return {std::istreambuf_iterator<char>(f),{}};}
- md::Vec2 imageSize(std::string_view n)override {if(!std::filesystem::exists(root/"Images"/n))return {};auto b=read("Images/"+std::string(n));auto be=[&](int i){return unsigned(b.at(i))<<24|unsigned(b.at(i+1))<<16|unsigned(b.at(i+2))<<8|b.at(i+3);};return {float(be(16)),float(be(20))};}
+ md::Vec2 imageSize(std::string_view n)override {
+  if(!std::filesystem::exists(root/"Images"/n))return {};
+  return mdtest::rasterSize(read("Images/"+std::string(n)));
+ }
  md::DataTable table(const char* n){return md::DataTable::load(root/"Tables"/(std::string(n)+".tsv"));}
 };
 struct Host:md::HostServices {unsigned writes=0;std::optional<md::Bytes>readSave()override{return{};}bool writeSave(std::span<const std::uint8_t>)override{++writes;return true;}void playSound(std::string_view,float,float)override{}void playMusic(std::string_view,float)override{}void stopMusic()override{}void requestName(std::string,std::size_t,std::function<void(std::optional<std::string>)>)override{}};

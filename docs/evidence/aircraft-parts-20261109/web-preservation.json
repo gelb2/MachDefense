@@ -1,0 +1,31 @@
+{
+  "baselineHead": "04484e3f955f705c920e07b700092fb211be8d5d",
+  "baselineFiles": 2681,
+  "changed": [
+    "Resources/Images/ATransportBody.png",
+    "Resources/Images/ATransportEngine.png",
+    "Resources/Images/ATransportWingL.png",
+    "Resources/Images/ATransportWingR.png",
+    "Resources/RawData/AircraftMachines.mcb",
+    "Resources/RawData/AircraftParts.mcb",
+    "Resources/RawData/Level10Machines.mcb",
+    "Resources/RawData/Level10Parts.mcb",
+    "Sources/Core/Simulation/AircraftVisual.hpp"
+  ],
+  "changesOutsideBelugaDefinitionsAndAircraftVisual": [],
+  "movementUnchanged": true,
+  "weaponAndMachineStatTablesUnchanged": true,
+  "nonAircraftExtensionNodes": [
+    {
+      "file": "Resources/RawData/Level10Parts.mcb",
+      "nonAircraftNodes": 44,
+      "unchanged": true
+    },
+    {
+      "file": "Resources/RawData/Level10Machines.mcb",
+      "nonAircraftNodes": 33,
+      "unchanged": true
+    }
+  ],
+  "scope": "Final full-X / cropped-Y candidate"
+}

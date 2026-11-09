@@ -1,0 +1,1192 @@
+[
+  {
+    "name": "ScoutHeli",
+    "level": 1,
+    "mission": 8,
+    "cells": 90,
+    "upgradeCredits": 300,
+    "hp": 210,
+    "speed": 2.0,
+    "range": 200,
+    "rangeReference": "MachineGun",
+    "dps": 30.33,
+    "weapons": [
+      {
+        "part": "ALightGun",
+        "source": "E_Turret_Wpn_02",
+        "damage": 7,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ALightMissile",
+        "source": "E_Turret17_Wpn_01",
+        "damage": 28,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Gunship",
+    "level": 1,
+    "mission": 36,
+    "cells": 600,
+    "upgradeCredits": 6000,
+    "hp": 700,
+    "speed": 1.0,
+    "range": 340,
+    "rangeReference": "PlasmaGun_01",
+    "dps": 259.5,
+    "weapons": [
+      {
+        "part": "AHeavyGun",
+        "source": "E_Tank_Wpn_13",
+        "damage": 34,
+        "burst": 8,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 86,
+        "burst": 2,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyCannon",
+        "source": "E_Tank31_Wpn",
+        "damage": 272,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Orca",
+    "level": 1,
+    "mission": 16,
+    "cells": 315,
+    "upgradeCredits": 3000,
+    "hp": 350,
+    "speed": 2.1,
+    "range": 240,
+    "rangeReference": "HMG",
+    "dps": 100.43,
+    "weapons": [
+      {
+        "part": "ADuctGun",
+        "source": "P_Wpn_HMG_01",
+        "damage": 60,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ADuctMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 29,
+        "burst": 2,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "OrcaBomber",
+    "level": 1,
+    "mission": 24,
+    "cells": 450,
+    "upgradeCredits": 4500,
+    "hp": 600,
+    "speed": 1.9,
+    "range": 270,
+    "rangeReference": "HeavyMissile",
+    "dps": 158.67,
+    "weapons": [
+      {
+        "part": "ATransportGun",
+        "source": "E_Tank31_Wpn",
+        "damage": 51,
+        "burst": 2,
+        "copies": 2
+      },
+      {
+        "part": "ATransportMissile",
+        "source": "P_Wpn_Msl_206",
+        "damage": 51,
+        "burst": 4,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "ScoutHeli",
+    "level": 2,
+    "mission": 8,
+    "cells": 120,
+    "upgradeCredits": 750,
+    "hp": 230,
+    "speed": 2.03,
+    "range": 210,
+    "rangeReference": "MachineGun",
+    "dps": 38.33,
+    "weapons": [
+      {
+        "part": "ALightGun",
+        "source": "E_Turret_Wpn_02",
+        "damage": 9,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ALightMissile",
+        "source": "E_Turret17_Wpn_01",
+        "damage": 35,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Gunship",
+    "level": 2,
+    "mission": 36,
+    "cells": 640,
+    "upgradeCredits": 10000,
+    "hp": 770,
+    "speed": 1.015,
+    "range": 360,
+    "rangeReference": "PlasmaGun_02",
+    "dps": 326.14,
+    "weapons": [
+      {
+        "part": "AHeavyGun",
+        "source": "E_Tank_Wpn_13",
+        "damage": 43,
+        "burst": 8,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 108,
+        "burst": 2,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyCannon",
+        "source": "E_Tank31_Wpn",
+        "damage": 341,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Orca",
+    "level": 2,
+    "mission": 16,
+    "cells": 330,
+    "upgradeCredits": 7500,
+    "hp": 384,
+    "speed": 2.13,
+    "range": 252,
+    "rangeReference": "HMG",
+    "dps": 125.29,
+    "weapons": [
+      {
+        "part": "ADuctGun",
+        "source": "P_Wpn_HMG_01",
+        "damage": 75,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ADuctMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 36,
+        "burst": 2,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "OrcaBomber",
+    "level": 2,
+    "mission": 24,
+    "cells": 480,
+    "upgradeCredits": 7500,
+    "hp": 660,
+    "speed": 1.93,
+    "range": 284,
+    "rangeReference": "HeavyMissile",
+    "dps": 199.11,
+    "weapons": [
+      {
+        "part": "ATransportGun",
+        "source": "E_Tank31_Wpn",
+        "damage": 64,
+        "burst": 2,
+        "copies": 2
+      },
+      {
+        "part": "ATransportMissile",
+        "source": "P_Wpn_Msl_206",
+        "damage": 64,
+        "burst": 4,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "ScoutHeli",
+    "level": 3,
+    "mission": 8,
+    "cells": 150,
+    "upgradeCredits": 1500,
+    "hp": 260,
+    "speed": 2.06,
+    "range": 220,
+    "rangeReference": "MachineGun",
+    "dps": 46.33,
+    "weapons": [
+      {
+        "part": "ALightGun",
+        "source": "E_Turret_Wpn_02",
+        "damage": 11,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ALightMissile",
+        "source": "E_Turret17_Wpn_01",
+        "damage": 42,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Gunship",
+    "level": 3,
+    "mission": 36,
+    "cells": 700,
+    "upgradeCredits": 18000,
+    "hp": 840,
+    "speed": 1.03,
+    "range": 380,
+    "rangeReference": "PlasmaGun_03",
+    "dps": 389.8,
+    "weapons": [
+      {
+        "part": "AHeavyGun",
+        "source": "E_Tank_Wpn_13",
+        "damage": 51,
+        "burst": 8,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 129,
+        "burst": 2,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyCannon",
+        "source": "E_Tank31_Wpn",
+        "damage": 409,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Orca",
+    "level": 3,
+    "mission": 16,
+    "cells": 360,
+    "upgradeCredits": 15000,
+    "hp": 434,
+    "speed": 2.16,
+    "range": 264,
+    "rangeReference": "HMG",
+    "dps": 150.14,
+    "weapons": [
+      {
+        "part": "ADuctGun",
+        "source": "P_Wpn_HMG_01",
+        "damage": 90,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ADuctMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 43,
+        "burst": 2,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "OrcaBomber",
+    "level": 3,
+    "mission": 24,
+    "cells": 525,
+    "upgradeCredits": 13500,
+    "hp": 720,
+    "speed": 1.96,
+    "range": 297,
+    "rangeReference": "HeavyMissile",
+    "dps": 239.56,
+    "weapons": [
+      {
+        "part": "ATransportGun",
+        "source": "E_Tank31_Wpn",
+        "damage": 77,
+        "burst": 2,
+        "copies": 2
+      },
+      {
+        "part": "ATransportMissile",
+        "source": "P_Wpn_Msl_206",
+        "damage": 77,
+        "burst": 4,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "ScoutHeli",
+    "level": 4,
+    "mission": 8,
+    "cells": 180,
+    "upgradeCredits": 3000,
+    "hp": 294,
+    "speed": 2.09,
+    "range": 230,
+    "rangeReference": "MachineGun",
+    "dps": 53.33,
+    "weapons": [
+      {
+        "part": "ALightGun",
+        "source": "E_Turret_Wpn_02",
+        "damage": 12,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ALightMissile",
+        "source": "E_Turret17_Wpn_01",
+        "damage": 50,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Gunship",
+    "level": 4,
+    "mission": 36,
+    "cells": 800,
+    "upgradeCredits": 34000,
+    "hp": 910,
+    "speed": 1.045,
+    "range": 400,
+    "rangeReference": "PlasmaGun_04",
+    "dps": 455.88,
+    "weapons": [
+      {
+        "part": "AHeavyGun",
+        "source": "E_Tank_Wpn_13",
+        "damage": 60,
+        "burst": 8,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 151,
+        "burst": 2,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyCannon",
+        "source": "E_Tank31_Wpn",
+        "damage": 477,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Orca",
+    "level": 4,
+    "mission": 16,
+    "cells": 420,
+    "upgradeCredits": 30000,
+    "hp": 496,
+    "speed": 2.19,
+    "range": 276,
+    "rangeReference": "HMG",
+    "dps": 175.0,
+    "weapons": [
+      {
+        "part": "ADuctGun",
+        "source": "P_Wpn_HMG_01",
+        "damage": 105,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ADuctMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 50,
+        "burst": 2,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "OrcaBomber",
+    "level": 4,
+    "mission": 24,
+    "cells": 600,
+    "upgradeCredits": 25500,
+    "hp": 780,
+    "speed": 1.99,
+    "range": 310,
+    "rangeReference": "HeavyMissile",
+    "dps": 280.0,
+    "weapons": [
+      {
+        "part": "ATransportGun",
+        "source": "E_Tank31_Wpn",
+        "damage": 90,
+        "burst": 2,
+        "copies": 2
+      },
+      {
+        "part": "ATransportMissile",
+        "source": "P_Wpn_Msl_206",
+        "damage": 90,
+        "burst": 4,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "ScoutHeli",
+    "level": 5,
+    "mission": 8,
+    "cells": 225,
+    "upgradeCredits": 6000,
+    "hp": 336,
+    "speed": 2.12,
+    "range": 240,
+    "rangeReference": "MachineGun",
+    "dps": 61.33,
+    "weapons": [
+      {
+        "part": "ALightGun",
+        "source": "E_Turret_Wpn_02",
+        "damage": 14,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ALightMissile",
+        "source": "E_Turret17_Wpn_01",
+        "damage": 57,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Gunship",
+    "level": 5,
+    "mission": 36,
+    "cells": 900,
+    "upgradeCredits": 66000,
+    "hp": 1050,
+    "speed": 1.06,
+    "range": 420,
+    "rangeReference": "PlasmaGun_05",
+    "dps": 520.05,
+    "weapons": [
+      {
+        "part": "AHeavyGun",
+        "source": "E_Tank_Wpn_13",
+        "damage": 68,
+        "burst": 8,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 173,
+        "burst": 2,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyCannon",
+        "source": "E_Tank31_Wpn",
+        "damage": 545,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Orca",
+    "level": 5,
+    "mission": 16,
+    "cells": 480,
+    "upgradeCredits": 60000,
+    "hp": 560,
+    "speed": 2.22,
+    "range": 288,
+    "rangeReference": "HMG",
+    "dps": 199.86,
+    "weapons": [
+      {
+        "part": "ADuctGun",
+        "source": "P_Wpn_HMG_01",
+        "damage": 120,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ADuctMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 57,
+        "burst": 2,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "OrcaBomber",
+    "level": 5,
+    "mission": 24,
+    "cells": 675,
+    "upgradeCredits": 49500,
+    "hp": 900,
+    "speed": 2.02,
+    "range": 324,
+    "rangeReference": "HeavyMissile",
+    "dps": 320.44,
+    "weapons": [
+      {
+        "part": "ATransportGun",
+        "source": "E_Tank31_Wpn",
+        "damage": 103,
+        "burst": 2,
+        "copies": 2
+      },
+      {
+        "part": "ATransportMissile",
+        "source": "P_Wpn_Msl_206",
+        "damage": 103,
+        "burst": 4,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "ScoutHeli",
+    "level": 6,
+    "mission": 8,
+    "cells": 300,
+    "upgradeCredits": 12000,
+    "hp": 378,
+    "speed": 2.15,
+    "range": 250,
+    "rangeReference": "MachineGun",
+    "dps": 70.0,
+    "weapons": [
+      {
+        "part": "ALightGun",
+        "source": "E_Turret_Wpn_02",
+        "damage": 16,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ALightMissile",
+        "source": "E_Turret17_Wpn_01",
+        "damage": 65,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Gunship",
+    "level": 6,
+    "mission": 36,
+    "cells": 1040,
+    "upgradeCredits": 130000,
+    "hp": 1190,
+    "speed": 1.075,
+    "range": 440,
+    "rangeReference": "PlasmaGun_06",
+    "dps": 585.63,
+    "weapons": [
+      {
+        "part": "AHeavyGun",
+        "source": "E_Tank_Wpn_13",
+        "damage": 77,
+        "burst": 8,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 194,
+        "burst": 2,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyCannon",
+        "source": "E_Tank31_Wpn",
+        "damage": 613,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Orca",
+    "level": 6,
+    "mission": 16,
+    "cells": 570,
+    "upgradeCredits": 112500,
+    "hp": 630,
+    "speed": 2.25,
+    "range": 300,
+    "rangeReference": "HMG",
+    "dps": 224.71,
+    "weapons": [
+      {
+        "part": "ADuctGun",
+        "source": "P_Wpn_HMG_01",
+        "damage": 135,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ADuctMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 64,
+        "burst": 2,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "OrcaBomber",
+    "level": 6,
+    "mission": 24,
+    "cells": 780,
+    "upgradeCredits": 97500,
+    "hp": 1020,
+    "speed": 2.05,
+    "range": 338,
+    "rangeReference": "HeavyMissile",
+    "dps": 360.89,
+    "weapons": [
+      {
+        "part": "ATransportGun",
+        "source": "E_Tank31_Wpn",
+        "damage": 116,
+        "burst": 2,
+        "copies": 2
+      },
+      {
+        "part": "ATransportMissile",
+        "source": "P_Wpn_Msl_206",
+        "damage": 116,
+        "burst": 4,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "ScoutHeli",
+    "level": 7,
+    "mission": 8,
+    "cells": 375,
+    "upgradeCredits": 24000,
+    "hp": 434,
+    "speed": 2.18,
+    "range": 260,
+    "rangeReference": "MachineGun",
+    "dps": 78.0,
+    "weapons": [
+      {
+        "part": "ALightGun",
+        "source": "E_Turret_Wpn_02",
+        "damage": 18,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ALightMissile",
+        "source": "E_Turret17_Wpn_01",
+        "damage": 72,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Gunship",
+    "level": 7,
+    "mission": 36,
+    "cells": 1200,
+    "upgradeCredits": 240000,
+    "hp": 1400,
+    "speed": 1.09,
+    "range": 460,
+    "rangeReference": "PlasmaGun_07",
+    "dps": 649.79,
+    "weapons": [
+      {
+        "part": "AHeavyGun",
+        "source": "E_Tank_Wpn_13",
+        "damage": 85,
+        "burst": 8,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 216,
+        "burst": 2,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyCannon",
+        "source": "E_Tank31_Wpn",
+        "damage": 681,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Orca",
+    "level": 7,
+    "mission": 16,
+    "cells": 675,
+    "upgradeCredits": 225000,
+    "hp": 700,
+    "speed": 2.28,
+    "range": 312,
+    "rangeReference": "HMG",
+    "dps": 249.57,
+    "weapons": [
+      {
+        "part": "ADuctGun",
+        "source": "P_Wpn_HMG_01",
+        "damage": 150,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ADuctMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 71,
+        "burst": 2,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "OrcaBomber",
+    "level": 7,
+    "mission": 24,
+    "cells": 900,
+    "upgradeCredits": 180000,
+    "hp": 1200,
+    "speed": 2.08,
+    "range": 351,
+    "rangeReference": "HeavyMissile",
+    "dps": 401.33,
+    "weapons": [
+      {
+        "part": "ATransportGun",
+        "source": "E_Tank31_Wpn",
+        "damage": 129,
+        "burst": 2,
+        "copies": 2
+      },
+      {
+        "part": "ATransportMissile",
+        "source": "P_Wpn_Msl_206",
+        "damage": 129,
+        "burst": 4,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "ScoutHeli",
+    "level": 8,
+    "mission": 8,
+    "cells": 480,
+    "upgradeCredits": 48000,
+    "hp": 490,
+    "speed": 2.21,
+    "range": 270,
+    "rangeReference": "MachineGun",
+    "dps": 86.0,
+    "weapons": [
+      {
+        "part": "ALightGun",
+        "source": "E_Turret_Wpn_02",
+        "damage": 20,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ALightMissile",
+        "source": "E_Turret17_Wpn_01",
+        "damage": 79,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Gunship",
+    "level": 8,
+    "mission": 36,
+    "cells": 1400,
+    "upgradeCredits": 460000,
+    "hp": 1610,
+    "speed": 1.105,
+    "range": 480,
+    "rangeReference": "PlasmaGun_08",
+    "dps": 715.38,
+    "weapons": [
+      {
+        "part": "AHeavyGun",
+        "source": "E_Tank_Wpn_13",
+        "damage": 94,
+        "burst": 8,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 237,
+        "burst": 2,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyCannon",
+        "source": "E_Tank31_Wpn",
+        "damage": 749,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Orca",
+    "level": 8,
+    "mission": 16,
+    "cells": 810,
+    "upgradeCredits": 450000,
+    "hp": 770,
+    "speed": 2.31,
+    "range": 324,
+    "rangeReference": "HMG",
+    "dps": 274.43,
+    "weapons": [
+      {
+        "part": "ADuctGun",
+        "source": "P_Wpn_HMG_01",
+        "damage": 165,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ADuctMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 78,
+        "burst": 2,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "OrcaBomber",
+    "level": 8,
+    "mission": 24,
+    "cells": 1050,
+    "upgradeCredits": 345000,
+    "hp": 1380,
+    "speed": 2.11,
+    "range": 364,
+    "rangeReference": "HeavyMissile",
+    "dps": 438.67,
+    "weapons": [
+      {
+        "part": "ATransportGun",
+        "source": "E_Tank31_Wpn",
+        "damage": 141,
+        "burst": 2,
+        "copies": 2
+      },
+      {
+        "part": "ATransportMissile",
+        "source": "P_Wpn_Msl_206",
+        "damage": 141,
+        "burst": 4,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "ScoutHeli",
+    "level": 9,
+    "mission": 8,
+    "cells": 600,
+    "upgradeCredits": 96000,
+    "hp": 560,
+    "speed": 2.24,
+    "range": 280,
+    "rangeReference": "MachineGun",
+    "dps": 94.67,
+    "weapons": [
+      {
+        "part": "ALightGun",
+        "source": "E_Turret_Wpn_02",
+        "damage": 22,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ALightMissile",
+        "source": "E_Turret17_Wpn_01",
+        "damage": 87,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Gunship",
+    "level": 9,
+    "mission": 36,
+    "cells": 1600,
+    "upgradeCredits": 1300000,
+    "hp": 1820,
+    "speed": 1.12,
+    "range": 500,
+    "rangeReference": "PlasmaGun_09",
+    "dps": 779.54,
+    "weapons": [
+      {
+        "part": "AHeavyGun",
+        "source": "E_Tank_Wpn_13",
+        "damage": 102,
+        "burst": 8,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 259,
+        "burst": 2,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyCannon",
+        "source": "E_Tank31_Wpn",
+        "damage": 817,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Orca",
+    "level": 9,
+    "mission": 16,
+    "cells": 1005,
+    "upgradeCredits": 750000,
+    "hp": 876,
+    "speed": 2.34,
+    "range": 336,
+    "rangeReference": "HMG",
+    "dps": 300.29,
+    "weapons": [
+      {
+        "part": "ADuctGun",
+        "source": "P_Wpn_HMG_01",
+        "damage": 180,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ADuctMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 86,
+        "burst": 2,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "OrcaBomber",
+    "level": 9,
+    "mission": 24,
+    "cells": 1200,
+    "upgradeCredits": 975000,
+    "hp": 1560,
+    "speed": 2.14,
+    "range": 378,
+    "rangeReference": "HeavyMissile",
+    "dps": 479.11,
+    "weapons": [
+      {
+        "part": "ATransportGun",
+        "source": "E_Tank31_Wpn",
+        "damage": 154,
+        "burst": 2,
+        "copies": 2
+      },
+      {
+        "part": "ATransportMissile",
+        "source": "P_Wpn_Msl_206",
+        "damage": 154,
+        "burst": 4,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "ScoutHeli",
+    "level": 10,
+    "mission": 8,
+    "cells": 750,
+    "upgradeCredits": 0,
+    "hp": 644,
+    "speed": 2.27,
+    "range": 290,
+    "rangeReference": "MachineGun",
+    "dps": 102.67,
+    "weapons": [
+      {
+        "part": "ALightGun",
+        "source": "E_Turret_Wpn_02",
+        "damage": 24,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ALightMissile",
+        "source": "E_Turret17_Wpn_01",
+        "damage": 94,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Gunship",
+    "level": 10,
+    "mission": 36,
+    "cells": 1840,
+    "upgradeCredits": 0,
+    "hp": 2100,
+    "speed": 1.135,
+    "range": 520,
+    "rangeReference": "PlasmaGun_10",
+    "dps": 845.13,
+    "weapons": [
+      {
+        "part": "AHeavyGun",
+        "source": "E_Tank_Wpn_13",
+        "damage": 111,
+        "burst": 8,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 280,
+        "burst": 2,
+        "copies": 1
+      },
+      {
+        "part": "AHeavyCannon",
+        "source": "E_Tank31_Wpn",
+        "damage": 885,
+        "burst": 2,
+        "copies": 1
+      }
+    ]
+  },
+  {
+    "name": "Orca",
+    "level": 10,
+    "mission": 16,
+    "cells": 1200,
+    "upgradeCredits": 0,
+    "hp": 1050,
+    "speed": 2.37,
+    "range": 348,
+    "rangeReference": "HMG",
+    "dps": 325.14,
+    "weapons": [
+      {
+        "part": "ADuctGun",
+        "source": "P_Wpn_HMG_01",
+        "damage": 195,
+        "burst": 10,
+        "copies": 1
+      },
+      {
+        "part": "ADuctMissile",
+        "source": "E_Tank28_Wpn_01",
+        "damage": 93,
+        "burst": 2,
+        "copies": 2
+      }
+    ]
+  },
+  {
+    "name": "OrcaBomber",
+    "level": 10,
+    "mission": 24,
+    "cells": 1380,
+    "upgradeCredits": 0,
+    "hp": 1800,
+    "speed": 2.17,
+    "range": 392,
+    "rangeReference": "HeavyMissile",
+    "dps": 519.56,
+    "weapons": [
+      {
+        "part": "ATransportGun",
+        "source": "E_Tank31_Wpn",
+        "damage": 167,
+        "burst": 2,
+        "copies": 2
+      },
+      {
+        "part": "ATransportMissile",
+        "source": "P_Wpn_Msl_206",
+        "damage": 167,
+        "burst": 4,
+        "copies": 2
+      }
+    ]
+  }
+]

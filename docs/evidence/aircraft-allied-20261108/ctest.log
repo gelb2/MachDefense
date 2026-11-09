@@ -1,0 +1,17 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/build/level10
+    Start  1: AlliedAircraft
+1/6 Test  #1: AlliedAircraft ...................   Passed    0.46 sec
+    Start  2: Aircraft
+2/6 Test  #2: Aircraft .........................   Passed    0.33 sec
+    Start  8: Battle
+3/6 Test  #8: Battle ...........................   Passed    0.14 sec
+    Start 21: World
+4/6 Test #21: World ............................   Passed    0.29 sec
+    Start 34: ValidationTools
+5/6 Test #34: ValidationTools ..................   Passed    0.35 sec
+    Start 37: WorldSpecial
+6/6 Test #37: WorldSpecial .....................   Passed    0.58 sec
+
+100% tests passed out of 6
+
+Total Test time (real) =   2.15 sec

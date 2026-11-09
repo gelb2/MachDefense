@@ -1,6 +1,8 @@
+#include "PNGTestSize.hpp"
 #include "Core/Presentation/Menu.hpp"
 #include <algorithm>
 #include <cassert>
+#include <cmath>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -22,8 +24,8 @@ struct Resources:ResourceAccess {
         auto b=read("Images/"+std::string(n));
         if(n.ends_with(".jpg"))return sizes[std::string(n)]={640,960}; // These menu tests use the two 640x960 JPEGs.
         if(b.size()<24||b[0]!=137||b[1]!='P')throw std::runtime_error("Invalid menu PNG");
-        auto u32=[&](int at){return std::uint32_t(b[at])<<24|std::uint32_t(b[at+1])<<16|std::uint32_t(b[at+2])<<8|b[at+3];};
-        return sizes[std::string(n)]={float(u32(16)),float(u32(20))};
+
+        return sizes[std::string(n)]=mdtest::pngSize(b);
     }
 };
 struct Host:HostServices{
@@ -112,6 +114,42 @@ int main(int argc,char** argv){
         tap(resized,80+c.x,buttonY);assert(resized.screen()==Menu::Screen::profiles);
         tap(resized,160+c.x,buttonY);tap(resized,112+c.x,295+c.y);assert(!resizedSave.active(0));
         assert(resizedHost.writes==3);
+    }
+    // The original title retains its full rectangle with half-texel edge clamps. Prepared surroundings
+    // sample only approved outside regions, with no mirrored one-pixel slices.
+    for(const auto dims:{Vec2{320,480},Vec2{390,844},Vec2{820,1180},Vec2{1280,800},Vec2{1600,900},Vec2{2560,1440},Vec2{3440,1440}}){
+        Host titleHost;auto titleSave=SaveData::empty(900);Menu titleMenu(r,titleHost,titleSave);
+        FrameLayout layout;layout.resize(dims.x,dims.y);titleMenu.setLayout(layout);
+        const auto& f=titleMenu.frame();unsigned originalCount=0,outerCount=0;
+        for(const auto& sp:f.sprites){
+            if(sp.image=="Title.jpg"){
+                ++originalCount;assert(sp.sourcePx);
+                const auto src=*sp.sourcePx;
+                assert(src.x>=0&&src.y>=0&&src.x+src.width<=640&&src.y+src.height<=960);
+                if(src.width>0&&src.height>0){assert(std::fabs(src.width/sp.destination.width-2)<.001f);assert(std::fabs(src.height/sp.destination.height-2)<.001f);}
+                assert(!sp.flipX&&!sp.flipY);
+            }else if(sp.image.starts_with("Generated/Title/")){
+                ++outerCount;assert(std::filesystem::exists(r.root/sp.image));assert(!sp.flipX&&!sp.flipY);
+                const auto src=*sp.sourcePx;assert(src.width>0&&src.height>0);
+                assert(std::fabs(src.width/src.height-sp.destination.width/sp.destination.height)<.001f);
+                if(sp.image.ends_with("Wide.png")){assert(src.x+src.width<=1300.001f||src.x>=1899.999f);assert(std::fabs(src.y)<.001f&&std::fabs(src.height-900)<.001f);}
+                else assert(src.y+src.height<=129.501f||src.y>=714.499f);
+            }
+        }
+        assert(originalCount==(dims.x==320&&dims.y==480?1u:9u));assert(outerCount==(dims.x==320&&dims.y==480?0u:2u));
+        for(const auto pt:{Vec2{.1f,.1f},Vec2{layout.width-.1f,.1f},Vec2{.1f,layout.height-.1f},Vec2{layout.width-.1f,layout.height-.1f}}){
+            assert(std::any_of(f.sprites.begin(),f.sprites.end(),[&](const Sprite& sp){const auto d=sp.destination;return pt.x>=d.x&&pt.x<=d.x+d.width&&pt.y>=d.y&&pt.y<=d.y+d.height;}));
+        }
+        assert(titleHost.writes==0);tap(titleMenu,layout.width/2,layout.height/2);assert(titleMenu.screen()==Menu::Screen::profiles);
+    }
+    for(const auto dims:{Vec2{420,912},Vec2{820,1180},Vec2{912,420}}){
+        Host safeHost;auto safeSave=SaveData::empty(901);Menu titleMenu(r,safeHost,safeSave);
+        FrameLayout safe;safe.resize(dims.x,dims.y,44,34);titleMenu.setLayout(safe);
+        const auto& f=titleMenu.frame();assert(std::fabs(f.logicalWidth/f.logicalHeight-dims.x/dims.y)<.001f);
+        assert(std::fabs(std::min(f.logicalWidth/320,f.logicalHeight/480)-1)<.001f);
+        for(const auto& sp:f.sprites)if(sp.image=="Generated/Title/Wide.png")assert(std::fabs(sp.sourcePx->height-900)<.001f);
+        tap(titleMenu,safe.width/2,safe.height/2);assert(titleMenu.screen()==Menu::Screen::profiles);assert(safeHost.writes==0);
+        assert(titleMenu.frame().logicalWidth==safe.width&&titleMenu.frame().logicalHeight==safe.height);
     }
     std::cout<<"PASS menus: original geometry resources, blink timing, name validation, create/select/delete, locked mission, save failure rollback, no tick writes, completed-port parity\n";
 }

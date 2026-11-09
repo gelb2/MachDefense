@@ -1,0 +1,173 @@
+[
+  {
+    "name": "reference",
+    "w": 320,
+    "h": 480,
+    "originalTitleCount": 1,
+    "originalSize": [
+      320,
+      480
+    ],
+    "surroundings": [],
+    "seam": null,
+    "slotsOpened": true,
+    "writes": 0,
+    "errors": []
+  },
+  {
+    "name": "iphone",
+    "w": 390,
+    "h": 844,
+    "originalTitleCount": 9,
+    "originalSize": [
+      320,
+      480
+    ],
+    "surroundings": [
+      "Generated/Title/Tall.png",
+      "Generated/Title/Tall.png"
+    ],
+    "seam": {
+      "points": [
+        [
+          10,
+          713
+        ],
+        [
+          10,
+          714
+        ],
+        [
+          10,
+          715
+        ]
+      ],
+      "rgb": [
+        [
+          51,
+          15,
+          3
+        ],
+        [
+          51,
+          15,
+          3
+        ],
+        [
+          51,
+          15,
+          3
+        ]
+      ],
+      "maxDifference": 0
+    },
+    "slotsOpened": true,
+    "writes": 0,
+    "errors": []
+  },
+  {
+    "name": "ipad",
+    "w": 820,
+    "h": 1180,
+    "originalTitleCount": 9,
+    "originalSize": [
+      320.00034999999997,
+      480.0000152588
+    ],
+    "surroundings": [
+      "Generated/Title/Wide.png",
+      "Generated/Title/Wide.png"
+    ],
+    "seam": null,
+    "slotsOpened": true,
+    "writes": 0,
+    "errors": []
+  },
+  {
+    "name": "desktop",
+    "w": 1280,
+    "h": 800,
+    "originalTitleCount": 9,
+    "originalSize": [
+      320,
+      480
+    ],
+    "surroundings": [
+      "Generated/Title/Wide.png",
+      "Generated/Title/Wide.png"
+    ],
+    "seam": {
+      "points": [
+        [
+          905,
+          20
+        ],
+        [
+          906,
+          20
+        ],
+        [
+          907,
+          20
+        ]
+      ],
+      "rgb": [
+        [
+          104,
+          164,
+          214
+        ],
+        [
+          104,
+          164,
+          214
+        ],
+        [
+          104,
+          164,
+          214
+        ]
+      ],
+      "maxDifference": 0
+    },
+    "slotsOpened": true,
+    "writes": 0,
+    "errors": []
+  },
+  {
+    "name": "wide",
+    "w": 1600,
+    "h": 900,
+    "originalTitleCount": 9,
+    "originalSize": [
+      320.00000000000006,
+      480
+    ],
+    "surroundings": [
+      "Generated/Title/Wide.png",
+      "Generated/Title/Wide.png"
+    ],
+    "seam": null,
+    "slotsOpened": true,
+    "writes": 0,
+    "errors": []
+  },
+  {
+    "name": "ultrawide",
+    "w": 3440,
+    "h": 1440,
+    "originalTitleCount": 9,
+    "originalSize": [
+      319.99999999999994,
+      480
+    ],
+    "surroundings": [
+      "Generated/Title/Wide.png",
+      "Generated/Title/Wide.png"
+    ],
+    "seam": null,
+    "slotsOpened": true,
+    "writes": 0,
+    "errors": []
+  }
+]

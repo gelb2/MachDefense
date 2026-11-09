@@ -1,0 +1,14 @@
+{
+  "baselineCommit": "ce58bd0",
+  "unchangedPNGs": 1020,
+  "protectedUnitPNGs": 22,
+  "protectedAssemblyScales": true,
+  "allAssemblyPartDefinitions": true,
+  "weaponAndEconomyTables": true,
+  "boundsChecks": {
+    "sameWidth": true,
+    "preservedAH10": true,
+    "preservedBeluga": true,
+    "preservedCheyenne": true
+  }
+}

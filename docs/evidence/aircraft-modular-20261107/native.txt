@@ -1,0 +1,6 @@
+ALightGun -> E_Turret_Wpn_02: damage=150 sounds=60
+ALightMissile -> E_Turret17_Wpn_01: damage=280 sounds=42
+AHeavyGun -> E_Tank_Wpn_13: damage=570 sounds=76
+AHeavyMissile -> E_Tank28_Wpn_01: damage=456 sounds=36
+AHeavyCannon -> E_Tank31_Wpn: damage=1680 sounds=42
+AircraftTests: 3 viewports; 4 real World actors; original part assembly, independent fast rotors, pause, movement, ground shadows, no save writes, campaign restart passed

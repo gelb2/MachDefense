@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "width": 1280,
+      "file": "machdefense.html",
+      "additionTextExact": true
+    },
+    {
+      "width": 1280,
+      "file": "md-unease-20261108/draft.html",
+      "additionTextExact": true
+    },
+    {
+      "width": 1280,
+      "file": "md-unease-20261108/draft-en.html",
+      "additionTextExact": true
+    },
+    {
+      "width": 390,
+      "file": "machdefense.html",
+      "additionTextExact": true
+    },
+    {
+      "width": 390,
+      "file": "md-unease-20261108/draft.html",
+      "additionTextExact": true
+    },
+    {
+      "width": 390,
+      "file": "md-unease-20261108/draft-en.html",
+      "additionTextExact": true
+    }
+  ]
+}

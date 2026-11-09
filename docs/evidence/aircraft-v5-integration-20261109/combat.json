@@ -1,0 +1,22 @@
+{
+  "build": "f29e59657b66af6f",
+  "ok": true,
+  "testedLevels": 10,
+  "aircraftLevelCases": 40,
+  "audioBefore": {
+    "created": 2,
+    "closed": 0
+  },
+  "audioAfter": {
+    "created": 2,
+    "closed": 0
+  },
+  "pageErrors": [],
+  "dodge": true,
+  "minOwnTargetDistances": {
+    "AircraftLight": 123.61779362470439,
+    "AircraftHeavy": 104.05415302860332,
+    "AircraftDuct": 104.06934191797313,
+    "AircraftTransport": 60.95503527191171
+  }
+}

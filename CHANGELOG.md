@@ -4,6 +4,30 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## v0.7 — 헬기 4종과 타이틀 외곽
+
+2026-11-10. [웹·PWA 플레이](https://gelb2.github.io/MachDefense/) · [릴리즈·설치 기록](docs/evidence/v07-release-20261110.md)
+
+- 스카웃·샤이엔·벨루가·AH-10, Lv.1–10 강화와 단계별 외형, 기체별 무장, 긴급회피와 채프·플레어를 추가했다. 기존 작업 브랜치의 구현을 정식 릴리즈에 포함한다.
+- 채택한 가로·세로 타이틀 외곽을 공통 게임 화면에 연결했다. 원본 중앙의 기체·글자·비율을 보존하고, 가로는 벼랑·하늘·구름을 이어 배치한다.
+- Apple·Android 앱 버전은 0.7(7), Tauri Mac 앱 버전은 0.7.0이다. Android 정식·치트 APK와 Apple Silicon용 Mac 앱·서명된 업데이트 패키지를 제공한다. Android APK는 개발용 서명, Mac 앱은 ad-hoc 서명이다.
+
+### 헬기유닛 구현 중단에 대한 소고
+
+헤비멕1 복원 작업에서도 맞닥뜨리지 못한 지능적인 업무 배임과 태만이 발견됐다. Mach 시리즈 전체 복원이라는 최우선 목표를 위해 헬기유닛 개선을 보류한다.
+
+이번 버전에 출시한 헬기 유닛은 원작자의 미학적 목표와 나의 미학적 목표를 둘 다 충족하지 못한 상태다. 원작자와 나의 의도를 저해하는 완성도를 보여주므로, 헬기 유닛은 원하는 사용자만 사용하기를 권장한다.
+
+[헤비멕1과는 다른 위화감 — 신 리셴코주의와 차우세스쿠의 타자기](docs/public/unease-and-typewriters.md) · [지시 불이행·미완료 경위서](docs/evidence/aircraft-work-failure-20261109.md) · [도안 작업 거부 경위서](docs/evidence/aircraft-instruction-refusal-20261108.md) · [트러블슈팅](docs/public/troubleshooting.md)
+
+### 구현과 검사 근거
+
+[헬기 강화·무장과 Android 40개 레벨 대조](docs/evidence/android-aircraft-20261109.md) · [스카웃·벨루가 게임 적용](docs/evidence/aircraft-v5-integration-20261109.md) · [타이틀 채택 시안](docs/research/title-joins-20261110.md). 이번 릴리즈의 빌드·설치·운영 검사 범위는 [릴리즈 기록](docs/evidence/v07-release-20261110.md)에 적는다.
+
+로컬 출시 전 검사에서 코어 58개 중 56개가 통과했다. `AircraftAudit`·`AircraftCampaign` 두 검사는 기존 V5 에셋 적용 뒤 남은 기대값 불일치로 실패했으며, 헬기 개선 보류에 따라 이번에 수정하지 않았다. 타이틀 Menu·Chromium/WebKit 6화면 대조, 정식 웹 저장·복귀·오프라인·GPU 복구, Android 두 APK 빌드와 Tauri 빌드·실제 WKWebView 미션·복귀 검사를 통과했다.
+
+[출시 전 검사와 남은 실패](docs/evidence/v07-release-20261110.md) · [실제 배포·아이폰 설치 결과](https://github.com/gelb2/MachDefense/releases/tag/v0.7)
+
 ## v0.6 — PWA 갱신·Tauri Mac·레이저 생산 가격
 
 2026-11-07.

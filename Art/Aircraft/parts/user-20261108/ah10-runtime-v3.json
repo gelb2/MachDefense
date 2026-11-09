@@ -1,0 +1,29 @@
+{
+  "tool": "built-in image_gen",
+  "source": "Art/Aircraft/references/user-20261108/IMG_1166.PNG",
+  "pack": "tools/pack_ah10_user.sh",
+  "body_crop_xywh": [
+    29,
+    36,
+    1425,
+    973
+  ],
+  "body_target_width": 112,
+  "scaling": "uniform; source ratio 1.4645, raster rounding 112/76",
+  "rotor_hub_source_xy": [
+    660,
+    700
+  ],
+  "rotor_canvas": 1400,
+  "rotor_output": 88,
+  "files": {
+    "Art/Aircraft/parts/user-20261108/ah10-body-v3.png": "26ceb3645c6ccc0820842443179357cdfaf5cec059c076ef8406fd061715d169",
+    "Art/Aircraft/parts/user-20261108/ah10-rotor-v2.png": "91a5101f7f5f7ef80da91198f7c00ac56952aed2fdc4294185d26400388ef888",
+    "Art/Aircraft/parts/user-20261108/ah10-sheet-v2.png": "66e4fc9880abb22c138319895d80d9174c69ce3ef758fa5bce5e8e559001e944",
+    "Resources/Images/AHeavyBody.png": "fbc13c890b6c219caae6a716c509d464abd0ef0c5bb142dbdc21696203a5612e",
+    "Resources/Images/AHeavyRotor.png": "0e7c095a85ce5aabb8c470d0795e6bd7d59e7a690f2f991279b01001ee82374b",
+    "Resources/Images/AHeavyGun.png": "0fef699a66c670bfdaf4e3c928939f0f4d5e573fff54782fb5e5eca660234c82",
+    "Resources/Images/AHeavyMissile.png": "1d9ae6eaad9bbf2e09212dfd03728218ee70b992b08eef6fed66c14e3b4473c6",
+    "Resources/Images/AHeavyCannon.png": "024fefa4e564c200ac1550f73ab5067b28a793eeba52bc63ba1b0c1068acfc36"
+  }
+}

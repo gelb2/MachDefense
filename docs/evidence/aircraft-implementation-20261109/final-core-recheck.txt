@@ -1,0 +1,7 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/build/level10
+    Start 12: DataTable
+1/1 Test #12: DataTable ........................   Passed    0.26 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   0.27 sec

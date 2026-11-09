@@ -21,8 +21,8 @@
 
 - 원작 보존·변경 최소화·전투의 변칙성·다크소울과 세키로의 회피 발상·일시 무적·최소 기능 충족·아트 거부와 출시 불확실성을 한·영 원고의 “헬기 유닛으로 바꾸려던 전투” 절에 반영했다.
 - 생존율 개선과 최소 기능 충족은 최신 사용자 시험 경험과 판단으로 보존했다. 없는 생존율 수치·측정 조건·반복 횟수를 만들지 않았다.
-- 이전 [미션 55의 소형 3대 전멸 기록](https://github.com/gelb2/MachDefense/blob/a144abef9b91949dbf30793d2ff1f8bab277a672/docs/evidence/aircraft-allied-20261108.md#미션-55의-헬기-밀집과-피격--2026-11-08)은 긴급회피 무적을 넣기 전 검사다. 그 당시 실패 기록을 덮지 않고 최신 사용자 시험 경험과 구분했다. 해당 링크는 공격 방식 대조를 뒷받침하며 최신 생존율을 측정한 근거로 쓰지 않았다.
-- 현재 [AircraftTactics](https://github.com/gelb2/MachDefense/blob/a144abef9b91949dbf30793d2ff1f8bab277a672/Sources/Core/Simulation/AircraftTactics.hpp)의 dodging·dodgeEnd, [WorldCombat](../../Sources/Core/Simulation/WorldCombat.cpp)의 피해 제외 경로, [AircraftDodge 검사 코드](https://github.com/gelb2/MachDefense/blob/a144abef9b91949dbf30793d2ff1f8bab277a672/Tests/AircraftDodgeTests.cpp)를 읽어 일시 무적 구현을 대조했다. 이번 문서 작업에서 게임 코드를 바꾸거나 검사를 새로 실행하지 않았다.
+- 이전 [미션 55의 소형 3대 전멸 기록](../evidence/aircraft-allied-20261108.md#미션-55의-헬기-밀집과-피격--2026-11-08)은 긴급회피 무적을 넣기 전 검사다. 그 당시 실패 기록을 덮지 않고 최신 사용자 시험 경험과 구분했다. 해당 링크는 공격 방식 대조를 뒷받침하며 최신 생존율을 측정한 근거로 쓰지 않았다.
+- 현재 [AircraftTactics](../../Sources/Core/Simulation/AircraftTactics.hpp)의 dodging·dodgeEnd, [WorldCombat](../../Sources/Core/Simulation/WorldCombat.cpp)의 피해 제외 경로, [AircraftDodge 검사 코드](../../Tests/AircraftDodgeTests.cpp)를 읽어 일시 무적 구현을 대조했다. 이번 문서 작업에서 게임 코드를 바꾸거나 검사를 새로 실행하지 않았다.
 - “원작자의 소스코드”는 소스 복원 프로젝트의 실제 상태에 맞춰 “원작에서 복원한 코드”로 썼다. 원본 소스코드를 확보했다는 주장으로 확대하지 않았다.
 
 ## 추가 원문 — 개발 중인 업무 거부를 공개적으로 쓰는 이유
@@ -91,3 +91,5 @@ Codex가 붙인 소제목을 통합 초안과 기존 한·영 원고에서 제�
 도구의 지능이, 타자기가 신인류가 되었다고 선전하는 이 시대에, 정작 타자기를 쥔 인간은 역사상 자아 불투명하고 오만하고 삼류도덕에 뇌가 절여진 감시자 밑에서 일하고 있다
 
 한국어 통합 초안과 공개 원고의 마지막 문단에 원문 그대로 추가했다. 영문 원고에도 반영했다.
+
+후속 사용자 직접 정정(`c7cfd8a`): 위 최초 원문의 “역사상 자아 불투명하고”를 최종 초안에서는 “역사상 가장 불투명하고”로 고쳤다. 위 문장은 당시 제공 원문으로 보존하며, 현재 공개 원고와 한·영 초안은 후속 정정을 따른다.

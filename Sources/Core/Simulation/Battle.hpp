@@ -148,6 +148,8 @@ public:
     static BattleModels parse(const Chunk& parts,const Chunk& machines);
     static BattleModels load(ResourceAccess& resources);
     void append(const Chunk& parts,const Chunk& machines);
+    void appendPartAlias(std::string name,std::string_view source,unsigned type);
+    void appendMachineVariant(std::string name,std::string_view source,std::string_view weaponSuffix);
     void configureTiles(const DataTable& partsList,const DataTable& tilesList);
     [[nodiscard]] std::vector<PartPose> pose(std::string_view machine,float deviceScale,float bodyAngle,float weaponAngle,float radarAngle) const;
     [[nodiscard]] std::vector<PartPose> pose(const std::vector<AssemblyPart>&,float deviceScale,float bodyAngle,float weaponAngle,float radarAngle) const;

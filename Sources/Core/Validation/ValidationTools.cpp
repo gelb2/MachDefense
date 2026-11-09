@@ -18,7 +18,7 @@ ValidationTools::ValidationTools(ResourceAccess& r):builds_(BuildCatalog::load(t
     auto machineTable=table(r,"MachList");for(const auto& row:machineTable.rows())if(models.machine(row[0]))machineNames_.push_back(row[0]);
 }
 ValidationPanelState ValidationTools::panel(const SaveData& s,const World* w,bool open)const{
-    ValidationPanelState p;p.enabled=true;p.open=open;p.page=page;p.pageCount=5;p.title="TEST CONTROLS";p.entryOrigin=w?Vec2{2,170}:Vec2{2,2};
+    ValidationPanelState p;p.enabled=true;p.open=open;p.page=page;p.pageCount=6;p.title="TEST CONTROLS";p.entryOrigin=w?Vec2{2,170}:Vec2{2,2};
     const bool active=s.active(slot_);const bool running=w&&w->state()==WorldState::running;
     auto add=[&](std::string label,std::string value,ValidationCommand minus={},ValidationCommand plus={},ValidationCommand action={},bool enabled=true,std::string actionLabel="SET"){
         p.rows.push_back({std::move(label),std::move(value),id(minus),id(plus),id(action),enabled,std::move(actionLabel)});};
@@ -47,7 +47,7 @@ ValidationPanelState ValidationTools::panel(const SaveData& s,const World* w,boo
         add("LEVEL",has?std::to_string(found->level+1):"-",ValidationCommand::attackLevelMinus,ValidationCommand::attackLevelPlus,{},active&&has);
         add("STOCK",has?std::to_string(found->count):"-",ValidationCommand::attackCountMinus,ValidationCommand::attackCountPlus,{},active&&has);
         add("EQUIPPED",has&&found->onSlot?"YES":"NO",{},{},ValidationCommand::attackInstall,active&&has,"TOGGLE");
-    }else{
+    }else if(page==4){
         auto actors=live(w);const auto* a=actors.empty()?nullptr:w->actor(actors[actor_%actors.size()]);
         add("SPAWN UNIT",machineNames_.at(machine_),ValidationCommand::machinePrevious,ValidationCommand::machineNext,ValidationCommand::spawnMachine,running,"SPAWN");
         add("SPAWN SIDE",playerSpawn_?"PLAYER":"ENEMY",{},{},ValidationCommand::spawnSide,running,"CHANGE");
@@ -56,12 +56,19 @@ ValidationPanelState ValidationTools::panel(const SaveData& s,const World* w,boo
         add("ENEMY BASE","",{},{},ValidationCommand::win,running,"DESTROY");
         add("PLAYER BASE","",{},{},ValidationCommand::lose,running,"DESTROY");
     }
+    if(page==5){
+        add("LIGHT HELI","LEVEL 1 / ALLIED",{},{},ValidationCommand::aircraftLight,running,"SPAWN");
+        add("MEDIUM HELI","LEVEL 1 / ALLIED",{},{},ValidationCommand::aircraftHeavy,running,"SPAWN");
+        add("DUCT VTOL","LEVEL 1 / ALLIED",{},{},ValidationCommand::aircraftDuct,running,"SPAWN");
+        add("CARGO VTOL","LEVEL 1 / ALLIED",{},{},ValidationCommand::aircraftTransport,running,"SPAWN");
+        add("TRIAL LEVEL 1","FREE TEST SPAWN");
+    }
     return p;
 }
 ValidationResult ValidationTools::apply(unsigned raw,SaveData& s,World* w){
     ValidationResult result;const auto c=ValidationCommand(raw);const bool active=s.active(slot_);const bool running=w&&w->state()==WorldState::running;
-    if(raw==validationPreviousPageCommand){page=(page+4)%5;return result;}
-    if(raw==validationNextPageCommand){page=(page+1)%5;return result;}
+    if(raw==validationPreviousPageCommand){page=(page+5)%6;return result;}
+    if(raw==validationNextPageCommand){page=(page+1)%6;return result;}
     switch(c){
     case ValidationCommand::profilePrevious:if(!w)shift(slot_,5,-1);return result;
     case ValidationCommand::profileNext:if(!w)shift(slot_,5,1);return result;
@@ -107,6 +114,7 @@ ValidationResult ValidationTools::apply(unsigned raw,SaveData& s,World* w){
     }
     if(!running)return result;
     if(c==ValidationCommand::cellsMinus||c==ValidationCommand::cellsPlus||c==ValidationCommand::fillCells){w->setValidationCells(c==ValidationCommand::fillCells?w->cellCapacity():std::max(0.f,w->cells()+(c==ValidationCommand::cellsPlus?100:-100)));result.changed=true;}
+    if(raw>=600&&raw<604){w->validationAlliedAircraft(raw-600,w->screenToWorld({160,240}));result.changed=true;}
     if(c==ValidationCommand::spawnMachine){w->validationSpawn(machineNames_.at(machine_),playerSpawn_,w->screenToWorld({160,240}));result.changed=true;}
     auto actors=live(w);
     if(c==ValidationCommand::actorPrevious)shift(actor_,actors.size(),-1);

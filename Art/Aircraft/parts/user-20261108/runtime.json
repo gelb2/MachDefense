@@ -1,0 +1,22 @@
+{
+  "source": "IMG_1167.PNG, user-approved reference, not approval of the generated output",
+  "pack": "tools/pack_beluga_user.sh",
+  "runtime": {
+    "ATransportBody": {
+      "sha256": "6e844ce3217f9756ff6a99fdd64b2f120e001896974c6164cf59c228c1c4244e",
+      "path": "Resources/Images/ATransportBody.png"
+    },
+    "ATransportFan": {
+      "sha256": "e95f8367d1db0af63d59245b09cd11ea0a2f401da732ca8aa699333249cf340b",
+      "path": "Resources/Images/ATransportFan.png"
+    },
+    "ATransportGun": {
+      "sha256": "208f427acd9e8d125753f314879dedbe12fd74634cf46d2c9a72e56c48dbab7d",
+      "path": "Resources/Images/ATransportGun.png"
+    },
+    "ATransportMissile": {
+      "sha256": "596b9f041a74b7e3233323906e67066e01095cde205595934bca3bbd2a43baf9",
+      "path": "Resources/Images/ATransportMissile.png"
+    }
+  }
+}

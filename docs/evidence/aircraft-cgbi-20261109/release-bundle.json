@@ -1,0 +1,65 @@
+{
+  "scope": "Local signed Release app used for latest iPhone install; no new device extraction",
+  "images": [
+    {
+      "image": "E_Tank32_Body.png",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "equalsCurrentResource": true,
+      "sha256": "c884a2536c8ebf8b86c25c50a66670ed9ce9122f83d31766772837ddcbf6486b"
+    },
+    {
+      "image": "P_Body_18.png",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "equalsCurrentResource": true,
+      "sha256": "b0962cc7192096964019f938606ee5d9e80b598681c9d730a82916e3a2b5918e"
+    },
+    {
+      "image": "ALightBody.png",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "equalsCurrentResource": true,
+      "sha256": "4a11f4410fc41474b15e590cfdf18dfbee6bd5dacdb3b8f769875e283fca502c"
+    },
+    {
+      "image": "AHeavyBody.png",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "equalsCurrentResource": true,
+      "sha256": "b8d01435bc63725f91498b83b78132a6c175bde40663e04afbe63fdbe67efdb1"
+    },
+    {
+      "image": "ADuctBody.png",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "equalsCurrentResource": true,
+      "sha256": "6a30422b8880203bbebb4b9611f0478f7fdd084c4e50918818f6194b882da944"
+    },
+    {
+      "image": "ATransportBody.png",
+      "chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "equalsCurrentResource": true,
+      "sha256": "7d3a2604798605783b1b6cdc76419f152deb23d4be4e6f49ba2c2e8c65f2fe79"
+    }
+  ]
+}

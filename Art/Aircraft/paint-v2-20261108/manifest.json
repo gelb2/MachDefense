@@ -1,0 +1,60 @@
+{
+  "method": "Built-in imagegen surface-paint studies; production markings applied to approved source pixels during texture preparation. Generated redraw geometry is not installed.",
+  "sourceGeometryBaseline": "16d230c",
+  "baseColourCommits": [
+    "1d26f8d",
+    "0638ce9"
+  ],
+  "files": [
+    {
+      "path": "Art/Aircraft/paint-v2-20261108/scout-prompt.txt",
+      "bytes": 1204,
+      "sha256": "d01b6e67670c3b6852b846ac9459558e8cd61e3318479c9d1612235d29e19b79"
+    },
+    {
+      "path": "Art/Aircraft/paint-v2-20261108/beluga-prompt.txt",
+      "bytes": 1257,
+      "sha256": "922a4d4db2ae2ed3606f08d6b7187e09b1b8e66f2ad7e191d527abb325552cfd"
+    },
+    {
+      "path": "Art/Aircraft/paint-v2-20261108/cheyenne-prompt.txt",
+      "bytes": 1257,
+      "sha256": "07939c0a96f29d618e91042e1b3e1b1255a6898a9a7ff45f3dfaed8d5ce8649d"
+    },
+    {
+      "path": "Art/Aircraft/paint-v2-20261108/beluga-markings-v2.png",
+      "bytes": 1884309,
+      "sha256": "4927d367bed51bbf873c6e77fb5517bbd280e487c64a00225549bf2ebf3b4e79"
+    },
+    {
+      "path": "Art/Aircraft/paint-v2-20261108/ah10-markings-v2.png",
+      "bytes": 1656575,
+      "sha256": "33bb14d5faad2b4977821a5ca1119098203aa877165cbdafc82a252dc2a6efdd"
+    },
+    {
+      "path": "Art/Aircraft/paint-v2-20261108/ah10-prompt.txt",
+      "bytes": 1269,
+      "sha256": "d6b05f4237c80f6cc3281decaac198c9246b04608011e2a4fd70a2299437f3ef"
+    },
+    {
+      "path": "Art/Aircraft/paint-v2-20261108/cheyenne-markings-v2.png",
+      "bytes": 1044014,
+      "sha256": "5614c744573a64211546d6d3f9bc3972d34d31113989b6ea90b2aeebfea3ed58"
+    },
+    {
+      "path": "Art/Aircraft/paint-v2-20261108/scout-markings-v2.png",
+      "bytes": 1108980,
+      "sha256": "3492b54f393054752c77642bc720de45a29bd22a5892b716052ff0b2929a6745"
+    },
+    {
+      "path": "Art/Aircraft/countermeasures-20261108/storyboard-v1.png",
+      "bytes": 1532924,
+      "sha256": "d3a1a53430aee4f8f0074773a5fcdeece948a6255e5bfcd013c38510a1e5f002"
+    },
+    {
+      "path": "Art/Aircraft/countermeasures-20261108/prompt.txt",
+      "bytes": 1294,
+      "sha256": "5300b6fe710eb9e4ed6117c797dd699a7fc1710a6dd69b41ff17b4f0f6d9c790"
+    }
+  ]
+}

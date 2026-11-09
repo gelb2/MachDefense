@@ -1,0 +1,27 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/build/level10
+      Start  1: AircraftCountermeasure
+ 1/11 Test  #1: AircraftCountermeasure ...........   Passed    0.11 sec
+      Start  2: AircraftPaint
+ 2/11 Test  #2: AircraftPaint ....................   Passed    0.03 sec
+      Start  3: AlliedAircraft
+ 3/11 Test  #3: AlliedAircraft ...................   Passed    0.17 sec
+      Start  4: Aircraft
+ 4/11 Test  #4: Aircraft .........................   Passed    0.35 sec
+      Start 14: WeaponController
+ 5/11 Test #14: WeaponController .................   Passed    0.25 sec
+      Start 29: WorldEffects
+ 6/11 Test #29: WorldEffects .....................   Passed    0.30 sec
+      Start 33: Trail
+ 7/11 Test #33: Trail ............................   Passed    0.24 sec
+      Start 47: AircraftHandling
+ 8/11 Test #47: AircraftHandling .................   Passed    0.32 sec
+      Start 48: AircraftCampaign
+ 9/11 Test #48: AircraftCampaign .................   Passed    0.59 sec
+      Start 49: AircraftEvasion
+10/11 Test #49: AircraftEvasion ..................   Passed    0.26 sec
+      Start 50: AircraftDodge
+11/11 Test #50: AircraftDodge ....................   Passed    0.27 sec
+
+100% tests passed out of 11
+
+Total Test time (real) =   2.91 sec

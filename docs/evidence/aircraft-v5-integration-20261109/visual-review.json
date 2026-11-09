@@ -1,0 +1,24 @@
+{
+  "regularBuild": "f29e59657b66af6f",
+  "regularURL": "http://127.0.0.1:8957",
+  "UI": {
+    "engine": "chromium",
+    "sixStatesPassed": true,
+    "errors": [],
+    "result": ".local/v5-game-integration/web/beluga-ui/result.json"
+  },
+  "poseURL": "http://127.0.0.1:8960",
+  "chromeLv10Tile1": {
+    "image": ".local/v5-game-integration/web/chrome-final-poses-8960/level-10-pose-1.png",
+    "detail": ".local/beluga-v5-integration/runtime-chrome-lv10-minus8-detail.png",
+    "observed": "Four rotor blades, wings, tail and level10 armor present. Thin ground-visible separation remains beside right gun and cockpit; rear mount meets central structure. Whole weapon does not float independently."
+  },
+  "webkitLv10Tile1": {
+    "image": ".local/v5-game-integration/web/webkit-final-poses-8960/level-10-pose-1.png",
+    "observed": "Reopened the same file and confirmed the normal game scene, four aircraft and central ground unit. Beluga appears at lower right with rotor, wings, tail and armor.",
+    "meanRGB": 0.47547,
+    "sha256": "98fb5462f6349e52f3ff128da939e35a5147a57ad0f94bbbeff05fc16b97373d",
+    "correction": "The earlier all-black view was not reproduced when reopening the file; it is not evidence of a product rendering failure."
+  },
+  "productFilesChanged": false
+}

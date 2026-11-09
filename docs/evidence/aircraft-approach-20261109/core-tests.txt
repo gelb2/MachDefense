@@ -1,0 +1,17 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/cheyenne-salvo-clock/build/salvo-clock
+    Start  2: AircraftDefinition
+1/6 Test  #2: AircraftDefinition ...............   Passed    0.32 sec
+    Start  5: AircraftFireEffects
+2/6 Test  #5: AircraftFireEffects ..............   Passed    0.39 sec
+    Start  6: AircraftApproach
+3/6 Test  #6: AircraftApproach .................   Passed    0.46 sec
+    Start  7: CheyenneSalvoClock
+4/6 Test  #7: CheyenneSalvoClock ...............   Passed    0.67 sec
+    Start  8: AircraftArmament
+5/6 Test  #8: AircraftArmament .................   Passed    0.37 sec
+    Start 57: AircraftEvasion
+6/6 Test #57: AircraftEvasion ..................   Passed    0.28 sec
+
+100% tests passed out of 6
+
+Total Test time (real) =   2.49 sec

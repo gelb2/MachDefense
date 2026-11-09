@@ -1,0 +1,190 @@
+{
+  "siteSource": "fc244ea426c0360b874dc87104dd21838cd67ac2",
+  "deployment": "appgdep_6af08f392e8c8191a5532397ba761172",
+  "status": "succeeded",
+  "archiveExpandedBytes": 266427392,
+  "newMissingHTMLLinks": 0,
+  "currentMissingHTMLLinks": 0,
+  "newArtworkRGBAExact": true,
+  "deduplication": [
+    {
+      "duplicate": "menu-art/wide-title-912-0.webp",
+      "retained": "menu-joins/before-wide-title-912-0.webp",
+      "sha256": "012a6de21881e57d1db34ea9d72258af3f3fbaf3a6dc46c71c96d4cd070c8c00",
+      "bytesSaved": 275760,
+      "changedReferencesIn": [
+        "index.html"
+      ]
+    },
+    {
+      "duplicate": "menu-art/wide-mode-912-0.webp",
+      "retained": "menu-joins/before-wide-mode-912-0.webp",
+      "sha256": "eae0c9d471ef47afe011090c0cd63e1ace616bdca31b4911ceb76cd3efd6d1f7",
+      "bytesSaved": 270702,
+      "changedReferencesIn": [
+        "index.html"
+      ]
+    },
+    {
+      "duplicate": "menu-art/wide-mission-912-0.webp",
+      "retained": "menu-joins/before-wide-mission-912-0.webp",
+      "sha256": "99928f06f0d1ad190ccec881832de357b9722b0bea3f1173dcf4a98bf1eeb681",
+      "bytesSaved": 267852,
+      "changedReferencesIn": [
+        "index.html"
+      ]
+    },
+    {
+      "duplicate": "media/app-icon-20261029/before.webp",
+      "retained": "app-icon-source/before.webp",
+      "sha256": "1097626b22d5c77aa773f67cb11b38fe2df57352378ae0b0c7157d22cbdfc04f",
+      "bytesSaved": 892120,
+      "changedReferencesIn": [
+        "icon-and-media.html",
+        "app-icon-and-media-20261029.md"
+      ]
+    },
+    {
+      "duplicate": "assets/android-gameplay-20261030/03-weapons.webp",
+      "retained": "threads-media/05-android-weapons.webp",
+      "sha256": "0779e1ec54d80ae29af62eb2c6592d951705c0068dbce0a8441e619675b69b5c",
+      "bytesSaved": 1244040,
+      "changedReferencesIn": [
+        "android-gameplay.html"
+      ]
+    },
+    {
+      "duplicate": "assets/android-gameplay-20261030/02-jump.webp",
+      "retained": "threads-media/04-android-jump.webp",
+      "sha256": "9ec85c4c1c4aa5b8e7e04e7698b8ea60dd53816715fb4fdcaf8a64455ab8599d",
+      "bytesSaved": 1062548,
+      "changedReferencesIn": [
+        "android-gameplay.html",
+        "assets/android-gameplay-20261030/scenes.json"
+      ]
+    },
+    {
+      "duplicate": "assets/button-incident/pause-menu-normal.webp",
+      "retained": "media/hud-editor/pause-menu-normal.webp",
+      "sha256": "dfe7eed75c019b4637a7b56545dbb9de99a3eb4594a97a08a482c6287f33eb0d",
+      "bytesSaved": 184730,
+      "changedReferencesIn": [
+        "game-button-incident.html"
+      ]
+    },
+    {
+      "duplicate": "assets/button-incident/pause-menu-pressed.webp",
+      "retained": "media/hud-editor/pause-menu-pressed.webp",
+      "sha256": "dc85b1385a658fd1fd067b8fbff4acf01f595d428fdfbbab2eba43bfa41866c8",
+      "bytesSaved": 186254,
+      "changedReferencesIn": [
+        "game-button-incident.html"
+      ]
+    },
+    {
+      "duplicate": "media/auto-aim/lock-label-ipad.webp",
+      "retained": "media/auto-aim/lock-label-iphone.webp",
+      "sha256": "8cd932586fc743234868651a34f6ac46b95c52b72d4842e6c38478fbe466b68f",
+      "bytesSaved": 158740,
+      "changedReferencesIn": [
+        "auto-aim-ipad-20261027.md",
+        "auto-aim-progress.html"
+      ]
+    },
+    {
+      "duplicate": "media/lux-lunae/ipad-entry-060.webp",
+      "retained": "media/lux-lunae/iphone-entry-060.webp",
+      "sha256": "aaf307151a883667c48c21528f3eb6dc41d0a19946f8014601b0fa4981939578",
+      "bytesSaved": 189660,
+      "changedReferencesIn": [
+        "lux-lunae-design-20261027.md",
+        "lux-lunae.html"
+      ]
+    },
+    {
+      "duplicate": "media/lux-lunae/iphone-entry-120.webp",
+      "retained": "media/lux-lunae/ipad-entry-120.webp",
+      "sha256": "7918392a3f6d5c8b750173a4b8d4275fc2cd29b7c006dc560ead5be1375bfb8e",
+      "bytesSaved": 192368,
+      "changedReferencesIn": []
+    },
+    {
+      "duplicate": "media/lux-lunae/formation-iphone-entry-20261029.webp",
+      "retained": "media/lux-lunae/formation-ipad-entry-20261029.webp",
+      "sha256": "1cd0fc5efae084924785c08c92d89ec9a33894b05c92361ee16a5879cff4a302",
+      "bytesSaved": 192492,
+      "changedReferencesIn": []
+    },
+    {
+      "duplicate": "media/lux-lunae/iphone-combat.webp",
+      "retained": "media/lux-lunae/ipad-combat.webp",
+      "sha256": "8e7c23379b43db7943866816a67627bbaccc222f0f1ceb43fa4cea2139be8047",
+      "bytesSaved": 189346,
+      "changedReferencesIn": [
+        "lux-lunae-intent.html",
+        "lux-lunae-design-20261027.md",
+        "lux-lunae-intent-20261028.md",
+        "lux-lunae.html"
+      ]
+    },
+    {
+      "duplicate": "media/lux-lunae/ipad-entry-030.webp",
+      "retained": "media/lux-lunae/iphone-entry-030.webp",
+      "sha256": "0f499002e188760c97fbf37a352e82a7bb23b77b7ca5088b5fb5bb3ddb5dec4a",
+      "bytesSaved": 182480,
+      "changedReferencesIn": [
+        "lux-lunae-design-20261027.md",
+        "lux-lunae.html"
+      ]
+    },
+    {
+      "duplicate": "media/fullscreen/door-closed-480x360-game1.webp",
+      "retained": "media/fullscreen/door-world-state3-480x360.webp",
+      "sha256": "2baa92c750cdb44b68171f925e7da0a1a65f57da5bf7e5baa1f8d4f588bbb2ae",
+      "bytesSaved": 187916,
+      "changedReferencesIn": []
+    },
+    {
+      "duplicate": "media/vtol/refined/iphone-vtol_size_edges.webp",
+      "retained": "media/vtol/refined/ipad-vtol_size_edges.webp",
+      "sha256": "e82855946855b3aaa93647f8ab215e2291261956be488c5b1d7161b8ef29221d",
+      "bytesSaved": 126284,
+      "changedReferencesIn": []
+    },
+    {
+      "duplicate": "media/ground-aa/integrated/iphone-tunguska.webp",
+      "retained": "media/ground-aa/integrated/ipad-tunguska.webp",
+      "sha256": "59281b94af798cd57922ac27118f9a260157b1fedd667a5c10975e0a1173d5e0",
+      "bytesSaved": 236992,
+      "changedReferencesIn": []
+    },
+    {
+      "duplicate": "media/ground-aa/integrated/ipad-comparison.webp",
+      "retained": "media/ground-aa/integrated/iphone-comparison.webp",
+      "sha256": "dd18ae3a74c3f5b780008f3ee5b759a87adc39d875cb1a39335262d6d3bbe75d",
+      "bytesSaved": 256914,
+      "changedReferencesIn": []
+    },
+    {
+      "duplicate": "media/ground-aa/integrated/ipad-shilka.webp",
+      "retained": "media/ground-aa/integrated/iphone-shilka.webp",
+      "sha256": "4f1e415595804f2748b3aa90cf6214aa51906fb598108e79da48bf166eea4545",
+      "bytesSaved": 237498,
+      "changedReferencesIn": [
+        "ground-aa-art.html"
+      ]
+    },
+    {
+      "duplicate": "media/ground-aa/shilka-turret/ipad-shilka.webp",
+      "retained": "media/ground-aa/shilka-turret/iphone-shilka.webp",
+      "sha256": "7f3bcf5867adeac3eec52d86316b5839bed818518ec1ab80e7ee98f0f7296d04",
+      "bytesSaved": 237528,
+      "changedReferencesIn": [
+        "ground-aa-art-20261028.md",
+        "ground-aa-art.html"
+      ]
+    }
+  ],
+  "nativeDevicePaintTested": false,
+  "countermeasureRuntimeImplemented": false
+}

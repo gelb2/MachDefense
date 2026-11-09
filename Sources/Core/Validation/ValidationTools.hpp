@@ -12,7 +12,7 @@ enum class ValidationCommand:unsigned {
     buildPrevious=200,buildNext,buildLevelMinus,buildLevelPlus,buildGrant,buildInstall,
     attackPrevious=300,attackNext,attackLevelMinus,attackLevelPlus,attackCountMinus,attackCountPlus,attackGrant,attackInstall,
     machinePrevious=400,machineNext,spawnSide,spawnMachine,actorPrevious,actorNext,healthMinus,healthPlus,healthFull,win,lose,
-    save=500
+    save=500,aircraftLight=600,aircraftHeavy,aircraftDuct,aircraftTransport
 };
 struct ValidationResult {bool changed=false,start=false,persist=false;};
 // Test controls modify the same in-memory save/world used by normal gameplay.

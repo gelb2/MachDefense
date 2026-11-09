@@ -1,0 +1,159 @@
+{
+  "candidateChromePassed": true,
+  "candidateWebKitPassed": true,
+  "baselineChromePassed": true,
+  "states": [
+    {
+      "name": "production-level1",
+      "existingVisibleSpritePositionsExact": false,
+      "existingBelugaPartPositionsExact": true,
+      "newRootSpriteCount": 4,
+      "visibleDifferences": [
+        {
+          "candidate": {
+            "image": "RaderMark.png",
+            "x": 8.69403,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          },
+          "baseline": {
+            "image": "RaderMark.png",
+            "x": 6.14962,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          }
+        }
+      ],
+      "visibleNonRadarPositionsExact": true
+    },
+    {
+      "name": "upgrade-grid-level1",
+      "existingVisibleSpritePositionsExact": false,
+      "existingBelugaPartPositionsExact": true,
+      "newRootSpriteCount": 8,
+      "visibleDifferences": [
+        {
+          "candidate": {
+            "image": "RaderMark.png",
+            "x": 8.69403,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          },
+          "baseline": {
+            "image": "RaderMark.png",
+            "x": 6.14962,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          }
+        }
+      ],
+      "visibleNonRadarPositionsExact": true
+    },
+    {
+      "name": "upgrade-detail-level1",
+      "existingVisibleSpritePositionsExact": false,
+      "existingBelugaPartPositionsExact": true,
+      "newRootSpriteCount": 16,
+      "visibleDifferences": [
+        {
+          "candidate": {
+            "image": "RaderMark.png",
+            "x": 8.69403,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          },
+          "baseline": {
+            "image": "RaderMark.png",
+            "x": 6.14962,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          }
+        }
+      ],
+      "visibleNonRadarPositionsExact": true
+    },
+    {
+      "name": "production-level10",
+      "existingVisibleSpritePositionsExact": false,
+      "existingBelugaPartPositionsExact": true,
+      "newRootSpriteCount": 4,
+      "visibleDifferences": [
+        {
+          "candidate": {
+            "image": "RaderMark.png",
+            "x": 8.69403,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          },
+          "baseline": {
+            "image": "RaderMark.png",
+            "x": 6.14962,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          }
+        }
+      ],
+      "visibleNonRadarPositionsExact": true
+    },
+    {
+      "name": "upgrade-grid-level10",
+      "existingVisibleSpritePositionsExact": false,
+      "existingBelugaPartPositionsExact": true,
+      "newRootSpriteCount": 12,
+      "visibleDifferences": [
+        {
+          "candidate": {
+            "image": "RaderMark.png",
+            "x": 8.69403,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          },
+          "baseline": {
+            "image": "RaderMark.png",
+            "x": 6.14962,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          }
+        }
+      ],
+      "visibleNonRadarPositionsExact": true
+    },
+    {
+      "name": "upgrade-detail-level10",
+      "existingVisibleSpritePositionsExact": false,
+      "existingBelugaPartPositionsExact": true,
+      "newRootSpriteCount": 12,
+      "visibleDifferences": [
+        {
+          "candidate": {
+            "image": "RaderMark.png",
+            "x": 8.69403,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          },
+          "baseline": {
+            "image": "RaderMark.png",
+            "x": 6.14962,
+            "y": 12,
+            "w": 8,
+            "h": 8
+          }
+        }
+      ],
+      "visibleNonRadarPositionsExact": true
+    }
+  ],
+  "scope": "Six real production/upgrade states. Existing cheat granted and equipped Beluga in isolated profile; natural unlock/reward not tested.",
+  "comparisonLimit": "Each scene has a different offscreen random enemy x and its visible radar mark x. Those differences are retained. All other visible existing sprites and existing Beluga icon positions are equal. No whole-screen UI pixel equivalence claim."
+}

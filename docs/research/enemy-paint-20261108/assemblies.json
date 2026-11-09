@@ -1,0 +1,1068 @@
+{
+  "machines": [
+    {
+      "machine": "E_Base",
+      "parts": [
+        "E_Base",
+        "E_Base_Rader"
+      ],
+      "images": [
+        "E_Base.png",
+        "E_Base_Rader.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_01",
+      "parts": [
+        "E_Tank_Body_01",
+        "E_Tank_Wpn_01"
+      ],
+      "images": [
+        "E_Tank_Body_01.png",
+        "E_Tank_Wpn_01.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_02",
+      "parts": [
+        "E_Tank_Body_02",
+        "E_Tank_Wpn_02"
+      ],
+      "images": [
+        "E_Tank_Body_02.png",
+        "E_Tank_Wpn_02.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_03",
+      "parts": [
+        "E_Tank_Body_03",
+        "E_Tank_Wpn_03"
+      ],
+      "images": [
+        "E_Tank_Body_03.png",
+        "E_Tank_Wpn_03.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_04",
+      "parts": [
+        "E_Tank_Body_04",
+        "E_Tank_Wpn_04"
+      ],
+      "images": [
+        "E_Tank_Body_04.png",
+        "E_Tank_Wpn_04.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_05",
+      "parts": [
+        "E_Tank_Body_05",
+        "E_Tank_Wpn_05"
+      ],
+      "images": [
+        "E_Tank_Body_05.png",
+        "E_Tank_Wpn_05.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_06",
+      "parts": [
+        "E_Tank_Body_06",
+        "E_Tank_Wpn_06"
+      ],
+      "images": [
+        "E_Tank_Body_06.png",
+        "E_Tank_Wpn_06.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_07",
+      "parts": [
+        "E_Tank_Body_07",
+        "E_Tank_Wpn_07"
+      ],
+      "images": [
+        "E_Tank_Body_07.png",
+        "E_Tank_Wpn_07.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_08",
+      "parts": [
+        "E_Tank_Body_08",
+        "E_Tank_Wpn_08"
+      ],
+      "images": [
+        "E_Tank_Body_08.png",
+        "E_Tank_Wpn_08.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_09",
+      "parts": [
+        "E_Tank_Body_09",
+        "E_Tank_Wpn_09"
+      ],
+      "images": [
+        "E_Tank_Body_09.png",
+        "E_Tank_Wpn_09.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_10",
+      "parts": [
+        "E_Tank_Body_10",
+        "E_Tank_Wpn_10"
+      ],
+      "images": [
+        "E_Tank_Body_10.png",
+        "E_Tank_Wpn_10.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_11",
+      "parts": [
+        "E_Tank_Body_11",
+        "E_Tank_Wpn_11"
+      ],
+      "images": [
+        "E_Tank_Body_11.png",
+        "E_Tank_Wpn_11.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_12",
+      "parts": [
+        "E_Tank_Body_12",
+        "E_Tank_Wpn_12"
+      ],
+      "images": [
+        "E_Tank_Body_12.png",
+        "E_Tank_Wpn_12.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_20",
+      "parts": [
+        "E_Tank20_Body",
+        "E_Tank20_Wpn"
+      ],
+      "images": [
+        "E_Tank20_Body.png",
+        "E_Tank20_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_13",
+      "parts": [
+        "E_Tank_Body_13",
+        "E_Tank_Wpn_13"
+      ],
+      "images": [
+        "E_Tank_Body_13.png",
+        "E_Tank_Wpn_13.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_14",
+      "parts": [
+        "E_Tank_Body_14",
+        "E_Tank_Wpn_14",
+        "E_Tank_Wpn_14"
+      ],
+      "images": [
+        "E_Tank_Body_14.png",
+        "E_Tank_Wpn_14.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_15",
+      "parts": [
+        "E_Tank_Body_15",
+        "E_Tank_Wpn_15",
+        "E_Tank_Wpn_14",
+        "E_Tank_Wpn_14"
+      ],
+      "images": [
+        "E_Tank_Body_15.png",
+        "E_Tank_Wpn_14.png",
+        "E_Tank_Wpn_15.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_16",
+      "parts": [
+        "E_Tank_Body_16",
+        "E_Tank_Wpn_16",
+        "E_Tank_Wpn_16"
+      ],
+      "images": [
+        "E_Tank_Body_16.png",
+        "E_Tank_Wpn_16.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_17",
+      "parts": [
+        "E_Tank_Body_17",
+        "E_Tank_Wpn_17",
+        "E_Tank_Wpn_17"
+      ],
+      "images": [
+        "E_Tank_Body_17.png",
+        "E_Tank_Wpn_17.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_18",
+      "parts": [
+        "E_Tank_Body_18",
+        "E_Tank_Wpn_18",
+        "E_Tank_Wpn_17",
+        "E_Tank_Wpn_17"
+      ],
+      "images": [
+        "E_Tank_Body_18.png",
+        "E_Tank_Wpn_17.png",
+        "E_Tank_Wpn_18.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_19",
+      "parts": [
+        "E_Tank_Body_19",
+        "E_Tank_Wpn_17",
+        "E_Tank_Wpn_17",
+        "E_Tank_Wpn_17"
+      ],
+      "images": [
+        "E_Tank_Body_19.png",
+        "E_Tank_Wpn_17.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_21",
+      "parts": [
+        "E_Tank21_Body",
+        "E_Tank21_Wpn"
+      ],
+      "images": [
+        "E_Tank21_Body.png",
+        "E_Tank21_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_22",
+      "parts": [
+        "E_Tank22_Body",
+        "E_Tank22_Wpn"
+      ],
+      "images": [
+        "E_Tank22_Body.png",
+        "E_Tank22_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_23",
+      "parts": [
+        "E_Tank23_Body",
+        "E_Tank23_Wpn"
+      ],
+      "images": [
+        "E_Tank23_Body.png",
+        "E_Tank23_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_24",
+      "parts": [
+        "E_Tank24_Body",
+        "E_Tank24_Wpn",
+        "E_Tank24_Wpn"
+      ],
+      "images": [
+        "E_Tank24_Body.png",
+        "E_Tank24_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_25",
+      "parts": [
+        "E_Tank25_Body",
+        "E_Tank25_Wpn_01",
+        "E_Tank25_Wpn_02",
+        "E_Tank25_Wpn_02",
+        "E_Tank25_Wpn_02"
+      ],
+      "images": [
+        "E_Tank25_Body.png",
+        "E_Tank25_Wpn_01.png",
+        "E_Tank25_Wpn_02.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_26",
+      "parts": [
+        "E_Tank26_Body",
+        "E_Tank26_Wpn_01",
+        "E_Tank26_Wpn_02",
+        "E_Tank26_Wpn_02"
+      ],
+      "images": [
+        "E_Tank26_Body.png",
+        "E_Tank26_Wpn_01.png",
+        "E_Tank26_Wpn_02.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_27",
+      "parts": [
+        "E_Tank27_Body",
+        "E_Tank27_Wpn"
+      ],
+      "images": [
+        "E_Tank27_Body.png",
+        "E_Tank27_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_28",
+      "parts": [
+        "E_Tank28_Body",
+        "E_Tank28_Wpn_02",
+        "E_Tank28_Wpn_01",
+        "E_Tank28_Wpn_01"
+      ],
+      "images": [
+        "E_Tank28_Body.png",
+        "E_Tank28_Wpn_01.png",
+        "E_Tank28_Wpn_02.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_29",
+      "parts": [
+        "E_Tank29_Body",
+        "E_Tank29_Wpn"
+      ],
+      "images": [
+        "E_Tank29_Body.png",
+        "E_Tank29_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_30",
+      "parts": [
+        "E_Tank30_Body",
+        "E_Tank30_Wpn",
+        "E_Tank30_Wpn",
+        "E_Tank30_Wpn"
+      ],
+      "images": [
+        "E_Tank30_Body.png",
+        "E_Tank30_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_31",
+      "parts": [
+        "E_Tank31_Body",
+        "E_Tank31_Wpn"
+      ],
+      "images": [
+        "E_Tank31_Body.png",
+        "E_Tank31_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Tank_32",
+      "parts": [
+        "E_Tank32_Body",
+        "E_Tank32_Wpn"
+      ],
+      "images": [
+        "E_Tank32_Body.png",
+        "E_Tank32_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_02",
+      "parts": [
+        "E_Turret_Body_02",
+        "E_Turret_Wpn_02"
+      ],
+      "images": [
+        "E_Turret_Body_02.png",
+        "E_Turret_Wpn_02.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_03",
+      "parts": [
+        "E_Turret_Body_03",
+        "E_Turret_Wpn_03"
+      ],
+      "images": [
+        "E_Turret_Body_03.png",
+        "E_Turret_Wpn_03.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_04",
+      "parts": [
+        "E_Turret_Body_04",
+        "E_Turret_Wpn_04"
+      ],
+      "images": [
+        "E_Turret_Body_04.png",
+        "E_Turret_Wpn_04.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_01",
+      "parts": [
+        "E_Turret_Body_01",
+        "E_Turret_Wpn_01"
+      ],
+      "images": [
+        "E_Turret_Body_01.png",
+        "E_Turret_Wpn_01.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_09",
+      "parts": [
+        "E_Turret_Body_09",
+        "E_Turret_Wpn_09"
+      ],
+      "images": [
+        "E_Turret_Body_09.png",
+        "E_Turret_Wpn_09.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_05",
+      "parts": [
+        "E_Turret_Body_05",
+        "E_Turret_Wpn_05"
+      ],
+      "images": [
+        "E_Turret_Body_05.png",
+        "E_Turret_Wpn_05.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_06",
+      "parts": [
+        "E_Turret_Body_06",
+        "E_Turret_Wpn_06"
+      ],
+      "images": [
+        "E_Turret_Body_06.png",
+        "E_Turret_Wpn_06.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_07",
+      "parts": [
+        "E_Turret_Body_07",
+        "E_Turret_Wpn_07"
+      ],
+      "images": [
+        "E_Turret_Body_07.png",
+        "E_Turret_Wpn_07.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_08",
+      "parts": [
+        "E_Turret_Body_08",
+        "E_Turret_Wpn_08"
+      ],
+      "images": [
+        "E_Turret_Body_08.png",
+        "E_Turret_Wpn_08.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_10",
+      "parts": [
+        "E_Turret_Body_10",
+        "E_Turret_Wpn_10"
+      ],
+      "images": [
+        "E_Turret_Body_10.png",
+        "E_Turret_Wpn_10.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_11",
+      "parts": [
+        "E_Turret_Body_11",
+        "E_Turret_Wpn_11"
+      ],
+      "images": [
+        "E_Turret_Body_11.png",
+        "E_Turret_Wpn_11.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_12",
+      "parts": [
+        "E_Turret_Body_12",
+        "E_Turret_Wpn_12"
+      ],
+      "images": [
+        "E_Turret_Body_12.png",
+        "E_Turret_Wpn_12.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_13",
+      "parts": [
+        "E_Turret13_Body",
+        "E_Turret13_Wpn_02",
+        "E_Turret13_Wpn_01",
+        "E_Turret13_Wpn_01"
+      ],
+      "images": [
+        "E_Turret13_Body.png",
+        "E_Turret13_Wpn_01.png",
+        "E_Turret13_Wpn_02.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_14",
+      "parts": [
+        "E_Turret14_Body",
+        "E_Turret14_Wpn"
+      ],
+      "images": [
+        "E_Turret14_Body.png",
+        "E_Turret14_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_15",
+      "parts": [
+        "E_Turret15_Body",
+        "E_Turret15_Wpn"
+      ],
+      "images": [
+        "E_Turret15_Body.png",
+        "E_Turret15_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_16",
+      "parts": [
+        "E_Turret16_Body",
+        "E_Turret16_Wpn"
+      ],
+      "images": [
+        "E_Turret16_Body.png",
+        "E_Turret16_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_17",
+      "parts": [
+        "E_Turret17_Body",
+        "E_Turret17_Wpn_01",
+        "E_Turret17_Wpn_02",
+        "E_Turret17_Wpn_02"
+      ],
+      "images": [
+        "E_Turret17_Body.png",
+        "E_Turret17_Wpn_01.png",
+        "E_Turret17_Wpn_02.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_18",
+      "parts": [
+        "E_Turret18_Body",
+        "E_Turret18_Wpn_02",
+        "E_Turret18_Wpn_01",
+        "E_Turret18_Wpn_01"
+      ],
+      "images": [
+        "E_Turret18_Body.png",
+        "E_Turret18_Wpn_01.png",
+        "E_Turret18_Wpn_02.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_19",
+      "parts": [
+        "E_Turret19_Body",
+        "E_Turret19_Wpn"
+      ],
+      "images": [
+        "E_Turret19_Body.png",
+        "E_Turret19_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Turret_20",
+      "parts": [
+        "E_Turret20_Body",
+        "E_Turret20_Wpn"
+      ],
+      "images": [
+        "E_Turret20_Body.png",
+        "E_Turret20_Wpn.png"
+      ]
+    },
+    {
+      "machine": "E_Plane_01",
+      "parts": [
+        "E_Plane_Body_01"
+      ],
+      "images": [
+        "E_Plane_Body_01.png"
+      ]
+    },
+    {
+      "machine": "E_Plane_02",
+      "parts": [
+        "E_Plane_Body_02"
+      ],
+      "images": [
+        "E_Plane_Body_02.png"
+      ]
+    },
+    {
+      "machine": "E_Plane_03",
+      "parts": [
+        "E_Plane_Body_03"
+      ],
+      "images": [
+        "E_Plane_Body_03.png"
+      ]
+    },
+    {
+      "machine": "E_Plane_04",
+      "parts": [
+        "E_Plane04_Body",
+        "E_Plane04_Prop",
+        "E_Plane04_Prop",
+        "E_Plane04_Prop",
+        "E_Plane04_Prop"
+      ],
+      "images": [
+        "E_Plane04_Body.png",
+        "E_Plane04_Prop.png"
+      ]
+    },
+    {
+      "machine": "E_Plane_05",
+      "parts": [
+        "E_Plane05_Body",
+        "E_Plane05_Prop",
+        "E_Plane05_Prop",
+        "E_Plane05_Prop",
+        "E_Plane05_Prop",
+        "E_Plane05_Wpn",
+        "E_Plane05_Wpn",
+        "E_Plane05_Wpn",
+        "E_Plane05_Wpn"
+      ],
+      "images": [
+        "E_Plane05_Body.png",
+        "E_Plane05_Prop.png",
+        "E_Plane05_Wpn.png"
+      ]
+    }
+  ],
+  "imageConsumers": {
+    "E_Base.png": [
+      "E_Base"
+    ],
+    "E_Base_Rader.png": [
+      "E_Base"
+    ],
+    "E_Tank_Body_01.png": [
+      "E_Tank_01"
+    ],
+    "E_Tank_Wpn_01.png": [
+      "E_Tank_01"
+    ],
+    "E_Tank_Body_02.png": [
+      "E_Tank_02"
+    ],
+    "E_Tank_Wpn_02.png": [
+      "E_Tank_02"
+    ],
+    "E_Tank_Body_03.png": [
+      "E_Tank_03"
+    ],
+    "E_Tank_Wpn_03.png": [
+      "E_Tank_03"
+    ],
+    "E_Tank_Body_04.png": [
+      "E_Tank_04"
+    ],
+    "E_Tank_Wpn_04.png": [
+      "E_Tank_04"
+    ],
+    "E_Tank_Body_05.png": [
+      "E_Tank_05"
+    ],
+    "E_Tank_Wpn_05.png": [
+      "E_Tank_05"
+    ],
+    "E_Tank_Body_06.png": [
+      "E_Tank_06"
+    ],
+    "E_Tank_Wpn_06.png": [
+      "E_Tank_06"
+    ],
+    "E_Tank_Body_07.png": [
+      "E_Tank_07"
+    ],
+    "E_Tank_Wpn_07.png": [
+      "E_Tank_07"
+    ],
+    "E_Tank_Body_08.png": [
+      "E_Tank_08"
+    ],
+    "E_Tank_Wpn_08.png": [
+      "E_Tank_08"
+    ],
+    "E_Tank_Body_09.png": [
+      "E_Tank_09"
+    ],
+    "E_Tank_Wpn_09.png": [
+      "E_Tank_09"
+    ],
+    "E_Tank_Body_10.png": [
+      "E_Tank_10"
+    ],
+    "E_Tank_Wpn_10.png": [
+      "E_Tank_10"
+    ],
+    "E_Tank_Body_11.png": [
+      "E_Tank_11"
+    ],
+    "E_Tank_Wpn_11.png": [
+      "E_Tank_11"
+    ],
+    "E_Tank_Body_12.png": [
+      "E_Tank_12"
+    ],
+    "E_Tank_Wpn_12.png": [
+      "E_Tank_12"
+    ],
+    "E_Tank20_Body.png": [
+      "E_Tank_20"
+    ],
+    "E_Tank20_Wpn.png": [
+      "E_Tank_20"
+    ],
+    "E_Tank_Body_13.png": [
+      "E_Tank_13"
+    ],
+    "E_Tank_Wpn_13.png": [
+      "E_Tank_13"
+    ],
+    "E_Tank_Body_14.png": [
+      "E_Tank_14"
+    ],
+    "E_Tank_Wpn_14.png": [
+      "E_Tank_14",
+      "E_Tank_14",
+      "E_Tank_15",
+      "E_Tank_15"
+    ],
+    "E_Tank_Body_15.png": [
+      "E_Tank_15"
+    ],
+    "E_Tank_Wpn_15.png": [
+      "E_Tank_15"
+    ],
+    "E_Tank_Body_16.png": [
+      "E_Tank_16"
+    ],
+    "E_Tank_Wpn_16.png": [
+      "E_Tank_16",
+      "E_Tank_16"
+    ],
+    "E_Tank_Body_17.png": [
+      "E_Tank_17"
+    ],
+    "E_Tank_Wpn_17.png": [
+      "E_Tank_17",
+      "E_Tank_17",
+      "E_Tank_18",
+      "E_Tank_18",
+      "E_Tank_19",
+      "E_Tank_19",
+      "E_Tank_19"
+    ],
+    "E_Tank_Body_18.png": [
+      "E_Tank_18"
+    ],
+    "E_Tank_Wpn_18.png": [
+      "E_Tank_18"
+    ],
+    "E_Tank_Body_19.png": [
+      "E_Tank_19"
+    ],
+    "E_Tank21_Body.png": [
+      "E_Tank_21"
+    ],
+    "E_Tank21_Wpn.png": [
+      "E_Tank_21"
+    ],
+    "E_Tank22_Body.png": [
+      "E_Tank_22"
+    ],
+    "E_Tank22_Wpn.png": [
+      "E_Tank_22"
+    ],
+    "E_Tank23_Body.png": [
+      "E_Tank_23"
+    ],
+    "E_Tank23_Wpn.png": [
+      "E_Tank_23"
+    ],
+    "E_Tank24_Body.png": [
+      "E_Tank_24"
+    ],
+    "E_Tank24_Wpn.png": [
+      "E_Tank_24",
+      "E_Tank_24"
+    ],
+    "E_Tank25_Body.png": [
+      "E_Tank_25"
+    ],
+    "E_Tank25_Wpn_01.png": [
+      "E_Tank_25"
+    ],
+    "E_Tank25_Wpn_02.png": [
+      "E_Tank_25",
+      "E_Tank_25",
+      "E_Tank_25"
+    ],
+    "E_Tank26_Body.png": [
+      "E_Tank_26"
+    ],
+    "E_Tank26_Wpn_01.png": [
+      "E_Tank_26"
+    ],
+    "E_Tank26_Wpn_02.png": [
+      "E_Tank_26",
+      "E_Tank_26"
+    ],
+    "E_Tank27_Body.png": [
+      "E_Tank_27"
+    ],
+    "E_Tank27_Wpn.png": [
+      "E_Tank_27"
+    ],
+    "E_Tank28_Body.png": [
+      "E_Tank_28"
+    ],
+    "E_Tank28_Wpn_02.png": [
+      "E_Tank_28"
+    ],
+    "E_Tank28_Wpn_01.png": [
+      "E_Tank_28",
+      "E_Tank_28"
+    ],
+    "E_Tank29_Body.png": [
+      "E_Tank_29"
+    ],
+    "E_Tank29_Wpn.png": [
+      "E_Tank_29"
+    ],
+    "E_Tank30_Body.png": [
+      "E_Tank_30"
+    ],
+    "E_Tank30_Wpn.png": [
+      "E_Tank_30",
+      "E_Tank_30",
+      "E_Tank_30"
+    ],
+    "E_Tank31_Body.png": [
+      "E_Tank_31"
+    ],
+    "E_Tank31_Wpn.png": [
+      "E_Tank_31"
+    ],
+    "E_Tank32_Body.png": [
+      "E_Tank_32"
+    ],
+    "E_Tank32_Wpn.png": [
+      "E_Tank_32"
+    ],
+    "E_Turret_Body_02.png": [
+      "E_Turret_02"
+    ],
+    "E_Turret_Wpn_02.png": [
+      "E_Turret_02"
+    ],
+    "E_Turret_Body_03.png": [
+      "E_Turret_03"
+    ],
+    "E_Turret_Wpn_03.png": [
+      "E_Turret_03"
+    ],
+    "E_Turret_Body_04.png": [
+      "E_Turret_04"
+    ],
+    "E_Turret_Wpn_04.png": [
+      "E_Turret_04"
+    ],
+    "E_Turret_Body_01.png": [
+      "E_Turret_01"
+    ],
+    "E_Turret_Wpn_01.png": [
+      "E_Turret_01"
+    ],
+    "E_Turret_Body_09.png": [
+      "E_Turret_09"
+    ],
+    "E_Turret_Wpn_09.png": [
+      "E_Turret_09"
+    ],
+    "E_Turret_Body_05.png": [
+      "E_Turret_05"
+    ],
+    "E_Turret_Wpn_05.png": [
+      "E_Turret_05"
+    ],
+    "E_Turret_Body_06.png": [
+      "E_Turret_06"
+    ],
+    "E_Turret_Wpn_06.png": [
+      "E_Turret_06"
+    ],
+    "E_Turret_Body_07.png": [
+      "E_Turret_07"
+    ],
+    "E_Turret_Wpn_07.png": [
+      "E_Turret_07"
+    ],
+    "E_Turret_Body_08.png": [
+      "E_Turret_08"
+    ],
+    "E_Turret_Wpn_08.png": [
+      "E_Turret_08"
+    ],
+    "E_Turret_Body_10.png": [
+      "E_Turret_10"
+    ],
+    "E_Turret_Wpn_10.png": [
+      "E_Turret_10"
+    ],
+    "E_Turret_Body_11.png": [
+      "E_Turret_11"
+    ],
+    "E_Turret_Wpn_11.png": [
+      "E_Turret_11"
+    ],
+    "E_Turret_Body_12.png": [
+      "E_Turret_12"
+    ],
+    "E_Turret_Wpn_12.png": [
+      "E_Turret_12"
+    ],
+    "E_Turret13_Body.png": [
+      "E_Turret_13"
+    ],
+    "E_Turret13_Wpn_02.png": [
+      "E_Turret_13"
+    ],
+    "E_Turret13_Wpn_01.png": [
+      "E_Turret_13",
+      "E_Turret_13"
+    ],
+    "E_Turret14_Body.png": [
+      "E_Turret_14"
+    ],
+    "E_Turret14_Wpn.png": [
+      "E_Turret_14"
+    ],
+    "E_Turret15_Body.png": [
+      "E_Turret_15"
+    ],
+    "E_Turret15_Wpn.png": [
+      "E_Turret_15"
+    ],
+    "E_Turret16_Body.png": [
+      "E_Turret_16"
+    ],
+    "E_Turret16_Wpn.png": [
+      "E_Turret_16"
+    ],
+    "E_Turret17_Body.png": [
+      "E_Turret_17"
+    ],
+    "E_Turret17_Wpn_01.png": [
+      "E_Turret_17"
+    ],
+    "E_Turret17_Wpn_02.png": [
+      "E_Turret_17",
+      "E_Turret_17"
+    ],
+    "E_Turret18_Body.png": [
+      "E_Turret_18"
+    ],
+    "E_Turret18_Wpn_02.png": [
+      "E_Turret_18"
+    ],
+    "E_Turret18_Wpn_01.png": [
+      "E_Turret_18",
+      "E_Turret_18"
+    ],
+    "E_Turret19_Body.png": [
+      "E_Turret_19"
+    ],
+    "E_Turret19_Wpn.png": [
+      "E_Turret_19"
+    ],
+    "E_Turret20_Body.png": [
+      "E_Turret_20"
+    ],
+    "E_Turret20_Wpn.png": [
+      "E_Turret_20"
+    ],
+    "E_Plane_Body_01.png": [
+      "E_Plane_01"
+    ],
+    "E_Plane_Body_02.png": [
+      "E_Plane_02"
+    ],
+    "E_Plane_Body_03.png": [
+      "E_Plane_03"
+    ],
+    "E_Plane04_Body.png": [
+      "E_Plane_04"
+    ],
+    "E_Plane04_Prop.png": [
+      "E_Plane_04",
+      "E_Plane_04",
+      "E_Plane_04",
+      "E_Plane_04"
+    ],
+    "E_Plane05_Body.png": [
+      "E_Plane_05"
+    ],
+    "E_Plane05_Prop.png": [
+      "E_Plane_05",
+      "E_Plane_05",
+      "E_Plane_05",
+      "E_Plane_05"
+    ],
+    "E_Plane05_Wpn.png": [
+      "E_Plane_05",
+      "E_Plane_05",
+      "E_Plane_05",
+      "E_Plane_05"
+    ]
+  }
+}

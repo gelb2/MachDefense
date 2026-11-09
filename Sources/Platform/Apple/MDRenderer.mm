@@ -1,4 +1,5 @@
 #import "MDRenderer.h"
+#include "Core/Presentation/AircraftPaint.hpp"
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/ES1/gl.h>
 #import <OpenGLES/ES1/glext.h>
@@ -59,6 +60,7 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
     GLint maximum=0;glGetIntegerv(GL_MAX_TEXTURE_SIZE,&maximum);
     if(t.width<=0||t.height<=0||t.width>maximum||t.height>maximum){stbi_image_free(pixels);[self fail:@"Texture exceeds GPU limit"];return nullptr;}
     _imageSizes[name]={float(t.width),float(t.height)};
+    md::applyAircraftPaint(name,pixels,std::size_t(t.width)*t.height,t.width,t.height);
     if(premultiplied)for(std::size_t i=0;i<std::size_t(t.width)*t.height;++i){auto* p=pixels+i*4;for(int channel=0;channel<3;++channel)p[channel]=static_cast<unsigned char>(float(p[channel])*(float(p[3])/255.f));}
     // Texture2D(Image)::initWithImage 0x4b590 pads to powers of two and
     // uploads cleared pixels outside the original image. Preserve its edge sampling.
@@ -124,7 +126,7 @@ bool validRect(md::Rect r){return std::isfinite(r.x)&&std::isfinite(r.y)&&std::i
         const bool premultiplied=mesh.blend==md::Blend::premultipliedAlpha;
         Texture* texture=[self texture:mesh.image premultiplied:premultiplied];if(!texture){valid=NO;return;}
         glDisable(GL_SCISSOR_TEST);glEnable(GL_TEXTURE_2D);glBindTexture(GL_TEXTURE_2D,texture->id);
-        glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);glTexEnvi(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
+        glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,mesh.nearest?GL_NEAREST:GL_LINEAR);glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,mesh.nearest?GL_NEAREST:GL_LINEAR);glTexEnvi(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
         if(mesh.blend==md::Blend::opaque)glDisable(GL_BLEND);else{glEnable(GL_BLEND);glBlendFunc(premultiplied?GL_ONE:GL_SRC_ALPHA,mesh.blend==md::Blend::additive?GL_ONE:GL_ONE_MINUS_SRC_ALPHA);}
         std::vector<md::MeshVertex> vertices=mesh.vertices;
         for(auto& v:vertices){v.uv.x*=float(texture->width)/texture->storageWidth;v.uv.y*=float(texture->height)/texture->storageHeight;}

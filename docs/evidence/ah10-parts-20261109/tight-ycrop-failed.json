@@ -1,0 +1,32 @@
+{
+  "status": "rejected after web visual comparison",
+  "partHeights": [
+    20,
+    18
+  ],
+  "sevenPosesBothBrowsers": {
+    "differentPixels": "50\u201361 per screenshot",
+    "neutralDifferenceBBox": "x198, y628..681",
+    "maxChannelDifference": 90
+  },
+  "sourceRecompositionDifferentChannels": 0,
+  "hypothesis": "Tight alpha bounds place nonzero pixels at the rasterized quad boundary; test a transparent border with unchanged texture backing and pivot.",
+  "nextCandidate": {
+    "partHeights": [
+      32,
+      32
+    ],
+    "sourceYRanges": [
+      [
+        12,
+        44
+      ],
+      [
+        57,
+        89
+      ]
+    ],
+    "additionalPOTBytes": 262144
+  },
+  "renderSourceChanges": false
+}

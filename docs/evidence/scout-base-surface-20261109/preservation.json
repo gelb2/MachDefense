@@ -1,0 +1,30 @@
+{
+  "base": "10ae41c",
+  "checkedExistingFiles": 2762,
+  "existingChanged": [
+    "Resources/Tables/TileList.tsv",
+    "Resources/Tables/PartsList.tsv",
+    "Resources/RawData/AircraftMachines.mcb",
+    "Resources/RawData/AircraftParts.mcb",
+    "Resources/RawData/Level10Machines.mcb",
+    "Resources/RawData/Level10Parts.mcb",
+    "Art/Aircraft/upgrades-20261109/scout/manifest.json"
+  ],
+  "productionSourcesUnchanged": true,
+  "allExistingImageFilesUnchanged": true,
+  "existingScoutRGBA2to10Unchanged": true,
+  "other39LevelDefinitionsUnchanged": true,
+  "nonScoutTableRowsIdentical": true,
+  "cgbiFrontChecks": [
+    {
+      "weapon": "ALightGun",
+      "alphaDifferent": 0,
+      "frontDifferent": 0
+    },
+    {
+      "weapon": "ALightMissile",
+      "alphaDifferent": 0,
+      "frontDifferent": 0
+    }
+  ]
+}

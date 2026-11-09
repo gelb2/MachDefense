@@ -1,0 +1,83 @@
+{
+  "references": [
+    {
+      "name": "references/P_Body_16.png",
+      "sha256": "893fb703e6b3ed2141f2431fb9377cf8ea3a0e6fbdc262b706307db6546508a8"
+    },
+    {
+      "name": "references/P_Body_17.png",
+      "sha256": "76ee808e68b262c228533635cee61ed8fafe817d7669e5f05410b12208ebbddb"
+    },
+    {
+      "name": "references/P_Body_18.png",
+      "sha256": "b0962cc7192096964019f938606ee5d9e80b598681c9d730a82916e3a2b5918e"
+    },
+    {
+      "name": "references/ALightGun.png",
+      "sha256": "5cfcb56570ae49120f6ea3ffabc19f57ee934cf2843b55df85537f90a5ccee42"
+    },
+    {
+      "name": "references/ALightMissile.png",
+      "sha256": "8f795c0899c9bd019cb289313371d2fe9019d019e92767af27889f95216d5e5a"
+    },
+    {
+      "name": "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+      "sha256": "c0e800b5bacb41ed1b9e8035f8ead5147122ef4c00756ffad900de95c4701ba5"
+    },
+    {
+      "name": "candidates/scout-lv02-parts.png",
+      "sha256": "033da557938b7fc2ecda5cbc398297b2821041d8d1bb4ab8abbf85dbb8fe7137"
+    }
+  ],
+  "generation_records": [
+    {
+      "prompt": "Use case: precise-object-edit game sprite parts. Image1 contains Scout level2 armor guard, gun and missile pod. Make the LEVEL1 surface detail set with EXACT same footprints, noseRIGHT direction, muted olive paint and physical silhouette. Keep the left C-shaped guard open at center and right, but use two simpler single bevel armor plates and just one dark rear joining brace; remove the extra stacked bridge ribs so base level has a genuinely different simpler internal construction. Middle and right output ONLY rear casing shells of the shown gun/pod, do not draw barrel, tubes, muzzles or whole weapons. Keep rear casings olive with one raised edge lip and recessed joint. Image2 is approved Scout seven bank poses for palette and proportions; images3–5 are actual original game body parts for muted painted metal, short highlights and dark joints. Retain all approved color and character; no new white/color patches or decorative symbols, no whole aircraft. Exactly three isolated parts in one horizontal row, genuine transparent alpha outside them and in guard opening. No background, floor shadow, labels or checkerboard. Readable at body guard11x12, gun rear8x6, missile rear6x7 logical pixels; avoid smooth 3D rendering or heavy outlines.",
+      "refs": [
+        "scout-lv02-parts.png",
+        "ALightBody.png",
+        "P_Body_16.png",
+        "P_Body_17.png",
+        "P_Body_18.png"
+      ],
+      "generated": "exec-0ab34bc0-5c9e-4dc4-8386-beafd57b695e.png"
+    },
+    {
+      "prompt": "Use case: 7-frame game sprite roll bank sheet. Image1 is a small olive C-shaped Scout armor guard with TWO simple beveled plates, one flat rear bridge, center and right open. Preserve exactly its shape, olive colors and simple base-level construction. Image2 is the approved Scout seven roll poses, noseRIGHT throughout. Images3–5 are original game painted metal shading. Output ONE horizontal row of SEVEN isolated versions of image1: neutral, left mild, left medium, left strong, right mild, right medium, right strong. Use true changing top foreshortening and visible narrow sidewalls/occlusion to match image2's roll about horizontal noseRIGHT axis, NOT in-plane rotation, nose-up pitch or a flat-card shear. Same scale in all seven cells, neutral guard logical11x12, full cell logical16x17. Maintain C opening and two simple plates with a single rear joining brace. No added plates or rings, no whole aircraft, text, grid, shadow, checkerboard. Transparent alpha outside parts and openings. Dark joints and short edge highlights stay legible at tiny actual game size. Equal cells and broad transparent gutters.",
+      "refs": [
+        "part0-crop.png",
+        "ALightBody.png",
+        "P_Body_16.png",
+        "P_Body_17.png",
+        "P_Body_18.png"
+      ],
+      "generated": "exec-85dabba2-0738-4c7e-9b0b-ff4898791104.png"
+    }
+  ],
+  "sources": [
+    {
+      "name": "scout-base/parts-generated.png",
+      "sha256": "df2a6bf6a70e769fba1431fd7f510f5199a09eea2b465ba695aa7c68ede7181a"
+    },
+    {
+      "name": "scout-base/banks-generated.png",
+      "sha256": "f647de11c627b302cf6a34a1d64c9ccc4126c71ec87d7ec58ffc9659e8b41c1f"
+    }
+  ],
+  "products": [
+    {
+      "name": "scout-base/ready/ALightCover_01.png",
+      "sha256": "e6d338afda71fd3f0a1a0e38099d5dbabe78e8031c3787c161bb119a59bbbf76"
+    },
+    {
+      "name": "scout-base/ready/ALightGun_01.png",
+      "sha256": "5311034f7873e129876190a5f8626955d95510ad5a77220093272cfe4bd5163d"
+    },
+    {
+      "name": "scout-base/ready/ALightMissile_01.png",
+      "sha256": "cbe7ffc527ef9517a38a1dc1d4dc30a369dc7eb7734d73a5ecac2ce2ae7da4c9"
+    }
+  ],
+  "changes": "New simple base-level guard has two bevel plates and a single rear bridge; existing level2 has extra bridge ribs. Rear housing RGB only is composed inside original weapon alpha; original front and muzzle byte exact. Body64x47 and levels2–10 unchanged. 7 guard poses were independently generated, not shear or neutral duplication.",
+  "registration": "Same16x17 cells, body top-left25,14, selfsocket[-1,-1], z2. Pose6 common+1,+1 same as level2–10.",
+  "status": "Candidate preparation and static assembly checked, actual World not yet checked."
+}

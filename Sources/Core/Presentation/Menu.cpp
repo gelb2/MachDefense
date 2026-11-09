@@ -1,5 +1,6 @@
 #include "../../../Modules/SaveTransfer/Validate.hpp"
 #include "Core/Presentation/Menu.hpp"
+#include "Core/Presentation/TitleBackdrop.hpp"
 #include <algorithm>
 #include <cmath>
 #include <ctime>
@@ -198,6 +199,18 @@ void Menu::rebuild(){
 }
 void Menu::expandFrame(){
     if(layout_.width==320&&layout_.height==480&&layout_.top==0&&layout_.bottom==0)return;
+    if(screen_==Screen::title){
+        // Title art fills the viewport; safe areas belong to interactive menu
+        // controls. This matches the adopted preview on native devices too.
+        FrameLayout titleLayout;titleLayout.resize(layout_.width,layout_.height);
+        const auto c=titleLayout.center();auto original=std::move(frame_.sprites);
+        frame_.sprites.clear();frame_.logicalWidth=titleLayout.width;frame_.logicalHeight=titleLayout.height;
+        for(auto s:original){
+            if(s.image=="Title.jpg")appendTitleBackdrop(frame_,s,titleLayout);
+            else{s.destination.x+=c.x;s.destination.y+=c.y;frame_.sprites.push_back(std::move(s));}
+        }
+        return;
+    }
     const auto center=layout_.center();
     const Vec2 bottom{center.x,layout_.height-480-layout_.bottom};
     const Vec2 top{center.x,layout_.top};
@@ -210,38 +223,24 @@ void Menu::expandFrame(){
     auto original=std::move(frame_.sprites);frame_.sprites.clear();
     frame_.logicalWidth=layout_.width;frame_.logicalHeight=layout_.height;
     auto piece=[&](const Sprite& src,Rect pixels,Rect dest){auto s=src;s.sourcePx=pixels;s.destination=dest;frame_.sprites.push_back(std::move(s));};
-    // Nine-slice only the existing background. Labels and buttons retain their
-    // original proportions. No OS view or replacement artwork is introduced.
-    auto panel=[&](const Sprite& src,bool title){
+    // Keep the original slot/mission panel layout. Title surroundings use
+    // separately prepared artwork and retain the original title rectangle.
+    auto panel=[&](const Sprite& src){
         const auto sz=resources_.imageSize(src.image);
-        const float x=title?center.x:top.x,y=title?center.y:top.y;
-        const float end=title?y+480:layout_.height-layout_.bottom;
+        const float x=top.x,y=top.y,end=layout_.height-layout_.bottom;
         const float xs[]={0,x,x+320,layout_.width};
-        if(title){
-            for(int col=0;col<3;++col){if(xs[col+1]<=xs[col])continue;
-                const float sx=col==2?sz.x-1:0,sw=col==1?sz.x:1;
-                auto edge=src;edge.flipX=col!=1;edge.flipY=true;
-                // Reflect cloud/fire edge regions, never the baked-in title lettering.
-                piece(edge,{sx,0,sw,64},{xs[col],0,xs[col+1]-xs[col],y});
-                edge.flipY=false;piece(edge,{sx,0,sw,sz.y},{xs[col],y,xs[col+1]-xs[col],480});
-                edge.flipY=true;piece(edge,{sx,sz.y-120,sw,120},{xs[col],end,xs[col+1]-xs[col],layout_.height-end});
-            }
-        }else{
-            // Header and footer keep their height; extend the unlabelled metal body.
-            const float ys[]={0,y,y+106,end-78,end,layout_.height};
-            const float sy[]={0,0,212,804,sz.y,sz.y};
-            for(int col=0;col<3;++col)for(int row=0;row<5;++row){
-                if(xs[col+1]<=xs[col]||ys[row+1]<=ys[row])continue;
-                const float sx=col==0?0:col==1?0:sz.x-1,sw=col==1?sz.x:1;
-                const float sourceY=row==0?0:row==4?sz.y-1:sy[row];
-                const float sourceH=(row==0||row==4)?1:sy[row+1]-sy[row];
-                piece(src,{sx,sourceY,sw,sourceH},{xs[col],ys[row],xs[col+1]-xs[col],ys[row+1]-ys[row]});
-            }
+        const float ys[]={0,y,y+106,end-78,end,layout_.height};
+        const float sy[]={0,0,212,804,sz.y,sz.y};
+        for(int col=0;col<3;++col)for(int row=0;row<5;++row){
+            if(xs[col+1]<=xs[col]||ys[row+1]<=ys[row])continue;
+            const float sx=col==0?0:col==1?0:sz.x-1,sw=col==1?sz.x:1;
+            const float sourceY=row==0?0:row==4?sz.y-1:sy[row];
+            const float sourceH=(row==0||row==4)?1:sy[row+1]-sy[row];
+            piece(src,{sx,sourceY,sw,sourceH},{xs[col],ys[row],xs[col+1]-xs[col],ys[row+1]-ys[row]});
         }
     };
     for(auto s:original){
-        if(s.image=="Title.jpg"){panel(s,true);continue;}
-        if(s.image=="iPon_SelSlot_BG@2x.jpg"||s.image=="iPon_SelStage_Fore@2x.png"){panel(s,false);continue;}
+        if(s.image=="iPon_SelSlot_BG@2x.jpg"||s.image=="iPon_SelStage_Fore@2x.png"){panel(s);continue;}
         if(s.image.empty()){s.destination={0,0,layout_.width,layout_.height};frame_.sprites.push_back(std::move(s));continue;}
         const bool bottomButton=s.image=="Common_Btn_BACK.png"||s.image=="Common_Btn_DEL.png"||s.image=="Common_Btn_NEW.png"||s.image=="Support.png"||(s.image=="Common_Btn_OK.png"&&s.destination.y==434);
         const auto d=bottomButton?bottom:center;s.destination.x+=d.x;s.destination.y+=d.y;

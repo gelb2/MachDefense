@@ -1,5 +1,6 @@
 #include "Core/Simulation/World.hpp"
 #include "Core/Simulation/Formation.hpp"
+#include "Core/Simulation/AlliedAircraft.hpp"
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
@@ -18,6 +19,7 @@ World::World(ResourceAccess& r,HostServices& h,SaveData& s,std::size_t slot,Batt
     uiMargin_=g.deviceScale==.5f?62.f:178.f;
     if(slot>=SaveData::slotCount||!s.active(slot))throw std::invalid_argument("World requires an original active save slot");
     particles_=std::make_unique<ParticlePool>(float(time()),random_);
+    countermeasures_=std::make_unique<AircraftCountermeasures>(geometry_.deviceScale);
     for(std::size_t i=0;i<itemsTable_.rowCount();++i){auto d=LootDefinition::fromTable(itemsTable_,i);if(d.type!=LootType::other)lootDefinitions_.emplace(d.code,std::move(d));}
 }
 WorldActor& World::addNamed(std::string_view name,Vec2 position,bool player){
@@ -36,6 +38,19 @@ WorldActor& World::addNamed(std::string_view name,Vec2 position,bool player){
     a.bipod.setStepSize(info.speed);a.bipod.position=a.vehicle.position=a.aircraft.position=a.train.position=position;
     a.bipod.destination=a.vehicle.destination=a.aircraft.destination=a.train.destination=position;
     a.bipod.angle=a.bipod.bodyAngle=a.bipod.baseAngle=a.vehicle.angle=a.aircraft.angle=a.angle;
+    if(player)if(const auto* aircraft=alliedAircraftForModel(name)){
+        a.flightTactics=AircraftTactics{aircraft->widthFraction,info.speed/geometry_.deviceScale,std::uint32_t(a.id*2654435761u)|1u};
+        a.flightTactics->noseStep=aircraft->noseDegreesPerSecond*3.14159265f/10800.f;a.flightTactics->weaponStep=aircraft->weaponDegreesPerSecond*3.14159265f/10800.f;
+        a.flightHeight=aircraft->height;a.rotorStep=7.3f*6.28318530718f/60.f;a.aircraft.rotationDivisor=12;
+    }
+    if(a.flightTactics){
+        float low=0,high=0;
+        for(const auto& pose:models_.pose(a.assembly,geometry_.deviceScale,0,0,0)){
+            const auto size=resources_.imageSize(pose.definition->image);const float half=size.y/pose.definition->splitY*pose.deviceScale*.5f;
+            low=std::min(low,pose.localCenter.y-half);high=std::max(high,pose.localCenter.y+half);
+        }
+        a.countermeasureWidth=high-low;
+    }
     configureWeapons(a);actors_.push_back(std::move(value));return a;
 }
 WorldActor& World::addParts(const BuildDefinition& definition,Vec2 position){
@@ -48,8 +63,10 @@ WorldActor& World::addParts(const BuildDefinition& definition,Vec2 position){
 }
 void World::start(unsigned stage){
     if(stage>=80||stage>=maps_.children.size()||stage>=mapTable_.rowCount())throw std::out_of_range("Original stage index");
+    validationArtScene_=false;
     stage_=stage;startTime_=time();statistics_={};actors_.clear();loot_.clear();projectiles_.clear();trails_.clear();airStrikes_.clear();spawners_.clear();production_.clear();events_.clear();
     for(auto& p:particles_->particles())p.shown=false;
+    countermeasures_->clear();
     cellLevel_=0;state_=WorldState::running;paused_=false;started_=true;cameraTouch_.reset();radarTouch_.reset();cameraVelocity_=0;
     save_.writeWord(SaveData::slotStart+slot_*SaveData::slotStride+0x34,stage);
     capacity_=upgradeParameter(upgrades_,save_,slot_,BaseUpgrade::cellStorage);
@@ -77,7 +94,7 @@ const WorldActor* World::actor(ActorId id)const{for(const auto& a:actors_)if(a->
 void World::tick(){
     if(!started_)return;
     clock_.tick(true,paused_,int(state_));updateCamera();if(paused_)return;
-    if(state_==WorldState::running){
+    if(state_==WorldState::running&&!validationArtScene_){
         topPlayerPosition_=-800;
         if(auto generated=director_->tick(time(),random_))spawners_.push_back(std::move(*generated));
         std::vector<SpawnEvent> incoming;
@@ -97,6 +114,9 @@ void World::tick(){
     }
     // New carriers may create their final unit during this pass; process those
     // children on the following update, keeping actor references stable.
+    aircraftThreats_.clear(geometry_.deviceScale);
+    const bool aircraftActive=std::any_of(actors_.begin(),actors_.end(),[](const auto& a){return a->flightTactics&&a->hp>0&&!a->removed;});
+    if(aircraftActive)for(const auto& p:projectiles_)if(const auto* w=weapons_.find(p.weapon))aircraftThreats_.add(p.motion,*w);
     const auto count=actors_.size();for(std::size_t i=0;i<count;++i)updateActor(*actors_[i]);
     for(auto& strike:airStrikes_)if(const auto* weapon=weapons_.find(strike.weapon))
         if(auto bullet=strike.motion.tick(*weapon,time(),random_))addProjectile(strike.weapon,*bullet,0,0);
@@ -105,6 +125,7 @@ void World::tick(){
     std::erase_if(trails_,[](const auto& trail){return trail.motion->removed();});
     updateProjectiles();
     for(auto& p:particles_->particles())p.tick(float(time()),geometry_.deviceScale==.5f?240.f:512.f);
+    countermeasures_->tick(float(time()));
     std::vector<LootCollector> collectors;for(const auto& a:actors_)if(a->player&&!a->removed)collectors.push_back({a->id,a->position,a->type,a->hp});
     for(auto& item:loot_)if(auto pickup=item.tick(time(),collectors,random_)){
         host_.playSound("Game_GetItem.wav");
@@ -112,6 +133,10 @@ void World::tick(){
         else if(pickup->type==LootType::mineral)clock_.setCells(pickup->applyCells(clock_.cells(),capacity_));
     }
     std::erase_if(loot_,[](const auto& l){return l.removed;});
+    // New aircraft can be built repeatedly. Release their assembly/weapons and
+    // per-entity dodge state after the original wreck lifetime has finished.
+    // Original ground actor retention is unchanged.
+    std::erase_if(actors_,[](const auto& a){return a->flightTactics&&a->removed;});
 }
 void World::finish(WorldState state){
     state_=state;events_.push_back({state==WorldState::cleared?WorldEvent::Kind::stageCleared:WorldEvent::Kind::stageFailed,0,0});

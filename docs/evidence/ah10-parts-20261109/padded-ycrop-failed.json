@@ -1,0 +1,6 @@
+{
+  "status": "rejected",
+  "reason": "Both browsers still show 50\u201361 changed pixels, max116/255, despite transparent Y padding",
+  "hypothesisResult": "Padding did not resolve the error; exact raster sampling cause unresolved",
+  "action": "restore previously verified full canvas; shared renderer untouched"
+}

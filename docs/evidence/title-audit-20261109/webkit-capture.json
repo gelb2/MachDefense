@@ -1,0 +1,956 @@
+[
+  {
+    "target": "local",
+    "url": "http://127.0.0.1:8962/",
+    "build": {
+      "version": "f9c149c09cf5f2dc",
+      "cheat": true
+    },
+    "name": "reference",
+    "width": 320,
+    "height": 480,
+    "state": {
+      "ready": true,
+      "cheat": true,
+      "ticks": 33,
+      "writes": 0,
+      "sounds": 1,
+      "uploads": 4,
+      "draws": 7,
+      "width": 320,
+      "height": 480
+    },
+    "canvas": {
+      "pixelWidth": 320,
+      "pixelHeight": 480,
+      "cssWidth": 320,
+      "cssHeight": 480
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 480
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "local",
+    "url": "http://127.0.0.1:8962/",
+    "build": {
+      "version": "f9c149c09cf5f2dc",
+      "cheat": true
+    },
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "state": {
+      "ready": true,
+      "cheat": true,
+      "ticks": 53,
+      "writes": 0,
+      "sounds": 1,
+      "uploads": 4,
+      "draws": 9,
+      "width": 320,
+      "height": 692.513
+    },
+    "canvas": {
+      "pixelWidth": 390,
+      "pixelHeight": 844,
+      "cssWidth": 390,
+      "cssHeight": 844
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 106.256
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 106.256,
+        "w": 320,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 586.256,
+        "w": 320,
+        "h": 106.256
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "local",
+    "url": "http://127.0.0.1:8962/",
+    "build": {
+      "version": "f9c149c09cf5f2dc",
+      "cheat": true
+    },
+    "name": "ipad",
+    "width": 820,
+    "height": 1180,
+    "state": {
+      "ready": true,
+      "cheat": true,
+      "ticks": 73,
+      "writes": 0,
+      "sounds": 1,
+      "uploads": 4,
+      "draws": 14,
+      "width": 333.559,
+      "height": 480
+    },
+    "canvas": {
+      "pixelWidth": 820,
+      "pixelHeight": 1180,
+      "cssWidth": 820,
+      "cssHeight": 1180
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 6.77966,
+        "h": 0.0000152588
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0.0000152588,
+        "w": 6.77966,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 480,
+        "w": 6.77966,
+        "h": 0.0000305176
+      },
+      {
+        "image": "Title.jpg",
+        "x": 6.77966,
+        "y": 0,
+        "w": 320,
+        "h": 0.0000152588
+      },
+      {
+        "image": "Title.jpg",
+        "x": 6.77966,
+        "y": 0.0000152588,
+        "w": 320,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 6.77966,
+        "y": 480,
+        "w": 320,
+        "h": 0.0000305176
+      },
+      {
+        "image": "Title.jpg",
+        "x": 326.78,
+        "y": 0,
+        "w": 6.77966,
+        "h": 0.0000152588
+      },
+      {
+        "image": "Title.jpg",
+        "x": 326.78,
+        "y": 0.0000152588,
+        "w": 6.77966,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 326.78,
+        "y": 480,
+        "w": 6.77966,
+        "h": 0.0000305176
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "local",
+    "url": "http://127.0.0.1:8962/",
+    "build": {
+      "version": "f9c149c09cf5f2dc",
+      "cheat": true
+    },
+    "name": "desktop",
+    "width": 1280,
+    "height": 800,
+    "state": {
+      "ready": true,
+      "cheat": true,
+      "ticks": 93,
+      "writes": 0,
+      "sounds": 1,
+      "uploads": 4,
+      "draws": 8,
+      "width": 768,
+      "height": 480
+    },
+    "canvas": {
+      "pixelWidth": 1280,
+      "pixelHeight": 800,
+      "cssWidth": 1280,
+      "cssHeight": 800
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 480,
+        "w": 224,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 224,
+        "y": 0,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 224,
+        "y": 0,
+        "w": 320,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 224,
+        "y": 480,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 544,
+        "y": 0,
+        "w": 224,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 544,
+        "y": 0,
+        "w": 224,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 544,
+        "y": 480,
+        "w": 224,
+        "h": 0
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "local",
+    "url": "http://127.0.0.1:8962/",
+    "build": {
+      "version": "f9c149c09cf5f2dc",
+      "cheat": true
+    },
+    "name": "wide",
+    "width": 1600,
+    "height": 900,
+    "state": {
+      "ready": true,
+      "cheat": true,
+      "ticks": 113,
+      "writes": 0,
+      "sounds": 1,
+      "uploads": 4,
+      "draws": 8,
+      "width": 853.333,
+      "height": 480
+    },
+    "canvas": {
+      "pixelWidth": 1600,
+      "pixelHeight": 900,
+      "cssWidth": 1600,
+      "cssHeight": 900
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 266.667,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 480,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 0,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 0,
+        "w": 320,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 480,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 0,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 0,
+        "w": 266.667,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 480,
+        "w": 266.667,
+        "h": 0
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "local",
+    "url": "http://127.0.0.1:8962/",
+    "build": {
+      "version": "f9c149c09cf5f2dc",
+      "cheat": true
+    },
+    "name": "maclarge",
+    "width": 2560,
+    "height": 1440,
+    "state": {
+      "ready": true,
+      "cheat": true,
+      "ticks": 133,
+      "writes": 0,
+      "sounds": 2,
+      "uploads": 4,
+      "draws": 9,
+      "width": 853.333,
+      "height": 480
+    },
+    "canvas": {
+      "pixelWidth": 2560,
+      "pixelHeight": 1440,
+      "cssWidth": 2560,
+      "cssHeight": 1440
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 266.667,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 480,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 0,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 0,
+        "w": 320,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 480,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 0,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 0,
+        "w": 266.667,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 480,
+        "w": 266.667,
+        "h": 0
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "local",
+    "transitionToSlots": true,
+    "writes": 0
+  },
+  {
+    "target": "live",
+    "url": "https://gelb2.github.io/MachDefense/",
+    "build": {
+      "version": "87ea3cfe8a8dc249",
+      "cheat": false
+    },
+    "name": "reference",
+    "width": 320,
+    "height": 480,
+    "state": {
+      "ready": true,
+      "cheat": false,
+      "ticks": 32,
+      "writes": 0,
+      "sounds": 1,
+      "uploads": 2,
+      "draws": 2,
+      "width": 320,
+      "height": 480
+    },
+    "canvas": {
+      "pixelWidth": 320,
+      "pixelHeight": 480,
+      "cssWidth": 320,
+      "cssHeight": 480
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 480
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "live",
+    "url": "https://gelb2.github.io/MachDefense/",
+    "build": {
+      "version": "87ea3cfe8a8dc249",
+      "cheat": false
+    },
+    "name": "phone",
+    "width": 390,
+    "height": 844,
+    "state": {
+      "ready": true,
+      "cheat": false,
+      "ticks": 52,
+      "writes": 0,
+      "sounds": 1,
+      "uploads": 2,
+      "draws": 4,
+      "width": 320,
+      "height": 692.513
+    },
+    "canvas": {
+      "pixelWidth": 390,
+      "pixelHeight": 844,
+      "cssWidth": 390,
+      "cssHeight": 844
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 320,
+        "h": 106.256
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 106.256,
+        "w": 320,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 586.256,
+        "w": 320,
+        "h": 106.256
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "live",
+    "url": "https://gelb2.github.io/MachDefense/",
+    "build": {
+      "version": "87ea3cfe8a8dc249",
+      "cheat": false
+    },
+    "name": "ipad",
+    "width": 820,
+    "height": 1180,
+    "state": {
+      "ready": true,
+      "cheat": false,
+      "ticks": 72,
+      "writes": 0,
+      "sounds": 1,
+      "uploads": 2,
+      "draws": 10,
+      "width": 333.559,
+      "height": 480
+    },
+    "canvas": {
+      "pixelWidth": 820,
+      "pixelHeight": 1180,
+      "cssWidth": 820,
+      "cssHeight": 1180
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 6.77966,
+        "h": 0.0000152588
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0.0000152588,
+        "w": 6.77966,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 480,
+        "w": 6.77966,
+        "h": 0.0000305176
+      },
+      {
+        "image": "Title.jpg",
+        "x": 6.77966,
+        "y": 0,
+        "w": 320,
+        "h": 0.0000152588
+      },
+      {
+        "image": "Title.jpg",
+        "x": 6.77966,
+        "y": 0.0000152588,
+        "w": 320,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 6.77966,
+        "y": 480,
+        "w": 320,
+        "h": 0.0000305176
+      },
+      {
+        "image": "Title.jpg",
+        "x": 326.78,
+        "y": 0,
+        "w": 6.77966,
+        "h": 0.0000152588
+      },
+      {
+        "image": "Title.jpg",
+        "x": 326.78,
+        "y": 0.0000152588,
+        "w": 6.77966,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 326.78,
+        "y": 480,
+        "w": 6.77966,
+        "h": 0.0000305176
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "live",
+    "url": "https://gelb2.github.io/MachDefense/",
+    "build": {
+      "version": "87ea3cfe8a8dc249",
+      "cheat": false
+    },
+    "name": "desktop",
+    "width": 1280,
+    "height": 800,
+    "state": {
+      "ready": true,
+      "cheat": false,
+      "ticks": 92,
+      "writes": 0,
+      "sounds": 1,
+      "uploads": 2,
+      "draws": 3,
+      "width": 768,
+      "height": 480
+    },
+    "canvas": {
+      "pixelWidth": 1280,
+      "pixelHeight": 800,
+      "cssWidth": 1280,
+      "cssHeight": 800
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 480,
+        "w": 224,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 224,
+        "y": 0,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 224,
+        "y": 0,
+        "w": 320,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 224,
+        "y": 480,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 544,
+        "y": 0,
+        "w": 224,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 544,
+        "y": 0,
+        "w": 224,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 544,
+        "y": 480,
+        "w": 224,
+        "h": 0
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "live",
+    "url": "https://gelb2.github.io/MachDefense/",
+    "build": {
+      "version": "87ea3cfe8a8dc249",
+      "cheat": false
+    },
+    "name": "wide",
+    "width": 1600,
+    "height": 900,
+    "state": {
+      "ready": true,
+      "cheat": false,
+      "ticks": 112,
+      "writes": 0,
+      "sounds": 1,
+      "uploads": 2,
+      "draws": 3,
+      "width": 853.333,
+      "height": 480
+    },
+    "canvas": {
+      "pixelWidth": 1600,
+      "pixelHeight": 900,
+      "cssWidth": 1600,
+      "cssHeight": 900
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 266.667,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 480,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 0,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 0,
+        "w": 320,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 480,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 0,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 0,
+        "w": 266.667,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 480,
+        "w": 266.667,
+        "h": 0
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "live",
+    "url": "https://gelb2.github.io/MachDefense/",
+    "build": {
+      "version": "87ea3cfe8a8dc249",
+      "cheat": false
+    },
+    "name": "maclarge",
+    "width": 2560,
+    "height": 1440,
+    "state": {
+      "ready": true,
+      "cheat": false,
+      "ticks": 132,
+      "writes": 0,
+      "sounds": 2,
+      "uploads": 2,
+      "draws": 4,
+      "width": 853.333,
+      "height": 480
+    },
+    "canvas": {
+      "pixelWidth": 2560,
+      "pixelHeight": 1440,
+      "cssWidth": 2560,
+      "cssHeight": 1440
+    },
+    "titleSprites": [
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 0,
+        "w": 266.667,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 0,
+        "y": 480,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 0,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 0,
+        "w": 320,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 266.667,
+        "y": 480,
+        "w": 320,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 0,
+        "w": 266.667,
+        "h": 0
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 0,
+        "w": 266.667,
+        "h": 480
+      },
+      {
+        "image": "Title.jpg",
+        "x": 586.667,
+        "y": 480,
+        "w": 266.667,
+        "h": 0
+      }
+    ],
+    "generatedSprites": [],
+    "errors": []
+  },
+  {
+    "target": "live",
+    "transitionToSlots": true,
+    "writes": 0
+  }
+]

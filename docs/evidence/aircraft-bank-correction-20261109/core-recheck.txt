@@ -1,0 +1,7 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/.local/aircraft-repair-20261109/build
+    Start 8: Aircraft
+1/1 Test #8: Aircraft .........................   Passed    0.39 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   0.40 sec

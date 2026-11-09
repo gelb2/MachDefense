@@ -1,0 +1,1 @@
+Assertion failed: (aircraft->aircraft.speed==0), function main, file AircraftRangeStopTests.cpp, line 20.

@@ -1,0 +1,16 @@
+{
+  "images": 4,
+  "videos": [
+    {
+      "time": 0.4026,
+      "width": 640,
+      "height": 640
+    }
+  ],
+  "overflow": false,
+  "headings": 300,
+  "links": 300,
+  "hash": "#aircraft-allied-heading",
+  "errors": [],
+  "ok": true
+}

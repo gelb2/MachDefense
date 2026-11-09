@@ -1,0 +1,23 @@
+{
+  "baseHEAD": "06410eebfa3effd24b0f842d60cf7519ff9ee98f",
+  "sha256": {
+    "Art/Aircraft/runtime/assembly.json": "9c4edae5b73761c7bfb98d49271971bc3117f304969c556965ca3c64ba6743b6",
+    "Sources/Core/Simulation/AircraftVisual.hpp": "01e14cfd4e123b24462a018058c74345bc02281396ca8db332a1f05d9abe7b96",
+    "Tests/AircraftDefinitionTests.cpp": "c90e967371750ace94257eb0dd57654845980a0297f685752516751762290dcf",
+    "Tests/AircraftTests.cpp": "0e1da2590b7bc6f2a4bc490ee39ba3819697e918c4f170051cdaeee0f81beecb",
+    "Resources/RawData/AircraftParts.mcb": "5eb0f2c2674d44b56fe0551841843c5c25cd75126932a795e11750cb7bf8cd20",
+    "Resources/RawData/Level10Parts.mcb": "392906fcdde075cb50e7c2c89e47052d7e703d408863f68ec445a6b2859db131",
+    "Resources/Tables/PartsList.tsv": "29abea12bb1e8b9a5368c6c951d85f69f87a11169ef689f3390a21ae52163fef",
+    "Resources/Tables/TileList.tsv": "95e686bec5dc310ea94dcd15bea9712274117dec20c1cbea5d5656213c2eefda",
+    "Resources/Images/AHeavyBody.png": "57c6a2a66a9eb95de2eac68470ad7cc06f99f78538818d4930e4ff064a43184c",
+    "Resources/Images/AHeavyRocket.png": "883d6dd8d6e873a81aa62efe2bc00189d6ea0343d2dc78359037ba5f31bfc979",
+    "Resources/Images/AHeavyAirStrike.png": "510f57fad4d874641f067ebb6443933f52ba57556a6fe1193828846c65eac4c1",
+    "build/save-transfer/AircraftDefinitionTests": "518124c08391c303bc9638bfa0def16bb7b52ec0d32f58b8c8f681325d04dd95",
+    "build/save-transfer/AircraftTests": "156f8da5997f14806449af55c631e2d2cbedde4095be1d45b68dc30feae086f5",
+    "build/save-transfer/AircraftArmamentTests": "ef2c1a4b64a296778aa99a4312571f8ab97631545be82f06f2071c38a042f66c",
+    "build/save-transfer/AircraftFireEffectsTests": "7b40eb1d3b6fddfcaa4e8f5f4ec2712ff0b07d63b27284ebea717a6761f4def6",
+    "build/save-transfer/AircraftHandlingTests": "438fae57d5cd41654cb6d17980645fc8cfae4256e766e286d4bea81f46250aa3",
+    "tools/prepare_ah10_parts.py": "af78d379e9bddc4fec3a9f0196f039c5ec219d430a1c85206aa00aa7c7f45d94",
+    "Art/Aircraft/parts-separation-20261109/ah10/manifest.json": "655deabb9e697812ac524b6356ea5ae0db0a3c7a59a5a13cab55e021517c14a8"
+  }
+}

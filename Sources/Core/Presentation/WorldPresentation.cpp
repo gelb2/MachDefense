@@ -1,3 +1,4 @@
+#include "Core/Simulation/AircraftVisual.hpp"
 #include "Core/Simulation/World.hpp"
 #include "Core/Simulation/Formation.hpp"
 #include <algorithm>
@@ -66,10 +67,38 @@ void World::appendSprites(Frame& frame)const{
     // child parts use the machine layer + 1 (GobHvMach::setLayer 0x14430).
     std::array<Frame,10> layers;
     for(const auto& a:actors_)if(!a->removed){
-        const auto poses=models_.pose(a->assembly,scale,a->angle,a->angle,a->radarAngle);
-        const int baseLayer=a->hp<=0?1:(a->base?(a->player?7:5):(a->player?3:1));
+        const auto poses=models_.pose(a->assembly,scale,a->angle+a->artHeadingOffset,a->angle,a->radarAngle);
+        const int baseLayer=a->hp<=0?1:(a->flightHeight>0?7:(a->base?(a->player?7:5):(a->player?3:1)));
         for(const auto& pose:poses){Frame part;models_.appendSprites(part,std::span<const PartPose>(&pose,1),worldToView(a->position),[&](std::string_view n){return resources_.imageSize(n);});
-            if(part.sprites.size()==2){layers[0].sprites.push_back(std::move(part.sprites[0]));layers[baseLayer+(a->hp>0&&pose.hasParent?1:0)].sprites.push_back(std::move(part.sprites[1]));}
+            if(part.sprites.size()==2){
+                if(a->flightHeight>0){
+                    // The silhouette follows the same moving part on the ground.
+                    // Resizing the silhouette must not change its flight height
+                    // or the original four-pixel ground-shadow offset.
+                    auto& shadow=part.sprites[0];
+                    const float offset=a->flightHeight*scale+4*(scale-pose.deviceScale);
+                    shadow.destination.x+=offset;shadow.destination.y+=offset;shadow.color.a=.55f;
+                    shadow.nearest=part.sprites[1].nearest=true;
+
+                }
+                const int layer=baseLayer+(a->hp>0&&pose.hasParent?1:0);
+                if(a->flightTactics&&a->hp<=0){
+                    // Grounded wreck: no altitude offset; only a faint contact shadow.
+                    auto& sh=part.sprites[0];const auto& body=part.sprites[1];sh.destination=body.destination;
+                    sh.destination.x+=scale;sh.destination.y+=scale;sh.color.a=.18f;
+                }
+                const float bank=a->flightTactics&&a->hp>0?a->flightTactics->bank:0;
+                if(a->flightTactics&&std::abs(bank)>.001f){
+                    const auto origin=worldToView(a->position);
+                    // Use the preserved body texture throughout a roll. Switching
+                    // to a separately generated pose changed the approved design.
+                    for(unsigned i=0;i<2;++i){auto& dst=layers[i?layer:0];auto pivot=origin;
+                        if(!i){pivot.x+=(a->flightHeight+4)*scale;pivot.y+=(a->flightHeight+4)*scale;}
+                        auto mesh=aircraftBankMesh(part.sprites[i],pivot,a->angle,bank,resources_.imageSize(part.sprites[i].image));
+                        mesh.beforeSpriteIndex=dst.sprites.size();dst.meshes.push_back(std::move(mesh));
+                    }
+                }else{layers[0].sprites.push_back(std::move(part.sprites[0]));layers[layer].sprites.push_back(std::move(part.sprites[1]));}
+            }
         }
     }
     for(const auto& item:loot_)item.appendSprites(layers[0],worldToView(item.position),[&](std::string_view n){return resources_.imageSize(n);});
@@ -89,6 +118,7 @@ void World::appendSprites(Frame& frame)const{
         }
         if(!w->effectImage.empty())if(auto effect=p.motion.attachedEffect(*w,resources_.imageSize(w->effectImage),worldToView(p.motion.position),scale))layers[p.layer].sprites.push_back(std::move(*effect));
     }
+    countermeasures_->append(layers[6],float(time()),[&](Vec2 p){return worldToView(p);},[&](std::string_view n){return resources_.imageSize(n);});
     for(const auto& strike:airStrikes_)strike.motion.appendSprite(layers[7],worldToView(strike.motion.position),resources_.imageSize("Airplane.png"),scale);
     for(auto& layer:layers){const auto offset=frame.sprites.size();for(auto& mesh:layer.meshes){mesh.beforeSpriteIndex+=offset;frame.meshes.push_back(std::move(mesh));}for(auto& sprite:layer.sprites)frame.sprites.push_back(std::move(sprite));}
 

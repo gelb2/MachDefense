@@ -1,3 +1,4 @@
+#include "Core/Simulation/AircraftVisual.hpp"
 #include "Core/Simulation/World.hpp"
 #include "Core/Simulation/Formation.hpp"
 #include <algorithm>
@@ -15,7 +16,7 @@ void World::configureWeapons(WorldActor& actor){
         for(std::size_t i=0;i<nodes.size();++i){auto p=path;p.push_back(i);auto& part=nodes[i];
             if(const auto* weapon=weapons_.find(part.name)){
                 WorldWeapon w;w.name=part.name;w.partPath=p;w.controller=WeaponController(float(time()));w.controller.setAngle(actor.angle);
-                actor.weapons.push_back(std::move(w));actor.range=float(weapon->shotRange);
+                actor.weapons.push_back(std::move(w));actor.range=actor.flightTactics?std::max(actor.range,float(weapon->shotRange)):float(weapon->shotRange);
             }
             walk(part.children,p);
         }
@@ -36,7 +37,7 @@ bool World::activateSpecial(std::string_view name,Vec2 point){
         airStrikes_.push_back({weaponName,std::move(motion)});host_.playSound("SFX_AirStrike.wav");
     }else if(prefix.starts_with("CF_")){
         unsigned fired=0;
-        for(const auto& a:actors_)if(a->player&&!a->removed&&a->hp>0&&a->type==0&&a->position.y<point.y){
+        for(const auto& a:actors_)if(a->player&&!a->removed&&a->hp>0&&(a->type==0||a->flightTactics)&&a->position.y<point.y){
             const float distance=distanceSquared(a->position,point);
             if(distance>10000.f&&distance<=float(weapon->shotRange*weapon->shotRange)){
                 auto bullets=crossfireProjectiles(*weapon,a->position,point,a->angle,time(),random_);
@@ -58,18 +59,27 @@ void World::updateWeapons(WorldActor& a){
     for(auto& gun:a.weapons){const auto* definition=weapons_.find(gun.name);if(!definition)continue;
         auto& part=partAt(a.assembly,gun.partPath);
         WeaponFrame frame;frame.time=time();frame.ownerPosition=a.position;frame.bodyAngle=a.angle;frame.deviceScale=geometry_.deviceScale;
+        if(a.flightTactics){
+            frame.maxAimStep=a.flightTactics->weaponStep;
+            // Keep the added Cheyenne's zero-delay salvo on the controller's float clock.
+            if(gun.name.starts_with("ADuctMissile")&&definition->shotDelay==0.f)
+                frame.time=double(float(frame.time));
+        }
         frame.ownerHP=a.hp;frame.machineType=a.type;frame.statusFlags=a.statusFlags;frame.weaponReady=a.type!=0||a.bipod.weaponReady;
         if(target)frame.target=WeaponTarget{target->position,target->hp};
         frame.weaponReady=gun.controller.track(frame);
         if(a.type==0){gun.controller.setAngle(part.reverse&2?a.bipod.rightWeaponAngle:a.bipod.leftWeaponAngle);}
-        part.angle=gun.controller.angle();part.addPosition.x=gun.recoil;if(a.type==0)part.addPosition.y=a.bipod.bodyAddPosY;
+        const bool embedded=gun.name.starts_with("AHeavyRocket")||gun.name.starts_with("AHeavyAirStrike");
+        part.angle=embedded?a.angle:gun.controller.angle();part.addPosition.x=embedded?0:gun.recoil;if(a.type==0)part.addPosition.y=a.bipod.bodyAddPosY;
         const auto poses=models_.pose(a.assembly,geometry_.deviceScale,a.angle,gun.controller.angle(),a.radarAngle);
         // Flattened pose order is traversal order before stable z sorting; match
         // the part's complete path by its ordinal among identical weapon names.
         std::size_t ordinal=0;for(const auto& other:a.weapons){if(&other==&gun)break;if(other.name==gun.name)++ordinal;}
         const PartPose* pose=nullptr;for(const auto& p:poses)if(p.definition&&p.definition->name==gun.name){if(ordinal==0){pose=&p;break;}--ordinal;}
         auto muzzle=pose?pose->muzzle(gun.muzzle):std::nullopt;
+        if(muzzle&&a.flightTactics)*muzzle=aircraftBankPoint(*muzzle,a.angle,a.flightTactics->bank);
         frame.muzzlePosition={a.position.x+(muzzle?muzzle->x:0),a.position.y+(muzzle?muzzle->y:0)};
+        unsigned salvoIndex=0;
         const auto fired=gun.controller.tick(*definition,frame,random_,[&](const WeaponFire& shot){
             // Original muzzle flash is allocated before damage/projectile creation.
             if(auto* p=particles_->acquire(float(time()),random_)){
@@ -95,14 +105,31 @@ void World::updateWeapons(WorldActor& a){
                     if(!sniper&&geometry_.deviceScale==.5f)speed*=.5f;
                     const float lifeRandom=float(random_.next())*0x1p-31f;
                     const float lifeBase=sniper?.7f:.3f;p->life=lifeRandom*lifeBase+lifeBase;
-                    p->position={a.position.x+(pose?pose->localCenter.x:0),a.position.y+(pose?pose->localCenter.y:0)};
+                    auto eject=pose?pose->localCenter:Vec2{};
+                    if(a.flightTactics)eject=aircraftBankPoint(eject,a.angle,a.flightTactics->bank);
+                    p->position={a.position.x+eject.x,a.position.y+eject.y};
                     const float shellScale=sniper?.7f:.6f;p->scale={shellScale,shellScale};p->scaleVelocity=-.004f;p->rotationVelocity=.4f;
                     p->velocity={std::cos(shellAngle)*speed,std::sin(shellAngle)*speed};p->velocityAdd=-.05f;
                     setParticleImage(p,"BulletShell.png",2,1);p->start(float(time()));
                 }
                 if(target&&target->hp>0)damage(target->id,definition->damage,a.id);
             }
-            else {WorldProjectile p{gun.name,Projectile::fire(*definition,shot.origin,shot.destination,shot.angle,time(),random_),a.id,{}};p.motion.toPlayer=!a.player;addProjectile(p.weapon,std::move(p.motion),a.id);}
+            else {
+                auto destination=shot.destination;
+                if(target&&gun.name.starts_with("ADuctMissile")){
+                    destination=target->position;
+                    // Left pod: center + 3. Right pod: 3. One simultaneous seven-missile fan.
+                    if(gun.name.starts_with("ADuctMissileR")||salvoIndex>0){
+                        const float theta=float(random_.next())*0x1p-31f*6.28318530718f;
+                        const float radius=float(definition->damageRange)*.5f;
+                        destination.x+=std::cos(theta)*radius;destination.y+=std::sin(theta)*radius;
+                    }
+                }
+                const float angle=gun.name.starts_with("ADuctMissile")?float(std::atan2(double(destination.y-shot.origin.y),double(destination.x-shot.origin.x))):shot.angle;
+                WorldProjectile p{gun.name,Projectile::fire(*definition,shot.origin,destination,angle,time(),random_),a.id,{}};
+                p.motion.toPlayer=!a.player;addProjectile(p.weapon,std::move(p.motion),a.id);
+            }
+            ++salvoIndex;
         });
         if(fired.advanceMuzzle&&pose)gun.muzzle=pose->nextMuzzle(gun.muzzle);
         if(fired.playFireSound)host_.playSound(definition->fireSound);
@@ -142,7 +169,7 @@ void World::updateProjectiles(){
             host_.playSound("SFX_ExplGround.wav");
         }
         const auto hits=projectileCollide(*weapon,p.motion.position,p.motion.toPlayer,time(),enemies,players);
-        for(const auto& hit:hits){auto id=(hit.player?playerIds:enemyIds).at(hit.index);damage(id,hit.damage,p.attacker);if(hit.special){auto* a=actor(id);if(a&&a->hp>0&&a->specialDamage.add(*hit.special)){a->target=0;setDestination(*a,a->position);}}if(hit.secondary)if(const auto* a=actor(id))emitSecondaryImpact(*weapon,p.motion.position,a->position);}
+        for(const auto& hit:hits){auto id=(hit.player?playerIds:enemyIds).at(hit.index);damage(id,hit.damage,p.attacker);if(hit.special){auto* a=actor(id);if(a&&a->hp>0&&!(a->flightTactics&&a->flightTactics->invulnerable(time()))&&a->specialDamage.add(*hit.special)){a->target=0;setDestination(*a,a->position);}}if(hit.secondary)if(const auto* a=actor(id))emitSecondaryImpact(*weapon,p.motion.position,a->position);}
         emitWeaponImpact(*weapon,p.motion.position,0,.04f);
         p.motion.removed=true;
     }
@@ -161,6 +188,9 @@ void World::damage(ActorId id,int value,ActorId attacker){
                             float(std::sqrt(double(a->position.y-actualCamera_))/10.0)};
         host_.playSoundAt(sound,position);
     };
+    // Incoming hits retain their visual/audio impact; only HP is protected.
+    // Latest user rule includes hitscan. Original actors have no flightTactics.
+    if(a->flightTactics&&a->flightTactics->invulnerable(time())){playHit();return;}
     a->hp=hpAfterDamage(a->hp,value);
     if(a->hp>0){if(const auto* target=actor(a->target);target&&target->base)a->target=attacker;playHit();return;}
     host_.playSound("SFX_ExplMach.wav");emitCrashExplosion(a->position);

@@ -1,0 +1,7 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/cheyenne-salvo-clock/build/salvo-clock
+    Start 11: AlliedAircraft
+1/1 Test #11: AlliedAircraft ...................   Passed    0.50 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   0.50 sec
