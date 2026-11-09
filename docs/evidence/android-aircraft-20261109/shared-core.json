@@ -1,0 +1,124 @@
+{
+  "commit": "8175092bc04a7710edc7898db019ece9b853ed7e",
+  "sameCoreSourceSet": true,
+  "coreCppCount": 41,
+  "coreCppSHA256": {
+    "Sources/Core/Data/Chunk.cpp": "8da102f952f77ed02760dd61f961a43932ff54110ecaf212353f88fc741918d6",
+    "Sources/Core/Data/DataTable.cpp": "d1c68feb00dee8c82a15762e012b2cee6a1116c5e9460c71903a10e91d6737db",
+    "Sources/Core/Presentation/GameHUD.cpp": "ed2a498ebe2eeb46d99377964f76dd5a0ea80566635960fff44372b58d9a49f5",
+    "Sources/Core/Presentation/MachineSprites.cpp": "5f814bb7c8a4519d077a8a36819727d443d03b363aa183c1b7c8d50333d99bb2",
+    "Sources/Core/Presentation/Menu.cpp": "df596b5a991c2f448e9ae7bdb14fbb9f807c88a831ba0619b24fc17cacfbcbb2",
+    "Sources/Core/Presentation/SummaryDialog.cpp": "9171cde886f0043fb5f5e870c78e984da298f0a901b05f07119808680fbccf9b",
+    "Sources/Core/Presentation/SupportDialog.cpp": "9d6b7d8edbc978c542b19fe2b12fa010fda218693a8d53751cc23dc6dc142ba3",
+    "Sources/Core/Presentation/Transition.cpp": "89cdc7bab73042f7653cacbb09b9dd3d756401d82d4f608ea153d84d5deb7b85",
+    "Sources/Core/Presentation/UpgradeDialog.cpp": "0942576e8e89a1fef84fa431e0589b06c758735568588a3754a3f4f8898db7c8",
+    "Sources/Core/Presentation/WorldPresentation.cpp": "22947136b498f08ec65c8fa0c7ac81f04cde43b8a742676d1fa0c3b26bfc3f3a",
+    "Sources/Core/Session/GameSession.cpp": "11282ae5f31e8ac68f76d1a9047a174fd1b55ee5f8e2c411ce3fbb2ead21384d",
+    "Sources/Core/Session/SaveData.cpp": "f5f10f72e4d2fa064f27ddfeecc00d8295141132b0dee0122b7c126fde8ee8ce",
+    "Sources/Core/Session/Settlement.cpp": "e9c6230f41dd0ed1c14e7734e69b247a3d4b39859b243323a0fdfa6301ed3e58",
+    "Sources/Core/Simulation/BattleClock.cpp": "058931a4cb2d8973711448106966e8b342cc487510345ca8b2cc5ed09e057c6a",
+    "Sources/Core/Simulation/Bipod.cpp": "496a9567cdc31c7961395c3fc7cd39a94627c3b5f86626b7778ad64b1143d3d0",
+    "Sources/Core/Simulation/Combat.cpp": "faf4877ea37e510f523567c07d94f462d4f226584c3012d4b172545313b7e58b",
+    "Sources/Core/Simulation/Economy.cpp": "6b42ddef18284b8777022898d649a31d8f80d1f168e09140dc022eaa0c718a20",
+    "Sources/Core/Simulation/EmergencySupport.cpp": "3bc0438e0c9db194c1097f32b4a094a9d117751417e2aaa3358331289579eda5",
+    "Sources/Core/Simulation/Formation.cpp": "80bee7c2bc57cff124f0e5c5e3a7fbf6f3a5e911431187a9f59d02bfc4d552c2",
+    "Sources/Core/Simulation/Loot.cpp": "902799fe9405a9afc7faec00fb9467f77da12d2a829751174636993781346656",
+    "Sources/Core/Simulation/MachineModels.cpp": "77bd5879355aff446342dd8367eda3f5e6237700e27ed6f664182630d39cf281",
+    "Sources/Core/Simulation/Movement.cpp": "bc88f56328b996a59fa9baf8e5b8dd21c647ce82572f343c403c1e86f118992b",
+    "Sources/Core/Simulation/PlayerParts.cpp": "62b01bb9a009a1bb49dd3470ffd74a30709e05b34b2336ecb5c463c18c870104",
+    "Sources/Core/Simulation/Production.cpp": "68cb4b8c5a4847742e22627ffe056fce8db167c2ebf3309b0c950d2d1580689c",
+    "Sources/Core/Simulation/Projectile.cpp": "fcd34d350f100d50f2ee2f86b7ea5da36813723260d26d04c50c33881259c325",
+    "Sources/Core/Simulation/Spawning.cpp": "73d9be57f6112845ac1c5d2f7bb3f893be72807502663b847745ae2a9bf3ea22",
+    "Sources/Core/Simulation/SpecialAttack.cpp": "cbcc95f999841e92b8e0729a87d2c9c0154bbbe9c49fcaf3f086db450d007b7c",
+    "Sources/Core/Simulation/Targeting.cpp": "8abde840a601f79a51e4d7a3b3b8e95201199d0789703781cbc655553dc67abd",
+    "Sources/Core/Simulation/Terrain.cpp": "d37c3c743aa6120a520239b84d0472dd3f55abacb1ae4bab4c51e262f1e63a77",
+    "Sources/Core/Simulation/Trail.cpp": "19e588a7476a1862a51b8264fa952749ff662a0bacf086b7c4417cc5149537f4",
+    "Sources/Core/Simulation/WeaponController.cpp": "7c68e237ace2f1b8d25c6326fb6974356b8ab72001eb8e673eca0c55188fba41",
+    "Sources/Core/Simulation/World.cpp": "11b7ba4081e9bba67388a528a36ec1c703dd8eabee2591697855506911786e9f",
+    "Sources/Core/Simulation/WorldCombat.cpp": "7c1c6399610fb568eced31b641b750d8c1285055337f4c0b074aba50f3bee27b",
+    "Sources/Core/Simulation/WorldEconomy.cpp": "abfc315b0f3532ea639da3cbbceae0fa669d0a073a39481fc57f4d154eb0412f",
+    "Sources/Core/Simulation/WorldEffects.cpp": "0f1d2c95f59ed10ba872ee0ac532da6183d43e5c4601c0458b024012f1904f42",
+    "Sources/Core/Simulation/WorldMovement.cpp": "ba2642f6c2ffdce0ff3cadb6fad981386333e962034b02520d5405c06e554dd6",
+    "Sources/Core/Simulation/WorldTargeting.cpp": "623af7989f62edbd83449e12b057141edde47c0e4662f79807fa356167312ad0",
+    "Sources/Core/Simulation/WorldTerrain.cpp": "052604cdf823af44c1b9a16ce3099a2fd5e86d008661eb3caf0a6eb591186942",
+    "Sources/Core/Validation/ValidationPanel.cpp": "6aefc302f9b29226859bc6c5b0833a140772982128bd50b1cfa3f4e8007656ae",
+    "Sources/Core/Validation/ValidationTools.cpp": "4c6e73e67d6a7268b647e96f72a05a2697c97032c14f0c83dc269739eb74b0bb",
+    "Sources/Core/Validation/WorldValidation.cpp": "09e012467a1ffaed313edb7cca8d67be2be3c00ed334aa707c2968ae664d65dc"
+  },
+  "platformAircraftReferences": [
+    {
+      "path": "Sources/Platform/Apple/MDRenderer.mm",
+      "line": 2,
+      "text": "#include \"Core/Presentation/AircraftPaint.hpp\""
+    },
+    {
+      "path": "Sources/Platform/Apple/MDRenderer.mm",
+      "line": 63,
+      "text": "    md::applyAircraftPaint(name,pixels,std::size_t(t.width)*t.height,t.width,t.height);"
+    },
+    {
+      "path": "Android/app/src/main/cpp/Renderer.cpp",
+      "line": 2,
+      "text": "#include \"Core/Presentation/AircraftPaint.hpp\""
+    },
+    {
+      "path": "Android/app/src/main/cpp/Renderer.cpp",
+      "line": 19,
+      "text": "    applyAircraftPaint(name,pixels,std::size_t(t.width)*t.height,t.width,t.height);"
+    }
+  ],
+  "corePlatformConditionalBranches": [],
+  "scope": "Source/build configuration and prepared resource inspection; no Android device execution in this audit.",
+  "upgradeSemantics": "Save level increments; new production snapshots its selected BuildDefinition. Existing actors and queued jobs retain their current definition.",
+  "refs": {
+    "androidSharedCore": [
+      "Android/cmake/CMakeLists.txt:8",
+      "Android/cmake/CMakeLists.txt:26",
+      "CMakeLists.txt:6",
+      "Modules/core-sources.cmake:2"
+    ],
+    "appleSharedCore": [
+      "Modules/project.yml:16",
+      "Modules/project.yml:21",
+      "Apple/iOS/project.yml:57",
+      "Modules/MachDefenseModules.xcodeproj/project.pbxproj:436"
+    ],
+    "entrypoints": [
+      "Sources/Platform/Apple/MDApplication.mm:150",
+      "Android/app/src/main/cpp/Runtime.cpp:28"
+    ],
+    "levelUpgrade": [
+      "Sources/Core/Session/GameSession.cpp:270",
+      "Sources/Core/Session/Settlement.cpp:89",
+      "Sources/Core/Session/SaveData.cpp:105"
+    ],
+    "newProduction": [
+      "Sources/Core/Simulation/WorldEconomy.cpp:12",
+      "Sources/Core/Simulation/Production.cpp:28",
+      "Sources/Core/Simulation/World.cpp:104"
+    ],
+    "stats": [
+      "Sources/Core/Simulation/World.cpp:28",
+      "Sources/Core/Simulation/MachineModels.cpp:134",
+      "Sources/Core/Simulation/WorldCombat.cpp:13",
+      "Sources/Core/Simulation/Combat.cpp:12",
+      "Sources/Core/Session/GameSession.cpp:227"
+    ],
+    "assets": [
+      "Sources/Core/Simulation/MachineModels.cpp:53",
+      "Sources/Core/Simulation/MachineModels.cpp:82",
+      "Sources/Core/Presentation/WorldPresentation.cpp:70",
+      "Sources/Core/Session/GameSession.cpp:95"
+    ],
+    "packaging": [
+      "Modules/project.yml:35",
+      "Android/app/build.gradle.kts:2",
+      "Android/tools/prepare_assets.py:8"
+    ],
+    "paintNoop": [
+      "Sources/Platform/Apple/MDRenderer.mm:63",
+      "Android/app/src/main/cpp/Renderer.cpp:19",
+      "Sources/Core/Presentation/AircraftPaint.hpp:48"
+    ]
+  }
+}

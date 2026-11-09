@@ -1,6 +1,7 @@
 #include "Runtime.hpp"
 #include "../../../../../Modules/SaveTransfer/FileStore.hpp"
 #include "Core/Simulation/World.hpp"
+#include "Core/Simulation/AlliedAircraft.hpp"
 #include <android/log.h>
 #include <algorithm>
 #include <cmath>
@@ -155,7 +156,55 @@ std::string Runtime::status(bool sprites){
         out<<",\"probeSeconds\":"<<effects_.playbackTime("HMG09.wav");
         auto& session=static_cast<GameSession&>(*game_);if(auto* w=session.validationWorld())out<<",\"world\":{\"stage\":"<<w->stage()<<",\"time\":"<<w->time()<<",\"paused\":"<<(w->paused()?"true":"false")<<",\"cells\":"<<w->cells()<<",\"actors\":"<<w->actors().size()<<",\"projectiles\":"<<w->projectiles().size()<<",\"produced\":"<<w->statistics().produced<<",\"state\":"<<int(w->state())<<'}';
         if(auto save=session.validationSave()){out<<",\"slots\":[";for(unsigned i=0;i<5;++i){if(i)out<<',';out<<"{\"active\":"<<(save->active(i)?"true":"false")<<",\"stage\":"<<save->stage(i)<<",\"credits\":"<<save->credits(i)<<'}';}out<<']';}
-        if(sprites){out<<",\"sprites\":[";bool comma=false;for(const auto& s:f.sprites){if(comma)out<<',';comma=true;out<<"{\"image\":"<<jsonString(s.image)<<",\"x\":"<<s.destination.x<<",\"y\":"<<s.destination.y<<",\"w\":"<<s.destination.width<<",\"h\":"<<s.destination.height<<'}';}out<<']';}
+        // Detailed reads run only for the explicit snapshot request (status(true)).
+        if(sprites){
+            const auto helicopterImage=[](std::string_view image){return image.starts_with("ALight")||image.starts_with("AHeavy")||image.starts_with("ADuct")||image.starts_with("ATransport");};
+            out<<",\"sprites\":[";bool comma=false;
+            for(const auto& s:f.sprites){if(comma)out<<',';comma=true;
+                out<<"{\"image\":"<<jsonString(s.image)<<",\"x\":"<<s.destination.x<<",\"y\":"<<s.destination.y<<",\"w\":"<<s.destination.width<<",\"h\":"<<s.destination.height;
+                if(helicopterImage(s.image)){
+                    out<<",\"rotation\":"<<s.rotationDegrees<<",\"color\":["<<s.color.r<<','<<s.color.g<<','<<s.color.b<<','<<s.color.a<<"],\"sourcePx\":";
+                    if(s.sourcePx){const auto& r=*s.sourcePx;out<<'['<<r.x<<','<<r.y<<','<<r.width<<','<<r.height<<']';}else out<<"null";
+                }
+                out<<'}';
+            }out<<']';
+            out<<",\"aircraftMeshes\":[";comma=false;
+            for(const auto& m:f.meshes)if(helicopterImage(m.image)){
+                if(comma)out<<',';comma=true;out<<"{\"image\":"<<jsonString(m.image)<<",\"beforeSpriteIndex\":"<<m.beforeSpriteIndex<<",\"vertices\":[";bool vertexComma=false;
+                for(const auto& v:m.vertices){if(vertexComma)out<<',';vertexComma=true;out<<"{\"position\":["<<v.position.x<<','<<v.position.y<<"],\"uv\":["<<v.uv.x<<','<<v.uv.y<<"],\"color\":["<<v.color.r<<','<<v.color.g<<','<<v.color.b<<','<<v.color.a<<"]}";}
+                out<<"]}";
+            }out<<']';
+            out<<",\"aircraftBuilds\":[";comma=false;
+            if(auto save=session.validationSave())for(unsigned slot=0;slot<SaveData::slotCount;++slot)if(save->active(slot))for(const auto& b:save->builds(slot)){
+                const bool aircraft=std::any_of(alliedAircraftCatalog.begin(),alliedAircraftCatalog.end(),[&](const auto& a){return a.name==b.name;});if(!aircraft)continue;
+                if(comma)out<<',';comma=true;out<<"{\"slot\":"<<slot<<",\"name\":"<<jsonString(b.name)<<",\"savedLevel\":"<<b.level<<",\"displayLevel\":"<<b.level+1<<",\"onSlot\":"<<(b.onSlot?"true":"false")<<'}';
+            }out<<']';
+            out<<",\"actorsDetail\":[";comma=false;
+            if(auto* w=session.validationWorld()){
+                const auto bytes=assets_.read("Tables/WeaponInfo.tsv");
+                const auto catalog=WeaponCatalog::load(DataTable::parse({reinterpret_cast<const char*>(bytes.data()),bytes.size()}),true);
+                const auto models=BattleModels::load(assets_);
+                for(const auto& ptr:w->actors())if(ptr->flightTactics){const auto& a=*ptr;
+                    if(comma)out<<',';comma=true;
+                    out<<"{\"name\":"<<jsonString(a.name)<<",\"id\":"<<a.id<<",\"hp\":"<<a.hp<<",\"maxHP\":"<<a.maxHP<<",\"radius\":"<<a.radius<<",\"range\":"<<a.range<<",\"moveSpeed\":"<<a.aircraft.moveSpeed<<",\"speed\":"<<a.aircraft.speed<<",\"tacticSpeed\":"<<a.flightTactics->speed<<",\"bank\":"<<a.flightTactics->bank<<",\"removed\":"<<(a.removed?"true":"false")<<",\"position\":["<<a.position.x<<','<<a.position.y<<"],\"target\":"<<a.target;
+                    out<<",\"parts\":[";bool partComma=false;
+                    const auto appendParts=[&](auto&& self,const auto& nodes,const std::string& parentPath)->void{
+                        for(std::size_t i=0;i<nodes.size();++i){const auto& p=nodes[i];const auto path=parentPath+"/"+std::to_string(i);if(partComma)out<<',';partComma=true;
+                            out<<"{\"path\":"<<jsonString(path)<<",\"name\":"<<jsonString(p.name)<<",\"parentSocket\":"<<unsigned(p.parentSocket)<<",\"zOrder\":"<<unsigned(p.zOrder);
+                            if(const auto* definition=models.part(p.name))out<<",\"packagedImage\":"<<jsonString(definition->image)<<",\"type\":"<<unsigned(definition->type)<<",\"tileCount\":"<<unsigned(definition->tileCount)<<",\"tileNo\":"<<definition->tileNo<<",\"grid\":["<<definition->splitX<<','<<definition->splitY<<']';
+                            out<<'}';self(self,p.children,path);
+                        }
+                    };appendParts(appendParts,a.assembly,"");out<<']';
+                    out<<",\"weapons\":[";bool weaponComma=false;
+                    for(const auto& gun:a.weapons){if(weaponComma)out<<',';weaponComma=true;out<<"{\"name\":"<<jsonString(gun.name)<<",\"partPath\":[";
+                        for(std::size_t i=0;i<gun.partPath.size();++i){if(i)out<<',';out<<gun.partPath[i];}out<<"],\"muzzleIndex\":"<<gun.muzzle<<",\"angle\":"<<gun.controller.angle();
+                        out<<",\"definitionSource\":\"packaged WeaponInfo via shared phone parser\",\"definition\":";
+                        if(const auto* d=catalog.find(gun.name))out<<"{\"damage\":"<<d->damage<<",\"damageRange\":"<<d->damageRange<<",\"shotRange\":"<<d->shotRange<<",\"shotCount\":"<<unsigned(d->shotCount)<<",\"shotDelay\":"<<d->shotDelay<<",\"reloadDelay\":"<<d->reloadDelay<<",\"speed\":"<<d->speed<<",\"attackPoint\":"<<d->attackPoint()<<",\"fireSound\":"<<jsonString(d->fireSound)<<'}';else out<<"null";
+                        out<<'}';
+                    }out<<"]}";
+                }
+            }out<<']';
+        }
 #else
         (void)sprites;
 #endif

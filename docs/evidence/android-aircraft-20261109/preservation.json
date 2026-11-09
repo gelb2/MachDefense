@@ -1,0 +1,12 @@
+{
+  "baseline": "8175092",
+  "protectedTrackedFiles": 3175,
+  "protectedChanged": [],
+  "changedTrackedFiles": [
+    "Android/app/src/main/cpp/Runtime.cpp",
+    "docs/current-status.md",
+    "docs/report-site.md",
+    "docs/usability-todo.md"
+  ],
+  "scope": "All tracked Sources, Resources, Apple and Modules files compared with task entry SHA256 values."
+}

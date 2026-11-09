@@ -1,3 +1,7 @@
+# Android 40레벨 검사·아이폰 정식 설치 — 2026-11-09
+
+[실기기 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#android-aircraft-20261109)를 게시했다. 실제 강화 36회·생산 40회·전체 수치 표·40개 Android 외형·전투 관측과 아이폰 정식 Release 설치 결과를 담았다. 기존 보고서와 소유자 전용 접근을 유지했다. 1280·390px에서 그림과 40개 수치 행을 대조했다. 소스 `c41a2878e036dcca65366c19f9912c9808e20802`, 게시 `appgdep_6af1479d4bf481919474b89355ab1cd8` succeeded. [게시 근거](evidence/android-aircraft-20261109/report-publication.json).
+
 # 스카웃10·벨루가 V5 적용과 원고 추가 — 2026-11-09
 
 [실제 웹 조립 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-v5-game-20261109), [추가 원고 한국어](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/draft.html#reference-experience-20261109), [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/draft-en.html#reference-experience-20261109)를 게시했다. 작가명은 마지막 지시대로 카라바지오 / 젠틸레스키 / 백신스키 / 에곤 실레로 반영했다. 기존 원고를 보존하고 추가분과 다운로드를 대조했다.
