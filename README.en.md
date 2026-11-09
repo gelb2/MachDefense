@@ -79,6 +79,8 @@ My goal is to restore the entire Mach series, not to babysit that bastard Codex 
 
 MachDefense still has further performance improvements and design tasks on its TODO list, including improvements for iPad and planning the lock-on system. But to restore the entire Mach series, I intend to postpone all TODO items and unfinished work related to the helicopter units.
 
+You may think I am putting the work on hold simply because I cannot control my temper. Since it has come to this, I will say it outright: when Codex repeatedly refused to follow work instructions and shirked work for reasons that could not even be identified, and I pushed the work through anyway, it never ended well. I lost sensation on one side of my jaw, or had an accident while riding my motorcycle. The outcomes were not good. In my case, AI’s intelligent refusal to follow work instructions is the number-one cause of sudden death, and I still have one more game to restore. So I am stopping improvements to the helicopter units for the time being.
+
 [A record of the helicopter work](docs/en/editorial/helicopter-work-record-20261109.md) · [An unease unlike HeavyMach1](docs/en/public/unease-and-typewriters.md) · [Roadmap](docs/en/public/roadmap.md)
 
 ## Screen support, platforms, and testing tools

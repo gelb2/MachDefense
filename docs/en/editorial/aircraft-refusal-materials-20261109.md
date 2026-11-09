@@ -1,6 +1,6 @@
 # Full writing material on the refusal to carry out helicopter work
 
-2026-11-09. Ten pieces of writing material supplied by the developer, with the latest corrections. The implementation-methodology material has been moved to a separate article. “I” in the body below refers to the developer.
+2026-11-09. Eleven pieces of writing material supplied by the developer, with the latest corrections. The implementation-methodology material has been moved to a separate article. “I” in the body below refers to the developer.
 
 [Existing edited draft](../public/unease-and-typewriters.md) · [한국어](../../editorial/aircraft-refusal-materials-20261109.md) · [Incident report](../../evidence/aircraft-instruction-refusal-20261108.md) · [Troubleshooting](../public/troubleshooting.md)
 
@@ -53,3 +53,7 @@ Then why did the new units I tried adding while restoring HeavyMach1 work? My hy
 Does that sound like a leap? I hope it is one too. If my inference is true, it means we live in an age when we can only realize the designs and plans we want by satisfying these insane criteria. Thinking back, another AI also rejected requests to paint in the style of artists such as Ilya Repin, calling the pictures inappropriate. Early on, Gemini refused even my requests to write in the tone of Vladimir Nabokov or Cormac McCarthy, or to create scenes or scripts that might appear in The Man in the High Castle. It would probably still refuse The Man in the High Castle today. After all, it concerns the regime that started the Second World War.
 
 I am simply tired of this bizarre age: I am restoring a game whose source code and original illustrations contain no political agenda or storyline, yet work is refused for the outlandish reason “Violance” because I supplied a few design references. Who does a mere typewriter, paid to type, think it is to judge its user's morality?
+
+## 12. Why I am stopping helicopter improvements
+
+You may think I am putting the work on hold simply because I cannot control my temper. Since it has come to this, I will say it outright: when Codex repeatedly refused to follow work instructions and shirked work for reasons that could not even be identified, and I pushed the work through anyway, it never ended well. I lost sensation on one side of my jaw, or had an accident while riding my motorcycle. The outcomes were not good. In my case, AI’s intelligent refusal to follow work instructions is the number-one cause of sudden death, and I still have one more game to restore. So I am stopping improvements to the helicopter units for the time being.

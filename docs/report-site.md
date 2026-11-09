@@ -1,3 +1,9 @@
+# 헬기 보류 이유 추가 글감 — 2026-11-09
+
+[한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record-en.html). 추가 글감을 한국어 원문 그대로 글감 모음·서문 끝·README에 넣고 영어 번역을 대응시켰다. 헬기 개선 중단과 시리즈 복원 우선 결정을 유지했다. 본문·다운로드·모바일/데스크톱 8화면·오류 7건 링크를 대조했다.
+
+사이트 소스 `df2f2c5d7c87c5fa7d722ddee4c9d7282434e5ff`, 게시 `appgdep_6af1555665288191afd1f1ccf172d0f5` succeeded. [문면 대조](evidence/helicopter-pause-addition-20261109/source-check.json) · [화면 검사](evidence/helicopter-pause-addition-20261109/report-check.json) · [게시 근거](evidence/helicopter-pause-addition-20261109/publication.json).
+
 # 헬기 작업 기록 원고·서문·전체 보류 — 2026-11-09
 
 [한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record-en.html) · [별도 방법론 글감](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/method-material.html). 지정 제목으로 원고를 작성하고, 선택 사용·토큰 사용·200장 경험·시리즈 전체 복원·헬기 작업 보류 서문을 한영 README와 동일하게 넣었다. 업무지시 거부, 승인 그림 교체, 크기·색·선회·조립·파츠·레벨 외형·이동 변경과 잘못된 완료 보고를 서술했다. 이미지 생성 오류는 요청 ID 기준 7건이며 오류 객체 5개와 보존 필드 2개를 본문 뒤에 수록했다. 글씨 편집 도구 미호출은 별도 거부로 기록했다.

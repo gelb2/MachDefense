@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "file": "docs/editorial/aircraft-refusal-materials-20261109.md",
+      "addition_exact": true
+    },
+    {
+      "file": "docs/editorial/helicopter-work-record-20261109.md",
+      "addition_exact": true
+    },
+    {
+      "file": "README.md",
+      "addition_exact": true
+    },
+    {
+      "file": "docs/en/editorial/aircraft-refusal-materials-20261109.md",
+      "addition_exact": true
+    },
+    {
+      "file": "docs/en/editorial/helicopter-work-record-20261109.md",
+      "addition_exact": true
+    },
+    {
+      "file": "README.en.md",
+      "addition_exact": true
+    }
+  ],
+  "helicopter_work_remains_on_hold": true
+}
