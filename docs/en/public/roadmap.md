@@ -12,9 +12,11 @@ All helicopter TODO items and unfinished work are on hold to prioritize restorin
 
 ### HP and price adjustments — added 2026-11-10
 
-- [ ] Set Cheyenne HP 15% below Plasma Mech HP (85% of Plasma Mech HP).
-- [ ] Set Beluga HP to the midpoint between Tanker HP and Plasma Mech HP at the same level.
-- [ ] Reduce both purchase prices and each upgrade-step price for Cheyenne and Beluga by **25%**, alongside the HP adjustments. Use the Lv.1–10 schedule below.
+The HP and price adjustments below were implemented under the follow-up instruction of 2026-11-10. Other helicopter improvements remain on hold.
+
+- [x] Set Cheyenne HP 15% below Plasma Mech HP (85% of Plasma Mech HP).
+- [x] Set Beluga HP to the midpoint between Tanker HP and Plasma Mech HP at the same level.
+- [x] Reduce both purchase prices and each upgrade-step price for Cheyenne and Beluga by **25%**, alongside the HP adjustments. Use the Lv.1–10 schedule below.
 
 | Lv. | Cheyenne HP | Purchase cells | Next upgrade credits | Beluga HP | Purchase cells | Next upgrade credits |
 |---|---:|---:|---:|---:|---:|---:|
@@ -36,7 +38,7 @@ Current Lv.7 HP is 3,410 for Cheyenne and 6,384 for Beluga. The adjusted values 
 Purchase prices use production cells; upgrade prices use credits. Upgrade costs apply from the listed level to the next; Lv.10 is the cap. Total Lv.1→10 upgrade costs are **229,920 credits** for Cheyenne (previously 306,560) and **344,910 credits** for Beluga (previously 459,880).
 
 
-Compare matching levels from Lv.1 to Lv.10. These changes have not been applied to game data and remain on the helicopter hold list.
+The shared game tables now use the matching-level values from Lv.1 to Lv.10. Both web cheat browsers verified actual HP and upgrade deductions. [Changes and validation](../../evidence/aircraft-hp-price-hotfix-20261110.md).
 
 ## Distribution and platforms
 

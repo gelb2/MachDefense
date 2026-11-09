@@ -12,9 +12,9 @@
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "c7dbdf0b61aa243fd647269cc23879f12f3e6470241f4a42280d9fcefd7ebbbe",
-      "en_sha256": "2abe2b8316902daa3cdb5d2110521ed0f729a96c904b4cc9590600be00b56d8c",
-      "review": "2026-11-10: matched implemented upgrade-list layout fix, Chromium/WebKit cheat checks for all 18 units and four screen sizes, and planned regular web/PWA deployment. Native 0.7(7) and latest GitHub release v0.7 remain unchanged; production publication is not claimed."
+      "ko_sha256": "af29555199b68cb5addba88f04649b36ba3e75c6567d4565de2e60d0304bb174",
+      "en_sha256": "c2589588ee31595279a504ec1baebe47058ecb4bf90bbec98a2648be9b75452c",
+      "review": "2026-11-10: compared applied Lv.1–10 HP and price schedule, shared table path, 25% reduction, original HP rounding, two-browser verification scope, remaining helicopter hold and deployment/install timing."
     },
     {
       "ko": "CREDITS.md",
@@ -180,9 +180,9 @@
     {
       "ko": "docs/public/roadmap.md",
       "en": "docs/en/public/roadmap.md",
-      "ko_sha256": "01e3d4198b2a33760cd5878337f7e37b43d199b7af2e35ccfebf9dc3ae3fda33",
-      "en_sha256": "a48b91eeaa1479d524de51c125f99099267aa40fa81cb40d46ecd09f0c68d67d",
-      "review": "2026-11-10: compared the complete Lv.1–10 HP/purchase/upgrade schedule, Cheyenne at 85% of same-level Plasma HP, Beluga midpoint HP, nearest-2-HP rounding preserving original loader, observed Lv.7 HP 3410/6384 and target 1700/3800, 25% price reduction, currencies, totals and unapplied status."
+      "ko_sha256": "effa3a953703e709992b45208eacb2f1186a8161a36be7d7478a39ac2f65907e",
+      "en_sha256": "1fbce467233d4441d7f8c3a1fcef730a0d0373e09e737e1729b7329a3824ccaf",
+      "review": "2026-11-10: compared applied Lv.1–10 HP and price schedule, shared table path, 25% reduction, original HP rounding, two-browser verification scope, remaining helicopter hold and deployment/install timing."
     },
     {
       "ko": "LICENSE-SCOPE.md",
