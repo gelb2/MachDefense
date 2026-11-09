@@ -24,6 +24,10 @@ The helicopter units released in this version meet neither the original creators
 
 [Helicopter upgrades, weapons, and all 40 Android levels](docs/evidence/android-aircraft-20261109.md) · [Scout and Beluga game integration](docs/evidence/aircraft-v5-integration-20261109.md) · [Approved title preview](docs/research/title-joins-20261110.md). These records are in Korean. This release’s build, installation, and production-check coverage belongs in the [release record](docs/evidence/v07-release-20261110.md).
 
+In local pre-release checks, 56 of 58 core tests passed. `AircraftAudit` and `AircraftCampaign` failed because old test expectations remained after the earlier V5 asset integration; they were left unchanged under the hold on helicopter improvements. The title Menu checks and six viewport comparisons in Chromium/WebKit passed, as did regular-web save, resume, offline and GPU recovery checks, both Android APK builds, and the Tauri build and actual WKWebView mission/resume checks.
+
+[Pre-release checks and remaining failures](docs/evidence/v07-release-20261110.md) · [Actual deployment and iPhone installation results](https://github.com/gelb2/MachDefense/releases/tag/v0.7)
+
 ## v0.6 — PWA updates, Tauri Mac, and Laser Turret costs
 
 2026-11-07.

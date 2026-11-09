@@ -24,6 +24,10 @@
 
 [헬기 강화·무장과 Android 40개 레벨 대조](docs/evidence/android-aircraft-20261109.md) · [스카웃·벨루가 게임 적용](docs/evidence/aircraft-v5-integration-20261109.md) · [타이틀 채택 시안](docs/research/title-joins-20261110.md). 이번 릴리즈의 빌드·설치·운영 검사 범위는 [릴리즈 기록](docs/evidence/v07-release-20261110.md)에 적는다.
 
+로컬 출시 전 검사에서 코어 58개 중 56개가 통과했다. `AircraftAudit`·`AircraftCampaign` 두 검사는 기존 V5 에셋 적용 뒤 남은 기대값 불일치로 실패했으며, 헬기 개선 보류에 따라 이번에 수정하지 않았다. 타이틀 Menu·Chromium/WebKit 6화면 대조, 정식 웹 저장·복귀·오프라인·GPU 복구, Android 두 APK 빌드와 Tauri 빌드·실제 WKWebView 미션·복귀 검사를 통과했다.
+
+[출시 전 검사와 남은 실패](docs/evidence/v07-release-20261110.md) · [실제 배포·아이폰 설치 결과](https://github.com/gelb2/MachDefense/releases/tag/v0.7)
+
 ## v0.6 — PWA 갱신·Tauri Mac·레이저 생산 가격
 
 2026-11-07.
