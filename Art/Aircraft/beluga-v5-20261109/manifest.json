@@ -1,0 +1,1346 @@
+{
+  "approvedSource": "Art/Aircraft/beluga-v5-20261109/source/approved-v5.png",
+  "approvedSHA256": "d85f1c436bfe977661cd902b0070b163b611b8ae928eff58047e50ccdd2af958",
+  "rotorRemovalSource": "Art/Aircraft/beluga-v5-20261109/source/rotor-removed-generated.png",
+  "rotorRemovalSHA256": "9baa5b3db8326078593b2be52bc1694fe9d2d7620d9ebdbca62392f74d085c78",
+  "bankSource": "Art/Aircraft/beluga-v5-20261109/source/bank-registered-generated.png",
+  "bankSHA256": "0593088e5dd1234dbcc73bbfbf0a4c6c136af9dd2469891b5e3faa85c3ded11b",
+  "poseOrder": [
+    0,
+    -8,
+    -16,
+    -24,
+    8,
+    16,
+    24
+  ],
+  "canonicalCell": [
+    140,
+    147
+  ],
+  "rotorSocket": [
+    10,
+    1
+  ],
+  "originalNeutralAlphaBounds": [
+    2,
+    3,
+    137,
+    130
+  ],
+  "originalNorthWidthPixels": 127,
+  "newNorthWidthPixels": 127,
+  "neutralUniformScale": 0.3638968481375358,
+  "separatePartRecompositionExact": true,
+  "poseRecords": [
+    {
+      "tile": 0,
+      "angle": 0,
+      "source": "Art/Aircraft/beluga-v5-20261109/source/rotor-removed-generated.png",
+      "sourceBox": [
+        91,
+        6,
+        440,
+        297
+      ],
+      "sourceHub": [
+        265,
+        139
+      ],
+      "uniformScale": 0.3638968481375358,
+      "outputBoundsAlpha16": [
+        23,
+        9,
+        129,
+        136
+      ],
+      "rotorCanvasPixel": [
+        80.0,
+        72.5
+      ],
+      "removedWeaponBoxes": [
+        [
+          87,
+          55,
+          113,
+          64
+        ],
+        [
+          87,
+          83,
+          113,
+          92
+        ],
+        [
+          64,
+          22,
+          74,
+          31
+        ],
+        [
+          64,
+          116,
+          74,
+          125
+        ]
+      ],
+      "bodyWithoutWeaponSHA256": "9639bf647cc7567492ec44367471fe14cf8331ead99c2b60f811ff3fb716b079"
+    },
+    {
+      "tile": 1,
+      "angle": -8,
+      "source": "Art/Aircraft/beluga-v5-20261109/source/bank-registered-generated.png",
+      "sourceBox": [
+        27,
+        9,
+        529,
+        461
+      ],
+      "sourceHub": [
+        298,
+        218
+      ],
+      "uniformScale": 0.25052598551828575,
+      "outputBoundsAlpha16": [
+        20,
+        5,
+        133,
+        131
+      ],
+      "rotorCanvasPixel": [
+        80.0,
+        72.5
+      ],
+      "removedWeaponBoxes": [
+        [
+          87,
+          50,
+          113,
+          59
+        ],
+        [
+          87,
+          81,
+          113,
+          90
+        ],
+        [
+          62,
+          22,
+          72,
+          31
+        ],
+        [
+          66,
+          116,
+          76,
+          125
+        ]
+      ],
+      "bodyWithoutWeaponSHA256": "64727a71c6d116daf79a77b806eea81712a18232432526af139acee9718e8afd"
+    },
+    {
+      "tile": 2,
+      "angle": -16,
+      "source": "Art/Aircraft/beluga-v5-20261109/source/bank-registered-generated.png",
+      "sourceBox": [
+        578,
+        9,
+        1074,
+        460
+      ],
+      "sourceHub": [
+        861,
+        218
+      ],
+      "uniformScale": 0.24612950682291632,
+      "outputBoundsAlpha16": [
+        21,
+        3,
+        132,
+        125
+      ],
+      "rotorCanvasPixel": [
+        80.0,
+        72.5
+      ],
+      "removedWeaponBoxes": [
+        [
+          87,
+          48,
+          113,
+          57
+        ],
+        [
+          87,
+          80,
+          113,
+          89
+        ],
+        [
+          59,
+          24,
+          69,
+          33
+        ],
+        [
+          69,
+          114,
+          79,
+          123
+        ]
+      ],
+      "bodyWithoutWeaponSHA256": "e81bf75b9947b1c07b0e25634a7898d7e17b1ab8095cda33120827e6671af9df"
+    },
+    {
+      "tile": 3,
+      "angle": -24,
+      "source": "Art/Aircraft/beluga-v5-20261109/source/bank-registered-generated.png",
+      "sourceBox": [
+        1141,
+        9,
+        1621,
+        460
+      ],
+      "sourceHub": [
+        1429,
+        218
+      ],
+      "uniformScale": 0.24170890233460482,
+      "outputBoundsAlpha16": [
+        22,
+        3,
+        131,
+        119
+      ],
+      "rotorCanvasPixel": [
+        80.0,
+        72.5
+      ],
+      "removedWeaponBoxes": [
+        [
+          87,
+          47,
+          113,
+          56
+        ],
+        [
+          87,
+          77,
+          113,
+          86
+        ],
+        [
+          57,
+          26,
+          67,
+          35
+        ],
+        [
+          71,
+          112,
+          81,
+          121
+        ]
+      ],
+      "bodyWithoutWeaponSHA256": "2f7d7b30a1844745df4d4725c4e33c61ee79c703435d6fec324079a5f820be7e"
+    },
+    {
+      "tile": 4,
+      "angle": 8,
+      "source": "Art/Aircraft/beluga-v5-20261109/source/bank-registered-generated.png",
+      "sourceBox": [
+        29,
+        476,
+        528,
+        927
+      ],
+      "sourceHub": [
+        260,
+        682
+      ],
+      "uniformScale": 0.2520321537678947,
+      "outputBoundsAlpha16": [
+        19,
+        15,
+        133,
+        141
+      ],
+      "rotorCanvasPixel": [
+        80.0,
+        72.5
+      ],
+      "removedWeaponBoxes": [
+        [
+          87,
+          59,
+          113,
+          68
+        ],
+        [
+          87,
+          88,
+          113,
+          97
+        ],
+        [
+          66,
+          22,
+          76,
+          31
+        ],
+        [
+          62,
+          116,
+          72,
+          125
+        ]
+      ],
+      "bodyWithoutWeaponSHA256": "454db408b3393223e05bb99dd724e831c519917398d65725b0578dc4550fa10d"
+    },
+    {
+      "tile": 5,
+      "angle": 16,
+      "source": "Art/Aircraft/beluga-v5-20261109/source/bank-registered-generated.png",
+      "sourceBox": [
+        591,
+        476,
+        1084,
+        927
+      ],
+      "sourceHub": [
+        813,
+        683
+      ],
+      "uniformScale": 0.24762725230054056,
+      "outputBoundsAlpha16": [
+        20,
+        18,
+        132,
+        140
+      ],
+      "rotorCanvasPixel": [
+        80.0,
+        72.5
+      ],
+      "removedWeaponBoxes": [
+        [
+          87,
+          61,
+          113,
+          70
+        ],
+        [
+          87,
+          90,
+          113,
+          99
+        ],
+        [
+          69,
+          24,
+          79,
+          33
+        ],
+        [
+          59,
+          114,
+          69,
+          123
+        ]
+      ],
+      "bodyWithoutWeaponSHA256": "a238aff2400ded006598e387af49298132158ff12cb45745fe8f370011d7177a"
+    },
+    {
+      "tile": 6,
+      "angle": 24,
+      "source": "Art/Aircraft/beluga-v5-20261109/source/bank-registered-generated.png",
+      "sourceBox": [
+        1163,
+        476,
+        1643,
+        927
+      ],
+      "sourceHub": [
+        1385,
+        682
+      ],
+      "uniformScale": 0.24170890233460482,
+      "outputBoundsAlpha16": [
+        21,
+        19,
+        131,
+        135
+      ],
+      "rotorCanvasPixel": [
+        80.0,
+        72.5
+      ],
+      "removedWeaponBoxes": [
+        [
+          87,
+          61,
+          113,
+          70
+        ],
+        [
+          87,
+          91,
+          113,
+          100
+        ],
+        [
+          71,
+          26,
+          81,
+          35
+        ],
+        [
+          57,
+          112,
+          67,
+          121
+        ]
+      ],
+      "bodyWithoutWeaponSHA256": "de93e7fcb48a0d58cc25c2c0aabb5e6b5301ff81757048fb97c4686f893a12aa"
+    }
+  ],
+  "records": [
+    {
+      "name": "ATransportBodyV5",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportBodyV5.png",
+      "sha256": "9a0b2b7f7b3ed18fd0c9c19f5c0d2d1f5ee55f64a7a3048e3f6154bba5fa0faf",
+      "cellSize": [
+        140,
+        147
+      ],
+      "tileCount": 7,
+      "crop": [
+        0,
+        0,
+        140,
+        147
+      ],
+      "attachmentOffset": [
+        0.0,
+        0.0
+      ],
+      "sourcePoseHashes": [
+        "424b3e1d605bf859058a677c1303910aeb01abaf1e3b20076e22f0680b509a28",
+        "d89e5f2ffb6a7156fb68b8018f5c583a7708108ce5487b97fc08d21996cdcc50",
+        "504291ce092845edc7e39cc2c8ac4fbc7298b941cf863e00f7038240891c81cb",
+        "5045f78300ead093f3935e00479ce11b33eb88d638cf93769b8f68d0acb28080",
+        "ba4c914de70a5060cd471868f4471f47be8ddfe708c7690645f28b976947930a",
+        "69edeebf80057a573a177e339eb13e3e545de4b557e3d4667940f5662dbb3487",
+        "e0eb2d7dc0a82fa7e7aa285cc5ee076bc79758e214508357143b23f41d841e6e"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportBodyV5.png",
+      "cgbiSHA256": "e1995fe8a04ed1cee1d536f676e39c923a7f633bb34bf1b1c2d29f88e753642b",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportWingLV5",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportWingLV5.png",
+      "sha256": "bdb3bbe481954ab5401e2dd78db92c323d172eac8b6a3131fe3bf9510053a18c",
+      "cellSize": [
+        46,
+        61
+      ],
+      "tileCount": 7,
+      "crop": [
+        59,
+        3,
+        105,
+        64
+      ],
+      "attachmentOffset": [
+        12.0,
+        40.0
+      ],
+      "sourcePoseHashes": [
+        "12223978d8cfc818943ef4385860a2df39c491436f77fbd2d9b89f049d032be4",
+        "e0cb46700f6fb43dc701d4f26c1d785820d51644c40de4db0a81204857e5a2c4",
+        "5d17e8780dea0e19e5a21f923172bc04993c59cf4518fb80dd6411e66e459866",
+        "8ab32e56554c949cf0ae1e184f556c27570fb2a90243a5cf8adb3fe028b391f1",
+        "5937f0c7eca9357e85cb149d68ac4bb8e15de5bb54b8d5e4656c66b93ba66f59",
+        "e334581fc2ab7738394085c1854e0bb8a934f6be7fa370d7cabad9158558b1af",
+        "99d2e376e6aa9cfa7905742f7641b1ba9dfb788c2905af2f280b3a3ba94b7543"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportWingLV5.png",
+      "cgbiSHA256": "edde5e8eeb7e319ec5fe308dcc1550f2f262e240efa40745cc33601aa0c3b118",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportWingRV5",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportWingRV5.png",
+      "sha256": "b344276a857d7bdae12d7064d0f5736f25af1d336bedbb27182c9923e5dba1fd",
+      "cellSize": [
+        44,
+        59
+      ],
+      "tileCount": 7,
+      "crop": [
+        61,
+        82,
+        105,
+        141
+      ],
+      "attachmentOffset": [
+        13.0,
+        -38.0
+      ],
+      "sourcePoseHashes": [
+        "3ad3ef8c15e30a53965d4db704a9b10fc46c06869c568ddfc671f04ba1de39db",
+        "18ff8484d95303ecf4f413529a487c045d367d1522bb801f0f0ca48fcc40adea",
+        "5432ef0a03bd8dba08115f09e3899a7e66ab9c68bcedc1be28d9d9f3901df015",
+        "5b9cfb7a84bd8c7d274a4c53370d71e2131ee761874941c65c3e4893f365fb6a",
+        "96d529a624b3378e928d055a2211b8f91aac1fa7db43c750fb6f07a506b1bfb6",
+        "11c8dfee156396df726b4455879275aa4914fd0f0628faa9cc4c764e8ea6036b",
+        "314f4c32d37796804592abfad7059a43c87c62d74158c7c57e8055cd9f650679"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportWingRV5.png",
+      "cgbiSHA256": "dd248127d8257dca2b4b26f915c3490f7db623d9733dda12930b44678878c641",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportEngineV5",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportEngineV5.png",
+      "sha256": "ce156d8c46be32e2cd7d9eb2028fcd50c3d68161f418888e4a2602d81ff9089b",
+      "cellSize": [
+        26,
+        31
+      ],
+      "tileCount": 7,
+      "crop": [
+        47,
+        58,
+        73,
+        89
+      ],
+      "attachmentOffset": [
+        -10.0,
+        0.0
+      ],
+      "sourcePoseHashes": [
+        "5ff3a3c0446ee7d97c67237b0f7083e65137da732b609d28dcf9234634ff3dda",
+        "1c683b0ad78b0aff34aba35fc13a711b54a4fb9a14a789a09cc8d522347660d6",
+        "ba6081fd41f0461155b94e5d8e231abb2f46137ab46abe7b4099cb3deea211ad",
+        "863238cc8f59c97153065c461dd4f59e3f5514465d5711c1962007c7fbc7a34c",
+        "7cae190474578e643e4ee2b53b21753005416ec70169738be66d912556aaa819",
+        "32ed1f3a74f72c8c5917366e23e3be73022a631b40ec5c783c9320d6f7ffba3c",
+        "7f863c9d7db44455b8f52f9c0c455b4496b205841f04a42b8f877fb79f56f938"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportEngineV5.png",
+      "cgbiSHA256": "51391deb0b678cba07663dd5ec872f3ce09d763461c9aef0ed4d097f7bc63ca5",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportGunV5",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportGunV5.png",
+      "sha256": "60ef1c4fe7f762b276b9f38ea5e7157e756aef08a96e121a875a1e08a468590b",
+      "cellSize": [
+        26,
+        9
+      ],
+      "tileCount": 1,
+      "attachmentOffset": [
+        0,
+        0
+      ],
+      "neutralSourceCrop": [
+        87,
+        55,
+        113,
+        64
+      ],
+      "muzzles": [
+        [
+          11,
+          1
+        ],
+        [
+          11,
+          -1
+        ]
+      ],
+      "sockets": [
+        [
+          0,
+          0
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          11,
+          -1
+        ]
+      ],
+      "runtimeBank": "existing aircraftBankPoint projection; static neutral weapon",
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportGunV5.png",
+      "cgbiSHA256": "b370057d064a0a4df068949ff133adc93515e953727de1ac011f6f815376e727",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportMissileV5",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportMissileV5.png",
+      "sha256": "f3f79bf7c3e40fc2f7d2ae32b3d7158f56710b2bfb3d45e72d4a3fbef7525897",
+      "cellSize": [
+        10,
+        9
+      ],
+      "tileCount": 1,
+      "attachmentOffset": [
+        0,
+        0
+      ],
+      "neutralSourceCrop": [
+        64,
+        22,
+        74,
+        31
+      ],
+      "muzzles": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          -1
+        ]
+      ],
+      "sockets": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          -1
+        ]
+      ],
+      "runtimeBank": "existing aircraftBankPoint projection; static neutral weapon",
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportMissileV5.png",
+      "cgbiSHA256": "61fce6d5cce2c1fded07f0bcd582a7b43ec45100e87fbc5a68505dc28795ea8a",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootLV5_01",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_01.png",
+      "sha256": "128f4b26d0a9f8935ea59aca848f75b60f7a4b7bac417b89758cafc28a0abc48",
+      "cellSize": [
+        36,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        63,
+        42,
+        99,
+        67
+      ],
+      "attachmentOffset": [
+        11.0,
+        19.0
+      ],
+      "sourcePoseHashes": [
+        "15b403aeabeb15f0b576763e4ce6f926f88130b00fba4d2384917bbe6e80e768",
+        "b6f92528fe810523bd004279f3b97ee160679c015800c312d271c574755ba328",
+        "4acb702ee8fe1653c6c0127aae522215ca26962d89d583bd5b0cc1e0003202b8",
+        "e70b75e4c7ba31bdbc5b41803421bb7445bfbed35993f78188885d7905e73f0b",
+        "35d3b5db0b5d97674e0842d31b7cf9cfc9f9102a249c8c552a98c9cf7ef3e991",
+        "05b4973ff0974aea0644eea10ed726ef52807befe1b8edc3003e2d7cb9ea9fef",
+        "aedbc099b79b4d40c256a6836793f07e11b494f4f45c409655163d5889852b9a"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootLV5_01.png",
+      "cgbiSHA256": "d12c9f7b7ac05bc3145df0e0fa18628a77b781ec2b0139cc94fed8973fa6a1a7",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootRV5_01",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_01.png",
+      "sha256": "1fc8e1375bfed81b8702c1dd245e30de5b14684f79ac6c1c78682f19cabad593",
+      "cellSize": [
+        36,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        63,
+        79,
+        99,
+        104
+      ],
+      "attachmentOffset": [
+        11.0,
+        -18.0
+      ],
+      "sourcePoseHashes": [
+        "784dcbb8fc4e0e10d0c5a9a5a21881f65cb9c00788faa0bed8a1657b6714a3ac",
+        "6d25164ea7a20c5361254aefd45a08ae9840dc1672cf64bd76aa9c24b55362f3",
+        "77934e85a6127ae31a41697191082b3948cbc8344c1a454fdc26d0d41d89e3b7",
+        "f41222b9dc5cc8eca3660ab5dd7ed4cffcb6355537f115c28901de78685771ca",
+        "c55dfa32baaa62942e51a29b6141ff77bc7b63b41f2fe05a2b7b934e6d535308",
+        "fa10a6c068066be186f69bd9c27aa098cdbd6089375373f7dca60fa79834d8ca",
+        "2db5be333c863f006c0cff5fed0def07fb27550e82862676f75be3279d069203"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootRV5_01.png",
+      "cgbiSHA256": "21fb6a73f86074d15c6f68cbc2be4bac4046cfb8d5d1bcd60d47b3be1a97a5ea",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootLV5_02",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_02.png",
+      "sha256": "2aa4e1c5ef3c9b4e523b0fd0bd612fe316f825e2fd33f8a3caaf22b6ceba9ac9",
+      "cellSize": [
+        34,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        63,
+        42,
+        97,
+        67
+      ],
+      "attachmentOffset": [
+        10.0,
+        19.0
+      ],
+      "sourcePoseHashes": [
+        "c877fd0e100c97be71e87147f874cd87209561815ee0f718356cb07a0dbf22d8",
+        "185f4d5cbaf0b15bd3e1d007e39e168ede87358f693f7bd825ee03654fe70b4f",
+        "e33556d92f33bca7892ba936c168cb38ed660d676feee0f833364b6128953da2",
+        "c7fad9c2750747f5f5a8ff80d4b9d4991eefa81d6af34878abaa9a48c0819c09",
+        "cbe23dc9ee3468ccd73889a87a57311d6c7e5ed0f1dc59c6fd50db1573f31940",
+        "753fd5b27c4a2ab6b04ebe92c3a27c54bcf0aaf5334f2141439180239e8b827b",
+        "e00872e8e19310fe96e03843d149f7fb1b15421e9d1eacdfc12b15a9db690efe"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootLV5_02.png",
+      "cgbiSHA256": "3a3a6d8852d6d80bd89e7a5ec486469c278aa8315bfacabe61c59739a476c275",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootRV5_02",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_02.png",
+      "sha256": "ddec7b9932270858c20843bcaddec459c38fcb77974d0c0a16e9c0539a5558b0",
+      "cellSize": [
+        36,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        63,
+        79,
+        99,
+        104
+      ],
+      "attachmentOffset": [
+        11.0,
+        -18.0
+      ],
+      "sourcePoseHashes": [
+        "f24f107d4d8300e5c8003fa25b2a11a9aab60cc81690b7c035f5743b41181a7a",
+        "27129d5e813140bedf55af50555b38b2f2ba37bff5a653e7203bb07fbb4e1d5c",
+        "7af6cd5994ddc3e39cb2de65e6dcb33935d384a63f498b66e01df9bd644ca46b",
+        "78a2ce3839001a9e2093126595d8cdebd0123a43f997043c59c8b8eff193f577",
+        "d04bce2854128ea32c63b25784f432ac1d4e31303dd7fa1684c64ecda0086b2f",
+        "1719bfa270e29912464baee712b0aab8780e470252522e8e9730855ca596c98f",
+        "b7feb5a11311c99e6672597dea22e88bfe5f94d096d67d55c63ce0bad924153b"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootRV5_02.png",
+      "cgbiSHA256": "9f42d1b93c59c6f1072bda1d95076aa308e1fe5847d25d3de57220b4dfb46083",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootLV5_03",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_03.png",
+      "sha256": "778bcef8e6c92951bb5c0068b05f7cd9160ad6f4bc7c7ca5745d37654afde3f4",
+      "cellSize": [
+        36,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        63,
+        42,
+        99,
+        67
+      ],
+      "attachmentOffset": [
+        11.0,
+        19.0
+      ],
+      "sourcePoseHashes": [
+        "ea84fa196419961b9832a646966edfc867dac3202f3dc5da880ea6c3a56f7d48",
+        "9a4bc222ec3f558c1775bb285eee94f3a29a98e6b1e9a062df732a58525ba903",
+        "34bfb7096c66d4a6c28a9319ef8e53ef3076ff301fa560ebf55b4aff17939e45",
+        "3d5588032ffb21d22fdc686c0ae26db5207673df448f68fd5ac23290e50bbea9",
+        "690647457a7dab757f678979aace0a71b6e58ca38c762169861a7cd371150492",
+        "796141b5798491f9ff418f0323940aeed2dd69172d50d7cd1f1382ef1e7d1fc4",
+        "d00027149456175591a550f5b39e9b77f82822e97b04b98375181bbda9d9b6e1"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootLV5_03.png",
+      "cgbiSHA256": "b3995d378e71824dcdc31b5e5305967837cc3010e1cf5e5e677494e11fde78a0",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootRV5_03",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_03.png",
+      "sha256": "cb6e46317c752e90d410fe9ac22ada83be2530496d01f093dae0beec526de002",
+      "cellSize": [
+        36,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        62,
+        79,
+        98,
+        104
+      ],
+      "attachmentOffset": [
+        10.0,
+        -18.0
+      ],
+      "sourcePoseHashes": [
+        "8dbd526867181b11b0dab758cd5f54e431594c4820cf0f352059fdbd4aec48f5",
+        "5fa41acdb1639bdbd1d62106cb1001e232280bb5e24694148b1e837250b46cb7",
+        "69b22165c308295a7ccf6272b553b321bf69bd5168826a71309cc65eed17f719",
+        "73ff02c931169ad59375d4bad62e87b330d24d3d2a88272244137e2312e767b4",
+        "97e704e6de9b60289634702da4fa25d6c452fe180c3e5a1d74e17d72e8d7fe23",
+        "adc29e04628fa778e163544fabe69f0f4de66128460b1c7ad1ad4be428520494",
+        "49e812a69b39d109ebb7f40a8bb0798458d2c983140921a4d143efb1c103a78c"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootRV5_03.png",
+      "cgbiSHA256": "025c5cbe6a8a9bfb1b421c45d6b85aa97234a0efa900b8c2aff94dde3a37bf38",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootLV5_04",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_04.png",
+      "sha256": "6f850a9bda1ecc653d0416908c3f6c8a8a5d90083e112bde22e31dd9fcaa505a",
+      "cellSize": [
+        36,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        62,
+        42,
+        98,
+        67
+      ],
+      "attachmentOffset": [
+        10.0,
+        19.0
+      ],
+      "sourcePoseHashes": [
+        "9e1437d888f778cf5423475c384610b96533208b0f6805ab1c2e82be2f455e98",
+        "ff71fbabb91eb8d688f6e7c87f84fead0cbb57f73f862a42963120ec669d05c7",
+        "0155afeb1f27ae4b14a442d94e76e512086c6334240b6f3dac97b84dcb01fb64",
+        "1287452c0590393789bd03a9622cac10be7f6820817bbc7ee8a66b5bf84b76f2",
+        "ad96acd7c3388d1b634e65fa94f878d2d005b046a5d82782abe664a05aefb808",
+        "461775f7c1b77509ca1b4100bd5b8115c72c76ae922a9e4e437263bb0155e398",
+        "3098e54170cd46bc67f4e501a908c4713e3bc9915fa0516b5040f4139f345505"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootLV5_04.png",
+      "cgbiSHA256": "e0d0a4b7959da5c7fb65b42bad9b3b7b055998f1d9d40048fac6f0bf65afc0cb",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootRV5_04",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_04.png",
+      "sha256": "ff74eb95f69f8b395f55401d6be075fc6df678782f1d461c826b7d8d45883bc6",
+      "cellSize": [
+        38,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        61,
+        79,
+        99,
+        104
+      ],
+      "attachmentOffset": [
+        10.0,
+        -18.0
+      ],
+      "sourcePoseHashes": [
+        "f5ffae71cd2bba79f79b8a174d44282da14542cd94836cc02a5e8b0effdf0052",
+        "8341ce75973d49fe084dec57e8a5d4d83dc148f3808ccd3bf47df96427f40a15",
+        "004baebec417db446181f0ce93b0f509472b8c2679b69de6c78ec1c760aeba83",
+        "0f25bce827ff86d2ddbd74fd158a6ead3565ad51663d49dee1930fd71caac7bb",
+        "54918e766f6d4a347a3c6ab754dbf4669f4b717a3ed19e0746149524fb2731ed",
+        "c81a471e932ee1dcb33f1e02a7d0a0f4b82088a0bf82ffe562882ff352c39116",
+        "1f1a93bd5c90b0e8291ae5e353a839ec8865e731d3e3b80697e97174cc1b60cf"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootRV5_04.png",
+      "cgbiSHA256": "c320150517f214a59ec070bdb67c67b46ca71456b4c2919c5d3e96e8ab4d12bc",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootLV5_05",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_05.png",
+      "sha256": "535b9d795b6a0d6ecf366c1cc0fdabda34aebfda1e9a9fb7aea01549d2d477ce",
+      "cellSize": [
+        36,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        63,
+        42,
+        99,
+        67
+      ],
+      "attachmentOffset": [
+        11.0,
+        19.0
+      ],
+      "sourcePoseHashes": [
+        "5ed9115f105eefdaf74add40fa24a9f5fda9030c9f426ab335c8442590502c10",
+        "d3ee3385db9025ae89997fbe269a389bce96aabb381d1150879760254d8f4376",
+        "13bcfc00f2aab9d6c2d2619dcefdbf02c5aea7631ffc7f9a3b2644708f9624c9",
+        "847b80f7fb314cb9de5d3680a90f4078a73711bba7f7479251b22dc95b561940",
+        "e9d4009ce57f2da9a9e6b9f855989c1b81376db36943dac71992cd5f0a130337",
+        "ced31996b1dd8f410f857598327838cffe489e3641b8af08682ad13a3289fc86",
+        "71153c6ac26e377e2626a0a44e84d10401633805dc397cf8d8390fe64b8f9867"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootLV5_05.png",
+      "cgbiSHA256": "5f6c34ca92f13f3facd6e44fced8df6af821317fad0fa954837001185c7780fa",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootRV5_05",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_05.png",
+      "sha256": "4f7f8c55c613a42885a11b6fbe7e2c03a13b1a266b6148f5ac8039b310c9c989",
+      "cellSize": [
+        36,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        63,
+        79,
+        99,
+        104
+      ],
+      "attachmentOffset": [
+        11.0,
+        -18.0
+      ],
+      "sourcePoseHashes": [
+        "de2b87584e1b9389c065bb48321f899c80420272242e7df5a3c0ea44c74e4dee",
+        "147e2f5f007eee57ee81ba9e0abbe3cb0d921cedcef2b0f669c364357615da18",
+        "305ef79d221a240e4f8af4b8d988ba9bb439bae3d2f3187e5017b87e61155ead",
+        "34555c4726777aff207220110d2b19999520bd2563fa14ddb083855ea6ec2f95",
+        "22819984f998b59e7394e26df32c8c8a81a71af452b9079103b6905067feb231",
+        "c5c8d0c56c339d3b853c18175ff48448e7996afd53bc592bf5346522b49efc3f",
+        "eae7896c249e7f08bafd28e97b301488c408448150ccd4eeedf65682e311fca8"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootRV5_05.png",
+      "cgbiSHA256": "694fccba6d711ffb689fd7d9c1f86d908bc4eb2d7c465ca63fe911cf632b5d89",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootLV5_06",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_06.png",
+      "sha256": "e6dfe9208a239e427929848f9325225111b3fe09dd4bd0ebe04010a38ac52b4e",
+      "cellSize": [
+        38,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        61,
+        42,
+        99,
+        67
+      ],
+      "attachmentOffset": [
+        10.0,
+        19.0
+      ],
+      "sourcePoseHashes": [
+        "363bb0d1faaa9c91f179d469df1bb6a0fe5a57478ef532c514d7388ffd416e09",
+        "8502fab387c215459f45d791fcfe38727049cc5265e5096b1968b11e289e77aa",
+        "3f539f5dda589e0eb32107481275b3c59e199db382a398ddfa4e2c9c32f54fdb",
+        "2482420f2c8277b0e05e13b9329c9c3bea0bef2de4967d81b2e01f5784058c0c",
+        "d13b7ff6f39144fa8190d183b34d8b0cc311283f71368c4efe04af68c8d8c828",
+        "5229bf590ac67ba15078715e3e26a2dfc8cab09beafe6cff5d16ac295849430d",
+        "87e24efb16db1d32e9b253d9c9318dfffcd569046cac88dad55e2ff298050248"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootLV5_06.png",
+      "cgbiSHA256": "a60bfafe79ad151fe22eaa8df1440164b388897da079a5226ee72eb69d6e9eed",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootRV5_06",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_06.png",
+      "sha256": "62552080db33ae0e8a3479d797f8e553b9c0e1aa8d5464f6b30fae2f8b1a66a9",
+      "cellSize": [
+        38,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        61,
+        79,
+        99,
+        104
+      ],
+      "attachmentOffset": [
+        10.0,
+        -18.0
+      ],
+      "sourcePoseHashes": [
+        "d9223ef3b3d3f0007f3c85235177e441413cd8fc56643ed1b4f6f1c80a957b0e",
+        "422b37061805f83ef952278c3620266f861597e484005269deba9bacffce58a6",
+        "c5ae4b606894b45e420243461caf65e3d0a29e7022dff2e1ccc8efcff37983d8",
+        "ddd5800e03d038010c58bc9528045bda596e828a38cbd907e3a793e65a930151",
+        "9ccdbefd2ed9dfae78aa10a9cb18883e887475e77a5ef22ce545caa0dd9293f5",
+        "8ae7b0a9462b3ea7d463769054680dae4f8c7a9c18f67401b9299ba1da116db0",
+        "bc1475661c61b2a01dade07b696b0fffb4ee2b7d3a6bd4f22eafdec14a762130"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootRV5_06.png",
+      "cgbiSHA256": "99abe5fc78a2fde68abb4c656e15a42990bea262b382eeba136753d78f981035",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootLV5_07",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_07.png",
+      "sha256": "3d34d50bb6bd2f791507236e38d76a3d02a7242c757cf7ba606e03229e7d964b",
+      "cellSize": [
+        36,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        63,
+        42,
+        99,
+        67
+      ],
+      "attachmentOffset": [
+        11.0,
+        19.0
+      ],
+      "sourcePoseHashes": [
+        "8b223deaf759083f6bb740d9af6faa0727f3fe3bdab07881086b00dd536d552d",
+        "250b42c8cc8f55b22684f1c6789dc526ee12d0ca8e18eb0f01398462ed7d8f2c",
+        "c9296efc37494deb094ef01402e27cd77a0d8980759ffc03c33546e969496904",
+        "c2ad0a0204e4c8371333bc722c947d2a8d24c078281227ea27deaf6e27f798aa",
+        "1bda93555303b4e04317c1f317aed7268624194194e659c5c59e2d4165d05a7e",
+        "6c4e28b88d02d5027b635116033c42f9176ef659841a0038df22867395d09d66",
+        "815a051e74a4da7219057b5d6312adfa367e86cb99fa0fd236a7a42413ed9110"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootLV5_07.png",
+      "cgbiSHA256": "ac48eeb07f57c97b599c2b7428c6a7bb44b72c0a0713a17c1266bcc089c9ae4d",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootRV5_07",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_07.png",
+      "sha256": "b93a358b01644882a12160a1d0d7be32b8aeb0ee7d90879b64b37bcd9d8679f6",
+      "cellSize": [
+        36,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        63,
+        79,
+        99,
+        104
+      ],
+      "attachmentOffset": [
+        11.0,
+        -18.0
+      ],
+      "sourcePoseHashes": [
+        "b455bbe49bce17cb6ed67b10bd684d4c2d0034174cad3839bc1dba27d0e54e09",
+        "5a0fd173c3fbac3d59e512774f7c77518b2b83fcf9c1abae77581e790194d344",
+        "d1607512a01197b20937e52fb67fa16d67d28b6eff62d962bb3b81b85e2c12ec",
+        "f33004d6b123865182012bf43d00231c232d517c40de1c384da1bfdef78f17d3",
+        "f827b21af5b7d6266098c6e515e5290a34912ab1466493966b26d85d5e44608f",
+        "3e43fba0e4fd8cab741648f08d35b45002b25a4f88983f9c8149acf2a81889d4",
+        "c30c8c808cff1ccf8c811e39caf5ce1c619147043b3bf04e2c1f36289142f258"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootRV5_07.png",
+      "cgbiSHA256": "d5f3c1f93bd22c7483d7c7297e8b0a640a2532c8d10972189c8a84f29cd58c6b",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootLV5_08",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_08.png",
+      "sha256": "bffa070d4b98c1155391c02f2edd141cc45d5c98f8ddae4be1aefb70a56fa370",
+      "cellSize": [
+        38,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        62,
+        42,
+        100,
+        67
+      ],
+      "attachmentOffset": [
+        11.0,
+        19.0
+      ],
+      "sourcePoseHashes": [
+        "4bc0f6c07752c1c520ccb0e7cdd8c73017c66aa98a05bf8dc76c5facfa8fa080",
+        "61d68977c0ef7c73f0ed27dc9815c3e7569aab814760b1dcaf58726ac0d74ad3",
+        "6d355a0256d4bb6cee2d2bf9223a4426b4cf79125892db9296daea3b613b51eb",
+        "19c8ac33555972a1caabff09f1d67d37cd6444513e9f33f3de7262d583d9546b",
+        "8358604fed0d2cc17bc7b9dca18f28a408b27e19ebdc3b4d5f8d775e873dbd58",
+        "b2be82638aae0fd766f07fccb1b2ac3f3dec97c489c9acbd84d30140227dc7b7",
+        "d0e83ede4aef85b7eecf47c1ce1bc64b17e664010e9bd7b3e471b6e641da0c07"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootLV5_08.png",
+      "cgbiSHA256": "43f0f4659ec876d5b363323ed7abdf23a3281498a927287d933e562a6599e00d",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootRV5_08",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_08.png",
+      "sha256": "0fd0def789bab779b36ef2895e5f86d444642da6c7b3ebaca9d826ae5bfda329",
+      "cellSize": [
+        36,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        63,
+        79,
+        99,
+        104
+      ],
+      "attachmentOffset": [
+        11.0,
+        -18.0
+      ],
+      "sourcePoseHashes": [
+        "4a94e4f06d64f6273c1249ae89fa0b0c241d911262ac2cf776595d2b1b5a45ec",
+        "087a781c30ec1584aecb2db524d18eb2dd26f731038ed99cdcfe8971860cafe0",
+        "a2cf0874ef5f4f4c5dd57344c2cbb72cf8c19fb7230c01c8fe86c068009d4bd6",
+        "ac1c219a89d65c664bf1aa6522fb47056f30859cf395697ae5b72ede61dedf79",
+        "04ecab4f8157e38e93c03aceefd06e9b1a2a23647b5678b1a188cafab1b5bf84",
+        "772cb47a066adbb0aaefe99934a247b855c47b827e885e25073d3a9c64a606c1",
+        "7030d9100150ebb8b5e2ff86d59c7f901dd3919e44a1c35cc55e6005118b93a1"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootRV5_08.png",
+      "cgbiSHA256": "bb81eb4151077c3673dc82af5896a3c93524dde29aab429aa5052783d396c275",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootLV5_09",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_09.png",
+      "sha256": "1d85787e7fa23c361861caedb72b2c02533f45f892622546e81a5ce5184059b2",
+      "cellSize": [
+        38,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        62,
+        42,
+        100,
+        67
+      ],
+      "attachmentOffset": [
+        11.0,
+        19.0
+      ],
+      "sourcePoseHashes": [
+        "e8014d077df4ff5b7a54e77f70de6e8d21c50906e824466ddfc6208ab04d9cd6",
+        "ac4e62279c91d3f1669c563e73de163845c18a3063babaaba9879f63617d7cc6",
+        "d892bdd531e6727be5b4a35ffaa56e94deb6b443eca9bf2489f72e916b350213",
+        "c852de7a4ba9fe900c50871f537deb0b625e743059ef988169f3b3b8ca4015e2",
+        "fbc0abb7cdf03ea4e0a2c0740b3dc8f665d15dc6e7a1fb3b3864107838dbad20",
+        "0b63fd9171ba26ebe463ac5a840a078b36817736fff9b42ce1a96bc014119096",
+        "c00e119e0e98d3e4652f1a7f7cf550e947fa1c3d48ac68215be56165f7e9ccb2"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootLV5_09.png",
+      "cgbiSHA256": "355357c45754e82d184ef501121507557ce3c273fb1490cab4b56393d26c0a83",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootRV5_09",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_09.png",
+      "sha256": "0eab5091d6a9fb160791fae212de9dcd75e044e056a7f44629827ea8fd838928",
+      "cellSize": [
+        38,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        62,
+        79,
+        100,
+        104
+      ],
+      "attachmentOffset": [
+        11.0,
+        -18.0
+      ],
+      "sourcePoseHashes": [
+        "d401ef8fe424e445b0ac53613adddc44fd97b7df2c56d40531b30f6e866aa8f5",
+        "63d9547aaa33e58dd4caca440a0308596c42790c233cd100f2b7329f32cecfaf",
+        "62b5f731a1988073b43e9c68c87507eae69df9e24a101eed8970c0abd13d0031",
+        "79f7b9bbcda3c286ca07656d02a67ee61903f1b9e4310d4f831748a9e8b9bd36",
+        "fe1201e4dae4f62198946340bef1a636ebb21b1a833dae9afde142cf0bae0108",
+        "06f3621060356f173a925b7bf7418c5ef94d23e839ae352870a2b51d788ed752",
+        "59c905a5adfb01de631b1b11300ac2a97eab1a18e53da795eab464f9fd8abe7a"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootRV5_09.png",
+      "cgbiSHA256": "3782a15e73cb057e44148cadb69ce8d810780448ea89a422c064af1b405afd43",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootLV5_10",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_10.png",
+      "sha256": "ca04618d323382c7dbff858ae75484ccac3176d9bdf52d6108bace140d1d5ddc",
+      "cellSize": [
+        38,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        62,
+        42,
+        100,
+        67
+      ],
+      "attachmentOffset": [
+        11.0,
+        19.0
+      ],
+      "sourcePoseHashes": [
+        "ce8f639d5f02b4aad036d04ec569b8a53df7645dfbf7297b9f874ce226ac2ade",
+        "8c3dce29f04138874089f85f248b7c70742af4ac8ccf9f8bc0df39d6f9ac980a",
+        "81ddc7fff6335198d3c69262a1ae9b1bfbaf2e158012c37bf88d59e53de36f89",
+        "d1e90ca6dea935ac15199de0492ade6bdb48160b79e924b49fc32f1ba265b340",
+        "acb0a248252cb58724e25647949da3857632bfc6da33655b963c8e7e00863162",
+        "dadd4fb56ceca2185d457f710c114038614112742048ef4517b4e8853242834d",
+        "93ee4cd460c159f7b9dde9f946fa16e1d0c209edfcea3aeb98d88434abe80e33"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootLV5_10.png",
+      "cgbiSHA256": "1e5e22f12b4672b02b14360cff52d43d400580464f0d78422e8e0c6286ac70cc",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportRootRV5_10",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_10.png",
+      "sha256": "05c02a13826704d7162b337530fbe41fe5f67e2e6116f41fe59e30a05c22aed2",
+      "cellSize": [
+        38,
+        25
+      ],
+      "tileCount": 7,
+      "crop": [
+        62,
+        79,
+        100,
+        104
+      ],
+      "attachmentOffset": [
+        11.0,
+        -18.0
+      ],
+      "sourcePoseHashes": [
+        "dfae362e054b4a57cf435ac017b60fdd782bdf2200a7e1f59b66c68e56534b45",
+        "2e5705bf9201ec9872be5e1d22dbcc67ad89accaf687641942db4ff22716e3f5",
+        "ae0d3c7bba7fb9407362b5bbf62a117763f0c6d47c6d2cf4ad87b514794d4ad4",
+        "ac8fb203d6f2b1b983efd1dd98a2e3fa7b25433ff7f6c7a8dd474dd0f3419c88",
+        "75d42ce5bfa0162bc92d820b37a51320f0a0c23c30ed48db5340da4b2c879202",
+        "42a56045509eda0859f52a191f69f6160c3a3665c2180501629fbf12f1c912a8",
+        "df110f10897bfa8496ab177217f4cd6851780c6f215d95828b1e31c9a899b7bc"
+      ],
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportRootRV5_10.png",
+      "cgbiSHA256": "a3ee4f5bc5b646dd71c43763c391bbe99ea4c9a74091a6426c6f28caf7f4acb5",
+      "alphaPreserved": true
+    },
+    {
+      "name": "ATransportFanV5",
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportFanV5.png",
+      "sha256": "9934d4f1dffd9d1b6b04f3ea0c4a60d80bc4aa3c293cf73d2d55ad3b552fdd45",
+      "cellSize": [
+        58,
+        57
+      ],
+      "tileCount": 1,
+      "attachmentOffset": [
+        10,
+        1
+      ],
+      "source": "Art/Aircraft/beluga-v5-20261109/source/approved-v5.png",
+      "sourceSHA256": "d85f1c436bfe977661cd902b0070b163b611b8ae928eff58047e50ccdd2af958",
+      "uniformScale": 0.3638968481375358,
+      "sourceHub": [
+        265.5,
+        141.0
+      ],
+      "sourceBladeEnds": [
+        [
+          195,
+          75
+        ],
+        [
+          336,
+          75
+        ],
+        [
+          195,
+          208
+        ],
+        [
+          336,
+          208
+        ]
+      ],
+      "rotorBladeCount": 4,
+      "requiresV5RotorRegistration": false,
+      "cgbiImage": "Art/Aircraft/beluga-v5-20261109/cgbi/ATransportFanV5.png",
+      "cgbiSHA256": "359e106b02a10528462328758754bada83c8e39d5e0b5feab9e6cb2b34a88ee5",
+      "alphaPreserved": true
+    }
+  ],
+  "weaponSource": {
+    "gun": "v5 forward side barrel",
+    "missile": "v5 under-wing pod",
+    "rootSockets": [
+      [
+        30,
+        14
+      ],
+      [
+        30,
+        -14
+      ],
+      [
+        -1,
+        47
+      ],
+      [
+        -1,
+        -47
+      ]
+    ],
+    "sameNeutralArtworkForSymmetricInstances": true,
+    "bankBodyWeaponPixelsRemoved": true,
+    "runtimeProjectionUnchanged": true
+  },
+  "pending": [
+    "Runtime UI, bank alignment, firing and original-unit preservation checks belong to integration validation."
+  ]
+}

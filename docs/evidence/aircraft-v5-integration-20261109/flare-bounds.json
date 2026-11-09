@@ -1,0 +1,2622 @@
+{
+  "method": "Actual compiled BattleModels::pose; World.cpp countermeasureWidth loop copied verbatim; additional alpha16 comparison follows MachineSprites world-to-image Y inversion, neutral tile/zero rotor angle only.",
+  "sourceLines": [
+    "Sources/Core/Simulation/World.cpp:46",
+    "Sources/Core/Simulation/MachineModels.cpp:96",
+    "Sources/Core/Simulation/AircraftCountermeasures.hpp:30"
+  ],
+  "baseline": ".local/v5-game-integration/baseline/Art/Aircraft/runtime/assembly.json",
+  "note": "Current run uses actual registered machine definitions, not an unregistered art proposal. Final Beluga body is registered if listed in after-part records.",
+  "resourceSHA256": {
+    "Resources/RawData/Level10Parts.mcb": "e0f7e4ca8ae45123a128471039a6c94cbc571724d16522164982e9f3f085c4ad",
+    "Resources/RawData/Level10Machines.mcb": "ca7239d387ee29b78d9a75262ce588bed7d8e83fae11e74b55cde87fbf556720",
+    "Resources/Tables/PartsList.tsv": "8fef15c64e9d636e52a20176863f3f65313e351598abe1ed0a1d48db42a600b7",
+    "Resources/Tables/TileList.tsv": "43ade165b23f3edd312092033be8c3cde35926f867ab4a32c6784dc9faec98ee"
+  },
+  "summary": [
+    {
+      "machine": "AircraftLight_10",
+      "deviceScale": 0.5,
+      "beforeWidth": 29.5,
+      "afterWidth": 32,
+      "percentChange": 8.47457627118644,
+      "beforeAlpha16NeutralWidth": 28.5,
+      "afterAlpha16NeutralWidth": 29.5,
+      "beforeCanvasExcess": 1.0,
+      "afterCanvasExcess": 2.5,
+      "beforeEmissionSeparation": 15.9300003,
+      "afterEmissionSeparation": 17.2800007
+    },
+    {
+      "machine": "AircraftLight_10",
+      "deviceScale": 1,
+      "beforeWidth": 59,
+      "afterWidth": 64,
+      "percentChange": 8.47457627118644,
+      "beforeAlpha16NeutralWidth": 57.0,
+      "afterAlpha16NeutralWidth": 59.0,
+      "beforeCanvasExcess": 2.0,
+      "afterCanvasExcess": 5.0,
+      "beforeEmissionSeparation": 31.8600006,
+      "afterEmissionSeparation": 34.5600014
+    },
+    {
+      "machine": "AircraftTransport_01",
+      "deviceScale": 0.5,
+      "beforeWidth": 41.9266815,
+      "afterWidth": 47.0475006,
+      "percentChange": 12.213747706219014,
+      "beforeAlpha16NeutralWidth": 40.646479114,
+      "afterAlpha16NeutralWidth": 40.646478486,
+      "beforeCanvasExcess": 1.2802023859999991,
+      "afterCanvasExcess": 6.401022114,
+      "beforeEmissionSeparation": 22.6404095,
+      "afterEmissionSeparation": 25.4056511
+    },
+    {
+      "machine": "AircraftTransport_01",
+      "deviceScale": 1,
+      "beforeWidth": 83.853363,
+      "afterWidth": 94.0950012,
+      "percentChange": 12.213747706219014,
+      "beforeAlpha16NeutralWidth": 81.292958079,
+      "afterAlpha16NeutralWidth": 81.292956921,
+      "beforeCanvasExcess": 2.560404921,
+      "afterCanvasExcess": 12.802044279,
+      "beforeEmissionSeparation": 45.2808189,
+      "afterEmissionSeparation": 50.8113022
+    },
+    {
+      "machine": "AircraftTransport_10",
+      "deviceScale": 0.5,
+      "beforeWidth": 41.9266815,
+      "afterWidth": 47.0475006,
+      "percentChange": 12.213747706219014,
+      "beforeAlpha16NeutralWidth": 40.646479114,
+      "afterAlpha16NeutralWidth": 40.646478486,
+      "beforeCanvasExcess": 1.2802023859999991,
+      "afterCanvasExcess": 6.401022114,
+      "beforeEmissionSeparation": 22.6404095,
+      "afterEmissionSeparation": 25.4056511
+    },
+    {
+      "machine": "AircraftTransport_10",
+      "deviceScale": 1,
+      "beforeWidth": 83.853363,
+      "afterWidth": 94.0950012,
+      "percentChange": 12.213747706219014,
+      "beforeAlpha16NeutralWidth": 81.292958079,
+      "afterAlpha16NeutralWidth": 81.292956921,
+      "beforeCanvasExcess": 2.560404921,
+      "afterCanvasExcess": 12.802044279,
+      "beforeEmissionSeparation": 45.2808189,
+      "afterEmissionSeparation": 50.8113022
+    }
+  ],
+  "measurements": [
+    {
+      "phase": "before",
+      "machine": "AircraftLight_10",
+      "deviceScale": 0.5,
+      "parts": [
+        {
+          "name": "ALightBody",
+          "image": "ALightBody.png",
+          "canvas": [
+            448,
+            47
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 0.5,
+          "low": -11.75,
+          "high": 11.75,
+          "alpha16Low": -9.75,
+          "alpha16High": 9.75
+        },
+        {
+          "name": "ALightCover_10",
+          "image": "ALightCover_10.png",
+          "canvas": [
+            112,
+            17
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0.5,
+            0.5
+          ],
+          "deviceScale": 0.5,
+          "low": -3.75,
+          "high": 4.75,
+          "alpha16Low": -2.75,
+          "alpha16High": 4.25
+        },
+        {
+          "name": "ALightGun_10",
+          "image": "ALightGun_10.png",
+          "canvas": [
+            14,
+            7
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            14,
+            0
+          ],
+          "deviceScale": 0.5,
+          "low": -1.75,
+          "high": 1.75,
+          "alpha16Low": -1.75,
+          "alpha16High": 1.75
+        },
+        {
+          "name": "ALightMissile_10",
+          "image": "ALightMissile_10.png",
+          "canvas": [
+            13,
+            8
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            1.5,
+            7.5
+          ],
+          "deviceScale": 0.5,
+          "low": 5.5,
+          "high": 9.5,
+          "alpha16Low": 5.5,
+          "alpha16High": 9.5
+        },
+        {
+          "name": "ALightRotor",
+          "image": "ALightRotor.png",
+          "canvas": [
+            59,
+            59
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.5,
+            0
+          ],
+          "deviceScale": 0.5,
+          "low": -14.75,
+          "high": 14.75,
+          "alpha16Low": -14.25,
+          "alpha16High": 14.25
+        }
+      ],
+      "low": -14.75,
+      "high": 14.75,
+      "countermeasureWidth": 29.5,
+      "emissionRearOffset": -8.26000023,
+      "emissionSideOffset": 7.96500015,
+      "emissionSeparation": 15.9300003,
+      "flareInitialSideVelocityTier0": 0.88499999,
+      "alpha16NeutralWidth": 28.5,
+      "canvasExcessOverAlpha16": 1.0
+    },
+    {
+      "phase": "before",
+      "machine": "AircraftLight_10",
+      "deviceScale": 1,
+      "parts": [
+        {
+          "name": "ALightBody",
+          "image": "ALightBody.png",
+          "canvas": [
+            448,
+            47
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 1,
+          "low": -23.5,
+          "high": 23.5,
+          "alpha16Low": -19.5,
+          "alpha16High": 19.5
+        },
+        {
+          "name": "ALightCover_10",
+          "image": "ALightCover_10.png",
+          "canvas": [
+            112,
+            17
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            1,
+            1
+          ],
+          "deviceScale": 1,
+          "low": -7.5,
+          "high": 9.5,
+          "alpha16Low": -5.5,
+          "alpha16High": 8.5
+        },
+        {
+          "name": "ALightGun_10",
+          "image": "ALightGun_10.png",
+          "canvas": [
+            14,
+            7
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            28,
+            0
+          ],
+          "deviceScale": 1,
+          "low": -3.5,
+          "high": 3.5,
+          "alpha16Low": -3.5,
+          "alpha16High": 3.5
+        },
+        {
+          "name": "ALightMissile_10",
+          "image": "ALightMissile_10.png",
+          "canvas": [
+            13,
+            8
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3,
+            15
+          ],
+          "deviceScale": 1,
+          "low": 11,
+          "high": 19,
+          "alpha16Low": 11.0,
+          "alpha16High": 19.0
+        },
+        {
+          "name": "ALightRotor",
+          "image": "ALightRotor.png",
+          "canvas": [
+            59,
+            59
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            7,
+            0
+          ],
+          "deviceScale": 1,
+          "low": -29.5,
+          "high": 29.5,
+          "alpha16Low": -28.5,
+          "alpha16High": 28.5
+        }
+      ],
+      "low": -29.5,
+      "high": 29.5,
+      "countermeasureWidth": 59,
+      "emissionRearOffset": -16.5200005,
+      "emissionSideOffset": 15.9300003,
+      "emissionSeparation": 31.8600006,
+      "flareInitialSideVelocityTier0": 1.76999998,
+      "alpha16NeutralWidth": 57.0,
+      "canvasExcessOverAlpha16": 2.0
+    },
+    {
+      "phase": "before",
+      "machine": "AircraftTransport_01",
+      "deviceScale": 0.5,
+      "parts": [
+        {
+          "name": "ATransportBody",
+          "image": "ATransportBody.png",
+          "canvas": [
+            980,
+            131
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 0.320051014,
+          "low": -20.9633408,
+          "high": 20.9633408,
+          "alpha16Low": -6.881096801000001,
+          "alpha16High": 5.920943759
+        },
+        {
+          "name": "ATransportWingL",
+          "image": "ATransportWingL.png",
+          "canvas": [
+            980,
+            55
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            12.1619387
+          ],
+          "deviceScale": 0.320051014,
+          "low": 3.36053562,
+          "high": 20.9633408,
+          "alpha16Low": 4.640739871,
+          "alpha16High": 20.003188543
+        },
+        {
+          "name": "ATransportWingR",
+          "image": "ATransportWingR.png",
+          "canvas": [
+            980,
+            55
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            -12.1619387
+          ],
+          "deviceScale": 0.320051014,
+          "low": -20.9633408,
+          "high": -3.36053562,
+          "alpha16Low": -20.643290571,
+          "alpha16High": -5.2808418989999995
+        },
+        {
+          "name": "ATransportRoot0_01",
+          "image": "ATransportRoot0_01.png",
+          "canvas": [
+            224,
+            29
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.20051003,
+            7.36117315
+          ],
+          "deviceScale": 0.320051014,
+          "low": 2.72043324,
+          "high": 12.0019131,
+          "alpha16Low": 6.240994601,
+          "alpha16High": 7.201147643
+        },
+        {
+          "name": "ATransportRoot1_01",
+          "image": "ATransportRoot1_01.png",
+          "canvas": [
+            224,
+            29
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.20051003,
+            -8.00127506
+          ],
+          "deviceScale": 0.320051014,
+          "low": -12.6420155,
+          "high": -3.36053514,
+          "alpha16Low": -8.161300567,
+          "alpha16High": -7.201147525
+        },
+        {
+          "name": "ATransportEngine",
+          "image": "ATransportEngine.png",
+          "canvas": [
+            980,
+            45
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            -0.640102029
+          ],
+          "deviceScale": 0.320051014,
+          "low": -7.84124994,
+          "high": 6.56104612,
+          "alpha16Low": -6.240994774000001,
+          "alpha16High": 5.28084173
+        },
+        {
+          "name": "ATransportGun_01",
+          "image": "ATransportGun.png",
+          "canvas": [
+            21,
+            11
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            2.56040812,
+            10.2416325
+          ],
+          "deviceScale": 0.320051014,
+          "low": 8.48135185,
+          "high": 12.0019131,
+          "alpha16Low": 8.801402936999999,
+          "alpha16High": 11.361811049
+        },
+        {
+          "name": "ATransportGun_01",
+          "image": "ATransportGun.png",
+          "canvas": [
+            21,
+            11
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            2.56040812,
+            -10.2416325
+          ],
+          "deviceScale": 0.320051014,
+          "low": -12.0019131,
+          "high": -8.48135185,
+          "alpha16Low": -11.681862063,
+          "alpha16High": -9.121453951
+        },
+        {
+          "name": "ATransportMissile_01",
+          "image": "ATransportMissile.png",
+          "canvas": [
+            21,
+            13
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.640102029,
+            15.0423975
+          ],
+          "deviceScale": 0.320051014,
+          "low": 12.9620657,
+          "high": 17.1227283,
+          "alpha16Low": 13.602167936999999,
+          "alpha16High": 15.842525035
+        },
+        {
+          "name": "ATransportMissile_01",
+          "image": "ATransportMissile.png",
+          "canvas": [
+            21,
+            13
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.640102029,
+            -15.0423975
+          ],
+          "deviceScale": 0.320051014,
+          "low": -17.1227283,
+          "high": -12.9620657,
+          "alpha16Low": -16.482627063,
+          "alpha16High": -14.242269965
+        },
+        {
+          "name": "ATransportFan",
+          "image": "ATransportFan.png",
+          "canvas": [
+            80,
+            80
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.20051003,
+            0.320051014
+          ],
+          "deviceScale": 0.320051014,
+          "low": -12.4819889,
+          "high": 13.1220913,
+          "alpha16Low": -12.161938532,
+          "alpha16High": 12.802040560000002
+        }
+      ],
+      "low": -20.9633408,
+      "high": 20.9633408,
+      "countermeasureWidth": 41.9266815,
+      "emissionRearOffset": -11.7394705,
+      "emissionSideOffset": 11.3202047,
+      "emissionSeparation": 22.6404095,
+      "flareInitialSideVelocityTier0": 1.25780046,
+      "alpha16NeutralWidth": 40.646479114,
+      "canvasExcessOverAlpha16": 1.2802023859999991
+    },
+    {
+      "phase": "before",
+      "machine": "AircraftTransport_01",
+      "deviceScale": 1,
+      "parts": [
+        {
+          "name": "ATransportBody",
+          "image": "ATransportBody.png",
+          "canvas": [
+            980,
+            131
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 0.640102029,
+          "low": -41.9266815,
+          "high": 41.9266815,
+          "alpha16Low": -13.7621936235,
+          "alpha16High": 11.8418875365
+        },
+        {
+          "name": "ATransportWingL",
+          "image": "ATransportWingL.png",
+          "canvas": [
+            980,
+            55
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            24.3238773
+          ],
+          "deviceScale": 0.640102029,
+          "low": 6.72107124,
+          "high": 41.9266815,
+          "alpha16Low": 9.281479618499999,
+          "alpha16High": 40.0063770105
+        },
+        {
+          "name": "ATransportWingR",
+          "image": "ATransportWingR.png",
+          "canvas": [
+            980,
+            55
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            -24.3238773
+          ],
+          "deviceScale": 0.640102029,
+          "low": -41.9266815,
+          "high": -6.72107124,
+          "alpha16Low": -41.2865810685,
+          "alpha16High": -10.5616836765
+        },
+        {
+          "name": "ATransportRoot0_01",
+          "image": "ATransportRoot0_01.png",
+          "canvas": [
+            224,
+            29
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            6.40102005,
+            14.7223463
+          ],
+          "deviceScale": 0.640102029,
+          "low": 5.44086647,
+          "high": 24.0038261,
+          "alpha16Low": 12.481989198499999,
+          "alpha16High": 14.4022952855
+        },
+        {
+          "name": "ATransportRoot1_01",
+          "image": "ATransportRoot1_01.png",
+          "canvas": [
+            224,
+            29
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            6.40102005,
+            -16.0025501
+          ],
+          "deviceScale": 0.640102029,
+          "low": -25.2840309,
+          "high": -6.72107029,
+          "alpha16Low": -16.3226011145,
+          "alpha16High": -14.402295027500001
+        },
+        {
+          "name": "ATransportEngine",
+          "image": "ATransportEngine.png",
+          "canvas": [
+            980,
+            45
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            -1.28020406
+          ],
+          "deviceScale": 0.640102029,
+          "low": -15.6824999,
+          "high": 13.1220922,
+          "alpha16Low": -12.481989567500001,
+          "alpha16High": 10.5616834765
+        },
+        {
+          "name": "ATransportGun_01",
+          "image": "ATransportGun.png",
+          "canvas": [
+            21,
+            11
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            5.12081623,
+            20.4832649
+          ],
+          "deviceScale": 0.640102029,
+          "low": 16.9627037,
+          "high": 24.0038261,
+          "alpha16Low": 17.6028057695,
+          "alpha16High": 22.7236220015
+        },
+        {
+          "name": "ATransportGun_01",
+          "image": "ATransportGun.png",
+          "canvas": [
+            21,
+            11
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            5.12081623,
+            -20.4832649
+          ],
+          "deviceScale": 0.640102029,
+          "low": -24.0038261,
+          "high": -16.9627037,
+          "alpha16Low": -23.363724030500002,
+          "alpha16High": -18.242907798500003
+        },
+        {
+          "name": "ATransportMissile_01",
+          "image": "ATransportMissile.png",
+          "canvas": [
+            21,
+            13
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -1.28020406,
+            30.084795
+          ],
+          "deviceScale": 0.640102029,
+          "low": 25.9241314,
+          "high": 34.2454567,
+          "alpha16Low": 27.2043358695,
+          "alpha16High": 31.6850500725
+        },
+        {
+          "name": "ATransportMissile_01",
+          "image": "ATransportMissile.png",
+          "canvas": [
+            21,
+            13
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -1.28020406,
+            -30.084795
+          ],
+          "deviceScale": 0.640102029,
+          "low": -34.2454567,
+          "high": -25.9241314,
+          "alpha16Low": -32.9652541305,
+          "alpha16High": -28.4845399275
+        },
+        {
+          "name": "ATransportFan",
+          "image": "ATransportFan.png",
+          "canvas": [
+            80,
+            80
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            6.40102005,
+            0.640102029
+          ],
+          "deviceScale": 0.640102029,
+          "low": -24.9639778,
+          "high": 26.2441826,
+          "alpha16Low": -24.323877102,
+          "alpha16High": 25.604081160000003
+        }
+      ],
+      "low": -41.9266815,
+      "high": 41.9266815,
+      "countermeasureWidth": 83.853363,
+      "emissionRearOffset": -23.478941,
+      "emissionSideOffset": 22.6404095,
+      "emissionSeparation": 45.2808189,
+      "flareInitialSideVelocityTier0": 2.51560092,
+      "alpha16NeutralWidth": 81.292958079,
+      "canvasExcessOverAlpha16": 2.560404921
+    },
+    {
+      "phase": "before",
+      "machine": "AircraftTransport_10",
+      "deviceScale": 0.5,
+      "parts": [
+        {
+          "name": "ATransportBody",
+          "image": "ATransportBody.png",
+          "canvas": [
+            980,
+            131
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 0.320051014,
+          "low": -20.9633408,
+          "high": 20.9633408,
+          "alpha16Low": -6.881096801000001,
+          "alpha16High": 5.920943759
+        },
+        {
+          "name": "ATransportWingL",
+          "image": "ATransportWingL.png",
+          "canvas": [
+            980,
+            55
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            12.1619387
+          ],
+          "deviceScale": 0.320051014,
+          "low": 3.36053562,
+          "high": 20.9633408,
+          "alpha16Low": 4.640739871,
+          "alpha16High": 20.003188543
+        },
+        {
+          "name": "ATransportWingR",
+          "image": "ATransportWingR.png",
+          "canvas": [
+            980,
+            55
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            -12.1619387
+          ],
+          "deviceScale": 0.320051014,
+          "low": -20.9633408,
+          "high": -3.36053562,
+          "alpha16Low": -20.643290571,
+          "alpha16High": -5.2808418989999995
+        },
+        {
+          "name": "ATransportRoot0_10",
+          "image": "ATransportRoot0_10.png",
+          "canvas": [
+            224,
+            29
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.20051003,
+            7.36117315
+          ],
+          "deviceScale": 0.320051014,
+          "low": 2.72043324,
+          "high": 12.0019131,
+          "alpha16Low": 4.960790545,
+          "alpha16High": 9.121453727
+        },
+        {
+          "name": "ATransportRoot1_10",
+          "image": "ATransportRoot1_10.png",
+          "canvas": [
+            224,
+            29
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.20051003,
+            -8.00127506
+          ],
+          "deviceScale": 0.320051014,
+          "low": -12.6420155,
+          "high": -3.36053514,
+          "alpha16Low": -9.441504623,
+          "alpha16High": -5.280841441
+        },
+        {
+          "name": "ATransportEngine",
+          "image": "ATransportEngine.png",
+          "canvas": [
+            980,
+            45
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            -0.640102029
+          ],
+          "deviceScale": 0.320051014,
+          "low": -7.84124994,
+          "high": 6.56104612,
+          "alpha16Low": -6.240994774000001,
+          "alpha16High": 5.28084173
+        },
+        {
+          "name": "ATransportGun_10",
+          "image": "ATransportGun.png",
+          "canvas": [
+            21,
+            11
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            2.56040812,
+            10.2416325
+          ],
+          "deviceScale": 0.320051014,
+          "low": 8.48135185,
+          "high": 12.0019131,
+          "alpha16Low": 8.801402936999999,
+          "alpha16High": 11.361811049
+        },
+        {
+          "name": "ATransportGun_10",
+          "image": "ATransportGun.png",
+          "canvas": [
+            21,
+            11
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            2.56040812,
+            -10.2416325
+          ],
+          "deviceScale": 0.320051014,
+          "low": -12.0019131,
+          "high": -8.48135185,
+          "alpha16Low": -11.681862063,
+          "alpha16High": -9.121453951
+        },
+        {
+          "name": "ATransportMissile_10",
+          "image": "ATransportMissile.png",
+          "canvas": [
+            21,
+            13
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.640102029,
+            15.0423975
+          ],
+          "deviceScale": 0.320051014,
+          "low": 12.9620657,
+          "high": 17.1227283,
+          "alpha16Low": 13.602167936999999,
+          "alpha16High": 15.842525035
+        },
+        {
+          "name": "ATransportMissile_10",
+          "image": "ATransportMissile.png",
+          "canvas": [
+            21,
+            13
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.640102029,
+            -15.0423975
+          ],
+          "deviceScale": 0.320051014,
+          "low": -17.1227283,
+          "high": -12.9620657,
+          "alpha16Low": -16.482627063,
+          "alpha16High": -14.242269965
+        },
+        {
+          "name": "ATransportFan",
+          "image": "ATransportFan.png",
+          "canvas": [
+            80,
+            80
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.20051003,
+            0.320051014
+          ],
+          "deviceScale": 0.320051014,
+          "low": -12.4819889,
+          "high": 13.1220913,
+          "alpha16Low": -12.161938532,
+          "alpha16High": 12.802040560000002
+        }
+      ],
+      "low": -20.9633408,
+      "high": 20.9633408,
+      "countermeasureWidth": 41.9266815,
+      "emissionRearOffset": -11.7394705,
+      "emissionSideOffset": 11.3202047,
+      "emissionSeparation": 22.6404095,
+      "flareInitialSideVelocityTier0": 1.25780046,
+      "alpha16NeutralWidth": 40.646479114,
+      "canvasExcessOverAlpha16": 1.2802023859999991
+    },
+    {
+      "phase": "before",
+      "machine": "AircraftTransport_10",
+      "deviceScale": 1,
+      "parts": [
+        {
+          "name": "ATransportBody",
+          "image": "ATransportBody.png",
+          "canvas": [
+            980,
+            131
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 0.640102029,
+          "low": -41.9266815,
+          "high": 41.9266815,
+          "alpha16Low": -13.7621936235,
+          "alpha16High": 11.8418875365
+        },
+        {
+          "name": "ATransportWingL",
+          "image": "ATransportWingL.png",
+          "canvas": [
+            980,
+            55
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            24.3238773
+          ],
+          "deviceScale": 0.640102029,
+          "low": 6.72107124,
+          "high": 41.9266815,
+          "alpha16Low": 9.281479618499999,
+          "alpha16High": 40.0063770105
+        },
+        {
+          "name": "ATransportWingR",
+          "image": "ATransportWingR.png",
+          "canvas": [
+            980,
+            55
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            -24.3238773
+          ],
+          "deviceScale": 0.640102029,
+          "low": -41.9266815,
+          "high": -6.72107124,
+          "alpha16Low": -41.2865810685,
+          "alpha16High": -10.5616836765
+        },
+        {
+          "name": "ATransportRoot0_10",
+          "image": "ATransportRoot0_10.png",
+          "canvas": [
+            224,
+            29
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            6.40102005,
+            14.7223463
+          ],
+          "deviceScale": 0.640102029,
+          "low": 5.44086647,
+          "high": 24.0038261,
+          "alpha16Low": 9.9215810825,
+          "alpha16High": 18.2429074595
+        },
+        {
+          "name": "ATransportRoot1_10",
+          "image": "ATransportRoot1_10.png",
+          "canvas": [
+            224,
+            29
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            6.40102005,
+            -16.0025501
+          ],
+          "deviceScale": 0.640102029,
+          "low": -25.2840309,
+          "high": -6.72107029,
+          "alpha16Low": -18.8830092305,
+          "alpha16High": -10.5616828535
+        },
+        {
+          "name": "ATransportEngine",
+          "image": "ATransportEngine.png",
+          "canvas": [
+            980,
+            45
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            -1.28020406
+          ],
+          "deviceScale": 0.640102029,
+          "low": -15.6824999,
+          "high": 13.1220922,
+          "alpha16Low": -12.481989567500001,
+          "alpha16High": 10.5616834765
+        },
+        {
+          "name": "ATransportGun_10",
+          "image": "ATransportGun.png",
+          "canvas": [
+            21,
+            11
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            5.12081623,
+            20.4832649
+          ],
+          "deviceScale": 0.640102029,
+          "low": 16.9627037,
+          "high": 24.0038261,
+          "alpha16Low": 17.6028057695,
+          "alpha16High": 22.7236220015
+        },
+        {
+          "name": "ATransportGun_10",
+          "image": "ATransportGun.png",
+          "canvas": [
+            21,
+            11
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            5.12081623,
+            -20.4832649
+          ],
+          "deviceScale": 0.640102029,
+          "low": -24.0038261,
+          "high": -16.9627037,
+          "alpha16Low": -23.363724030500002,
+          "alpha16High": -18.242907798500003
+        },
+        {
+          "name": "ATransportMissile_10",
+          "image": "ATransportMissile.png",
+          "canvas": [
+            21,
+            13
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -1.28020406,
+            30.084795
+          ],
+          "deviceScale": 0.640102029,
+          "low": 25.9241314,
+          "high": 34.2454567,
+          "alpha16Low": 27.2043358695,
+          "alpha16High": 31.6850500725
+        },
+        {
+          "name": "ATransportMissile_10",
+          "image": "ATransportMissile.png",
+          "canvas": [
+            21,
+            13
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -1.28020406,
+            -30.084795
+          ],
+          "deviceScale": 0.640102029,
+          "low": -34.2454567,
+          "high": -25.9241314,
+          "alpha16Low": -32.9652541305,
+          "alpha16High": -28.4845399275
+        },
+        {
+          "name": "ATransportFan",
+          "image": "ATransportFan.png",
+          "canvas": [
+            80,
+            80
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            6.40102005,
+            0.640102029
+          ],
+          "deviceScale": 0.640102029,
+          "low": -24.9639778,
+          "high": 26.2441826,
+          "alpha16Low": -24.323877102,
+          "alpha16High": 25.604081160000003
+        }
+      ],
+      "low": -41.9266815,
+      "high": 41.9266815,
+      "countermeasureWidth": 83.853363,
+      "emissionRearOffset": -23.478941,
+      "emissionSideOffset": 22.6404095,
+      "emissionSeparation": 45.2808189,
+      "flareInitialSideVelocityTier0": 2.51560092,
+      "alpha16NeutralWidth": 81.292958079,
+      "canvasExcessOverAlpha16": 2.560404921
+    },
+    {
+      "phase": "after",
+      "machine": "AircraftLight_10",
+      "deviceScale": 0.5,
+      "parts": [
+        {
+          "name": "ALightBodyV5_10",
+          "image": "ALightBodyV5_10.png",
+          "canvas": [
+            700,
+            54
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 0.5,
+          "low": -13.5,
+          "high": 13.5,
+          "alpha16Low": -10.5,
+          "alpha16High": 10.5
+        },
+        {
+          "name": "ALightGun_10",
+          "image": "ALightGunV5_10.png",
+          "canvas": [
+            46,
+            10
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3,
+            -6.5
+          ],
+          "deviceScale": 0.5,
+          "low": -9,
+          "high": -4,
+          "alpha16Low": -8.5,
+          "alpha16High": -5.0
+        },
+        {
+          "name": "ALightMissile_10",
+          "image": "ALightMissileV5_10.png",
+          "canvas": [
+            44,
+            12
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3,
+            6
+          ],
+          "deviceScale": 0.5,
+          "low": 3,
+          "high": 9,
+          "alpha16Low": 4.0,
+          "alpha16High": 8.0
+        },
+        {
+          "name": "ALightRotorV5_10",
+          "image": "ALightRotorV5_10.png",
+          "canvas": [
+            64,
+            64
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 0.5,
+          "low": -16,
+          "high": 16,
+          "alpha16Low": -14.5,
+          "alpha16High": 15.0
+        }
+      ],
+      "low": -16,
+      "high": 16,
+      "countermeasureWidth": 32,
+      "emissionRearOffset": -8.96000004,
+      "emissionSideOffset": 8.64000034,
+      "emissionSeparation": 17.2800007,
+      "flareInitialSideVelocityTier0": 0.959999979,
+      "alpha16NeutralWidth": 29.5,
+      "canvasExcessOverAlpha16": 2.5
+    },
+    {
+      "phase": "after",
+      "machine": "AircraftLight_10",
+      "deviceScale": 1,
+      "parts": [
+        {
+          "name": "ALightBodyV5_10",
+          "image": "ALightBodyV5_10.png",
+          "canvas": [
+            700,
+            54
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 1,
+          "low": -27,
+          "high": 27,
+          "alpha16Low": -21.0,
+          "alpha16High": 21.0
+        },
+        {
+          "name": "ALightGun_10",
+          "image": "ALightGunV5_10.png",
+          "canvas": [
+            46,
+            10
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            6,
+            -13
+          ],
+          "deviceScale": 1,
+          "low": -18,
+          "high": -8,
+          "alpha16Low": -17.0,
+          "alpha16High": -10.0
+        },
+        {
+          "name": "ALightMissile_10",
+          "image": "ALightMissileV5_10.png",
+          "canvas": [
+            44,
+            12
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            6,
+            12
+          ],
+          "deviceScale": 1,
+          "low": 6,
+          "high": 18,
+          "alpha16Low": 8.0,
+          "alpha16High": 16.0
+        },
+        {
+          "name": "ALightRotorV5_10",
+          "image": "ALightRotorV5_10.png",
+          "canvas": [
+            64,
+            64
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 1,
+          "low": -32,
+          "high": 32,
+          "alpha16Low": -29.0,
+          "alpha16High": 30.0
+        }
+      ],
+      "low": -32,
+      "high": 32,
+      "countermeasureWidth": 64,
+      "emissionRearOffset": -17.9200001,
+      "emissionSideOffset": 17.2800007,
+      "emissionSeparation": 34.5600014,
+      "flareInitialSideVelocityTier0": 1.91999996,
+      "alpha16NeutralWidth": 59.0,
+      "canvasExcessOverAlpha16": 5.0
+    },
+    {
+      "phase": "after",
+      "machine": "AircraftTransport_01",
+      "deviceScale": 0.5,
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "image": "ATransportBodyV5.png",
+          "canvas": [
+            980,
+            147
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 0.320051014,
+          "low": -23.5237503,
+          "high": 23.5237503,
+          "alpha16Low": -4.960790717,
+          "alpha16High": 5.280841731000001
+        },
+        {
+          "name": "ATransportWingLV5",
+          "image": "ATransportWingLV5.png",
+          "canvas": [
+            322,
+            61
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.84061217,
+            12.8020401
+          ],
+          "deviceScale": 0.320051014,
+          "low": 3.04048443,
+          "high": 22.5635948,
+          "alpha16Low": 3.360535186999998,
+          "alpha16High": 20.643289943
+        },
+        {
+          "name": "ATransportWingRV5",
+          "image": "ATransportWingRV5.png",
+          "canvas": [
+            308,
+            59
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            4.16066313,
+            -12.1619387
+          ],
+          "deviceScale": 0.320051014,
+          "low": -21.6034431,
+          "high": -2.72043419,
+          "alpha16Low": -20.003188543,
+          "alpha16High": -2.7204337869999993
+        },
+        {
+          "name": "ATransportEngineV5",
+          "image": "ATransportEngineV5.png",
+          "canvas": [
+            182,
+            31
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -3.20051003,
+            0
+          ],
+          "deviceScale": 0.320051014,
+          "low": -4.96079063,
+          "high": 4.96079063,
+          "alpha16Low": -4.640739703,
+          "alpha16High": 4.960790717
+        },
+        {
+          "name": "ATransportRootLV5_01",
+          "image": "ATransportRootLV5_01.png",
+          "canvas": [
+            252,
+            25
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.52056122,
+            6.08096933
+          ],
+          "deviceScale": 0.320051014,
+          "low": 2.0803318,
+          "high": 10.0816069,
+          "alpha16Low": 2.400382669,
+          "alpha16High": 10.081607005
+        },
+        {
+          "name": "ATransportRootRV5_01",
+          "image": "ATransportRootRV5_01.png",
+          "canvas": [
+            252,
+            25
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.52056122,
+            -5.76091814
+          ],
+          "deviceScale": 0.320051014,
+          "low": -9.76155567,
+          "high": -1.76028061,
+          "alpha16Low": -9.761555815000001,
+          "alpha16High": -2.080331479
+        },
+        {
+          "name": "ATransportGun_01",
+          "image": "ATransportGunV5.png",
+          "canvas": [
+            26,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            9.60153008,
+            4.48071432
+          ],
+          "deviceScale": 0.320051014,
+          "low": 3.04048491,
+          "high": 5.92094374,
+          "alpha16Low": 3.0404847569999998,
+          "alpha16High": 5.920943883
+        },
+        {
+          "name": "ATransportGun_01",
+          "image": "ATransportGunV5.png",
+          "canvas": [
+            26,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            9.60153008,
+            -4.48071432
+          ],
+          "deviceScale": 0.320051014,
+          "low": -5.92094374,
+          "high": -3.04048491,
+          "alpha16Low": -5.920943883,
+          "alpha16High": -3.0404847569999998
+        },
+        {
+          "name": "ATransportMissile_01",
+          "image": "ATransportMissileV5.png",
+          "canvas": [
+            10,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.320051014,
+            15.0423975
+          ],
+          "deviceScale": 0.320051014,
+          "low": 13.6021681,
+          "high": 16.4826279,
+          "alpha16Low": 13.602167936999999,
+          "alpha16High": 16.482627063
+        },
+        {
+          "name": "ATransportMissile_01",
+          "image": "ATransportMissileV5.png",
+          "canvas": [
+            10,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.320051014,
+            -15.0423975
+          ],
+          "deviceScale": 0.320051014,
+          "low": -16.4826279,
+          "high": -13.6021681,
+          "alpha16Low": -16.482627063,
+          "alpha16High": -13.602167936999999
+        },
+        {
+          "name": "ATransportFanV5",
+          "image": "ATransportFanV5.png",
+          "canvas": [
+            58,
+            57
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.20051003,
+            0.320051014
+          ],
+          "deviceScale": 0.320051014,
+          "low": -8.80140305,
+          "high": 9.44150543,
+          "alpha16Low": -8.161300857,
+          "alpha16High": 8.801402885000002
+        }
+      ],
+      "low": -23.5237503,
+      "high": 23.5237503,
+      "countermeasureWidth": 47.0475006,
+      "emissionRearOffset": -13.1732998,
+      "emissionSideOffset": 12.7028255,
+      "emissionSeparation": 25.4056511,
+      "flareInitialSideVelocityTier0": 1.41142499,
+      "alpha16NeutralWidth": 40.646478486,
+      "canvasExcessOverAlpha16": 6.401022114
+    },
+    {
+      "phase": "after",
+      "machine": "AircraftTransport_01",
+      "deviceScale": 1,
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "image": "ATransportBodyV5.png",
+          "canvas": [
+            980,
+            147
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 0.640102029,
+          "low": -47.0475006,
+          "high": 47.0475006,
+          "alpha16Low": -9.9215814495,
+          "alpha16High": 10.5616834785
+        },
+        {
+          "name": "ATransportWingLV5",
+          "image": "ATransportWingLV5.png",
+          "canvas": [
+            322,
+            61
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            7.68122435,
+            25.6040802
+          ],
+          "deviceScale": 0.640102029,
+          "low": 6.08096886,
+          "high": 45.1271896,
+          "alpha16Low": 6.721070344499999,
+          "alpha16High": 41.286579910499995
+        },
+        {
+          "name": "ATransportWingRV5",
+          "image": "ATransportWingRV5.png",
+          "canvas": [
+            308,
+            59
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            8.32132626,
+            -24.3238773
+          ],
+          "deviceScale": 0.640102029,
+          "low": -43.2068863,
+          "high": -5.44086838,
+          "alpha16Low": -40.0063770105,
+          "alpha16High": -5.4408674445
+        },
+        {
+          "name": "ATransportEngineV5",
+          "image": "ATransportEngineV5.png",
+          "canvas": [
+            182,
+            31
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -6.40102005,
+            0
+          ],
+          "deviceScale": 0.640102029,
+          "low": -9.92158127,
+          "high": 9.92158127,
+          "alpha16Low": -9.2814794205,
+          "alpha16High": 9.9215814495
+        },
+        {
+          "name": "ATransportRootLV5_01",
+          "image": "ATransportRootLV5_01.png",
+          "canvas": [
+            252,
+            25
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            7.04112244,
+            12.1619387
+          ],
+          "deviceScale": 0.640102029,
+          "low": 4.1606636,
+          "high": 20.1632137,
+          "alpha16Low": 4.8007653665,
+          "alpha16High": 20.1632140625
+        },
+        {
+          "name": "ATransportRootRV5_01",
+          "image": "ATransportRootRV5_01.png",
+          "canvas": [
+            252,
+            25
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            7.04112244,
+            -11.5218363
+          ],
+          "deviceScale": 0.640102029,
+          "low": -19.5231113,
+          "high": -3.52056122,
+          "alpha16Low": -19.5231116625,
+          "alpha16High": -4.1606629665
+        },
+        {
+          "name": "ATransportGun_01",
+          "image": "ATransportGunV5.png",
+          "canvas": [
+            26,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            19.2030602,
+            8.96142864
+          ],
+          "deviceScale": 0.640102029,
+          "low": 6.08096981,
+          "high": 11.8418875,
+          "alpha16Low": 6.080969509499999,
+          "alpha16High": 11.8418877705
+        },
+        {
+          "name": "ATransportGun_01",
+          "image": "ATransportGunV5.png",
+          "canvas": [
+            26,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            19.2030602,
+            -8.96142864
+          ],
+          "deviceScale": 0.640102029,
+          "low": -11.8418875,
+          "high": -6.08096981,
+          "alpha16Low": -11.8418877705,
+          "alpha16High": -6.080969509499999
+        },
+        {
+          "name": "ATransportMissile_01",
+          "image": "ATransportMissileV5.png",
+          "canvas": [
+            10,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.640102029,
+            30.084795
+          ],
+          "deviceScale": 0.640102029,
+          "low": 27.2043362,
+          "high": 32.9652557,
+          "alpha16Low": 27.2043358695,
+          "alpha16High": 32.9652541305
+        },
+        {
+          "name": "ATransportMissile_01",
+          "image": "ATransportMissileV5.png",
+          "canvas": [
+            10,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.640102029,
+            -30.084795
+          ],
+          "deviceScale": 0.640102029,
+          "low": -32.9652557,
+          "high": -27.2043362,
+          "alpha16Low": -32.9652541305,
+          "alpha16High": -27.2043358695
+        },
+        {
+          "name": "ATransportFanV5",
+          "image": "ATransportFanV5.png",
+          "canvas": [
+            58,
+            57
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            6.40102005,
+            0.640102029
+          ],
+          "deviceScale": 0.640102029,
+          "low": -17.6028061,
+          "high": 18.8830109,
+          "alpha16Low": -16.322601739499998,
+          "alpha16High": 17.6028057975
+        }
+      ],
+      "low": -47.0475006,
+      "high": 47.0475006,
+      "countermeasureWidth": 94.0950012,
+      "emissionRearOffset": -26.3465996,
+      "emissionSideOffset": 25.4056511,
+      "emissionSeparation": 50.8113022,
+      "flareInitialSideVelocityTier0": 2.82284999,
+      "alpha16NeutralWidth": 81.292956921,
+      "canvasExcessOverAlpha16": 12.802044279
+    },
+    {
+      "phase": "after",
+      "machine": "AircraftTransport_10",
+      "deviceScale": 0.5,
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "image": "ATransportBodyV5.png",
+          "canvas": [
+            980,
+            147
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 0.320051014,
+          "low": -23.5237503,
+          "high": 23.5237503,
+          "alpha16Low": -4.960790717,
+          "alpha16High": 5.280841731000001
+        },
+        {
+          "name": "ATransportWingLV5",
+          "image": "ATransportWingLV5.png",
+          "canvas": [
+            322,
+            61
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.84061217,
+            12.8020401
+          ],
+          "deviceScale": 0.320051014,
+          "low": 3.04048443,
+          "high": 22.5635948,
+          "alpha16Low": 3.360535186999998,
+          "alpha16High": 20.643289943
+        },
+        {
+          "name": "ATransportWingRV5",
+          "image": "ATransportWingRV5.png",
+          "canvas": [
+            308,
+            59
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            4.16066313,
+            -12.1619387
+          ],
+          "deviceScale": 0.320051014,
+          "low": -21.6034431,
+          "high": -2.72043419,
+          "alpha16Low": -20.003188543,
+          "alpha16High": -2.7204337869999993
+        },
+        {
+          "name": "ATransportEngineV5",
+          "image": "ATransportEngineV5.png",
+          "canvas": [
+            182,
+            31
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -3.20051003,
+            0
+          ],
+          "deviceScale": 0.320051014,
+          "low": -4.96079063,
+          "high": 4.96079063,
+          "alpha16Low": -4.640739703,
+          "alpha16High": 4.960790717
+        },
+        {
+          "name": "ATransportRootLV5_10",
+          "image": "ATransportRootLV5_10.png",
+          "canvas": [
+            266,
+            25
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.52056122,
+            6.08096933
+          ],
+          "deviceScale": 0.320051014,
+          "low": 2.0803318,
+          "high": 10.0816069,
+          "alpha16Low": 2.400382669,
+          "alpha16High": 10.081607005
+        },
+        {
+          "name": "ATransportRootRV5_10",
+          "image": "ATransportRootRV5_10.png",
+          "canvas": [
+            266,
+            25
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.52056122,
+            -5.76091814
+          ],
+          "deviceScale": 0.320051014,
+          "low": -9.76155567,
+          "high": -1.76028061,
+          "alpha16Low": -9.761555815000001,
+          "alpha16High": -2.080331479
+        },
+        {
+          "name": "ATransportGun_10",
+          "image": "ATransportGunV5.png",
+          "canvas": [
+            26,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            9.60153008,
+            4.48071432
+          ],
+          "deviceScale": 0.320051014,
+          "low": 3.04048491,
+          "high": 5.92094374,
+          "alpha16Low": 3.0404847569999998,
+          "alpha16High": 5.920943883
+        },
+        {
+          "name": "ATransportGun_10",
+          "image": "ATransportGunV5.png",
+          "canvas": [
+            26,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            9.60153008,
+            -4.48071432
+          ],
+          "deviceScale": 0.320051014,
+          "low": -5.92094374,
+          "high": -3.04048491,
+          "alpha16Low": -5.920943883,
+          "alpha16High": -3.0404847569999998
+        },
+        {
+          "name": "ATransportMissile_10",
+          "image": "ATransportMissileV5.png",
+          "canvas": [
+            10,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.320051014,
+            15.0423975
+          ],
+          "deviceScale": 0.320051014,
+          "low": 13.6021681,
+          "high": 16.4826279,
+          "alpha16Low": 13.602167936999999,
+          "alpha16High": 16.482627063
+        },
+        {
+          "name": "ATransportMissile_10",
+          "image": "ATransportMissileV5.png",
+          "canvas": [
+            10,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.320051014,
+            -15.0423975
+          ],
+          "deviceScale": 0.320051014,
+          "low": -16.4826279,
+          "high": -13.6021681,
+          "alpha16Low": -16.482627063,
+          "alpha16High": -13.602167936999999
+        },
+        {
+          "name": "ATransportFanV5",
+          "image": "ATransportFanV5.png",
+          "canvas": [
+            58,
+            57
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            3.20051003,
+            0.320051014
+          ],
+          "deviceScale": 0.320051014,
+          "low": -8.80140305,
+          "high": 9.44150543,
+          "alpha16Low": -8.161300857,
+          "alpha16High": 8.801402885000002
+        }
+      ],
+      "low": -23.5237503,
+      "high": 23.5237503,
+      "countermeasureWidth": 47.0475006,
+      "emissionRearOffset": -13.1732998,
+      "emissionSideOffset": 12.7028255,
+      "emissionSeparation": 25.4056511,
+      "flareInitialSideVelocityTier0": 1.41142499,
+      "alpha16NeutralWidth": 40.646478486,
+      "canvasExcessOverAlpha16": 6.401022114
+    },
+    {
+      "phase": "after",
+      "machine": "AircraftTransport_10",
+      "deviceScale": 1,
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "image": "ATransportBodyV5.png",
+          "canvas": [
+            980,
+            147
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            0,
+            0
+          ],
+          "deviceScale": 0.640102029,
+          "low": -47.0475006,
+          "high": 47.0475006,
+          "alpha16Low": -9.9215814495,
+          "alpha16High": 10.5616834785
+        },
+        {
+          "name": "ATransportWingLV5",
+          "image": "ATransportWingLV5.png",
+          "canvas": [
+            322,
+            61
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            7.68122435,
+            25.6040802
+          ],
+          "deviceScale": 0.640102029,
+          "low": 6.08096886,
+          "high": 45.1271896,
+          "alpha16Low": 6.721070344499999,
+          "alpha16High": 41.286579910499995
+        },
+        {
+          "name": "ATransportWingRV5",
+          "image": "ATransportWingRV5.png",
+          "canvas": [
+            308,
+            59
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            8.32132626,
+            -24.3238773
+          ],
+          "deviceScale": 0.640102029,
+          "low": -43.2068863,
+          "high": -5.44086838,
+          "alpha16Low": -40.0063770105,
+          "alpha16High": -5.4408674445
+        },
+        {
+          "name": "ATransportEngineV5",
+          "image": "ATransportEngineV5.png",
+          "canvas": [
+            182,
+            31
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -6.40102005,
+            0
+          ],
+          "deviceScale": 0.640102029,
+          "low": -9.92158127,
+          "high": 9.92158127,
+          "alpha16Low": -9.2814794205,
+          "alpha16High": 9.9215814495
+        },
+        {
+          "name": "ATransportRootLV5_10",
+          "image": "ATransportRootLV5_10.png",
+          "canvas": [
+            266,
+            25
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            7.04112244,
+            12.1619387
+          ],
+          "deviceScale": 0.640102029,
+          "low": 4.1606636,
+          "high": 20.1632137,
+          "alpha16Low": 4.8007653665,
+          "alpha16High": 20.1632140625
+        },
+        {
+          "name": "ATransportRootRV5_10",
+          "image": "ATransportRootRV5_10.png",
+          "canvas": [
+            266,
+            25
+          ],
+          "split": [
+            7,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            7.04112244,
+            -11.5218363
+          ],
+          "deviceScale": 0.640102029,
+          "low": -19.5231113,
+          "high": -3.52056122,
+          "alpha16Low": -19.5231116625,
+          "alpha16High": -4.1606629665
+        },
+        {
+          "name": "ATransportGun_10",
+          "image": "ATransportGunV5.png",
+          "canvas": [
+            26,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            19.2030602,
+            8.96142864
+          ],
+          "deviceScale": 0.640102029,
+          "low": 6.08096981,
+          "high": 11.8418875,
+          "alpha16Low": 6.080969509499999,
+          "alpha16High": 11.8418877705
+        },
+        {
+          "name": "ATransportGun_10",
+          "image": "ATransportGunV5.png",
+          "canvas": [
+            26,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            19.2030602,
+            -8.96142864
+          ],
+          "deviceScale": 0.640102029,
+          "low": -11.8418875,
+          "high": -6.08096981,
+          "alpha16Low": -11.8418877705,
+          "alpha16High": -6.080969509499999
+        },
+        {
+          "name": "ATransportMissile_10",
+          "image": "ATransportMissileV5.png",
+          "canvas": [
+            10,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.640102029,
+            30.084795
+          ],
+          "deviceScale": 0.640102029,
+          "low": 27.2043362,
+          "high": 32.9652557,
+          "alpha16Low": 27.2043358695,
+          "alpha16High": 32.9652541305
+        },
+        {
+          "name": "ATransportMissile_10",
+          "image": "ATransportMissileV5.png",
+          "canvas": [
+            10,
+            9
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            -0.640102029,
+            -30.084795
+          ],
+          "deviceScale": 0.640102029,
+          "low": -32.9652557,
+          "high": -27.2043362,
+          "alpha16Low": -32.9652541305,
+          "alpha16High": -27.2043358695
+        },
+        {
+          "name": "ATransportFanV5",
+          "image": "ATransportFanV5.png",
+          "canvas": [
+            58,
+            57
+          ],
+          "split": [
+            1,
+            1
+          ],
+          "tile": 0,
+          "localCenter": [
+            6.40102005,
+            0.640102029
+          ],
+          "deviceScale": 0.640102029,
+          "low": -17.6028061,
+          "high": 18.8830109,
+          "alpha16Low": -16.322601739499998,
+          "alpha16High": 17.6028057975
+        }
+      ],
+      "low": -47.0475006,
+      "high": 47.0475006,
+      "countermeasureWidth": 94.0950012,
+      "emissionRearOffset": -26.3465996,
+      "emissionSideOffset": 25.4056511,
+      "emissionSeparation": 50.8113022,
+      "flareInitialSideVelocityTier0": 2.82284999,
+      "alpha16NeutralWidth": 81.292956921,
+      "canvasExcessOverAlpha16": 12.802044279
+    }
+  ]
+}

@@ -43,21 +43,45 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
    if(pose.definition->type==4){auto muzzle=pose.muzzle();assert(muzzle);auto size=r.imageSize(pose.definition->image);
     if(pose.definition->name.starts_with("AHeavyRocket")||pose.definition->name.starts_with("AHeavyAirStrike")){assert(size.x==1596&&size.y==112&&pose.definition->tileCount==7&&pose.definition->splitX==21&&size.x/pose.definition->splitX==76);continue;}
     float dx=muzzle->x-pose.localCenter.x,dy=muzzle->y-pose.localCenter.y;
-    assert(std::abs(dx*std::cos(pose.angle)+dy*std::sin(pose.angle)-size.x*.5f*viewport*factor)<=.51f*viewport*factor);
+    if(md::helicopterV5Body(models.machine(variant)->front().name)){
+     const auto socket=pose.definition->sockets.at(1),pivot=pose.definition->sockets.at(0);
+     const float forward=dx*std::cos(pose.angle)+dy*std::sin(pose.angle);
+     const float across=-dx*std::sin(pose.angle)+dy*std::cos(pose.angle);
+     assert(std::abs(forward-(socket.x-pivot.x)*viewport*factor)<.0001f);
+     assert(std::abs(across-(pose.reverse?-1.f:1.f)*(socket.y-pivot.y)*viewport*factor)<.0001f);
+     assert(socket.x>pivot.x&&std::abs(socket.x)<=size.x*.5f+.51f&&std::abs(socket.y)<=size.y*.5f+.51f);
+    }else assert(std::abs(dx*std::cos(pose.angle)+dy*std::sin(pose.angle)-size.x*.5f*viewport*factor)<=.51f*viewport*factor);
    }
   }
   for(const auto& sprite:frame.sprites){auto size=r.imageSize(sprite.image);
    const bool body=md::helicopterDrawnPart(std::string_view(sprite.image).substr(0,sprite.image.size()-4));
    const bool sharedAH=sprite.image=="AHeavyBody.png";
    const float cellWidth=body?size.x/(sharedAH?21:7):size.x;
-   if(body){const float expected=sprite.image.starts_with("ATransportRoot")?32.f:sprite.image.starts_with("ADuctCover_")?28.f:sprite.image.starts_with("ALightCover_")?16.f:sprite.image=="ALightBody.png"?64.f:sprite.image.starts_with("AHeavyCover_")?24.f:sprite.image.starts_with("AHeavy")?76.f:sprite.image=="ADuctBody.png"?110.f:140.f;assert(cellWidth==expected&&sprite.sourcePx&&(sprite.sourcePx->x==0||(sharedAH&&(sprite.sourcePx->x==532||sprite.sourcePx->x==1064))));}
+   if(body){
+    if(sprite.image.find("V5")!=std::string::npos){
+     assert(cellWidth>0&&std::fmod(size.x,7.f)==0&&sprite.sourcePx&&sprite.sourcePx->width==cellWidth&&sprite.sourcePx->height==size.y&&sprite.sourcePx->x==0);
+    }else{const float expected=sprite.image.starts_with("ATransportRoot")?32.f:sprite.image.starts_with("ADuctCover_")?28.f:sprite.image.starts_with("ALightCover_")?16.f:sprite.image=="ALightBody.png"?64.f:sprite.image.starts_with("AHeavyCover_")?24.f:sprite.image.starts_with("AHeavy")?76.f:sprite.image=="ADuctBody.png"?110.f:140.f;assert(cellWidth==expected&&sprite.sourcePx&&(sprite.sourcePx->x==0||(sharedAH&&(sprite.sourcePx->x==532||sprite.sourcePx->x==1064))));}
+   }
    assert(std::abs(sprite.destination.width-cellWidth*viewport*factor)<.0001f);
    assert(std::abs(sprite.destination.height-size.y*viewport*factor)<.0001f);
   }
  }
  for(const char* name:{"AircraftLight","AircraftHeavy","AircraftDuct","AircraftTransport"})for(float angle:{0.f,1.57079632679f,3.14159265359f,4.71238898038f}){
   auto poses=models.pose(name,1,angle,angle,angle);
-  for(const auto& pose:poses)if(pose.definition->type==4){auto m=pose.muzzle();assert(m);auto size=r.imageSize(pose.definition->image);if(pose.definition->name.starts_with("AHeavyRocket")||pose.definition->name.starts_with("AHeavyAirStrike")){assert(size.x==1596&&size.y==112&&pose.definition->tileCount==7&&pose.definition->splitX==21&&size.x/pose.definition->splitX==76);continue;}float dx=m->x-pose.localCenter.x,dy=m->y-pose.localCenter.y;float forward=dx*std::cos(angle)+dy*std::sin(angle);assert(std::abs(forward-size.x*.5f*pose.deviceScale)<=.51f*pose.deviceScale);assert(pose.definition->sockets.front().x==0&&pose.definition->sockets.front().y==0);}
+  for(const auto& pose:poses)if(pose.definition->type==4){
+   auto m=pose.muzzle();assert(m);auto size=r.imageSize(pose.definition->image);
+   if(pose.definition->name.starts_with("AHeavyRocket")||pose.definition->name.starts_with("AHeavyAirStrike")){assert(size.x==1596&&size.y==112&&pose.definition->tileCount==7&&pose.definition->splitX==21&&size.x/pose.definition->splitX==76);continue;}
+   const float dx=m->x-pose.localCenter.x,dy=m->y-pose.localCenter.y;
+   const float forward=dx*std::cos(pose.angle)+dy*std::sin(pose.angle);
+   if(md::helicopterV5Body(models.machine(name)->front().name)){
+    const auto socket=pose.definition->sockets.at(1),pivot=pose.definition->sockets.at(0);
+    const float across=-dx*std::sin(pose.angle)+dy*std::cos(pose.angle);
+    assert(std::abs(forward-(socket.x-pivot.x)*pose.deviceScale)<.0001f);
+    assert(std::abs(across-(pose.reverse?-1.f:1.f)*(socket.y-pivot.y)*pose.deviceScale)<.0001f);
+    assert(socket.x>pivot.x&&std::abs(socket.x)<=size.x*.5f+.51f&&std::abs(socket.y)<=size.y*.5f+.51f);
+   }else assert(std::abs(forward-size.x*.5f*pose.deviceScale)<=.51f*pose.deviceScale);
+   assert(pose.definition->sockets.front().x==0&&pose.definition->sockets.front().y==0);
+  }
  }
 
  for(unsigned mode=0;mode<3;++mode){md::validation::AircraftComparisonScene scene(r,mode);auto& w=*scene.world;assert(w.actors().size()==4);auto before=scene.frame();unsigned heliSprites=0,shadows=0;for(const auto& s:before.sprites)if(s.image.starts_with("ALight")||s.image.starts_with("AHeavy")){assert(s.nearest);++heliSprites;if(s.color.r==0){++shadows;assert(s.color.a==.55f);}}assert(heliSprites==28&&shadows==14);

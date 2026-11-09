@@ -1,0 +1,6 @@
+Edit the supplied SIX-FRAME sprite sheet IN PLACE. Keep the 3x2 grid, same pixel locations, same canvas aspect ratio, each aircraft same short wide proportions and same nose and tail endpoint height. Do NOT enlarge, lengthen, redesign, zoom or recompose anything. The six identical sprites are provided as a registration template.
+Change only their physical bank/roll and the visible side-face pixels:
+Top-left: LEFT roll 8°. Top-middle LEFT16°. Top-right LEFT24°.
+Bottom-left RIGHT8°. Bottom-middle RIGHT16°. Bottom-right RIGHT24°.
+Aircraft noses stay pointing UP and tails DOWN. Roll is around the vertical nose-tail longitudinal axis. Wing span foreshortens slightly with angle, and the lower side's fuselage/wing/engine side face becomes visible. Left bank and right bank expose opposite sides. Nose-to-tail length remains exactly unchanged from this template; do not pitch the aircraft nose forward/back. Do not rotate the whole flat picture. Show real narrow side surfaces and changed occlusion instead.
+Preserve this exact approved olive-gray fuselage, wings, engines, cockpit, tail, gun stubs and central stationary rotor bearing. NO spinning rotor blades. No new decoration, no labels, no shadows. Keep transparent background. Do not alter paint or smooth the sprite. Return the same sheet with only those six roll poses corrected.

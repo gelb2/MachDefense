@@ -13,7 +13,7 @@ inline constexpr float aircraftAssemblyScale(std::string_view rootPart){
  if(rootPart=="ALightBody")return 1.f;
  if(rootPart=="AHeavyBody")return 1.32f*(231.f/296.f);
  if(rootPart=="ADuctBody")return .765f*(118.f/134.f);
- if(rootPart=="ATransportBody")return .765f*(164.f/196.f);
+ if(rootPart=="ATransportBody"||rootPart=="ATransportBodyV5"||rootPart.starts_with("ATransportBodyV5_"))return .765f*(164.f/196.f);
  return 1.f;
 }
 struct AircraftWeaponBinding { const char* part; const char* original; };

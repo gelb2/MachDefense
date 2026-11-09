@@ -35,6 +35,13 @@ def run():
      alias=source['name']+variant['weaponSuffix'];node['name']=alias
      if alias not in aliases:
       p=copy.deepcopy(source);p['name']=alias;p.pop('imageSource',None)
+      # A level-specific drawing can move its pivot/muzzle while retaining
+      # the existing weapon row, damage, sound and firing-effect binding.
+      if source['name'] in variant.get('weaponSockets',{}):
+       sockets=variant['weaponSockets'][source['name']]
+       assert len(sockets)==len(source['sockets']),alias
+       assert all(len(xy)==2 for xy in sockets),alias
+       p['sockets']=copy.deepcopy(sockets)
       authored_parts.append(p);aliases[alias]=source
       alias_images[alias]=variant.get('weaponImages',{}).get(source['name'],source['name'])
     visit(node['children'])

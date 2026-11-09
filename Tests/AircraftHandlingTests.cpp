@@ -1,6 +1,7 @@
 #include "SessionTestSupport.hpp"
 #include "Core/Simulation/AlliedAircraft.hpp"
 #include "Core/Simulation/AircraftVisual.hpp"
+#include "Core/Simulation/AircraftModels.hpp"
 int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
  for(const auto& spec:alliedAircraftCatalog){Host host;auto save=SaveData::empty(1);save.createProfile("HANDLING",1);World w(r,host,save,0);w.start(0);auto id=w.validationSpawn(std::string(spec.model)+"_01",true,{0,0});auto* a=w.actor(id);auto enemy=w.validationSpawn("Tur_Gun_01",false,{40,40});auto* e=w.actor(enemy);e->weapons.clear();e->hp=e->maxHP=10000000;a->target=enemy;
   for(int tick=0;tick<200;++tick)w.tick();
@@ -14,6 +15,25 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
   w.damage(id,a->hp);w.tick();assert(a->hp==0&&a->flightHeight==0&&a->flightTactics->bank==0&&a->aircraft.speed==0);
   Frame dead;w.appendSprites(dead);bool shadow=false;for(const auto& s:dead.sprites)if(s.image.starts_with(spec.model=="AircraftLight"?"ALight":spec.model=="AircraftHeavy"?"AHeavy":spec.model=="AircraftDuct"?"ADuct":"ATransport")&&s.color.r==0){assert(s.color.a==.18f);shadow=true;}assert(shadow);
  }
+ // V5 fixed parts use authored roll tiles at their own canvas dimensions.
+ // Weapon and rotor aliases must keep independent projection/rotation.
+ for(const char* part:{"ALightBodyV5_10","ALightArmorV5_10","ATransportBodyV5","ATransportBodyV5_01","ATransportBodyV5_10","ATransportWingLV5","ATransportWingRV5","ATransportEngineV5","ATransportRootLV5_01","ATransportRootRV5_10"}){
+  assert(helicopterDrawnPart(part));
+  Sprite s;s.image=std::string(part)+".png";s.sourcePx=Rect{0,0,91,63};s.destination={10,20,91,63};s.nearest=true;
+  for(unsigned tile=0;tile<7;++tile){
+   const float bank=tile==0?0.f:(tile<=3?-float(tile):float(tile-3))*.13962634f;
+   const auto mesh=aircraftBankMesh(s,{50,50},.7f,bank,{637,63});
+   assert(std::abs(mesh.vertices[0].uv.x-float(tile)/7)<.000001f);
+   assert(std::abs(mesh.vertices[1].uv.x-float(tile+1)/7)<.000001f);
+   assert(mesh.vertices[0].position.x==10&&mesh.vertices[0].position.y==20);
+   assert(mesh.vertices[3].position.x==101&&mesh.vertices[3].position.y==83);
+  }
+ }
+ for(const char* body:{"ATransportBodyV5","ATransportBodyV5_01","ATransportBodyV5_10"})
+  assert(aircraftAssemblyScale(body)==aircraftAssemblyScale("ATransportBody"));
+ assert(aircraftAssemblyScale("ALightBodyV5_10")==aircraftAssemblyScale("ALightBody"));
+ for(const char* part:{"ALightRotorV5_10","ALightGunV5_10","ALightMissileV5_10","ATransportFanV5"})
+  assert(!helicopterDrawnPart(part));
  // Seven original-style tiles: Scout has transparent padding around unchanged neutral pixels; rolls
  // select six distinct source rectangles without shearing the drawn body.
  for(const auto& body:std::array<std::pair<const char*,Vec2>,4>{{

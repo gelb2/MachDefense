@@ -15,7 +15,7 @@ int main(int argc,char**argv){
  stripCovers(machines);
  auto legacy=BattleModels::parse(parts,machines);
  legacy.configureTiles(DataTable::load(r.root/"Tables/PartsList.tsv"),DataTable::load(r.root/"Tables/TileList.tsv"));
- auto actual=BattleModels::load(r);unsigned cases=0;
+ auto actual=BattleModels::load(r);unsigned cases=0,v5Cases=0;
  for(const char* base:{"AircraftLight","AircraftHeavy","AircraftDuct","AircraftTransport"})for(unsigned level=1;level<=10;++level){
   char suffix[8];snprintf(suffix,sizeof suffix,"_%02u",level);auto name=std::string(base)+suffix;
   assert(persisted.machine(name));legacy.appendMachineVariant(name,base,suffix);
@@ -25,6 +25,49 @@ int main(int argc,char**argv){
    const bool belugaUpgrade=std::string_view(base)=="AircraftTransport";
    const bool cheyenneUpgrade=std::string_view(base)=="AircraftDuct";
    const bool scoutUpgrade=std::string_view(base)=="AircraftLight";
+   if(helicopterV5Body(actual.machine(name)->front().name)){
+    assert(belugaUpgrade||(scoutUpgrade&&level==10));
+    const float k=scale*aircraftAssemblyScale(belugaUpgrade?"ATransportBody":"ALightBody");
+    unsigned bodies=0,rotors=0;std::vector<std::string> weapons,oldWeapons;
+    for(const auto& p:b)if(p.definition->type==4)oldWeapons.push_back(p.definition->name);
+    for(const auto& p:a){
+     const auto& d=*p.definition;const auto size=r.imageSize(d.image);
+     assert(size.x>0&&size.y>0&&std::abs(p.deviceScale-k)<.000001f);
+     if(helicopterV5Body(d.name)){++bodies;assert(d.type==0);}
+     if(helicopterDrawnPart(d.name))assert(d.tileCount==7&&d.splitX==7&&d.splitY==1);
+     if(d.type==7){++rotors;assert(d.tileCount==1&&d.splitX==1&&d.splitY==1&&p.angle==angle+.2f);}
+     if(d.type==4){
+      weapons.push_back(d.name);assert(p.angle==angle+.1f&&d.tileCount==1&&d.splitX==1&&d.splitY==1);
+      assert(d.sockets.size()>=2);
+      for(unsigned j=1;j<d.sockets.size();++j){
+       const auto socket=d.sockets[j],pivot=d.sockets[0];const auto muzzle=p.muzzle(j);assert(muzzle);
+       assert(socket.x>pivot.x&&std::abs(socket.x)<=size.x*.5f+.51f&&std::abs(socket.y)<=size.y*.5f+.51f);
+       const Vec2 offset{(socket.x-pivot.x)*k,(p.reverse?-1.f:1.f)*(socket.y-pivot.y)*k};
+       const Vec2 expected{p.localCenter.x+offset.x*std::cos(p.angle)-offset.y*std::sin(p.angle),p.localCenter.y+offset.x*std::sin(p.angle)+offset.y*std::cos(p.angle)};
+       assert(std::abs(muzzle->x-expected.x)<.0001f&&std::abs(muzzle->y-expected.y)<.0001f);
+      }
+     }
+    }
+    std::sort(weapons.begin(),weapons.end());std::sort(oldWeapons.begin(),oldWeapons.end());
+    assert(bodies==1&&rotors==1&&weapons==oldWeapons&&weapons.size()==(scoutUpgrade?2:4));
+    Frame f;actual.appendSprites(f,a,{},[&](std::string_view n){return r.imageSize(n);});
+    for(const auto& sprite:f.sprites){
+     const auto partName=std::string_view(sprite.image).substr(0,sprite.image.size()-4);
+     if(!helicopterDrawnPart(partName))continue;
+     const auto size=r.imageSize(sprite.image);assert(sprite.sourcePx);
+     const auto source=*sprite.sourcePx;assert(source.width==size.x/7&&source.height==size.y&&source.x==0);
+     for(unsigned tile=0;tile<7;++tile){
+      const float bank=tile==0?0.f:(tile<=3?-float(tile):float(tile-3))*.13962634f;
+      const auto mesh=aircraftBankMesh(sprite,{},angle,bank,size),neutral=aircraftBankMesh(sprite,{},angle,0,size);
+      for(unsigned vertex=0;vertex<4;++vertex){
+       assert(mesh.vertices[vertex].position.x==neutral.vertices[vertex].position.x&&mesh.vertices[vertex].position.y==neutral.vertices[vertex].position.y);
+       assert(std::abs(mesh.vertices[vertex].uv.x-neutral.vertices[vertex].uv.x-float(tile)/7)<.000001f);
+       assert(mesh.vertices[vertex].uv.x>=0&&mesh.vertices[vertex].uv.x<=1);
+      }
+     }
+    }
+    ++v5Cases;continue;
+   }
    auto covers=std::count_if(a.begin(),a.end(),[](const auto& p){return p.definition->name.starts_with("ALightCover_");});assert(covers==(scoutUpgrade?1:0));
    for(const auto& p:a)if(scoutUpgrade&&p.definition->type==4)assert(p.definition->image==p.definition->name+".png");
    for(const auto& p:a)if(p.definition->name.starts_with("ALightCover_")){
@@ -164,5 +207,5 @@ int main(int argc,char**argv){
   }
  }
  std::cout<<fixedCases<<" AH-10 fixed pod muzzle cases retained across levels, scales, headings and bank poses\n";
- std::cout<<"40 persisted level assemblies; "<<cases<<" phone/pad pose cases preserve existing geometry, sockets and muzzles; only explicit Scout, Cheyenne, AH-10 and Beluga upgrade art differs\n";
+ std::cout<<"40 persisted level assemblies; "<<cases<<" unchanged phone/pad pose cases and "<<v5Cases<<" V5 authored-part cases checked\n";
 }
