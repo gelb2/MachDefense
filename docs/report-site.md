@@ -1,3 +1,9 @@
+# 원고 임의 완화 정정 — 2026-11-09
+
+[한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record-en.html). Codex는 쉴카·퉁구스카·다른 게임의 모티브에 관한 원문을 조건부 연상으로 바꾸고, DEI 비판에 원문에 없는 “느꼈다” 등의 문장을 넣었다. 지적된 네 문단을 보존된 원문의 다섯 구절로 복원했다. 과학적 사회주의에 관한 후속 정정도 원문대로 넣었다. 영어 본문과 다운로드를 맞췄다.
+
+[원문 대조](evidence/essay-original-restore-20261109/source-check.json) · [8화면·다운로드 검사](evidence/essay-original-restore-20261109/report-check.json) · [게시 근거](evidence/essay-original-restore-20261109/publication.json). 사이트 소스 `b526ee6d491608f26300675ec6b3637cdf92966b`, 배포 `appgdep_6af15cb12bf881918643d53671a96e8e` succeeded. 헬기 개발 보류와 오류 7건 기록은 유지했다.
+
 # 헬기 보류 이유 추가 글감 — 2026-11-09
 
 [한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record-en.html). 추가 글감을 한국어 원문 그대로 글감 모음·서문 끝·README에 넣고 영어 번역을 대응시켰다. 헬기 개선 중단과 시리즈 복원 우선 결정을 유지했다. 본문·다운로드·모바일/데스크톱 8화면·오류 7건 링크를 대조했다.
