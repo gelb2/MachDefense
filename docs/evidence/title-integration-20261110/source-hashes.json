@@ -1,0 +1,9 @@
+{
+  "Resources/Images/Title.jpg": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696",
+  "Resources/OriginalImages/Title.jpg": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696",
+  "Sources/Core/Presentation/Menu.cpp": "0f557422cfdb92c097bc54171fffe53276b6616035bdd62f9f46c6617d0e7bc5",
+  "Sources/Core/Presentation/TitleBackdrop.hpp": "94775257df340b6d292babcc1c14f940ea1d55d58d8642ce013ef0d1196a182d",
+  "tools/prepare_title_art.mjs": "dfa36ce8f7d9b749af5d1b15300a1bc2f148ec989456cb23da8e5a740130a3d0",
+  "Tests/MenuTests.cpp": "56c8fdd48541c9613ea2ca7fb3e64ad8330d0aed48d8f276b0264b77cc335c0f",
+  "Web/tests/title-layout.mjs": "9d72722380e6965bc3bf5ca26c3284853afe408802a8049440b867bfec9376da"
+}

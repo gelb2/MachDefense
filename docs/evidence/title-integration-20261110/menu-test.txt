@@ -1,0 +1,7 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/build/save-transfer
+    Start 23: Menu
+1/1 Test #23: Menu .............................   Passed    0.38 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   0.40 sec

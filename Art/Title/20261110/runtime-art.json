@@ -1,0 +1,42 @@
+{
+  "acceptedReport": "docs/research/title-joins-20261110.md",
+  "drawing": "docs/research/title-joins-20261110/composite.js",
+  "drawingSHA256": "ac9bcd63acf75582a844a4ebb46464fc45f7774c3f942f7c7e060d4dcfe0bf28",
+  "inputs": {
+    "Resources/Images/Title.jpg": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696",
+    "Art/Title/20261110/inputs/wide-natural.webp": "d35766b1e9d4cd2560f716bf51ba47f67f5873d44a41b63346ab31b5ac8c3d5f",
+    "Art/Title/20261110/inputs/tall.webp": "1aef5dc6bb3b9acda6ecab8afb48530d9776ae3cb8ba0fc54aabbab441985a0e"
+  },
+  "adoptedWideRegion": [
+    800,
+    0,
+    1600,
+    900
+  ],
+  "adoptedWidePixelsUnchanged": true,
+  "preparation": "Approved browser Canvas composition, then Apple pngcrush -iphone -f 0. Additional scenery beyond the adopted wide region supports 32:9 without vertical recropping. Only outside rectangles are consumed by the game; Title.jpg remains separate.",
+  "textures": [
+    {
+      "name": "Wide",
+      "width": 3200,
+      "height": 900,
+      "source": "Art/Title/20261110/prepared-source/Wide.png",
+      "sourceSHA256": "846d1d10b0d245c70232e35261a5522169ae026a0e03831491182ddf418d1cba",
+      "runtime": "Resources/Generated/Title/Wide.png",
+      "runtimeSHA256": "59429119c5f4f3418e0f800cf7a7149ecd757569847c9b55ac940059e80fe2a6",
+      "cgbi": true,
+      "preparedRGBAUnchanged": true
+    },
+    {
+      "name": "Tall",
+      "width": 390,
+      "height": 844,
+      "source": "Art/Title/20261110/prepared-source/Tall.png",
+      "sourceSHA256": "e3c4bf5e6afb704e41fbae9129841e97c9a1f1ce19d98f4aa50932303a26ec07",
+      "runtime": "Resources/Generated/Title/Tall.png",
+      "runtimeSHA256": "12db06b0a62862dda681bfe5561f21269d4332c1b7b6d5415963ad12e0be2333",
+      "cgbi": true,
+      "preparedRGBAUnchanged": true
+    }
+  ]
+}
