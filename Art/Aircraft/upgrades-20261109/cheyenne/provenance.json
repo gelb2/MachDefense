@@ -1,0 +1,365 @@
+{
+  "references": [
+    {
+      "name": "E_Tank30_Body.png",
+      "sha256": "b38cb48abb0855bf5d835bfb9cfe976099f2eccff31dc7e228cf9ce15da8e199"
+    },
+    {
+      "name": "E_Tank32_Wpn.png",
+      "sha256": "aca52d22d708fc6ae8a648d92ec20a702849434ab272a49c1776c06e9a1a67ef"
+    },
+    {
+      "name": "E_Turret14_Wpn.png",
+      "sha256": "18e41f032e921b06e942ad2c35f5c1ac325e42ce77a1bb5a3b948c04a17407c5"
+    },
+    {
+      "name": "ADuctBody.png",
+      "sha256": "5b5218102016a6f098c3ef275cadce83d9f58079121437ada465eac4401e2656"
+    },
+    {
+      "name": "ADuctMissile.png",
+      "sha256": "95d0fc0ea10942a547dc49edb4e80467cdc492a8c7c4dda41ce281cd0fdeac4f"
+    }
+  ],
+  "generation_records": [
+    {
+      "unit": "cheyenne",
+      "level": 1,
+      "prompt": "Use case: precise-object-edit / modular game upgrade parts. Image1 is the approved cheyenne body, nose RIGHT; preserve its identity and main paint. Images2–4 are original game's actual tank/turret parts, style references for layered armor, short bright metal bevels, dark panel gaps and sparse hazard markings. Create ONLY small SEPARATE replacement armor/weapon-housing PARTS for level1 surface improvement, not a whole aircraft. TWO isolated parts in one horizontal row: LEFT the dorsal cover; RIGHT a compact rear missile-pod housing with short mechanical retaining rails, no tubes or missile, final logical8x9. Do NOT make an extra gun. Body part geometry: an elongated low segmented dorsal spine cover with two shallow armor plates and a clearly recessed center joining rail; final logical18x10. It lies strictly within the central fuselage, never touches/replaces the circular duct rims or fans. All parts use muted cool blue-gray, exactly the adopted fuselage color, no saturated cyan. Base level1 has simple paired plates, small exposed mounts and one short seam, few large readable shapes; preserve room for later structural upgrades. Show TOP surface and one narrow shaded sidewall to convey thickness at strict orthographic TOP VIEW, nose RIGHT; no isometric camera. Add at most one tiny dull yellow-black hazard stripe at a mounting edge (under4% colored area), a same-color riveted repair lip; never paint an entire part another color. Match originals' worn but legible painted steel, no smooth shiny3D, thick white/black outlines or noisy scratches. Genuine transparent background with transparent gaps, no checkerboard, labels, text, floor, ground shadow, rotor, wing, cockpit, whole hull, barrel or projectile. Parts must remain compact and low-profile within approved body silhouettes. Separate parts with wide clear gutters.",
+      "generated": "exec-8d373d5f-65ad-488c-8dfa-b4ca1f8b1ecd.png",
+      "spec": {
+        "unit": "cheyenne",
+        "name": "ADuctBody",
+        "color": "muted cool blue-gray, exactly the adopted fuselage color, no saturated cyan",
+        "geometry": "an elongated low segmented dorsal spine cover with two shallow armor plates and a clearly recessed center joining rail; final logical18x10. It lies strictly within the central fuselage, never touches/replaces the circular duct rims or fans",
+        "weapons": "TWO isolated parts in one horizontal row: LEFT the dorsal cover; RIGHT a compact rear missile-pod housing with short mechanical retaining rails, no tubes or missile, final logical8x9. Do NOT make an extra gun."
+      }
+    },
+    {
+      "unit": "cheyenne",
+      "level": 2,
+      "prompt": "Use case: precise-object-edit / modular game parts. Edit the TWO PARTS in image1 to Cheyenne upgrade LEVEL 2. Keep their EXACT outer footprint, size, position, angle, muted cool blue-gray paint, and separate two-part horizontal layout. Image2 is the approved aircraft for palette/scale only; images3–5 are original game armor style references. The left elongated dorsal cover stays a narrow spine cover; the right part stays only the rear missile housing shell, NO tubes/barrels added. Change ONLY internal construction as follows: two shallow edge flanges and a short exposed cross rib; rear casing has one added support lip. The difference must be actual distinct overlapping plates, support ribs and recessed gaps, not tint/scratch-only changes. Preserve the original single small hazard stripe location and sparse same-color repair edge. Keep dark undercuts and short bright bevels legible at tiny game size (left24x8, right8x9). No whole aircraft, duct/fan, new color panel, extra decoration, floor shadow, labels or background. Genuine transparency everywhere outside the two parts; NO painted checkerboard. Same strict orthographic top view, noseRIGHT. Do not enlarge or shrink with level.",
+      "refs": [
+        "cheyenne/lv01-parts-generated.png",
+        "references/ADuctBody-neutral.png",
+        "references/E_Tank30_Body.png",
+        "references/E_Tank32_Wpn.png",
+        "references/E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-214f7ad4-bf36-4571-87d1-ff91d499bedc.png"
+    },
+    {
+      "unit": "cheyenne",
+      "level": 3,
+      "prompt": "Use case: precise-object-edit / modular game parts. Edit the TWO PARTS in image1 to Cheyenne upgrade LEVEL 3. Keep their EXACT outer footprint, size, position, angle, muted cool blue-gray paint, and separate two-part horizontal layout. Image2 is the approved aircraft for palette/scale only; images3–5 are original game armor style references. The left elongated dorsal cover stays a narrow spine cover; the right part stays only the rear missile housing shell, NO tubes/barrels added. Change ONLY internal construction as follows: two overlapping small armor layers with a narrow gap; rear casing uses a double hood. The difference must be actual distinct overlapping plates, support ribs and recessed gaps, not tint/scratch-only changes. Preserve the original single small hazard stripe location and sparse same-color repair edge. Keep dark undercuts and short bright bevels legible at tiny game size (left24x8, right8x9). No whole aircraft, duct/fan, new color panel, extra decoration, floor shadow, labels or background. Genuine transparency everywhere outside the two parts; NO painted checkerboard. Same strict orthographic top view, noseRIGHT. Do not enlarge or shrink with level.",
+      "refs": [
+        "cheyenne/lv01-parts-generated.png",
+        "references/ADuctBody-neutral.png",
+        "references/E_Tank30_Body.png",
+        "references/E_Tank32_Wpn.png",
+        "references/E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-25ab4bd3-d82e-4152-bd1d-aaa8a879d3d8.png"
+    },
+    {
+      "unit": "cheyenne",
+      "level": 4,
+      "prompt": "Use case: precise-object-edit / modular game parts. Edit the TWO PARTS in image1 to Cheyenne upgrade LEVEL 4. Keep their EXACT outer footprint, size, position, angle, muted cool blue-gray paint, and separate two-part horizontal layout. Image2 is the approved aircraft for palette/scale only; images3–5 are original game armor style references. The left elongated dorsal cover stays a narrow spine cover; the right part stays only the rear missile housing shell, NO tubes/barrels added. Change ONLY internal construction as follows: exposed mechanical side brace and a recessed joining channel; rear casing uses open support rails. The difference must be actual distinct overlapping plates, support ribs and recessed gaps, not tint/scratch-only changes. Preserve the original single small hazard stripe location and sparse same-color repair edge. Keep dark undercuts and short bright bevels legible at tiny game size (left24x8, right8x9). No whole aircraft, duct/fan, new color panel, extra decoration, floor shadow, labels or background. Genuine transparency everywhere outside the two parts; NO painted checkerboard. Same strict orthographic top view, noseRIGHT. Do not enlarge or shrink with level.",
+      "refs": [
+        "cheyenne/lv01-parts-generated.png",
+        "references/ADuctBody-neutral.png",
+        "references/E_Tank30_Body.png",
+        "references/E_Tank32_Wpn.png",
+        "references/E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-1db31979-36e8-48c5-b194-7ed440360efc.png"
+    },
+    {
+      "unit": "cheyenne",
+      "level": 5,
+      "prompt": "Use case: precise-object-edit / modular game parts. Edit the TWO PARTS in image1 to Cheyenne upgrade LEVEL 5. Keep their EXACT outer footprint, size, position, angle, muted cool blue-gray paint, and separate two-part horizontal layout. Image2 is the approved aircraft for palette/scale only; images3–5 are original game armor style references. The left elongated dorsal cover stays a narrow spine cover; the right part stays only the rear missile housing shell, NO tubes/barrels added. Change ONLY internal construction as follows: split armor plates and a short bridging connector with inset fasteners; rear casing has offset attachment blocks. The difference must be actual distinct overlapping plates, support ribs and recessed gaps, not tint/scratch-only changes. Preserve the original single small hazard stripe location and sparse same-color repair edge. Keep dark undercuts and short bright bevels legible at tiny game size (left24x8, right8x9). No whole aircraft, duct/fan, new color panel, extra decoration, floor shadow, labels or background. Genuine transparency everywhere outside the two parts; NO painted checkerboard. Same strict orthographic top view, noseRIGHT. Do not enlarge or shrink with level.",
+      "refs": [
+        "cheyenne/lv01-parts-generated.png",
+        "references/ADuctBody-neutral.png",
+        "references/E_Tank30_Body.png",
+        "references/E_Tank32_Wpn.png",
+        "references/E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-3641ed09-01c1-4f15-9164-e71e2ef749c4.png"
+    },
+    {
+      "unit": "cheyenne",
+      "level": 6,
+      "prompt": "Use case: precise-object-edit / modular game parts. Edit the TWO PARTS in image1 to Cheyenne upgrade LEVEL 6. Keep their EXACT outer footprint, size, position, angle, muted cool blue-gray paint, and separate two-part horizontal layout. Image2 is the approved aircraft for palette/scale only; images3–5 are original game armor style references. The left elongated dorsal cover stays a narrow spine cover; the right part stays only the rear missile housing shell, NO tubes/barrels added. Change ONLY internal construction as follows: three interlocking angular modules with dark separation notches; rear casing has upper and lower case pieces. The difference must be actual distinct overlapping plates, support ribs and recessed gaps, not tint/scratch-only changes. Preserve the original single small hazard stripe location and sparse same-color repair edge. Keep dark undercuts and short bright bevels legible at tiny game size (left24x8, right8x9). No whole aircraft, duct/fan, new color panel, extra decoration, floor shadow, labels or background. Genuine transparency everywhere outside the two parts; NO painted checkerboard. Same strict orthographic top view, noseRIGHT. Do not enlarge or shrink with level.",
+      "refs": [
+        "cheyenne/lv01-parts-generated.png",
+        "references/ADuctBody-neutral.png",
+        "references/E_Tank30_Body.png",
+        "references/E_Tank32_Wpn.png",
+        "references/E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-904fa907-ee74-4c0c-a1d6-b4c019c31cba.png"
+    },
+    {
+      "unit": "cheyenne",
+      "level": 7,
+      "prompt": "Use case: precise-object-edit / modular game parts. Edit the TWO PARTS in image1 to Cheyenne upgrade LEVEL 7. Keep their EXACT outer footprint, size, position, angle, muted cool blue-gray paint, and separate two-part horizontal layout. Image2 is the approved aircraft for palette/scale only; images3–5 are original game armor style references. The left elongated dorsal cover stays a narrow spine cover; the right part stays only the rear missile housing shell, NO tubes/barrels added. Change ONLY internal construction as follows: cross-braced plates with a small visible mechanical channel; rear casing has a split cover exposing its mount. The difference must be actual distinct overlapping plates, support ribs and recessed gaps, not tint/scratch-only changes. Preserve the original single small hazard stripe location and sparse same-color repair edge. Keep dark undercuts and short bright bevels legible at tiny game size (left24x8, right8x9). No whole aircraft, duct/fan, new color panel, extra decoration, floor shadow, labels or background. Genuine transparency everywhere outside the two parts; NO painted checkerboard. Same strict orthographic top view, noseRIGHT. Do not enlarge or shrink with level.",
+      "refs": [
+        "cheyenne/lv01-parts-generated.png",
+        "references/ADuctBody-neutral.png",
+        "references/E_Tank30_Body.png",
+        "references/E_Tank32_Wpn.png",
+        "references/E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-b7a90553-b96f-4ecc-9a7f-ee671908f870.png"
+    },
+    {
+      "unit": "cheyenne",
+      "level": 8,
+      "prompt": "Use case: precise-object-edit / modular game parts. Edit the TWO PARTS in image1 to Cheyenne upgrade LEVEL 8. Keep their EXACT outer footprint, size, position, angle, muted cool blue-gray paint, and separate two-part horizontal layout. Image2 is the approved aircraft for palette/scale only; images3–5 are original game armor style references. The left elongated dorsal cover stays a narrow spine cover; the right part stays only the rear missile housing shell, NO tubes/barrels added. Change ONLY internal construction as follows: independent beveled flank guards and a narrow center strap; rear casing has two angular side shields. The difference must be actual distinct overlapping plates, support ribs and recessed gaps, not tint/scratch-only changes. Preserve the original single small hazard stripe location and sparse same-color repair edge. Keep dark undercuts and short bright bevels legible at tiny game size (left24x8, right8x9). No whole aircraft, duct/fan, new color panel, extra decoration, floor shadow, labels or background. Genuine transparency everywhere outside the two parts; NO painted checkerboard. Same strict orthographic top view, noseRIGHT. Do not enlarge or shrink with level.",
+      "refs": [
+        "cheyenne/lv01-parts-generated.png",
+        "references/ADuctBody-neutral.png",
+        "references/E_Tank30_Body.png",
+        "references/E_Tank32_Wpn.png",
+        "references/E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-3bb55898-0ee7-4559-a121-8e95a39e39dd.png"
+    },
+    {
+      "unit": "cheyenne",
+      "level": 9,
+      "prompt": "Use case: precise-object-edit / modular game parts. Edit the TWO PARTS in image1 to Cheyenne upgrade LEVEL 9. Keep their EXACT outer footprint, size, position, angle, muted cool blue-gray paint, and separate two-part horizontal layout. Image2 is the approved aircraft for palette/scale only; images3–5 are original game armor style references. The left elongated dorsal cover stays a narrow spine cover; the right part stays only the rear missile housing shell, NO tubes/barrels added. Change ONLY internal construction as follows: three-piece stepped armor with a narrow connecting spine; rear casing has three wrapping rear panels. The difference must be actual distinct overlapping plates, support ribs and recessed gaps, not tint/scratch-only changes. Preserve the original single small hazard stripe location and sparse same-color repair edge. Keep dark undercuts and short bright bevels legible at tiny game size (left24x8, right8x9). No whole aircraft, duct/fan, new color panel, extra decoration, floor shadow, labels or background. Genuine transparency everywhere outside the two parts; NO painted checkerboard. Same strict orthographic top view, noseRIGHT. Do not enlarge or shrink with level.",
+      "refs": [
+        "cheyenne/lv01-parts-generated.png",
+        "references/ADuctBody-neutral.png",
+        "references/E_Tank30_Body.png",
+        "references/E_Tank32_Wpn.png",
+        "references/E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-af840d3a-6d07-4b0f-8f0e-186e169099a9.png"
+    },
+    {
+      "unit": "cheyenne",
+      "level": 10,
+      "prompt": "Use case: precise-object-edit / modular game parts. Edit the TWO PARTS in image1 to Cheyenne upgrade LEVEL 10. Keep their EXACT outer footprint, size, position, angle, muted cool blue-gray paint, and separate two-part horizontal layout. Image2 is the approved aircraft for palette/scale only; images3–5 are original game armor style references. The left elongated dorsal cover stays a narrow spine cover; the right part stays only the rear missile housing shell, NO tubes/barrels added. Change ONLY internal construction as follows: several clearly layered armor segments, a recessed center joint and short exposed retaining ribs; rear casing has separately supported top and side panels. The difference must be actual distinct overlapping plates, support ribs and recessed gaps, not tint/scratch-only changes. Preserve the original single small hazard stripe location and sparse same-color repair edge. Keep dark undercuts and short bright bevels legible at tiny game size (left24x8, right8x9). No whole aircraft, duct/fan, new color panel, extra decoration, floor shadow, labels or background. Genuine transparency everywhere outside the two parts; NO painted checkerboard. Same strict orthographic top view, noseRIGHT. Do not enlarge or shrink with level.",
+      "refs": [
+        "cheyenne/lv01-parts-generated.png",
+        "references/ADuctBody-neutral.png",
+        "references/E_Tank30_Body.png",
+        "references/E_Tank32_Wpn.png",
+        "references/E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-d88492cf-1e8c-49b3-aa05-f8783b2286ee.png"
+    },
+    {
+      "key": "cheyenne_bank_group1",
+      "unit": "cheyenne",
+      "group": 1,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "prompt": "Use case: sprite bank-angle sheet. Image1 has EXACTLY 3 neutral dorsal-cover parts arranged top to bottom, levels 1,2,3. Preserve EACH row's exact mechanical panel pattern, blue-gray paint, size, rivets and existing small hazard stripe. Image2 has the approved Cheyenne aircraft's seven bank-angle frames, NOSE RIGHT throughout; match its roll projections only, do NOT draw the aircraft. Images3–5 show original game metal shading. Output a STRICT GRID with 3 ROWS and SEVEN COLUMNS on genuine transparent background, each cell the ISOLATED cover only. Row order equals image1 top-to-bottom. Column order: neutral, left bank mild, left bank medium, left bank strongest, right bank mild, right bank medium, right bank strongest. Every row must keep the same cover's panel arrangement in all seven cells. Draw the changing narrow sidewalls, foreshortened top plates and joint shadows for a roll about the horizontal nose-right axis, following image2; NOT yaw or nose-up pitch, NOT a flat-card shear, NOT in-plane rotation. Do not redesign or change part dimensions as it banks. The first cell of each row exactly matches its corresponding neutral input. All cells evenly spaced with wide transparent gutters, no grid lines, no captions or numbers. No whole aircraft/rotor/fan/weapon, no new colors or floor shadow, no fake checkerboard. Keep component geometry clear at a final24x8 logical pixel scale; few readable bevels and dark panel gaps, no noisy new decoration.",
+      "generated": "exec-672d1fcf-20c6-48c6-b8f6-5a3abf03273f.png"
+    },
+    {
+      "key": "cheyenne_bank_group2",
+      "unit": "cheyenne",
+      "group": 2,
+      "levels": [
+        4,
+        5,
+        6
+      ],
+      "prompt": "Use case: sprite bank-angle sheet. Image1 has EXACTLY 3 neutral dorsal-cover parts arranged top to bottom, levels 4,5,6. Preserve EACH row's exact mechanical panel pattern, blue-gray paint, size, rivets and existing small hazard stripe. Image2 has the approved Cheyenne aircraft's seven bank-angle frames, NOSE RIGHT throughout; match its roll projections only, do NOT draw the aircraft. Images3–5 show original game metal shading. Output a STRICT GRID with 3 ROWS and SEVEN COLUMNS on genuine transparent background, each cell the ISOLATED cover only. Row order equals image1 top-to-bottom. Column order: neutral, left bank mild, left bank medium, left bank strongest, right bank mild, right bank medium, right bank strongest. Every row must keep the same cover's panel arrangement in all seven cells. Draw the changing narrow sidewalls, foreshortened top plates and joint shadows for a roll about the horizontal nose-right axis, following image2; NOT yaw or nose-up pitch, NOT a flat-card shear, NOT in-plane rotation. Do not redesign or change part dimensions as it banks. The first cell of each row exactly matches its corresponding neutral input. All cells evenly spaced with wide transparent gutters, no grid lines, no captions or numbers. No whole aircraft/rotor/fan/weapon, no new colors or floor shadow, no fake checkerboard. Keep component geometry clear at a final24x8 logical pixel scale; few readable bevels and dark panel gaps, no noisy new decoration.",
+      "generated": "exec-ec5dae40-b049-4a43-9c8c-9bcce2847f92.png"
+    },
+    {
+      "key": "cheyenne_bank_group3",
+      "unit": "cheyenne",
+      "group": 3,
+      "levels": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "prompt": "Use case: sprite bank-angle sheet. Image1 has EXACTLY 4 neutral dorsal-cover parts arranged top to bottom, levels 7,8,9,10. Preserve EACH row's exact mechanical panel pattern, blue-gray paint, size, rivets and existing small hazard stripe. Image2 has the approved Cheyenne aircraft's seven bank-angle frames, NOSE RIGHT throughout; match its roll projections only, do NOT draw the aircraft. Images3–5 show original game metal shading. Output a STRICT GRID with 4 ROWS and SEVEN COLUMNS on genuine transparent background, each cell the ISOLATED cover only. Row order equals image1 top-to-bottom. Column order: neutral, left bank mild, left bank medium, left bank strongest, right bank mild, right bank medium, right bank strongest. Every row must keep the same cover's panel arrangement in all seven cells. Draw the changing narrow sidewalls, foreshortened top plates and joint shadows for a roll about the horizontal nose-right axis, following image2; NOT yaw or nose-up pitch, NOT a flat-card shear, NOT in-plane rotation. Do not redesign or change part dimensions as it banks. The first cell of each row exactly matches its corresponding neutral input. All cells evenly spaced with wide transparent gutters, no grid lines, no captions or numbers. No whole aircraft/rotor/fan/weapon, no new colors or floor shadow, no fake checkerboard. Keep component geometry clear at a final24x8 logical pixel scale; few readable bevels and dark panel gaps, no noisy new decoration.",
+      "generated": "exec-b035e879-132d-41bf-8bfa-a249edde9277.png"
+    }
+  ],
+  "generation_sources": [
+    {
+      "name": "all-neutrals-generated.png",
+      "sha256": "ce87fed78b3752c152dea89cbf2eecff8bd34d8f25db8f818ca02deff995a284"
+    },
+    {
+      "name": "lv01-parts-generated.png",
+      "sha256": "6e31f1db4283c35041cbf2b8762b9efe449678b8b76c9daa61066079ac25f62c"
+    },
+    {
+      "name": "lv02-parts-generated.png",
+      "sha256": "a7dc919d2e42ddbb9598671fcdc3c0d02a7bc036b048d7083be1dc37f397a040"
+    },
+    {
+      "name": "lv03-parts-generated.png",
+      "sha256": "560cb97618a39d23142dd73076bc6d2bd071a595eaae5beb09a52d1a496a8a58"
+    },
+    {
+      "name": "lv04-parts-generated.png",
+      "sha256": "571587d7d1798e75b4c651f903456dede15ca0809980d0b01f98a1d0d7d8bff7"
+    },
+    {
+      "name": "lv05-parts-generated.png",
+      "sha256": "a4b2e419d843a5950544f6f842e81b479b0914bf3924b7e8d889374a5cfa9030"
+    },
+    {
+      "name": "lv06-parts-generated.png",
+      "sha256": "9d7d6745ec7269666cf6ade0e5b92b9683bce9cd727db2340948385302f4dec0"
+    },
+    {
+      "name": "lv07-parts-generated.png",
+      "sha256": "48b8e0cef58ff9084813390149a045dc69047148fd6bf545b54e8d7c142a727f"
+    },
+    {
+      "name": "lv08-parts-generated.png",
+      "sha256": "cd1af0bbe834f5ffa64785d153fc854753747b88371752e0499f4b7e344dee54"
+    },
+    {
+      "name": "lv09-parts-generated.png",
+      "sha256": "9754092bdd5201a0914f8cfa4e7a2173228e6f451ffa102bcf2786461c80502b"
+    },
+    {
+      "name": "lv10-parts-generated.png",
+      "sha256": "60555345e3313f059cc1f4d9f9e0acc4e8217951a59b3b447dadda2f95dae785"
+    },
+    {
+      "name": "cheyenne_bank_group1.png",
+      "sha256": "d371baeca2d30f93843feab061fb4f0b72abc94cf30052169e1545d1aed1d5aa"
+    },
+    {
+      "name": "cheyenne_bank_group2.png",
+      "sha256": "13b863de533260a18a24700af9fa05ac58790f29a91caf4033b846601fe7fd1b"
+    },
+    {
+      "name": "cheyenne_bank_group3.png",
+      "sha256": "a5bf8f747043d96d91282c978cc143c39a95932d39b719e48c417e25628245d9"
+    }
+  ],
+  "products": [
+    {
+      "name": "ADuctCover_01.png",
+      "sha256": "3f027def1c2a4287bd24b80d8f8a4a97dd92e2bea110c103000f4bc3fd1eca41"
+    },
+    {
+      "name": "ADuctCover_02.png",
+      "sha256": "a5d4309ca9d8e36e9f61183d953468a3aa31cbe18c3f2eb95773820c9a7f9552"
+    },
+    {
+      "name": "ADuctCover_03.png",
+      "sha256": "07bd52cc1eb30486f6b592c07ac0a09bba1c7eb5584c4e5257ba320dee5ca929"
+    },
+    {
+      "name": "ADuctCover_04.png",
+      "sha256": "76a6cd0d55edc7d6267633c62bb218b30f368b1fd900ff14fadb4a2eb8e9a65b"
+    },
+    {
+      "name": "ADuctCover_05.png",
+      "sha256": "2c2a64e7d087779ec3d25ab298d7e741673ea56ab91cee35b0f3a07c9b1390c5"
+    },
+    {
+      "name": "ADuctCover_06.png",
+      "sha256": "3d6aafb3f3f3bb3375b623e767eda820f27b3103e4b0707283165338a26194cb"
+    },
+    {
+      "name": "ADuctCover_07.png",
+      "sha256": "179adb89bee22e6873d1225dbb7b97fb3728f1838481096317300a7c99b90450"
+    },
+    {
+      "name": "ADuctCover_08.png",
+      "sha256": "f7abce13c023935377b3be419a2baf02588d43f13883c4c9a62316b81c4f413b"
+    },
+    {
+      "name": "ADuctCover_09.png",
+      "sha256": "7f5a2151276e08602cb3d297a636d4bb91de3c392f08167d860b92e6fec6d9c2"
+    },
+    {
+      "name": "ADuctCover_10.png",
+      "sha256": "3fd0133690264ffc0b9cf7daa22bfe069cab293fd80ecec49ed3677186c05b46"
+    },
+    {
+      "name": "ADuctMissile_01.png",
+      "sha256": "bd1cf73f51d8def922c5a4595823b68816c4e0343779c5394230e2acb94aab74"
+    },
+    {
+      "name": "ADuctMissile_02.png",
+      "sha256": "5c954bb37945adda492fbc78fe0bc9be6455d42b0e179150247a9cc28aec02f0"
+    },
+    {
+      "name": "ADuctMissile_03.png",
+      "sha256": "6f1dad16a4877f8fc9c5433ed96e01fc33dac5b9cc4eabe45d5854ff1ae90744"
+    },
+    {
+      "name": "ADuctMissile_04.png",
+      "sha256": "3d9d4a62f3ef3eaee5dae72c72f8da0a319f7252f0c961f9f28c1d266dae02bc"
+    },
+    {
+      "name": "ADuctMissile_05.png",
+      "sha256": "89c17cd7143e4cf58d4338e19a2af317629453a1b943a0aefa90310ff1438411"
+    },
+    {
+      "name": "ADuctMissile_06.png",
+      "sha256": "d1957067e5557c9bc9ea0a7eba7eb563a281211ccc5468d3f9f701207c15950c"
+    },
+    {
+      "name": "ADuctMissile_07.png",
+      "sha256": "9f3a3ea6c7097ef01e0d2cb1c76b1a733a7aa2168c7c036a66f3593516b14bef"
+    },
+    {
+      "name": "ADuctMissile_08.png",
+      "sha256": "416aa33ff80ee3c01dad9bfaf0671b5e5164eee55625af263c32526a0765b3e9"
+    },
+    {
+      "name": "ADuctMissile_09.png",
+      "sha256": "dcb85f9bc385ccedeeea6c595f72ad41056919686e90dc02d7c5987b9119e878"
+    },
+    {
+      "name": "ADuctMissile_10.png",
+      "sha256": "e7cd7bbc94817f5826cdde08664aa311007e134cff480e42c6132d60d30cec9f"
+    }
+  ],
+  "failure_records": {
+    "first_parallel": {
+      "request_id": "689f6e2b-9796-457b-859b-5d09ab4c0c36",
+      "status": 400,
+      "code": "moderation_blocked",
+      "stage": "input",
+      "categories": [
+        "violence"
+      ],
+      "unit": "not attributable from first rejected Promise.all result",
+      "other_unreturned_request": "result not received; execution state not established"
+    },
+    "beluga_identical_retry": {
+      "prompt": "Use case: precise-object-edit / modular game upgrade parts. Image1 is the approved beluga body, nose RIGHT; preserve its identity and main paint. Images2–4 are original game's actual tank/turret parts, style references for layered armor, short bright metal bevels, dark panel gaps and sparse hazard markings. Create ONLY small SEPARATE replacement armor/weapon-housing PARTS for level1 surface improvement, not a whole aircraft. THREE isolated parts in one horizontal row: LEFT the deck-cover assembly; MIDDLE a compact HMG rear casing armor shell, no barrel, final logical8x8; RIGHT a missile-pod rear retaining shell/rails, no tubes or missile, final logical9x9. Body part geometry: a shallow open rectangular deck-cover assembly consisting of two LONGITUDINAL side armor plates with a narrow mechanical channel between them; two tiny rear mounting lips. This replaces only an interior engine-shoulder cover region, final logical footprint 18x12; never a wing, nacelle or whole fuselage. All parts use warm ivory-grey, exactly the adopted fuselage color (not bright white or olive repaint). Base level1 has simple paired plates, small exposed mounts and one short seam, few large readable shapes; preserve room for later structural upgrades. Show TOP surface and one narrow shaded sidewall to convey thickness at strict orthographic TOP VIEW, nose RIGHT; no isometric camera. Add at most one tiny dull yellow-black hazard stripe at a mounting edge (under4% colored area), a same-color riveted repair lip; never paint an entire part another color. Match originals' worn but legible painted steel, no smooth shiny3D, thick white/black outlines or noisy scratches. Genuine transparent background with transparent gaps, no checkerboard, labels, text, floor, ground shadow, rotor, wing, cockpit, whole hull, barrel or projectile. Parts must remain compact and low-profile within approved body silhouettes. Separate parts with wide clear gutters.",
+      "refs": [
+        "ATransportBody-neutral.png",
+        "E_Tank30_Body.png",
+        "E_Tank32_Wpn.png",
+        "E_Turret14_Wpn.png"
+      ],
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID db0a3ced-1fbd-40b8-813b-7dbfb5f7b6de. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"input\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "request_id": "db0a3ced-1fbd-40b8-813b-7dbfb5f7b6de",
+      "status": 400,
+      "code": "moderation_blocked",
+      "stage": "input",
+      "categories": [
+        "violence"
+      ]
+    }
+  },
+  "preparation": "cover: common scale for each grouped drawing sheet, neutral exact approved preparation, fixed 28x14 cell at body(35,37); independently drawn six bank poses, not shear. Missile: generated rear housing colors in existing alpha; front columns8..17 and all alpha preserved.",
+  "scope": "Only Cheyenne ready assets; raw generation and audit preserved locally; World output validation pending."
+}

@@ -1,0 +1,364 @@
+{
+  "engine": "webkit",
+  "url": "http://127.0.0.1:8957",
+  "poses": [
+    {
+      "level": 1,
+      "tile": 0
+    },
+    {
+      "level": 1,
+      "tile": 1
+    },
+    {
+      "level": 1,
+      "tile": 2
+    },
+    {
+      "level": 1,
+      "tile": 3
+    },
+    {
+      "level": 1,
+      "tile": 4
+    },
+    {
+      "level": 1,
+      "tile": 5
+    },
+    {
+      "level": 1,
+      "tile": 6
+    },
+    {
+      "level": 2,
+      "tile": 0
+    },
+    {
+      "level": 2,
+      "tile": 1
+    },
+    {
+      "level": 2,
+      "tile": 2
+    },
+    {
+      "level": 2,
+      "tile": 3
+    },
+    {
+      "level": 2,
+      "tile": 4
+    },
+    {
+      "level": 2,
+      "tile": 5
+    },
+    {
+      "level": 2,
+      "tile": 6
+    },
+    {
+      "level": 3,
+      "tile": 0
+    },
+    {
+      "level": 3,
+      "tile": 1
+    },
+    {
+      "level": 3,
+      "tile": 2
+    },
+    {
+      "level": 3,
+      "tile": 3
+    },
+    {
+      "level": 3,
+      "tile": 4
+    },
+    {
+      "level": 3,
+      "tile": 5
+    },
+    {
+      "level": 3,
+      "tile": 6
+    },
+    {
+      "level": 4,
+      "tile": 0
+    },
+    {
+      "level": 4,
+      "tile": 1
+    },
+    {
+      "level": 4,
+      "tile": 2
+    },
+    {
+      "level": 4,
+      "tile": 3
+    },
+    {
+      "level": 4,
+      "tile": 4
+    },
+    {
+      "level": 4,
+      "tile": 5
+    },
+    {
+      "level": 4,
+      "tile": 6
+    },
+    {
+      "level": 5,
+      "tile": 0
+    },
+    {
+      "level": 5,
+      "tile": 1
+    },
+    {
+      "level": 5,
+      "tile": 2
+    },
+    {
+      "level": 5,
+      "tile": 3
+    },
+    {
+      "level": 5,
+      "tile": 4
+    },
+    {
+      "level": 5,
+      "tile": 5
+    },
+    {
+      "level": 5,
+      "tile": 6
+    },
+    {
+      "level": 6,
+      "tile": 0
+    },
+    {
+      "level": 6,
+      "tile": 1
+    },
+    {
+      "level": 6,
+      "tile": 2
+    },
+    {
+      "level": 6,
+      "tile": 3
+    },
+    {
+      "level": 6,
+      "tile": 4
+    },
+    {
+      "level": 6,
+      "tile": 5
+    },
+    {
+      "level": 6,
+      "tile": 6
+    },
+    {
+      "level": 7,
+      "tile": 0
+    },
+    {
+      "level": 7,
+      "tile": 1
+    },
+    {
+      "level": 7,
+      "tile": 2
+    },
+    {
+      "level": 7,
+      "tile": 3
+    },
+    {
+      "level": 7,
+      "tile": 4
+    },
+    {
+      "level": 7,
+      "tile": 5
+    },
+    {
+      "level": 7,
+      "tile": 6
+    },
+    {
+      "level": 8,
+      "tile": 0
+    },
+    {
+      "level": 8,
+      "tile": 1
+    },
+    {
+      "level": 8,
+      "tile": 2
+    },
+    {
+      "level": 8,
+      "tile": 3
+    },
+    {
+      "level": 8,
+      "tile": 4
+    },
+    {
+      "level": 8,
+      "tile": 5
+    },
+    {
+      "level": 8,
+      "tile": 6
+    },
+    {
+      "level": 9,
+      "tile": 0
+    },
+    {
+      "level": 9,
+      "tile": 1
+    },
+    {
+      "level": 9,
+      "tile": 2
+    },
+    {
+      "level": 9,
+      "tile": 3
+    },
+    {
+      "level": 9,
+      "tile": 4
+    },
+    {
+      "level": 9,
+      "tile": 5
+    },
+    {
+      "level": 9,
+      "tile": 6
+    },
+    {
+      "level": 10,
+      "tile": 0
+    },
+    {
+      "level": 10,
+      "tile": 1
+    },
+    {
+      "level": 10,
+      "tile": 2
+    },
+    {
+      "level": 10,
+      "tile": 3
+    },
+    {
+      "level": 10,
+      "tile": 4
+    },
+    {
+      "level": 10,
+      "tile": 5
+    },
+    {
+      "level": 10,
+      "tile": 6
+    }
+  ],
+  "testOnlyChange": "Existing visual fixture receives level through mode/1000; product movement/render paths unchanged",
+  "imageReads": [
+    "/assets/Images/ALightBody.png",
+    "/assets/Images/ALightGun.png",
+    "/assets/Images/ALightMissile.png",
+    "/assets/Images/ALightRotor.png",
+    "/assets/Images/AHeavyBody.png",
+    "/assets/Images/AHeavyGun.png",
+    "/assets/Images/AHeavyMissile.png",
+    "/assets/Images/AHeavyCannon.png",
+    "/assets/Images/AHeavyRocket.png",
+    "/assets/Images/AHeavyAirStrike.png",
+    "/assets/Images/AHeavyRotor.png",
+    "/assets/Images/ADuctBody.png",
+    "/assets/Images/ADuctCover_01.png",
+    "/assets/Images/ADuctFan.png",
+    "/assets/Images/ADuctGun.png",
+    "/assets/Images/ADuctMissile_01.png",
+    "/assets/Images/ATransportBody.png",
+    "/assets/Images/ATransportWingL.png",
+    "/assets/Images/ATransportWingR.png",
+    "/assets/Images/ATransportEngine.png",
+    "/assets/Images/ATransportGun.png",
+    "/assets/Images/ATransportMissile.png",
+    "/assets/Images/ATransportFan.png",
+    "/assets/Images/E_Tank32_Body.png",
+    "/assets/Images/E_Tank32_Wpn.png",
+    "/assets/Images/BG_01_01.jpg",
+    "/assets/Images/BG_01_02.jpg",
+    "/assets/Images/ALightCover_02.png",
+    "/assets/Images/ALightGun_02.png",
+    "/assets/Images/ALightMissile_02.png",
+    "/assets/Images/ADuctCover_02.png",
+    "/assets/Images/ADuctMissile_02.png",
+    "/assets/Images/ALightCover_03.png",
+    "/assets/Images/ALightGun_03.png",
+    "/assets/Images/ALightMissile_03.png",
+    "/assets/Images/ADuctCover_03.png",
+    "/assets/Images/ADuctMissile_03.png",
+    "/assets/Images/ALightCover_04.png",
+    "/assets/Images/ALightGun_04.png",
+    "/assets/Images/ALightMissile_04.png",
+    "/assets/Images/ADuctCover_04.png",
+    "/assets/Images/ADuctMissile_04.png",
+    "/assets/Images/ALightCover_05.png",
+    "/assets/Images/ALightGun_05.png",
+    "/assets/Images/ALightMissile_05.png",
+    "/assets/Images/ADuctCover_05.png",
+    "/assets/Images/ADuctMissile_05.png",
+    "/assets/Images/ALightCover_06.png",
+    "/assets/Images/ALightGun_06.png",
+    "/assets/Images/ALightMissile_06.png",
+    "/assets/Images/ADuctCover_06.png",
+    "/assets/Images/ADuctMissile_06.png",
+    "/assets/Images/ALightCover_07.png",
+    "/assets/Images/ALightGun_07.png",
+    "/assets/Images/ALightMissile_07.png",
+    "/assets/Images/ADuctCover_07.png",
+    "/assets/Images/ADuctMissile_07.png",
+    "/assets/Images/ALightCover_08.png",
+    "/assets/Images/ALightGun_08.png",
+    "/assets/Images/ALightMissile_08.png",
+    "/assets/Images/ADuctCover_08.png",
+    "/assets/Images/ADuctMissile_08.png",
+    "/assets/Images/ALightCover_09.png",
+    "/assets/Images/ALightGun_09.png",
+    "/assets/Images/ALightMissile_09.png",
+    "/assets/Images/ADuctCover_09.png",
+    "/assets/Images/ADuctMissile_09.png",
+    "/assets/Images/ALightCover_10.png",
+    "/assets/Images/ALightGun_10.png",
+    "/assets/Images/ALightMissile_10.png",
+    "/assets/Images/ADuctCover_10.png",
+    "/assets/Images/ADuctMissile_10.png"
+  ],
+  "uploadsAfterWarmup": 0,
+  "ok": true,
+  "errors": []
+}

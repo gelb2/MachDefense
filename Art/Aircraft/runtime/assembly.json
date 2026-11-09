@@ -543,6 +543,126 @@
         ]
       ],
       "preparedImage": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_10.png"
+    },
+    {
+      "name": "ADuctCover_01",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          6,
+          0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_01.png"
+    },
+    {
+      "name": "ADuctCover_02",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          6,
+          0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_02.png"
+    },
+    {
+      "name": "ADuctCover_03",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          6,
+          0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_03.png"
+    },
+    {
+      "name": "ADuctCover_04",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          6,
+          0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_04.png"
+    },
+    {
+      "name": "ADuctCover_05",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          6,
+          0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_05.png"
+    },
+    {
+      "name": "ADuctCover_06",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          6,
+          0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_06.png"
+    },
+    {
+      "name": "ADuctCover_07",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          6,
+          0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_07.png"
+    },
+    {
+      "name": "ADuctCover_08",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          6,
+          0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_08.png"
+    },
+    {
+      "name": "ADuctCover_09",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          6,
+          0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_09.png"
+    },
+    {
+      "name": "ADuctCover_10",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          6,
+          0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/cheyenne/rgba/ADuctCover_10.png"
     }
   ],
   "machines": [
@@ -638,6 +758,12 @@
           "parentSocket": 0,
           "zOrder": 1,
           "children": [
+            {
+              "name": "ADuctCover_01",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
             {
               "name": "ADuctFan",
               "parentSocket": 1,
@@ -1197,52 +1323,542 @@
     {
       "name": "AircraftDuct_01",
       "source": "AircraftDuct",
-      "weaponSuffix": "_01"
+      "weaponSuffix": "_01",
+      "parts": [
+        {
+          "name": "ADuctBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ADuctCover_01",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 1,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctGun",
+              "parentSocket": 3,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissile_01",
+              "parentSocket": 4,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissileR_01",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ADuctMissile": "ADuctMissile_01",
+        "ADuctMissileR": "ADuctMissile_01"
+      }
     },
     {
       "name": "AircraftDuct_02",
       "source": "AircraftDuct",
-      "weaponSuffix": "_02"
+      "weaponSuffix": "_02",
+      "parts": [
+        {
+          "name": "ADuctBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ADuctCover_02",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 1,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctGun",
+              "parentSocket": 3,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissile_02",
+              "parentSocket": 4,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissileR_02",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ADuctMissile": "ADuctMissile_02",
+        "ADuctMissileR": "ADuctMissile_02"
+      }
     },
     {
       "name": "AircraftDuct_03",
       "source": "AircraftDuct",
-      "weaponSuffix": "_03"
+      "weaponSuffix": "_03",
+      "parts": [
+        {
+          "name": "ADuctBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ADuctCover_03",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 1,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctGun",
+              "parentSocket": 3,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissile_03",
+              "parentSocket": 4,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissileR_03",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ADuctMissile": "ADuctMissile_03",
+        "ADuctMissileR": "ADuctMissile_03"
+      }
     },
     {
       "name": "AircraftDuct_04",
       "source": "AircraftDuct",
-      "weaponSuffix": "_04"
+      "weaponSuffix": "_04",
+      "parts": [
+        {
+          "name": "ADuctBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ADuctCover_04",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 1,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctGun",
+              "parentSocket": 3,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissile_04",
+              "parentSocket": 4,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissileR_04",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ADuctMissile": "ADuctMissile_04",
+        "ADuctMissileR": "ADuctMissile_04"
+      }
     },
     {
       "name": "AircraftDuct_05",
       "source": "AircraftDuct",
-      "weaponSuffix": "_05"
+      "weaponSuffix": "_05",
+      "parts": [
+        {
+          "name": "ADuctBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ADuctCover_05",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 1,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctGun",
+              "parentSocket": 3,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissile_05",
+              "parentSocket": 4,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissileR_05",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ADuctMissile": "ADuctMissile_05",
+        "ADuctMissileR": "ADuctMissile_05"
+      }
     },
     {
       "name": "AircraftDuct_06",
       "source": "AircraftDuct",
-      "weaponSuffix": "_06"
+      "weaponSuffix": "_06",
+      "parts": [
+        {
+          "name": "ADuctBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ADuctCover_06",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 1,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctGun",
+              "parentSocket": 3,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissile_06",
+              "parentSocket": 4,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissileR_06",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ADuctMissile": "ADuctMissile_06",
+        "ADuctMissileR": "ADuctMissile_06"
+      }
     },
     {
       "name": "AircraftDuct_07",
       "source": "AircraftDuct",
-      "weaponSuffix": "_07"
+      "weaponSuffix": "_07",
+      "parts": [
+        {
+          "name": "ADuctBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ADuctCover_07",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 1,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctGun",
+              "parentSocket": 3,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissile_07",
+              "parentSocket": 4,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissileR_07",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ADuctMissile": "ADuctMissile_07",
+        "ADuctMissileR": "ADuctMissile_07"
+      }
     },
     {
       "name": "AircraftDuct_08",
       "source": "AircraftDuct",
-      "weaponSuffix": "_08"
+      "weaponSuffix": "_08",
+      "parts": [
+        {
+          "name": "ADuctBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ADuctCover_08",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 1,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctGun",
+              "parentSocket": 3,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissile_08",
+              "parentSocket": 4,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissileR_08",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ADuctMissile": "ADuctMissile_08",
+        "ADuctMissileR": "ADuctMissile_08"
+      }
     },
     {
       "name": "AircraftDuct_09",
       "source": "AircraftDuct",
-      "weaponSuffix": "_09"
+      "weaponSuffix": "_09",
+      "parts": [
+        {
+          "name": "ADuctBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ADuctCover_09",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 1,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctGun",
+              "parentSocket": 3,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissile_09",
+              "parentSocket": 4,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissileR_09",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ADuctMissile": "ADuctMissile_09",
+        "ADuctMissileR": "ADuctMissile_09"
+      }
     },
     {
       "name": "AircraftDuct_10",
       "source": "AircraftDuct",
-      "weaponSuffix": "_10"
+      "weaponSuffix": "_10",
+      "parts": [
+        {
+          "name": "ADuctBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ADuctCover_10",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 1,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctFan",
+              "parentSocket": 2,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ADuctGun",
+              "parentSocket": 3,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissile_10",
+              "parentSocket": 4,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ADuctMissileR_10",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "ADuctMissile": "ADuctMissile_10",
+        "ADuctMissileR": "ADuctMissile_10"
+      }
     },
     {
       "name": "AircraftTransport_01",

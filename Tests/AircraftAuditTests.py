@@ -7,8 +7,12 @@ unused,level_only=classify_authored_usage(['body','upgrade','orphan'],[[{'part':
 assert unused==['orphan'] and level_only==['upgrade']
 actual=audit()
 assert actual['unusedAuthoredParts']==[]
-assert actual['levelOnlyAuthoredParts']==[f'ALightCover_{lv:02}'for lv in range(2,11)]
+assert actual['levelOnlyAuthoredParts']==sorted([f'{prefix}_{lv:02}'for prefix in ('ALightCover','ADuctCover') for lv in range(2,11)])
 scout=next(a for a in actual['aircraft']if a['model']=='AircraftLight')
 assert scout['nodeCount']==4 and scout['distinctLevelImageSequences']==10
 assert [x['nodeCount']for x in scout['levels']]==[4]+[5]*9
 print('AircraftAuditTests: level-only cover references counted across all 44 aircraft; orphan fixture remains unused')
+
+cheyenne=next(a for a in actual["aircraft"]if a["model"]=="AircraftDuct")
+assert cheyenne["nodeCount"]==7 and cheyenne["distinctLevelImageSequences"]==10
+assert all(x["nodeCount"]==7 for x in cheyenne["levels"])

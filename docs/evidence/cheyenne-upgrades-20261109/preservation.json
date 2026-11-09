@@ -1,0 +1,134 @@
+{
+  "baselineCommit": "e3118d0b6155761badcfe3ad6934b75ecc1a39b6",
+  "originalAndOtherHelicopterImagesChanged": 0,
+  "otherAssemblyEntriesExact": true,
+  "onlyRuntimeSourceChange": "ADuctCover authored seven-view selection",
+  "retainedQChunks": [
+    {
+      "path": "Resources/RawData/AircraftParts.mcb",
+      "allNonCheyenneNodesByteExact": true,
+      "sha256": "b9d259a6197b90d079e7e559c9499dcb4f48d4d78da9dc7ce336912026c56145"
+    },
+    {
+      "path": "Resources/RawData/AircraftMachines.mcb",
+      "allNonCheyenneNodesByteExact": true,
+      "sha256": "ee650d67acf0cf4e3cf48146af81af3da455a0c2df65a3b0f08603162ba330b7"
+    },
+    {
+      "path": "Resources/RawData/Level10Parts.mcb",
+      "allNonCheyenneNodesByteExact": true,
+      "sha256": "eefe7c43793168ab7b371d9ae38c1c78eb642caad101211c386ec4aed4be2870"
+    },
+    {
+      "path": "Resources/RawData/Level10Machines.mcb",
+      "allNonCheyenneNodesByteExact": true,
+      "sha256": "42f2cb81359cbe874515bfb3c7582e4d27b96404f0a73591a21be8d5b6a8b2d9"
+    }
+  ],
+  "webPackageAssets": [
+    {
+      "path": "Images/ADuctCover_01.png",
+      "sha256": "50755b8afcaacf85602e3b33e92f38576fe2d77ab1c72822fda18627a10ea8c9"
+    },
+    {
+      "path": "Images/ADuctCover_02.png",
+      "sha256": "3a4c52b5eaedf32c02e2395068c5de5d6495110327db7dfca2dfe48b91988d2a"
+    },
+    {
+      "path": "Images/ADuctCover_03.png",
+      "sha256": "6c9cbee15bb31237a9b0338f51e657bda79d10acf6f87bb5319d4f4b7cd86e28"
+    },
+    {
+      "path": "Images/ADuctCover_04.png",
+      "sha256": "cd1654eaa072df4471d81fc899448e1e850e2d08feeb50b18d5027f9b29b5065"
+    },
+    {
+      "path": "Images/ADuctCover_05.png",
+      "sha256": "ef15fafa79d72e50d9e2958ffd5c25c6c8e3859c8857f1a80400423bd1b587b9"
+    },
+    {
+      "path": "Images/ADuctCover_06.png",
+      "sha256": "d62d1221d31d6dfcb1d9b47f0c26a97fb64770a61c6cc4bc56d7807005ab6429"
+    },
+    {
+      "path": "Images/ADuctCover_07.png",
+      "sha256": "a00ec6f95864e4a6c4080aeefb67da33b255fa286c25c5df4419e96a608fcac0"
+    },
+    {
+      "path": "Images/ADuctCover_08.png",
+      "sha256": "343a40135f49b30f0cd396b38d7f5ae78ddfc9d20962287f0865c09bcfe5981e"
+    },
+    {
+      "path": "Images/ADuctCover_09.png",
+      "sha256": "41eeb73d0fae4444d09099a6f1e060cfe4e1e4eb3579d41a81e7c65c3fd2e1de"
+    },
+    {
+      "path": "Images/ADuctCover_10.png",
+      "sha256": "d5dd02ba1f13b99f9a48d2f35210394905950f2a84cdc72b2f80a71a32056835"
+    },
+    {
+      "path": "Images/ADuctMissile_01.png",
+      "sha256": "5293eb5e7a302029cf533c7e1883b18af4b34825ff39d165beccccbe0e61a0dd"
+    },
+    {
+      "path": "Images/ADuctMissile_02.png",
+      "sha256": "dce1b4a38392139aa7606f8046b69728a6065839add231b502fecb40437726a2"
+    },
+    {
+      "path": "Images/ADuctMissile_03.png",
+      "sha256": "edaf32ba6359dc7e140caf6e8ccaae38594c71fde59b0fafe798b7e455d9e3f2"
+    },
+    {
+      "path": "Images/ADuctMissile_04.png",
+      "sha256": "59733e6df82788081d3adbc4bb2dbb90164827d2b2ed90e66dc7ca1378a9ba3c"
+    },
+    {
+      "path": "Images/ADuctMissile_05.png",
+      "sha256": "1d4de13765b4752bc2c3b939419e0867ef898cb59e6d9783f858e4d69725378a"
+    },
+    {
+      "path": "Images/ADuctMissile_06.png",
+      "sha256": "92737c4508ec17d1ed9af0123c983601702e11e8a149eb0b6f89944d8d7d1502"
+    },
+    {
+      "path": "Images/ADuctMissile_07.png",
+      "sha256": "0cc17c211dd387e056af02efd2452c6296f117ffc881c3b5eded40f5ad479a63"
+    },
+    {
+      "path": "Images/ADuctMissile_08.png",
+      "sha256": "55183c0e5242b1cbc627ea077908a19a242797fc797ae55e085f12217d420ee7"
+    },
+    {
+      "path": "Images/ADuctMissile_09.png",
+      "sha256": "370e2af078d762ec8e6c9a66d90a06560f432a6e0950bc198afc12d83f3b519f"
+    },
+    {
+      "path": "Images/ADuctMissile_10.png",
+      "sha256": "6c6f426441ef8bcb4aeab9ac042e9ee693cfec4a54e9f294aacec5d17dbae180"
+    },
+    {
+      "path": "RawData/AircraftParts.mcb",
+      "sha256": "cf98347d58d0cff13ab5329c2aa968d37491b9788833489849180904e90cb1a0"
+    },
+    {
+      "path": "RawData/AircraftMachines.mcb",
+      "sha256": "a5da2bd99b602677530664412b59f61440b72581e2b68551b94f669b20358659"
+    },
+    {
+      "path": "RawData/Level10Parts.mcb",
+      "sha256": "9d999bf6eb47a9d5ee69cefef9bd679c1b8a55eecdd06dd681f84f90e80fe603"
+    },
+    {
+      "path": "RawData/Level10Machines.mcb",
+      "sha256": "11961a3dc21f2598a28edf830a85427d5c7a145199b7d2f8a9866efe060a16d7"
+    },
+    {
+      "path": "Tables/PartsList.tsv",
+      "sha256": "a2314ea96dfa7c9c1d05b989d2cd39901e3cae96c955548bfa6b5d6a89cfe857"
+    },
+    {
+      "path": "Tables/TileList.tsv",
+      "sha256": "7ae97d5389b8ade815d51f63da1538f1b0dae638e362642a816821bf7c2ec4d2"
+    }
+  ]
+}

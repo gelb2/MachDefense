@@ -1,0 +1,17 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/build/save-transfer
+    Start  2: AircraftDefinition
+1/6 Test  #2: AircraftDefinition ...............   Passed    0.28 sec
+    Start  3: AircraftAudit
+2/6 Test  #3: AircraftAudit ....................   Passed    0.04 sec
+    Start  6: CheyenneSalvoClock
+3/6 Test  #6: CheyenneSalvoClock ...............   Passed    0.66 sec
+    Start 11: Aircraft
+4/6 Test #11: Aircraft .........................   Passed    0.41 sec
+    Start 54: AircraftHandling
+5/6 Test #54: AircraftHandling .................   Passed    0.30 sec
+    Start 55: AircraftCampaign
+6/6 Test #55: AircraftCampaign .................   Passed    0.57 sec
+
+100% tests passed out of 6
+
+Total Test time (real) =   2.26 sec

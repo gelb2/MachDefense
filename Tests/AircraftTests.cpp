@@ -49,7 +49,7 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
   for(const auto& sprite:frame.sprites){auto size=r.imageSize(sprite.image);
    const bool body=md::helicopterDrawnPart(std::string_view(sprite.image).substr(0,sprite.image.size()-4));
    const float cellWidth=body?size.x/7:size.x;
-   if(body){const float expected=sprite.image.starts_with("ALightCover_")?16.f:sprite.image=="ALightBody.png"?64.f:sprite.image.starts_with("AHeavy")?76.f:sprite.image=="ADuctBody.png"?110.f:140.f;assert(cellWidth==expected&&sprite.sourcePx&&sprite.sourcePx->x==0);}
+   if(body){const float expected=sprite.image.starts_with("ADuctCover_")?28.f:sprite.image.starts_with("ALightCover_")?16.f:sprite.image=="ALightBody.png"?64.f:sprite.image.starts_with("AHeavy")?76.f:sprite.image=="ADuctBody.png"?110.f:140.f;assert(cellWidth==expected&&sprite.sourcePx&&sprite.sourcePx->x==0);}
    assert(std::abs(sprite.destination.width-cellWidth*viewport*factor)<.0001f);
    assert(std::abs(sprite.destination.height-size.y*viewport*factor)<.0001f);
   }
