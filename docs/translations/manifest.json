@@ -180,9 +180,9 @@
     {
       "ko": "docs/public/roadmap.md",
       "en": "docs/en/public/roadmap.md",
-      "ko_sha256": "e5e542c78d4dfbc136f290368b45589f9542baf71ddb9a8039f1658ebd5e9256",
-      "en_sha256": "73220e2c92b6cf37c81fcc5d326fbb75773403bb04dba595201e6ff1b754334d",
-      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
+      "ko_sha256": "01e3d4198b2a33760cd5878337f7e37b43d199b7af2e35ccfebf9dc3ae3fda33",
+      "en_sha256": "a48b91eeaa1479d524de51c125f99099267aa40fa81cb40d46ecd09f0c68d67d",
+      "review": "2026-11-10: compared the complete Lv.1–10 HP/purchase/upgrade schedule, Cheyenne at 85% of same-level Plasma HP, Beluga midpoint HP, nearest-2-HP rounding preserving original loader, observed Lv.7 HP 3410/6384 and target 1700/3800, 25% price reduction, currencies, totals and unapplied status."
     },
     {
       "ko": "LICENSE-SCOPE.md",
