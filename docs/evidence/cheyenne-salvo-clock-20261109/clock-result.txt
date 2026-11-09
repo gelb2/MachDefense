@@ -1,0 +1,1 @@
+160 live Cheyenne salvos: 7 same-tick missiles, center1/spread6; rounded-up=80 rounded-down=60; original controller boundary reproduced unchanged

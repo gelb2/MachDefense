@@ -59,7 +59,12 @@ void World::updateWeapons(WorldActor& a){
     for(auto& gun:a.weapons){const auto* definition=weapons_.find(gun.name);if(!definition)continue;
         auto& part=partAt(a.assembly,gun.partPath);
         WeaponFrame frame;frame.time=time();frame.ownerPosition=a.position;frame.bodyAngle=a.angle;frame.deviceScale=geometry_.deviceScale;
-        if(a.flightTactics)frame.maxAimStep=a.flightTactics->weaponStep;
+        if(a.flightTactics){
+            frame.maxAimStep=a.flightTactics->weaponStep;
+            // Keep the added Cheyenne's zero-delay salvo on the controller's float clock.
+            if(gun.name.starts_with("ADuctMissile")&&definition->shotDelay==0.f)
+                frame.time=double(float(frame.time));
+        }
         frame.ownerHP=a.hp;frame.machineType=a.type;frame.statusFlags=a.statusFlags;frame.weaponReady=a.type!=0||a.bipod.weaponReady;
         if(target)frame.target=WeaponTarget{target->position,target->hp};
         frame.weaponReady=gun.controller.track(frame);

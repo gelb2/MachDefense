@@ -1,0 +1,23 @@
+{
+  "baseline": "837ff38",
+  "onlyProductChange": "Added-helicopter ADuctMissile* zero-shotDelay WeaponFrame.time float conversion; original branch and all other source text unchanged",
+  "originalTraceCases": 160,
+  "originalTraceTicksPerCase": 360,
+  "originalTraceEqual": true,
+  "originalTraceSHA256": "b90674d78bfbd9bcdeb37af7c8e5c8a616e8ca1b00a9b3597a2623628ff9f9d7",
+  "unchangedSourceSHA256": {
+    "Sources/Core/Simulation/WeaponController.cpp": "7c68e237ace2f1b8d25c6326fb6974356b8ab72001eb8e673eca0c55188fba41",
+    "Sources/Core/Simulation/WeaponController.hpp": "b6277e6aa4fa75cf2a500901859b4f283a6138d1e836a8f2e0a8a95c8f02f653",
+    "Sources/Core/Simulation/AircraftTactics.hpp": "abb18af26083ced0b84e4036621989b48567f86cfe5d0e859a670c5680323101",
+    "Sources/Core/Simulation/WorldMovement.cpp": "ba2642f6c2ffdce0ff3cadb6fad981386333e962034b02520d5405c06e554dd6"
+  },
+  "testedSourceSHA256": {
+    "Sources/Core/Simulation/WorldCombat.cpp": "7c1c6399610fb568eced31b641b750d8c1285055337f4c0b074aba50f3bee27b",
+    "Tests/CheyenneSalvoClockTests.cpp": "97e4e1b5598b42f084b41f2c11a1fae074c0416c9d3fa6f3e7031503e7f54743",
+    "CMakeLists.txt": "ece900a90a3d47419c51b5edfc43a595b6f7123b1bd34fb04d4f758e8e2dd790"
+  },
+  "worldSalvos": 160,
+  "floatRoundedUp": 80,
+  "floatRoundedDown": 60,
+  "exactFloat": 20
+}
