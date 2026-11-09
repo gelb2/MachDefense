@@ -1,20 +1,20 @@
 {
-  "reviewed": "2026-11-07",
-  "source_basis": "origin/main 3d9a8f3; v0.6 PWA/Tauri and device evidence reviewed",
+  "reviewed": "2026-11-10",
+  "source_basis": "20b714c helicopter records and 859fb67 release editorial; origin/main c7cfd8a author correction and remote publication history integrated paragraph by paragraph.",
   "pairs": [
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "ae09adec0a3ccfa60016c4977f8f4140d98d8e267690a62de83bf0d9908ed6a5",
-      "en_sha256": "ffc70a1287ede1fae384a271f4a6df0960534ab79eeaadad25a8d42f11a14de2",
-      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved."
+      "ko_sha256": "79c6e569bc1e046a2b850b82bd36924a499b4f17bd777ff52d67558e913dca21",
+      "en_sha256": "dc8f68d30d7547e9f1b4faf558a724617950b65536baba54e16406135064bedc",
+      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "573e321907b7d4de6408dfe6b472b1bd87f8106d872d6f86db02b4aa0447af45",
-      "en_sha256": "ed78e43eeb1202fe9bcecc704eafbd8a1517b8482cf1a3960f28c8d53b4f910f",
-      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved."
+      "ko_sha256": "878d370fd86568247ad70247a30f2ec13b8bcd0cf02dab8fa71a562b8fce947a",
+      "en_sha256": "9a318bc59ffd3894c24f1bf86f747b7485b85d05277284047b00ece8566a8fda",
+      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
     },
     {
       "ko": "CREDITS.md",
@@ -33,9 +33,9 @@
     {
       "ko": "docs/public/README.md",
       "en": "docs/en/public/README.md",
-      "ko_sha256": "a43f0a988f0812ac530b0037f5b4c510fbe52c40263abd3182ad076807ff44c2",
-      "en_sha256": "d9a2f9032308486bee74d682a0dfd6c36cb0bcdaed7db3ac422d5c3cfcb910fb",
-      "review": "2026-11-08: essay and reciprocal incident links; author voice, Gemini sketch/text edit refusals, responsibility shifting, historical facts and analogy distinction matched in Korean and English."
+      "ko_sha256": "93b73f91e8f408b2fc278bfb7d27e0b319f689d9703ba30aa2088cacef851d3d",
+      "en_sha256": "47272aa0a64d923c99a1b934d3aa3cc99e57bd4bc12bf50efdf18c11168d5a50",
+      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
     },
     {
       "ko": "docs/public/architecture.md",
@@ -180,9 +180,9 @@
     {
       "ko": "docs/public/roadmap.md",
       "en": "docs/en/public/roadmap.md",
-      "ko_sha256": "f2127f26e1bcd9410ff0cf3c3ab8ee30eefa9204018ffbebf8bbcba1364278ac",
-      "en_sha256": "4d01007ee18d97c265c9fc2638b0bc25932e5a2500177326e177fd8c7f5f37aa",
-      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved."
+      "ko_sha256": "e5e542c78d4dfbc136f290368b45589f9542baf71ddb9a8039f1658ebd5e9256",
+      "en_sha256": "73220e2c92b6cf37c81fcc5d326fbb75773403bb04dba595201e6ff1b754334d",
+      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
     },
     {
       "ko": "LICENSE-SCOPE.md",
@@ -229,9 +229,23 @@
     {
       "ko": "docs/public/unease-and-typewriters.md",
       "en": "docs/en/public/unease-and-typewriters.md",
-      "ko_sha256": "5d6bc34fb9cce44b47c7cf1203ddde955a781022088ec0c0381280d6d5b5854b",
-      "en_sha256": "82724d0c3c63905234c19ac2cc94c01335c56a1d4489d0ea1b23e7c1e5fb0c81",
-      "review": "2026-11-08: removed agent-added subheadings from Korean/English essay per author correction; user-supplied main title and body paragraphs unchanged."
+      "ko_sha256": "d645a24c4221a20e62be4d0f64bfa112d97ff1204abd0f9b2d2b783421408729",
+      "en_sha256": "306edb5e101ca4e23306b82c0d1595a779f1e2f5b55468152595cb9551536440",
+      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
+    },
+    {
+      "ko": "docs/editorial/unease-and-typewriters-draft-20261108.md",
+      "en": "docs/en/editorial/unease-and-typewriters-draft-20261108.md",
+      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim.",
+      "ko_sha256": "3414f264a208433586a9e30b4fb6c45eb83a11595b182546e1e3c62650af4eba",
+      "en_sha256": "d3052a49c7abebce1ea316513ca204441b1bc55a1011a953bc69da5a43dbd8de"
+    },
+    {
+      "ko": "docs/editorial/unease-integration-20261110.md",
+      "en": "docs/en/editorial/unease-integration-20261110.md",
+      "ko_sha256": "fcc782fb925596ff458c39519768f1600ee3c91a16ba165f2db2cf658759e5d1",
+      "en_sha256": "3ac5b0a4e55a09f361a0954cc1160e635687b805241a4cf3036e9a2f49e97ab9",
+      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
     }
   ]
 }

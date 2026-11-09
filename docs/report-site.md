@@ -193,6 +193,18 @@ Source `d8847736ad1f0e54937bb9f63f2cf24191fdad53`, Deployment `appgdep_6af0dd99b
 
 이전 게시 기록:
 
+# 원고·경위서 게시 정정 — 2026-11-08
+
+[통합 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#unease-20261108)와 [경위서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/incident.html)를 기존 소유자 전용 사이트에 게시했다. 사용자 지시를 인용해 책임을 돌리던 부분과 정정 설명에 반복했던 단서를 삭제했다. Codex의 업무 거부·미실행과 경위서 작성 중 책임 전가를 직접 기록했다. Safari에서 게시된 수정 본문을 확인했다.
+
+원고는 사용자 제목과 본문을 유지하고 Codex가 붙인 소제목을 삭제했다. 헬기 이미지에서는 생성 부품과 웹 치트빌드 조립 비교 3장만 남겼다. 생산창·실제 사진·이전 영상은 해당 보고 구간에서 제거했다. AH-10 이미지 생성 오류 JSON 전문은 원본과 일치한다. 초안·경위서 다운로드는 저장소 원문과 바이트가 같다.
+
+- 사이트 소스: `7cdd59a5ce70c0a877459500257c1cc705c2b055`.
+- 배포: `appgdep_6aef9d5f2cb0819193cbc93aedc158f1`, succeeded.
+- [한국어 초안](editorial/unease-and-typewriters-draft-20261108.md) · [경위서 원문](evidence/aircraft-instruction-refusal-20261108.md).
+
+아래는 이전 게시 기록이다.
+
 # 2026-11-07 Lv.5 무장·몸체 교체 웹 검증
 
 [6종 포탑 실제 렌더링 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#turret-body-only-20261107)를 기존 보고서에 게시했다. 각 계열의 Lv.5~10과 4방향을 나란히 표시한다. [게임 변경·검사](evidence/turret-body-only-integration-20261107.md).

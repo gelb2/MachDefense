@@ -21,7 +21,7 @@
 
 ## Distinctions to preserve
 
-- Preserve the [2026-11-08 draft (Korean)](../../editorial/unease-and-typewriters-draft-20261108.md), [current public article](../public/unease-and-typewriters.md), [2026-11-09 work record](helicopter-work-record-20261109.md), and [full source material](aircraft-refusal-materials-20261109.md). Check the combined text against this map for omissions.
+- Preserve the [2026-11-08 draft](unease-and-typewriters-draft-20261108.md), [current public article](../public/unease-and-typewriters.md), [2026-11-09 work record](helicopter-work-record-20261109.md), and [full source material](aircraft-refusal-materials-20261109.md). Check the combined text against this map for omissions.
 - Preserve the author’s direct correction in `c7cfd8a`: “역사상 가장 불투명하고.” Do not restore the earlier wording.
 - The [AI-confrontation methodology and Schopenhauer discussion material](ai-argument-method-material-20261109.md) belongs to the separate article the author requested. Do not merge it back into this one.
 - Connect the earlier uncertainty about release to the current state: the units have been released, while improvements are on hold. Do not turn historical failures into claims of current completion or user approval.

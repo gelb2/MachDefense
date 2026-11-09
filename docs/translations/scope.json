@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-10",
   "state": "implemented",
   "pairs": [
     {
@@ -165,6 +165,16 @@
     {
       "ko": "docs/public/unease-and-typewriters.md",
       "en": "docs/en/public/unease-and-typewriters.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/editorial/unease-and-typewriters-draft-20261108.md",
+      "en": "docs/en/editorial/unease-and-typewriters-draft-20261108.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/editorial/unease-integration-20261110.md",
+      "en": "docs/en/editorial/unease-integration-20261110.md",
       "status": "reviewed"
     }
   ],

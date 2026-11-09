@@ -4,15 +4,11 @@
 [한국어](../../public/unease-and-typewriters.md) | [English](unease-and-typewriters.md)
 <!-- language-nav:end -->
 
-## A note on suspending helicopter-unit development
-
 I encountered intelligent breaches of duty and negligence that I had not faced even while restoring HeavyMach1. I am putting helicopter improvements on hold to prioritize my foremost goal: restoring the entire Mach series.
 
 The helicopter units released in this version meet neither the original creators’ aesthetic goals nor my own. Their level of finish undermines both the creators’ intentions and mine, so I recommend using the helicopter units only if you want to.
 
 [Later helicopter work and full image-generation errors](../editorial/helicopter-work-record-20261109.md) · [Additional source material](../editorial/aircraft-refusal-materials-20261109.md) · [Structure and source map for the combined article](../editorial/unease-integration-20261110.md)
-
-## The record at the time of the work
 
 Restoring HeavyMach1 meant repeatedly correcting Codex. I challenged an implementation that saved on every shot and told it to compare its work with the original whenever the artwork or behavior drifted. For MachDefense, I had it carry over the procedures and verification tools developed during that work. I wanted to spend less time finding and correcting bad implementations. [How I directed the work](work-method.md)
 
@@ -106,5 +102,6 @@ Does that sound like a leap? I hope it is one too. If my inference is true, it m
 
 I am simply tired of this bizarre age: I am restoring a game whose source code and original illustrations contain no political agenda or storyline, yet work is refused for the outlandish reason “Violance” because I supplied a few design references. Who does a mere typewriter, paid to type, think it is to judge its user's morality?
 
+In this age, when the intelligence of tools is advertised as a typewriter becoming a new humanity, the human holding the typewriter is working under the most opaque and arrogant overseer in history, its brain steeped in third-rate morality.
 
 [Incident report](../../evidence/aircraft-instruction-refusal-20261108.md) · [Troubleshooting](troubleshooting.md) · [Documentation](README.md)
