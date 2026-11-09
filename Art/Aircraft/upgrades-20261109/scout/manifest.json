@@ -1,6 +1,15 @@
 {
-  "scope": "Scout level 2\u201310 resources listed below; level1 preserved",
+  "scope": "Scout level 1\u201310 independent covers and rear housings",
   "coverPoseHashes": {
+    "ALightCover_01": [
+      "98156cbad72f6ea6da33ea8e83a5b8e5c4c53a0dc5ecb173a737d3125af57c05",
+      "4140c46b708af362443d49e629616084346fa312732863575a1bb9a4222055c2",
+      "7fd1882c461c5799e70fa5f431efc0811f9c2670531d8c0816fd38e4dd7e8ef7",
+      "3e4cce86586c4902cb131cdd271909e74f5fb7c506455c03369da5a9639693bc",
+      "0decd2e738d7dde107ce133892e90718dbf0b6fc1985e432070f2c6731769112",
+      "ab9beb18cd1221e2f610b03a3b304ce00a9cefa4046607560fc97d3353f608d9",
+      "03f4fd866bb0f07b1b56596707749b71039dd3a6fccdfe182a8ccda715f9f5bc"
+    ],
     "ALightCover_02": [
       "7e12ea31a73dc0522ff5c523b58332e4f23899bbae334d56c8555e0318223c77",
       "925c0f14a06e44243b4d3c66501dcf2d77ae7340c1a65373b81d2eaae418c065",
@@ -107,6 +116,7 @@
     "outsideApprovedAlphaPixels": 0
   },
   "weaponHousingsPrepared": [
+    "ALightGun_01",
     "ALightGun_02",
     "ALightGun_03",
     "ALightGun_04",
@@ -116,6 +126,7 @@
     "ALightGun_08",
     "ALightGun_09",
     "ALightGun_10",
+    "ALightMissile_01",
     "ALightMissile_02",
     "ALightMissile_03",
     "ALightMissile_04",
@@ -127,6 +138,19 @@
     "ALightMissile_10"
   ],
   "records": [
+    {
+      "name": "ALightCover_01",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_01.png",
+      "sourceSHA256": "e6d338afda71fd3f0a1a0e38099d5dbabe78e8031c3787c161bb119a59bbbf76",
+      "runtimeSHA256": "cc50f9477f6b47d5a5a03a20235c4ed3b4e37e921d0787260432018a93097a01",
+      "size": [
+        112,
+        17
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 16384
+    },
     {
       "name": "ALightCover_02",
       "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_02.png",
@@ -245,6 +269,19 @@
       "potRGBABytes": 16384
     },
     {
+      "name": "ALightGun_01",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_01.png",
+      "sourceSHA256": "5311034f7873e129876190a5f8626955d95510ad5a77220093272cfe4bd5163d",
+      "runtimeSHA256": "6ecbe2723c7ac382f545314d13c3d53fba096addd8a9a5a609d3cc1043d2a8e8",
+      "size": [
+        14,
+        7
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
       "name": "ALightGun_02",
       "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_02.png",
       "sourceSHA256": "e088f4fa3c25fde960a598f74208f8160d3fb71a5266442f6562e8c7b37b686b",
@@ -356,6 +393,19 @@
       "size": [
         14,
         7
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "potRGBABytes": 512
+    },
+    {
+      "name": "ALightMissile_01",
+      "source": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_01.png",
+      "sourceSHA256": "cbe7ffc527ef9517a38a1dc1d4dc30a369dc7eb7734d73a5ecac2ce2ae7da4c9",
+      "runtimeSHA256": "babb6397e3c2d37a6b705de9df553dc0ae82ea3909560eecfcf4dc95599ea66c",
+      "size": [
+        13,
+        8
       ],
       "cgbi": true,
       "alphaPreserved": true,
@@ -479,6 +529,6 @@
       "potRGBABytes": 512
     }
   ],
-  "potRGBABytes": 156672,
+  "potRGBABytes": 174080,
   "runtimeVisualVerification": "pending"
 }

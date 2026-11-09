@@ -53,7 +53,15 @@
           7.0,
           -1.0
         ]
-      ]
+      ],
+      "texture": {
+        "image": "ALightGun_01",
+        "grid": [
+          1,
+          1
+        ],
+        "firstTile": 0
+      }
     },
     {
       "name": "ALightMissile",
@@ -72,7 +80,15 @@
           6.5,
           -1.0
         ]
-      ]
+      ],
+      "texture": {
+        "image": "ALightMissile_01",
+        "grid": [
+          1,
+          1
+        ],
+        "firstTile": 0
+      }
     },
     {
       "name": "AHeavyBody",
@@ -927,6 +943,146 @@
         ]
       ],
       "preparedImage": "Art/Aircraft/upgrades-20261109/beluga/rgba/ATransportRoot1_10.png"
+    },
+    {
+      "name": "ALightCover_01",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -1,
+          -1
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_01.png",
+      "texture": {
+        "image": "ALightCover_01",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "AHeavyCover_01",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -2,
+          2
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/ah10/rgba/AHeavyCover_01.png"
+    },
+    {
+      "name": "AHeavyCover_02",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -2,
+          2
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/ah10/rgba/AHeavyCover_02.png"
+    },
+    {
+      "name": "AHeavyCover_03",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -2,
+          2
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/ah10/rgba/AHeavyCover_03.png"
+    },
+    {
+      "name": "AHeavyCover_04",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -2,
+          2
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/ah10/rgba/AHeavyCover_04.png"
+    },
+    {
+      "name": "AHeavyCover_05",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -2,
+          2
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/ah10/rgba/AHeavyCover_05.png"
+    },
+    {
+      "name": "AHeavyCover_06",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -2,
+          2
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/ah10/rgba/AHeavyCover_06.png"
+    },
+    {
+      "name": "AHeavyCover_07",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -2,
+          2
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/ah10/rgba/AHeavyCover_07.png"
+    },
+    {
+      "name": "AHeavyCover_08",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -2,
+          2
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/ah10/rgba/AHeavyCover_08.png"
+    },
+    {
+      "name": "AHeavyCover_09",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -2,
+          2
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/ah10/rgba/AHeavyCover_09.png"
+    },
+    {
+      "name": "AHeavyCover_10",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -2,
+          2
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/upgrades-20261109/ah10/rgba/AHeavyCover_10.png"
     }
   ],
   "machines": [
@@ -938,6 +1094,12 @@
           "parentSocket": 0,
           "zOrder": 1,
           "children": [
+            {
+              "name": "ALightCover_01",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
             {
               "name": "ALightGun",
               "parentSocket": 2,
@@ -968,6 +1130,12 @@
           "parentSocket": 0,
           "zOrder": 1,
           "children": [
+            {
+              "name": "AHeavyCover_01",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
             {
               "name": "AHeavyGun",
               "parentSocket": 3,
@@ -1147,6 +1315,12 @@
           "zOrder": 1,
           "children": [
             {
+              "name": "ALightCover_01",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
               "name": "ALightGun_01",
               "parentSocket": 2,
               "zOrder": 2,
@@ -1166,7 +1340,11 @@
             }
           ]
         }
-      ]
+      ],
+      "weaponImages": {
+        "ALightGun": "ALightGun_01",
+        "ALightMissile": "ALightMissile_01"
+      }
     },
     {
       "name": "AircraftLight_02",
@@ -1549,52 +1727,672 @@
     {
       "name": "AircraftHeavy_01",
       "source": "AircraftHeavy",
-      "weaponSuffix": "_01"
+      "weaponSuffix": "_01",
+      "parts": [
+        {
+          "name": "AHeavyBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "AHeavyCover_01",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "AHeavyGun_01",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyMissile_01",
+              "parentSocket": 4,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyCannon_01",
+              "parentSocket": 5,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRocket_01",
+              "parentSocket": 6,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyAirStrike_01",
+              "parentSocket": 7,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 2,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "AHeavyGun": "AHeavyGun_01",
+        "AHeavyCannon": "AHeavyCannon_01",
+        "AHeavyMissile": "AHeavyMissile_01"
+      }
     },
     {
       "name": "AircraftHeavy_02",
       "source": "AircraftHeavy",
-      "weaponSuffix": "_02"
+      "weaponSuffix": "_02",
+      "parts": [
+        {
+          "name": "AHeavyBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "AHeavyCover_02",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "AHeavyGun_02",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyMissile_02",
+              "parentSocket": 4,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyCannon_02",
+              "parentSocket": 5,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRocket_02",
+              "parentSocket": 6,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyAirStrike_02",
+              "parentSocket": 7,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 2,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "AHeavyGun": "AHeavyGun_02",
+        "AHeavyCannon": "AHeavyCannon_02",
+        "AHeavyMissile": "AHeavyMissile_02"
+      }
     },
     {
       "name": "AircraftHeavy_03",
       "source": "AircraftHeavy",
-      "weaponSuffix": "_03"
+      "weaponSuffix": "_03",
+      "parts": [
+        {
+          "name": "AHeavyBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "AHeavyCover_03",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "AHeavyGun_03",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyMissile_03",
+              "parentSocket": 4,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyCannon_03",
+              "parentSocket": 5,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRocket_03",
+              "parentSocket": 6,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyAirStrike_03",
+              "parentSocket": 7,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 2,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "AHeavyGun": "AHeavyGun_03",
+        "AHeavyCannon": "AHeavyCannon_03",
+        "AHeavyMissile": "AHeavyMissile_03"
+      }
     },
     {
       "name": "AircraftHeavy_04",
       "source": "AircraftHeavy",
-      "weaponSuffix": "_04"
+      "weaponSuffix": "_04",
+      "parts": [
+        {
+          "name": "AHeavyBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "AHeavyCover_04",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "AHeavyGun_04",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyMissile_04",
+              "parentSocket": 4,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyCannon_04",
+              "parentSocket": 5,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRocket_04",
+              "parentSocket": 6,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyAirStrike_04",
+              "parentSocket": 7,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 2,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "AHeavyGun": "AHeavyGun_04",
+        "AHeavyCannon": "AHeavyCannon_04",
+        "AHeavyMissile": "AHeavyMissile_04"
+      }
     },
     {
       "name": "AircraftHeavy_05",
       "source": "AircraftHeavy",
-      "weaponSuffix": "_05"
+      "weaponSuffix": "_05",
+      "parts": [
+        {
+          "name": "AHeavyBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "AHeavyCover_05",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "AHeavyGun_05",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyMissile_05",
+              "parentSocket": 4,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyCannon_05",
+              "parentSocket": 5,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRocket_05",
+              "parentSocket": 6,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyAirStrike_05",
+              "parentSocket": 7,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 2,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "AHeavyGun": "AHeavyGun_05",
+        "AHeavyCannon": "AHeavyCannon_05",
+        "AHeavyMissile": "AHeavyMissile_05"
+      }
     },
     {
       "name": "AircraftHeavy_06",
       "source": "AircraftHeavy",
-      "weaponSuffix": "_06"
+      "weaponSuffix": "_06",
+      "parts": [
+        {
+          "name": "AHeavyBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "AHeavyCover_06",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "AHeavyGun_06",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyMissile_06",
+              "parentSocket": 4,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyCannon_06",
+              "parentSocket": 5,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRocket_06",
+              "parentSocket": 6,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyAirStrike_06",
+              "parentSocket": 7,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 2,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "AHeavyGun": "AHeavyGun_06",
+        "AHeavyCannon": "AHeavyCannon_06",
+        "AHeavyMissile": "AHeavyMissile_06"
+      }
     },
     {
       "name": "AircraftHeavy_07",
       "source": "AircraftHeavy",
-      "weaponSuffix": "_07"
+      "weaponSuffix": "_07",
+      "parts": [
+        {
+          "name": "AHeavyBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "AHeavyCover_07",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "AHeavyGun_07",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyMissile_07",
+              "parentSocket": 4,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyCannon_07",
+              "parentSocket": 5,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRocket_07",
+              "parentSocket": 6,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyAirStrike_07",
+              "parentSocket": 7,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 2,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "AHeavyGun": "AHeavyGun_07",
+        "AHeavyCannon": "AHeavyCannon_07",
+        "AHeavyMissile": "AHeavyMissile_07"
+      }
     },
     {
       "name": "AircraftHeavy_08",
       "source": "AircraftHeavy",
-      "weaponSuffix": "_08"
+      "weaponSuffix": "_08",
+      "parts": [
+        {
+          "name": "AHeavyBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "AHeavyCover_08",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "AHeavyGun_08",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyMissile_08",
+              "parentSocket": 4,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyCannon_08",
+              "parentSocket": 5,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRocket_08",
+              "parentSocket": 6,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyAirStrike_08",
+              "parentSocket": 7,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 2,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "AHeavyGun": "AHeavyGun_08",
+        "AHeavyCannon": "AHeavyCannon_08",
+        "AHeavyMissile": "AHeavyMissile_08"
+      }
     },
     {
       "name": "AircraftHeavy_09",
       "source": "AircraftHeavy",
-      "weaponSuffix": "_09"
+      "weaponSuffix": "_09",
+      "parts": [
+        {
+          "name": "AHeavyBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "AHeavyCover_09",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "AHeavyGun_09",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyMissile_09",
+              "parentSocket": 4,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyCannon_09",
+              "parentSocket": 5,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRocket_09",
+              "parentSocket": 6,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyAirStrike_09",
+              "parentSocket": 7,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 2,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "AHeavyGun": "AHeavyGun_09",
+        "AHeavyCannon": "AHeavyCannon_09",
+        "AHeavyMissile": "AHeavyMissile_09"
+      }
     },
     {
       "name": "AircraftHeavy_10",
       "source": "AircraftHeavy",
-      "weaponSuffix": "_10"
+      "weaponSuffix": "_10",
+      "parts": [
+        {
+          "name": "AHeavyBody",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "AHeavyCover_10",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "AHeavyGun_10",
+              "parentSocket": 3,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyMissile_10",
+              "parentSocket": 4,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyCannon_10",
+              "parentSocket": 5,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRocket_10",
+              "parentSocket": 6,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyAirStrike_10",
+              "parentSocket": 7,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 1,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "AHeavyRotor",
+              "parentSocket": 2,
+              "zOrder": 3,
+              "children": []
+            }
+          ]
+        }
+      ],
+      "weaponImages": {
+        "AHeavyGun": "AHeavyGun_10",
+        "AHeavyCannon": "AHeavyCannon_10",
+        "AHeavyMissile": "AHeavyMissile_10"
+      }
     },
     {
       "name": "AircraftDuct_01",

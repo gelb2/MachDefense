@@ -7,8 +7,9 @@
 namespace md::validation {
 // Cheat-only measured sheet: production parts and sprite assembly, uniform scale.
 inline Frame aircraftVisualFrame(ResourceAccess& r,unsigned mode){
+ unsigned level=1;if(mode>=1000){level=std::clamp(mode/1000,1u,10u);mode%=1000;}
  if(mode>=10&&mode<=16){
-  AircraftComparisonScene scene(r,3);scene.production(1,4,false);
+  AircraftComparisonScene scene(r,3);scene.production(level,4,false);
   static constexpr float banks[]{0,-.13962634f,-.27925268f,-.41887902f,.13962634f,.27925268f,.41887902f};
   static constexpr Vec2 positions[]{{-150,140},{-150,-140},{150,140},{150,-140}};
   unsigned index=0;for(const auto& a:scene.world->actors())if(!a->removed&&a->flightTactics){

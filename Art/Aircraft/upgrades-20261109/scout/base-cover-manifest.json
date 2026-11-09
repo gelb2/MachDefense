@@ -1,0 +1,234 @@
+{
+  "status": "prepared candidate; World validation pending",
+  "registration": {
+    "tile": [
+      16,
+      17
+    ],
+    "parentSocket": 0,
+    "selfSocket": [
+      -1,
+      -1
+    ],
+    "z": 2
+  },
+  "rows": [
+    {
+      "level": 1,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/scout-base/banks-generated.png",
+      "source_box": [
+        56,
+        235,
+        285,
+        487
+      ],
+      "group_scale": 0.048034934497816595,
+      "drawn_size": [
+        11,
+        12
+      ],
+      "cell": [
+        16,
+        17
+      ],
+      "cell_draw_offset": [
+        3,
+        2
+      ],
+      "body_cell_offset": [
+        25,
+        14
+      ],
+      "outside_alpha": 0,
+      "sha256": "6002d41b05f27de8b20a09dad2d5c9815163a7a3a775f77b4106fc7a3c7137ca",
+      "neutral_preserved": true
+    },
+    {
+      "level": 1,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/scout-base/banks-generated.png",
+      "source_box": [
+        360,
+        241,
+        591,
+        479
+      ],
+      "group_scale": 0.048034934497816595,
+      "drawn_size": [
+        11,
+        11
+      ],
+      "cell": [
+        16,
+        17
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        25,
+        14
+      ],
+      "outside_alpha": 0,
+      "sha256": "c7f4c1fae5588978c0e11ed705ac5fe218dae02c355e0552478bd990867f3486",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/scout-base/banks-generated.png",
+      "source_box": [
+        663,
+        251,
+        895,
+        468
+      ],
+      "group_scale": 0.048034934497816595,
+      "drawn_size": [
+        11,
+        10
+      ],
+      "cell": [
+        16,
+        17
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        25,
+        14
+      ],
+      "outside_alpha": 0,
+      "sha256": "3d1e4ba354db5c8265f8ac47a20ed96aaf338b0fea617c583f314e2a92d3e58e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/scout-base/banks-generated.png",
+      "source_box": [
+        968,
+        267,
+        1201,
+        452
+      ],
+      "group_scale": 0.048034934497816595,
+      "drawn_size": [
+        11,
+        9
+      ],
+      "cell": [
+        16,
+        17
+      ],
+      "cell_draw_offset": [
+        3,
+        4
+      ],
+      "body_cell_offset": [
+        25,
+        14
+      ],
+      "outside_alpha": 0,
+      "sha256": "4a3479dc423374527377c4b42e4a2cea79417356c5f0abb0879f07da49c0a904",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/scout-base/banks-generated.png",
+      "source_box": [
+        1272,
+        253,
+        1506,
+        471
+      ],
+      "group_scale": 0.048034934497816595,
+      "drawn_size": [
+        11,
+        10
+      ],
+      "cell": [
+        16,
+        17
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        25,
+        14
+      ],
+      "outside_alpha": 0,
+      "sha256": "c85624664aceced1de0a1fb94d5785a27df85b6a286bdc0dfa3f70dd30c0bf3e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/scout-base/banks-generated.png",
+      "source_box": [
+        1579,
+        243,
+        1811,
+        482
+      ],
+      "group_scale": 0.048034934497816595,
+      "drawn_size": [
+        11,
+        11
+      ],
+      "cell": [
+        16,
+        17
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        25,
+        14
+      ],
+      "outside_alpha": 0,
+      "sha256": "745abd0236bf681a76e30652723d224ca7e23d624f2488fad9b1f1d771e25f86",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/scout-base/banks-generated.png",
+      "source_box": [
+        1885,
+        236,
+        2116,
+        488
+      ],
+      "group_scale": 0.048034934497816595,
+      "drawn_size": [
+        11,
+        12
+      ],
+      "cell": [
+        16,
+        17
+      ],
+      "cell_draw_offset": [
+        4,
+        3
+      ],
+      "body_cell_offset": [
+        25,
+        14
+      ],
+      "outside_alpha": 0,
+      "sha256": "e6c2e47e32f8b6ff8ca0e07cdd1094da27b34a306eef0ee793e183e44ac47096",
+      "neutral_preserved": false
+    }
+  ]
+}

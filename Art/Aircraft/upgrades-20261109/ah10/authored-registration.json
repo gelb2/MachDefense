@@ -1,0 +1,2187 @@
+{
+  "status": "prepared candidate; World validation pending",
+  "registration": {
+    "tile": [
+      24,
+      22
+    ],
+    "parentSocket": 0,
+    "selfSocket": [
+      -2,
+      2
+    ],
+    "z": 1
+  },
+  "rows": [
+    {
+      "level": 1,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        28,
+        14,
+        296,
+        232
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        19,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "0bbc1cd983edeca45ea64b545299424ffea1f66734f39ec2214a9cacf4b04bf1",
+      "neutral_preserved": true
+    },
+    {
+      "level": 1,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        358,
+        15,
+        618,
+        232
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "f63a05d01659b3b83018ee44a09355a8bdf4bfe8cd94be5127eb786991e176d6",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        669,
+        15,
+        922,
+        230
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "9b34ea03931a9699c77d40b92c67402b1d61c64f96bcf739e56de83eb51ef0a5",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        971,
+        12,
+        1219,
+        228
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "c8db064d358bd4dbc591dce228e645e5813d464dc662e13649548ce2647b2f7c",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        1268,
+        20,
+        1523,
+        231
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "3448b4540041ba626f4a5e5b0ec88ff66c1d7b979560a80dc14f3076b910538e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        1565,
+        21,
+        1820,
+        232
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "37074b62d48a3e2480afdf5b942ae34b7b3c2bcc647bd9c29d6f263fbed35b53",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        1861,
+        29,
+        2118,
+        233
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        14
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "79318d2c2f21de074b615cf12a160aabea313d6d6bb0de128aeb90e29ae978ba",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        28,
+        255,
+        297,
+        474
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        19,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "7a29a070e58b2b266b1158a02b75ea53cd6b55738a98782b6e66966f654904fa",
+      "neutral_preserved": true
+    },
+    {
+      "level": 2,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        358,
+        259,
+        618,
+        472
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "02840111ea6e672cf55b531425eb3f46e658c7ea1535ffcea855b3b5e697272e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        668,
+        255,
+        923,
+        472
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "6b8b0b9730988ee14062d1d1bc985195b050885f18c08640f9393ed73f02636e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        971,
+        254,
+        1218,
+        468
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "afd18cc45e439e07f18f416de58f4844d177c993613516d5125f83dc6897019c",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        1267,
+        263,
+        1523,
+        472
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "de191345059c3b72d8e65e166c48ad6c91f9dedfaf9f79de52dd934873daae06",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        1563,
+        265,
+        1821,
+        474
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "55f870dafff5a937a0bb170ab24ece64bbe1cc70688e939f6cbcf4946ef52b81",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        1861,
+        274,
+        2120,
+        474
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        14
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "bf85056814b5e9c040c8d8db06f67722e1093b2673580f78ce85da46135d1e12",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        28,
+        500,
+        295,
+        719
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        19,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "991efbcbdf417178f2bcd7328dad909b93f55abd838dd9c40af071cebb99506d",
+      "neutral_preserved": true
+    },
+    {
+      "level": 3,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        357,
+        504,
+        618,
+        716
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        19,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "fd028c152cc988fa65f3064f14c7bce46664d6eaaa7f892059ff44fc29276a58",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        669,
+        501,
+        925,
+        719
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "2c658a35432fd5af824c1f95f11f7572a6c9ae7f8b7ed83e32ab25d649254b76",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        971,
+        501,
+        1220,
+        713
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "cf76143841ab9bbcd431be466c496bd6410a799f3073a4de8194bdba34462957",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        1267,
+        508,
+        1523,
+        718
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "505450b9074a2ae70f664ecd03f6686e3e5b01fc170ff6fb90ea4e14e216f300",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        1564,
+        509,
+        1823,
+        719
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "b2c2d69a7d2204ec053a1cdb8f42917dec0f3e402fb1939dfc9bb21950c31a98",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group1.png",
+      "source_box": [
+        1862,
+        518,
+        2120,
+        720
+      ],
+      "group_scale": 0.0708955223880597,
+      "drawn_size": [
+        18,
+        14
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "5b94b352871a3b6ecfee99c241470876282374e630851fbbb0af421571d1f3ba",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        37,
+        25,
+        298,
+        227
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        19,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "edc67aa9702bd6d90ae92f9779cc8860d58a0e41399719c35e0abbbc891880fa",
+      "neutral_preserved": true
+    },
+    {
+      "level": 4,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        352,
+        25,
+        600,
+        228
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "fa6fab182d6199d9d97939826588ab0ebfbd678abc423d34d99210c2608cd38a",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        659,
+        25,
+        899,
+        228
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        17,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "32de5c9e6c3d4985a3c09d3b20a816cf9b8840e8eb5babcc1983e78cfcdd3d39",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        965,
+        25,
+        1195,
+        227
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        17,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "fd2531749fe04e8695a31c8476639ae78cde8b2bd29696045b0c382d367a1b32",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        1260,
+        38,
+        1508,
+        225
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        14
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        4
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "61730b477858fb2a0b5b7ef3643959e1dd5a0b471a957eea61095b65e5044319",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        1562,
+        40,
+        1812,
+        223
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        13
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        4
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "ed0f73d9448fee10e5bc186dc867384dc9d8f4f4bc9d6709f4460f376e57b2ad",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        1868,
+        48,
+        2119,
+        219
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        12
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        4
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "6d32e732aecd2edf71a75ceae3ed5fe5e330ec4be8c1216efe1f9f559fa95ff6",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        38,
+        266,
+        299,
+        473
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        19,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "b99c54873d429fab06296866b24d5b634f5a2b1582c4f352504e02461a4c95cc",
+      "neutral_preserved": true
+    },
+    {
+      "level": 5,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        352,
+        266,
+        602,
+        473
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "46af21d7aafcb880fe9b2f291d573b63e52d2efcc49ee1e00a573c3cb4d1c12d",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        659,
+        266,
+        899,
+        473
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        17,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "61fdc160a9ce50fb8bc2ebd0575a5f7f56fd79f7c5aa24ca0f094c6247dd4287",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        965,
+        266,
+        1196,
+        472
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        17,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "652b906cb9ed12ea4f1375336af33ab46ccf2276ec74262e719820790c9c74a0",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        1260,
+        275,
+        1508,
+        471
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        14
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        4
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "478bc4f769b69f074e8cfd572d61cfc8ad814c1b042f0a1255084073b0911b5f",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        1563,
+        281,
+        1813,
+        468
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        14
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        4
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "70280a2540a25f0fd66ec1283c6ef73905157b53187d8c9f35a0b92a16d7d15d",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        1869,
+        289,
+        2121,
+        465
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        13
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "e1c0fb3d1a7adb134922c6e6260f8845bc44906d21e287bff90c56e56c4d84b4",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        39,
+        506,
+        299,
+        717
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        19,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "ebca727f05812eb90c2c6a0d631cb6b2a85c6bc26e9660036558ff3b669292b3",
+      "neutral_preserved": true
+    },
+    {
+      "level": 6,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        354,
+        506,
+        603,
+        717
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "f0a2982f8aa20a48d994806644aa46d9032510fb3543739003f638b2e60d0598",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        662,
+        506,
+        900,
+        717
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        17,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "df4324c711b947746a2e3f04358cb9366ddf69700f33cce614b9e6e2ec6b9720",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        967,
+        506,
+        1198,
+        717
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        17,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "2d88a8fa0529ac57330c506603b695f1db05285fe92428ca45be372bbe473172",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        1260,
+        515,
+        1510,
+        717
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "532d865affa3ece96da0a1a0d6fcacb8c3ef7ba7e5d03dc3284f89efc4c59c0e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        1563,
+        522,
+        1816,
+        713
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        14
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        4
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "c9c28cda74f800ff18c5b7e320846b6085dd1997559ca92f549a53ec90757d9a",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group2.png",
+      "source_box": [
+        1869,
+        531,
+        2121,
+        709
+      ],
+      "group_scale": 0.07279693486590039,
+      "drawn_size": [
+        18,
+        13
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "81add3b24d0802ada27e0db2f90420032f2b743be89d9fbe3c8f83c124dc8f2e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        27,
+        29,
+        239,
+        207
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        19,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "05451f16f13d25839495464f624d043d6a84b450ee67de436461f3dc31860f38",
+      "neutral_preserved": true
+    },
+    {
+      "level": 7,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        287,
+        28,
+        485,
+        207
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "911cd2de13b90d1b97673d921800b53194b06352fc1ee110d4403afc429be784",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        531,
+        25,
+        715,
+        210
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        16,
+        17
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        4,
+        2
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "38d84b2369af5678f03ae3b7858d0705cb54e971d715d94e8c2dd8e1fcb23339",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        759,
+        23,
+        929,
+        210
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        15,
+        17
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        4,
+        2
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "4e47eb8b8dc0f3869ca919a7ffea81bf2bde1486df61db0af96ba6b9d55ce9a6",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        974,
+        33,
+        1171,
+        203
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "43a11c9e0eaec999bacb5ebbd9bbd0d86864ddb2f64401f16b8df08772fa12ec",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        1199,
+        37,
+        1408,
+        201
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        19,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "ede9cfbbb7bebafad506e59777c1e048588f919beb58367ba9d021c4e92b27d6",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        1433,
+        46,
+        1638,
+        197
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        14
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "54d4afe235c004a92086e202be518c51f0f2191cfe164acfad488a33599cec8d",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        26,
+        264,
+        240,
+        447
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        19,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "4b5db9bd81c7fcf61dca81c220664ccb433f7fd5092e78f07d0f94613cf44785",
+      "neutral_preserved": true
+    },
+    {
+      "level": 8,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        287,
+        264,
+        486,
+        446
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "ee355301a95b1fa8d731db9999ccee00ef2c260f9829ea95c10cdfc4ca16d65e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        531,
+        262,
+        717,
+        449
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        17,
+        17
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        2
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "729d341dca13704470aee0fc5cbd35c3862eb7c5a7f1ef7bb10672812ef0efd4",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        758,
+        262,
+        928,
+        452
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        15,
+        17
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        4,
+        2
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "95d3a08bc7f8da31dbaba65e809cfb5481464677386b090012e754325596ab00",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        974,
+        271,
+        1171,
+        442
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "2b4b3e376cb110bce2428850fbe0cb83b100f14e3757adb195d5d2821a230c35",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        1199,
+        276,
+        1407,
+        441
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        19,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "88e10f61ab1b7d9bb8cda6f946f6d78d4d3a82f3dd16f23f95bdb752e23b1f48",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        1433,
+        284,
+        1638,
+        436
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        14
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "7c49e983f3a31cf32b206d12c829f7fdd09926b92aa5ba9cde6025bbc3e9d90a",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        26,
+        504,
+        239,
+        688
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        19,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "93a7c22f316fdb83bb5ea0d01bafbe07fedc4d7e16317bf0779534b60c89eb4e",
+      "neutral_preserved": true
+    },
+    {
+      "level": 9,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        287,
+        504,
+        486,
+        685
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "9570e16755bafc8ec475557524b6273f27ef73d6c3bd02df2231d3f706713bdc",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        530,
+        500,
+        716,
+        689
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        17,
+        17
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        2
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "3d15c37df10c673e68bed8a8f7810ab6213b4f550b8b301751e91588fbab543b",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        758,
+        499,
+        928,
+        690
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        15,
+        17
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        4,
+        2
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "1ecd54fb7c1e5cfd0a862db9f2f489d96546156cce756204ac8c2454c085817c",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        974,
+        510,
+        1170,
+        683
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "35871711ed640b210fc80e1ce3321aaa722eb6d913ad073c93fb517c2d59c56d",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        1199,
+        516,
+        1408,
+        681
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        19,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "57cf91fca34b2680c2e54be2d2020ef41dd0d4111fd79e5a3f1d0579a5f4bc98",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        1433,
+        524,
+        1638,
+        677
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        14
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "c8403c1d124de76a92ed71d7265b31da6650786013a6bfc161bbc6db9e59c3a9",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        27,
+        745,
+        239,
+        925
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        19,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "91f6db457331bb8c02663907d39440c667434f9f83e3ff696f5511eea9bb5e87",
+      "neutral_preserved": true
+    },
+    {
+      "level": 10,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        287,
+        744,
+        486,
+        926
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "233c95d9174d1e44a1f222b820f9d11a4c4934da41779caa640f2a99f7a7b84e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        530,
+        741,
+        717,
+        930
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        17,
+        17
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        2
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "53eccab89b49087a8a5766699fc3342c70af7876affc169e62d001119eb0d173",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        758,
+        742,
+        929,
+        931
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        15,
+        17
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        4,
+        2
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "6545a18110642bc2d22db9b20074b700e0c5a2a4acd3dd945733e1c27eef8a6f",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        974,
+        749,
+        1171,
+        922
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        16
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "7f18306a671d7fa2c7bc5b8a2e6dc4136c4adcd73e3579f20e0485bec263e187",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        1199,
+        756,
+        1407,
+        922
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        19,
+        15
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "bd3bfe6adb3796c965e320ab80e2024a4f987610bfb7ddc18706e19cb55889cf",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/ah10/banks-group3.png",
+      "source_box": [
+        1433,
+        765,
+        1638,
+        918
+      ],
+      "group_scale": 0.08962264150943396,
+      "drawn_size": [
+        18,
+        14
+      ],
+      "cell": [
+        24,
+        22
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        28,
+        47
+      ],
+      "outside_alpha": 0,
+      "sha256": "817d8c7cde40c6eaeb2e1a8e360a4222d370509c3bb10de8bf55ef4977d004f5",
+      "neutral_preserved": false
+    }
+  ]
+}

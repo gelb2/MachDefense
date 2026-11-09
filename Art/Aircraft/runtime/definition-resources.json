@@ -1,12 +1,13 @@
 {
   "source": "Art/Aircraft/runtime/assembly.json",
-  "sourceSHA256": "8fe42e6e724e4463e915fa72bd5eecc3066259b7c4c126dc761ce10472ec5891",
-  "parts": 172,
+  "sourceSHA256": "02db915007bf1d9ff909344f1a3562fb40b82f9146a7799a726fdb9574f55683",
+  "parts": 183,
   "machines": 44,
   "persistedLevelVariants": 40,
   "runtimeVariantGeneration": false,
   "visualLevelVariationImplemented": true,
   "visualLevelVariationScope": [
+    "AircraftLight_01",
     "AircraftLight_02",
     "AircraftLight_03",
     "AircraftLight_04",
@@ -16,6 +17,16 @@
     "AircraftLight_08",
     "AircraftLight_09",
     "AircraftLight_10",
+    "AircraftHeavy_01",
+    "AircraftHeavy_02",
+    "AircraftHeavy_03",
+    "AircraftHeavy_04",
+    "AircraftHeavy_05",
+    "AircraftHeavy_06",
+    "AircraftHeavy_07",
+    "AircraftHeavy_08",
+    "AircraftHeavy_09",
+    "AircraftHeavy_10",
     "AircraftDuct_01",
     "AircraftDuct_02",
     "AircraftDuct_03",
@@ -42,15 +53,15 @@
       "path": "Resources/RawData/Level10Parts.mcb",
       "retainedNodes": 44,
       "retainedNodeSHA256": "3fefe3b71a62b0e4202991ed60c6e07720a89f5cc6d6046f62a715c41d498ab2",
-      "addedNodes": 172,
-      "sha256": "d073e0ba8b28f4b4ade2ec7cbfde9ca01fe53ff70c5f2406c8eafbb4b1f406cb"
+      "addedNodes": 183,
+      "sha256": "a09045343ab01135b428592b558ce2a541f03d96d39cae962d4371035c7cc745"
     },
     {
       "path": "Resources/RawData/Level10Machines.mcb",
       "retainedNodes": 33,
       "retainedNodeSHA256": "7e8c94c527093ea53716892f3dc4643e35013f3942c75296fc1c4ee54902fee5",
       "addedNodes": 44,
-      "sha256": "185b5745ae81bc0811f48f77a5a64e87e264f4fba43090b1898024da37d6e456"
+      "sha256": "4b6f33bbcb63949fed48075b01d8c632516ad3d382448f59b0b4f0855649c60f"
     }
   ]
 }

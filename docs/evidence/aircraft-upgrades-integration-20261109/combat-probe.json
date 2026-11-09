@@ -1,0 +1,9 @@
+{
+  "onlyChange": "private command21 production firing=true; tracked main unchanged",
+  "regularData": "e47d715f92fe6d1cd42c5faa5d147989871fa54df69f6cc64a2e6c4831a70afa",
+  "probeData": "e47d715f92fe6d1cd42c5faa5d147989871fa54df69f6cc64a2e6c4831a70afa",
+  "resourcesIdentical": true,
+  "trackedMain": "0ed79b56d52768d6ed4c10ca369a1542386732f293ee33264d8d9c18282e6bfb",
+  "privateMain": "fb22dc752019e8154354f62baa33185bcc3a6d665e3522dd131d199b018e962a",
+  "levelFixture": "tracked level*1000+10+pose support; no second private transform"
+}

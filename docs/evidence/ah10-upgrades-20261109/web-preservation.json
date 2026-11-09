@@ -1,0 +1,1825 @@
+{
+  "cases": [
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 0,
+      "changedPixels": 960,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 1,
+      "changedPixels": 886,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 2,
+      "changedPixels": 884,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 3,
+      "changedPixels": 855,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 4,
+      "changedPixels": 930,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 5,
+      "changedPixels": 915,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 6,
+      "changedPixels": 822,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 0,
+      "changedPixels": 959,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 1,
+      "changedPixels": 913,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 2,
+      "changedPixels": 886,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 3,
+      "changedPixels": 837,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 4,
+      "changedPixels": 935,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 5,
+      "changedPixels": 915,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 6,
+      "changedPixels": 841,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 0,
+      "changedPixels": 976,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 1,
+      "changedPixels": 951,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 2,
+      "changedPixels": 886,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 3,
+      "changedPixels": 857,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 4,
+      "changedPixels": 931,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 5,
+      "changedPixels": 916,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 6,
+      "changedPixels": 844,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 0,
+      "changedPixels": 977,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 1,
+      "changedPixels": 896,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 2,
+      "changedPixels": 859,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 3,
+      "changedPixels": 835,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 4,
+      "changedPixels": 883,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 5,
+      "changedPixels": 835,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 6,
+      "changedPixels": 738,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 0,
+      "changedPixels": 950,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 1,
+      "changedPixels": 902,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 2,
+      "changedPixels": 857,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 3,
+      "changedPixels": 821,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 4,
+      "changedPixels": 866,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 5,
+      "changedPixels": 841,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 6,
+      "changedPixels": 769,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 0,
+      "changedPixels": 952,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 1,
+      "changedPixels": 896,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 2,
+      "changedPixels": 837,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 3,
+      "changedPixels": 812,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 4,
+      "changedPixels": 902,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 5,
+      "changedPixels": 831,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 6,
+      "changedPixels": 765,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 0,
+      "changedPixels": 953,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 1,
+      "changedPixels": 930,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 2,
+      "changedPixels": 885,
+      "bounds": [
+        220,
+        597,
+        288,
+        686
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 3,
+      "changedPixels": 803,
+      "bounds": [
+        221,
+        597,
+        286,
+        686
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 4,
+      "changedPixels": 920,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 5,
+      "changedPixels": 911,
+      "bounds": [
+        220,
+        597,
+        288,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 6,
+      "changedPixels": 826,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 0,
+      "changedPixels": 962,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 1,
+      "changedPixels": 925,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 2,
+      "changedPixels": 880,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 3,
+      "changedPixels": 783,
+      "bounds": [
+        221,
+        597,
+        286,
+        686
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 4,
+      "changedPixels": 929,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 5,
+      "changedPixels": 930,
+      "bounds": [
+        220,
+        597,
+        288,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 6,
+      "changedPixels": 828,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 0,
+      "changedPixels": 962,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 1,
+      "changedPixels": 924,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 2,
+      "changedPixels": 896,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 3,
+      "changedPixels": 774,
+      "bounds": [
+        221,
+        597,
+        286,
+        686
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 4,
+      "changedPixels": 942,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 5,
+      "changedPixels": 922,
+      "bounds": [
+        220,
+        597,
+        288,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 6,
+      "changedPixels": 833,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 0,
+      "changedPixels": 959,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 1,
+      "changedPixels": 908,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 2,
+      "changedPixels": 884,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 3,
+      "changedPixels": 763,
+      "bounds": [
+        221,
+        597,
+        286,
+        686
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 4,
+      "changedPixels": 926,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 5,
+      "changedPixels": 923,
+      "bounds": [
+        220,
+        597,
+        288,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 6,
+      "changedPixels": 834,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 0,
+      "changedPixels": 960,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 1,
+      "changedPixels": 886,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 2,
+      "changedPixels": 884,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 3,
+      "changedPixels": 855,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 4,
+      "changedPixels": 930,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 5,
+      "changedPixels": 915,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 6,
+      "changedPixels": 822,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 0,
+      "changedPixels": 959,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 1,
+      "changedPixels": 913,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 2,
+      "changedPixels": 886,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 3,
+      "changedPixels": 837,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 4,
+      "changedPixels": 935,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 5,
+      "changedPixels": 915,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 6,
+      "changedPixels": 841,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 0,
+      "changedPixels": 976,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 1,
+      "changedPixels": 951,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 2,
+      "changedPixels": 886,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 3,
+      "changedPixels": 857,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 4,
+      "changedPixels": 931,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 5,
+      "changedPixels": 916,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 6,
+      "changedPixels": 844,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 0,
+      "changedPixels": 977,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 1,
+      "changedPixels": 896,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 2,
+      "changedPixels": 859,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 3,
+      "changedPixels": 835,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 4,
+      "changedPixels": 883,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 5,
+      "changedPixels": 835,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 6,
+      "changedPixels": 738,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 0,
+      "changedPixels": 950,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 1,
+      "changedPixels": 902,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 2,
+      "changedPixels": 857,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 3,
+      "changedPixels": 821,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 4,
+      "changedPixels": 866,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 5,
+      "changedPixels": 841,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 6,
+      "changedPixels": 769,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 0,
+      "changedPixels": 952,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 1,
+      "changedPixels": 896,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 2,
+      "changedPixels": 837,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 3,
+      "changedPixels": 812,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 4,
+      "changedPixels": 902,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 5,
+      "changedPixels": 831,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 6,
+      "changedPixels": 765,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 0,
+      "changedPixels": 953,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 1,
+      "changedPixels": 930,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 2,
+      "changedPixels": 885,
+      "bounds": [
+        220,
+        597,
+        288,
+        686
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 3,
+      "changedPixels": 803,
+      "bounds": [
+        221,
+        597,
+        286,
+        686
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 4,
+      "changedPixels": 920,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 5,
+      "changedPixels": 911,
+      "bounds": [
+        220,
+        597,
+        288,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 6,
+      "changedPixels": 826,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 0,
+      "changedPixels": 962,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 1,
+      "changedPixels": 925,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 2,
+      "changedPixels": 880,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 3,
+      "changedPixels": 783,
+      "bounds": [
+        221,
+        597,
+        286,
+        686
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 4,
+      "changedPixels": 929,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 5,
+      "changedPixels": 930,
+      "bounds": [
+        220,
+        597,
+        288,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 6,
+      "changedPixels": 828,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 0,
+      "changedPixels": 962,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 1,
+      "changedPixels": 924,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 2,
+      "changedPixels": 896,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 3,
+      "changedPixels": 774,
+      "bounds": [
+        221,
+        597,
+        286,
+        686
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 4,
+      "changedPixels": 942,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 5,
+      "changedPixels": 922,
+      "bounds": [
+        220,
+        597,
+        288,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 6,
+      "changedPixels": 833,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 0,
+      "changedPixels": 959,
+      "bounds": [
+        219,
+        598,
+        290,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 1,
+      "changedPixels": 908,
+      "bounds": [
+        219,
+        598,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 2,
+      "changedPixels": 884,
+      "bounds": [
+        220,
+        597,
+        288,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 3,
+      "changedPixels": 763,
+      "bounds": [
+        221,
+        597,
+        286,
+        686
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 4,
+      "changedPixels": 926,
+      "bounds": [
+        219,
+        597,
+        290,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 5,
+      "changedPixels": 923,
+      "bounds": [
+        220,
+        597,
+        288,
+        688
+      ],
+      "outsideAH10Pixels": 0
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 6,
+      "changedPixels": 834,
+      "bounds": [
+        221,
+        597,
+        286,
+        687
+      ],
+      "outsideAH10Pixels": 0
+    }
+  ],
+  "count": 140
+}

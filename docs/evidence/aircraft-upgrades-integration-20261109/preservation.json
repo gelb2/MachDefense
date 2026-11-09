@@ -1,0 +1,31 @@
+{
+  "base": "629cd49",
+  "originalNodes": [
+    {
+      "path": "Resources/RawData/Level10Parts.mcb",
+      "originalNodeCount": 44,
+      "unchanged": true
+    },
+    {
+      "path": "Resources/RawData/Level10Machines.mcb",
+      "originalNodeCount": 33,
+      "unchanged": true
+    }
+  ],
+  "existingImagesUnchanged": 1251,
+  "sourceChanges": [
+    "Sources/Core/Simulation/AircraftVisual.hpp"
+  ],
+  "featureFilesByteExact": 137,
+  "mergedAssemblyMatchesReviewedUnion": true,
+  "features": [
+    "1e346af",
+    "c2a7381"
+  ],
+  "nodeCounts": {
+    "AircraftLight": 5,
+    "AircraftHeavy": 9,
+    "AircraftDuct": 7,
+    "AircraftTransport": 11
+  }
+}

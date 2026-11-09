@@ -57,7 +57,7 @@ def run():
  selections.update({alias:(source,alias_images[alias]) for alias,source in aliases.items()})
  for alias,(source,image_name) in selections.items():
   if not source['tileCount']:continue
-  texture=source.get('texture',{})
+  texture=source.get('texture',{}) if image_name==source['name'] else {}
   image_name=texture.get('image',image_name)
   first=texture.get('firstTile',0);grid=texture.get('grid',[source['tileCount'],1])
   assert 0<=first and first+source['tileCount']<=grid[0]*grid[1]
@@ -83,7 +83,7 @@ def run():
    original=ROOT/'Resources/Images'/(p['imageSource']+'.png');dest=ROOT/'Resources/Images'/(p['name']+'.png');dest.write_bytes(original.read_bytes())
  def part(p):return encode(4,named(p['name'])+bytes([p['parentSocket'],p['zOrder']]),[part(c) for c in p['children']])
  machines=[encode(3,named(m['name']),[part(p) for p in m['parts']]) for m in authored_machines]
- report={'source':str(src.relative_to(ROOT)),'sourceSHA256':hashlib.sha256(src.read_bytes()).hexdigest(),'parts':len(parts),'machines':len(machines),'persistedLevelVariants':len(spec['levelVariants']),'runtimeVariantGeneration':False,'visualLevelVariationImplemented':any('parts' in v for v in spec['levelVariants']),'visualLevelVariationScope':[v['name'] for v in spec['levelVariants'] if 'parts' in v and v['name']!='AircraftLight_01'],'containers':[]}
+ report={'source':str(src.relative_to(ROOT)),'sourceSHA256':hashlib.sha256(src.read_bytes()).hexdigest(),'parts':len(parts),'machines':len(machines),'persistedLevelVariants':len(spec['levelVariants']),'runtimeVariantGeneration':False,'visualLevelVariationImplemented':any('parts' in v for v in spec['levelVariants']),'visualLevelVariationScope':[v['name'] for v in spec['levelVariants'] if 'parts' in v],'containers':[]}
  for name,kind,additions in [('Parts',0,parts),('Machines',2,machines)]:
   standalone=ROOT/'Resources/RawData'/('Aircraft'+name+'.mcb');standalone.write_bytes(encode(kind,children=additions))
   path=ROOT/'Resources/RawData'/('Level10'+name+'.mcb');tree,end=decode(path.read_bytes());assert end==path.stat().st_size

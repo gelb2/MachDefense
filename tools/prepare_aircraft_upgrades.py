@@ -32,8 +32,8 @@ def run():
    assert all(decoded[i+c]==pixels[i+c]for i in range(0,len(pixels),4)if pixels[i+3]==255 for c in range(3))
    dest.write_bytes(encoded.read_bytes())
   records.append({'name':name,'source':str(path.relative_to(ROOT)),'sourceSHA256':hashlib.sha256(path.read_bytes()).hexdigest(),'runtimeSHA256':hashlib.sha256(dest.read_bytes()).hexdigest(),'size':expected,'cgbi':True,'alphaPreserved':True,'potRGBABytes':(1<<(expected[0]-1).bit_length())*(1<<(expected[1]-1).bit_length())*4})
- assert len(cover_levels)==9 and len({tuple(h)for h in cover_levels.values()})==9
- report={'scope':'Scout level 2–10 resources listed below; level1 preserved','coverPoseHashes':cover_levels,'coverRegistration':{'actualBodyCell':[64,47],'coverCell':[16,17],'bodyTopLeft':[25,14],'bodyLocalCenter':[1,1],'socket0':[-1,-1],'outsideApprovedAlphaPixels':cover_outside},'weaponHousingsPrepared':[r['name']for r in records if not r['name'].startswith('ALightCover_')],'records':records,'potRGBABytes':sum(r['potRGBABytes']for r in records),'runtimeVisualVerification':'pending'}
+ assert len(cover_levels)==10 and len({tuple(h)for h in cover_levels.values()})==10
+ report={'scope':'Scout level 1–10 independent covers and rear housings','coverPoseHashes':cover_levels,'coverRegistration':{'actualBodyCell':[64,47],'coverCell':[16,17],'bodyTopLeft':[25,14],'bodyLocalCenter':[1,1],'socket0':[-1,-1],'outsideApprovedAlphaPixels':cover_outside},'weaponHousingsPrepared':[r['name']for r in records if not r['name'].startswith('ALightCover_')],'records':records,'potRGBABytes':sum(r['potRGBABytes']for r in records),'runtimeVisualVerification':'pending'}
  (ART/'manifest.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report))
 def prepare_cheyenne():
  art=ROOT/'Art/Aircraft/upgrades-20261109/cheyenne'
