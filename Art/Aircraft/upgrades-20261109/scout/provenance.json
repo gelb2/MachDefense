@@ -1,0 +1,946 @@
+{
+  "version": 1,
+  "scope": "Scout Lv2-10 appearance assets only. Lv1 surface work remains a separate follow-up. This provenance records asset preparation, not user visual approval or runtime verification.",
+  "references": [
+    {
+      "path": "Resources/Images/P_Body_16.png",
+      "sha256": "893fb703e6b3ed2141f2431fb9377cf8ea3a0e6fbdc262b706307db6546508a8",
+      "role": "original MachDefense progression/style reference"
+    },
+    {
+      "path": "Resources/Images/P_Body_17.png",
+      "sha256": "76ee808e68b262c228533635cee61ed8fafe817d7669e5f05410b12208ebbddb",
+      "role": "original MachDefense progression/style reference"
+    },
+    {
+      "path": "Resources/Images/P_Body_18.png",
+      "sha256": "b0962cc7192096964019f938606ee5d9e80b598681c9d730a82916e3a2b5918e",
+      "role": "original MachDefense progression/style reference"
+    },
+    {
+      "path": "Resources/Images/P_Wpn_Gun_403.png",
+      "sha256": "82c7430a13d8db7c5dae3817ceff2e274a5b97ef423d41163468ed1e12c02a4b",
+      "role": "read-only original progression comparison; not an input to the final successful generation calls"
+    },
+    {
+      "path": "Resources/Images/P_Wpn_Gun_105.png",
+      "sha256": "47b14474f73fb89257ea58389be56993bb5ea52ec8d33183e0b54a8d8ff63867",
+      "role": "read-only original progression comparison; not an input to the final successful generation calls"
+    },
+    {
+      "path": "Resources/Images/P_Wpn_Gun_106.png",
+      "sha256": "eaeacdd1b3aaf2883d93dd8c8866983d65e9e8887c30b9122eaf5c0e5df7db6d",
+      "role": "read-only original progression comparison; not an input to the final successful generation calls"
+    },
+    {
+      "path": "Resources/Images/ALightGun.png",
+      "sha256": "a2ecf277cccf9d67d4d9dce5cc7ad68d9a68f1bf216f5cd9823b84790b164c65",
+      "role": "approved scout weapon baseline"
+    },
+    {
+      "path": "Resources/Images/ALightMissile.png",
+      "sha256": "f900f0f1c5f299eef82a7fae9ffb4c97d74bbeba042b8b0b7f1473960415fa20",
+      "role": "approved scout weapon baseline"
+    },
+    {
+      "path": "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+      "sha256": "c0e800b5bacb41ed1b9e8035f8ead5147122ef4c00756ffad900de95c4701ba5",
+      "role": "approved body silhouette, palette and seven bank poses"
+    }
+  ],
+  "generation_records": [
+    {
+      "id": "scout-lv02-parts",
+      "level": 2,
+      "output_sha256": "033da557938b7fc2ecda5cbc398297b2821041d8d1bb4ab8abbf85dbb8fe7137",
+      "prompt": "Use case: precise-object-edit. Asset: separate upgrade PARTS for an existing top-down 2D fictional helicopter game sprite, level 2 only, on genuine transparency. Inputs: Image 1 is the APPROVED scout body with seven banking frames (nose RIGHT, first frame neutral) — preserve its olive grey paint, angular mechanical style, no aircraft redesign. Images 2–4 are original game's machine-gun mech body levels 8/9/10, for restrained metal shading and independently attached plate construction only; do not copy their silhouette. Image 5 contains the approved scout gun on the left and missile housing on the right, separated by a transparent gap; these two small parts are the exact edit targets.\nProduce exactly THREE SEPARATED, orthographic top-view sprite parts arranged in one horizontal row, generous transparent gutters, NO text/no labels/no background/no ground shadow:\nLEFT: a small two-shoulder engine-cover assembly to fit ONLY inside the existing scout center hull, nose to the RIGHT. Two thin independent olive-grey supporting armor plates with one short exposed mechanical bridge and the existing central rotor opening left transparent. Short bright metal corners and dark seams, one clear upper surface per plate. Not a complete fuselage, no nose, tail, wings, rotor, antenna, or new decoration. Logical footprint at final game size about 22x18 pixels, readable few large forms.\nCENTER: edit current scout machine-gun housing, keeping barrel number, RIGHT-pointing muzzle and the length/width ratio of its 14x7 logical pixel sprite EXACTLY; add only a short rear protective hood and exposed attachment. No enlarged barrel or extra guns.\nRIGHT: edit current scout missile pod 13x8 proportions EXACTLY, keeping tube count/muzzle and RIGHT direction; add a short mechanical retaining band at the rear. No added tubes.\nAll parts share identical pixel density and neutral top-down camera. Preserve low-saturation olive grey, small ivory edge highlights, dark metal crevices. The structure must change, not just recoloring/scratches. No orange/neon/new color patches, rounded shiny 3D rendering, thick outlines, or random micro-noise. These are separate modular replacement parts, NOT a complete helicopter.",
+      "tool": "image_gen builtin",
+      "role": "neutral cover and independently drawn rear weapon housings",
+      "selection": "whole resized weapons rejected when footprint differed; rear housing portion used with unchanged approved barrel and alpha",
+      "inputs": [
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png",
+        {
+          "role": "approved gun/missile reference composite",
+          "sha256": "4e6a058aac8b64040e475bf60fdc75aa830286aaeb19a7a2f3071b6ad223f511",
+          "recipe": "43x8 transparent canvas; approved ALightGun at0,0; ALightMissile at30,0; no rescaling"
+        }
+      ]
+    },
+    {
+      "id": "scout-lv03-parts",
+      "level": 3,
+      "output_sha256": "2ad2c8edac82d7c347207b63a3d5c25bc494b4c28b49baa560c81fff1545c070",
+      "prompt": "Use case: precise-object-edit. Asset: separate upgrade PARTS for an existing top-down 2D fictional helicopter game sprite, level 3 only, on genuine transparency. Inputs: Image 1 is the APPROVED scout body with seven banking frames (nose RIGHT, first frame neutral) — preserve its olive grey paint, angular mechanical style, no aircraft redesign. Images 2–4 are original game's machine-gun mech body levels 8/9/10, for restrained metal shading and independently attached plate construction only; do not copy their silhouette. Image 5 contains the approved scout gun on the left and missile housing on the right, separated by a transparent gap; these two small parts are the exact edit targets.\nProduce exactly THREE SEPARATED, orthographic top-view sprite parts arranged in one horizontal row, generous transparent gutters, NO text/no labels/no background/no ground shadow:\nLEFT: a small two-shoulder engine-cover assembly to fit ONLY inside the existing scout center hull, nose to the RIGHT. Two thin independent olive-grey supporting armor plates with one short exposed mechanical bridge and the existing central rotor opening left transparent. Short bright metal corners and dark seams, one clear upper surface per plate. Not a complete fuselage, no nose, tail, wings, rotor, antenna, or new decoration. Logical footprint at final game size about 22x18 pixels, readable few large forms.\nCENTER: edit current scout machine-gun housing, keeping barrel number, RIGHT-pointing muzzle and the length/width ratio of its 14x7 logical pixel sprite EXACTLY; add only a short rear protective hood and exposed attachment. No enlarged barrel or extra guns.\nRIGHT: edit current scout missile pod 13x8 proportions EXACTLY, keeping tube count/muzzle and RIGHT direction; add a short mechanical retaining band at the rear. No added tubes.\nAll parts share identical pixel density and neutral top-down camera. Preserve low-saturation olive grey, small ivory edge highlights, dark metal crevices. The structure must change, not just recoloring/scratches. No orange/neon/new color patches, rounded shiny 3D rendering, thick outlines, or random micro-noise. These are separate modular replacement parts, NOT a complete helicopter.\nThis level's structural specification OVERRIDES only the level-2 plate/hood/band description above: COVER: replace each shoulder plate with two overlapping armor plates, exposing a short rib between them. GUN: double top hood, same barrel count and muzzle. MISSILE: two separated retention bands, same tube count.\nKeep ALL three parts' footprint, muzzle location, scale, color and low-detail pixel readability identical to the references. Do NOT increase dimensions with level. No labels.",
+      "tool": "image_gen builtin",
+      "role": "neutral cover and independently drawn rear weapon housings",
+      "selection": "whole resized weapons rejected when footprint differed; rear housing portion used with unchanged approved barrel and alpha",
+      "inputs": [
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png",
+        {
+          "role": "approved gun/missile reference composite",
+          "sha256": "4e6a058aac8b64040e475bf60fdc75aa830286aaeb19a7a2f3071b6ad223f511",
+          "recipe": "43x8 transparent canvas; approved ALightGun at0,0; ALightMissile at30,0; no rescaling"
+        }
+      ]
+    },
+    {
+      "id": "scout-lv04-parts",
+      "level": 4,
+      "output_sha256": "d59710353364203c1740b83c66d5891d16b0fc7b23a7ecce5d76fbec3d1d70eb",
+      "prompt": "Use case: precise-object-edit. Asset: separate upgrade PARTS for an existing top-down 2D fictional helicopter game sprite, level 4 only, on genuine transparency. Inputs: Image 1 is the APPROVED scout body with seven banking frames (nose RIGHT, first frame neutral) — preserve its olive grey paint, angular mechanical style, no aircraft redesign. Images 2–4 are original game's machine-gun mech body levels 8/9/10, for restrained metal shading and independently attached plate construction only; do not copy their silhouette. Image 5 contains the approved scout gun on the left and missile housing on the right, separated by a transparent gap; these two small parts are the exact edit targets.\nProduce exactly THREE SEPARATED, orthographic top-view sprite parts arranged in one horizontal row, generous transparent gutters, NO text/no labels/no background/no ground shadow:\nLEFT: a small two-shoulder engine-cover assembly to fit ONLY inside the existing scout center hull, nose to the RIGHT. Two thin independent olive-grey supporting armor plates with one short exposed mechanical bridge and the existing central rotor opening left transparent. Short bright metal corners and dark seams, one clear upper surface per plate. Not a complete fuselage, no nose, tail, wings, rotor, antenna, or new decoration. Logical footprint at final game size about 22x18 pixels, readable few large forms.\nCENTER: edit current scout machine-gun housing, keeping barrel number, RIGHT-pointing muzzle and the length/width ratio of its 14x7 logical pixel sprite EXACTLY; add only a short rear protective hood and exposed attachment. No enlarged barrel or extra guns.\nRIGHT: edit current scout missile pod 13x8 proportions EXACTLY, keeping tube count/muzzle and RIGHT direction; add a short mechanical retaining band at the rear. No added tubes.\nAll parts share identical pixel density and neutral top-down camera. Preserve low-saturation olive grey, small ivory edge highlights, dark metal crevices. The structure must change, not just recoloring/scratches. No orange/neon/new color patches, rounded shiny 3D rendering, thick outlines, or random micro-noise. These are separate modular replacement parts, NOT a complete helicopter.\nThis level's structural specification OVERRIDES only the level-2 plate/hood/band description above: COVER: two shoulder plates joined by an exposed transverse mechanical brace. GUN: open side-support rail housing. MISSILE: paired rail mount with the old tubes fully visible.\nKeep ALL three parts' footprint, muzzle location, scale, color and low-detail pixel readability identical to the references. Do NOT increase dimensions with level. No labels.",
+      "tool": "image_gen builtin",
+      "role": "neutral cover and independently drawn rear weapon housings",
+      "selection": "whole resized weapons rejected when footprint differed; rear housing portion used with unchanged approved barrel and alpha",
+      "inputs": [
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png",
+        {
+          "role": "approved gun/missile reference composite",
+          "sha256": "4e6a058aac8b64040e475bf60fdc75aa830286aaeb19a7a2f3071b6ad223f511",
+          "recipe": "43x8 transparent canvas; approved ALightGun at0,0; ALightMissile at30,0; no rescaling"
+        }
+      ]
+    },
+    {
+      "id": "scout-lv05-parts",
+      "level": 5,
+      "output_sha256": "46d8a90a33d08b6d59c0f1e8df47e2d499b4040e15d21b98d4efb44c90062c19",
+      "prompt": "Use case: precise-object-edit. Asset: separate upgrade PARTS for an existing top-down 2D fictional helicopter game sprite, level 5 only, on genuine transparency. Inputs: Image 1 is the APPROVED scout body with seven banking frames (nose RIGHT, first frame neutral) — preserve its olive grey paint, angular mechanical style, no aircraft redesign. Images 2–4 are original game's machine-gun mech body levels 8/9/10, for restrained metal shading and independently attached plate construction only; do not copy their silhouette. Image 5 contains the approved scout gun on the left and missile housing on the right, separated by a transparent gap; these two small parts are the exact edit targets.\nProduce exactly THREE SEPARATED, orthographic top-view sprite parts arranged in one horizontal row, generous transparent gutters, NO text/no labels/no background/no ground shadow:\nLEFT: a small two-shoulder engine-cover assembly to fit ONLY inside the existing scout center hull, nose to the RIGHT. Two thin independent olive-grey supporting armor plates with one short exposed mechanical bridge and the existing central rotor opening left transparent. Short bright metal corners and dark seams, one clear upper surface per plate. Not a complete fuselage, no nose, tail, wings, rotor, antenna, or new decoration. Logical footprint at final game size about 22x18 pixels, readable few large forms.\nCENTER: edit current scout machine-gun housing, keeping barrel number, RIGHT-pointing muzzle and the length/width ratio of its 14x7 logical pixel sprite EXACTLY; add only a short rear protective hood and exposed attachment. No enlarged barrel or extra guns.\nRIGHT: edit current scout missile pod 13x8 proportions EXACTLY, keeping tube count/muzzle and RIGHT direction; add a short mechanical retaining band at the rear. No added tubes.\nAll parts share identical pixel density and neutral top-down camera. Preserve low-saturation olive grey, small ivory edge highlights, dark metal crevices. The structure must change, not just recoloring/scratches. No orange/neon/new color patches, rounded shiny 3D rendering, thick outlines, or random micro-noise. These are separate modular replacement parts, NOT a complete helicopter.\nThis level's structural specification OVERRIDES only the level-2 plate/hood/band description above: COVER: grooved middle connecting plate with independent side covers. GUN: angular rear armor block with barrel exposed. MISSILE: angular rear attachment block.\nKeep ALL three parts' footprint, muzzle location, scale, color and low-detail pixel readability identical to the references. Do NOT increase dimensions with level. No labels.",
+      "tool": "image_gen builtin",
+      "role": "neutral cover and independently drawn rear weapon housings",
+      "selection": "whole resized weapons rejected when footprint differed; rear housing portion used with unchanged approved barrel and alpha",
+      "inputs": [
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png",
+        {
+          "role": "approved gun/missile reference composite",
+          "sha256": "4e6a058aac8b64040e475bf60fdc75aa830286aaeb19a7a2f3071b6ad223f511",
+          "recipe": "43x8 transparent canvas; approved ALightGun at0,0; ALightMissile at30,0; no rescaling"
+        }
+      ]
+    },
+    {
+      "id": "scout-lv06-parts",
+      "level": 6,
+      "output_sha256": "94e922fd94fbb3617a3dd713c9327be4a24e608057b868b988c404bf51587b96",
+      "prompt": "Use case: precise-object-edit. Asset: separate upgrade PARTS for an existing top-down 2D fictional helicopter game sprite, level 6 only, on genuine transparency. Inputs: Image 1 is the APPROVED scout body with seven banking frames (nose RIGHT, first frame neutral) — preserve its olive grey paint, angular mechanical style, no aircraft redesign. Images 2–4 are original game's machine-gun mech body levels 8/9/10, for restrained metal shading and independently attached plate construction only; do not copy their silhouette. Image 5 contains the approved scout gun on the left and missile housing on the right, separated by a transparent gap; these two small parts are the exact edit targets.\nProduce exactly THREE SEPARATED, orthographic top-view sprite parts arranged in one horizontal row, generous transparent gutters, NO text/no labels/no background/no ground shadow:\nLEFT: a small two-shoulder engine-cover assembly to fit ONLY inside the existing scout center hull, nose to the RIGHT. Two thin independent olive-grey supporting armor plates with one short exposed mechanical bridge and the existing central rotor opening left transparent. Short bright metal corners and dark seams, one clear upper surface per plate. Not a complete fuselage, no nose, tail, wings, rotor, antenna, or new decoration. Logical footprint at final game size about 22x18 pixels, readable few large forms.\nCENTER: edit current scout machine-gun housing, keeping barrel number, RIGHT-pointing muzzle and the length/width ratio of its 14x7 logical pixel sprite EXACTLY; add only a short rear protective hood and exposed attachment. No enlarged barrel or extra guns.\nRIGHT: edit current scout missile pod 13x8 proportions EXACTLY, keeping tube count/muzzle and RIGHT direction; add a short mechanical retaining band at the rear. No added tubes.\nAll parts share identical pixel density and neutral top-down camera. Preserve low-saturation olive grey, small ivory edge highlights, dark metal crevices. The structure must change, not just recoloring/scratches. No orange/neon/new color patches, rounded shiny 3D rendering, thick outlines, or random micro-noise. These are separate modular replacement parts, NOT a complete helicopter.\nThis level's structural specification OVERRIDES only the level-2 plate/hood/band description above: COVER: three interlocking angular armor segments around the existing opening. GUN: short upper and lower stacked case sections. MISSILE: two-layer side case surrounding existing tubes.\nKeep ALL three parts' footprint, muzzle location, scale, color and low-detail pixel readability identical to the references. Do NOT increase dimensions with level. No labels.",
+      "tool": "image_gen builtin",
+      "role": "neutral cover and independently drawn rear weapon housings",
+      "selection": "whole resized weapons rejected when footprint differed; rear housing portion used with unchanged approved barrel and alpha",
+      "inputs": [
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png",
+        {
+          "role": "approved gun/missile reference composite",
+          "sha256": "4e6a058aac8b64040e475bf60fdc75aa830286aaeb19a7a2f3071b6ad223f511",
+          "recipe": "43x8 transparent canvas; approved ALightGun at0,0; ALightMissile at30,0; no rescaling"
+        }
+      ]
+    },
+    {
+      "id": "scout-lv07-parts",
+      "level": 7,
+      "output_sha256": "15a9692b06ea651bb36e8374427cb10eed7a22d338015ea0e9a21bedbbd06a48",
+      "prompt": "Use case: precise-object-edit. Asset: separate upgrade PARTS for an existing top-down 2D fictional helicopter game sprite, level 7 only, on genuine transparency. Inputs: Image 1 is the APPROVED scout body with seven banking frames (nose RIGHT, first frame neutral) — preserve its olive grey paint, angular mechanical style, no aircraft redesign. Images 2–4 are original game's machine-gun mech body levels 8/9/10, for restrained metal shading and independently attached plate construction only; do not copy their silhouette. Image 5 contains the approved scout gun on the left and missile housing on the right, separated by a transparent gap; these two small parts are the exact edit targets.\nProduce exactly THREE SEPARATED, orthographic top-view sprite parts arranged in one horizontal row, generous transparent gutters, NO text/no labels/no background/no ground shadow:\nLEFT: a small two-shoulder engine-cover assembly to fit ONLY inside the existing scout center hull, nose to the RIGHT. Two thin independent olive-grey supporting armor plates with one short exposed mechanical bridge and the existing central rotor opening left transparent. Short bright metal corners and dark seams, one clear upper surface per plate. Not a complete fuselage, no nose, tail, wings, rotor, antenna, or new decoration. Logical footprint at final game size about 22x18 pixels, readable few large forms.\nCENTER: edit current scout machine-gun housing, keeping barrel number, RIGHT-pointing muzzle and the length/width ratio of its 14x7 logical pixel sprite EXACTLY; add only a short rear protective hood and exposed attachment. No enlarged barrel or extra guns.\nRIGHT: edit current scout missile pod 13x8 proportions EXACTLY, keeping tube count/muzzle and RIGHT direction; add a short mechanical retaining band at the rear. No added tubes.\nAll parts share identical pixel density and neutral top-down camera. Preserve low-saturation olive grey, small ivory edge highlights, dark metal crevices. The structure must change, not just recoloring/scratches. No orange/neon/new color patches, rounded shiny 3D rendering, thick outlines, or random micro-noise. These are separate modular replacement parts, NOT a complete helicopter.\nThis level's structural specification OVERRIDES only the level-2 plate/hood/band description above: COVER: cross-braced shoulder covers with a small exposed mechanical area. GUN: divided housing showing a small feed mechanism; do not add barrels. MISSILE: divided case showing the center support.\nKeep ALL three parts' footprint, muzzle location, scale, color and low-detail pixel readability identical to the references. Do NOT increase dimensions with level. No labels.",
+      "tool": "image_gen builtin",
+      "role": "neutral cover and independently drawn rear weapon housings",
+      "selection": "whole resized weapons rejected when footprint differed; rear housing portion used with unchanged approved barrel and alpha",
+      "inputs": [
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png",
+        {
+          "role": "approved gun/missile reference composite",
+          "sha256": "4e6a058aac8b64040e475bf60fdc75aa830286aaeb19a7a2f3071b6ad223f511",
+          "recipe": "43x8 transparent canvas; approved ALightGun at0,0; ALightMissile at30,0; no rescaling"
+        }
+      ]
+    },
+    {
+      "id": "scout-lv08-parts",
+      "level": 8,
+      "output_sha256": "992d675c7e722d520e509d9ae5d4d009b8bc6995f74874ae8aec07e73663ba89",
+      "prompt": "Use case: precise-object-edit. Asset: separate upgrade PARTS for an existing top-down 2D fictional helicopter game sprite, level 8 only, on genuine transparency. Inputs: Image 1 is the APPROVED scout body with seven banking frames (nose RIGHT, first frame neutral) — preserve its olive grey paint, angular mechanical style, no aircraft redesign. Images 2–4 are original game's machine-gun mech body levels 8/9/10, for restrained metal shading and independently attached plate construction only; do not copy their silhouette. Image 5 contains the approved scout gun on the left and missile housing on the right, separated by a transparent gap; these two small parts are the exact edit targets.\nProduce exactly THREE SEPARATED, orthographic top-view sprite parts arranged in one horizontal row, generous transparent gutters, NO text/no labels/no background/no ground shadow:\nLEFT: a small two-shoulder engine-cover assembly to fit ONLY inside the existing scout center hull, nose to the RIGHT. Two thin independent olive-grey supporting armor plates with one short exposed mechanical bridge and the existing central rotor opening left transparent. Short bright metal corners and dark seams, one clear upper surface per plate. Not a complete fuselage, no nose, tail, wings, rotor, antenna, or new decoration. Logical footprint at final game size about 22x18 pixels, readable few large forms.\nCENTER: edit current scout machine-gun housing, keeping barrel number, RIGHT-pointing muzzle and the length/width ratio of its 14x7 logical pixel sprite EXACTLY; add only a short rear protective hood and exposed attachment. No enlarged barrel or extra guns.\nRIGHT: edit current scout missile pod 13x8 proportions EXACTLY, keeping tube count/muzzle and RIGHT direction; add a short mechanical retaining band at the rear. No added tubes.\nAll parts share identical pixel density and neutral top-down camera. Preserve low-saturation olive grey, small ivory edge highlights, dark metal crevices. The structure must change, not just recoloring/scratches. No orange/neon/new color patches, rounded shiny 3D rendering, thick outlines, or random micro-noise. These are separate modular replacement parts, NOT a complete helicopter.\nThis level's structural specification OVERRIDES only the level-2 plate/hood/band description above: COVER: independent slanted shoulder armor plates and narrow central band. GUN: two angular protective panels around the rear pivot. MISSILE: top protective plate with exposed side rail.\nKeep ALL three parts' footprint, muzzle location, scale, color and low-detail pixel readability identical to the references. Do NOT increase dimensions with level. No labels.",
+      "tool": "image_gen builtin",
+      "role": "neutral cover and independently drawn rear weapon housings",
+      "selection": "whole resized weapons rejected when footprint differed; rear housing portion used with unchanged approved barrel and alpha",
+      "inputs": [
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png",
+        {
+          "role": "approved gun/missile reference composite",
+          "sha256": "4e6a058aac8b64040e475bf60fdc75aa830286aaeb19a7a2f3071b6ad223f511",
+          "recipe": "43x8 transparent canvas; approved ALightGun at0,0; ALightMissile at30,0; no rescaling"
+        }
+      ]
+    },
+    {
+      "id": "scout-lv09-parts",
+      "level": 9,
+      "output_sha256": "fc59463b626258d81038c39491f508ad1ac4dad5bde016019c49b9f85f8a3223",
+      "prompt": "Use case: precise-object-edit. Asset: separate upgrade PARTS for an existing top-down 2D fictional helicopter game sprite, level 9 only, on genuine transparency. Inputs: Image 1 is the APPROVED scout body with seven banking frames (nose RIGHT, first frame neutral) — preserve its olive grey paint, angular mechanical style, no aircraft redesign. Images 2–4 are original game's machine-gun mech body levels 8/9/10, for restrained metal shading and independently attached plate construction only; do not copy their silhouette. Image 5 contains the approved scout gun on the left and missile housing on the right, separated by a transparent gap; these two small parts are the exact edit targets.\nProduce exactly THREE SEPARATED, orthographic top-view sprite parts arranged in one horizontal row, generous transparent gutters, NO text/no labels/no background/no ground shadow:\nLEFT: a small two-shoulder engine-cover assembly to fit ONLY inside the existing scout center hull, nose to the RIGHT. Two thin independent olive-grey supporting armor plates with one short exposed mechanical bridge and the existing central rotor opening left transparent. Short bright metal corners and dark seams, one clear upper surface per plate. Not a complete fuselage, no nose, tail, wings, rotor, antenna, or new decoration. Logical footprint at final game size about 22x18 pixels, readable few large forms.\nCENTER: edit current scout machine-gun housing, keeping barrel number, RIGHT-pointing muzzle and the length/width ratio of its 14x7 logical pixel sprite EXACTLY; add only a short rear protective hood and exposed attachment. No enlarged barrel or extra guns.\nRIGHT: edit current scout missile pod 13x8 proportions EXACTLY, keeping tube count/muzzle and RIGHT direction; add a short mechanical retaining band at the rear. No added tubes.\nAll parts share identical pixel density and neutral top-down camera. Preserve low-saturation olive grey, small ivory edge highlights, dark metal crevices. The structure must change, not just recoloring/scratches. No orange/neon/new color patches, rounded shiny 3D rendering, thick outlines, or random micro-noise. These are separate modular replacement parts, NOT a complete helicopter.\nThis level's structural specification OVERRIDES only the level-2 plate/hood/band description above: COVER: wide separate shoulder covers and a narrow central reinforcement. GUN: three-piece housing wrapping rear of the same gun. MISSILE: three-piece case wrapping rear of same missile pod.\nKeep ALL three parts' footprint, muzzle location, scale, color and low-detail pixel readability identical to the references. Do NOT increase dimensions with level. No labels.",
+      "tool": "image_gen builtin",
+      "role": "neutral cover and independently drawn rear weapon housings",
+      "selection": "whole resized weapons rejected when footprint differed; rear housing portion used with unchanged approved barrel and alpha",
+      "inputs": [
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png",
+        {
+          "role": "approved gun/missile reference composite",
+          "sha256": "4e6a058aac8b64040e475bf60fdc75aa830286aaeb19a7a2f3071b6ad223f511",
+          "recipe": "43x8 transparent canvas; approved ALightGun at0,0; ALightMissile at30,0; no rescaling"
+        }
+      ]
+    },
+    {
+      "id": "scout-lv10-parts",
+      "level": 10,
+      "output_sha256": "c69eb968a4ea49fdabf8677650ae520378136ce7520c1aa9d3ca9832461a8426",
+      "prompt": "Use case: precise-object-edit. Asset: separate upgrade PARTS for an existing top-down 2D fictional helicopter game sprite, level 10 only, on genuine transparency. Inputs: Image 1 is the APPROVED scout body with seven banking frames (nose RIGHT, first frame neutral) — preserve its olive grey paint, angular mechanical style, no aircraft redesign. Images 2–4 are original game's machine-gun mech body levels 8/9/10, for restrained metal shading and independently attached plate construction only; do not copy their silhouette. Image 5 contains the approved scout gun on the left and missile housing on the right, separated by a transparent gap; these two small parts are the exact edit targets.\nProduce exactly THREE SEPARATED, orthographic top-view sprite parts arranged in one horizontal row, generous transparent gutters, NO text/no labels/no background/no ground shadow:\nLEFT: a small two-shoulder engine-cover assembly to fit ONLY inside the existing scout center hull, nose to the RIGHT. Two thin independent olive-grey supporting armor plates with one short exposed mechanical bridge and the existing central rotor opening left transparent. Short bright metal corners and dark seams, one clear upper surface per plate. Not a complete fuselage, no nose, tail, wings, rotor, antenna, or new decoration. Logical footprint at final game size about 22x18 pixels, readable few large forms.\nCENTER: edit current scout machine-gun housing, keeping barrel number, RIGHT-pointing muzzle and the length/width ratio of its 14x7 logical pixel sprite EXACTLY; add only a short rear protective hood and exposed attachment. No enlarged barrel or extra guns.\nRIGHT: edit current scout missile pod 13x8 proportions EXACTLY, keeping tube count/muzzle and RIGHT direction; add a short mechanical retaining band at the rear. No added tubes.\nAll parts share identical pixel density and neutral top-down camera. Preserve low-saturation olive grey, small ivory edge highlights, dark metal crevices. The structure must change, not just recoloring/scratches. No orange/neon/new color patches, rounded shiny 3D rendering, thick outlines, or random micro-noise. These are separate modular replacement parts, NOT a complete helicopter.\nThis level's structural specification OVERRIDES only the level-2 plate/hood/band description above: COVER: restrained multi-layer angular shoulder covers with a few bright metal corners and deep panel seams. GUN: separate upper and rear armor around the same exposed barrel. MISSILE: angular top and side covers with visible mechanical mount, same tube count.\nKeep ALL three parts' footprint, muzzle location, scale, color and low-detail pixel readability identical to the references. Do NOT increase dimensions with level. No labels.",
+      "tool": "image_gen builtin",
+      "role": "neutral cover and independently drawn rear weapon housings",
+      "selection": "whole resized weapons rejected when footprint differed; rear housing portion used with unchanged approved barrel and alpha",
+      "inputs": [
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png",
+        {
+          "role": "approved gun/missile reference composite",
+          "sha256": "4e6a058aac8b64040e475bf60fdc75aa830286aaeb19a7a2f3071b6ad223f511",
+          "recipe": "43x8 transparent canvas; approved ALightGun at0,0; ALightMissile at30,0; no rescaling"
+        }
+      ]
+    },
+    {
+      "id": "scout-lv03-parts-background-cleanup",
+      "level": 3,
+      "output_sha256": "c25fad514289afcdd985e5b50e82c553c38be20e1f5b4d15556ce32c057ca990",
+      "prompt": "Use case: background-extraction. Correct ONLY the background of this provided three-part sprite image. Preserve the EXACT three mechanical parts' positions, geometry, dimensions, pixels, colors, shading and detail. Remove ALL white/gray checkerboard and ground/shadow residue around the parts and inside the left part opening. Output genuine transparent alpha outside the three parts. No new backdrop, no checkerboard drawn into pixels, no shadow, no text. Do not redesign or redraw the parts. Keep original canvas dimensions and three-object composition.",
+      "tool": "image_gen builtin",
+      "role": "background cleanup of level 3/8 part candidates",
+      "selection": "selected for neutral crops and housings; pre-cleanup images retained in local evidence"
+    },
+    {
+      "id": "scout-lv08-parts-background-cleanup",
+      "level": 8,
+      "output_sha256": "68e4a46b39f67b29205500f5af1c9095b0ffb13e7ed5e487314d35fa6349178d",
+      "prompt": "Use case: background-extraction. Correct ONLY the background of this provided three-part sprite image. Preserve the EXACT three mechanical parts' positions, geometry, dimensions, pixels, colors, shading and detail. Remove ALL white/gray checkerboard and ground/shadow residue around the parts and inside the left part opening. Output genuine transparent alpha outside the three parts. No new backdrop, no checkerboard drawn into pixels, no shadow, no text. Do not redesign or redraw the parts. Keep original canvas dimensions and three-object composition.",
+      "tool": "image_gen builtin",
+      "role": "background cleanup of level 3/8 part candidates",
+      "selection": "selected for neutral crops and housings; pre-cleanup images retained in local evidence"
+    },
+    {
+      "id": "scout-lv02-bank-poses",
+      "level": 2,
+      "output_sha256": "36b2b49ce66f597b3cea9002fd204f38b76175676b31b13714bcae8f7cbe5cc1",
+      "prompt": "Use case: precise-object-edit / game sprite bank-angle sheet. Image1 is the EXACT adopted candidate level2 shoulder-cover PART (C-shaped two olive-gray armor plates, short connecting brace, opening to the RIGHT). Image2 is the APPROVED scout body 7-frame bank-angle strip, nose RIGHT in every cell; use its roll projections as the orientation reference ONLY. Images3–5 are original mech metal style references. Output ONLY the isolated shoulder-cover part of image1 in EXACTLY SEVEN equal cells in a SINGLE horizontal row on actual transparent background, generous empty margins between cells; no labels, no numbers, no grid. Cell order must match image2: NEUTRAL, LEFT bank mild, LEFT bank medium, LEFT bank strongest, RIGHT bank mild, RIGHT bank medium, RIGHT bank strongest. Keep all7 the SAME mechanical component: same two armor plates, same connecting rear brace, same C opening to RIGHT, same olive-gray base, same four short metal bevel highlights, same dimensions and center anchor. Draw correct small 3D roll projection and visible side thickness/shadows for each bank: change foreshortening and which side wall is visible. Do NOT rotate in the image plane, do NOT pitch nose up/down, do NOT yaw left/right, do NOT turn front/back, do NOT shear a flat card. The approved helicopter reference banks around its long horizontal nose-right axis; match that. First cell must be the same neutral image1. The two plates remain connected and opening stays right at all poses. No aircraft hull, no rotor, no weapon, no new structural features, no redesign. Very restrained low-saturation metal texture; solid readable pixel clusters, no invented markings. Every cell is a finished separately drawn bank-angle version of this SAME isolated cover part, transparent holes preserved. The final part fits a small 14x15 logical pixel cell, so no tiny decorative detail.",
+      "tool": "image_gen builtin",
+      "role": "six drawn side-roll poses; generated neutral not substituted for existing neutral candidate",
+      "inputs": [
+        {
+          "role": "selected neutral cover crop",
+          "sha256": "bf534fd6055f47fe6fe6e5393c7ad90eb86379165c02a10f54820ebacedd5b5e"
+        },
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png"
+      ]
+    },
+    {
+      "id": "scout-lv03-bank-poses",
+      "level": 3,
+      "output_sha256": "49e4f66f18fc180f1b98c0ae093e53ae95c3d99d796b46d9ab94dc825cdb98da",
+      "prompt": "Use case: precise-object-edit / sprite bank-angle sheet. Image1 is the EXACT level3 shoulder armor cover part to preserve. Image2 is the approved scout's seven bank-angle body frames, with nose RIGHT throughout; only use its roll projections as orientation reference. Images3–5 are original game metal shading references. Output ONLY the isolated part from image1 in EXACTLY SEVEN equal cells in a SINGLE HORIZONTAL ROW on genuine alpha transparency. Cell order matches image2: NEUTRAL, LEFT bank mild, LEFT bank medium, LEFT bank strongest, RIGHT bank mild, RIGHT bank medium, RIGHT bank strongest. Keep the SAME part geometry and identity in every cell: same plates, gaps, braces, ribs, small bolts, olive-gray paint, highlight style and center anchor. First cell exactly retains image1. Do not add/remove connecting braces, close/open gaps, change plate count or invent decorative features. Draw each roll view with correct modest foreshortening and visible side thickness, preserving the shapes, with top/bottom side walls changing like image2. Roll around the horizontal nose-right long axis; NO in-plane rotation, NO pitch/nose-up/down, NO yaw/front-back swap, NO flat-card shear. No whole aircraft, hull, rotor, weapon or background shadow. Preserve low-saturation olive-gray panels and short metal bevels, no white outlines, no bright new colors or text. All seven poses occupy the same nominal size and anchored position. Genuine transparent areas including interior openings, not a drawn checkerboard. Leave generous transparent gutters between the seven parts. The final part fits a tiny14x15 logical cell so avoid tiny noise.",
+      "tool": "image_gen builtin",
+      "role": "six drawn side-roll poses; generated neutral not substituted for existing neutral candidate",
+      "inputs": [
+        {
+          "role": "selected neutral cover crop",
+          "sha256": "6447653b2368fbfadb19414d7a61126fbabad9f2c42c666773977d5cc0909500"
+        },
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png"
+      ]
+    },
+    {
+      "id": "scout-lv04-bank-poses",
+      "level": 4,
+      "output_sha256": "660a46a9b77f8dbd9aa4f1d5eb36343a73872f0f9e5eb8d6f75a57f63860a334",
+      "prompt": "Use case: precise-object-edit / sprite bank-angle sheet. Image1 is the EXACT level4 shoulder armor cover part to preserve. Image2 is the approved scout's seven bank-angle body frames, with nose RIGHT throughout; only use its roll projections as orientation reference. Images3–5 are original game metal shading references. Output ONLY the isolated part from image1 in EXACTLY SEVEN equal cells in a SINGLE HORIZONTAL ROW on genuine alpha transparency. Cell order matches image2: NEUTRAL, LEFT bank mild, LEFT bank medium, LEFT bank strongest, RIGHT bank mild, RIGHT bank medium, RIGHT bank strongest. Keep the SAME part geometry and identity in every cell: same plates, gaps, braces, ribs, small bolts, olive-gray paint, highlight style and center anchor. First cell exactly retains image1. Do not add/remove connecting braces, close/open gaps, change plate count or invent decorative features. Draw each roll view with correct modest foreshortening and visible side thickness, preserving the shapes, with top/bottom side walls changing like image2. Roll around the horizontal nose-right long axis; NO in-plane rotation, NO pitch/nose-up/down, NO yaw/front-back swap, NO flat-card shear. No whole aircraft, hull, rotor, weapon or background shadow. Preserve low-saturation olive-gray panels and short metal bevels, no white outlines, no bright new colors or text. All seven poses occupy the same nominal size and anchored position. Genuine transparent areas including interior openings, not a drawn checkerboard. Leave generous transparent gutters between the seven parts. The final part fits a tiny14x15 logical cell so avoid tiny noise.",
+      "tool": "image_gen builtin",
+      "role": "six drawn side-roll poses; generated neutral not substituted for existing neutral candidate",
+      "inputs": [
+        {
+          "role": "selected neutral cover crop",
+          "sha256": "bae6846e986311b43fdc941c846cc06eb14f16a938d9f5731d7a986b93cb4b36"
+        },
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png"
+      ]
+    },
+    {
+      "id": "scout-lv05-bank-poses",
+      "level": 5,
+      "output_sha256": "2669391eae75f43ae9f534a6e5a7d754fe7a76084f70a620533c0f7aedcffba6",
+      "prompt": "Use case: precise-object-edit / sprite bank-angle sheet. Image1 is the EXACT level5 shoulder armor cover part to preserve. Image2 is the approved scout's seven bank-angle body frames, with nose RIGHT throughout; only use its roll projections as orientation reference. Images3–5 are original game metal shading references. Output ONLY the isolated part from image1 in EXACTLY SEVEN equal cells in a SINGLE HORIZONTAL ROW on genuine alpha transparency. Cell order matches image2: NEUTRAL, LEFT bank mild, LEFT bank medium, LEFT bank strongest, RIGHT bank mild, RIGHT bank medium, RIGHT bank strongest. Keep the SAME part geometry and identity in every cell: same plates, gaps, braces, ribs, small bolts, olive-gray paint, highlight style and center anchor. First cell exactly retains image1. Do not add/remove connecting braces, close/open gaps, change plate count or invent decorative features. Draw each roll view with correct modest foreshortening and visible side thickness, preserving the shapes, with top/bottom side walls changing like image2. Roll around the horizontal nose-right long axis; NO in-plane rotation, NO pitch/nose-up/down, NO yaw/front-back swap, NO flat-card shear. No whole aircraft, hull, rotor, weapon or background shadow. Preserve low-saturation olive-gray panels and short metal bevels, no white outlines, no bright new colors or text. All seven poses occupy the same nominal size and anchored position. Genuine transparent areas including interior openings, not a drawn checkerboard. Leave generous transparent gutters between the seven parts. The final part fits a tiny14x15 logical cell so avoid tiny noise.",
+      "tool": "image_gen builtin",
+      "role": "six drawn side-roll poses; generated neutral not substituted for existing neutral candidate",
+      "inputs": [
+        {
+          "role": "selected neutral cover crop",
+          "sha256": "04e7187567c270a5676f8c568b096cb08d22256221b8baf824636991e025cabe"
+        },
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png"
+      ]
+    },
+    {
+      "id": "scout-lv06-bank-poses",
+      "level": 6,
+      "output_sha256": "0ab4b20a4922bc52f46ce4aed7c32883834faafea3922c0b53134abd0cbf185a",
+      "prompt": "Use case: precise-object-edit / sprite bank-angle sheet. Image1 is the EXACT level6 shoulder armor cover part to preserve. Image2 is the approved scout's seven bank-angle body frames, with nose RIGHT throughout; only use its roll projections as orientation reference. Images3–5 are original game metal shading references. Output ONLY the isolated part from image1 in EXACTLY SEVEN equal cells in a SINGLE HORIZONTAL ROW on genuine alpha transparency. Cell order matches image2: NEUTRAL, LEFT bank mild, LEFT bank medium, LEFT bank strongest, RIGHT bank mild, RIGHT bank medium, RIGHT bank strongest. Keep the SAME part geometry and identity in every cell: same plates, gaps, braces, ribs, small bolts, olive-gray paint, highlight style and center anchor. First cell exactly retains image1. Do not add/remove connecting braces, close/open gaps, change plate count or invent decorative features. Draw each roll view with correct modest foreshortening and visible side thickness, preserving the shapes, with top/bottom side walls changing like image2. Roll around the horizontal nose-right long axis; NO in-plane rotation, NO pitch/nose-up/down, NO yaw/front-back swap, NO flat-card shear. No whole aircraft, hull, rotor, weapon or background shadow. Preserve low-saturation olive-gray panels and short metal bevels, no white outlines, no bright new colors or text. All seven poses occupy the same nominal size and anchored position. Genuine transparent areas including interior openings, not a drawn checkerboard. Leave generous transparent gutters between the seven parts. The final part fits a tiny14x15 logical cell so avoid tiny noise.",
+      "tool": "image_gen builtin",
+      "role": "six drawn side-roll poses; generated neutral not substituted for existing neutral candidate",
+      "inputs": [
+        {
+          "role": "selected neutral cover crop",
+          "sha256": "854fbfbc931f420011bad872d03201c23a97780443b20ac3aa923637e1be2642"
+        },
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png"
+      ]
+    },
+    {
+      "id": "scout-lv07-bank-poses",
+      "level": 7,
+      "output_sha256": "3ff7cdb119e2216668678f5a5bac6bdb6b9fc6c569f5970aced76e1b97fe668f",
+      "prompt": "Use case: precise-object-edit / sprite bank-angle sheet. Image1 is the EXACT level7 shoulder armor cover part to preserve. Image2 is the approved scout's seven bank-angle body frames, with nose RIGHT throughout; only use its roll projections as orientation reference. Images3–5 are original game metal shading references. Output ONLY the isolated part from image1 in EXACTLY SEVEN equal cells in a SINGLE HORIZONTAL ROW on genuine alpha transparency. Cell order matches image2: NEUTRAL, LEFT bank mild, LEFT bank medium, LEFT bank strongest, RIGHT bank mild, RIGHT bank medium, RIGHT bank strongest. Keep the SAME part geometry and identity in every cell: same plates, gaps, braces, ribs, small bolts, olive-gray paint, highlight style and center anchor. First cell exactly retains image1. Do not add/remove connecting braces, close/open gaps, change plate count or invent decorative features. Draw each roll view with correct modest foreshortening and visible side thickness, preserving the shapes, with top/bottom side walls changing like image2. Roll around the horizontal nose-right long axis; NO in-plane rotation, NO pitch/nose-up/down, NO yaw/front-back swap, NO flat-card shear. No whole aircraft, hull, rotor, weapon or background shadow. Preserve low-saturation olive-gray panels and short metal bevels, no white outlines, no bright new colors or text. All seven poses occupy the same nominal size and anchored position. Genuine transparent areas including interior openings, not a drawn checkerboard. Leave generous transparent gutters between the seven parts. The final part fits a tiny14x15 logical cell so avoid tiny noise.",
+      "tool": "image_gen builtin",
+      "role": "six drawn side-roll poses; generated neutral not substituted for existing neutral candidate",
+      "inputs": [
+        {
+          "role": "selected neutral cover crop",
+          "sha256": "0370950f53fe0f14f0e81ddf881ab47f671ae8bfd44e15b6ebdfd6f161052329"
+        },
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png"
+      ]
+    },
+    {
+      "id": "scout-lv08-bank-poses",
+      "level": 8,
+      "output_sha256": "2265812f6814b18197b6bed8f25f5e0aa551b14710cdbf6a74bed6fa1dd0ce30",
+      "prompt": "Use case: precise-object-edit / sprite bank-angle sheet. Image1 is the EXACT level8 shoulder armor cover part to preserve. Image2 is the approved scout's seven bank-angle body frames, with nose RIGHT throughout; only use its roll projections as orientation reference. Images3–5 are original game metal shading references. Output ONLY the isolated part from image1 in EXACTLY SEVEN equal cells in a SINGLE HORIZONTAL ROW on genuine alpha transparency. Cell order matches image2: NEUTRAL, LEFT bank mild, LEFT bank medium, LEFT bank strongest, RIGHT bank mild, RIGHT bank medium, RIGHT bank strongest. Keep the SAME part geometry and identity in every cell: same plates, gaps, braces, ribs, small bolts, olive-gray paint, highlight style and center anchor. First cell exactly retains image1. Do not add/remove connecting braces, close/open gaps, change plate count or invent decorative features. Draw each roll view with correct modest foreshortening and visible side thickness, preserving the shapes, with top/bottom side walls changing like image2. Roll around the horizontal nose-right long axis; NO in-plane rotation, NO pitch/nose-up/down, NO yaw/front-back swap, NO flat-card shear. No whole aircraft, hull, rotor, weapon or background shadow. Preserve low-saturation olive-gray panels and short metal bevels, no white outlines, no bright new colors or text. All seven poses occupy the same nominal size and anchored position. Genuine transparent areas including interior openings, not a drawn checkerboard. Leave generous transparent gutters between the seven parts. The final part fits a tiny14x15 logical cell so avoid tiny noise.",
+      "tool": "image_gen builtin",
+      "role": "six drawn side-roll poses; generated neutral not substituted for existing neutral candidate",
+      "inputs": [
+        {
+          "role": "selected neutral cover crop",
+          "sha256": "72d4f7c8d236184f2f9fdfbb633fb83e3a5404a11d7b9d6e7c0dc0e0491293d2"
+        },
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png"
+      ]
+    },
+    {
+      "id": "scout-lv09-bank-poses",
+      "level": 9,
+      "output_sha256": "aba08614ef551a59d2ea4d7b715bdde9a97c32f88c09444b3f7f30da5dfc5a65",
+      "prompt": "Use case: precise-object-edit / sprite bank-angle sheet. Image1 is the EXACT level9 shoulder armor cover part to preserve. Image2 is the approved scout's seven bank-angle body frames, with nose RIGHT throughout; only use its roll projections as orientation reference. Images3–5 are original game metal shading references. Output ONLY the isolated part from image1 in EXACTLY SEVEN equal cells in a SINGLE HORIZONTAL ROW on genuine alpha transparency. Cell order matches image2: NEUTRAL, LEFT bank mild, LEFT bank medium, LEFT bank strongest, RIGHT bank mild, RIGHT bank medium, RIGHT bank strongest. Keep the SAME part geometry and identity in every cell: same plates, gaps, braces, ribs, small bolts, olive-gray paint, highlight style and center anchor. First cell exactly retains image1. Do not add/remove connecting braces, close/open gaps, change plate count or invent decorative features. Draw each roll view with correct modest foreshortening and visible side thickness, preserving the shapes, with top/bottom side walls changing like image2. Roll around the horizontal nose-right long axis; NO in-plane rotation, NO pitch/nose-up/down, NO yaw/front-back swap, NO flat-card shear. No whole aircraft, hull, rotor, weapon or background shadow. Preserve low-saturation olive-gray panels and short metal bevels, no white outlines, no bright new colors or text. All seven poses occupy the same nominal size and anchored position. Genuine transparent areas including interior openings, not a drawn checkerboard. Leave generous transparent gutters between the seven parts. The final part fits a tiny14x15 logical cell so avoid tiny noise.",
+      "tool": "image_gen builtin",
+      "role": "six drawn side-roll poses; generated neutral not substituted for existing neutral candidate",
+      "inputs": [
+        {
+          "role": "selected neutral cover crop",
+          "sha256": "2970848f32e2e0e936fa11a52668ea2ca1697a50e2aeef0895076f4c6cb9166a"
+        },
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png"
+      ]
+    },
+    {
+      "id": "scout-lv10-bank-poses",
+      "level": 10,
+      "output_sha256": "8506fc5e4d4820400297853430f1428205076716528f3eac3635cc932740f66e",
+      "prompt": "Use case: precise-object-edit / sprite bank-angle sheet. Image1 is the EXACT level10 shoulder armor cover part to preserve. Image2 is the approved scout's seven bank-angle body frames, with nose RIGHT throughout; only use its roll projections as orientation reference. Images3–5 are original game metal shading references. Output ONLY the isolated part from image1 in EXACTLY SEVEN equal cells in a SINGLE HORIZONTAL ROW on genuine alpha transparency. Cell order matches image2: NEUTRAL, LEFT bank mild, LEFT bank medium, LEFT bank strongest, RIGHT bank mild, RIGHT bank medium, RIGHT bank strongest. Keep the SAME part geometry and identity in every cell: same plates, gaps, braces, ribs, small bolts, olive-gray paint, highlight style and center anchor. First cell exactly retains image1. Do not add/remove connecting braces, close/open gaps, change plate count or invent decorative features. Draw each roll view with correct modest foreshortening and visible side thickness, preserving the shapes, with top/bottom side walls changing like image2. Roll around the horizontal nose-right long axis; NO in-plane rotation, NO pitch/nose-up/down, NO yaw/front-back swap, NO flat-card shear. No whole aircraft, hull, rotor, weapon or background shadow. Preserve low-saturation olive-gray panels and short metal bevels, no white outlines, no bright new colors or text. All seven poses occupy the same nominal size and anchored position. Genuine transparent areas including interior openings, not a drawn checkerboard. Leave generous transparent gutters between the seven parts. The final part fits a tiny14x15 logical cell so avoid tiny noise.",
+      "tool": "image_gen builtin",
+      "role": "six drawn side-roll poses; generated neutral not substituted for existing neutral candidate",
+      "inputs": [
+        {
+          "role": "selected neutral cover crop",
+          "sha256": "077d9dc3cc926c2f5b5905bdc3fcc349e6fa3bc0cb5cae65b8082442be86ef41"
+        },
+        "Art/Aircraft/banking-correction-20261109/prepared/ALightBody.png",
+        "Resources/Images/P_Body_16.png",
+        "Resources/Images/P_Body_17.png",
+        "Resources/Images/P_Body_18.png"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_02.png",
+      "sha256": "c8de9e62121829773cd8f27e1248bec0faa49ebe87a36268f01538ef575884d6",
+      "level": 2,
+      "generation_ids": [
+        "scout-lv02-parts",
+        "scout-lv02-bank-poses"
+      ],
+      "preparation": "neutral from calibrated neutral candidate; six bank poses separately drawn; 16x17 integer-parity cells; common pose6 registration +1,+1; no silhouette pixels discarded"
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_03.png",
+      "sha256": "af10bb0c369f0cc1a08b2f5772ffc23c8a7bda0cd5a3e9f01913c13b64fc3884",
+      "level": 3,
+      "generation_ids": [
+        "scout-lv03-parts",
+        "scout-lv03-bank-poses",
+        "scout-lv03-parts-background-cleanup"
+      ],
+      "preparation": "neutral from calibrated neutral candidate; six bank poses separately drawn; 16x17 integer-parity cells; common pose6 registration +1,+1; no silhouette pixels discarded"
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_04.png",
+      "sha256": "b3218190a8a5765778834433e870c392044f75ab3f3ca1a4364f9d1c4135784a",
+      "level": 4,
+      "generation_ids": [
+        "scout-lv04-parts",
+        "scout-lv04-bank-poses"
+      ],
+      "preparation": "neutral from calibrated neutral candidate; six bank poses separately drawn; 16x17 integer-parity cells; common pose6 registration +1,+1; no silhouette pixels discarded"
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_05.png",
+      "sha256": "bb03242d5a9d4fb987a62cc2d6a3baeeab8f548a473cf65f2046ecd911153e97",
+      "level": 5,
+      "generation_ids": [
+        "scout-lv05-parts",
+        "scout-lv05-bank-poses"
+      ],
+      "preparation": "neutral from calibrated neutral candidate; six bank poses separately drawn; 16x17 integer-parity cells; common pose6 registration +1,+1; no silhouette pixels discarded"
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_06.png",
+      "sha256": "f6d528193adf4a43c8425e8460a5ed295e630fef2bb444e9ce88b8a58a838ada",
+      "level": 6,
+      "generation_ids": [
+        "scout-lv06-parts",
+        "scout-lv06-bank-poses"
+      ],
+      "preparation": "neutral from calibrated neutral candidate; six bank poses separately drawn; 16x17 integer-parity cells; common pose6 registration +1,+1; no silhouette pixels discarded"
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_07.png",
+      "sha256": "9f40dbff7702308fd6d55eaddb29015bda12637b797d41fc32f60155393f6c30",
+      "level": 7,
+      "generation_ids": [
+        "scout-lv07-parts",
+        "scout-lv07-bank-poses"
+      ],
+      "preparation": "neutral from calibrated neutral candidate; six bank poses separately drawn; 16x17 integer-parity cells; common pose6 registration +1,+1; no silhouette pixels discarded"
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_08.png",
+      "sha256": "065d9b8898118ab6a0ec38614a3cf9846702eef368080550c4f649198eb9ef5d",
+      "level": 8,
+      "generation_ids": [
+        "scout-lv08-parts",
+        "scout-lv08-bank-poses",
+        "scout-lv08-parts-background-cleanup"
+      ],
+      "preparation": "neutral from calibrated neutral candidate; six bank poses separately drawn; 16x17 integer-parity cells; common pose6 registration +1,+1; no silhouette pixels discarded"
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_09.png",
+      "sha256": "f5ca1c6cd666974116e7f75d3ca6140158bf75abc9deb3c09c51f4ff5bea90ce",
+      "level": 9,
+      "generation_ids": [
+        "scout-lv09-parts",
+        "scout-lv09-bank-poses"
+      ],
+      "preparation": "neutral from calibrated neutral candidate; six bank poses separately drawn; 16x17 integer-parity cells; common pose6 registration +1,+1; no silhouette pixels discarded"
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightCover_10.png",
+      "sha256": "27e9572c408dcfe4e0a8198a4716aa2a5f0996978fbe01c899fe2cb1f8826415",
+      "level": 10,
+      "generation_ids": [
+        "scout-lv10-parts",
+        "scout-lv10-bank-poses"
+      ],
+      "preparation": "neutral from calibrated neutral candidate; six bank poses separately drawn; 16x17 integer-parity cells; common pose6 registration +1,+1; no silhouette pixels discarded"
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_02.png",
+      "sha256": "e088f4fa3c25fde960a598f74208f8160d3fb71a5266442f6562e8c7b37b686b",
+      "level": 2,
+      "generation_ids": [
+        "scout-lv02-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        5
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 38
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_03.png",
+      "sha256": "994eed17881cdd076668e7dbe1ce0dba37fb9c7ea85c9bc2dd64ef7df4bbbea8",
+      "level": 3,
+      "generation_ids": [
+        "scout-lv03-parts",
+        "scout-lv03-parts-background-cleanup"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        6
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 42
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_04.png",
+      "sha256": "120481d992b0af0dfb07eb760a5b4ea0e86f902dfe43fba15238540b457fe7e6",
+      "level": 4,
+      "generation_ids": [
+        "scout-lv04-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        5
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 38
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_05.png",
+      "sha256": "a63011436e56cd12c9e66b65f04aa2a789f983cda424c99f45afbfcec29146e3",
+      "level": 5,
+      "generation_ids": [
+        "scout-lv05-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        5
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 38
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_06.png",
+      "sha256": "268b81f340c0202f3949ad2fa03f4236e962c560fbe1bc4bfa140ec75de82911",
+      "level": 6,
+      "generation_ids": [
+        "scout-lv06-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        6
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 42
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_07.png",
+      "sha256": "e1fe8ab09224537c015ad9f9559335f3a78504a4051eddca1dcbdbc3b1ad87d1",
+      "level": 7,
+      "generation_ids": [
+        "scout-lv07-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        6
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 42
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_08.png",
+      "sha256": "60272f63b5d35bc221588b6606c613a282daff8fa446df1019184be218636143",
+      "level": 8,
+      "generation_ids": [
+        "scout-lv08-parts",
+        "scout-lv08-parts-background-cleanup"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        7,
+        7
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 43
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_09.png",
+      "sha256": "23e8d707de46bde0a2e88197ecd30f2b847b62c56cf23af9bc4032ed30bf3dc6",
+      "level": 9,
+      "generation_ids": [
+        "scout-lv09-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        7,
+        7
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 43
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightGun_10.png",
+      "sha256": "19bf50942b100f77e42682fbd8a6eb49feac80fb1ea4c423853ab097cebc54de",
+      "level": 10,
+      "generation_ids": [
+        "scout-lv10-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        8,
+        6
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 42
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_02.png",
+      "sha256": "437fd1ea5a3208656674e95c9aab59de8feba4a5d65b822ee415ed2d3577183e",
+      "level": 2,
+      "generation_ids": [
+        "scout-lv02-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        7
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 34
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_03.png",
+      "sha256": "fdbbd35908c3c7c254862f84b300401b9ac9f58e2d5bb005b961b78db6497a8a",
+      "level": 3,
+      "generation_ids": [
+        "scout-lv03-parts",
+        "scout-lv03-parts-background-cleanup"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        6
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 31
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_04.png",
+      "sha256": "d0cd67a2f1692d21c6e63db7656124c37e3802d1a6c8d4470b0d281f04f407ac",
+      "level": 4,
+      "generation_ids": [
+        "scout-lv04-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        7
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 36
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_05.png",
+      "sha256": "c1548bfd725b5802c83b399420245880c82c0e47b139579f0ed61ab5299930c4",
+      "level": 5,
+      "generation_ids": [
+        "scout-lv05-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        7
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 34
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_06.png",
+      "sha256": "b03a9217a8c54515ccca2575286d066530e20a6ad99a48bb2c08c80a9cc62951",
+      "level": 6,
+      "generation_ids": [
+        "scout-lv06-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        7
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 34
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_07.png",
+      "sha256": "7d9eb7f9f3ac540a50663a13938c5671815e0904194787d4cf77b4afb6dbef79",
+      "level": 7,
+      "generation_ids": [
+        "scout-lv07-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        8
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 41
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_08.png",
+      "sha256": "76261dfb1a1eb68d9ca5732ba147f39877f1589a5f4eefb243d052d7dfb102d3",
+      "level": 8,
+      "generation_ids": [
+        "scout-lv08-parts",
+        "scout-lv08-parts-background-cleanup"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        8
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 41
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_09.png",
+      "sha256": "cbf2cda1481d0caf6cbe7cf263c7db900af1d828ca59655697270729839cc06d",
+      "level": 9,
+      "generation_ids": [
+        "scout-lv09-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        8
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 39
+    },
+    {
+      "path": "Art/Aircraft/upgrades-20261109/scout/rgba/ALightMissile_10.png",
+      "sha256": "cf70d0bfea944618f9bcca9c7b261bfb49722f5c94f7627b34a0f4c852d6426a",
+      "level": 10,
+      "generation_ids": [
+        "scout-lv10-parts"
+      ],
+      "preparation": "use generated rear housing only inside approved alpha; copy original front barrel/launcher byte exact; fixed final canvas",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        8
+      ],
+      "approved_alpha_differences": 0,
+      "approved_front_region_differences": 0,
+      "changed_pixels": 40
+    }
+  ],
+  "rejected_or_revised": [
+    {
+      "candidate": "initial cover placement at center 38,22",
+      "reason": "10-38 pixels outside approved body alpha; replaced by common engine-shoulder placement"
+    },
+    {
+      "candidate": "tiny 8x3 shoulder panels",
+      "reason": "preserved silhouette but level distinction too weak; not selected"
+    },
+    {
+      "candidate": "14x15 cover cell with no pose6 offset",
+      "reason": "level3/4 strongest right roll each had one outside pixel; changed all nine levels to common16x17 cell and common pose6 +1,+1 registration"
+    },
+    {
+      "candidate": "whole generated weapon resizing and weapon-redo levels3/4/6",
+      "reason": "whole-weapon candidate footprints or proportions failed; not shipped. Final weapons use rear housing component only with approved front and alpha unchanged."
+    }
+  ],
+  "preparation_rules": {
+    "cover_atlas": [
+      112,
+      17
+    ],
+    "cover_tile": [
+      16,
+      17
+    ],
+    "cover_tile_count": 7,
+    "cover_parent_socket": [
+      1,
+      0
+    ],
+    "cover_layer": 2,
+    "gun_canvas": [
+      14,
+      7
+    ],
+    "missile_canvas": [
+      13,
+      8
+    ],
+    "gun_unchanged_front_x": [
+      8,
+      14
+    ],
+    "missile_unchanged_front_x": [
+      6,
+      13
+    ],
+    "weapon_self_socket_and_muzzles": "unchanged; no definitions modified by art candidate author",
+    "original_images": "read only",
+    "background_shadows": "not baked into the new part sprites"
+  },
+  "checks": {
+    "cover": "registered-cover-audit.json",
+    "weapons": "weapon-housing-audit.json"
+  }
+}

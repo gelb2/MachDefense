@@ -1,0 +1,70 @@
+original_part_definitions=463 original_named_assemblies=126
+original_named_assembly_nodes_min=1 max=9 largest=E_Plane_05
+
+AircraftLight nodes=4 visible_parts=4 shadow_sprites=4
+ALightBody	ALightBody.png	z=1	parent=0	visible=1
+ALightGun	ALightGun.png	z=2	parent=1	visible=1
+ALightMissile	ALightMissile.png	z=2	parent=1	visible=1
+ALightRotor	ALightRotor.png	z=3	parent=1	visible=1
+
+AircraftDuct nodes=6 visible_parts=6 shadow_sprites=6
+ADuctBody	ADuctBody.png	z=1	parent=0	visible=1
+ADuctFan	ADuctFan.png	z=2	parent=1	visible=1
+ADuctFan	ADuctFan.png	z=2	parent=1	visible=1
+ADuctGun	ADuctGun.png	z=3	parent=1	visible=1
+ADuctMissile	ADuctMissile.png	z=3	parent=1	visible=1
+ADuctMissileR	ADuctMissile.png	z=3	parent=1	visible=1
+
+AircraftTransport nodes=6 visible_parts=6 shadow_sprites=6
+ATransportBody	ATransportBody.png	z=1	parent=0	visible=1
+ATransportGun	ATransportGun.png	z=3	parent=1	visible=1
+ATransportGun	ATransportGun.png	z=3	parent=1	visible=1
+ATransportMissile	ATransportMissile.png	z=3	parent=1	visible=1
+ATransportMissile	ATransportMissile.png	z=3	parent=1	visible=1
+ATransportFan	ATransportFan.png	z=4	parent=1	visible=1
+
+AircraftHeavy nodes=8 visible_parts=6 shadow_sprites=6
+AHeavyBody	AHeavyBody.png	z=1	parent=0	visible=1
+AHeavyGun	AHeavyGun.png	z=2	parent=1	visible=1
+AHeavyMissile	AHeavyMissile.png	z=2	parent=1	visible=1
+AHeavyCannon	AHeavyCannon.png	z=2	parent=1	visible=1
+AHeavyRocket	PartsDummy.png	z=2	parent=1	visible=0
+AHeavyAirStrike	PartsDummy.png	z=2	parent=1	visible=0
+AHeavyRotor	AHeavyRotor.png	z=3	parent=1	visible=1
+AHeavyRotor	AHeavyRotor.png	z=3	parent=1	visible=1
+
+E_Tank_01 nodes=2 visible_parts=2 shadow_sprites=2
+E_Tank_Body_01	E_Tank_Body_01.png	z=0	parent=0	visible=1
+E_Tank_Wpn_01	E_Tank_Wpn_01.png	z=0	parent=1	visible=1
+
+E_Tank_07 nodes=2 visible_parts=2 shadow_sprites=2
+E_Tank_Body_07	E_Tank_Body_07.png	z=0	parent=0	visible=1
+E_Tank_Wpn_07	E_Tank_Wpn_07.png	z=0	parent=1	visible=1
+
+E_Tank_32 nodes=2 visible_parts=2 shadow_sprites=2
+E_Tank32_Body	E_Tank32_Body.png	z=0	parent=0	visible=1
+E_Tank32_Wpn	E_Tank32_Wpn.png	z=0	parent=1	visible=1
+
+MachineGun_01 nodes=6 visible_parts=5 shadow_sprites=5
+DummyParts	DummyParts.png	z=0	parent=0	visible=0
+P_Foot_07	P_Foot_32x16.png	z=0	parent=1	visible=1
+P_Foot_07	P_Foot_32x16.png	z=0	parent=1	visible=1
+P_Body_02	P_Body_02.png	z=0	parent=1	visible=1
+P_Wpn_Gun_401	P_Wpn_Gun_401.png	z=0	parent=1	visible=1
+P_Wpn_Gun_401	P_Wpn_Gun_401.png	z=0	parent=1	visible=1
+
+MachineGun_10 nodes=6 visible_parts=5 shadow_sprites=5
+DummyParts	DummyParts.png	z=0	parent=0	visible=0
+P_Foot_16	P_Foot_32x16.png	z=0	parent=1	visible=1
+P_Foot_16	P_Foot_32x16.png	z=0	parent=1	visible=1
+P_Body_18	P_Body_18.png	z=0	parent=1	visible=1
+P_Wpn_Gun_106	P_Wpn_Gun_106.png	z=0	parent=1	visible=1
+P_Wpn_Gun_106	P_Wpn_Gun_106.png	z=0	parent=1	visible=1
+
+HMG_10 nodes=6 visible_parts=5 shadow_sprites=5
+DummyParts	DummyParts.png	z=0	parent=0	visible=0
+P_Foot_14	P_Foot_32x16.png	z=0	parent=1	visible=1
+P_Foot_14	P_Foot_32x16.png	z=0	parent=1	visible=1
+PB_HMG_10	PB_HMG_10.png	z=0	parent=1	visible=1
+P_Wpn_HMG_10	P_Wpn_HMG_10.png	z=0	parent=1	visible=1
+P_Wpn_HMG_10	P_Wpn_HMG_10.png	z=0	parent=1	visible=1

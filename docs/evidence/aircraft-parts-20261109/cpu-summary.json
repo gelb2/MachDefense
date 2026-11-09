@@ -1,0 +1,208 @@
+{
+  "scope": "Native CPU World::prepareDraw + appendSprites only; no GPU, browser, device, audio-context or full-combat performance claim",
+  "baselineCommit": "04484e3",
+  "overlay": "Read baseline copies of four MCB/four Beluga images; all other reads use current Resources. No product files mutated.",
+  "rounds": 3,
+  "warmupFrames": 20,
+  "measuredFramesPerRound": 200,
+  "order": "baseline/split alternate each round",
+  "scene": "Beluga level10; fixed positions, bank0/16deg; weapons cleared; no ticks or firing",
+  "inputHashes": {
+    "Resources/RawData/AircraftParts.mcb": "8358b939adf1ba856ee88c525e61830862e463cd02a92dd7853fec9e462395f9",
+    "Resources/RawData/AircraftMachines.mcb": "1e07ba771948642a5b88870e0b1250e683f6a90589feca67688eabd28b778b63",
+    "Resources/RawData/Level10Parts.mcb": "3ef88ee47f6f2bdcb9c0154e829400f27a83739620a001897c9790c5c49b6b4f",
+    "Resources/RawData/Level10Machines.mcb": "9dc7f15103083c7b45c7141ef92ae3eda7d7b199dc514cb4f28956eabad4be21",
+    "Resources/Images/ATransportBody.png": "905e2f4dd59eb01804c19a004aff074db684da6a08118afc7ce99fea10c9fbad",
+    "Resources/Images/ATransportWingL.png": "82b42840a4566d502aae31beb85e8451acce4d46bc8726e9aab7f70fd8901e4a",
+    "Resources/Images/ATransportWingR.png": "2598eb67540db4586d5de32347e3732b2a6c24074f6d3415c5c847cded7beb68",
+    "Resources/Images/ATransportEngine.png": "30a658ee7fea5834d289feadd480b93db472792766f01fdadf33736ee02a9c7a",
+    "build/save-transfer/libMachDefenseCore.a": "cd4da14f49158c8ae61c8ff3d84fe2e0bccf5c39b2ba9c334f1c9f35f3a38fd2"
+  },
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "rows": [
+    {
+      "units": 1,
+      "bankDegrees": 0,
+      "baseline": {
+        "medianRoundMeanUs": 1.284,
+        "medianRoundP50Us": 1.167,
+        "medianRoundP95Us": 1.292,
+        "sprites": 14,
+        "meshes": 0,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "split": {
+        "medianRoundMeanUs": 1.678,
+        "medianRoundP50Us": 1.667,
+        "medianRoundP95Us": 1.791,
+        "sprites": 20,
+        "meshes": 0,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "meanDeltaUs": 0.394
+    },
+    {
+      "units": 1,
+      "bankDegrees": 16,
+      "baseline": {
+        "medianRoundMeanUs": 1.953,
+        "medianRoundP50Us": 1.958,
+        "medianRoundP95Us": 2.042,
+        "sprites": 2,
+        "meshes": 12,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "split": {
+        "medianRoundMeanUs": 2.854,
+        "medianRoundP50Us": 2.833,
+        "medianRoundP95Us": 2.959,
+        "sprites": 2,
+        "meshes": 18,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "meanDeltaUs": 0.901
+    },
+    {
+      "units": 4,
+      "bankDegrees": 0,
+      "baseline": {
+        "medianRoundMeanUs": 4.179,
+        "medianRoundP50Us": 4.0,
+        "medianRoundP95Us": 4.542,
+        "sprites": 50,
+        "meshes": 0,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "split": {
+        "medianRoundMeanUs": 5.524,
+        "medianRoundP50Us": 5.459,
+        "medianRoundP95Us": 5.792,
+        "sprites": 74,
+        "meshes": 0,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "meanDeltaUs": 1.345
+    },
+    {
+      "units": 4,
+      "bankDegrees": 16,
+      "baseline": {
+        "medianRoundMeanUs": 7.879,
+        "medianRoundP50Us": 7.875,
+        "medianRoundP95Us": 8.084,
+        "sprites": 2,
+        "meshes": 48,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "split": {
+        "medianRoundMeanUs": 10.227,
+        "medianRoundP50Us": 10.209,
+        "medianRoundP95Us": 10.458,
+        "sprites": 2,
+        "meshes": 72,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "meanDeltaUs": 2.348
+    },
+    {
+      "units": 40,
+      "bankDegrees": 0,
+      "baseline": {
+        "medianRoundMeanUs": 33.643,
+        "medianRoundP50Us": 33.042,
+        "medianRoundP95Us": 34.584,
+        "sprites": 482,
+        "meshes": 0,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "split": {
+        "medianRoundMeanUs": 53.052,
+        "medianRoundP50Us": 51.542,
+        "medianRoundP95Us": 57.75,
+        "sprites": 722,
+        "meshes": 0,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "meanDeltaUs": 19.409
+    },
+    {
+      "units": 40,
+      "bankDegrees": 16,
+      "baseline": {
+        "medianRoundMeanUs": 64.552,
+        "medianRoundP50Us": 63.375,
+        "medianRoundP95Us": 67.541,
+        "sprites": 2,
+        "meshes": 480,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "split": {
+        "medianRoundMeanUs": 101.055,
+        "medianRoundP50Us": 99.708,
+        "medianRoundP95Us": 108.292,
+        "sprites": 2,
+        "meshes": 720,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "meanDeltaUs": 36.503
+    },
+    {
+      "units": 100,
+      "bankDegrees": 0,
+      "baseline": {
+        "medianRoundMeanUs": 85.897,
+        "medianRoundP50Us": 85.166,
+        "medianRoundP95Us": 88.25,
+        "sprites": 1202,
+        "meshes": 0,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "split": {
+        "medianRoundMeanUs": 125.679,
+        "medianRoundP50Us": 123.666,
+        "medianRoundP95Us": 143.709,
+        "sprites": 1802,
+        "meshes": 0,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "meanDeltaUs": 39.782
+    },
+    {
+      "units": 100,
+      "bankDegrees": 16,
+      "baseline": {
+        "medianRoundMeanUs": 162.349,
+        "medianRoundP50Us": 158.083,
+        "medianRoundP95Us": 198.541,
+        "sprites": 2,
+        "meshes": 1200,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "split": {
+        "medianRoundMeanUs": 242.548,
+        "medianRoundP50Us": 240.834,
+        "medianRoundP95Us": 261.125,
+        "sprites": 2,
+        "meshes": 1800,
+        "writes": 0,
+        "soundCalls": 0
+      },
+      "meanDeltaUs": 80.199
+    }
+  ]
+}

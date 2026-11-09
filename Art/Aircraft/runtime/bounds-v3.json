@@ -1,0 +1,18 @@
+[
+  {
+    "name": "AircraftLight",
+    "orientation": "north",
+    "alpha_threshold": 16,
+    "rotor_phases": 360,
+    "max_width": 36.99996799946197,
+    "max_height": 57.0
+  },
+  {
+    "name": "AircraftHeavy",
+    "orientation": "north",
+    "alpha_threshold": 16,
+    "rotor_phases": 360,
+    "max_width": 124.75317148357516,
+    "max_height": 80.0
+  }
+]

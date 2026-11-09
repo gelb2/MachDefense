@@ -1,0 +1,75 @@
+{
+  "baseline": "16d230c approved geometry; pre-paint actual Web capture",
+  "current": "production renderer texture colour; geometry unchanged",
+  "worldZoom": 2,
+  "rotorAngle": 0,
+  "shadows": false,
+  "measurement": "RGB differs from background; low-alpha edge pixels can become visible after colour brightening without any geometry or alpha change",
+  "cells": [
+    {
+      "name": "Scout",
+      "width": 118,
+      "height": 135,
+      "measured": [
+        391,
+        77,
+        118,
+        135
+      ],
+      "visiblePixelDelta": [
+        0,
+        0
+      ],
+      "sourceAlphaAndGeometryUnchanged": true
+    },
+    {
+      "name": "Beluga",
+      "width": 164,
+      "height": 173,
+      "measured": [
+        369,
+        662,
+        165,
+        175
+      ],
+      "visiblePixelDelta": [
+        1,
+        2
+      ],
+      "sourceAlphaAndGeometryUnchanged": true
+    },
+    {
+      "name": "AH-10",
+      "width": 230,
+      "height": 171,
+      "measured": [
+        35,
+        657,
+        230,
+        171
+      ],
+      "visiblePixelDelta": [
+        0,
+        0
+      ],
+      "sourceAlphaAndGeometryUnchanged": true
+    },
+    {
+      "name": "Cheyenne",
+      "width": 118,
+      "height": 158,
+      "measured": [
+        691,
+        65,
+        118,
+        158
+      ],
+      "visiblePixelDelta": [
+        0,
+        0
+      ],
+      "sourceAlphaAndGeometryUnchanged": true
+    }
+  ],
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15"
+}

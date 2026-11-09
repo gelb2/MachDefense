@@ -6,8 +6,10 @@
 #include "Core/Simulation/Projectile.hpp"
 #include "Core/Simulation/SpecialAttack.hpp"
 #include "Core/Simulation/Trail.hpp"
+#include "Core/Simulation/AircraftTactics.hpp"
 #include "Core/Simulation/WeaponController.hpp"
 #include <memory>
+#include "Core/Simulation/AircraftCountermeasures.hpp"
 
 namespace md {
 using ActorId=std::uint64_t;
@@ -21,6 +23,9 @@ struct WorldActor {
     bool player=false,base=false,removed=false,moveToTarget=false;
     int hp=0,maxHP=0,type=0,referenceType=0,experience=0,coin=0,coinRate=0;
     float radius=0,range=0,angle=0,radarAngle=0,attackCheck=0,targetCheck=0,crashTime=0;
+    // Visual-only aircraft properties. Original actors retain their original defaults.
+    float rotorStep=.2f,artHeadingOffset=0,flightHeight=0,countermeasureWidth=0;
+    std::optional<AircraftTactics> flightTactics; // New trial aircraft only.
     std::uint32_t statusFlags=0;
     Vec2 position,destination;
     ActorId target=0;
@@ -66,6 +71,11 @@ public:
     void setValidationCells(float);
     bool setValidationHealth(ActorId,int);
     ActorId validationSpawn(std::string_view machineName,bool player,Vec2 position);
+    void validationAircraftComparison();
+    void validationAlliedAircraftComparison();
+    void validationAircraftDodgeComparison();
+    void validationCountermeasureBurst();
+    ActorId validationAlliedAircraft(unsigned kind,Vec2 position);
     bool activateSpecial(std::string_view ownedBaseName,Vec2 worldPoint);
     void setUIMargin(float);
     void setViewport(float width,float height,float safeTop=0);
@@ -80,6 +90,8 @@ public:
     void appendSprites(Frame&)const;
     const std::vector<std::unique_ptr<WorldActor>>& actors()const{return actors_;}
     const std::vector<WorldProjectile>& projectiles()const{return projectiles_;}
+    unsigned countermeasureBursts()const{return countermeasures_->bursts();}
+    unsigned countermeasureParticles()const{return countermeasures_->active();}
     std::vector<WorldEvent> takeEvents();
     WorldActor* actor(ActorId);
     const WorldActor* actor(ActorId)const;
@@ -104,8 +116,10 @@ private:
     std::vector<WorldTrail> trails_;std::uint64_t nextRenderOrder_=0;
     void addProjectile(std::string,Projectile,ActorId,int layer=5);
     std::vector<WorldProjectile> projectiles_;std::vector<WorldEvent> events_;
+    AircraftThreatGrid aircraftThreats_;
     std::unordered_map<std::string,LootDefinition> lootDefinitions_;std::vector<LootState> loot_;
     std::unique_ptr<ParticlePool> particles_;
+    std::unique_ptr<AircraftCountermeasures> countermeasures_;
     struct ParticleImage {std::string image;unsigned columns=1,rows=1;Vec2 origin;float assetScale=0;};
     std::array<ParticleImage,ParticlePool::capacity> particleImages_;
     void setParticleImage(ParticleState*,std::string,unsigned,unsigned);
@@ -119,7 +133,7 @@ private:
     std::function<void(WorldState)> finishHandler_;
     unsigned cellLevel_=0;
     unsigned stage_=0;WorldState state_=WorldState::running;
-    bool started_=false,paused_=false;
+    bool started_=false,paused_=false,validationArtScene_=false;
     float capacity_=0,buildFactor_=1,baseBoundary_=0,topPlayerPosition_=-800;
     float viewWidth_=0,viewHeight_=0,safeTop_=0,presentationScale_=1;
     float camera_=0,actualCamera_=0,cameraVelocity_=0,dragY_=0,uiMargin_=0;

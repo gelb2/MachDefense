@@ -13,6 +13,7 @@
 #include "../../Tests/ViewportSweep.hpp"
 #include "../../Tests/EmergencySupportSweep.hpp"
 #include "../../Tests/Level10HUDSweep.hpp"
+#include "../../Tests/AircraftComparisonScene.hpp"
 #import "../../Sources/Platform/Apple/MDAudio.h"
 #include <algorithm>
 #include <stdexcept>
@@ -478,6 +479,64 @@ public:
     }catch(const std::exception& e){XCTFail(@"Content sweep: %s",e.what());}
     [audio stopMusic];[audio setActive:NO];[renderer finish];window.hidden=YES;
     XCTAssertTrue([NSFileManager.defaultManager removeItemAtURL:directory error:nil]);
+}
+
+- (void)testAircraftVisualReview {
+    NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
+    UIWindow* window=[[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];window.rootViewController=[NSClassFromString(@"MDViewController") new];
+    MDMenuSurface* surface=[[MDMenuSurface alloc]initWithFrame:window.bounds];surface.contentScaleFactor=UIScreen.mainScreen.scale;surface.layer.contentsScale=surface.contentScaleFactor;
+    CAEAGLLayer* layer=(CAEAGLLayer*)surface.layer;layer.opaque=YES;layer.drawableProperties=@{kEAGLDrawablePropertyRetainedBacking:@YES,kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8};
+    [window.rootViewController.view addSubview:surface];[window makeKeyAndVisible];
+    MDRenderer* renderer=[[MDRenderer alloc]initWithResourceRoot:root];MenuResources resources(root,renderer);
+    try {
+        md::validation::AircraftComparisonScene scene(resources,3);
+        scene.w=768;scene.h=1024;scene.world->setViewport(scene.w,scene.h);
+        auto table=[&](const char* n){auto b=resources.read(std::string("Tables/")+n+".tsv");return md::DataTable::parse({reinterpret_cast<const char*>(b.data()),b.size()});};
+        auto builds=md::BuildCatalog::load(table("MachBuild_Parts"),table("MachBuild_Name"));
+        auto models=md::BattleModels::load(resources);
+        auto mech=md::PlayerLoadout::fromBuild(*builds.find("MachineGun_10"),table("ItemInfo"),md::BattleGeometry::pad());
+        for(unsigned k=0;k<4;++k){auto* reference=scene.world->actor(scene.world->actors()[2*k]->id);if(k!=1){reference->assembly=mech.assembly;reference->name="MachineGun_10";}else{reference->assembly=*models.machine("E_Tank_32");reference->name="E_Tank_32";} }
+        for(int group=0;group<2;++group)for(int pose=0;pose<4;++pose){
+            for(unsigned i=0;i<8;++i){auto* actor=scene.world->actor(scene.world->actors()[i]->id);unsigned kind=i/2;
+                actor->removed=int(kind/2)!=group;actor->position={i%2?125.f:-125.f,kind%2?-150.f:130.f};
+                actor->angle=actor->aircraft.angle=actor->vehicle.angle=1.57079632679f;
+                if(actor->flightTactics)actor->flightTactics->bank=pose==1?-.55f:pose==2?.55f:0;
+                // Reversible visual-only wreck pose; damage behavior is tested separately.
+                if(actor->flightTactics){actor->hp=pose==3?0:actor->maxHP;actor->flightHeight=pose==3?0:(kind==1?18:12);}
+            }
+            auto f=scene.frame();XCTAssertTrue([renderer drawFrame:f toLayer:layer],@"%@",renderer.lastError);
+            [self capture:[NSString stringWithFormat:@"aircraft-ipad-group-%d-pose-%d",group,pose] renderer:renderer];
+        }
+        XCTAssertEqual(scene.host.writes,0u);
+        // Use the actual game menus, production queue and campaign renderer too.
+        auto campaign=md::SaveData::empty(917);campaign.createProfile("AIR REVIEW",1);
+        campaign.writeWord(md::SaveData::slotStart+0xc,5);campaign.setCredits(0,1000000);
+        campaign.setBuilds(0,std::vector<md::OwnedBuild>{{"MachineGun",9,true},{"ScoutHeli",9,true},{"Gunship",9,true},{"Orca",9,true},{"OrcaBomber",9,true}});
+        MenuHost host;host.saved=campaign.encode();md::GameSession game(resources,host,true);
+        md::FrameLayout layout;layout.resize(1024,1366);game.resize(1024,1366);
+        auto c=layout.center(),br=layout.bottomRight();
+        sweepTap(game,160+c.x,240+c.y);sweepTicks(game);sweepTap(game,160+c.x,140+c.y);sweepTicks(game);sweepTap(game,240+br.x,450+br.y);sweepTicks(game);
+        auto* world=game.validationWorld();XCTAssertTrue(world!=nullptr);if(!world)throw std::runtime_error("Aircraft campaign did not enter");
+        world->setValidationCells(100000);
+        for(const char* unit:{"MachineGun","ScoutHeli","Gunship","Orca","OrcaBomber"})XCTAssertTrue(world->enqueueBuild(unit),@"%s",unit);
+        auto writes=host.saves;
+        for(int tick=0;tick<1000;++tick){game.tick();if(tick%4==0)XCTAssertTrue([renderer drawFrame:game.frame() toLayer:layer]);}
+        XCTAssertEqual(world->statistics().produced,5u);XCTAssertEqual(host.saves,writes);
+        for(const auto& sprite:game.frame().sprites)if(sprite.clip&&sprite.image.starts_with("A")){
+            const std::array<std::string_view,4> prefixes{"ALight","AHeavy","ADuct","ATransport"};
+            for(unsigned k=0;k<4;++k)if(sprite.image.starts_with(prefixes[k])){
+                auto r=sprite.destination;const float a=sprite.rotationDegrees*3.14159265359f/180.f,c=std::cos(a),t=std::sin(a);
+                const md::Vec2 center{292+layout.topRight().x,52+51.f*(k+1)+layout.topRight().y};
+                for(float x:{-.5f,.5f})for(float y:{-.5f,.5f}){
+                    XCTAssertLessThanOrEqual(std::abs(r.x+r.width*.5f+x*r.width*c-y*r.height*t-center.x),18.6f);
+                    XCTAssertLessThanOrEqual(std::abs(r.y+r.height*.5f+x*r.width*t+y*r.height*c-center.y),15.6f);
+                }
+            }
+        }
+        [self capture:@"aircraft-ipad-campaign-five-produced" renderer:renderer];
+        NSLog(@"MD_AIRCRAFT_VISUAL_REVIEW real-device production-renderer four-aircraft neutral left right wreck");
+    }catch(const std::exception& e){XCTFail(@"Aircraft visual review: %s",e.what());}
+    [renderer finish];window.hidden=YES;
 }
 
 - (void)testAdditionalLevelArtAssembly {

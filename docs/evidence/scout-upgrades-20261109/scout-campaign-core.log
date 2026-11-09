@@ -1,0 +1,12 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/build/save-transfer
+    Start 54: AircraftCampaign
+1/1 Test #54: AircraftCampaign .................Subprocess aborted***Exception:   0.03 sec
+libc++abi: terminating due to uncaught exception of type std::runtime_error: Duplicate machine variant
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   0.03 sec
+
+The following tests FAILED:
+	 54 - AircraftCampaign (Subprocess aborted)

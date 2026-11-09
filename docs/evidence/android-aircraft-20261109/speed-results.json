@@ -1,0 +1,409 @@
+{
+  "input": "level-results.json",
+  "expectedCount": 40,
+  "count": 40,
+  "ok": true,
+  "formula": "int(float32(moveSpeed) / float32(0.0166)); moveSpeed=tacticSpeed*0.5. speed is instantaneous and is not UI SPD.",
+  "checks": [
+    {
+      "unit": "Scout",
+      "level": 1,
+      "moveSpeed": 1,
+      "tacticSpeed": 2,
+      "instantaneousSpeed": 0.466667,
+      "computedSPD": 60,
+      "expectedSPD": 60,
+      "ok": true
+    },
+    {
+      "unit": "Scout",
+      "level": 2,
+      "moveSpeed": 1.015,
+      "tacticSpeed": 2.03,
+      "instantaneousSpeed": 0.1015,
+      "computedSPD": 61,
+      "expectedSPD": 61,
+      "ok": true
+    },
+    {
+      "unit": "Scout",
+      "level": 3,
+      "moveSpeed": 1.03,
+      "tacticSpeed": 2.06,
+      "instantaneousSpeed": 0.412,
+      "computedSPD": 62,
+      "expectedSPD": 62,
+      "ok": true
+    },
+    {
+      "unit": "Scout",
+      "level": 4,
+      "moveSpeed": 1.045,
+      "tacticSpeed": 2.09,
+      "instantaneousSpeed": 0.418,
+      "computedSPD": 62,
+      "expectedSPD": 62,
+      "ok": true
+    },
+    {
+      "unit": "Scout",
+      "level": 5,
+      "moveSpeed": 1.06,
+      "tacticSpeed": 2.12,
+      "instantaneousSpeed": 0.494667,
+      "computedSPD": 63,
+      "expectedSPD": 63,
+      "ok": true
+    },
+    {
+      "unit": "Scout",
+      "level": 6,
+      "moveSpeed": 1.075,
+      "tacticSpeed": 2.15,
+      "instantaneousSpeed": 0.179167,
+      "computedSPD": 64,
+      "expectedSPD": 64,
+      "ok": true
+    },
+    {
+      "unit": "Scout",
+      "level": 7,
+      "moveSpeed": 1.09,
+      "tacticSpeed": 2.18,
+      "instantaneousSpeed": 0.363333,
+      "computedSPD": 65,
+      "expectedSPD": 65,
+      "ok": true
+    },
+    {
+      "unit": "Scout",
+      "level": 8,
+      "moveSpeed": 1.105,
+      "tacticSpeed": 2.21,
+      "instantaneousSpeed": 0.0368333,
+      "computedSPD": 66,
+      "expectedSPD": 66,
+      "ok": true
+    },
+    {
+      "unit": "Scout",
+      "level": 9,
+      "moveSpeed": 1.12,
+      "tacticSpeed": 2.24,
+      "instantaneousSpeed": 0.336,
+      "computedSPD": 67,
+      "expectedSPD": 67,
+      "ok": true
+    },
+    {
+      "unit": "Scout",
+      "level": 10,
+      "moveSpeed": 1.135,
+      "tacticSpeed": 2.27,
+      "instantaneousSpeed": 0.718833,
+      "computedSPD": 68,
+      "expectedSPD": 68,
+      "ok": true
+    },
+    {
+      "unit": "AH-10",
+      "level": 1,
+      "moveSpeed": 0.5,
+      "tacticSpeed": 1,
+      "instantaneousSpeed": 0.5,
+      "computedSPD": 30,
+      "expectedSPD": 30,
+      "ok": true
+    },
+    {
+      "unit": "AH-10",
+      "level": 2,
+      "moveSpeed": 0.5075,
+      "tacticSpeed": 1.015,
+      "instantaneousSpeed": 0.5075,
+      "computedSPD": 30,
+      "expectedSPD": 30,
+      "ok": true
+    },
+    {
+      "unit": "AH-10",
+      "level": 3,
+      "moveSpeed": 0.515,
+      "tacticSpeed": 1.03,
+      "instantaneousSpeed": 0.515,
+      "computedSPD": 31,
+      "expectedSPD": 31,
+      "ok": true
+    },
+    {
+      "unit": "AH-10",
+      "level": 4,
+      "moveSpeed": 0.5225,
+      "tacticSpeed": 1.045,
+      "instantaneousSpeed": 0.3135,
+      "computedSPD": 31,
+      "expectedSPD": 31,
+      "ok": true
+    },
+    {
+      "unit": "AH-10",
+      "level": 5,
+      "moveSpeed": 0.53,
+      "tacticSpeed": 1.06,
+      "instantaneousSpeed": 0.123667,
+      "computedSPD": 31,
+      "expectedSPD": 31,
+      "ok": true
+    },
+    {
+      "unit": "AH-10",
+      "level": 6,
+      "moveSpeed": 0.5375,
+      "tacticSpeed": 1.075,
+      "instantaneousSpeed": 0.0179167,
+      "computedSPD": 32,
+      "expectedSPD": 32,
+      "ok": true
+    },
+    {
+      "unit": "AH-10",
+      "level": 7,
+      "moveSpeed": 0.545,
+      "tacticSpeed": 1.09,
+      "instantaneousSpeed": 0.545,
+      "computedSPD": 32,
+      "expectedSPD": 32,
+      "ok": true
+    },
+    {
+      "unit": "AH-10",
+      "level": 8,
+      "moveSpeed": 0.5525,
+      "tacticSpeed": 1.105,
+      "instantaneousSpeed": 0.0736667,
+      "computedSPD": 33,
+      "expectedSPD": 33,
+      "ok": true
+    },
+    {
+      "unit": "AH-10",
+      "level": 9,
+      "moveSpeed": 0.56,
+      "tacticSpeed": 1.12,
+      "instantaneousSpeed": 0.28,
+      "computedSPD": 33,
+      "expectedSPD": 33,
+      "ok": true
+    },
+    {
+      "unit": "AH-10",
+      "level": 10,
+      "moveSpeed": 0.5675,
+      "tacticSpeed": 1.135,
+      "instantaneousSpeed": 0.0756667,
+      "computedSPD": 34,
+      "expectedSPD": 34,
+      "ok": true
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 1,
+      "moveSpeed": 1.05,
+      "tacticSpeed": 2.1,
+      "instantaneousSpeed": 0.07,
+      "computedSPD": 63,
+      "expectedSPD": 63,
+      "ok": true
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 2,
+      "moveSpeed": 1.065,
+      "tacticSpeed": 2.13,
+      "instantaneousSpeed": 1.065,
+      "computedSPD": 64,
+      "expectedSPD": 64,
+      "ok": true
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 3,
+      "moveSpeed": 1.08,
+      "tacticSpeed": 2.16,
+      "instantaneousSpeed": 0.504,
+      "computedSPD": 65,
+      "expectedSPD": 65,
+      "ok": true
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 4,
+      "moveSpeed": 1.095,
+      "tacticSpeed": 2.19,
+      "instantaneousSpeed": 0.1825,
+      "computedSPD": 65,
+      "expectedSPD": 65,
+      "ok": true
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 5,
+      "moveSpeed": 1.11,
+      "tacticSpeed": 2.22,
+      "instantaneousSpeed": 0.814,
+      "computedSPD": 66,
+      "expectedSPD": 66,
+      "ok": true
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 6,
+      "moveSpeed": 1.125,
+      "tacticSpeed": 2.25,
+      "instantaneousSpeed": 0.375,
+      "computedSPD": 67,
+      "expectedSPD": 67,
+      "ok": true
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 7,
+      "moveSpeed": 1.14,
+      "tacticSpeed": 2.28,
+      "instantaneousSpeed": 0.342,
+      "computedSPD": 68,
+      "expectedSPD": 68,
+      "ok": true
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 8,
+      "moveSpeed": 1.155,
+      "tacticSpeed": 2.31,
+      "instantaneousSpeed": 0.1155,
+      "computedSPD": 69,
+      "expectedSPD": 69,
+      "ok": true
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 9,
+      "moveSpeed": 1.17,
+      "tacticSpeed": 2.34,
+      "instantaneousSpeed": 1.092,
+      "computedSPD": 70,
+      "expectedSPD": 70,
+      "ok": true
+    },
+    {
+      "unit": "Cheyenne",
+      "level": 10,
+      "moveSpeed": 1.185,
+      "tacticSpeed": 2.37,
+      "instantaneousSpeed": 0.632,
+      "computedSPD": 71,
+      "expectedSPD": 71,
+      "ok": true
+    },
+    {
+      "unit": "Beluga",
+      "level": 1,
+      "moveSpeed": 0.95,
+      "tacticSpeed": 1.9,
+      "instantaneousSpeed": 0.791666,
+      "computedSPD": 57,
+      "expectedSPD": 57,
+      "ok": true
+    },
+    {
+      "unit": "Beluga",
+      "level": 2,
+      "moveSpeed": 0.965,
+      "tacticSpeed": 1.93,
+      "instantaneousSpeed": 0.965,
+      "computedSPD": 58,
+      "expectedSPD": 58,
+      "ok": true
+    },
+    {
+      "unit": "Beluga",
+      "level": 3,
+      "moveSpeed": 0.98,
+      "tacticSpeed": 1.96,
+      "instantaneousSpeed": 0.326667,
+      "computedSPD": 59,
+      "expectedSPD": 59,
+      "ok": true
+    },
+    {
+      "unit": "Beluga",
+      "level": 4,
+      "moveSpeed": 0.995,
+      "tacticSpeed": 1.99,
+      "instantaneousSpeed": 0.995,
+      "computedSPD": 59,
+      "expectedSPD": 59,
+      "ok": true
+    },
+    {
+      "unit": "Beluga",
+      "level": 5,
+      "moveSpeed": 1.01,
+      "tacticSpeed": 2.02,
+      "instantaneousSpeed": 0.606,
+      "computedSPD": 60,
+      "expectedSPD": 60,
+      "ok": true
+    },
+    {
+      "unit": "Beluga",
+      "level": 6,
+      "moveSpeed": 1.025,
+      "tacticSpeed": 2.05,
+      "instantaneousSpeed": 1.025,
+      "computedSPD": 61,
+      "expectedSPD": 61,
+      "ok": true
+    },
+    {
+      "unit": "Beluga",
+      "level": 7,
+      "moveSpeed": 1.04,
+      "tacticSpeed": 2.08,
+      "instantaneousSpeed": 0.277333,
+      "computedSPD": 62,
+      "expectedSPD": 62,
+      "ok": true
+    },
+    {
+      "unit": "Beluga",
+      "level": 8,
+      "moveSpeed": 1.055,
+      "tacticSpeed": 2.11,
+      "instantaneousSpeed": 0.281333,
+      "computedSPD": 63,
+      "expectedSPD": 63,
+      "ok": true
+    },
+    {
+      "unit": "Beluga",
+      "level": 9,
+      "moveSpeed": 1.07,
+      "tacticSpeed": 2.14,
+      "instantaneousSpeed": 1.07,
+      "computedSPD": 64,
+      "expectedSPD": 64,
+      "ok": true
+    },
+    {
+      "unit": "Beluga",
+      "level": 10,
+      "moveSpeed": 1.085,
+      "tacticSpeed": 2.17,
+      "instantaneousSpeed": 1.085,
+      "computedSPD": 65,
+      "expectedSPD": 65,
+      "ok": true
+    }
+  ]
+}

@@ -46,4 +46,9 @@ WeaponCatalog WeaponCatalog::load(const DataTable& t,bool phone){
     return result;
 }
 const WeaponDefinition* WeaponCatalog::find(std::string_view name)const {auto i=definitions_.find(std::string(name));return i==definitions_.end()?nullptr:&i->second;}
+void WeaponCatalog::addAlias(std::string name,std::string_view source){
+    if(definitions_.contains(name))throw std::runtime_error("Weapon alias already exists: "+name);
+    const auto* original=find(source);if(!original)throw std::runtime_error("Missing weapon alias source");
+    auto copy=*original;copy.name=name;definitions_.emplace(std::move(name),std::move(copy));
+}
 }

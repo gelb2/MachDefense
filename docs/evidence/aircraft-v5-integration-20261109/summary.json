@@ -1,0 +1,29 @@
+{
+  "nativeTests": 3,
+  "nativePassed": 3,
+  "authoredV5Cases": 66,
+  "existingPoseCases": 174,
+  "originalGroundNodes": 77,
+  "browsers": [
+    {
+      "engine": "Chrome",
+      "poses": 70,
+      "additionalUploadsAfterWarmup": 0,
+      "errors": []
+    },
+    {
+      "engine": "WebKit",
+      "poses": 70,
+      "additionalUploadsAfterWarmup": 0,
+      "errors": []
+    }
+  ],
+  "regularBuild": {
+    "version": "f29e59657b66af6f",
+    "cheat": true
+  },
+  "poseBuild": {
+    "version": "f89979b88f8bb012",
+    "cheat": true
+  }
+}

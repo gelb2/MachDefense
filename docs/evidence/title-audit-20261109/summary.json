@@ -1,0 +1,380 @@
+{
+  "date": "2026-11-09",
+  "sourceCommit": "614a6e47528ea90851cec3d161a6986c9174cf26",
+  "captures": 24,
+  "liveBuild": "87ea3cfe8a8dc249",
+  "localBuild": "f9c149c09cf5f2dc",
+  "browserContexts": "isolated fresh contexts; no user browser profile",
+  "nativeScope": "current Menu.cpp compiled into host geometry probe; no native phone execution in this task",
+  "existingTest": "passes despite stretched and mirrored title edges",
+  "sourceHashes": {
+    "Sources/Core/Presentation/Menu.cpp": "df596b5a991c2f448e9ae7bdb14fbb9f807c88a831ba0619b24fc17cacfbcbb2",
+    "Sources/Core/Contracts/FrameLayout.hpp": "5328642a259c2d2e1dcb7ff885f4c1065fb73a03e2758a6e0aaeb8355041f553",
+    "Resources/Images/Title.jpg": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696",
+    "Distribution/Web/app.js": "1c2fa1d3c09c51da3e91b9293778ea197bf4feb4be9d63eda14af3662f3d5e79",
+    "Distribution/Web/style.css": "a2307a115f8a77ff27c86c57e8b2bae3ff1bc91f8d248f2cd7bb53dfef817b5a",
+    "Web/tests/title-layout.mjs": "08cd7cf961d5e81dd194339a54ba89f3ef39a7f5e5eb947a709a301671e3355a"
+  },
+  "rows": [
+    {
+      "engine": "chromium",
+      "target": "local",
+      "name": "reference",
+      "viewport": [
+        320,
+        480
+      ],
+      "originalDisplayed": [
+        320.0,
+        480.0
+      ],
+      "sideFillPercent": 0.0,
+      "titleSprites": 1
+    },
+    {
+      "engine": "chromium",
+      "target": "local",
+      "name": "phone",
+      "viewport": [
+        390,
+        844
+      ],
+      "originalDisplayed": [
+        390.0,
+        585.0
+      ],
+      "sideFillPercent": 0.0,
+      "titleSprites": 3
+    },
+    {
+      "engine": "chromium",
+      "target": "local",
+      "name": "ipad",
+      "viewport": [
+        820,
+        1180
+      ],
+      "originalDisplayed": [
+        786.667,
+        1180.001
+      ],
+      "sideFillPercent": 4.065,
+      "titleSprites": 9
+    },
+    {
+      "engine": "chromium",
+      "target": "local",
+      "name": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "originalDisplayed": [
+        533.333,
+        800.0
+      ],
+      "sideFillPercent": 58.333,
+      "titleSprites": 9
+    },
+    {
+      "engine": "chromium",
+      "target": "local",
+      "name": "wide",
+      "viewport": [
+        1600,
+        900
+      ],
+      "originalDisplayed": [
+        600.0,
+        900.0
+      ],
+      "sideFillPercent": 62.5,
+      "titleSprites": 9
+    },
+    {
+      "engine": "chromium",
+      "target": "local",
+      "name": "maclarge",
+      "viewport": [
+        2560,
+        1440
+      ],
+      "originalDisplayed": [
+        960.0,
+        1440.001
+      ],
+      "sideFillPercent": 62.5,
+      "titleSprites": 9
+    },
+    {
+      "engine": "chromium",
+      "target": "live",
+      "name": "reference",
+      "viewport": [
+        320,
+        480
+      ],
+      "originalDisplayed": [
+        320.0,
+        480.0
+      ],
+      "sideFillPercent": 0.0,
+      "titleSprites": 1
+    },
+    {
+      "engine": "chromium",
+      "target": "live",
+      "name": "phone",
+      "viewport": [
+        390,
+        844
+      ],
+      "originalDisplayed": [
+        390.0,
+        585.0
+      ],
+      "sideFillPercent": 0.0,
+      "titleSprites": 3
+    },
+    {
+      "engine": "chromium",
+      "target": "live",
+      "name": "ipad",
+      "viewport": [
+        820,
+        1180
+      ],
+      "originalDisplayed": [
+        786.667,
+        1180.001
+      ],
+      "sideFillPercent": 4.065,
+      "titleSprites": 9
+    },
+    {
+      "engine": "chromium",
+      "target": "live",
+      "name": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "originalDisplayed": [
+        533.333,
+        800.0
+      ],
+      "sideFillPercent": 58.333,
+      "titleSprites": 9
+    },
+    {
+      "engine": "chromium",
+      "target": "live",
+      "name": "wide",
+      "viewport": [
+        1600,
+        900
+      ],
+      "originalDisplayed": [
+        600.0,
+        900.0
+      ],
+      "sideFillPercent": 62.5,
+      "titleSprites": 9
+    },
+    {
+      "engine": "chromium",
+      "target": "live",
+      "name": "maclarge",
+      "viewport": [
+        2560,
+        1440
+      ],
+      "originalDisplayed": [
+        960.0,
+        1440.001
+      ],
+      "sideFillPercent": 62.5,
+      "titleSprites": 9
+    },
+    {
+      "engine": "webkit",
+      "target": "local",
+      "name": "reference",
+      "viewport": [
+        320,
+        480
+      ],
+      "originalDisplayed": [
+        320.0,
+        480.0
+      ],
+      "sideFillPercent": 0.0,
+      "titleSprites": 1
+    },
+    {
+      "engine": "webkit",
+      "target": "local",
+      "name": "phone",
+      "viewport": [
+        390,
+        844
+      ],
+      "originalDisplayed": [
+        390.0,
+        585.0
+      ],
+      "sideFillPercent": 0.0,
+      "titleSprites": 3
+    },
+    {
+      "engine": "webkit",
+      "target": "local",
+      "name": "ipad",
+      "viewport": [
+        820,
+        1180
+      ],
+      "originalDisplayed": [
+        786.667,
+        1180.001
+      ],
+      "sideFillPercent": 4.065,
+      "titleSprites": 9
+    },
+    {
+      "engine": "webkit",
+      "target": "local",
+      "name": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "originalDisplayed": [
+        533.333,
+        800.0
+      ],
+      "sideFillPercent": 58.333,
+      "titleSprites": 9
+    },
+    {
+      "engine": "webkit",
+      "target": "local",
+      "name": "wide",
+      "viewport": [
+        1600,
+        900
+      ],
+      "originalDisplayed": [
+        600.0,
+        900.0
+      ],
+      "sideFillPercent": 62.5,
+      "titleSprites": 9
+    },
+    {
+      "engine": "webkit",
+      "target": "local",
+      "name": "maclarge",
+      "viewport": [
+        2560,
+        1440
+      ],
+      "originalDisplayed": [
+        960.0,
+        1440.001
+      ],
+      "sideFillPercent": 62.5,
+      "titleSprites": 9
+    },
+    {
+      "engine": "webkit",
+      "target": "live",
+      "name": "reference",
+      "viewport": [
+        320,
+        480
+      ],
+      "originalDisplayed": [
+        320.0,
+        480.0
+      ],
+      "sideFillPercent": 0.0,
+      "titleSprites": 1
+    },
+    {
+      "engine": "webkit",
+      "target": "live",
+      "name": "phone",
+      "viewport": [
+        390,
+        844
+      ],
+      "originalDisplayed": [
+        390.0,
+        585.0
+      ],
+      "sideFillPercent": 0.0,
+      "titleSprites": 3
+    },
+    {
+      "engine": "webkit",
+      "target": "live",
+      "name": "ipad",
+      "viewport": [
+        820,
+        1180
+      ],
+      "originalDisplayed": [
+        786.667,
+        1180.001
+      ],
+      "sideFillPercent": 4.065,
+      "titleSprites": 9
+    },
+    {
+      "engine": "webkit",
+      "target": "live",
+      "name": "desktop",
+      "viewport": [
+        1280,
+        800
+      ],
+      "originalDisplayed": [
+        533.333,
+        800.0
+      ],
+      "sideFillPercent": 58.333,
+      "titleSprites": 9
+    },
+    {
+      "engine": "webkit",
+      "target": "live",
+      "name": "wide",
+      "viewport": [
+        1600,
+        900
+      ],
+      "originalDisplayed": [
+        600.0,
+        900.0
+      ],
+      "sideFillPercent": 62.5,
+      "titleSprites": 9
+    },
+    {
+      "engine": "webkit",
+      "target": "live",
+      "name": "maclarge",
+      "viewport": [
+        2560,
+        1440
+      ],
+      "originalDisplayed": [
+        960.0,
+        1440.001
+      ],
+      "sideFillPercent": 62.5,
+      "titleSprites": 9
+    }
+  ]
+}

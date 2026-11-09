@@ -1,0 +1,48 @@
+{
+  "source": "Art/Aircraft/parts/aircraft-parts-v2.png",
+  "source_sha256": "03e3f2171db1d4da20547dee8371f4586d60e5782d3da792d5359ef9c48ce440",
+  "pipeline": "tools/pack_aircraft_art.sh",
+  "palette_policy": "Full RGBA; original-16 experiment not applied following user correction",
+  "sprites": [
+    {
+      "name": "ALightBody",
+      "width": 27,
+      "height": 57,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 786,
+      "alpha_levels": 146,
+      "sha256": "6f0b937419d30d7fcead41407266ddbd821e8b306c4959b721778356a6043ca6"
+    },
+    {
+      "name": "ALightRotor",
+      "width": 26,
+      "height": 26,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 276,
+      "alpha_levels": 114,
+      "sha256": "c30325972f0961b61fdbc9078c6df89904cf39c1e9187491adf2f4fe4bed0840"
+    },
+    {
+      "name": "AHeavyBody",
+      "width": 87,
+      "height": 80,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 3674,
+      "alpha_levels": 231,
+      "sha256": "cf6e3cdefad9e85b16f06ac8f994bdbba6949cd000a2d5a391b2e52da9889311"
+    },
+    {
+      "name": "AHeavyRotor",
+      "width": 41,
+      "height": 40,
+      "cgbi": false,
+      "interlaced": false,
+      "colors": 537,
+      "alpha_levels": 150,
+      "sha256": "4194e0458b5644f5c60e5cbf80b102e226ac494971830fae735238e8f6215154"
+    }
+  ]
+}

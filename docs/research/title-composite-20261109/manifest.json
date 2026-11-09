@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-09",
+  "kind": "browser-composite-preview",
+  "game_applied": false,
+  "original_source": "Resources/Images/Title.jpg",
+  "original_size": [
+    640,
+    960
+  ],
+  "generated": [
+    {
+      "path": "docs/research/title-composite-20261109/generated-wide.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1e9b1131f54273ebc1590f3137fa24b02ea94572c34b441825d15dc4619f72a9"
+    },
+    {
+      "path": "docs/research/title-composite-20261109/generated-tall.png",
+      "width": 977,
+      "height": 1610,
+      "sha256": "10cd4692890caaae1c848dc6ddd5a4cfc5ade40296b35c6ea9c0563cc41e84ae"
+    },
+    {
+      "path": "docs/research/title-composite-20261109/generated-tall-v2.png",
+      "width": 851,
+      "height": 1847,
+      "sha256": "1ea7863f73b7634dcb8ec50736665a60d7c98f3461da19c05a8a1f9bf337d2b6"
+    }
+  ],
+  "files": {
+    "index.html": {
+      "bytes": 4401,
+      "sha256": "2a91224ee4147146d6eaa9b5ab25fa080e41f91953c55822dcd9920a8693aa46"
+    },
+    "original.jpg": {
+      "bytes": 172705,
+      "sha256": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696"
+    },
+    "wide.webp": {
+      "bytes": 213918,
+      "sha256": "4e0f7785e9b6fc5c74d4d8aeab58221f67f0f86fdc6d1a696d86e2306c3b2003"
+    },
+    "prompts.md": {
+      "bytes": 4280,
+      "sha256": "5117e65b9b0adea66e572dc5e3d119e6ce5559b4078c71d0efc401e13a334004"
+    },
+    "composite.js": {
+      "bytes": 3604,
+      "sha256": "b21aadd09238a3fe2e84c8542e60095e9513130a91884f2f403b4df0045362b4"
+    },
+    "tall.webp": {
+      "bytes": 132400,
+      "sha256": "1aef5dc6bb3b9acda6ecab8afb48530d9776ae3cb8ba0fc54aabbab441985a0e"
+    }
+  },
+  "wide_original_rect": [
+    500,
+    0,
+    600,
+    900
+  ],
+  "tall_original_rect": [
+    0,
+    129.5,
+    390,
+    585
+  ],
+  "blend": "12 logical units outside original rectangle; reflected edge with outward alpha fade",
+  "report_encoding": "generated previews WebP q90; original JPG unchanged",
+  "tool": "built-in image_gen"
+}

@@ -1,0 +1,81 @@
+{
+  "baseline": "AH-1Z v1: before body-only proportion revision",
+  "worldZoom": 2,
+  "rotorAngle": 0,
+  "shadows": false,
+  "cells": [
+    {
+      "name": "Scout AH-1Z v1",
+      "left": 91,
+      "top": 56,
+      "width": 118,
+      "height": 182
+    },
+    {
+      "name": "Scout BODY revision",
+      "left": 391,
+      "top": 77,
+      "width": 118,
+      "height": 135
+    },
+    {
+      "name": "Cheyenne reference",
+      "left": 691,
+      "top": 65,
+      "width": 118,
+      "height": 158
+    },
+    {
+      "name": "BODY BEFORE",
+      "left": 120,
+      "top": 362,
+      "width": 60,
+      "height": 176
+    },
+    {
+      "name": "BODY +30% width / -30% length",
+      "left": 411,
+      "top": 388,
+      "width": 78,
+      "height": 124
+    },
+    {
+      "name": "ROTOR unchanged",
+      "left": 691,
+      "top": 391,
+      "width": 118,
+      "height": 118
+    },
+    {
+      "name": "AH-10 preserved",
+      "left": 35,
+      "top": 657,
+      "width": 230,
+      "height": 171
+    },
+    {
+      "name": "Beluga preserved",
+      "left": 369,
+      "top": 664,
+      "width": 164,
+      "height": 173
+    },
+    {
+      "name": "MachineGun Lv.10",
+      "left": 690,
+      "top": 702,
+      "width": 118,
+      "height": 88
+    }
+  ],
+  "checks": {
+    "sameWidth": true,
+    "bodyWidthPlus30": true,
+    "bodyLengthMinus30Within1Pixel": true,
+    "rotorUnchanged": true,
+    "preservedAH10": true,
+    "preservedBeluga": true,
+    "preservedCheyenne": true
+  },
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15"
+}

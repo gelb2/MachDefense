@@ -1,0 +1,1222 @@
+[
+  {
+    "file": "Resources/Images/E_Base.png",
+    "size": [
+      256,
+      128
+    ],
+    "sha256": "52996217dfe72aa0520d4e17c1dbdb1a26ecf6d4029051f3f962594a19be298c",
+    "sheet": 1,
+    "cell": 1
+  },
+  {
+    "file": "Resources/Images/E_Base_Rader.png",
+    "size": [
+      43,
+      16
+    ],
+    "sha256": "2c1b5cb43249f4f4a0e6a32843eb8b5d42e02ef330d2749660446d33896adc75",
+    "sheet": 1,
+    "cell": 2
+  },
+  {
+    "file": "Resources/Images/E_Plane04_Body.png",
+    "size": [
+      92,
+      108
+    ],
+    "sha256": "ad736cf0b0689d1a4c80fe00ebd3e836a791e33fdb69ef509c6cbc1ad3e17a4b",
+    "sheet": 1,
+    "cell": 3
+  },
+  {
+    "file": "Resources/Images/E_Plane04_Prop.png",
+    "size": [
+      30,
+      29
+    ],
+    "sha256": "403d81719feb1fb2b6f80864bf819cf3f6c5ef44b8a9fd77f2981ebeea9a169a",
+    "sheet": 1,
+    "cell": 4
+  },
+  {
+    "file": "Resources/Images/E_Plane05_Body.png",
+    "size": [
+      81,
+      115
+    ],
+    "sha256": "30a84d3788184552e34523ddb8bda6b538a2741d802c0443c261f50225b5f0eb",
+    "sheet": 1,
+    "cell": 5
+  },
+  {
+    "file": "Resources/Images/E_Plane05_Prop.png",
+    "size": [
+      24,
+      24
+    ],
+    "sha256": "331b58ead77fe28a368737adc2cb41c389f43c8896242e991cb9892c6cdf7fdb",
+    "sheet": 1,
+    "cell": 6
+  },
+  {
+    "file": "Resources/Images/E_Plane05_Wpn.png",
+    "size": [
+      13,
+      13
+    ],
+    "sha256": "43f909da2954561f09b5fab69b5703d9911925eb6d80c2805b4bc34485297bff",
+    "sheet": 1,
+    "cell": 7
+  },
+  {
+    "file": "Resources/Images/E_Plane_Body_01.png",
+    "size": [
+      48,
+      70
+    ],
+    "sha256": "134a5e924fe961332988aca31018d71b3ca116362a67a3c7b7ad6092f28bdc11",
+    "sheet": 1,
+    "cell": 8
+  },
+  {
+    "file": "Resources/Images/E_Plane_Body_02.png",
+    "size": [
+      60,
+      70
+    ],
+    "sha256": "3774c1523ffce001c56c43c7c62d743926c6dd9c6443bbb76e3e4736558d8c6f",
+    "sheet": 1,
+    "cell": 9
+  },
+  {
+    "file": "Resources/Images/E_Plane_Body_03.png",
+    "size": [
+      100,
+      115
+    ],
+    "sha256": "97bd2b5fa35a1753de5a4cd6268ea4eab5895a3aa5d27850c72fc7516edab4a2",
+    "sheet": 1,
+    "cell": 10
+  },
+  {
+    "file": "Resources/Images/E_Ship01_Body.png",
+    "size": [
+      101,
+      42
+    ],
+    "sha256": "ed2e42653ae37900c773674a226dc46df5615780e532cdc00c1d0da7255548fe",
+    "sheet": 1,
+    "cell": 11
+  },
+  {
+    "file": "Resources/Images/E_Ship01_Wpn.png",
+    "size": [
+      32,
+      17
+    ],
+    "sha256": "e8b71d93e29fc2b4947f3332634cd0b4c8f6a7298d82b4a2ab43e5a3ab48b2fe",
+    "sheet": 1,
+    "cell": 12
+  },
+  {
+    "file": "Resources/Images/E_Tank20_Body.png",
+    "size": [
+      61,
+      37
+    ],
+    "sha256": "04ec7b94bd0b8fad36fa460108d4a2d43d126b2fac94d40ca6ea192784936cb2",
+    "sheet": 1,
+    "cell": 13
+  },
+  {
+    "file": "Resources/Images/E_Tank20_Wpn.png",
+    "size": [
+      38,
+      30
+    ],
+    "sha256": "2bf89fb1136f2343ffcad3ac5b728491b67fcedf19c633c5827cbd06dd7b7d17",
+    "sheet": 1,
+    "cell": 14
+  },
+  {
+    "file": "Resources/Images/E_Tank21_Body.png",
+    "size": [
+      75,
+      71
+    ],
+    "sha256": "753901818c44f11ade8c8675a55459400df47ad4c734292541039479172c1521",
+    "sheet": 1,
+    "cell": 15
+  },
+  {
+    "file": "Resources/Images/E_Tank21_Wpn.png",
+    "size": [
+      47,
+      41
+    ],
+    "sha256": "b9946207470c830663ac72ce303c541646e221b05c42840efa7b43d6a5637145",
+    "sheet": 1,
+    "cell": 16
+  },
+  {
+    "file": "Resources/Images/E_Tank22_Body.png",
+    "size": [
+      68,
+      71
+    ],
+    "sha256": "b57dab1ab4b7d804914c839a18de5c0aa66bc5039f80d5de75e69f3b109a4883",
+    "sheet": 1,
+    "cell": 17
+  },
+  {
+    "file": "Resources/Images/E_Tank22_Wpn.png",
+    "size": [
+      30,
+      20
+    ],
+    "sha256": "4fb2bda18720eb5fb7112fcc73ca4f2e8d869dd9ee4f517a11c4d4628fc0f21e",
+    "sheet": 1,
+    "cell": 18
+  },
+  {
+    "file": "Resources/Images/E_Tank23_Body.png",
+    "size": [
+      82,
+      71
+    ],
+    "sha256": "5a655b8e8019db9764abc47dda29f39ec25192322a52c77d14e8991ff354c8c2",
+    "sheet": 1,
+    "cell": 19
+  },
+  {
+    "file": "Resources/Images/E_Tank23_Wpn.png",
+    "size": [
+      59,
+      49
+    ],
+    "sha256": "e45fbd5144f75dc21a49b2bfd20c4088ac1904c7c313ed6b2d666e5116a57118",
+    "sheet": 1,
+    "cell": 20
+  },
+  {
+    "file": "Resources/Images/E_Tank24_Body.png",
+    "size": [
+      86,
+      96
+    ],
+    "sha256": "9c8bdee70086ca7ba3d942b82927b56905cd91dd0783315313014eebc076431f",
+    "sheet": 1,
+    "cell": 21
+  },
+  {
+    "file": "Resources/Images/E_Tank24_Wpn.png",
+    "size": [
+      25,
+      18
+    ],
+    "sha256": "1146b30d813641fa638132c0b15e38c76b6ee0cf52826c664d1fe45c55a0f710",
+    "sheet": 1,
+    "cell": 22
+  },
+  {
+    "file": "Resources/Images/E_Tank25_Body.png",
+    "size": [
+      120,
+      66
+    ],
+    "sha256": "37c4273de6415cbfeded1ee7373bb467b49e5c419c55f25e4d8e2f7f15d5c7ef",
+    "sheet": 1,
+    "cell": 23
+  },
+  {
+    "file": "Resources/Images/E_Tank25_Wpn_01.png",
+    "size": [
+      32,
+      23
+    ],
+    "sha256": "c6fe6fc4cd0747dc7345477990ec87263f778f850730c4df5b9f289794207e44",
+    "sheet": 1,
+    "cell": 24
+  },
+  {
+    "file": "Resources/Images/E_Tank25_Wpn_02.png",
+    "size": [
+      21,
+      14
+    ],
+    "sha256": "0ed32b0c8696934feceb630a2c4a87d01cb19050290a9d3682a98f20054122af",
+    "sheet": 2,
+    "cell": 1
+  },
+  {
+    "file": "Resources/Images/E_Tank26_Body.png",
+    "size": [
+      120,
+      83
+    ],
+    "sha256": "4773f6f317d95fae2cd3acb3d296e24520ae2044fe8cb15687662c974c7f8291",
+    "sheet": 2,
+    "cell": 2
+  },
+  {
+    "file": "Resources/Images/E_Tank26_Wpn_01.png",
+    "size": [
+      59,
+      34
+    ],
+    "sha256": "0ca568cda58355c44e3033c6768a085f646a0887d8954bb4efb9df49138219c8",
+    "sheet": 2,
+    "cell": 3
+  },
+  {
+    "file": "Resources/Images/E_Tank26_Wpn_02.png",
+    "size": [
+      32,
+      20
+    ],
+    "sha256": "615a06ab0dc3320070db9402c4054bfaa0cb941a1da28a585e9e73e04fe35498",
+    "sheet": 2,
+    "cell": 4
+  },
+  {
+    "file": "Resources/Images/E_Tank27_Body.png",
+    "size": [
+      100,
+      105
+    ],
+    "sha256": "c884a2536c8ebf8b86c25c50a66670ed9ce9122f83d31766772837ddcbf6486b",
+    "sheet": 2,
+    "cell": 5
+  },
+  {
+    "file": "Resources/Images/E_Tank27_Wpn.png",
+    "size": [
+      65,
+      29
+    ],
+    "sha256": "8d3e8dbedccd7ef7cadfa808d3d092b8a9b97d665daafdd4776406acc99513a1",
+    "sheet": 2,
+    "cell": 6
+  },
+  {
+    "file": "Resources/Images/E_Tank28_Body.png",
+    "size": [
+      121,
+      110
+    ],
+    "sha256": "cdee00a72302988340d554d22b1ac2332b36a03dbdf2ccfd0878ea90ede4bf74",
+    "sheet": 2,
+    "cell": 7
+  },
+  {
+    "file": "Resources/Images/E_Tank28_Wpn_01.png",
+    "size": [
+      45,
+      14
+    ],
+    "sha256": "80dc0cd78ab9ecac27b29f6bbe25c598514438332e3ad0ccc190eb5d6dae95fd",
+    "sheet": 2,
+    "cell": 8
+  },
+  {
+    "file": "Resources/Images/E_Tank28_Wpn_02.png",
+    "size": [
+      22,
+      15
+    ],
+    "sha256": "e46b3f668930f55852636485f9c95c1bb7ca8a076654d4e20648e1551b7936e7",
+    "sheet": 2,
+    "cell": 9
+  },
+  {
+    "file": "Resources/Images/E_Tank29_Body.png",
+    "size": [
+      118,
+      77
+    ],
+    "sha256": "874c6b95b8b4252d1fe12dfb3e8928942176fd618554b6137a215d25801a4ac4",
+    "sheet": 2,
+    "cell": 10
+  },
+  {
+    "file": "Resources/Images/E_Tank29_Wpn.png",
+    "size": [
+      82,
+      41
+    ],
+    "sha256": "39dcf6ec0c99788bd6805ef10a3769ab00140fcf45990ed58cb882103536ae44",
+    "sheet": 2,
+    "cell": 11
+  },
+  {
+    "file": "Resources/Images/E_Tank30_Body.png",
+    "size": [
+      118,
+      96
+    ],
+    "sha256": "b38cb48abb0855bf5d835bfb9cfe976099f2eccff31dc7e228cf9ce15da8e199",
+    "sheet": 2,
+    "cell": 12
+  },
+  {
+    "file": "Resources/Images/E_Tank30_Wpn.png",
+    "size": [
+      25,
+      19
+    ],
+    "sha256": "56840bef336f427e5170bd6e4c5233a97fe377aab7dc5b9f6decd19c31c039ac",
+    "sheet": 2,
+    "cell": 13
+  },
+  {
+    "file": "Resources/Images/E_Tank31_Body.png",
+    "size": [
+      97,
+      97
+    ],
+    "sha256": "d1df54d2524f5122ad26534d4458a15e16cef86f03d42263215b95070046c7e3",
+    "sheet": 2,
+    "cell": 14
+  },
+  {
+    "file": "Resources/Images/E_Tank31_Wpn.png",
+    "size": [
+      79,
+      47
+    ],
+    "sha256": "6292299d16dff52f822af982a43dab9a32844f7cd4099a409a806898e3897420",
+    "sheet": 2,
+    "cell": 15
+  },
+  {
+    "file": "Resources/Images/E_Tank32_Body.png",
+    "size": [
+      100,
+      105
+    ],
+    "sha256": "c884a2536c8ebf8b86c25c50a66670ed9ce9122f83d31766772837ddcbf6486b",
+    "sheet": 2,
+    "cell": 16
+  },
+  {
+    "file": "Resources/Images/E_Tank32_Wpn.png",
+    "size": [
+      67,
+      65
+    ],
+    "sha256": "aca52d22d708fc6ae8a648d92ec20a702849434ab272a49c1776c06e9a1a67ef",
+    "sheet": 2,
+    "cell": 17
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_01.png",
+    "size": [
+      55,
+      32
+    ],
+    "sha256": "415592d9b7df8081b368d8c38df22e30fb4a1e1ffcb0d6da22512cbfe61df49f",
+    "sheet": 2,
+    "cell": 18
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_02.png",
+    "size": [
+      61,
+      37
+    ],
+    "sha256": "314ae5bb54db8e5d46862a3b4b0ce508ae6c4212680f41c5c725c7036057e25c",
+    "sheet": 2,
+    "cell": 19
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_03.png",
+    "size": [
+      51,
+      38
+    ],
+    "sha256": "ae7c5b7b5a730b0cfec0ec0c64f0113d8796b352981e3d9ff58cd66e1fc2c40a",
+    "sheet": 2,
+    "cell": 20
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_04.png",
+    "size": [
+      43,
+      49
+    ],
+    "sha256": "b2d0c2aa7e53fa34bb0c84815b794469805825222de179d27b35e6e1b1637a1c",
+    "sheet": 2,
+    "cell": 21
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_05.png",
+    "size": [
+      41,
+      49
+    ],
+    "sha256": "a282a193fb1886b0c1117e929ed5b734317567a9964ee33cd3b369be6e00e930",
+    "sheet": 2,
+    "cell": 22
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_06.png",
+    "size": [
+      53,
+      42
+    ],
+    "sha256": "bb96857d994e52f95f3bd5110307bcf1e869581ad0fe3a92ec2eee73474a9501",
+    "sheet": 2,
+    "cell": 23
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_07.png",
+    "size": [
+      60,
+      42
+    ],
+    "sha256": "61f4de4c45ecb8c1043eda8e1af99cefe14fe7a700a191cd966e01c5e3161848",
+    "sheet": 2,
+    "cell": 24
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_08.png",
+    "size": [
+      55,
+      41
+    ],
+    "sha256": "882b44ede501dab1c8881afad387edea1d8b61a8b0e7fa6eeea947dc089eca74",
+    "sheet": 3,
+    "cell": 1
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_09.png",
+    "size": [
+      61,
+      41
+    ],
+    "sha256": "83a6d40e70d87ecb6dbf1cc4e6964c49592b5ed3a9ffd67b5d13ca403b77c275",
+    "sheet": 3,
+    "cell": 2
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_10.png",
+    "size": [
+      59,
+      41
+    ],
+    "sha256": "5088a05422498dc5795d64d3a06647bca4affecafc027cc383f18524416920b9",
+    "sheet": 3,
+    "cell": 3
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_11.png",
+    "size": [
+      57,
+      42
+    ],
+    "sha256": "ce87c7c1cb7f91c4778d00cfda9dfedf21a7c75f24d75929dac6ab7264feff19",
+    "sheet": 3,
+    "cell": 4
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_12.png",
+    "size": [
+      61,
+      41
+    ],
+    "sha256": "9d94847936bf4ed00d6289d64ad6fc28d9ffd4e5d14d5de1a6c261b79e9958b5",
+    "sheet": 3,
+    "cell": 5
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_13.png",
+    "size": [
+      61,
+      53
+    ],
+    "sha256": "fe7baf76bad056cd64eb6036b9219f1000a90cc0879c1e312dd932e342135561",
+    "sheet": 3,
+    "cell": 6
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_14.png",
+    "size": [
+      57,
+      49
+    ],
+    "sha256": "e959a44da628a79c55838b42dace1ee452d435a0ebc89252ebabd3f39e0b5def",
+    "sheet": 3,
+    "cell": 7
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_15.png",
+    "size": [
+      68,
+      51
+    ],
+    "sha256": "1c2565449f3faac87fe3c98d2dfa8a1b0403b9568162c4177694d58f018d30c4",
+    "sheet": 3,
+    "cell": 8
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_16.png",
+    "size": [
+      64,
+      52
+    ],
+    "sha256": "126d6c2165bd7af3a15080364d4d818ee10957dc57f37ae0bb3973596b0ec3e4",
+    "sheet": 3,
+    "cell": 9
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_17.png",
+    "size": [
+      76,
+      60
+    ],
+    "sha256": "59fc850167fe5d7e20b1f202255873182b0791977a7db7cfedf274e54781cc6d",
+    "sheet": 3,
+    "cell": 10
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_18.png",
+    "size": [
+      72,
+      59
+    ],
+    "sha256": "c0e2402f6d0f0db6685a37259fa644b2ff28db60e921c4de394b3a00cfb21f82",
+    "sheet": 3,
+    "cell": 11
+  },
+  {
+    "file": "Resources/Images/E_Tank_Body_19.png",
+    "size": [
+      77,
+      60
+    ],
+    "sha256": "0148b78f33148e81e3ec04c37753f81415943416eb24659cf276d79080913272",
+    "sheet": 3,
+    "cell": 12
+  },
+  {
+    "file": "Resources/Images/E_Tank_Top_01.png",
+    "size": [
+      43,
+      23
+    ],
+    "sha256": "824f81f925ea72fc83ea8d4f106bcaccbb028b795afc267909584354756f3efd",
+    "sheet": 3,
+    "cell": 13
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_01.png",
+    "size": [
+      33,
+      22
+    ],
+    "sha256": "51d480e646fffe09208051a48cfbdf03a077104ceff05fc7a293ccc5fbc7acf8",
+    "sheet": 3,
+    "cell": 14
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_02.png",
+    "size": [
+      49,
+      25
+    ],
+    "sha256": "c0fcfaf1a5d0089fa359348bbc34a2cd89e0750276cb3758b033be65a6dbbf72",
+    "sheet": 3,
+    "cell": 15
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_03.png",
+    "size": [
+      43,
+      23
+    ],
+    "sha256": "824f81f925ea72fc83ea8d4f106bcaccbb028b795afc267909584354756f3efd",
+    "sheet": 3,
+    "cell": 16
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_04.png",
+    "size": [
+      37,
+      18
+    ],
+    "sha256": "0c536f8a88214dda7110a30381fb081340171891b30b8e19ab29c25dc7c73b21",
+    "sheet": 3,
+    "cell": 17
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_05.png",
+    "size": [
+      41,
+      26
+    ],
+    "sha256": "4b3da64fbc228dea41cae5fb48a3285c9bf57e07536ee947d214bd3ae9d73e58",
+    "sheet": 3,
+    "cell": 18
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_06.png",
+    "size": [
+      43,
+      20
+    ],
+    "sha256": "ef50cd27fb976e358cd73d637f243d037353e00e7f090b1e7769434177b7b235",
+    "sheet": 3,
+    "cell": 19
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_07.png",
+    "size": [
+      56,
+      28
+    ],
+    "sha256": "8818e7a996c2f6b1c9d5a4861646cfd5d5fa3512b4a2bcae79e028d2c2a2c5e9",
+    "sheet": 3,
+    "cell": 20
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_08.png",
+    "size": [
+      55,
+      30
+    ],
+    "sha256": "54f8c851e37dadcda0cc6b9459426178e9127bd8d987968419860b1fd6606d6e",
+    "sheet": 3,
+    "cell": 21
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_09.png",
+    "size": [
+      50,
+      25
+    ],
+    "sha256": "7cda9553f6acf187d7b1c2c3821a0dacab0c456d11ef2bcc07504ecfc002eeb4",
+    "sheet": 3,
+    "cell": 22
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_10.png",
+    "size": [
+      49,
+      25
+    ],
+    "sha256": "13a20a99067ed51c64d22b8d6057f0d70ea798b80c869b4513c7c19fcf366991",
+    "sheet": 3,
+    "cell": 23
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_11.png",
+    "size": [
+      51,
+      39
+    ],
+    "sha256": "ef4a945c88ac4cc03bcb24b9f460812bb9e52ecd61510870d2f50e1a95e18e67",
+    "sheet": 3,
+    "cell": 24
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_12.png",
+    "size": [
+      58,
+      30
+    ],
+    "sha256": "1215e18a21d4096f9cf2ec0319581dd5f36d883faf4439cba9dbb37008d07f95",
+    "sheet": 4,
+    "cell": 1
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_13.png",
+    "size": [
+      33,
+      16
+    ],
+    "sha256": "d7d5bd3f32cc3b8adc5407fe2f1a05eb3cf92dd7a26649881071a4627ee6121e",
+    "sheet": 4,
+    "cell": 2
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_14.png",
+    "size": [
+      30,
+      14
+    ],
+    "sha256": "5649660cf91a60657bb5424fe945f94a1e15a01349adf3288d513df23dd1e4dd",
+    "sheet": 4,
+    "cell": 3
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_15.png",
+    "size": [
+      39,
+      21
+    ],
+    "sha256": "2cb94773d35c37007d5ca0ec616faaac6ba47121fb03b90de24054892060439a",
+    "sheet": 4,
+    "cell": 4
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_16.png",
+    "size": [
+      45,
+      14
+    ],
+    "sha256": "a714d5d739eb29c7ebf283888d82cfd4303d0402c8ad70b81c3c5f65be9b9241",
+    "sheet": 4,
+    "cell": 5
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_17.png",
+    "size": [
+      20,
+      14
+    ],
+    "sha256": "f3dc5cfd15907c08c7bbdccf4b1e6d2c672ea70a211a10973a72a4a520514a6b",
+    "sheet": 4,
+    "cell": 6
+  },
+  {
+    "file": "Resources/Images/E_Tank_Wpn_18.png",
+    "size": [
+      38,
+      14
+    ],
+    "sha256": "0dcd98cd7a66af1942c8e5433ab77d2cf8be7cdcbf234dc6323633285b969e34",
+    "sheet": 4,
+    "cell": 7
+  },
+  {
+    "file": "Resources/Images/E_Turret13_Body.png",
+    "size": [
+      97,
+      113
+    ],
+    "sha256": "e9d41ced09f66f0b9e9095b68cf20ff3c40228a0b918a213ebc40b8e3d1866a6",
+    "sheet": 4,
+    "cell": 8
+  },
+  {
+    "file": "Resources/Images/E_Turret13_Wpn_01.png",
+    "size": [
+      43,
+      27
+    ],
+    "sha256": "34acec28b46b9d4df8126c6bec2510844b1a9a7986073d9fa51d2a72fb4dedb5",
+    "sheet": 4,
+    "cell": 9
+  },
+  {
+    "file": "Resources/Images/E_Turret13_Wpn_02.png",
+    "size": [
+      58,
+      32
+    ],
+    "sha256": "f5877c6c5393ed428616e20b5cb57467831880ad3e3d363b96ffdb3353df69bf",
+    "sheet": 4,
+    "cell": 10
+  },
+  {
+    "file": "Resources/Images/E_Turret14_Body.png",
+    "size": [
+      111,
+      107
+    ],
+    "sha256": "409df37c2fa2b23d6fa5e2530fda551d7fccbe02ed01afc3f93c1fe42a8e26a7",
+    "sheet": 4,
+    "cell": 11
+  },
+  {
+    "file": "Resources/Images/E_Turret14_Wpn.png",
+    "size": [
+      77,
+      41
+    ],
+    "sha256": "18e41f032e921b06e942ad2c35f5c1ac325e42ce77a1bb5a3b948c04a17407c5",
+    "sheet": 4,
+    "cell": 12
+  },
+  {
+    "file": "Resources/Images/E_Turret15_Body.png",
+    "size": [
+      118,
+      103
+    ],
+    "sha256": "2f8c7daccdd2c23cf767dade62f49511b2cd3fd522a030ae1425d0e2ea4241f8",
+    "sheet": 4,
+    "cell": 13
+  },
+  {
+    "file": "Resources/Images/E_Turret15_Wpn.png",
+    "size": [
+      94,
+      63
+    ],
+    "sha256": "87a69482c8415cef1f528b4e3b60bdc32e97a53a9f958cd30cf2aaff4fb58cb6",
+    "sheet": 4,
+    "cell": 14
+  },
+  {
+    "file": "Resources/Images/E_Turret16_Body.png",
+    "size": [
+      111,
+      107
+    ],
+    "sha256": "1799d3f94c68ca3959a538c0ca15457f00bccd5776f6440dbc80740861b59904",
+    "sheet": 4,
+    "cell": 15
+  },
+  {
+    "file": "Resources/Images/E_Turret16_Wpn.png",
+    "size": [
+      77,
+      41
+    ],
+    "sha256": "293108045ee97285ab0a6e0176253dda6f799d5590693433d00b7999818feb4e",
+    "sheet": 4,
+    "cell": 16
+  },
+  {
+    "file": "Resources/Images/E_Turret17_Body.png",
+    "size": [
+      116,
+      106
+    ],
+    "sha256": "1644455f914a2cbd1908dabdd3a4db1b220328aec79c8c3224c9163f23a97e4a",
+    "sheet": 4,
+    "cell": 17
+  },
+  {
+    "file": "Resources/Images/E_Turret17_Wpn_01.png",
+    "size": [
+      57,
+      53
+    ],
+    "sha256": "6baf6b8f8a2b5e91aeb0a730f4d84229a9d07426a35c755689f009cc6c650962",
+    "sheet": 4,
+    "cell": 18
+  },
+  {
+    "file": "Resources/Images/E_Turret17_Wpn_02.png",
+    "size": [
+      26,
+      19
+    ],
+    "sha256": "951347e53e06e5d7729ac5c3d19a92d9a5ed2ae157464de2ddedc2ad551ae577",
+    "sheet": 4,
+    "cell": 19
+  },
+  {
+    "file": "Resources/Images/E_Turret18_Body.png",
+    "size": [
+      112,
+      114
+    ],
+    "sha256": "ffb88e8a7589099d534dc6a2f19323503d34b822d8ac41a5cd7eeed2446c3536",
+    "sheet": 4,
+    "cell": 20
+  },
+  {
+    "file": "Resources/Images/E_Turret18_Wpn_01.png",
+    "size": [
+      42,
+      37
+    ],
+    "sha256": "163fd241b02b8df7684382fac63d621e41adaed745cb82021a5fbc87eb5e7d8b",
+    "sheet": 4,
+    "cell": 21
+  },
+  {
+    "file": "Resources/Images/E_Turret18_Wpn_02.png",
+    "size": [
+      58,
+      50
+    ],
+    "sha256": "0042b6944e7694bbb9098072701a938ca1533708a034be3b891e273efedec684",
+    "sheet": 4,
+    "cell": 22
+  },
+  {
+    "file": "Resources/Images/E_Turret19_Body.png",
+    "size": [
+      111,
+      107
+    ],
+    "sha256": "641f47689eb9515cb893c98ed41075cddaec6e91bb3ef9a6483536c4d64c9159",
+    "sheet": 4,
+    "cell": 23
+  },
+  {
+    "file": "Resources/Images/E_Turret19_Wpn.png",
+    "size": [
+      95,
+      41
+    ],
+    "sha256": "8c48cc486f7c7032852c855d81f84bca849e12260caaaa98df4306593569ce8d",
+    "sheet": 4,
+    "cell": 24
+  },
+  {
+    "file": "Resources/Images/E_Turret20_Body.png",
+    "size": [
+      111,
+      107
+    ],
+    "sha256": "641f47689eb9515cb893c98ed41075cddaec6e91bb3ef9a6483536c4d64c9159",
+    "sheet": 5,
+    "cell": 1
+  },
+  {
+    "file": "Resources/Images/E_Turret20_Wpn.png",
+    "size": [
+      95,
+      73
+    ],
+    "sha256": "092811ddafc882dd641f5b4bc61be63c7f999078025b961fc963c9a5a2e5a690",
+    "sheet": 5,
+    "cell": 2
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_01.png",
+    "size": [
+      39,
+      39
+    ],
+    "sha256": "9543d0f5406c3ceb2da74b517b103eda1cd148e9245b0aa8a3494fc241e62be0",
+    "sheet": 5,
+    "cell": 3
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_02.png",
+    "size": [
+      46,
+      33
+    ],
+    "sha256": "28c83297a64f29c732c3954169a7d70a2d1d9ead41bf97bc9d1852a57e132b0b",
+    "sheet": 5,
+    "cell": 4
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_03.png",
+    "size": [
+      46,
+      33
+    ],
+    "sha256": "877f23beaa98355a542a5c353acbba8d7397af17658d524fb7922e1a2b32190a",
+    "sheet": 5,
+    "cell": 5
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_04.png",
+    "size": [
+      46,
+      35
+    ],
+    "sha256": "76aaf2997f6440f3bf81032c4e52885baf27cbe1dbc47d8e10491175ffefea36",
+    "sheet": 5,
+    "cell": 6
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_05.png",
+    "size": [
+      31,
+      31
+    ],
+    "sha256": "60d6cb50deb731b0832dee323751c223e325c1428c4be80f5d0ec185b8cf5aa5",
+    "sheet": 5,
+    "cell": 7
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_06.png",
+    "size": [
+      32,
+      39
+    ],
+    "sha256": "205b05360e3e78c69dca22c6fbbfd4d5713d51aaa24975489b50367ee724d89d",
+    "sheet": 5,
+    "cell": 8
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_07.png",
+    "size": [
+      32,
+      39
+    ],
+    "sha256": "205b05360e3e78c69dca22c6fbbfd4d5713d51aaa24975489b50367ee724d89d",
+    "sheet": 5,
+    "cell": 9
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_08.png",
+    "size": [
+      51,
+      37
+    ],
+    "sha256": "7e76908fb3623b05d974bbc9e6a7f0007ebaaf1eb568c2a3684d3b652c6cd41a",
+    "sheet": 5,
+    "cell": 10
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_09.png",
+    "size": [
+      48,
+      41
+    ],
+    "sha256": "9b00c8df047fdd75928ae64305ef25f12f646fe74d88e41ded1449265a32bf6c",
+    "sheet": 5,
+    "cell": 11
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_10.png",
+    "size": [
+      57,
+      49
+    ],
+    "sha256": "149275808a6b94063cdcc587cabf3663b8b177e16c42a3b1e892896e251d8e6f",
+    "sheet": 5,
+    "cell": 12
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_11.png",
+    "size": [
+      57,
+      50
+    ],
+    "sha256": "5e2f4e36b676291b434d3b2211fea629edb84257ae7b56cbf2fa3ad4ec007a49",
+    "sheet": 5,
+    "cell": 13
+  },
+  {
+    "file": "Resources/Images/E_Turret_Body_12.png",
+    "size": [
+      47,
+      62
+    ],
+    "sha256": "41015532e4064b671a763a4a319b9598b228bb8fae23f8243cea48eb52088033",
+    "sheet": 5,
+    "cell": 14
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_01.png",
+    "size": [
+      38,
+      15
+    ],
+    "sha256": "8f0d890018cd6fa8586966e192982daec30345d28fc0a359b08d31dc92696bb2",
+    "sheet": 5,
+    "cell": 15
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_02.png",
+    "size": [
+      36,
+      17
+    ],
+    "sha256": "433d7aef627cb99b40af368cb0a7d4fef9ea7200112bd939b1eb08ba2342514c",
+    "sheet": 5,
+    "cell": 16
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_03.png",
+    "size": [
+      37,
+      17
+    ],
+    "sha256": "ee2e3e9937af941f953c2f99aedb77831c18bf96ffeef1231c7c1698c0a0ff69",
+    "sheet": 5,
+    "cell": 17
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_04.png",
+    "size": [
+      38,
+      15
+    ],
+    "sha256": "5507031e954858dad57f5c12f0f9c8bc4af27e39998e55341428ca3f005cbba5",
+    "sheet": 5,
+    "cell": 18
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_05.png",
+    "size": [
+      45,
+      30
+    ],
+    "sha256": "f205137a6e0a436f34d437cbe39c79f62bb4088c8256eb3cdb3299a7b4e6a9bb",
+    "sheet": 5,
+    "cell": 19
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_06.png",
+    "size": [
+      45,
+      28
+    ],
+    "sha256": "3cc8e91ee2ab8df75e4e30a6c8497c6b452e55ce0325e286573eca5b2992533c",
+    "sheet": 5,
+    "cell": 20
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_07.png",
+    "size": [
+      52,
+      33
+    ],
+    "sha256": "8846e185133fa5e6966224c770a53b42d4bef7583df1e4e26a7076b94eeac5f8",
+    "sheet": 5,
+    "cell": 21
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_08.png",
+    "size": [
+      49,
+      33
+    ],
+    "sha256": "322161b30b42d91c6ab8b39138c25eeee2dfb8bc4abd434170408b7d2da8347b",
+    "sheet": 5,
+    "cell": 22
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_09.png",
+    "size": [
+      40,
+      22
+    ],
+    "sha256": "988595c688ea0475490dfd03ec34a0dfe7ec324d267d410a10df395c56718f6d",
+    "sheet": 5,
+    "cell": 23
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_10.png",
+    "size": [
+      59,
+      39
+    ],
+    "sha256": "79e52e02617e018e26d0aa0863f0994cd7966a9baed4fa70f5aaca02921916c3",
+    "sheet": 5,
+    "cell": 24
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_11.png",
+    "size": [
+      41,
+      32
+    ],
+    "sha256": "cbd9777a799a5270666eb7007bd4e92802cbe68fd8c7e0b742c5c610fa1e1df7",
+    "sheet": 6,
+    "cell": 1
+  },
+  {
+    "file": "Resources/Images/E_Turret_Wpn_12.png",
+    "size": [
+      33,
+      16
+    ],
+    "sha256": "3449d5ca60d892675ef4ca17452e5f182d84c9338d293c1b8f1d67783d4a33c8",
+    "sheet": 6,
+    "cell": 2
+  }
+]

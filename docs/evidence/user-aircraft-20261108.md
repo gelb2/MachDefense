@@ -1,6 +1,6 @@
 # AH-10·Beluga 제공 도안 작업
 
-사용자가 제공한 IMG_1166과 IMG_1167을 각각 AH-10·Beluga의 외형 기준으로 지정했다. 후속 지시는 “제공한 이미지의 비율을 지킨다”다. [원본·해시](../../Art/Aircraft/references/user-20261108/manifest.json), [생성 파일·포장·프롬프트](https://github.com/gelb2/MachDefense/blob/a144abef9b91949dbf30793d2ff1f8bab277a672/Art/Aircraft/parts/user-20261108/README.md).
+사용자가 제공한 IMG_1166과 IMG_1167을 각각 AH-10·Beluga의 외형 기준으로 지정했다. 후속 지시는 “제공한 이미지의 비율을 지킨다”다. [원본·해시](../../Art/Aircraft/references/user-20261108/manifest.json), [생성 파일·포장·프롬프트](../../Art/Aircraft/parts/user-20261108/README.md).
 
 ## 결과
 

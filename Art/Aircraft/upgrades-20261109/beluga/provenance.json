@@ -1,0 +1,117 @@
+{
+  "approved_source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+  "approved_source_sha256": "6e476cc8ef23076931e8c23c828112f3e5a821098b7f627d976e76cc6ed9fae6",
+  "original_style_references": [
+    {
+      "name": "E_Tank30_Body.png",
+      "sha256": "b38cb48abb0855bf5d835bfb9cfe976099f2eccff31dc7e228cf9ce15da8e199"
+    },
+    {
+      "name": "E_Tank32_Wpn.png",
+      "sha256": "aca52d22d708fc6ae8a648d92ec20a702849434ab272a49c1776c06e9a1a67ef"
+    },
+    {
+      "name": "E_Turret14_Wpn.png",
+      "sha256": "18e41f032e921b06e942ad2c35f5c1ac325e42ce77a1bb5a3b948c04a17407c5"
+    }
+  ],
+  "method": "Structural assembly of literal approved bank-specific wing-root pixels: transverse strips, longitudinal rails, small plates. Every source rectangle and target location is in manifest. No new generated Beluga image was adopted, no recolor, rescale, shear, mirrored neutral pose, source image edits or duplicated whole engine.",
+  "products": [
+    {
+      "name": "ATransportRoot0_01.png",
+      "sha256": "8b4827bff360d2955693af2fff70163f61a0458ade0c634a2e0bed5ccff58b3d"
+    },
+    {
+      "name": "ATransportRoot0_02.png",
+      "sha256": "f3335962a4d74c06e053d22210960ecbc07f6c1ad455844277c4e5ad9fa61833"
+    },
+    {
+      "name": "ATransportRoot0_03.png",
+      "sha256": "39fa77eef415226499c1bdbff323f8359fb81091780312e492ffe2f70a1ef548"
+    },
+    {
+      "name": "ATransportRoot0_04.png",
+      "sha256": "a7eb923fad33571caf983ccd3491f1e2b7388dd1fbbea4b1f4d8d23749efc47c"
+    },
+    {
+      "name": "ATransportRoot0_05.png",
+      "sha256": "da9f4be839c0dc2529d46405d0ebbf6d178bba685a8e3729da25286c1a928d28"
+    },
+    {
+      "name": "ATransportRoot0_06.png",
+      "sha256": "de10bf17fe35b2de8cf06dceda4fef240ad8ead1751c8f0c2f02cfc903c4bc21"
+    },
+    {
+      "name": "ATransportRoot0_07.png",
+      "sha256": "756d684b6c46a81be0df7abb52850bfbb6f587a980e36a1274fb72ff34bc9cce"
+    },
+    {
+      "name": "ATransportRoot0_08.png",
+      "sha256": "fd971230774d086b611f2ea9f809d4b8e27325b06401b6f481f2c0d5eaff631b"
+    },
+    {
+      "name": "ATransportRoot0_09.png",
+      "sha256": "8c031d7d30362ffe256de41597554e52101a9d58e9e025400ed41e56288cc391"
+    },
+    {
+      "name": "ATransportRoot0_10.png",
+      "sha256": "e37d0b37e8d50d1ba5bc5602dfdf40be9cc2a5024efad0a74038f16dac8845fa"
+    },
+    {
+      "name": "ATransportRoot1_01.png",
+      "sha256": "75a48e135f22f2eced3423990b772ae7d97d0eac7ad8ff7b2afbbada347c7a41"
+    },
+    {
+      "name": "ATransportRoot1_02.png",
+      "sha256": "d893b823991158337e4787c93556f99fc1dd44a02a9ce554a9dd258e8707cec2"
+    },
+    {
+      "name": "ATransportRoot1_03.png",
+      "sha256": "1eda3c46463aadaabc779d5841b8dcd8c6656579e6120ff3adc911a6584805d4"
+    },
+    {
+      "name": "ATransportRoot1_04.png",
+      "sha256": "5abe278563f77c0ca0f868173c1149cad1c765a65f3c4034ff53d740bf959f5d"
+    },
+    {
+      "name": "ATransportRoot1_05.png",
+      "sha256": "85e6efe80538308477f28a9a8d37b85d4fd70d4eb4878a5b1ba5efc720a15189"
+    },
+    {
+      "name": "ATransportRoot1_06.png",
+      "sha256": "3586b5088af92f16094dc4c984bb2983528cd801d219f60ff0fec3b8244f9d47"
+    },
+    {
+      "name": "ATransportRoot1_07.png",
+      "sha256": "b90afd1890d17fd7aa73a4dd2e4402410db1e1bdbc4f1e963335f00230412dbd"
+    },
+    {
+      "name": "ATransportRoot1_08.png",
+      "sha256": "c37593ac44bfe7f7878bfc51dd7fabe88f4cf85c1bc8653c4bc3ab5662d84bc6"
+    },
+    {
+      "name": "ATransportRoot1_09.png",
+      "sha256": "2086047f77e7d5036e9e2a4bd542fb8aed2978d42a3213547840df697c2bef61"
+    },
+    {
+      "name": "ATransportRoot1_10.png",
+      "sha256": "63776c25cad34dd8879fee702ac4d01622956820a5cdd8c62dce695d5023d847"
+    }
+  ],
+  "generation_failure": "Two image calls failed; see preserved generation-errors.json. No inference about cause, no repeated retry or altered wording to evade rejection. Existing approved artwork is reused as independent structure.",
+  "scope": "10 paired wing-root structural variants, including base surface detail. Gun/missile pictures and original wings/engines remain unchanged. Actual World validation pending.",
+  "baseCorrection": {
+    "rejected": "initial Lv1 sampled and placed same pixels at same location, no surface change",
+    "adopted": "approved strip translated upward3px; all7 poses alter original pixels",
+    "changedPixelsByPose": [
+      71,
+      72,
+      72,
+      72,
+      72,
+      72,
+      72
+    ],
+    "levels2to10ReadyFilesUnchanged": true
+  }
+}

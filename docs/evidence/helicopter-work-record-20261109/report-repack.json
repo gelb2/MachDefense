@@ -1,0 +1,61 @@
+{
+  "saved_bytes": 168676,
+  "files": [
+    {
+      "file": "menu-art/title-b.webp",
+      "before": 1498362,
+      "after": 1485432,
+      "rgba_sha256": "91afb4928627aff20a12c10f78e5d18d058593d945a714fe8f395b73a2ac409d",
+      "metadata_unchanged": true
+    },
+    {
+      "file": "assets/machdefense/source-cheat-controls.webp",
+      "before": 1464524,
+      "after": 1438752,
+      "rgba_sha256": "2e2d3e1b27ff6ca309493096f4239766e2023ee6477d239cf9a8693e33a2ce25",
+      "metadata_unchanged": true
+    },
+    {
+      "file": "assets/android-gameplay-20261030/08-next-mission.webp",
+      "before": 1457720,
+      "after": 1454544,
+      "rgba_sha256": "c3418733d954875cb299629cf0bc1d8619862cce8f7fb84efb86bdb780a551fd",
+      "metadata_unchanged": true
+    },
+    {
+      "file": "assets/android-20261030/galaxy-boss.webp",
+      "before": 1435862,
+      "after": 1389596,
+      "rgba_sha256": "ecf05c9391b844f833ab2ec419fcdec9aa1f0623ebc83032ac88ca1e0fbde5b3",
+      "metadata_unchanged": true
+    },
+    {
+      "file": "media/gameplay-20261027/04-special.webp",
+      "before": 1409940,
+      "after": 1400214,
+      "rgba_sha256": "534fea5de914dc198bbf79eb6947a68b33c4edf8e89dec5e3fd8384f60552662",
+      "metadata_unchanged": true
+    },
+    {
+      "file": "media/gameplay-20261027/02-jump.webp",
+      "before": 1389274,
+      "after": 1387728,
+      "rgba_sha256": "3e9064ed1ef2a536997aab666be673a730478afca3bfbac21ebf8b0282e01504",
+      "metadata_unchanged": true
+    },
+    {
+      "file": "media/ground-aa/shilka-concept-v1.webp",
+      "before": 1368216,
+      "after": 1304098,
+      "rgba_sha256": "3ce5de4b54af78d5ba47291f020e0caaca0b0b8a0c3c8d6f4234d4a62762ba2a",
+      "metadata_unchanged": true
+    },
+    {
+      "file": "media/gameplay-20261027/03-weapon.webp",
+      "before": 1349176,
+      "after": 1344034,
+      "rgba_sha256": "740ac257074f90db6332f56f0f4f592f6bc98196c55440159875fa607d926884",
+      "metadata_unchanged": true
+    }
+  ]
+}

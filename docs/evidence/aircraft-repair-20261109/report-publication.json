@@ -1,0 +1,16 @@
+{
+  "project": "appgprj_6addbf55aea081918d3d182d7e496e88",
+  "sourceCommit": "acb5d6dd7e15ee614bfa0c1940362643ae80da53",
+  "deployment": "appgdep_6af0c11034c481919ccad0c7d646e3da",
+  "version": "appgprj_6addbf55aea081918d3d182d7e496e88~appgver_8148178799b48191b8c3d122009ac600",
+  "versionNumber": 239,
+  "status": "succeeded",
+  "url": "https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-status-20261109",
+  "access": "existing owner-only preserved",
+  "expandedArchiveBytes": 268327424,
+  "limitBytes": 268435456,
+  "localDesktopInspection": true,
+  "publishedBrowserInspection": false,
+  "publishedBrowserInspectionNote": "Safari 사용자 조작과 겹쳐 게시 후 화면 확인은 완료하지 않았다. Sites 배포 성공과 현재 버전 239를 확인했다.",
+  "mobileLayoutInspection": false
+}

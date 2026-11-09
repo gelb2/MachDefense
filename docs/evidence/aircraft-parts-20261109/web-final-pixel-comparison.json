@@ -1,0 +1,86 @@
+[
+  {
+    "engine": "chrome",
+    "tile": 0,
+    "differentPixels": "35 (4.32099e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "chrome",
+    "tile": 1,
+    "differentPixels": "9 (1.11111e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "chrome",
+    "tile": 2,
+    "differentPixels": "13 (1.60494e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "chrome",
+    "tile": 3,
+    "differentPixels": "18 (2.22222e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "chrome",
+    "tile": 4,
+    "differentPixels": "38 (4.69136e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "chrome",
+    "tile": 5,
+    "differentPixels": "44 (5.4321e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "chrome",
+    "tile": 6,
+    "differentPixels": "43 (5.30864e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "webkit",
+    "tile": 0,
+    "differentPixels": "35 (4.32099e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "webkit",
+    "tile": 1,
+    "differentPixels": "9 (1.11111e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "webkit",
+    "tile": 2,
+    "differentPixels": "13 (1.60494e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "webkit",
+    "tile": 3,
+    "differentPixels": "18 (2.22222e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "webkit",
+    "tile": 4,
+    "differentPixels": "38 (4.69136e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "webkit",
+    "tile": 5,
+    "differentPixels": "44 (5.4321e-05)",
+    "pixelEqual": false
+  },
+  {
+    "engine": "webkit",
+    "tile": 6,
+    "differentPixels": "43 (5.30864e-05)",
+    "pixelEqual": false
+  }
+]

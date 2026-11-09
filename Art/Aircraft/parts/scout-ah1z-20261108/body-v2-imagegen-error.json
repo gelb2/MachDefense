@@ -1,0 +1,16 @@
+{
+  "operation": "Scout body proportion edit: width +30%, length -30%, retain existing design and colour",
+  "tool": "image_gen",
+  "http_status": 400,
+  "error": {
+    "message": "Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 82eea043-4349-4ce9-9752-3233d549cd63. safety_violations=[violence].",
+    "type": "image_generation_user_error",
+    "param": null,
+    "code": "moderation_blocked",
+    "moderation_details": {
+      "moderation_stage": "input",
+      "categories": ["violence"]
+    }
+  },
+  "result": "No edited image returned. The final body uses the existing v1 source and the user's explicit nonuniform dimensions at asset packing. No alternate image generator was called."
+}

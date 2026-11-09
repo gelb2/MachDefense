@@ -1,0 +1,1304 @@
+{
+  "scope": "local candidate parts only, original PNG/Resources/MCB unchanged",
+  "tile_dimensions": [
+    16,
+    17
+  ],
+  "atlas_dimensions": [
+    112,
+    17
+  ],
+  "body_tile_dimensions": [
+    64,
+    45
+  ],
+  "body_socket_proposal": [
+    1,
+    0
+  ],
+  "body_cell_top_left": [
+    25,
+    14
+  ],
+  "common_pose6_offset": [
+    1,
+    1
+  ],
+  "shared_z_order_proposal": 2,
+  "gpu_pot_rgba_bytes_per_part": 16384,
+  "gpu_pot_rgba_bytes_nine_parts": 147456,
+  "gpu_note": "allocation estimate, not a measured frame-time result",
+  "rows": [
+    {
+      "level": 2,
+      "parts": [
+        {
+          "pose": 0,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 112,
+          "pixels_discarded": 0,
+          "cell_sha256": "7e12ea31a73dc0522ff5c523b58332e4f23899bbae334d56c8555e0318223c77"
+        },
+        {
+          "pose": 1,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 105,
+          "pixels_discarded": 0,
+          "cell_sha256": "925c0f14a06e44243b4d3c66501dcf2d77ae7340c1a65373b81d2eaae418c065"
+        },
+        {
+          "pose": 2,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 103,
+          "pixels_discarded": 0,
+          "cell_sha256": "16327a1e728788077beeab06de13c14087f31f4975998699b05e5b09a0da4d35"
+        },
+        {
+          "pose": 3,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 102,
+          "pixels_discarded": 0,
+          "cell_sha256": "53e56d8b6cf915dd5d3c000550f25e5dcc91ca5fd78f0a34bc41c9191ed4c826"
+        },
+        {
+          "pose": 4,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 104,
+          "pixels_discarded": 0,
+          "cell_sha256": "1c0ced67cee3152d4a3603338e39909988349af44cde08d6c94c133c5cb90e43"
+        },
+        {
+          "pose": 5,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 103,
+          "pixels_discarded": 0,
+          "cell_sha256": "d7db03896aa9b3e53247812473ba322cf73ec0f712748eccc6a68b29b3549639"
+        },
+        {
+          "pose": 6,
+          "drawn_part_size": [
+            11,
+            10
+          ],
+          "cell_offset": [
+            4,
+            4
+          ],
+          "common_pose_registration": [
+            1,
+            1
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 96,
+          "pixels_discarded": 0,
+          "cell_sha256": "9243b4c66fdda61a4e8462c5240a39026c91703ea7f4e698a05e14829fbef8f8"
+        }
+      ],
+      "unique_pose_images": 7,
+      "atlas": ".local/upgrade-plan-20261109/registered-banks/ALightCover_02.png",
+      "atlas_sha256": "c8de9e62121829773cd8f27e1248bec0faa49ebe87a36268f01538ef575884d6"
+    },
+    {
+      "level": 3,
+      "parts": [
+        {
+          "pose": 0,
+          "drawn_part_size": [
+            13,
+            13
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 140,
+          "pixels_discarded": 0,
+          "cell_sha256": "5fc394f4dc61cc1ce6fb11576a7ab6454cbc4ab40b372a8e17427eba9edf37f9"
+        },
+        {
+          "pose": 1,
+          "drawn_part_size": [
+            13,
+            13
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 139,
+          "pixels_discarded": 0,
+          "cell_sha256": "8450deeac49ad474de41a8357ebc9aad05264c0245137af8fdae63c11955b9a8"
+        },
+        {
+          "pose": 2,
+          "drawn_part_size": [
+            13,
+            14
+          ],
+          "cell_offset": [
+            2,
+            1
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 147,
+          "pixels_discarded": 0,
+          "cell_sha256": "e839a788268280590ab6f786f2d8b8b54444d3fff5019814e6730aac7e802403"
+        },
+        {
+          "pose": 3,
+          "drawn_part_size": [
+            13,
+            14
+          ],
+          "cell_offset": [
+            2,
+            1
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 154,
+          "pixels_discarded": 0,
+          "cell_sha256": "1caa6bf27a08b1385eb6ca21651d192eb4e37b39029789ef41daa3a55e5483f8"
+        },
+        {
+          "pose": 4,
+          "drawn_part_size": [
+            13,
+            13
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 141,
+          "pixels_discarded": 0,
+          "cell_sha256": "fcb5b6fda8bb08c8d6c8d10c7fa85cb3f01c6bd58931243a5181a1b2ea2d0937"
+        },
+        {
+          "pose": 5,
+          "drawn_part_size": [
+            13,
+            13
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 137,
+          "pixels_discarded": 0,
+          "cell_sha256": "6ca8e7eb1c44d6c7e504a7a7b8bcd0ec672963b82f55336f411d90f3498b4b1e"
+        },
+        {
+          "pose": 6,
+          "drawn_part_size": [
+            14,
+            12
+          ],
+          "cell_offset": [
+            2,
+            3
+          ],
+          "common_pose_registration": [
+            1,
+            1
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 139,
+          "pixels_discarded": 0,
+          "cell_sha256": "a6638f51fcfacd4769e344edc817d5de879098ea52b0cffa9efed2eae2c57c03"
+        }
+      ],
+      "unique_pose_images": 7,
+      "atlas": ".local/upgrade-plan-20261109/registered-banks/ALightCover_03.png",
+      "atlas_sha256": "af10bb0c369f0cc1a08b2f5772ffc23c8a7bda0cd5a3e9f01913c13b64fc3884"
+    },
+    {
+      "level": 4,
+      "parts": [
+        {
+          "pose": 0,
+          "drawn_part_size": [
+            12,
+            14
+          ],
+          "cell_offset": [
+            2,
+            1
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 147,
+          "pixels_discarded": 0,
+          "cell_sha256": "aeb03f3ae0c2e0a876f7dc17796c791201c5ec8491d35a9e49f3017303b1ef97"
+        },
+        {
+          "pose": 1,
+          "drawn_part_size": [
+            12,
+            13
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 135,
+          "pixels_discarded": 0,
+          "cell_sha256": "0f259294c3c7caa6ae4ca46177ae18824d641bd463bfcff0c2719ab6d040d927"
+        },
+        {
+          "pose": 2,
+          "drawn_part_size": [
+            12,
+            13
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 132,
+          "pixels_discarded": 0,
+          "cell_sha256": "51d1aa8f7b12b3225b08c106c8131a61147cba73c538dd3bed104c8e904e712f"
+        },
+        {
+          "pose": 3,
+          "drawn_part_size": [
+            12,
+            13
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 132,
+          "pixels_discarded": 0,
+          "cell_sha256": "ae9840a3508c1065586f5cfa8db939ceb06fba263ceb7e3ca7ac76ad26186c6b"
+        },
+        {
+          "pose": 4,
+          "drawn_part_size": [
+            12,
+            12
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 121,
+          "pixels_discarded": 0,
+          "cell_sha256": "75c9491a42380b1ba18bc63a676e26db789cd72a9e49e19b7c1d6e91d3be7f83"
+        },
+        {
+          "pose": 5,
+          "drawn_part_size": [
+            12,
+            12
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 127,
+          "pixels_discarded": 0,
+          "cell_sha256": "7e4d32d866370f43b1bca871fd286a8c2bcb9cede40d05a05f2b49274f0fac5b"
+        },
+        {
+          "pose": 6,
+          "drawn_part_size": [
+            13,
+            12
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            1,
+            1
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 136,
+          "pixels_discarded": 0,
+          "cell_sha256": "2e1ab2ec1ebac93d9515e9198b11d42eaa87634d6dafe0a2d9f40c4553cf4a9f"
+        }
+      ],
+      "unique_pose_images": 7,
+      "atlas": ".local/upgrade-plan-20261109/registered-banks/ALightCover_04.png",
+      "atlas_sha256": "b3218190a8a5765778834433e870c392044f75ab3f3ca1a4364f9d1c4135784a"
+    },
+    {
+      "level": 5,
+      "parts": [
+        {
+          "pose": 0,
+          "drawn_part_size": [
+            10,
+            10
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 86,
+          "pixels_discarded": 0,
+          "cell_sha256": "30fadbc093c01e4280a763cf01066741764180bab5fc6e4e4fdcdce36723ab6f"
+        },
+        {
+          "pose": 1,
+          "drawn_part_size": [
+            9,
+            10
+          ],
+          "cell_offset": [
+            4,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 82,
+          "pixels_discarded": 0,
+          "cell_sha256": "81624e0d69fc8b148a1ecad2c9fdebae51c9245d2f4e0ada34f4559d86394b6b"
+        },
+        {
+          "pose": 2,
+          "drawn_part_size": [
+            9,
+            10
+          ],
+          "cell_offset": [
+            4,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 82,
+          "pixels_discarded": 0,
+          "cell_sha256": "9ceb7d333c0d6340e2a6f4bc6c733fefb6a9f89f9fad2b9cdd53346397eacb8e"
+        },
+        {
+          "pose": 3,
+          "drawn_part_size": [
+            9,
+            10
+          ],
+          "cell_offset": [
+            4,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 83,
+          "pixels_discarded": 0,
+          "cell_sha256": "d4bc143f0bfa700c965243419e7e0d82ed6a656699ccf0b6631e51570632802b"
+        },
+        {
+          "pose": 4,
+          "drawn_part_size": [
+            9,
+            10
+          ],
+          "cell_offset": [
+            4,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 82,
+          "pixels_discarded": 0,
+          "cell_sha256": "0e29ff590fdd28d3a3d1fb551858206e3364c4ae63daa76a5a78a34cf323ad45"
+        },
+        {
+          "pose": 5,
+          "drawn_part_size": [
+            9,
+            10
+          ],
+          "cell_offset": [
+            4,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 82,
+          "pixels_discarded": 0,
+          "cell_sha256": "cc9d32ebb3764d42e9a175ba4ff179c5b58110c9e30fea5ad76d4d0f9f11a6cd"
+        },
+        {
+          "pose": 6,
+          "drawn_part_size": [
+            9,
+            11
+          ],
+          "cell_offset": [
+            5,
+            4
+          ],
+          "common_pose_registration": [
+            1,
+            1
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 89,
+          "pixels_discarded": 0,
+          "cell_sha256": "f82ec96fa830766330eed93d81f8c6a55b4a95334c891cca0935a1d88d709051"
+        }
+      ],
+      "unique_pose_images": 7,
+      "atlas": ".local/upgrade-plan-20261109/registered-banks/ALightCover_05.png",
+      "atlas_sha256": "bb03242d5a9d4fb987a62cc2d6a3baeeab8f548a473cf65f2046ecd911153e97"
+    },
+    {
+      "level": 6,
+      "parts": [
+        {
+          "pose": 0,
+          "drawn_part_size": [
+            12,
+            13
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 135,
+          "pixels_discarded": 0,
+          "cell_sha256": "cbe9222f6a2039669911c8030c036c0bcb93e9bbd172484c559e2b17e2d3e492"
+        },
+        {
+          "pose": 1,
+          "drawn_part_size": [
+            12,
+            13
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 134,
+          "pixels_discarded": 0,
+          "cell_sha256": "d8ed2d531c9573a6faae0d9b9b100023cc501002d659ff9ac820f70f8568df9b"
+        },
+        {
+          "pose": 2,
+          "drawn_part_size": [
+            11,
+            13
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 119,
+          "pixels_discarded": 0,
+          "cell_sha256": "7d9fdd544e9fdb5c673a009efd540c973757278c7338f92dbf66e0e9b69c62ff"
+        },
+        {
+          "pose": 3,
+          "drawn_part_size": [
+            10,
+            13
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 111,
+          "pixels_discarded": 0,
+          "cell_sha256": "7049d74599392dae2eb66fddb3a3239be880a60689b760484b110aac439968c0"
+        },
+        {
+          "pose": 4,
+          "drawn_part_size": [
+            11,
+            13
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 125,
+          "pixels_discarded": 0,
+          "cell_sha256": "eaad9ada6d7284a64cfb19e153d886cdac68589e1ba739b81666d1c92bd86e7a"
+        },
+        {
+          "pose": 5,
+          "drawn_part_size": [
+            12,
+            14
+          ],
+          "cell_offset": [
+            2,
+            1
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 139,
+          "pixels_discarded": 0,
+          "cell_sha256": "48a29a1b28201eec2746a9e94b44a4b36aa6479371567e4650c92dd332722aa5"
+        },
+        {
+          "pose": 6,
+          "drawn_part_size": [
+            11,
+            13
+          ],
+          "cell_offset": [
+            4,
+            3
+          ],
+          "common_pose_registration": [
+            1,
+            1
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 119,
+          "pixels_discarded": 0,
+          "cell_sha256": "4c40835e70507eb66b5132957ad8f2b96b84bb26dd740fce9fa580b4d6bb2658"
+        }
+      ],
+      "unique_pose_images": 7,
+      "atlas": ".local/upgrade-plan-20261109/registered-banks/ALightCover_06.png",
+      "atlas_sha256": "f6d528193adf4a43c8425e8460a5ed295e630fef2bb444e9ce88b8a58a838ada"
+    },
+    {
+      "level": 7,
+      "parts": [
+        {
+          "pose": 0,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 99,
+          "pixels_discarded": 0,
+          "cell_sha256": "7645b055803c70db3117aabe0e8671a666319d9779eb5f7631be36c845b8aa4e"
+        },
+        {
+          "pose": 1,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 99,
+          "pixels_discarded": 0,
+          "cell_sha256": "9ca7048f7ebe562ad9ded0adabf44562fb1a67cb61202e96cdfa1b08819c4a6c"
+        },
+        {
+          "pose": 2,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 100,
+          "pixels_discarded": 0,
+          "cell_sha256": "45aa64acf326cd66049e9817320b1f94f9a1680582e4561c82b21e8ff1a5cb60"
+        },
+        {
+          "pose": 3,
+          "drawn_part_size": [
+            11,
+            10
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 87,
+          "pixels_discarded": 0,
+          "cell_sha256": "d2f3e8d3d8d309a91211327a7dddab1c18c439dcff8d6ba58edbf931fe5f0def"
+        },
+        {
+          "pose": 4,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 99,
+          "pixels_discarded": 0,
+          "cell_sha256": "c014c17acff6a330063bbe6f805c092d8dcf7dec6460a600899d23663000b844"
+        },
+        {
+          "pose": 5,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 101,
+          "pixels_discarded": 0,
+          "cell_sha256": "f04c36564a9917850731ae8243f2e4505d4533b17c51232ea4fe8c55814d6d2a"
+        },
+        {
+          "pose": 6,
+          "drawn_part_size": [
+            11,
+            10
+          ],
+          "cell_offset": [
+            4,
+            4
+          ],
+          "common_pose_registration": [
+            1,
+            1
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 90,
+          "pixels_discarded": 0,
+          "cell_sha256": "2b19467240fd06ca0640a04fbc8dcc3d1b4cfa1d197eb0f100fb08cb3ba152a6"
+        }
+      ],
+      "unique_pose_images": 7,
+      "atlas": ".local/upgrade-plan-20261109/registered-banks/ALightCover_07.png",
+      "atlas_sha256": "9f40dbff7702308fd6d55eaddb29015bda12637b797d41fc32f60155393f6c30"
+    },
+    {
+      "level": 8,
+      "parts": [
+        {
+          "pose": 0,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 109,
+          "pixels_discarded": 0,
+          "cell_sha256": "366fda674bdfe18798548de3febc96b24a704c5a755765ebea1bb9b774639bfd"
+        },
+        {
+          "pose": 1,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 111,
+          "pixels_discarded": 0,
+          "cell_sha256": "0ef22649bbde2386e3d169da45fafcffcbc3631e0659fad8b38594ba08cb2c33"
+        },
+        {
+          "pose": 2,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 110,
+          "pixels_discarded": 0,
+          "cell_sha256": "e8d1dbe52a3f6b906913c107a2a01b6010085409c409456ddbaffbf68f1f1f60"
+        },
+        {
+          "pose": 3,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 108,
+          "pixels_discarded": 0,
+          "cell_sha256": "1c9c786a131602863d9b9588e82bb691db2f1abf7ab12d73c7411e0c87d3efa2"
+        },
+        {
+          "pose": 4,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 111,
+          "pixels_discarded": 0,
+          "cell_sha256": "fc075a3d61ac861c18e49cc3ce6d7f5813d3bdd7c9e0cc972c41e2d127474015"
+        },
+        {
+          "pose": 5,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            3,
+            3
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 103,
+          "pixels_discarded": 0,
+          "cell_sha256": "41cb1b3f1ed0c7f0771c9f294e84d27b2be3d8fd81e4315e6a7104f8a9e7a66a"
+        },
+        {
+          "pose": 6,
+          "drawn_part_size": [
+            11,
+            11
+          ],
+          "cell_offset": [
+            4,
+            4
+          ],
+          "common_pose_registration": [
+            1,
+            1
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 100,
+          "pixels_discarded": 0,
+          "cell_sha256": "7a4901191c14b09c5635c2f3355c4af2af5c2aa517993c991020cf993938a4b3"
+        }
+      ],
+      "unique_pose_images": 7,
+      "atlas": ".local/upgrade-plan-20261109/registered-banks/ALightCover_08.png",
+      "atlas_sha256": "065d9b8898118ab6a0ec38614a3cf9846702eef368080550c4f649198eb9ef5d"
+    },
+    {
+      "level": 9,
+      "parts": [
+        {
+          "pose": 0,
+          "drawn_part_size": [
+            11,
+            13
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 116,
+          "pixels_discarded": 0,
+          "cell_sha256": "30f2fa44d28a8d8cb38b4b734a66de284bbe932055e5cbc1ba42a187dcbb9bd3"
+        },
+        {
+          "pose": 1,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 112,
+          "pixels_discarded": 0,
+          "cell_sha256": "f63483dc208e7d860adb4f728c8c9a49c674ff98fafcc0ca84347c7f9a49b0d7"
+        },
+        {
+          "pose": 2,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 113,
+          "pixels_discarded": 0,
+          "cell_sha256": "75509c08b8335a5743f7f0b8ed7df253f09098c084e69c94dec91bbf62714018"
+        },
+        {
+          "pose": 3,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 107,
+          "pixels_discarded": 0,
+          "cell_sha256": "66bc2634d9da17b17aedbfb0828d0c8373e5da58469ea0352ca97f223761da72"
+        },
+        {
+          "pose": 4,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 111,
+          "pixels_discarded": 0,
+          "cell_sha256": "824995ebe520584c3604430c2d22fe01772b1ed941da13271c76df081062211b"
+        },
+        {
+          "pose": 5,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 112,
+          "pixels_discarded": 0,
+          "cell_sha256": "21afcb81c767d71d05f2cf5cff6922a8a9f45ee23a56d3ee46bbac11701fa84f"
+        },
+        {
+          "pose": 6,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            4,
+            3
+          ],
+          "common_pose_registration": [
+            1,
+            1
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 110,
+          "pixels_discarded": 0,
+          "cell_sha256": "f0e2f8009b75cd12cfe728a145ed09a35a722d1f517dd0f9321b4ddc2b47b952"
+        }
+      ],
+      "unique_pose_images": 7,
+      "atlas": ".local/upgrade-plan-20261109/registered-banks/ALightCover_09.png",
+      "atlas_sha256": "f5ca1c6cd666974116e7f75d3ca6140158bf75abc9deb3c09c51f4ff5bea90ce"
+    },
+    {
+      "level": 10,
+      "parts": [
+        {
+          "pose": 0,
+          "drawn_part_size": [
+            12,
+            14
+          ],
+          "cell_offset": [
+            2,
+            1
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 138,
+          "pixels_discarded": 0,
+          "cell_sha256": "5da6ca52d8a39b006cdefb7db1da52ad74b939515de8159f67c8a42db7b6ecbd"
+        },
+        {
+          "pose": 1,
+          "drawn_part_size": [
+            12,
+            13
+          ],
+          "cell_offset": [
+            2,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 133,
+          "pixels_discarded": 0,
+          "cell_sha256": "9a18f07c0c08ccc0fc8d121ff8cb893728d158d4e6350a4b6862bf6eda80a660"
+        },
+        {
+          "pose": 2,
+          "drawn_part_size": [
+            11,
+            13
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 120,
+          "pixels_discarded": 0,
+          "cell_sha256": "a4b5a1ca4e4fd15f8d641917604b0764407682631c9b9b74422432031b72cdcc"
+        },
+        {
+          "pose": 3,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 108,
+          "pixels_discarded": 0,
+          "cell_sha256": "ea653e348c0c92aab7b07dbe43f9629ab2c65be332ae81036e8361f3fcac6281"
+        },
+        {
+          "pose": 4,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 108,
+          "pixels_discarded": 0,
+          "cell_sha256": "d30c255ac20965038fecb0c4b7ec553c08975cdc17c1d805930f2abe4a09e124"
+        },
+        {
+          "pose": 5,
+          "drawn_part_size": [
+            11,
+            12
+          ],
+          "cell_offset": [
+            3,
+            2
+          ],
+          "common_pose_registration": [
+            0,
+            0
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 107,
+          "pixels_discarded": 0,
+          "cell_sha256": "9ec75413168c5084886ba6c2824101955aa18f27c77794609eac81aa078a38f9"
+        },
+        {
+          "pose": 6,
+          "drawn_part_size": [
+            12,
+            11
+          ],
+          "cell_offset": [
+            3,
+            4
+          ],
+          "common_pose_registration": [
+            1,
+            1
+          ],
+          "outside_approved_alpha_pixels": 0,
+          "nontransparent_pixels": 107,
+          "pixels_discarded": 0,
+          "cell_sha256": "1e77f63ec39b5f141b4d6af8770fe281b0748a3658f1a66330c071ee54ae8692"
+        }
+      ],
+      "unique_pose_images": 7,
+      "atlas": ".local/upgrade-plan-20261109/registered-banks/ALightCover_10.png",
+      "atlas_sha256": "27e9572c408dcfe4e0a8198a4716aa2a5f0996978fbe01c899fe2cb1f8826415"
+    }
+  ],
+  "all_outside_alpha_zero": true,
+  "all_pixels_preserved": true
+}

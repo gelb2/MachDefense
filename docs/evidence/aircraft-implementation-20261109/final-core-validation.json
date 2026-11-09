@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "totalTests": 53,
+  "unchangedPassedTestsReused": 52,
+  "rerunPassedTests": 1,
+  "correctedTest": "DataTable expected 90 helicopter rows; requested loadout has 110. Updated expected count to 377 total rows.",
+  "firstRun": "final-core-first-run.txt",
+  "recheck": "final-core-recheck.txt"
+}

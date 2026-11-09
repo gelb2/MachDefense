@@ -1,0 +1,349 @@
+{
+  "method": "ImageGen drawn roll poses; uniform-scale packaging; original neutral pixels in tile 0",
+  "textures": [
+    {
+      "body": "ALightBody",
+      "tileCount": 7,
+      "cellSize": [
+        62,
+        39
+      ],
+      "neutralSize": [
+        62,
+        39
+      ],
+      "padding": 0,
+      "source": "Art/Aircraft/banking-20261109/generated/scout.png",
+      "sourceSHA256": "e1c9be8cb86f3ec8865f1ffd2d1ba2e66f2131dcf02cfb4d291c784bda5df7da",
+      "neutralSHA256": "4a11f4410fc41474b15e590cfdf18dfbee6bd5dacdb3b8f769875e283fca502c",
+      "preparedSHA256": "9ab3ad49495f4b9541f0eeef38e723ecf9d2cf34084d2e57cdd4bc9fc3ce5adc",
+      "frames": [
+        {
+          "frame": 1,
+          "rollDegrees": -8,
+          "sourceCrop": [
+            36,
+            228,
+            344,
+            221
+          ],
+          "uniformScale": 0.1781609195402299
+        },
+        {
+          "frame": 2,
+          "rollDegrees": -16,
+          "sourceCrop": [
+            443,
+            223,
+            346,
+            218
+          ],
+          "uniformScale": 0.1781609195402299
+        },
+        {
+          "frame": 3,
+          "rollDegrees": -24,
+          "sourceCrop": [
+            855,
+            223,
+            346,
+            208
+          ],
+          "uniformScale": 0.1781609195402299
+        },
+        {
+          "frame": 4,
+          "rollDegrees": 8,
+          "sourceCrop": [
+            36,
+            819,
+            344,
+            214
+          ],
+          "uniformScale": 0.1781609195402299
+        },
+        {
+          "frame": 5,
+          "rollDegrees": 16,
+          "sourceCrop": [
+            443,
+            817,
+            348,
+            200
+          ],
+          "uniformScale": 0.1781609195402299
+        },
+        {
+          "frame": 6,
+          "rollDegrees": 24,
+          "sourceCrop": [
+            856,
+            815,
+            346,
+            184
+          ],
+          "uniformScale": 0.1781609195402299
+        }
+      ],
+      "neutralPixelsUnchanged": true
+    },
+    {
+      "body": "AHeavyBody",
+      "tileCount": 7,
+      "cellSize": [
+        76,
+        112
+      ],
+      "neutralSize": [
+        76,
+        112
+      ],
+      "padding": 0,
+      "source": "Art/Aircraft/banking-20261109/generated/ah10.png",
+      "sourceSHA256": "6a61a47628289b001e31e4f0ff9da1808bf372245a4bb90b3058231b00792b2d",
+      "neutralSHA256": "b8d01435bc63725f91498b83b78132a6c175bde40663e04afbe63fdbe67efdb1",
+      "preparedSHA256": "1dab8787dbdd4954cc31d8c4fbcf832b5b071ff214c498c7399505866d0c5655",
+      "frames": [
+        {
+          "frame": 1,
+          "rollDegrees": -8,
+          "sourceCrop": [
+            25,
+            39,
+            378,
+            528
+          ],
+          "uniformScale": 0.1958762886597938
+        },
+        {
+          "frame": 2,
+          "rollDegrees": -16,
+          "sourceCrop": [
+            434,
+            37,
+            384,
+            523
+          ],
+          "uniformScale": 0.1958762886597938
+        },
+        {
+          "frame": 3,
+          "rollDegrees": -24,
+          "sourceCrop": [
+            849,
+            36,
+            388,
+            519
+          ],
+          "uniformScale": 0.1958762886597938
+        },
+        {
+          "frame": 4,
+          "rollDegrees": 8,
+          "sourceCrop": [
+            23,
+            667,
+            380,
+            521
+          ],
+          "uniformScale": 0.1958762886597938
+        },
+        {
+          "frame": 5,
+          "rollDegrees": 16,
+          "sourceCrop": [
+            435,
+            671,
+            383,
+            510
+          ],
+          "uniformScale": 0.1958762886597938
+        },
+        {
+          "frame": 6,
+          "rollDegrees": 24,
+          "sourceCrop": [
+            850,
+            680,
+            382,
+            489
+          ],
+          "uniformScale": 0.1958762886597938
+        }
+      ],
+      "neutralPixelsUnchanged": true
+    },
+    {
+      "body": "ADuctBody",
+      "tileCount": 7,
+      "cellSize": [
+        110,
+        88
+      ],
+      "neutralSize": [
+        110,
+        88
+      ],
+      "padding": 0,
+      "source": "Art/Aircraft/banking-20261109/generated/cheyenne.png",
+      "sourceSHA256": "031c1a2982e836dab5940b6cff161557ca1875d95b8cb07b2a2f18acc03136da",
+      "neutralSHA256": "6a30422b8880203bbebb4b9611f0478f7fdd084c4e50918818f6194b882da944",
+      "preparedSHA256": "68fa0099e9bafc2a04cb434d13c00911119222472ced178f8964b95e7a0ee017",
+      "frames": [
+        {
+          "frame": 1,
+          "rollDegrees": -8,
+          "sourceCrop": [
+            10,
+            180,
+            404,
+            321
+          ],
+          "uniformScale": 0.2698019801980198
+        },
+        {
+          "frame": 2,
+          "rollDegrees": -16,
+          "sourceCrop": [
+            430,
+            181,
+            395,
+            317
+          ],
+          "uniformScale": 0.2698019801980198
+        },
+        {
+          "frame": 3,
+          "rollDegrees": -24,
+          "sourceCrop": [
+            853,
+            182,
+            391,
+            310
+          ],
+          "uniformScale": 0.2698019801980198
+        },
+        {
+          "frame": 4,
+          "rollDegrees": 8,
+          "sourceCrop": [
+            16,
+            784,
+            397,
+            316
+          ],
+          "uniformScale": 0.2698019801980198
+        },
+        {
+          "frame": 5,
+          "rollDegrees": 16,
+          "sourceCrop": [
+            433,
+            784,
+            389,
+            309
+          ],
+          "uniformScale": 0.2698019801980198
+        },
+        {
+          "frame": 6,
+          "rollDegrees": 24,
+          "sourceCrop": [
+            855,
+            785,
+            387,
+            300
+          ],
+          "uniformScale": 0.2698019801980198
+        }
+      ],
+      "neutralPixelsUnchanged": true
+    },
+    {
+      "body": "ATransportBody",
+      "tileCount": 7,
+      "cellSize": [
+        140,
+        131
+      ],
+      "neutralSize": [
+        140,
+        131
+      ],
+      "padding": 0,
+      "source": "Art/Aircraft/banking-20261109/generated/beluga.png",
+      "sourceSHA256": "c5cf9563f70d7d49baa2c4ce6965dc86666cd42287f53dc9e1a88b3a6f6a37ff",
+      "neutralSHA256": "7d3a2604798605783b1b6cdc76419f152deb23d4be4e6f49ba2c2e8c65f2fe79",
+      "preparedSHA256": "7f179c7135576b857a94dd78e9fd44c17c19805df021b85409690c35d00a063c",
+      "frames": [
+        {
+          "frame": 1,
+          "rollDegrees": -8,
+          "sourceCrop": [
+            13,
+            138,
+            385,
+            332
+          ],
+          "uniformScale": 0.34974093264248707
+        },
+        {
+          "frame": 2,
+          "rollDegrees": -16,
+          "sourceCrop": [
+            428,
+            130,
+            386,
+            344
+          ],
+          "uniformScale": 0.34974093264248707
+        },
+        {
+          "frame": 3,
+          "rollDegrees": -24,
+          "sourceCrop": [
+            851,
+            131,
+            373,
+            345
+          ],
+          "uniformScale": 0.34974093264248707
+        },
+        {
+          "frame": 4,
+          "rollDegrees": 8,
+          "sourceCrop": [
+            15,
+            746,
+            385,
+            358
+          ],
+          "uniformScale": 0.34974093264248707
+        },
+        {
+          "frame": 5,
+          "rollDegrees": 16,
+          "sourceCrop": [
+            434,
+            743,
+            384,
+            362
+          ],
+          "uniformScale": 0.34974093264248707
+        },
+        {
+          "frame": 6,
+          "rollDegrees": 24,
+          "sourceCrop": [
+            857,
+            739,
+            370,
+            368
+          ],
+          "uniformScale": 0.34974093264248707
+        }
+      ],
+      "neutralPixelsUnchanged": true
+    }
+  ]
+}

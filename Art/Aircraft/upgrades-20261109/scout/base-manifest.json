@@ -1,0 +1,54 @@
+{
+  "status": "ready for actual World visual validation; not gameplay verified",
+  "method": "independently generated rear housing only; preserve approved weapon alpha and entire front region; original source images unchanged",
+  "rows": [
+    {
+      "part": "ALightGun",
+      "level": 1,
+      "path": ".local/upgrade-plan-20261109/scout-base/ready/ALightGun_01.png",
+      "sha256": "5311034f7873e129876190a5f8626955d95510ad5a77220093272cfe4bd5163d",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightGun.png",
+      "approved_source_sha256": "5cfcb56570ae49120f6ea3ffabc19f57ee934cf2843b55df85537f90a5ccee42",
+      "canvas": [
+        14,
+        7
+      ],
+      "rear_housing_slot_width": 8,
+      "new_housing_drawn_size": [
+        7,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/scout-base/part1-crop.png",
+      "drawn_source_sha256": "986eab17639c6740468431e560a0b1572ab198f26579053b26d9065ec13b682e",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 43,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "ALightMissile",
+      "level": 1,
+      "path": ".local/upgrade-plan-20261109/scout-base/ready/ALightMissile_01.png",
+      "sha256": "cbe7ffc527ef9517a38a1dc1d4dc30a369dc7eb7734d73a5ecac2ce2ae7da4c9",
+      "approved_source": ".local/upgrade-plan-20261109/references/ALightMissile.png",
+      "approved_source_sha256": "8f795c0899c9bd019cb289313371d2fe9019d019e92767af27889f95216d5e5a",
+      "canvas": [
+        13,
+        8
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        4
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/scout-base/part2-crop.png",
+      "drawn_source_sha256": "8fe6abb2b5edc7415e011552d476d8bdf09120ee5631bd648d6ab811de36084b",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 22,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    }
+  ]
+}

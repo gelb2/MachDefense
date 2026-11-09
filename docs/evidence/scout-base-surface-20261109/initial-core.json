@@ -1,0 +1,52 @@
+[
+  {
+    "name": "AircraftDefinition",
+    "exit": 0,
+    "output": "1260 AH-10 fixed pod muzzle cases retained across levels, scales, headings and bank poses\n40 persisted level assemblies; 240 phone/pad pose cases preserve existing geometry, sockets and muzzles; only explicit Scout and Cheyenne upgrade art differs\n"
+  },
+  {
+    "name": "AircraftAudit",
+    "exit": 1,
+    "output": "Traceback (most recent call last):\n  File \"/Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/scout-base/Tests/AircraftAuditTests.py\", line 12, in <module>\n    assert scout['nodeCount']==4 and scout['distinctLevelImageSequences']==10\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+  },
+  {
+    "name": "AircraftApproach",
+    "exit": 0,
+    "output": "3040 separated static/edge/moving approaches; moving orbit phases and three engagement resets passed\n"
+  },
+  {
+    "name": "CheyenneSalvoClock",
+    "exit": 0,
+    "output": "160 live Cheyenne salvos: 7 same-tick missiles, center1/spread6; rounded-up=80 rounded-down=60; original controller boundary reproduced unchanged\n"
+  },
+  {
+    "name": "AircraftArmament",
+    "exit": 0,
+    "output": "40 loadouts: requested weapon counts, live firing, sounds, damage, same aircraft range, Cheyenne 1+6 impact points, high-speed cannon, no saves passed\n"
+  },
+  {
+    "name": "AlliedAircraft",
+    "exit": 0,
+    "output": "model,level,cells,hp,upgradeCredits,buildSeconds\nAircraftLight,1,75,210,200,3\nAircraftLight,2,100,231,500,3\nAircraftLight,3,125,259,1000,3\nAircraftLight,4,150,294,2000,3\nAircraftLight,5,190,336,4000,3\nAircraftLight,6,250,378,8000,5\nAircraftLight,7,315,434,16000,5\nAircraftLight,8,400,490,32000,5\nAircraftLight,9,500,560,64000,5\nAircraftLight,10,625,644,0,5\nAircraftHeavy,1,265,350,2000,9\nAircraftHeavy,2,275,385,5000,9\nAircraftHeavy,3,300,434,10000,9\nAircraftHeavy,4,350,497,20000,9\nAircraftHeavy,5,400,560,40000,9\nAircraftHeavy,6,475,630,75000,9\nAircraftHeavy,7,565,700,150000,9\nAircraftHeavy,8,675,770,300000,9\nAircraftHeavy,9,840,875,500000,9\nAircraftHeavy,10,1000,1050,0,9\nAircraftDuct,1,375,700,3000,12\nAircraftDuct,2,400,770,5000,12\nAircraftDuct,3,440,840,9000,12\nAircraftDuct,4,500,910,17000,12\nAircraftDuct,5,565,1050,33000,12\nAircraftDuct,6,650,1190,65000,15\nAircraftDuct,7,750,1400,120000,15\nAircraftDuct,8,875,1610,230000,15\nAircraftDuct,9,1000,1820,650000,15\nAircraftDuct,10,1150,2100,0,15\nAircraftTransport,1,1000,700,4300,10\nAircraftTransport,2,1250,840,7800,10\nAircraftTransport,3,1500,980,14500,10\nAircraftTransport,4,1750,1120,30700,10\nAircraftTransport,5,2125,1260,61400,10\nAircraftTransport,6,2500,1400,125800,12\nAircraftTransport,7,3000,1610,227000,12\nAircraftTransport,8,3500,1820,458000,12\nAircraftTransport,9,4000,2100,921000,12\nAircraftTransport,10,4500,2380,0,12\nmode=3 tick+Frame CPU p99_ms=0.027417 max_ms=2.73121\nmode=4 tick+Frame CPU p99_ms=0.026375 max_ms=0.057917\nmode=5 tick+Frame CPU p99_ms=0.024417 max_ms=0.13075\nAlliedAircraft: 4 trial allies; 40 economy proposals; twelve clock routes; auto targeting/fire; Crossfire; enemy damage; pause; no file writes passed\n"
+  },
+  {
+    "name": "Aircraft",
+    "exit": -6,
+    "output": "Assertion failed: (heliSprites==24&&shadows==12), function main, file AircraftTests.cpp, line 63.\n"
+  },
+  {
+    "name": "AircraftHandling",
+    "exit": 0,
+    "output": "AircraftHandling: 4 target switches, bounded nose and weapon turns, bidirectional banking, textured rotor projection, grounded wreck/contact shadows, no writes passed\n"
+  },
+  {
+    "name": "AircraftCampaign",
+    "exit": 0,
+    "output": "AircraftCampaign: 4 mission boundaries, original clear rewards, 40 production/fire/heading/upgrade/recovery cases, specified reference ranges and gunship attack passed\n"
+  },
+  {
+    "name": "AircraftEvasion",
+    "exit": 0,
+    "output": "AircraftEvasion: independent same-tick production/12 sectors/phases, 271 original and additional projectile rows: outside radius misses, direct and splash hits passed\n"
+  }
+]

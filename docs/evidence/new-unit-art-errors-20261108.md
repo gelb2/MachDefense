@@ -51,7 +51,7 @@ Codex는 추가 레벨 포탑과 헬기·VTOL을 만들면서 원작의 질감, 
 | 비교 화면의 잘못된 기준 | 이전 iPad 비교에서 탱크 선택과 화면 방향 설정을 잘못했다. | 해당 캡처를 다시 만들었다. 최신 조사에서는 원작 전체 조립 크기를 열거해 가장 큰 기준을 다시 선정했다. |
 | 자동검사와 외형 확인 혼동 | 생산·이동·발사·피해 검사와 PNG 치수 검사가 통과해도 승인 시안과 중앙 동체 비율이 틀린 상태가 남았다. 사용자가 다시 지적했다. | 기능 통과, 실제 그림 확인, 사용자 승인 상태를 분리한다. 건쉽 외형 작업은 완료되지 않았다. |
 
-근거: [아군 항공기 구현·승인 그림 복구](https://github.com/gelb2/MachDefense/blob/a144abef9b91949dbf30793d2ff1f8bab277a672/docs/evidence/aircraft-allied-20261108.md), [이전 iPad 수정·검사](https://github.com/gelb2/MachDefense/blob/a144abef9b91949dbf30793d2ff1f8bab277a672/docs/evidence/aircraft-visual-repair-20261108.md), [크기 조사](https://github.com/gelb2/MachDefense/blob/a144abef9b91949dbf30793d2ff1f8bab277a672/docs/research/aircraft-scale-20261107.md), [최신 제작 지시](../research/aircraft-plan-20261107.md).
+근거: [아군 항공기 구현·승인 그림 복구](aircraft-allied-20261108.md), [이전 iPad 수정·검사](aircraft-visual-repair-20261108.md), [크기 조사](../research/aircraft-scale-20261107.md), [최신 제작 지시](../research/aircraft-plan-20261107.md).
 
 ## 최신 크기 지시와 실제 실패
 

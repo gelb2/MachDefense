@@ -1,0 +1,4 @@
+Make a small localized edit to ONLY TWO cells in this six-cell sprite sheet. Keep every other cell, all fuselages, cockpit/engines/tail, colors, details and the pose directions unchanged.
+TOP ROW MIDDLE: shorten each main wing by 6 percent of its root-to-tip length, moving the existing tip pod inward without resizing it.
+TOP ROW RIGHT: shorten each main wing by 8 percent of its root-to-tip length, moving the existing tip pod inward without resizing it.
+This corrects the missing foreshortening for the stronger left rolls: the top-middle and top-right should have successively smaller wing spans than the top-left. Keep the straight tapered original wing shape and panel arrangement. Do not bend or sweep wings. Do not change body length, width or pivot. DO NOT edit any of the three bottom-row cells or the top-left cell. No new components, paint or markings. Retain transparent background and 3x2 layout.

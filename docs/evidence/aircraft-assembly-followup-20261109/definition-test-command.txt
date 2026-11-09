@@ -1,0 +1,11 @@
+clang++ -std=c++20 -I. -ISources Tests/AircraftDefinitionTests.cpp .local/aircraft-repair-20261109/build/libMachDefenseCore.a -o .local/aircraft-definition-tests
+.local/aircraft-definition-tests Resources
+40 persisted level assemblies; 240 phone/pad pose cases match previous images, geometry, sockets and muzzles
+
+ctest --test-dir .local/aircraft-repair-20261109/build -R "^(AircraftBalance|AircraftArmament|AircraftFireEffects|Battle)$" --output-on-failure
+4/4 passed, 1.30 seconds
+
+cmake -S . -B .local/aircraft-repair-20261109/build
+cmake --build .local/aircraft-repair-20261109/build --target AircraftDefinitionTests -j 8
+ctest --test-dir .local/aircraft-repair-20261109/build -R "^AircraftDefinition$" --output-on-failure
+1/1 passed

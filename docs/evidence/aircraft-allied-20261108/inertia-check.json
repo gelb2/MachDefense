@@ -1,0 +1,34 @@
+{
+  "frames": 1320,
+  "ok": true,
+  "aircraft": [
+    {
+      "name": "AircraftLight",
+      "reversals": 9,
+      "stoppedFrames": 9,
+      "maximumVelocityChangePerTick": 0.08333807386856014,
+      "maximumSpeed": 2
+    },
+    {
+      "name": "AircraftHeavy",
+      "reversals": 9,
+      "stoppedFrames": 9,
+      "maximumVelocityChangePerTick": 0.07500675086950506,
+      "maximumSpeed": 1.8
+    },
+    {
+      "name": "AircraftDuct",
+      "reversals": 8,
+      "stoppedFrames": 8,
+      "maximumVelocityChangePerTick": 0.06667098949318202,
+      "maximumSpeed": 1.6
+    },
+    {
+      "name": "AircraftTransport",
+      "reversals": 11,
+      "stoppedFrames": 11,
+      "maximumVelocityChangePerTick": 0.05834199844667717,
+      "maximumSpeed": 1.4
+    }
+  ]
+}

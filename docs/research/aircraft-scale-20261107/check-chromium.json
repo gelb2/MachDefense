@@ -1,0 +1,226 @@
+{
+  "engine": "chromium",
+  "scenes": [
+    {
+      "mode": 0,
+      "initial": {
+        "time": 0,
+        "writes": 0,
+        "actors": [
+          {
+            "name": "E_Tank_01",
+            "x": -100,
+            "y": 100,
+            "rotor": 0,
+            "height": 0
+          },
+          {
+            "name": "AircraftLight",
+            "x": 100,
+            "y": 100,
+            "rotor": 0,
+            "height": 12
+          },
+          {
+            "name": "E_Tank_32",
+            "x": -100,
+            "y": -100,
+            "rotor": 0,
+            "height": 0
+          },
+          {
+            "name": "AircraftHeavy",
+            "x": 100,
+            "y": -100,
+            "rotor": 0,
+            "height": 18
+          }
+        ]
+      },
+      "moving": {
+        "time": 7.968,
+        "writes": 0,
+        "actors": [
+          {
+            "name": "E_Tank_01",
+            "x": -100,
+            "y": 100,
+            "rotor": 1.75219,
+            "height": 0
+          },
+          {
+            "name": "AircraftLight",
+            "x": 126.235,
+            "y": 127.124,
+            "rotor": 2.51331,
+            "height": 12
+          },
+          {
+            "name": "E_Tank_32",
+            "x": -100,
+            "y": -100,
+            "rotor": 1.75219,
+            "height": 0
+          },
+          {
+            "name": "AircraftHeavy",
+            "x": 126.235,
+            "y": -72.8762,
+            "rotor": 2.51331,
+            "height": 18
+          }
+        ]
+      },
+      "uploadsDuringMotion": 0,
+      "pause": true
+    },
+    {
+      "mode": 1,
+      "initial": {
+        "time": 0,
+        "writes": 0,
+        "actors": [
+          {
+            "name": "E_Tank_01",
+            "x": -50,
+            "y": 50,
+            "rotor": 0,
+            "height": 0
+          },
+          {
+            "name": "AircraftLight",
+            "x": 50,
+            "y": 50,
+            "rotor": 0,
+            "height": 12
+          },
+          {
+            "name": "E_Tank_32",
+            "x": -50,
+            "y": -50,
+            "rotor": 0,
+            "height": 0
+          },
+          {
+            "name": "AircraftHeavy",
+            "x": 50,
+            "y": -50,
+            "rotor": 0,
+            "height": 18
+          }
+        ]
+      },
+      "moving": {
+        "time": 3.984,
+        "writes": 0,
+        "actors": [
+          {
+            "name": "E_Tank_01",
+            "x": -50,
+            "y": 50,
+            "rotor": 4.01769,
+            "height": 0
+          },
+          {
+            "name": "AircraftLight",
+            "x": 76.0549,
+            "y": 76.4112,
+            "rotor": 1.25665,
+            "height": 12
+          },
+          {
+            "name": "E_Tank_32",
+            "x": -50,
+            "y": -50,
+            "rotor": 4.01769,
+            "height": 0
+          },
+          {
+            "name": "AircraftHeavy",
+            "x": 76.0549,
+            "y": -23.5888,
+            "rotor": 1.25665,
+            "height": 18
+          }
+        ]
+      },
+      "uploadsDuringMotion": 0,
+      "pause": true
+    },
+    {
+      "mode": 2,
+      "initial": {
+        "time": 0,
+        "writes": 0,
+        "actors": [
+          {
+            "name": "E_Tank_01",
+            "x": -50,
+            "y": 50,
+            "rotor": 0,
+            "height": 0
+          },
+          {
+            "name": "AircraftLight",
+            "x": 50,
+            "y": 50,
+            "rotor": 0,
+            "height": 12
+          },
+          {
+            "name": "E_Tank_32",
+            "x": -50,
+            "y": -50,
+            "rotor": 0,
+            "height": 0
+          },
+          {
+            "name": "AircraftHeavy",
+            "x": 50,
+            "y": -50,
+            "rotor": 0,
+            "height": 18
+          }
+        ]
+      },
+      "moving": {
+        "time": 3.984,
+        "writes": 0,
+        "actors": [
+          {
+            "name": "E_Tank_01",
+            "x": -50,
+            "y": 50,
+            "rotor": 4.01769,
+            "height": 0
+          },
+          {
+            "name": "AircraftLight",
+            "x": 76.0549,
+            "y": 76.4112,
+            "rotor": 1.25665,
+            "height": 12
+          },
+          {
+            "name": "E_Tank_32",
+            "x": -50,
+            "y": -50,
+            "rotor": 4.01769,
+            "height": 0
+          },
+          {
+            "name": "AircraftHeavy",
+            "x": 76.0549,
+            "y": -23.5888,
+            "rotor": 1.25665,
+            "height": 18
+          }
+        ]
+      },
+      "uploadsDuringMotion": 0,
+      "pause": true
+    }
+  ],
+  "ok": true,
+  "errors": []
+}

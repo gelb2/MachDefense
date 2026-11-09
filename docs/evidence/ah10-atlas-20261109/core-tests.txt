@@ -1,0 +1,17 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/ah10-atlas/.local/core
+    Start  2: AircraftDefinition
+1/6 Test  #2: AircraftDefinition ...............   Passed    0.01 sec
+    Start 10: Aircraft
+2/6 Test #10: Aircraft .........................   Passed    0.29 sec
+    Start 53: AircraftHandling
+3/6 Test #53: AircraftHandling .................   Passed    0.06 sec
+    Start 54: AircraftCampaign
+4/6 Test #54: AircraftCampaign .................   Passed    0.33 sec
+    Start 55: AircraftEvasion
+5/6 Test #55: AircraftEvasion ..................   Passed    0.01 sec
+    Start 56: AircraftDodge
+6/6 Test #56: AircraftDodge ....................   Passed    0.01 sec
+
+100% tests passed out of 6
+
+Total Test time (real) =   0.71 sec

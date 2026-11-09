@@ -18,11 +18,17 @@ int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];Host h
     command(ValidationCommand::creditMinus);assert(s.validationSave()->credits(0)==0);
     for(unsigned category=0;category<6;++category){s.applyValidationCommand(110+category);assert(s.validationSave()->baseUpgrade(0,category)==1);s.applyValidationCommand(100+category);assert(s.validationSave()->baseUpgrade(0,category)==0);}
     // Select catalog entries, grant, upgrade, and allow more than seven installed units.
-    for(int i=0;i<40;++i){command(ValidationCommand::buildGrant);command(ValidationCommand::buildLevelPlus);command(ValidationCommand::buildInstall);command(ValidationCommand::buildNext);}
+    std::size_t buildCount=0;for(const char* file:{"MachBuild_Parts","MachBuild_Name"}){auto t=DataTable::load(r.root/"Tables"/(std::string(file)+".tsv"));for(const auto& row:t.rows())if(row[0].ends_with("_01"))++buildCount;}
+    for(std::size_t i=0;i<buildCount;++i){command(ValidationCommand::buildGrant);command(ValidationCommand::buildLevelPlus);command(ValidationCommand::buildInstall);command(ValidationCommand::buildNext);}
     auto owned=s.validationSave()->builds(0);assert(owned.size()>4);assert(std::count_if(owned.begin(),owned.end(),[](const auto& x){return x.onSlot;})>7);
     for(int i=0;i<5;++i){command(ValidationCommand::attackGrant);command(ValidationCommand::attackLevelPlus);command(ValidationCommand::attackCountPlus);command(ValidationCommand::attackInstall);command(ValidationCommand::attackNext);}
     auto special=s.validationSave()->attacks(0);assert(special.size()==5);
     const auto before=w->actors().size();command(ValidationCommand::spawnMachine);assert(w->actors().size()==before+1);
+    // Actual original-sprite NEXT/SPAWN buttons on the new sixth page.
+    for(int i=0;i<5;++i)tap(s,248,434);
+    const auto clickCount=w->actors().size();tap(s,260,120);assert(w->actors().size()==clickCount+1&&w->actors().back()->flightTactics);
+    for(unsigned kind=0;kind<4;++kind){const auto count=w->actors().size();assert(s.applyValidationCommand(600+kind));assert(w->actors().size()==count+1);assert(w->actors().back()->flightTactics&&w->actors().back()->player);}
+    for(unsigned kind=0;kind<4;++kind)assert(!ordinary.applyValidationCommand(600+kind));
     command(ValidationCommand::healthMinus);command(ValidationCommand::healthFull);assert(h.writes==1); // No implicit file writes.
     command(ValidationCommand::save);assert(h.writes==2);auto decoded=SaveData::decode(h.saved);assert(decoded.builds(0).size()==owned.size());assert(decoded.attacks(0).size()==5);
     command(ValidationCommand::win);assert(w->state()==WorldState::cleared&&h.writes==3);assert(!has(s.frame(),"SysMenu_Mid.png"));

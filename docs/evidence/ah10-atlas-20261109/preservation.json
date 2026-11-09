@@ -1,0 +1,14 @@
+{
+  "base": "837ff38",
+  "sourceAndResourceFilesUnchanged": 2707,
+  "changedSourceAndResources": [
+    "Resources/Images/AHeavyBody.png",
+    "Resources/Tables/PartsList.tsv",
+    "Resources/Tables/TileList.tsv"
+  ],
+  "originalAndScoutFilesUnchanged": true,
+  "allNonAHTableRowsByteIdentical": true,
+  "runtimeAtlasIdenticalToTestedCandidate": true,
+  "runtimeAtlasSHA256": "a92d644d68ad1c3e54b60aab0d571772ca62a8498efc28c067cdc6e32cd8f48e",
+  "evidenceScope": "14 pose and20 attack screenshot comparisons reused from isolated fe72d80 atlas candidate; AH geometry/resources identical, subsequent Scout proof independent; no new combined-browser claim"
+}

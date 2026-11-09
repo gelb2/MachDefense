@@ -1,0 +1,726 @@
+{
+  "status": "ready for actual World visual validation; not gameplay verified",
+  "method": "independently generated rear housing only; preserve approved weapon alpha and entire front region; original source images unchanged",
+  "rows": [
+    {
+      "part": "AHeavyGun",
+      "level": 1,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyGun_01.png",
+      "sha256": "f0aebd8b259ef394f8f2b0057ece375f5fc09c52cecf60b7d9ffb09f7462c3e8",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyGun.png",
+      "approved_source_sha256": "e9abf0405127735c6412f28f84aeca292d1dff091a2451ee327c9d74d1e6a963",
+      "canvas": [
+        25,
+        10
+      ],
+      "rear_housing_slot_width": 10,
+      "new_housing_drawn_size": [
+        10,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv01-open-part1-crop.png",
+      "drawn_source_sha256": "e07fbd743566fe03129c8f381a4c75e0034e6c025a49fbdf2db826ed1fb6e47a",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 64,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyCannon",
+      "level": 1,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyCannon_01.png",
+      "sha256": "05f20adc459ba2eb6b7ae7fb5e296475162ff4f7d1db11044f42736c0f5cd0a6",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyCannon.png",
+      "approved_source_sha256": "c2163c7775a87cb9504fa44b34f6b4e07ea878b744a3c236381c779bd0f25f6e",
+      "canvas": [
+        18,
+        10
+      ],
+      "rear_housing_slot_width": 7,
+      "new_housing_drawn_size": [
+        7,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv01-open-part1-crop.png",
+      "drawn_source_sha256": "e07fbd743566fe03129c8f381a4c75e0034e6c025a49fbdf2db826ed1fb6e47a",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 35,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyMissile",
+      "level": 1,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyMissile_01.png",
+      "sha256": "5aefe4c817c90c31f14570aed803badca3bd395ce54d0a531ceb422724eef7b0",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyMissile.png",
+      "approved_source_sha256": "a4e0c7772ee6e42f28b5809dfb5f2585d12d2c16994c11efa89893389081728c",
+      "canvas": [
+        16,
+        12
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv01-open-part2-crop.png",
+      "drawn_source_sha256": "1327c379759aaed6f95c9ca35e680aa54916210ee57297dcb48c8e5a4d47e36b",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 30,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyGun",
+      "level": 2,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyGun_02.png",
+      "sha256": "3b2e41bfe756596a5429eec56c94e68d702abd8ea1b8628fc76d1995c8553e48",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyGun.png",
+      "approved_source_sha256": "e9abf0405127735c6412f28f84aeca292d1dff091a2451ee327c9d74d1e6a963",
+      "canvas": [
+        25,
+        10
+      ],
+      "rear_housing_slot_width": 10,
+      "new_housing_drawn_size": [
+        10,
+        8
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv02-open-part1-crop.png",
+      "drawn_source_sha256": "fa7537e87505b07ffa0cdb4cdbaf6f7a8ac9a2b211c895ca9e6aa785bfeaae8e",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 73,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyCannon",
+      "level": 2,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyCannon_02.png",
+      "sha256": "ddbe15a5a59bbde55ebe229c7ea6a37ccf21c4a65b517710ee2b4962dd160fd4",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyCannon.png",
+      "approved_source_sha256": "c2163c7775a87cb9504fa44b34f6b4e07ea878b744a3c236381c779bd0f25f6e",
+      "canvas": [
+        18,
+        10
+      ],
+      "rear_housing_slot_width": 7,
+      "new_housing_drawn_size": [
+        7,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv02-open-part1-crop.png",
+      "drawn_source_sha256": "fa7537e87505b07ffa0cdb4cdbaf6f7a8ac9a2b211c895ca9e6aa785bfeaae8e",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 35,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyMissile",
+      "level": 2,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyMissile_02.png",
+      "sha256": "f62b47a98969258f5be6e5725236dfd7099269885723c3619a03ccdd9ab32ace",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyMissile.png",
+      "approved_source_sha256": "a4e0c7772ee6e42f28b5809dfb5f2585d12d2c16994c11efa89893389081728c",
+      "canvas": [
+        16,
+        12
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv02-open-part2-crop.png",
+      "drawn_source_sha256": "2ab5ed24a362407895a203fa3cc3bdc1a75c61d1fbbca115d1fa2492b657cc84",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 30,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyGun",
+      "level": 3,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyGun_03.png",
+      "sha256": "da44e38d86a772dffd0555df669b069bf44deab1e06f156ac66a57f4fb17e69f",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyGun.png",
+      "approved_source_sha256": "e9abf0405127735c6412f28f84aeca292d1dff091a2451ee327c9d74d1e6a963",
+      "canvas": [
+        25,
+        10
+      ],
+      "rear_housing_slot_width": 10,
+      "new_housing_drawn_size": [
+        10,
+        8
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv03-open-part1-crop.png",
+      "drawn_source_sha256": "636cf7aaf853a3b83cbb66f23c471a94d3c4b3164d90397275ec97c17df76111",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 73,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyCannon",
+      "level": 3,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyCannon_03.png",
+      "sha256": "dcdcf787df8fca9da898d3b5a104efceb0668fc9ccda5aa083471f92c153d5f4",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyCannon.png",
+      "approved_source_sha256": "c2163c7775a87cb9504fa44b34f6b4e07ea878b744a3c236381c779bd0f25f6e",
+      "canvas": [
+        18,
+        10
+      ],
+      "rear_housing_slot_width": 7,
+      "new_housing_drawn_size": [
+        7,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv03-open-part1-crop.png",
+      "drawn_source_sha256": "636cf7aaf853a3b83cbb66f23c471a94d3c4b3164d90397275ec97c17df76111",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 35,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyMissile",
+      "level": 3,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyMissile_03.png",
+      "sha256": "6b9fd7267367abf2f7b83a54c0c0da64acbb47d6e5a165cc5d2191a63d3e4519",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyMissile.png",
+      "approved_source_sha256": "a4e0c7772ee6e42f28b5809dfb5f2585d12d2c16994c11efa89893389081728c",
+      "canvas": [
+        16,
+        12
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv03-open-part2-crop.png",
+      "drawn_source_sha256": "9e63c4a6a5d874124a2825bacac2cc5eaf02592aa48b25fb85ce7cfcdf91fa9a",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 30,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyGun",
+      "level": 4,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyGun_04.png",
+      "sha256": "f6e04cb7db4054d3d37a5d366ee04581447078e3314a8d5b7edf4bae1a09d165",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyGun.png",
+      "approved_source_sha256": "e9abf0405127735c6412f28f84aeca292d1dff091a2451ee327c9d74d1e6a963",
+      "canvas": [
+        25,
+        10
+      ],
+      "rear_housing_slot_width": 10,
+      "new_housing_drawn_size": [
+        10,
+        8
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv04-open-part1-crop.png",
+      "drawn_source_sha256": "d88149104c6f3ba49d07f40a27879f602dedf1746a82a192900d96cf53133a47",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 73,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyCannon",
+      "level": 4,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyCannon_04.png",
+      "sha256": "ded99f5efaa1835b129d098e143f72cb18535f48a74b9dffc01be32121b02208",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyCannon.png",
+      "approved_source_sha256": "c2163c7775a87cb9504fa44b34f6b4e07ea878b744a3c236381c779bd0f25f6e",
+      "canvas": [
+        18,
+        10
+      ],
+      "rear_housing_slot_width": 7,
+      "new_housing_drawn_size": [
+        7,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv04-open-part1-crop.png",
+      "drawn_source_sha256": "d88149104c6f3ba49d07f40a27879f602dedf1746a82a192900d96cf53133a47",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 35,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyMissile",
+      "level": 4,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyMissile_04.png",
+      "sha256": "6317bcb171defaee7af3b0d147fa7fc64b954527568d5b11e46fb3d93e4a451f",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyMissile.png",
+      "approved_source_sha256": "a4e0c7772ee6e42f28b5809dfb5f2585d12d2c16994c11efa89893389081728c",
+      "canvas": [
+        16,
+        12
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv04-open-part2-crop.png",
+      "drawn_source_sha256": "8f514795d75919dcbb8f494d4571dfc1373e08e36f57722b1025d561b7ad39e4",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 30,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyGun",
+      "level": 5,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyGun_05.png",
+      "sha256": "39b81d27da3f25a7957da0cbbb1107f29849cc5faa715f803a10594d51eff7a5",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyGun.png",
+      "approved_source_sha256": "e9abf0405127735c6412f28f84aeca292d1dff091a2451ee327c9d74d1e6a963",
+      "canvas": [
+        25,
+        10
+      ],
+      "rear_housing_slot_width": 10,
+      "new_housing_drawn_size": [
+        10,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv05-open-part1-crop.png",
+      "drawn_source_sha256": "cf58233652eba290e412fd358c850b027396cc69f520c3d24908b430cd3df033",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 64,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyCannon",
+      "level": 5,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyCannon_05.png",
+      "sha256": "79422609029741b3c8dc3f1772e968a1bb7e4536ef9cc9690b8becda4e5ee223",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyCannon.png",
+      "approved_source_sha256": "c2163c7775a87cb9504fa44b34f6b4e07ea878b744a3c236381c779bd0f25f6e",
+      "canvas": [
+        18,
+        10
+      ],
+      "rear_housing_slot_width": 7,
+      "new_housing_drawn_size": [
+        7,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv05-open-part1-crop.png",
+      "drawn_source_sha256": "cf58233652eba290e412fd358c850b027396cc69f520c3d24908b430cd3df033",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 35,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyMissile",
+      "level": 5,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyMissile_05.png",
+      "sha256": "e0e3df67b2503b7a465863f9d8ad485c7ac80730e30c439253e46bf7b8bbe29b",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyMissile.png",
+      "approved_source_sha256": "a4e0c7772ee6e42f28b5809dfb5f2585d12d2c16994c11efa89893389081728c",
+      "canvas": [
+        16,
+        12
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv05-open-part2-crop.png",
+      "drawn_source_sha256": "d0740fcdeb7f2e12a37357451d1f9b9ab21b43b79e5350df1e207471706db032",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 30,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyGun",
+      "level": 6,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyGun_06.png",
+      "sha256": "7e9c3abdb34b411bf33bf53421de6ad8a160fba57d0ebac7165f0e0a8ec5875b",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyGun.png",
+      "approved_source_sha256": "e9abf0405127735c6412f28f84aeca292d1dff091a2451ee327c9d74d1e6a963",
+      "canvas": [
+        25,
+        10
+      ],
+      "rear_housing_slot_width": 10,
+      "new_housing_drawn_size": [
+        10,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv06-open-part1-crop.png",
+      "drawn_source_sha256": "cc102088ff488a01c053c1d625d0ef9f0bfa850dd425ca81cacbbf3e3b87cbc3",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 64,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyCannon",
+      "level": 6,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyCannon_06.png",
+      "sha256": "0decd547deecc3d60718048e1c522f2892e634ac3c45f8b326783b93d4d78eb9",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyCannon.png",
+      "approved_source_sha256": "c2163c7775a87cb9504fa44b34f6b4e07ea878b744a3c236381c779bd0f25f6e",
+      "canvas": [
+        18,
+        10
+      ],
+      "rear_housing_slot_width": 7,
+      "new_housing_drawn_size": [
+        7,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv06-open-part1-crop.png",
+      "drawn_source_sha256": "cc102088ff488a01c053c1d625d0ef9f0bfa850dd425ca81cacbbf3e3b87cbc3",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 35,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyMissile",
+      "level": 6,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyMissile_06.png",
+      "sha256": "725f1304b4e890bcca341b29fa10890fdfaca4df0fc3c9a7a7a44ff72da14ba2",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyMissile.png",
+      "approved_source_sha256": "a4e0c7772ee6e42f28b5809dfb5f2585d12d2c16994c11efa89893389081728c",
+      "canvas": [
+        16,
+        12
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv06-open-part2-crop.png",
+      "drawn_source_sha256": "eaae2c03073d941f2a38406996e9c68f4792d11b4b3c33c1a7fb9c65012fea04",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 30,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyGun",
+      "level": 7,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyGun_07.png",
+      "sha256": "665641aef83da7a1da3675450c9de32cfce6991413625e5e6410f9b160a7ff6c",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyGun.png",
+      "approved_source_sha256": "e9abf0405127735c6412f28f84aeca292d1dff091a2451ee327c9d74d1e6a963",
+      "canvas": [
+        25,
+        10
+      ],
+      "rear_housing_slot_width": 10,
+      "new_housing_drawn_size": [
+        10,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv07-open-part1-crop.png",
+      "drawn_source_sha256": "8ada1ba7baebd052825c56a273434b926dcb59c558b60ed712596326c8195d4b",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 64,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyCannon",
+      "level": 7,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyCannon_07.png",
+      "sha256": "9bcd7b8dbb867aa387b8112aa1a8075b3da3cd3ba19551c0b3fcce3e4d65f312",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyCannon.png",
+      "approved_source_sha256": "c2163c7775a87cb9504fa44b34f6b4e07ea878b744a3c236381c779bd0f25f6e",
+      "canvas": [
+        18,
+        10
+      ],
+      "rear_housing_slot_width": 7,
+      "new_housing_drawn_size": [
+        7,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv07-open-part1-crop.png",
+      "drawn_source_sha256": "8ada1ba7baebd052825c56a273434b926dcb59c558b60ed712596326c8195d4b",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 35,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyMissile",
+      "level": 7,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyMissile_07.png",
+      "sha256": "9f16300ba56a2dc0a51775569985156f183a48cdf29fa3f7e7bcbc12f2742050",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyMissile.png",
+      "approved_source_sha256": "a4e0c7772ee6e42f28b5809dfb5f2585d12d2c16994c11efa89893389081728c",
+      "canvas": [
+        16,
+        12
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv07-open-part2-crop.png",
+      "drawn_source_sha256": "4019f55fc6be23ecc9dcd52e826d3e70f4477ffcfe345822b5f9e93849cb971c",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 30,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyGun",
+      "level": 8,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyGun_08.png",
+      "sha256": "0da0eda86194872c6d2b43d89fa180cb464e75519fa2a517b35a6452a37a4b93",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyGun.png",
+      "approved_source_sha256": "e9abf0405127735c6412f28f84aeca292d1dff091a2451ee327c9d74d1e6a963",
+      "canvas": [
+        25,
+        10
+      ],
+      "rear_housing_slot_width": 10,
+      "new_housing_drawn_size": [
+        10,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv08-open-part1-crop.png",
+      "drawn_source_sha256": "f88237bfdda37e5937bf93595a9df1d0ff774dcc7c4c68d672300f30c9172ed2",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 65,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyCannon",
+      "level": 8,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyCannon_08.png",
+      "sha256": "5a7110f2089638752396951e17cd63cc2887d152978f8970c18a5a53d5d919ec",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyCannon.png",
+      "approved_source_sha256": "c2163c7775a87cb9504fa44b34f6b4e07ea878b744a3c236381c779bd0f25f6e",
+      "canvas": [
+        18,
+        10
+      ],
+      "rear_housing_slot_width": 7,
+      "new_housing_drawn_size": [
+        7,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv08-open-part1-crop.png",
+      "drawn_source_sha256": "f88237bfdda37e5937bf93595a9df1d0ff774dcc7c4c68d672300f30c9172ed2",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 35,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyMissile",
+      "level": 8,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyMissile_08.png",
+      "sha256": "919c5ce9393823ecf6df7c0c7750b6aa36b86de6739f619ad18574753c7d5900",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyMissile.png",
+      "approved_source_sha256": "a4e0c7772ee6e42f28b5809dfb5f2585d12d2c16994c11efa89893389081728c",
+      "canvas": [
+        16,
+        12
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv08-open-part2-crop.png",
+      "drawn_source_sha256": "9d26c6b6736c6ce308d3d9718c48e9f8a54eec0c383b6cdf6b6824dcddda4696",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 30,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyGun",
+      "level": 9,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyGun_09.png",
+      "sha256": "fc50e5ab17e28776707db1b30856f4a34f795accce09355efeacc288120105e7",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyGun.png",
+      "approved_source_sha256": "e9abf0405127735c6412f28f84aeca292d1dff091a2451ee327c9d74d1e6a963",
+      "canvas": [
+        25,
+        10
+      ],
+      "rear_housing_slot_width": 10,
+      "new_housing_drawn_size": [
+        10,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv09-open-part1-crop.png",
+      "drawn_source_sha256": "20126d2dfce0cb7e9685d4dca215baf6b43d456908b97ad1dfd50810c6b989cb",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 65,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyCannon",
+      "level": 9,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyCannon_09.png",
+      "sha256": "48c95824adda6c40e968f522a6ac1bc2b246984e1edadfecc7749b86f59f5067",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyCannon.png",
+      "approved_source_sha256": "c2163c7775a87cb9504fa44b34f6b4e07ea878b744a3c236381c779bd0f25f6e",
+      "canvas": [
+        18,
+        10
+      ],
+      "rear_housing_slot_width": 7,
+      "new_housing_drawn_size": [
+        7,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv09-open-part1-crop.png",
+      "drawn_source_sha256": "20126d2dfce0cb7e9685d4dca215baf6b43d456908b97ad1dfd50810c6b989cb",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 35,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyMissile",
+      "level": 9,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyMissile_09.png",
+      "sha256": "0f8fcb8be023dcc76061ea24d216d59b4a523aee93f0fd75335a9016e2f2fabb",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyMissile.png",
+      "approved_source_sha256": "a4e0c7772ee6e42f28b5809dfb5f2585d12d2c16994c11efa89893389081728c",
+      "canvas": [
+        16,
+        12
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv09-open-part2-crop.png",
+      "drawn_source_sha256": "adb2e6f1f803ec19e37c36806ec6d167915669eb5437bc21981896a0bd54718f",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 30,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyGun",
+      "level": 10,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyGun_10.png",
+      "sha256": "6fcd9e010f20247a2f5a2d3fbef78bbafb66ae0cd4ed35a953c7bc79422920b8",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyGun.png",
+      "approved_source_sha256": "e9abf0405127735c6412f28f84aeca292d1dff091a2451ee327c9d74d1e6a963",
+      "canvas": [
+        25,
+        10
+      ],
+      "rear_housing_slot_width": 10,
+      "new_housing_drawn_size": [
+        10,
+        7
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv10-open-part1-crop.png",
+      "drawn_source_sha256": "66d805360365e0402f41a0ff1452d68705746646509a26f64e9e8154e5a3f4f6",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 65,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyCannon",
+      "level": 10,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyCannon_10.png",
+      "sha256": "29a997c3c43d178c473a789cc836bd6563fda89ae547fbf38fd6ebd7b26a2217",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyCannon.png",
+      "approved_source_sha256": "c2163c7775a87cb9504fa44b34f6b4e07ea878b744a3c236381c779bd0f25f6e",
+      "canvas": [
+        18,
+        10
+      ],
+      "rear_housing_slot_width": 7,
+      "new_housing_drawn_size": [
+        7,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv10-open-part1-crop.png",
+      "drawn_source_sha256": "66d805360365e0402f41a0ff1452d68705746646509a26f64e9e8154e5a3f4f6",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 35,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    },
+    {
+      "part": "AHeavyMissile",
+      "level": 10,
+      "path": ".local/upgrade-plan-20261109/ah10/ready/AHeavyMissile_10.png",
+      "sha256": "d9f80660a3da18fca8298372a3addfe1ac325e0ccfb1999b76992bbd24e1bcb4",
+      "approved_source": ".local/upgrade-plan-20261109/references/AHeavyMissile.png",
+      "approved_source_sha256": "a4e0c7772ee6e42f28b5809dfb5f2585d12d2c16994c11efa89893389081728c",
+      "canvas": [
+        16,
+        12
+      ],
+      "rear_housing_slot_width": 6,
+      "new_housing_drawn_size": [
+        6,
+        5
+      ],
+      "drawn_source": ".local/upgrade-plan-20261109/ah10/lv10-open-part2-crop.png",
+      "drawn_source_sha256": "abbb4dfb07c4fb87fd3496181f4ed165dc7ddf0a156beeac1c7f6e078aa37f31",
+      "approved_alpha_differences": 0,
+      "approved_front_barrel_or_launcher_differences": 0,
+      "changed_pixels": 30,
+      "new_muzzle_sockets": false,
+      "scope": "generated rear housing composed within original approved alpha; front barrel/launcher copied byte exact; not a whole-weapon shrink or color filter"
+    }
+  ]
+}

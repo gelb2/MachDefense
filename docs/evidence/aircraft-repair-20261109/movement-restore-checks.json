@@ -1,0 +1,10 @@
+{
+  "movementByteIdenticalTo": "38903e4",
+  "dodgeProfilesByteIdentical": 64,
+  "protectedFiles": 2652,
+  "changed": [],
+  "originalScenariosUnchanged": 160,
+  "coreTestsPassed": 54,
+  "chromePassed": true,
+  "webkitPassed": true
+}

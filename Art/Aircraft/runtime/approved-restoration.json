@@ -1,0 +1,70 @@
+[
+  {
+    "name": "ALightBody",
+    "source": "Art/Aircraft/parts/light-modular-v3.png",
+    "source_sha256": "031ae669fda0db51f2a819c6eebd2718c33134951b0e3e9eb216e296b78f1853",
+    "crop_xywh": [
+      227,
+      34,
+      355,
+      1155
+    ],
+    "source_measured_width": 250,
+    "target_width": 27.333333333333332,
+    "scale": 0.10933333333333332,
+    "alpha_width_north": 39,
+    "alpha_length_north": 126,
+    "sha256": "f51745eb56cf6a99437fec2c2c7cac4a56d9394bc4663eebac27b634e0649772"
+  },
+  {
+    "name": "AHeavyBody",
+    "source": "Art/Aircraft/parts/heavy-body-v4.png",
+    "source_sha256": "cd5c4db5a41083f18a53d8994fe6a62a13e47c5662c16330f99932c5105da4d7",
+    "crop_xywh": [
+      51,
+      668,
+      534,
+      491
+    ],
+    "source_measured_width": 250,
+    "target_width": 78.0,
+    "scale": 0.312,
+    "alpha_width_north": 166,
+    "alpha_length_north": 153,
+    "sha256": "1a32b27024e3a36c81eb352c8792a428a728e9f88db58367f656febfe1ae2cca"
+  },
+  {
+    "name": "ADuctBody",
+    "source": "Art/Aircraft/concepts/orca-gray-parts-v2.png",
+    "source_sha256": "a01e6b22d47b024fc0f0ec0d206d58db5c1e4bdd19222f978dde9178e5e02fb6",
+    "crop_xywh": [
+      50,
+      120,
+      530,
+      580
+    ],
+    "source_measured_width": 150,
+    "target_width": 27.333333333333332,
+    "scale": 0.1822222222222222,
+    "alpha_width_north": 92,
+    "alpha_length_north": 102,
+    "sha256": "44ca4bb01630edd3b1876ef73df6a173e96643423f8ecd19e46cc9af00db03b7"
+  },
+  {
+    "name": "ATransportBody",
+    "source": "Art/Aircraft/concepts/orca-bomber-parts-v1.png",
+    "source_sha256": "1209324cef451189c175a7c4125062d88cdefe6a3f4863a90add4e7a4643629f",
+    "crop_xywh": [
+      40,
+      40,
+      550,
+      690
+    ],
+    "source_measured_width": 129,
+    "target_width": 27.333333333333332,
+    "scale": 0.2118863049095607,
+    "alpha_width_north": 109,
+    "alpha_length_north": 136,
+    "sha256": "ba3027da0bfd2f4bd2b6cc345cd8381300c9a66bd83a64208db4b73b6c00e0be"
+  }
+]

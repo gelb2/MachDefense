@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "references": [
+    "E_Tank_01",
+    "E_Tank_32"
+  ],
+  "aircraft": [
+    {
+      "name": "AircraftLight",
+      "frames": 72
+    },
+    {
+      "name": "AircraftHeavy",
+      "frames": 72
+    }
+  ],
+  "headings": 283,
+  "links": 283,
+  "overflow": false,
+  "errors": []
+}

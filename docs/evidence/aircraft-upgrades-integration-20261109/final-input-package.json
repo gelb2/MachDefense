@@ -1,0 +1,744 @@
+{
+  "baseCommit": "629cd49f43ca1568cb28f4ba15821b5ed77235b8",
+  "uncommittedIntegration": true,
+  "package": "/Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/.local/remaining-20261109/performance/scout-build/dist",
+  "packageSHA256": {
+    "game.wasm": "e6d9de4dd3b1ea00d222952a4ca51f09a3cb86d64cb86fc1b63203b6263877a6",
+    "game.js": "a632ab0146d5296939b70156dd2c29221cd9bee609de8e86ebb29da62c0099d1",
+    "game.data": "e47d715f92fe6d1cd42c5faa5d147989871fa54df69f6cc64a2e6c4831a70afa"
+  },
+  "aircraftImageResources": [
+    {
+      "file": "/assets/Images/ADuctBody.png",
+      "sha256": "1731952753ea0b5a1197512b63efd4153a9079c1050dbf141a7c1d5d38d055c5",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctBodyBankL.png",
+      "sha256": "c5140e726bf033ad27630e72f7fc6854148d5686b165b53c408ebb444f2a194c",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctBodyBankR.png",
+      "sha256": "1d377b535bf30955522fa2c39aaab2d53f175bc1bf6967a9e0750358da6eeddf",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctCover_01.png",
+      "sha256": "50755b8afcaacf85602e3b33e92f38576fe2d77ab1c72822fda18627a10ea8c9",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctCover_02.png",
+      "sha256": "3a4c52b5eaedf32c02e2395068c5de5d6495110327db7dfca2dfe48b91988d2a",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctCover_03.png",
+      "sha256": "6c9cbee15bb31237a9b0338f51e657bda79d10acf6f87bb5319d4f4b7cd86e28",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctCover_04.png",
+      "sha256": "cd1654eaa072df4471d81fc899448e1e850e2d08feeb50b18d5027f9b29b5065",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctCover_05.png",
+      "sha256": "ef15fafa79d72e50d9e2958ffd5c25c6c8e3859c8857f1a80400423bd1b587b9",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctCover_06.png",
+      "sha256": "d62d1221d31d6dfcb1d9b47f0c26a97fb64770a61c6cc4bc56d7807005ab6429",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctCover_07.png",
+      "sha256": "a00ec6f95864e4a6c4080aeefb67da33b255fa286c25c5df4419e96a608fcac0",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctCover_08.png",
+      "sha256": "343a40135f49b30f0cd396b38d7f5ae78ddfc9d20962287f0865c09bcfe5981e",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctCover_09.png",
+      "sha256": "41eeb73d0fae4444d09099a6f1e060cfe4e1e4eb3579d41a81e7c65c3fd2e1de",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctCover_10.png",
+      "sha256": "d5dd02ba1f13b99f9a48d2f35210394905950f2a84cdc72b2f80a71a32056835",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctFan.png",
+      "sha256": "7d27159d1c310f29bd377b75a9288318affcfae1c3213b6d0d2e472188d8e551",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctGun.png",
+      "sha256": "7d9bee093f414a82f498b028e62a5cdc08f7a3705b128f39db41c38f7c24dd53",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissile.png",
+      "sha256": "3820ef8b43aa43d085bedc5073e0a9bdfd83a99c782f6fb62de44ee3e052fffd",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissileR.png",
+      "sha256": "3820ef8b43aa43d085bedc5073e0a9bdfd83a99c782f6fb62de44ee3e052fffd",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissile_01.png",
+      "sha256": "5293eb5e7a302029cf533c7e1883b18af4b34825ff39d165beccccbe0e61a0dd",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissile_02.png",
+      "sha256": "dce1b4a38392139aa7606f8046b69728a6065839add231b502fecb40437726a2",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissile_03.png",
+      "sha256": "edaf32ba6359dc7e140caf6e8ccaae38594c71fde59b0fafe798b7e455d9e3f2",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissile_04.png",
+      "sha256": "59733e6df82788081d3adbc4bb2dbb90164827d2b2ed90e66dc7ca1378a9ba3c",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissile_05.png",
+      "sha256": "1d4de13765b4752bc2c3b939419e0867ef898cb59e6d9783f858e4d69725378a",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissile_06.png",
+      "sha256": "92737c4508ec17d1ed9af0123c983601702e11e8a149eb0b6f89944d8d7d1502",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissile_07.png",
+      "sha256": "0cc17c211dd387e056af02efd2452c6296f117ffc881c3b5eded40f5ad479a63",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissile_08.png",
+      "sha256": "55183c0e5242b1cbc627ea077908a19a242797fc797ae55e085f12217d420ee7",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissile_09.png",
+      "sha256": "370e2af078d762ec8e6c9a66d90a06560f432a6e0950bc198afc12d83f3b519f",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ADuctMissile_10.png",
+      "sha256": "6c6f426441ef8bcb4aeab9ac042e9ee693cfec4a54e9f294aacec5d17dbae180",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyAirStrike.png",
+      "sha256": "a63573c2fd078c3085ca5786f1a461819a00b5394dd785a63744b3f0718dd894",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyBody.png",
+      "sha256": "a92d644d68ad1c3e54b60aab0d571772ca62a8498efc28c067cdc6e32cd8f48e",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyBodyBankL.png",
+      "sha256": "cc831ad36449bb3ad01807eb6360ecbfe1599c86cb4785dc2af95d07487657be",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyBodyBankR.png",
+      "sha256": "8b8f15256a6d9d800fe2f530b30a5e3ffcd97162d2e9c0bab36a51e14816195c",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCannon.png",
+      "sha256": "01a59447875d67daae1b7aede450d6c7f1ecffee67127c7c494ff061ade0b6da",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCannon_01.png",
+      "sha256": "f53cc4f2e6840ffcdb79858ff6bce51ef2b3de317a1fe4de7c9610a0424b3527",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCannon_02.png",
+      "sha256": "5df90320ef0392c6c1ce9f4ff149c516de2e6558808993f6efdad3fc0892c7a1",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCannon_03.png",
+      "sha256": "7f348903edb54277331d82ab9509a15dc065d398de5b82c1d1759841966af763",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCannon_04.png",
+      "sha256": "e9f456df2eec94232228f00bd70f693cd53a5ab050cff8141026558aff5db7bf",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCannon_05.png",
+      "sha256": "84b9eceb9af1844650f7c833449a98d17cc3cff9e4e930004cb8b1533aed124d",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCannon_06.png",
+      "sha256": "b4405f8c090171645d53d57365ee2112aab2c9ee5f9a52b0ca7c8bacba958eb0",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCannon_07.png",
+      "sha256": "23d6bd70927a1c9f5781c70123ed98ebc0b57d7e7bcd841164d4a14c43e72922",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCannon_08.png",
+      "sha256": "05f1063287a3d4317fa3035fb06d2dd117b48c79d946c0e4494407ac43342de6",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCannon_09.png",
+      "sha256": "7495433fa8c33498387f9507845afd1454b13f2a7b528bec232a037d17142d5f",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCannon_10.png",
+      "sha256": "4ceb8c6f369596e20c729c7edf6b312c3854094f782b0db481e981e77c48a60a",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCover_01.png",
+      "sha256": "b87249e698c0c65caa705aea696d0f3a191e4fc8a4719cb560d676ed29247f05",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCover_02.png",
+      "sha256": "06d5b4fbfcee6bd39e5db873c5b29b524627ef6c5bde91ae82fff5f331c8d09d",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCover_03.png",
+      "sha256": "d4c6f82e9a655a74eb4244c13b7fcc0087cc050d77810aa46fda4fe28e4e963e",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCover_04.png",
+      "sha256": "0348b46e6b54e2c0b511107289e02e98839c1c4dfa539872fa7bd14436a418c0",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCover_05.png",
+      "sha256": "0c699570b23195f4bad93423b9e1b85da46a01538509a8d998043f0be47d315e",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCover_06.png",
+      "sha256": "b1c552dff4b32b091060141b11d706bb1c7e4125753ba2543ca9601b5d8bbe53",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCover_07.png",
+      "sha256": "27d0570a2b6f42b5d0de1a02b251e402e50bff921f0ec1ae25b323f177270909",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCover_08.png",
+      "sha256": "a56e93476777309ead0b71987eda2ac649915d84f9b3a1ce05d49d0f75551d7d",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCover_09.png",
+      "sha256": "1a0ed703349f1520688bbbd3624e887d03d3b8ed7eb17e8f4ac722f3e59d8fbe",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyCover_10.png",
+      "sha256": "408cdd9686587f4e14435637bc1e0970ac085ef350986417d00707c5336d5048",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyGun.png",
+      "sha256": "e881d01f4fc9870fe692b3076d07a7773798c4ce85edda42d3ddf7f9c119770e",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyGun_01.png",
+      "sha256": "f761e46552656eca68b045bf485215ac2ffef3c98a12b5620b97d8d91ede9d49",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyGun_02.png",
+      "sha256": "c8aba12544a78580d4cbcc49c06a18f6314d5fc9e6bd7a7add8684b08295717c",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyGun_03.png",
+      "sha256": "884f478b42524d368a111ac663d93edff54f00bc788f9911bde4c86abb8e9428",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyGun_04.png",
+      "sha256": "fcb5cb14a1b0706e18ebef3da930a6b0e7ec1c2f13805eb918837514beaf1747",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyGun_05.png",
+      "sha256": "8fb2d2e60909d4d13a6d9c3c467820f7733adc2f1e776a362322f0db2478e15a",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyGun_06.png",
+      "sha256": "098693f6a156f264c4ab5b3a4cad86e38b5d8fbefca72f56f859e6d904b94a07",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyGun_07.png",
+      "sha256": "883d5f621e648e10a4b6afff789716dfe2f8295c3ceb62ca634b75add4283c73",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyGun_08.png",
+      "sha256": "defad54cb42d6b42643faa7519d47ed9df0ed0ed20eb1de93c8a921ccffd405b",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyGun_09.png",
+      "sha256": "c567b67e6cc42526a5c3547f28cdf12da87fba606e748eecad7910cea7ccce27",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyGun_10.png",
+      "sha256": "e6384bf372b560be0ba492955eeb27487b0c71e469aac27184b8307003136f49",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyMissile.png",
+      "sha256": "4199a072ece32db503cfb1e36f167be86b20e1b11c7b232293d0088adc795d3d",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyMissile_01.png",
+      "sha256": "769783e76944caebf27aee83906012a34e2272351a050191026fe3d3e414759b",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyMissile_02.png",
+      "sha256": "023695b38bdd2390049bec2f969404dc1195b9f81c7c65b60ecf8fa9dfd97d43",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyMissile_03.png",
+      "sha256": "205fc7a3514681ccae9785df7123112decb49650d71bb968cc4b95ddec061d89",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyMissile_04.png",
+      "sha256": "b614074fad3a4583faa3a484b008c07436385a1b106cc4e72ff1211fb7a00799",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyMissile_05.png",
+      "sha256": "97060eb24d6b95f90e40b39c35304b2609e9e85f78cb0d303ce70ae3cbea6746",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyMissile_06.png",
+      "sha256": "72b2e779f00eac8d323fdd3aec288108bddd4218b3ecb91179aac3ff0b5635c7",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyMissile_07.png",
+      "sha256": "72cbc73a66e71dbd384935d720c04fbc960fc0952b738e94459178587c7b9627",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyMissile_08.png",
+      "sha256": "d49d4dc800b40f6905cc4681acf92222091db6efe92cbef33f6b780788dbc824",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyMissile_09.png",
+      "sha256": "fbf837ca3473e709cbedf7cdab91c46699066a772f335af7d38cb6fc41356daf",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyMissile_10.png",
+      "sha256": "b545c4fc7ad4809308b7f9d950bfc5a8eed970951030353ac670a63a454e0e7d",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyRocket.png",
+      "sha256": "adfe0c008760a6ae05f79bcbf30f6c5ee68cbde10a9ae9870b8af30613b13c49",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/AHeavyRotor.png",
+      "sha256": "d049e683583bd48886d3a034c6822c58080b3915c9ea7df167cab3c9d1d13c25",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightBody.png",
+      "sha256": "1080dd9446eb0fcadb7edcc483da204d4f560aaf18722d7a27a687676cb537ff",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightBodyBankL.png",
+      "sha256": "9eb749b28031f7acec3313422414c78ee1a2b49c21ebca1b0c1de6000ebea97d",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightBodyBankR.png",
+      "sha256": "0a9a2d342985bce4b86d388c0047a2dc370f1d745d6c19e13206047d4d0dacd1",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightCover_01.png",
+      "sha256": "cc50f9477f6b47d5a5a03a20235c4ed3b4e37e921d0787260432018a93097a01",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightCover_02.png",
+      "sha256": "0c657a4dc40d25db76aceb758944a0d06b73fb42cf6d48d8d32e1f32be2e3e86",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightCover_03.png",
+      "sha256": "64e26a6602e8b7257543b2ced2be1f2ce5d72312414505e7360a343dd3d1a639",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightCover_04.png",
+      "sha256": "aaa8bc0a5ccc7133a873b1032c0af4d515ef095f6bea29bcc95487af386c8895",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightCover_05.png",
+      "sha256": "3a86a1afa1b801d87957d70e0e2a269e23e48ca41c030ebde94b0dcb7086202c",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightCover_06.png",
+      "sha256": "e1bd9b7f6067845a0e730babca32075bdf2e8d740900efeba332fb2ffb4d3d0d",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightCover_07.png",
+      "sha256": "28f7b25f6492eb7331546ea87c204696fd9813a74cab095242215ca21b8a2a74",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightCover_08.png",
+      "sha256": "e6b1e7d2181e87fc8044508c003e585788ceb038f60ac306d2cfd708b93411ce",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightCover_09.png",
+      "sha256": "79eac651559d978db45b921166118882cb604271d1eedb22bc1ce3d74b618226",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightCover_10.png",
+      "sha256": "e21850166af8f1cdef7e11f4c2fb95bc3ff28d18eb634a108444ed1298553a7c",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightGun.png",
+      "sha256": "a2ecf277cccf9d67d4d9dce5cc7ad68d9a68f1bf216f5cd9823b84790b164c65",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightGun_01.png",
+      "sha256": "6ecbe2723c7ac382f545314d13c3d53fba096addd8a9a5a609d3cc1043d2a8e8",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightGun_02.png",
+      "sha256": "b6b8ad8c4859ac2125345297456c1b34fead5043dfce0d09b8b748ddb0dee4d3",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightGun_03.png",
+      "sha256": "b7b2b321ae86ae41ac670dae22fb38b426eec54f3f31336c57c1a36dd767b4fd",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightGun_04.png",
+      "sha256": "768341d37670e2fffeb51ea6e6273a877751737583ddc4834f225af5e29fdb48",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightGun_05.png",
+      "sha256": "9cb619a918bf14b45e26911a29cfa25eda008e3ad4e79f3a28587f5459f90172",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightGun_06.png",
+      "sha256": "e7422f137f87e37c4c0ed466b7078fec08ef81333200c99c74d46d1536bfe5a2",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightGun_07.png",
+      "sha256": "3bee377eb540475bd7ddb2e9cf0419c44499fca5f6aff704a0c88859765c1cbe",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightGun_08.png",
+      "sha256": "d1283d1ef795848bf07769edf22bdbfc7b722854015d0632ebc74f20c36a8c1a",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightGun_09.png",
+      "sha256": "1f58ec7f3924ec983a08976254d748fc0b9bf4f5f5af6985256545c048ef8b33",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightGun_10.png",
+      "sha256": "31834591cc55a6e2fa3cd0f81ea8147ea82636171fab20ae0fab6a2240f4af89",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightMissile.png",
+      "sha256": "f900f0f1c5f299eef82a7fae9ffb4c97d74bbeba042b8b0b7f1473960415fa20",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightMissile_01.png",
+      "sha256": "babb6397e3c2d37a6b705de9df553dc0ae82ea3909560eecfcf4dc95599ea66c",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightMissile_02.png",
+      "sha256": "33b35275ec95ea5ca81e8dfb89321a4c358b7a8af5cdeef2e161bc1ad32df4db",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightMissile_03.png",
+      "sha256": "03de5fce36a0260d3053960a804fcd07afb9796a7d635ed5d487da9614f55b24",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightMissile_04.png",
+      "sha256": "2245b0a3343eaf6ddcb1edecffe51d8214c4092d2f52db92d21585d578706bfb",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightMissile_05.png",
+      "sha256": "3a19515c76babce9c368bbdeb2a9bcedfede04a581eb3e4189e8d8c39ac7539d",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightMissile_06.png",
+      "sha256": "732c3f745978e54fad99892c0cd58fba6bd6f837e36a434b86dca54b01f12c6f",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightMissile_07.png",
+      "sha256": "1f800f41aee9b8832703a4632023c53de66077ede136cec33505dbf8a9ae2b93",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightMissile_08.png",
+      "sha256": "24be6f495db9360258d65723c9012ca4a2d46e2fbee374056972768048ebc7f6",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightMissile_09.png",
+      "sha256": "b5a1a017bf115862f29a3cf235412736b879dafc37fb3823f185d36de0edea2d",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightMissile_10.png",
+      "sha256": "52bff3a210b15cb4e83618817beae6dd83bf39e3fb931b52b00cd9ab291f02db",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ALightRotor.png",
+      "sha256": "a4ee0d905afb2607f72ef96b4a4518101647dd30c09b36e1de64fc3ec3efa405",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportBody.png",
+      "sha256": "905e2f4dd59eb01804c19a004aff074db684da6a08118afc7ce99fea10c9fbad",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportBodyBankL.png",
+      "sha256": "f412caaa01fd412e95a06f5f846c4cb04e454d32565e910f70088f7af1692170",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportBodyBankR.png",
+      "sha256": "a258ab5c2c3b5b7e8be0034c7f4f6a820658d1af94cda6303824892cc3936ec6",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportEngine.png",
+      "sha256": "30a658ee7fea5834d289feadd480b93db472792766f01fdadf33736ee02a9c7a",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportFan.png",
+      "sha256": "d3da6d1eb4ee4a91e4fec53bbbfd6fca2e073fce950d8f98199f6a75ba244b65",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportGun.png",
+      "sha256": "bd5aeafceadf08195e59b62c8cc1ecc9666f3520fef341c508a1be6afd164a8b",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportMissile.png",
+      "sha256": "6e12e1c522ffc13cc3e5dabe0e3f58c83a1e8ece0f9a0ce43933c854f161cf24",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot0_01.png",
+      "sha256": "2b70655a5222a620d29a8f4b244e1dcec5286d667c7461cd640eeb052bfa5ed1",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot0_02.png",
+      "sha256": "7fc56a9edd09b77940e295ed22fa50a22f6edbef0d2697d90e4e46b01215947e",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot0_03.png",
+      "sha256": "a93383687baa4f8a1411839ffe5837abfb87d23507b32c6a38aa713724b8cebe",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot0_04.png",
+      "sha256": "70508c0d8c46dd6136e1aac5418ba338ef03daf372e879162a515973d1c26655",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot0_05.png",
+      "sha256": "91adafa44d943145d1d037cb9f71ecf4c25ea606c8bd3f34e9e75cead8970487",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot0_06.png",
+      "sha256": "25d199a088550014f57dc19ebf87b1e0a3cb5a1b00bf641c599d32e6c6c436b4",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot0_07.png",
+      "sha256": "3b16c657a45982e02d65647157a972a157da0997a484aa11acea7a55ddd81c42",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot0_08.png",
+      "sha256": "3187edf648a5f8444a352c22b412175523d9e7068a6d5fc11d6d866c20d9b2cd",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot0_09.png",
+      "sha256": "3085dbc3abad1308cc2271687243ad90e6fa83a1941f1867ae7142dfb315de83",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot0_10.png",
+      "sha256": "0715ff9ab6ab9f65a2a4b0297afabedbe84ce235550608aa0d15b64346f8efbc",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot1_01.png",
+      "sha256": "891bee4dbff18fef8e93978f24fed11bbe39003a3b0b35058921d76116cbe690",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot1_02.png",
+      "sha256": "6bd82737f0db3646c9c6cdfdf99d87ea08572ee134ba97a32b411c61c339a57d",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot1_03.png",
+      "sha256": "1b00f10886d0bce3027214f56eacee3f61b8f40ddac22c75b953d0c5cbd5486c",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot1_04.png",
+      "sha256": "a052a95ba228b83f55dd41e73e6b28878de8cdcb7e5b239082c6aac72140a958",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot1_05.png",
+      "sha256": "6c11b7fb615a6ffb6773e6e2bdabd220cc7e4fbca526bdee5549ad0e29c046be",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot1_06.png",
+      "sha256": "733d22116564b00c6f3556d660517a3518425c963cecd0e4081439621923c558",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot1_07.png",
+      "sha256": "a0c99a29f974aa3f5607ca8c0cdaf4f6b1d4a98e5264a637c463bcddde118ff3",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot1_08.png",
+      "sha256": "d5bf77d510a747786376277b721d150e94b849cae6aea85fd07e15f7d78a5659",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot1_09.png",
+      "sha256": "37b93e06651a0c9b4cab2cc78cacc36a80ab8c67a1b62e8f7a6d14aa4b6baa82",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportRoot1_10.png",
+      "sha256": "76f867ac331779850ad40687f7a2e56f39581d0b13cb336e0c3f477e0db5f5ef",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportWingL.png",
+      "sha256": "82b42840a4566d502aae31beb85e8451acce4d46bc8726e9aab7f70fd8901e4a",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/ATransportWingR.png",
+      "sha256": "2598eb67540db4586d5de32347e3732b2a6c24074f6d3415c5c847cded7beb68",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/Airplane.png",
+      "sha256": "931bd62d2f15c48b4262fad2ce27b5473ceca1bbd5e7f3d3fde742b65d2fc786",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/Ani_BuildMach.png",
+      "sha256": "3dbea36cb8b6ff3a385a6be9c774b42bec57676b39cf6f62669fd0e15cff487f",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/Ani_Formation.png",
+      "sha256": "d5165ea09317e75a4785ca5c267a71858534248e8118ce9196e2a878b165e9b8",
+      "resourceExact": true
+    },
+    {
+      "file": "/assets/Images/Ani_SpAttack.png",
+      "sha256": "7fbf53b6c0dc65386add6bb426eb9c90dbb097106af4267d32169322b15aaeea",
+      "resourceExact": true
+    }
+  ],
+  "aircraftImageResourcesAllExact": true,
+  "fixture": "Tests/AircraftVisualFrame.hpp level*1000+10+tile; existing gameplay paths",
+  "testScripts": {
+    ".local/remaining-20261109/performance/scout-levels.mjs": "761ca44c4a6ef2a79eb7d2f107fce81bb131c030b1f8d886d3cace3945ba25ca",
+    ".local/remaining-20261109/performance/final-aircraft-ui.mjs": "53449c65ce489518d750deffdba692462733238591d1a0bf7cdc8d3470e661c2",
+    "Web/tests/aircraft-approach.mjs": "50af72a3d125cc6c1e67ed377d7e5bb22e3e113b6d8bb7b514e007e809b9e3fa"
+  }
+}

@@ -35,6 +35,7 @@ void World::emitSecondaryImpact(const WeaponDefinition& weapon,Vec2 from,Vec2 to
     auto secondary=weapon;secondary.explodeScale*=.8f;emitWeaponImpact(secondary,to,0,.04f);
 }
 void World::updateCrash(WorldActor& a){
+    if(a.flightTactics){a.flightHeight=0;a.flightTactics->bank=0;a.aircraft.direction={};a.aircraft.speed=0;}
     if(random_.next()%20==0)emitDamageSmoke(a,true);
     if(time()>double(a.crashTime)){emitCrashExplosion(a.position);host_.playSound("SFX_ExplMach.wav");a.removed=true;}
 }void World::emitWeaponImpact(const WeaponDefinition& weapon,Vec2 position,float angle,float frameDuration){

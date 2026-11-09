@@ -1,0 +1,149 @@
+{
+  "status": "candidate-local-game-integrated",
+  "source": "scout-sheet-v1.png",
+  "sourceSHA256": "253432491b1101d22de0239f347517271ea58d5275c0f2e6ff3a76dc0e17831c",
+  "generator": "built-in image_gen",
+  "prompt": "prompt.txt",
+  "bodySeparation": "Exclude atlas gutter x405..524,y0..609 containing the separate rotor; preserve body alpha and RGB. No repaint.",
+  "assemblyScale": 1,
+  "bodySockets": [
+    [
+      0,
+      0
+    ],
+    [
+      7.21,
+      0
+    ],
+    [
+      28,
+      0
+    ],
+    [
+      3.71,
+      15.6
+    ]
+  ],
+  "gunMuzzles": [
+    [
+      7,
+      1
+    ],
+    [
+      7,
+      -1
+    ]
+  ],
+  "podMuzzles": [
+    [
+      6.5,
+      1
+    ],
+    [
+      6.5,
+      -1
+    ]
+  ],
+  "parts": [
+    {
+      "name": "ALightBody",
+      "file": "Resources/Images/ALightBody.png",
+      "sha256": "8e90729121e037158c94804bba64b05facd0e5e99bfa7b2059805e278468badd",
+      "atlasCropXYWH": [
+        25,
+        35,
+        500,
+        1490
+      ],
+      "clockwiseRotationDegrees": 90,
+      "canvas": [
+        62,
+        39
+      ],
+      "directSourceResizeNorth": [
+        39,
+        62
+      ],
+      "resampling": "One Lanczos downsample from atlas to 39x62, then rotate 90 degrees",
+      "initialV1UniformScale": 0.05906040268456376,
+      "sourceScaleXYNorth": [
+        0.078,
+        0.04161073825503356
+      ]
+    },
+    {
+      "name": "ALightRotor",
+      "file": "Resources/Images/ALightRotor.png",
+      "sha256": "d148cb52b07ec832882fa6c15b5cbe8e628d028f0295f0baa11a9ec22635e5d2",
+      "atlasCropXYWH": [
+        452,
+        78,
+        536,
+        536
+      ],
+      "uniformScale": 0.11007462686567164,
+      "clockwiseRotationDegrees": 90,
+      "canvas": [
+        59,
+        59
+      ]
+    },
+    {
+      "name": "ALightGun",
+      "file": "Resources/Images/ALightGun.png",
+      "sha256": "de20d0d6a910c78021b7f0678b25af08bc0f9b4b637c14cc1e1929c657792e25",
+      "atlasCropXYWH": [
+        652,
+        704,
+        132,
+        250
+      ],
+      "uniformScale": 0.056,
+      "clockwiseRotationDegrees": 90,
+      "canvas": [
+        14,
+        7
+      ]
+    },
+    {
+      "name": "ALightMissile",
+      "file": "Resources/Images/ALightMissile.png",
+      "sha256": "98bbf1000fa443a4c74f1cc36446c587c783a7572867c9c9885b8800a3a86f9a",
+      "atlasCropXYWH": [
+        648,
+        1060,
+        132,
+        224
+      ],
+      "uniformScale": 0.05803571428571429,
+      "clockwiseRotationDegrees": 90,
+      "canvas": [
+        13,
+        8
+      ]
+    }
+  ],
+  "revision": "body-v2: user width +30%, length -30%",
+  "bodyRevision": {
+    "source": "same scout-sheet-v1.png",
+    "redrawn": false,
+    "requestedNorthWidthFactor": 1.3,
+    "requestedNorthLengthFactor": 0.7,
+    "beforeCanvasEast": [
+      88,
+      30
+    ],
+    "afterCanvasEast": [
+      62,
+      39
+    ],
+    "rounding": "61.6 px length rounded to 62; width exactly 39",
+    "unchangedSpriteFiles": [
+      "ALightRotor.png",
+      "ALightGun.png",
+      "ALightMissile.png"
+    ],
+    "unconsumedImagegenError": "body-v2-imagegen-error.json",
+    "highResolutionProportionPreview": "body-v2-proportions.png"
+  }
+}

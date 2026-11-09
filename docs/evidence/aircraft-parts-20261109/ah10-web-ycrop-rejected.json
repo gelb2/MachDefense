@@ -1,0 +1,38 @@
+{
+  "stage": "Y-only crop candidate, not accepted as visually preserved",
+  "bankingDifferentPixelsPerPosePerEngine": [
+    50,
+    51,
+    53,
+    61,
+    52,
+    54,
+    51
+  ],
+  "pose0DifferenceBBox": {
+    "x": 198,
+    "y": 628,
+    "width": 1,
+    "height": 54
+  },
+  "pose0MaxChannelDifference8bit": 90,
+  "combatDifferentPixelsPerLevelPerEngine": [
+    1,
+    0,
+    1,
+    0,
+    0,
+    3,
+    3,
+    3,
+    1,
+    0
+  ],
+  "functionalChecks": "Chromium/WebKit7poses warm uploads0 and 40level combat passed",
+  "performanceRun": false,
+  "resourceHashes": {
+    "AHeavyBody": "57c6a2a66a9eb95de2eac68470ad7cc06f99f78538818d4930e4ff064a43184c",
+    "AHeavyRocket": "883d6dd8d6e873a81aa62efe2bc00189d6ea0343d2dc78359037ba5f31bfc979",
+    "AHeavyAirStrike": "510f57fad4d874641f067ebb6443933f52ba57556a6fe1193828846c65eac4c1"
+  }
+}

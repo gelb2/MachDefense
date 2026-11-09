@@ -1,0 +1,115 @@
+{
+  "parts": [
+    {
+      "name": "ALightBodyV5_10",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          6,
+          -13
+        ],
+        [
+          6,
+          12
+        ]
+      ],
+      "texture": {
+        "image": "ALightBodyV5_10",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ALightRotorV5_10",
+      "type": 7,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0,
+          0
+        ]
+      ],
+      "texture": {
+        "image": "ALightRotorV5_10",
+        "grid": [
+          1,
+          1
+        ],
+        "firstTile": 0
+      }
+    }
+  ],
+  "weaponImages": {
+    "ALightGun": "ALightGunV5_10",
+    "ALightMissile": "ALightMissileV5_10"
+  },
+  "weaponSockets": {
+    "ALightGun": [
+      [
+        0,
+        0
+      ],
+      [
+        18,
+        0
+      ],
+      [
+        18,
+        0
+      ]
+    ],
+    "ALightMissile": [
+      [
+        0,
+        0
+      ],
+      [
+        17,
+        -1
+      ],
+      [
+        17,
+        1
+      ]
+    ]
+  },
+  "machineParts": [
+    {
+      "name": "ALightBodyV5_10",
+      "parentSocket": 0,
+      "zOrder": 1,
+      "children": [
+        {
+          "name": "ALightGun_10",
+          "parentSocket": 2,
+          "zOrder": 2,
+          "children": []
+        },
+        {
+          "name": "ALightMissile_10",
+          "parentSocket": 3,
+          "zOrder": 2,
+          "children": []
+        },
+        {
+          "name": "ALightRotorV5_10",
+          "parentSocket": 1,
+          "zOrder": 3,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "adopted": "fullcanvas",
+  "files": [
+    {
+      "path": "Images/AHeavyBody.png",
+      "packageMatchesResource": true,
+      "sha256": "57c6a2a66a9eb95de2eac68470ad7cc06f99f78538818d4930e4ff064a43184c"
+    },
+    {
+      "path": "Images/AHeavyRocket.png",
+      "packageMatchesResource": true,
+      "sha256": "adfe0c008760a6ae05f79bcbf30f6c5ee68cbde10a9ae9870b8af30613b13c49"
+    },
+    {
+      "path": "Images/AHeavyAirStrike.png",
+      "packageMatchesResource": true,
+      "sha256": "a63573c2fd078c3085ca5786f1a461819a00b5394dd785a63744b3f0718dd894"
+    },
+    {
+      "path": "RawData/AircraftParts.mcb",
+      "packageMatchesResource": true,
+      "sha256": "dbdf3042528993911051546785778b600d9b5d3f160e12ee9ad03f8ba26a1848"
+    },
+    {
+      "path": "RawData/Level10Parts.mcb",
+      "packageMatchesResource": true,
+      "sha256": "5a091aad4f7ec419904f92213b8e0c9fa08bad48f918a91d14089cd913f07e3f"
+    },
+    {
+      "path": "Tables/PartsList.tsv",
+      "packageMatchesResource": true,
+      "sha256": "29abea12bb1e8b9a5368c6c951d85f69f87a11169ef689f3390a21ae52163fef"
+    },
+    {
+      "path": "Tables/TileList.tsv",
+      "packageMatchesResource": true,
+      "sha256": "95e686bec5dc310ea94dcd15bea9712274117dec20c1cbea5d5656213c2eefda"
+    }
+  ],
+  "restoredSavedPackageFilesByteIdentical": 131,
+  "wasmSha256": "3784b7a2c0d9cf31b1a985de2ed27ad422e12d48084d8c99149515743497dc74",
+  "dataSha256": "fb955e1a31dd652100b64cd8c8ce2213450e39c4e2be1c192052aad2afa73cae",
+  "validation": "Reused original fullcanvas banking/combat/GPU evidence because restored package bytes and product input hashes match; no unperformed rerun claimed."
+}

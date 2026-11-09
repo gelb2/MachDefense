@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-09",
+  "kind": "browser-composite-preview",
+  "game_applied": false,
+  "original_source": "Resources/Images/Title.jpg",
+  "original_size": [
+    640,
+    960
+  ],
+  "generated": [
+    {
+      "path": "docs/research/title-composite-20261109/generated-wide.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1e9b1131f54273ebc1590f3137fa24b02ea94572c34b441825d15dc4619f72a9"
+    },
+    {
+      "path": "docs/research/title-composite-20261109/generated-tall.png",
+      "width": 977,
+      "height": 1610,
+      "sha256": "10cd4692890caaae1c848dc6ddd5a4cfc5ade40296b35c6ea9c0563cc41e84ae"
+    },
+    {
+      "path": "docs/research/title-composite-20261109/generated-tall-v2.png",
+      "width": 851,
+      "height": 1847,
+      "sha256": "1ea7863f73b7634dcb8ec50736665a60d7c98f3461da19c05a8a1f9bf337d2b6"
+    }
+  ],
+  "files": {
+    "index.html": {
+      "bytes": 5076,
+      "sha256": "c59139543a4cbb64e836d77c8530c041927cc3fb30104282e818bcaa9b4ccbf5"
+    },
+    "wide-natural.webp": {
+      "bytes": 167904,
+      "sha256": "9306e6ad1019a6363cf69ef890ed0846dcb347e0d49d3e65ce633332c5f2a36c"
+    },
+    "original.jpg": {
+      "bytes": 172705,
+      "sha256": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696"
+    },
+    "wide.webp": {
+      "bytes": 213918,
+      "sha256": "4e0f7785e9b6fc5c74d4d8aeab58221f67f0f86fdc6d1a696d86e2306c3b2003"
+    },
+    "prompts.md": {
+      "bytes": 4280,
+      "sha256": "5117e65b9b0adea66e572dc5e3d119e6ce5559b4078c71d0efc401e13a334004"
+    },
+    "composite.js": {
+      "bytes": 3663,
+      "sha256": "e7aeb7efffa5fa9fd15c2df9ae02519d51d3ce9e0f5766bb3e1481f550a87d52"
+    },
+    "natural-prompt.md": {
+      "bytes": 4624,
+      "sha256": "a35f86bcd514f8ac6bb684061fe2c8c8048572ca544936ca86e3a1e97371f915"
+    },
+    "tall.webp": {
+      "bytes": 132400,
+      "sha256": "1aef5dc6bb3b9acda6ecab8afb48530d9776ae3cb8ba0fc54aabbab441985a0e"
+    }
+  },
+  "wide_original_rect": [
+    500,
+    0,
+    600,
+    900
+  ],
+  "tall_original_rect": [
+    0,
+    129.5,
+    390,
+    585
+  ],
+  "blend": "Portrait unchanged: reflected 12 logical unit strip. Landscape: natural scenery only, no reflected or stretched edge.",
+  "report_encoding": "generated previews WebP q90; original JPG unchanged",
+  "tool": "built-in image_gen",
+  "revision": "natural-only-wide",
+  "accepted": {
+    "tall": "generated-tall-v2.png",
+    "wide": false
+  },
+  "wide_reflected_edge": false,
+  "wide_source": "docs/research/title-natural-20261109/generated-wide-v3.png",
+  "preserved_tall_and_original": {
+    "tall.webp": "1aef5dc6bb3b9acda6ecab8afb48530d9776ae3cb8ba0fc54aabbab441985a0e",
+    "original.jpg": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696"
+  }
+}

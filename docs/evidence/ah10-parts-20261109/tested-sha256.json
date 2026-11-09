@@ -1,0 +1,21 @@
+{
+  "baseHEAD": "06410eebfa3effd24b0f842d60cf7519ff9ee98f",
+  "sha256": {
+    "Art/Aircraft/runtime/assembly.json": "cd53f1dde15b7705d275646ac66207fddeb88de844887110ac989ed9fd41eec0",
+    "Sources/Core/Simulation/AircraftVisual.hpp": "01e14cfd4e123b24462a018058c74345bc02281396ca8db332a1f05d9abe7b96",
+    "Tests/AircraftDefinitionTests.cpp": "9ffc7c0a41d89be2f023442523c4e6ba26556ef2998c34f011daa7a2a3db96b7",
+    "Tests/AircraftTests.cpp": "c8e3dcb148ffbee14173b505413c4618ca69bb0eef4758b79330250aca09d615",
+    "Resources/RawData/AircraftParts.mcb": "dbdf3042528993911051546785778b600d9b5d3f160e12ee9ad03f8ba26a1848",
+    "Resources/RawData/Level10Parts.mcb": "5a091aad4f7ec419904f92213b8e0c9fa08bad48f918a91d14089cd913f07e3f",
+    "Resources/Tables/PartsList.tsv": "29abea12bb1e8b9a5368c6c951d85f69f87a11169ef689f3390a21ae52163fef",
+    "Resources/Tables/TileList.tsv": "95e686bec5dc310ea94dcd15bea9712274117dec20c1cbea5d5656213c2eefda",
+    "Resources/Images/AHeavyBody.png": "57c6a2a66a9eb95de2eac68470ad7cc06f99f78538818d4930e4ff064a43184c",
+    "Resources/Images/AHeavyRocket.png": "adfe0c008760a6ae05f79bcbf30f6c5ee68cbde10a9ae9870b8af30613b13c49",
+    "Resources/Images/AHeavyAirStrike.png": "a63573c2fd078c3085ca5786f1a461819a00b5394dd785a63744b3f0718dd894",
+    "build/save-transfer/AircraftDefinitionTests": "de39faa203fd8daddc554974495d0d237aae3520580a65e38611c99f9534a7fa",
+    "build/save-transfer/AircraftTests": "18a016de48348ff296150d31c29deb1489b59871731cd2c7d320168a05d31823",
+    "build/save-transfer/AircraftArmamentTests": "ef2c1a4b64a296778aa99a4312571f8ab97631545be82f06f2071c38a042f66c",
+    "build/save-transfer/AircraftFireEffectsTests": "7b40eb1d3b6fddfcaa4e8f5f4ec2712ff0b07d63b27284ebea717a6761f4def6",
+    "build/save-transfer/AircraftHandlingTests": "438fae57d5cd41654cb6d17980645fc8cfae4256e766e286d4bea81f46250aa3"
+  }
+}

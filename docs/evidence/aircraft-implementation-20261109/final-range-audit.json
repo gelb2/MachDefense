@@ -1,0 +1,107 @@
+{
+  "modifiedRows": 40,
+  "onlyModifiedColumn": "ShtRng",
+  "reference": "actual loaded world range, nearest representable integer",
+  "levels": [
+    {
+      "level": 1,
+      "shotgunWorld": 255,
+      "cheyenneWorld": 280,
+      "cheyennePhone": 140,
+      "cheyenneTarget": 280.5,
+      "cheyenneError": -0.5,
+      "plasmaAndBelugaWorld": 510,
+      "plasmaAndBelugaPhone": 255
+    },
+    {
+      "level": 2,
+      "shotgunWorld": 262,
+      "cheyenneWorld": 288,
+      "cheyennePhone": 144,
+      "cheyenneTarget": 288.20000000000005,
+      "cheyenneError": -0.20000000000004547,
+      "plasmaAndBelugaWorld": 540,
+      "plasmaAndBelugaPhone": 270
+    },
+    {
+      "level": 3,
+      "shotgunWorld": 270,
+      "cheyenneWorld": 297,
+      "cheyennePhone": 148,
+      "cheyenneTarget": 297.0,
+      "cheyenneError": 0.0,
+      "plasmaAndBelugaWorld": 570,
+      "plasmaAndBelugaPhone": 285
+    },
+    {
+      "level": 4,
+      "shotgunWorld": 277,
+      "cheyenneWorld": 304,
+      "cheyennePhone": 152,
+      "cheyenneTarget": 304.70000000000005,
+      "cheyenneError": -0.7000000000000455,
+      "plasmaAndBelugaWorld": 600,
+      "plasmaAndBelugaPhone": 300
+    },
+    {
+      "level": 5,
+      "shotgunWorld": 285,
+      "cheyenneWorld": 313,
+      "cheyennePhone": 156,
+      "cheyenneTarget": 313.5,
+      "cheyenneError": -0.5,
+      "plasmaAndBelugaWorld": 630,
+      "plasmaAndBelugaPhone": 315
+    },
+    {
+      "level": 6,
+      "shotgunWorld": 292,
+      "cheyenneWorld": 321,
+      "cheyennePhone": 160,
+      "cheyenneTarget": 321.20000000000005,
+      "cheyenneError": -0.20000000000004547,
+      "plasmaAndBelugaWorld": 660,
+      "plasmaAndBelugaPhone": 330
+    },
+    {
+      "level": 7,
+      "shotgunWorld": 300,
+      "cheyenneWorld": 330,
+      "cheyennePhone": 165,
+      "cheyenneTarget": 330.0,
+      "cheyenneError": 0.0,
+      "plasmaAndBelugaWorld": 690,
+      "plasmaAndBelugaPhone": 345
+    },
+    {
+      "level": 8,
+      "shotgunWorld": 307,
+      "cheyenneWorld": 337,
+      "cheyennePhone": 168,
+      "cheyenneTarget": 337.70000000000005,
+      "cheyenneError": -0.7000000000000455,
+      "plasmaAndBelugaWorld": 720,
+      "plasmaAndBelugaPhone": 360
+    },
+    {
+      "level": 9,
+      "shotgunWorld": 315,
+      "cheyenneWorld": 346,
+      "cheyennePhone": 173,
+      "cheyenneTarget": 346.5,
+      "cheyenneError": -0.5,
+      "plasmaAndBelugaWorld": 750,
+      "plasmaAndBelugaPhone": 375
+    },
+    {
+      "level": 10,
+      "shotgunWorld": 322,
+      "cheyenneWorld": 354,
+      "cheyennePhone": 177,
+      "cheyenneTarget": 354.20000000000005,
+      "cheyenneError": -0.20000000000004547,
+      "plasmaAndBelugaWorld": 780,
+      "plasmaAndBelugaPhone": 390
+    }
+  ]
+}

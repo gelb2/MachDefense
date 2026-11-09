@@ -1,0 +1,24 @@
+{
+  "decodedThreeStripsExact": true,
+  "cellGeometry": [
+    76,
+    112
+  ],
+  "atlasDimensions": [
+    1596,
+    112
+  ],
+  "grid": [
+    21,
+    1
+  ],
+  "baseTiles": [
+    0,
+    7,
+    14
+  ],
+  "oldBacking": 1572864,
+  "newBacking": 1048576,
+  "memorySaved": 524288,
+  "productEdited": false
+}

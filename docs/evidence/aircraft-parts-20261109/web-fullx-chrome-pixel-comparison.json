@@ -1,0 +1,44 @@
+[
+  {
+    "engine": "chrome",
+    "tile": 0,
+    "differentPixels": "0 (0)",
+    "pixelEqual": true
+  },
+  {
+    "engine": "chrome",
+    "tile": 1,
+    "differentPixels": "0 (0)",
+    "pixelEqual": true
+  },
+  {
+    "engine": "chrome",
+    "tile": 2,
+    "differentPixels": "0 (0)",
+    "pixelEqual": true
+  },
+  {
+    "engine": "chrome",
+    "tile": 3,
+    "differentPixels": "0 (0)",
+    "pixelEqual": true
+  },
+  {
+    "engine": "chrome",
+    "tile": 4,
+    "differentPixels": "0 (0)",
+    "pixelEqual": true
+  },
+  {
+    "engine": "chrome",
+    "tile": 5,
+    "differentPixels": "0 (0)",
+    "pixelEqual": true
+  },
+  {
+    "engine": "chrome",
+    "tile": 6,
+    "differentPixels": "0 (0)",
+    "pixelEqual": true
+  }
+]

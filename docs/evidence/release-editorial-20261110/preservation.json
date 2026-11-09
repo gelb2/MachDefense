@@ -1,0 +1,32 @@
+{
+  "docs/public/unease-and-typewriters.md": {
+    "prior_body_preserved": true,
+    "body_sha256": "a6adce2f729f9269f2375a76765229519e877ee3636a883bd28396b57d6ac880"
+  },
+  "docs/en/public/unease-and-typewriters.md": {
+    "prior_body_preserved": true,
+    "body_sha256": "38390303443fbc08fb07231e1809d6580ec57397daba6a3d6202767aea03c7a6"
+  },
+  "docs/editorial/helicopter-work-record-20261109.md": {
+    "unchanged": true,
+    "sha256": "043f609e06717aeff9b420527b15fbc90ebaeb4050d19e5d31398f4a38e5c809"
+  },
+  "docs/editorial/aircraft-refusal-materials-20261109.md": {
+    "unchanged": true,
+    "sha256": "33c427d845a64087d9c7ab1360d15dd5b5b5c1aa666cbc5994fee1e3b416fb9d"
+  },
+  "docs/editorial/ai-argument-method-material-20261109.md": {
+    "unchanged": true,
+    "sha256": "9505ababc0d951ecc8d1bd8a968b075ade73e1eaf1fe70e63bc9c5a2a23f183a"
+  },
+  "docs/editorial/unease-and-typewriters-draft-20261108.md": {
+    "unchanged": true,
+    "sha256": "40d546fe301ec7881a75ad698b448951ab7f2c81f800335bf82423d04f5ab741"
+  },
+  "README.md": {
+    "sections_once_and_below_remaining_work": true
+  },
+  "README.en.md": {
+    "sections_once_and_below_remaining_work": true
+  }
+}

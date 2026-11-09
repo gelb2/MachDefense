@@ -1,0 +1,17 @@
+[
+  {
+    "image": "Resources/Images/E_Tank32_Body.png",
+    "sha256": "c884a2536c8ebf8b86c25c50a66670ed9ce9122f83d31766772837ddcbf6486b",
+    "role": "Original MachDefense style reference"
+  },
+  {
+    "image": "Resources/Images/P_Body_18.png",
+    "sha256": "b0962cc7192096964019f938606ee5d9e80b598681c9d730a82916e3a2b5918e",
+    "role": "Original MachDefense style reference"
+  },
+  {
+    "image": "Resources/Images/E_Tank_Body_07.png",
+    "sha256": "61f4de4c45ecb8c1043eda8e1af99cefe14fe7a700a191cd966e01c5e3161848",
+    "role": "Original MachDefense style reference"
+  }
+]

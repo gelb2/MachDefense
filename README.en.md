@@ -4,7 +4,7 @@
 [한국어](README.md) | [English](README.en.md)
 <!-- language-nav:end -->
 
-[![Release v0.6](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.6)
+[![Release v0.7](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.7)
 [![iOS, iPadOS, Android, Web, PWA, macOS](docs/public/media/badges/platforms.svg)](docs/en/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/en/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript, Rust](docs/public/media/badges/code.svg)](docs/en/public/architecture.md)
@@ -20,19 +20,13 @@ I have no intention of making money from this. Money is only needed in this life
 
 [Read the developer's statement](docs/en/RESTORATION.md)
 
-## A different unease from HeavyMach1 — Neo-Lysenkoism and Ceaușescu’s typewriter
-
-I wrote about the refusals to create helicopter artwork and edit text in my designs, and about Codex shifting responsibility in the incident report. The essay covers why I designed these units, how the work stopped, and my criticism of tools that invoke science and morality.
-
-[Full essay in English](docs/en/editorial/unease-and-typewriters-draft-20261108.md) · [Incident report (Korean)](docs/evidence/aircraft-instruction-refusal-20261108.md) · [Troubleshooting](docs/en/public/troubleshooting.md)
-
 ## Quick Play — PWA and Mac
 
 [**Play MachDefense or install the PWA**](https://gelb2.github.io/MachDefense/)
 
 Open the link to install the game or play in your browser. On iPhone and iPad, choose **Add to Home Screen** in Safari's Share menu. On Android and Mac, press **INSTALL GAME**. Once the resources finish downloading, you can play offline.
 
-If building with Xcode or Android Studio is difficult, use the PWA or the [Tauri Mac app](https://github.com/gelb2/MachDefense/releases/download/v0.6/MachDefense-Desktop-v0.6-arm64.zip). The Mac app requires macOS 14 or later on Apple Silicon and stores progress in its app data folder. [Build and installation](docs/en/public/build-and-install.md) also explains how to install the native apps.
+If building with Xcode or Android Studio is difficult, use the PWA or the [Tauri Mac app](https://github.com/gelb2/MachDefense/releases/download/v0.7/MachDefense-Desktop-v0.7-arm64.zip). The Mac app requires macOS 14 or later on Apple Silicon and stores progress in its app data folder. [Build and installation](docs/en/public/build-and-install.md) also explains how to install the native apps.
 
 Thank you to [fastutlego](https://github.com/fastutlego) for contributing the HeavyMach web port. The WebAssembly host, WebGL2 renderer, input, audio and saves in [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24), together with the subsequent PWA and Tauri work, also laid the groundwork for bringing MachDefense to the web and desktop. I used that architecture for the MachDefense PWA and used the same web host in the Tauri Mac app.
 
@@ -88,11 +82,11 @@ I did not want a one-time handout. I wanted small amounts of credits and cells t
 
 | Platform | How to run | Current status |
 |---|---|---|
-| iPhone / iPad | Xcode workspace | v0.6. Regular and cheat apps installed on iPhone and iPad; upgrade, recovery and production HUD checks on both devices |
-| Android | Android Studio or APK | [v0.6 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.6). Regular and cheat apps installed on Galaxy; production, upgrades, audio, resume, victory, and defeat checked |
+| iPhone / iPad | Xcode workspace | v0.7 build. See the release notes for prior device checks and this release’s installation results |
+| Android | Android Studio or APK | [v0.7 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.7). See the release notes for build and device-check coverage |
 | Web | Browser | Deployed to GitHub Pages. Checked in Mac Chrome, Safari, and WebKit |
 | PWA | Install through the browser | Installation and offline play supported. See the validation document for device results |
-| Tauri Mac | Desktop app | [Download v0.6](https://github.com/gelb2/MachDefense/releases/tag/v0.6). File saves, recovery and exit checked. macOS 14+ on Apple Silicon |
+| Tauri Mac | Desktop app | [Download v0.7](https://github.com/gelb2/MachDefense/releases/tag/v0.7). File saves, recovery and exit checked. macOS 14+ on Apple Silicon |
 
 ## Fixed problems and remaining work
 
@@ -109,6 +103,22 @@ The idea for MachDefense is to give the player more opportunities to watch and m
 Level-10 upgrades and scrolling through all INSTALLed units in the production list are implemented. Pathfinding around round structures and tightly packed turrets, production-list reordering, the new lock-on feature, and final production update checks for PWA and Tauri Mac remain to be done. [Roadmap](docs/en/public/roadmap.md) · [Architecture](docs/en/public/architecture.md) · [Development history](docs/en/public/development-history.md) · [Credits](CREDITS.en.md)
 
 [Implementation status](docs/en/public/implementation-status.md) · [Documentation](docs/en/public/README.md) · [Changelog](CHANGELOG.en.md) · [Credits](CREDITS.en.md)
+
+## A note on suspending helicopter-unit development
+
+I encountered intelligent breaches of duty and negligence that I had not faced even while restoring HeavyMach1. I am putting helicopter improvements on hold to prioritize my foremost goal: restoring the entire Mach series.
+
+The helicopter units released in this version meet neither the original creators’ aesthetic goals nor my own. Their level of finish undermines both the creators’ intentions and mine, so I recommend using the helicopter units only if you want to.
+
+[The helicopter work and why I am putting it on hold](docs/en/public/unease-and-typewriters.md) · [Current implementation and remaining work](docs/en/public/roadmap.md)
+
+## Unease
+
+[An unease unlike HeavyMach1 — neo-Lysenkoism and Ceaușescu’s typewriter](docs/en/public/unease-and-typewriters.md)
+
+I recorded the helicopter design, repeated refusals to follow instructions and changes to the artwork, the shifting of responsibility in the incident report, and why I put the work on hold. The later [helicopter work record](docs/en/editorial/helicopter-work-record-20261109.md) and [additional writing material](docs/en/editorial/aircraft-refusal-materials-20261109.md) are connected through an [article structure and source map](docs/en/editorial/unease-integration-20261110.md) prepared for combining them into one article.
+
+[Incident report on ignored instructions and unfinished work (Korean)](docs/evidence/aircraft-work-failure-20261109.md) · [Drawing-work refusal incident (Korean)](docs/evidence/aircraft-instruction-refusal-20261108.md) · [Visual-error record (Korean)](docs/evidence/new-unit-art-errors-20261108.md) · [Troubleshooting](docs/en/public/troubleshooting.md)
 
 ## How I directed and tested the work
 

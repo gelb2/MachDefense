@@ -1,0 +1,227 @@
+{
+  "matchedResourceCount": 55,
+  "resources": [
+    {
+      "path": "Resources/Images/AHeavyAirStrike.png",
+      "sha256": "a63573c2fd078c3085ca5786f1a461819a00b5394dd785a63744b3f0718dd894"
+    },
+    {
+      "path": "Resources/Images/AHeavyBody.png",
+      "sha256": "a92d644d68ad1c3e54b60aab0d571772ca62a8498efc28c067cdc6e32cd8f48e"
+    },
+    {
+      "path": "Resources/Images/AHeavyBodyBankL.png",
+      "sha256": "cc831ad36449bb3ad01807eb6360ecbfe1599c86cb4785dc2af95d07487657be"
+    },
+    {
+      "path": "Resources/Images/AHeavyBodyBankR.png",
+      "sha256": "8b8f15256a6d9d800fe2f530b30a5e3ffcd97162d2e9c0bab36a51e14816195c"
+    },
+    {
+      "path": "Resources/Images/AHeavyCannon.png",
+      "sha256": "01a59447875d67daae1b7aede450d6c7f1ecffee67127c7c494ff061ade0b6da"
+    },
+    {
+      "path": "Resources/Images/AHeavyCannon_01.png",
+      "sha256": "f53cc4f2e6840ffcdb79858ff6bce51ef2b3de317a1fe4de7c9610a0424b3527"
+    },
+    {
+      "path": "Resources/Images/AHeavyCannon_02.png",
+      "sha256": "5df90320ef0392c6c1ce9f4ff149c516de2e6558808993f6efdad3fc0892c7a1"
+    },
+    {
+      "path": "Resources/Images/AHeavyCannon_03.png",
+      "sha256": "7f348903edb54277331d82ab9509a15dc065d398de5b82c1d1759841966af763"
+    },
+    {
+      "path": "Resources/Images/AHeavyCannon_04.png",
+      "sha256": "e9f456df2eec94232228f00bd70f693cd53a5ab050cff8141026558aff5db7bf"
+    },
+    {
+      "path": "Resources/Images/AHeavyCannon_05.png",
+      "sha256": "84b9eceb9af1844650f7c833449a98d17cc3cff9e4e930004cb8b1533aed124d"
+    },
+    {
+      "path": "Resources/Images/AHeavyCannon_06.png",
+      "sha256": "b4405f8c090171645d53d57365ee2112aab2c9ee5f9a52b0ca7c8bacba958eb0"
+    },
+    {
+      "path": "Resources/Images/AHeavyCannon_07.png",
+      "sha256": "23d6bd70927a1c9f5781c70123ed98ebc0b57d7e7bcd841164d4a14c43e72922"
+    },
+    {
+      "path": "Resources/Images/AHeavyCannon_08.png",
+      "sha256": "05f1063287a3d4317fa3035fb06d2dd117b48c79d946c0e4494407ac43342de6"
+    },
+    {
+      "path": "Resources/Images/AHeavyCannon_09.png",
+      "sha256": "7495433fa8c33498387f9507845afd1454b13f2a7b528bec232a037d17142d5f"
+    },
+    {
+      "path": "Resources/Images/AHeavyCannon_10.png",
+      "sha256": "4ceb8c6f369596e20c729c7edf6b312c3854094f782b0db481e981e77c48a60a"
+    },
+    {
+      "path": "Resources/Images/AHeavyCover_01.png",
+      "sha256": "b87249e698c0c65caa705aea696d0f3a191e4fc8a4719cb560d676ed29247f05"
+    },
+    {
+      "path": "Resources/Images/AHeavyCover_02.png",
+      "sha256": "06d5b4fbfcee6bd39e5db873c5b29b524627ef6c5bde91ae82fff5f331c8d09d"
+    },
+    {
+      "path": "Resources/Images/AHeavyCover_03.png",
+      "sha256": "d4c6f82e9a655a74eb4244c13b7fcc0087cc050d77810aa46fda4fe28e4e963e"
+    },
+    {
+      "path": "Resources/Images/AHeavyCover_04.png",
+      "sha256": "0348b46e6b54e2c0b511107289e02e98839c1c4dfa539872fa7bd14436a418c0"
+    },
+    {
+      "path": "Resources/Images/AHeavyCover_05.png",
+      "sha256": "0c699570b23195f4bad93423b9e1b85da46a01538509a8d998043f0be47d315e"
+    },
+    {
+      "path": "Resources/Images/AHeavyCover_06.png",
+      "sha256": "b1c552dff4b32b091060141b11d706bb1c7e4125753ba2543ca9601b5d8bbe53"
+    },
+    {
+      "path": "Resources/Images/AHeavyCover_07.png",
+      "sha256": "27d0570a2b6f42b5d0de1a02b251e402e50bff921f0ec1ae25b323f177270909"
+    },
+    {
+      "path": "Resources/Images/AHeavyCover_08.png",
+      "sha256": "a56e93476777309ead0b71987eda2ac649915d84f9b3a1ce05d49d0f75551d7d"
+    },
+    {
+      "path": "Resources/Images/AHeavyCover_09.png",
+      "sha256": "1a0ed703349f1520688bbbd3624e887d03d3b8ed7eb17e8f4ac722f3e59d8fbe"
+    },
+    {
+      "path": "Resources/Images/AHeavyCover_10.png",
+      "sha256": "408cdd9686587f4e14435637bc1e0970ac085ef350986417d00707c5336d5048"
+    },
+    {
+      "path": "Resources/Images/AHeavyGun.png",
+      "sha256": "e881d01f4fc9870fe692b3076d07a7773798c4ce85edda42d3ddf7f9c119770e"
+    },
+    {
+      "path": "Resources/Images/AHeavyGun_01.png",
+      "sha256": "f761e46552656eca68b045bf485215ac2ffef3c98a12b5620b97d8d91ede9d49"
+    },
+    {
+      "path": "Resources/Images/AHeavyGun_02.png",
+      "sha256": "c8aba12544a78580d4cbcc49c06a18f6314d5fc9e6bd7a7add8684b08295717c"
+    },
+    {
+      "path": "Resources/Images/AHeavyGun_03.png",
+      "sha256": "884f478b42524d368a111ac663d93edff54f00bc788f9911bde4c86abb8e9428"
+    },
+    {
+      "path": "Resources/Images/AHeavyGun_04.png",
+      "sha256": "fcb5cb14a1b0706e18ebef3da930a6b0e7ec1c2f13805eb918837514beaf1747"
+    },
+    {
+      "path": "Resources/Images/AHeavyGun_05.png",
+      "sha256": "8fb2d2e60909d4d13a6d9c3c467820f7733adc2f1e776a362322f0db2478e15a"
+    },
+    {
+      "path": "Resources/Images/AHeavyGun_06.png",
+      "sha256": "098693f6a156f264c4ab5b3a4cad86e38b5d8fbefca72f56f859e6d904b94a07"
+    },
+    {
+      "path": "Resources/Images/AHeavyGun_07.png",
+      "sha256": "883d5f621e648e10a4b6afff789716dfe2f8295c3ceb62ca634b75add4283c73"
+    },
+    {
+      "path": "Resources/Images/AHeavyGun_08.png",
+      "sha256": "defad54cb42d6b42643faa7519d47ed9df0ed0ed20eb1de93c8a921ccffd405b"
+    },
+    {
+      "path": "Resources/Images/AHeavyGun_09.png",
+      "sha256": "c567b67e6cc42526a5c3547f28cdf12da87fba606e748eecad7910cea7ccce27"
+    },
+    {
+      "path": "Resources/Images/AHeavyGun_10.png",
+      "sha256": "e6384bf372b560be0ba492955eeb27487b0c71e469aac27184b8307003136f49"
+    },
+    {
+      "path": "Resources/Images/AHeavyMissile.png",
+      "sha256": "4199a072ece32db503cfb1e36f167be86b20e1b11c7b232293d0088adc795d3d"
+    },
+    {
+      "path": "Resources/Images/AHeavyMissile_01.png",
+      "sha256": "769783e76944caebf27aee83906012a34e2272351a050191026fe3d3e414759b"
+    },
+    {
+      "path": "Resources/Images/AHeavyMissile_02.png",
+      "sha256": "023695b38bdd2390049bec2f969404dc1195b9f81c7c65b60ecf8fa9dfd97d43"
+    },
+    {
+      "path": "Resources/Images/AHeavyMissile_03.png",
+      "sha256": "205fc7a3514681ccae9785df7123112decb49650d71bb968cc4b95ddec061d89"
+    },
+    {
+      "path": "Resources/Images/AHeavyMissile_04.png",
+      "sha256": "b614074fad3a4583faa3a484b008c07436385a1b106cc4e72ff1211fb7a00799"
+    },
+    {
+      "path": "Resources/Images/AHeavyMissile_05.png",
+      "sha256": "97060eb24d6b95f90e40b39c35304b2609e9e85f78cb0d303ce70ae3cbea6746"
+    },
+    {
+      "path": "Resources/Images/AHeavyMissile_06.png",
+      "sha256": "72b2e779f00eac8d323fdd3aec288108bddd4218b3ecb91179aac3ff0b5635c7"
+    },
+    {
+      "path": "Resources/Images/AHeavyMissile_07.png",
+      "sha256": "72cbc73a66e71dbd384935d720c04fbc960fc0952b738e94459178587c7b9627"
+    },
+    {
+      "path": "Resources/Images/AHeavyMissile_08.png",
+      "sha256": "d49d4dc800b40f6905cc4681acf92222091db6efe92cbef33f6b780788dbc824"
+    },
+    {
+      "path": "Resources/Images/AHeavyMissile_09.png",
+      "sha256": "fbf837ca3473e709cbedf7cdab91c46699066a772f335af7d38cb6fc41356daf"
+    },
+    {
+      "path": "Resources/Images/AHeavyMissile_10.png",
+      "sha256": "b545c4fc7ad4809308b7f9d950bfc5a8eed970951030353ac670a63a454e0e7d"
+    },
+    {
+      "path": "Resources/Images/AHeavyRocket.png",
+      "sha256": "adfe0c008760a6ae05f79bcbf30f6c5ee68cbde10a9ae9870b8af30613b13c49"
+    },
+    {
+      "path": "Resources/Images/AHeavyRotor.png",
+      "sha256": "d049e683583bd48886d3a034c6822c58080b3915c9ea7df167cab3c9d1d13c25"
+    },
+    {
+      "path": "Resources/RawData/AircraftMachines.mcb",
+      "sha256": "c28616f3afdb4e6e6549c1da3d05e21465d17aeb85c26aa8db90a70cce6a8ad5"
+    },
+    {
+      "path": "Resources/RawData/AircraftParts.mcb",
+      "sha256": "4735318d06095ca5012236f2b76df0ad6f4a70ed44349528d85ed11cb86985ad"
+    },
+    {
+      "path": "Resources/RawData/Level10Machines.mcb",
+      "sha256": "15cae0a02a2409eda0c050b9f89611870d5dbb35f033c2e2c488f02dc4c6832e"
+    },
+    {
+      "path": "Resources/RawData/Level10Parts.mcb",
+      "sha256": "edaab346f10ed1c84a9c316022496e3492a7327f0d5b8dbcdc2bd3410044f714"
+    },
+    {
+      "path": "Resources/Tables/PartsList.tsv",
+      "sha256": "ab3a9a4d59763bd510db94cf9c7a720a035de21cabd7c5883ad339e956c60abd"
+    },
+    {
+      "path": "Resources/Tables/TileList.tsv",
+      "sha256": "6a75dbc8daef34960d5f93078f267836d0fb8106d44adf81d90a7359b9b1c80f"
+    }
+  ],
+  "gameWasm": "9d2d33ca9ac63f6e47c71c5b1f8caa643aa183b9fb36d1dc1e149123a588728d",
+  "baselineResources": "git archive 10ae41c Resources; identical compiled fixture with level selector; baseline has no AHeavyCover_* definitions"
+}

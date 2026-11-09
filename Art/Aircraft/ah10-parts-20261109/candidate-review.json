@@ -1,0 +1,20 @@
+{
+  "generator": "built-in image_gen",
+  "candidate": "Art/Aircraft/ah10-parts-20261109/candidate-01.png",
+  "sha256": "51a30992f784d36fadc6195c4f9e12c7c31b5bb2fbff6f92f3282e777678cb11",
+  "adopted": false,
+  "runtimeChanged": false,
+  "visualReview": [
+    "Upper lateral pod removed and a support bracket drawn on body.",
+    "Requested lower-forward narrow pod remains on body and appears again as a detached part: duplicate drawing remains.",
+    "Upper-right detached part includes an additional narrow support/pod beyond the selected pod, so extraction is not a clean one-part match.",
+    "Outer silhouette and panel detail changed relative to approved pixels; not a pixel-preserving replacement.",
+    "Only neutral direction generated; six bank poses remain unmade."
+  ],
+  "remaining": [
+    "Generate clean individual launcher parts and corresponding unobscured support surfaces",
+    "Preserve approved silhouette and seven banking poses",
+    "Align image pivots and visible firing endpoints with existing sockets and muzzle positions",
+    "Compare assembled game output before any runtime adoption"
+  ]
+}

@@ -11,6 +11,7 @@ struct WeaponFrame {
     double time=0;
     Vec2 ownerPosition,muzzlePosition;
     float bodyAngle=0,deviceScale=.5f;
+    float maxAimStep=0; // 0 keeps the original controller; set only by added aircraft.
     std::optional<WeaponTarget> target;
     bool ownerAndPartPresent=true,uiModel=false,manualFire=false,weaponReady=true;
     int ownerHP=1,machineType=1;

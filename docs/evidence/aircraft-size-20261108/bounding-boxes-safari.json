@@ -1,0 +1,85 @@
+{
+  "baseline": "7e7fa8f",
+  "worldZoom": 2,
+  "render": "Web cheat command 8 / mode 4; north; rotor angle 0; shadows excluded",
+  "method": "Bounds of actual non-background rendered pixels; PNG alpha 0 contributes no pixels",
+  "rasterTolerancePixels": 2,
+  "rows": [
+    {
+      "name": "AH-10",
+      "factor": 1.2,
+      "before": {
+        "left": 113,
+        "top": 60,
+        "right": 337,
+        "bottom": 226,
+        "width": 224,
+        "height": 166
+      },
+      "after": {
+        "left": 541,
+        "top": 42,
+        "right": 809,
+        "bottom": 241,
+        "width": 268,
+        "height": 199
+      },
+      "widthRatio": 1.1964285714285714,
+      "heightRatio": 1.1987951807228916,
+      "widthErrorPixels": -0.8000000000000114,
+      "heightErrorPixels": -0.19999999999998863,
+      "pass": true
+    },
+    {
+      "name": "Beluga",
+      "factor": 0.85,
+      "before": {
+        "left": 98,
+        "top": 316,
+        "right": 354,
+        "bottom": 586,
+        "width": 256,
+        "height": 270
+      },
+      "after": {
+        "left": 567,
+        "top": 336,
+        "right": 785,
+        "bottom": 566,
+        "width": 218,
+        "height": 230
+      },
+      "widthRatio": 0.8515625,
+      "heightRatio": 0.8518518518518519,
+      "widthErrorPixels": 0.4000000000000057,
+      "heightErrorPixels": 0.5,
+      "pass": true
+    },
+    {
+      "name": "Cheyenne",
+      "factor": 0.85,
+      "before": {
+        "left": 137,
+        "top": 624,
+        "right": 313,
+        "bottom": 858,
+        "width": 176,
+        "height": 234
+      },
+      "after": {
+        "left": 600,
+        "top": 643,
+        "right": 750,
+        "bottom": 842,
+        "width": 150,
+        "height": 199
+      },
+      "widthRatio": 0.8522727272727273,
+      "heightRatio": 0.8504273504273504,
+      "widthErrorPixels": 0.4000000000000057,
+      "heightErrorPixels": 0.09999999999999432,
+      "pass": true
+    }
+  ],
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15"
+}

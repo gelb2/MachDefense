@@ -1,0 +1,26 @@
+{
+  "chromium": {
+    "size": [
+      390,
+      845
+    ],
+    "same_dimensions": true,
+    "identical_RGBA": true,
+    "rgba_sha256": "6054f3be83a54165f5412ab5c753e703d52530c391104be3716ff10d38fcf48b"
+  },
+  "webkit": {
+    "size": [
+      390,
+      845
+    ],
+    "same_dimensions": true,
+    "identical_RGBA": true,
+    "rgba_sha256": "d250282d23a31d538a6f2f200765f3ee0402737b3b53de48fe4fe94e3a35ab6e"
+  },
+  "original.jpg": {
+    "sha256": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696"
+  },
+  "tall.webp": {
+    "sha256": "1aef5dc6bb3b9acda6ecab8afb48530d9776ae3cb8ba0fc54aabbab441985a0e"
+  }
+}

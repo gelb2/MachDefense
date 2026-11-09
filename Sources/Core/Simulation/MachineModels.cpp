@@ -1,8 +1,11 @@
 #include "Core/Simulation/Battle.hpp"
 #include "Core/Contracts/Game.hpp"
+#include "Core/Simulation/AircraftModels.hpp"
+#include "Core/Simulation/AircraftVisual.hpp"
 #include <algorithm>
 #include <bit>
 #include <cmath>
+#include <cstdio>
 #include <functional>
 #include <limits>
 #include <stdexcept>
@@ -51,7 +54,23 @@ BattleModels BattleModels::load(ResourceAccess& r) {
     auto result=parse(Chunk::parse(r.read("RawData/PartsInfo.mcb")),Chunk::parse(r.read("RawData/MachInfo.mcb")));
     result.append(Chunk::parse(r.read("RawData/Level10Parts.mcb")),Chunk::parse(r.read("RawData/Level10Machines.mcb")));
     auto table=[&](const char* name){auto bytes=r.read(std::string("Tables/")+name+".tsv");return DataTable::parse({reinterpret_cast<const char*>(bytes.data()),bytes.size()});};
-    result.configureTiles(table("PartsList"),table("TileList"));return result;
+    result.configureTiles(table("PartsList"),table("TileList"));
+    appendAircraftModels(result);
+    return result;
+}
+void BattleModels::appendPartAlias(std::string name,std::string_view source,unsigned type){
+    const auto* original=part(source);if(!original||parts_.contains(name))throw std::runtime_error("Invalid additional part alias");
+    auto copy=*original;copy.name=name;copy.type=type;parts_.emplace(std::move(name),std::move(copy));
+}
+void BattleModels::appendMachineVariant(std::string name,std::string_view source,std::string_view weaponSuffix){
+    if(machines_.contains(name))throw std::runtime_error("Duplicate machine variant");
+    const auto* original=machine(source);if(!original)throw std::runtime_error("Missing machine variant source");
+    auto copy=*original;
+    auto walk=[&](auto&& self,auto& nodes)->void{for(auto& node:nodes){
+        const auto* p=part(node.name);if(!p)throw std::runtime_error("Missing variant part");
+        if(p->type==4){auto alias=*p;alias.name+=weaponSuffix;node.name=alias.name;parts_.try_emplace(alias.name,std::move(alias));}
+        self(self,node.children);
+    }};walk(walk,copy);machines_.emplace(std::move(name),std::move(copy));
 }
 const PartDefinition* BattleModels::part(std::string_view name) const { auto i=parts_.find(std::string(name));return i==parts_.end()?nullptr:&i->second; }
 const std::vector<AssemblyPart>* BattleModels::machine(std::string_view name) const { auto i=machines_.find(std::string(name));return i==machines_.end()?nullptr:&i->second; }
@@ -77,6 +96,7 @@ std::vector<PartPose> BattleModels::pose(std::string_view name,float scale,float
     return pose(*tree,scale,bodyAngle,weaponAngle,radarAngle);
 }
 std::vector<PartPose> BattleModels::pose(const std::vector<AssemblyPart>& tree,float scale,float bodyAngle,float weaponAngle,float radarAngle) const {
+    // Build the original pose first, then apply the documented aircraft size.
     std::vector<PartPose> poses;
     auto rotate=[](Vec2 v,float a){float c=std::cos(a),s=std::sin(a);return Vec2{v.x*c-v.y*s,v.x*s+v.y*c};};
     std::function<void(const AssemblyPart&,Vec2,float,bool)> append=[&](const AssemblyPart& a,Vec2 basePos,float parentAngle,bool hasParent){
@@ -92,6 +112,11 @@ std::vector<PartPose> BattleModels::pose(const std::vector<AssemblyPart>& tree,f
         }
     };
     for(const auto& a:tree) append(a,{},bodyAngle,false);
+    const float assemblyScale=tree.empty()?1.f:aircraftAssemblyScale(tree.front().name);
+    for(auto& p:poses){
+        p.localCenter.x*=assemblyScale;p.localCenter.y*=assemblyScale;
+        p.deviceScale*=assemblyScale;
+    }
     std::stable_sort(poses.begin(),poses.end(),[](const auto& a,const auto& b){return a.zOrder<b.zOrder;});
     return poses;
 }

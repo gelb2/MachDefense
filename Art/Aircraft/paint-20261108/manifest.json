@@ -1,0 +1,123 @@
+{
+  "generator": "built-in image_gen",
+  "preservedGameCommit": "16d230c",
+  "approvalCommit": "93a9847",
+  "referenceImages": [
+    {
+      "path": "Resources/Images/P_Body_01.png",
+      "sha256": "bfa5d07f6ca5a1d1514e5f60a1f25b888ad7a66053e4113d5fd435b989a5e742"
+    },
+    {
+      "path": "Resources/Images/E_Tank_Body_01.png",
+      "sha256": "415592d9b7df8081b368d8c38df22e30fb4a1e1ffcb0d6da22512cbfe61df49f"
+    },
+    {
+      "path": "Resources/Images/E_Tank32_Body.png",
+      "sha256": "c884a2536c8ebf8b86c25c50a66670ed9ce9122f83d31766772837ddcbf6486b"
+    }
+  ],
+  "concepts": [
+    {
+      "unit": "scout",
+      "editTarget": "Art/Aircraft/parts/scout-ah1z-20261108/body-v2-proportions.png",
+      "editTargetSHA256": "cfcab83576e2363055e6666d55d879479a5423ef25bcfd13cb414d47bb0167ee",
+      "concept": "Art/Aircraft/paint-20261108/scout-concept-v1.png",
+      "sha256": "f9116d91413706c6b65dd603b9cf87bc09e904ccb64eb6da5563055a887cd69d",
+      "canvas": [
+        990,
+        1589
+      ],
+      "sourceCanvas": [
+        650,
+        1043
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaBounds16": [
+        14,
+        8,
+        977,
+        1581
+      ],
+      "sourceAlphaBounds16": [
+        12,
+        9,
+        645,
+        1038
+      ],
+      "prompt": "scout-prompt.txt",
+      "status": "paint concept only; not runtime replacement"
+    },
+    {
+      "unit": "beluga",
+      "editTarget": "Art/Aircraft/parts/user-20261108/beluga-sheet-v1.png",
+      "editTargetSHA256": "f6c4f907bb4660814b979ca0f23317c26e3478f1c997f16248960926abbbae9a",
+      "concept": "Art/Aircraft/paint-20261108/beluga-concept-v1.png",
+      "sha256": "fab31db478b67abfd3af8eea4bae6c6230335faab876aa601b5fb579729b7333",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "sourceCanvas": [
+        1536,
+        1024
+      ],
+      "alphaRange": [
+        0,
+        254
+      ],
+      "alphaBounds16": [
+        13,
+        17,
+        1475,
+        1006
+      ],
+      "sourceAlphaBounds16": [
+        28,
+        24,
+        1490,
+        1006
+      ],
+      "prompt": "beluga-prompt.txt",
+      "status": "paint concept only; not runtime replacement"
+    },
+    {
+      "unit": "ah10",
+      "editTarget": "Art/Aircraft/parts/user-20261108/ah10-body-v3.png",
+      "editTargetSHA256": "26ceb3645c6ccc0820842443179357cdfaf5cec059c076ef8406fd061715d169",
+      "concept": "Art/Aircraft/paint-20261108/ah10-concept-v1.png",
+      "sha256": "e74bf1e0737d551392d8e1069f55e57a2b30dfd7811b0fb709af5f3619330dbd",
+      "canvas": [
+        1482,
+        1061
+      ],
+      "sourceCanvas": [
+        1483,
+        1061
+      ],
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaBounds16": [
+        29,
+        35,
+        1453,
+        1011
+      ],
+      "sourceAlphaBounds16": [
+        29,
+        36,
+        1454,
+        1009
+      ],
+      "prompt": "ah10-prompt.txt",
+      "status": "paint concept only; not runtime replacement"
+    }
+  ],
+  "allAircraftRuntimeImagesUnchanged": true,
+  "assemblySourceUnchanged": true,
+  "allResourcesAndSourcesUnchanged": true
+}

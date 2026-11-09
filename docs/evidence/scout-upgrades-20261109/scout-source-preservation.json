@@ -1,0 +1,15 @@
+{
+  "baseline": "fe72d80",
+  "trackedFiles": 2683,
+  "changedTrackedSourcesResources": [
+    "Resources/RawData/AircraftMachines.mcb",
+    "Resources/RawData/AircraftParts.mcb",
+    "Resources/RawData/Level10Machines.mcb",
+    "Resources/RawData/Level10Parts.mcb",
+    "Resources/Tables/PartsList.tsv",
+    "Resources/Tables/TileList.tsv",
+    "Sources/Core/Simulation/AircraftVisual.hpp"
+  ],
+  "allOriginalImagesUnchanged": true,
+  "newUpgradeImages": 27
+}

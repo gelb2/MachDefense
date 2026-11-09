@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "language": "ko",
+      "readme_and_preface_exact": true,
+      "paragraphs": 4
+    },
+    {
+      "language": "en",
+      "readme_and_preface_exact": true,
+      "paragraphs": 4
+    }
+  ],
+  "all_helicopter_todos_on_hold": true
+}

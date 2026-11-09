@@ -1,0 +1,39 @@
+{
+  "scope": "Beluga reinforcement resource integration; isolated local web cheat fixtures",
+  "baseline": "10ae41c Resources with supported level inspection fixture, port8972",
+  "candidate": "Beluga root integration package port8958",
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "posesPerEngine": 70,
+  "outsideBelugaPixelsExact": true,
+  "allowedChangeRectangleExclusive": [
+    570,
+    540,
+    790,
+    770
+  ],
+  "newResourceImages": 20,
+  "packagedBytesMatchResources": true,
+  "all20ImagesActuallyReadByBothEngines": true,
+  "repeatPoseTextureUploads": 0,
+  "combatLoadoutsPerEngine": 40,
+  "combatTestsPassed": true,
+  "productionUpgradeUIStatesPerEngine": 6,
+  "existingBelugaIconPartCoordinatesExact": true,
+  "visibleNonRadarOldSpriteCoordinatesExact": true,
+  "uiRadarDifference": "Random offscreen campaign enemy x produces different radar mark x; retained in ui-comparison.json",
+  "audioContextCountersBeforeAndAfter": {
+    "created": 2,
+    "closed": 0
+  },
+  "browserErrors": [],
+  "visualReview": "Lv1 and Lv10 neutral and strong bank crop inspected; Lv10 production/upgrade UI inspected at actual size. Added reinforcement remains near wing roots; no visible detached plates, silhouette extension, icon clipping or name/price obstruction in inspected states. Rotor and existing wing/engine forms remain visible. Existing part coordinates compared in all six UI states.",
+  "limits": [
+    "Natural reward/unlock path not exercised; test cheat grants and equips Beluga in isolated profile.",
+    "This is functional/rendering verification, not CPU/GPU performance acceptance.",
+    "Pixel preservation is proven outside the Beluga rectangle for 140 fixture captures; not arbitrary live campaign frames.",
+    "Art quality remains subject to user review; the reinforcement changes are small at actual game size."
+  ]
+}

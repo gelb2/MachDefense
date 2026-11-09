@@ -1,0 +1,45 @@
+{
+  "atlas": "Art/Aircraft/parts-separation-20261109/ah10/atlas/AHeavyBody.png",
+  "runtime": "Resources/Images/AHeavyBody.png",
+  "runtimeSHA256": "a92d644d68ad1c3e54b60aab0d571772ca62a8498efc28c067cdc6e32cd8f48e",
+  "dimensions": [
+    1596,
+    112
+  ],
+  "grid": [
+    21,
+    1
+  ],
+  "cellSize": [
+    76,
+    112
+  ],
+  "decodedStripsIdentical": true,
+  "parts": [
+    {
+      "part": "AHeavyBody",
+      "source": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyBody.png",
+      "sourceSHA256": "34af4cc0b8c48df0424cd281d44795f00ac471c630f5f9e2dd32ac64be3e03c1",
+      "baseTile": 0,
+      "decodedStripSHA256": "9b6de408e45774eb3154ac22f643b8f69bc6f02b3248a66507bc270133b48a8e"
+    },
+    {
+      "part": "AHeavyRocket",
+      "source": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyRocket.png",
+      "sourceSHA256": "cb2154ad6152e898d3461e6cf25a564b8dcc429abbb23cd6bfef4b34737a1102",
+      "baseTile": 7,
+      "decodedStripSHA256": "3ee8e140aa01f6c696dd03727e33852983cabbbab2b30367c0d0d9273893c115"
+    },
+    {
+      "part": "AHeavyAirStrike",
+      "source": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyAirStrike.png",
+      "sourceSHA256": "ebebb0d6820b7cf4154041ee25df79ab5bec87bb2a581a732c44c870d641bf8d",
+      "baseTile": 14,
+      "decodedStripSHA256": "ae2351ba5b4b02d036062422d453cbfc766de5fbfcce8a5d31503c5dcc37f8bc"
+    }
+  ],
+  "textureBackingBeforeBytes": 1572864,
+  "textureBackingAfterBytes": 1048576,
+  "textureBackingSavedBytes": 524288,
+  "GPUTimeImprovementMeasured": false
+}

@@ -1,0 +1,5 @@
+scale=0.5 simultaneous=40 max_particles=84 amortized_cpu_p99_ms=0.00201945
+scale=0.5 simultaneous=100 max_particles=84 amortized_cpu_p99_ms=0.00188958
+scale=1 simultaneous=40 max_particles=84 amortized_cpu_p99_ms=0.00184445
+scale=1 simultaneous=100 max_particles=84 amortized_cpu_p99_ms=0.00184062
+Real dodge trigger, capped visuals, finite trails, expiry, pause, no save writes passed

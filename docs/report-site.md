@@ -1,3 +1,198 @@
+# 가로 자연물 재시안·세로 채택 — 2026-11-09
+
+[현재 합성 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-title-composite-20261109/). 앞선 가로의 메크 다리·탱크 차체 연장은 지시 불이행으로 기각했다. 가로 바깥을 자연물만으로 다시 그렸고 기체 반사·연장 처리를 제거했다. 원본과 외곽의 색·명암 경계는 남아 있다. 세로 두 번째 시안을 채택본으로 고정했고 파일과 Chrome·WebKit 합성 픽셀이 이전과 같은지 확인했다.
+
+[시안·확인 범위](research/title-natural-20261109.md) · [검사](evidence/title-natural-20261109/check.json) · [세로 보존](evidence/title-natural-20261109/tall-preserved.json) · [게시 근거](evidence/title-natural-20261109/publication.json). 게임 적용은 하지 않았다. 소스 `b4386d8ae6da0cd94b166d48750ac2775a61ec19`, 배포 `appgdep_6af16d2d675c8191b6a6b13a0d100eb1` succeeded. 기존 접근 범위를 유지했다.
+
+# 타이틀 원본·외곽 합성 시안 — 2026-11-09
+
+[가로 웹·세로 폰 합성 시안](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-title-composite-20261109/)을 게시했다. 원본 영역 표시·경계 연결 전후·가로 3크기·PNG 저장을 제공한다. 생성 그림의 중앙 대신 원본 JPG를 그대로 사용했다. 게임 코드·자원·헬기·설치 앱은 변경하지 않았다.
+
+Chrome·WebKit에서 중앙 내부 픽셀 일치, 버튼·다운로드와 390px 배치를 검사했다. 외곽 구조·색의 최종 채택은 남았다. [시안과 확인 범위](research/title-composite-20261109.md) · [검사](evidence/title-composite-20261109/check.json) · [게시 근거](evidence/title-composite-20261109/publication.json).
+
+사이트 소스 `a7efb9faabb7fe2eac18fc8ae5c887fc7236f6a1`, 배포 `appgdep_6af16635a3348191b54922e4185a482f` succeeded. 기존 소유자 전용 접근과 보고 자료를 유지했다.
+
+# 원고 임의 완화 정정 — 2026-11-09
+
+[한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record-en.html). Codex는 쉴카·퉁구스카·다른 게임의 모티브에 관한 원문을 조건부 연상으로 바꾸고, DEI 비판에 원문에 없는 “느꼈다” 등의 문장을 넣었다. 지적된 네 문단을 보존된 원문의 다섯 구절로 복원했다. 과학적 사회주의에 관한 후속 정정도 원문대로 넣었다. 영어 본문과 다운로드를 맞췄다.
+
+[원문 대조](evidence/essay-original-restore-20261109/source-check.json) · [8화면·다운로드 검사](evidence/essay-original-restore-20261109/report-check.json) · [게시 근거](evidence/essay-original-restore-20261109/publication.json). 사이트 소스 `b526ee6d491608f26300675ec6b3637cdf92966b`, 배포 `appgdep_6af15cb12bf881918643d53671a96e8e` succeeded. 헬기 개발 보류와 오류 7건 기록은 유지했다.
+
+# 헬기 보류 이유 추가 글감 — 2026-11-09
+
+[한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record-en.html). 추가 글감을 한국어 원문 그대로 글감 모음·서문 끝·README에 넣고 영어 번역을 대응시켰다. 헬기 개선 중단과 시리즈 복원 우선 결정을 유지했다. 본문·다운로드·모바일/데스크톱 8화면·오류 7건 링크를 대조했다.
+
+사이트 소스 `df2f2c5d7c87c5fa7d722ddee4c9d7282434e5ff`, 게시 `appgdep_6af1555665288191afd1f1ccf172d0f5` succeeded. [문면 대조](evidence/helicopter-pause-addition-20261109/source-check.json) · [화면 검사](evidence/helicopter-pause-addition-20261109/report-check.json) · [게시 근거](evidence/helicopter-pause-addition-20261109/publication.json).
+
+# 헬기 작업 기록 원고·서문·전체 보류 — 2026-11-09
+
+[한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record-en.html) · [별도 방법론 글감](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/method-material.html). 지정 제목으로 원고를 작성하고, 선택 사용·토큰 사용·200장 경험·시리즈 전체 복원·헬기 작업 보류 서문을 한영 README와 동일하게 넣었다. 업무지시 거부, 승인 그림 교체, 크기·색·선회·조립·파츠·레벨 외형·이동 변경과 잘못된 완료 보고를 서술했다. 이미지 생성 오류는 요청 ID 기준 7건이며 오류 객체 5개와 보존 필드 2개를 본문 뒤에 수록했다. 글씨 편집 도구 미호출은 별도 거부로 기록했다.
+
+헬기 관련 모든 TODO와 미완성 작업은 보류했다. 기존 요구와 실패 기록을 보존하며, 아이패드·락온 및 헬기 외 과제는 남겨 둔다. 게임 코드·에셋·설치 앱은 이번 문서 작업에서 변경하지 않았다.
+
+[본문·다운로드·1280/390px 검사](evidence/helicopter-work-record-20261109/report-check.json) · [오류 원문 대조](evidence/helicopter-work-record-20261109/source-check.json) · [README·서문 대조](evidence/helicopter-work-record-20261109/preface-check.json) · [게시 근거](evidence/helicopter-work-record-20261109/publication.json).
+
+사이트 소스 `6e80fdb226e2a5aa29c3278fef43b6b0d31bb169`, 게시 `appgdep_6af152bdab288191bcaa1c601bc44825` succeeded. 기존 소유자 전용 접근과 보고 자료를 유지했다. 보고 이미지 8개는 RGBA 픽셀·크기·메타데이터가 같은 무손실 재압축으로 168,676바이트를 줄였다. [압축 대조](evidence/helicopter-work-record-20261109/report-repack.json).
+
+# 헬기 미해결 TODO·업무지시 거부 글감 전문 — 2026-11-09
+
+[한국어 글감 전문](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/materials.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/materials.html?lang=en). 기존 원고와 TODO의 글감, 누락된 타자기·감시자 문단, 후기 추가분과 최신 작가명 정정까지 11건을 게시했다. 원문 11건·한영 번호·다운로드 일치, 1280·390px 화면과 목차 이동을 검사했다. 게임 코드·에셋은 변경하지 않았다. [검사](evidence/aircraft-materials-20261109/report-check.json) · [원문 대조](evidence/aircraft-materials-20261109/source-check.json).
+
+사이트 소스 `5b8c4cf4a7abe02692302f83c05caca013505b6f`, 게시 `appgdep_6af14b0521b08191a67256bb8d43eb38` succeeded. 기존 소유자 전용 접근·보고서·그림·오류 전문을 보존했다. 배포 용량을 맞추기 위해 보고 자료 JSON 7개의 들여쓰기만 제거했고 값의 동일성을 검사했다. [게시 근거](evidence/aircraft-materials-20261109/publication.json) · [용량 조정](evidence/aircraft-materials-20261109/size-savings.json).
+
+# Android 40레벨 검사·아이폰 정식 설치 — 2026-11-09
+
+[실기기 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#android-aircraft-20261109)를 게시했다. 실제 강화 36회·생산 40회·전체 수치 표·40개 Android 외형·전투 관측과 아이폰 정식 Release 설치 결과를 담았다. 기존 보고서와 소유자 전용 접근을 유지했다. 1280·390px에서 그림과 40개 수치 행을 대조했다. 소스 `c41a2878e036dcca65366c19f9912c9808e20802`, 게시 `appgdep_6af1479d4bf481919474b89355ab1cd8` succeeded. [게시 근거](evidence/android-aircraft-20261109/report-publication.json).
+
+# 스카웃10·벨루가 V5 적용과 원고 추가 — 2026-11-09
+
+[실제 웹 조립 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-v5-game-20261109), [추가 원고 한국어](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/draft.html#reference-experience-20261109), [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/draft-en.html#reference-experience-20261109)를 게시했다. 작가명은 마지막 지시대로 카라바지오 / 젠틸레스키 / 백신스키 / 에곤 실레로 반영했다. 기존 원고를 보존하고 추가분과 다운로드를 대조했다.
+
+게임 자원 커밋은 `b4184ed`다. 보고 사이트 소스 `d56321df9965dbdea7fffe6697928d75d26c8ec3`, 게시 `appgdep_6af13d69b44081919e60ed90fc9b7c47`는 succeeded다. 기존 소유자 전용 접근을 유지했다. 1280·390px에서 3페이지의 원문·이미지를 검사했다. 기존 SVG 4개의 내장 PNG는 픽셀·메타데이터를 보존하는 무손실 압축으로 용량을 줄였다. [게시·검사 근거](evidence/aircraft-v5-integration-20261109/report-publication.json). 게임 main·운영 PWA·아이폰 배포와 구분한다.
+
+# 벨루가·AH-10 파츠 분리 — 2026-11-09
+
+[AH-10 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#ah10-parts-20261109)와 [벨루가 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-parts-20261109)를 게시했다. AH-10 로켓·공습 파츠 연결, 승인 그림과 웹 전투 비교, 크롭 후보 기각, 100기 전투에서 증가한 GPU 처리 시간과 남은 작업을 기록했다. 4종 레벨별 외형·도색·질감 개선은 완료되지 않았다.
+
+Source `a9b1a8174fb5beae59cac9fffc5348349483f4b8`, Deployment `appgdep_6af0ffd753c48191a905d3859d493131`, succeeded. [게시 근거](evidence/ah10-parts-20261109/report-publication.json). 기존 보고서와 다른 세션의 Kamov 보고서, 소유자 전용 접근을 보존했다. 로컬 1280·390px 배치와 자료 링크를 검사했다. 새 웹 비교 그림만 RGBA가 같은 무손실 WebP로 저장하고 USTAR 포장으로 256MiB 제한 안에 맞췄다. 게임 main·운영 PWA·아이폰 앱 배포는 이번 작업에 포함하지 않았다.
+
+# 헬기 레벨 정의 수정·누락 범위 정정 — 2026-11-09
+
+[기존 개선 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-surface-plan-20261109)를 Sites 버전 245로 갱신했다. 기존 계획이 누락한 Lv.1–10 외형과 남아 있던 실행 중 조립 복제 처리를 명시했다. 40레벨 정의 파일 이전과 새 웹 치트빌드 검사 결과를 기록했다. 벨루가·AH-10 미연결 그림과 4종 강화 외형·도색·질감·입체감은 미완료로 남겼다. 기존 그림과 소유자 전용 접근을 유지했다. [게시 근거](evidence/aircraft-assembly-followup-20261109/report-publication.json).
+
+# 헬기 도색·질감·입체감 개선 과제 — 2026-11-09
+
+[개선 과제 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-surface-plan-20261109)를 Sites 버전 244로 게시했다. 아이폰 정식 Release 설치 결과, 원작 도장·파츠 참조, 네 기체의 수정 부위, 보존 조건과 검사 순서를 담았다. 현재 웹 조립 비교를 기준 이미지로 사용하며 새 도색 시안이나 아이폰 캡처로 표시하지 않았다. 새 미술 변경은 아직 적용하지 않았다.
+
+Source `76acb5b2a5099e13f54789f32c8b623b273b7308`, Deployment `appgdep_6af0e4616ca08191b3ba3a241e7d3037`, succeeded. [게시 근거](evidence/aircraft-iphone-banks-20261109/report-publication.json), [원고](research/aircraft-surface-plan-20261109.md). 기존 소유자 전용 접근을 유지했다. 새 기사 자료 링크 9개를 검사했고 누락은 없다. 브라우저 배치 검사는 완료하지 못했다. Chrome 상태 조회가 시간 초과됐고 Safari는 사용 중이어서 추가 조작하지 않았다. 아이폰 설치는 완료했으며 실제 헬기 선회 평가와 성능 측정은 남았다.
+
+아래는 이전 게시 당시의 기록이다.
+
+# 스카웃·벨루가 선회 수정 — 2026-11-09
+
+[수정 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-bank-correction-20261109)를 Sites 버전 243으로 게시했다. 스카웃 `5d6b872`, 벨루가 `e9c95ba`의 준비 그림·실제 웹 조립·보존 검사와 남은 작업을 담았다. 기존 소유자 전용 접근과 다른 보고서의 원격 변경을 보존했다.
+
+Source `d8847736ad1f0e54937bb9f63f2cf24191fdad53`, Deployment `appgdep_6af0dd99bdfc8191894cb2119a9f7523`, succeeded. [게시 근거](evidence/beluga-bank-correction-20261109/report-publication.json). 문서 연결과 실제 게임 캡처의 픽셀은 확인했다. 이번 보고서의 브라우저 배치 검사는 완료하지 못했다. Chrome 상태 읽기가 시간 초과됐고, Safari는 사용자가 입력 중이어서 조작하지 않았다. 아이폰 새 설치와 게임 main·운영 PWA 배포는 하지 않았다.
+
+# 헬기 PNG 처리와 검증 누락 경위 — 2026-11-09
+
+후속 정정: 경위서와 연결된 기술 보고서의 회사명·판본 표기를 ‘원본’으로 통일했다. 원본 분석·정식 빌드에서 확보한 절차를 헬기 작업에 대조·적용하지 않은 경위와, 검증하지 않은 범위까지 완료한 듯 보고한 잘못을 명시했다. 본문과 다운로드 원문을 함께 갱신했다. Source `560f757f54444941d66ae362d3e5fee6ecb6c420`, Deployment `appgdep_6af0aaad1ea48191a1b577f9959a1545` succeeded, Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_98e91c38268c81919e23ab7f33a7b225`.
+
+문구 정정: 사용자 책임을 가정한 문장을 삭제하고 Codex가 지시와 다른 구현 경로를 선택하고 검증을 빠뜨렸다고 명시했다. 해당 시점의 패키지 표기는 후속 정정에서 ‘원본’으로 통일했다. 본문과 다운로드 원문에 함께 반영했다. 정정 Source `5c499361a9b70bf08648c2eed33f64e4de82a2c1`, Deployment `appgdep_6af0a980352c8191a20b48c2bf15ca9e` succeeded, Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_7683afd8c8908191be977e17ce239392`.
+
+[기술 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-cgbi-20261109)와 [경위서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-resource-incident-20261109)를 게시했다. 원본 PNG 948개의 CgBI·색 메타데이터, 5개 원작 샘플과 헬기 28개의 픽셀 해독 검사, 실제 Release 자원 6개 대조, 질감·로딩·프레임 영향의 확인 범위와 미측정 범위를 기록했다. 원작 절차를 충분히 따르지 않은 구현 선택과 검증 누락의 책임은 Codex에 있음을 경위서에 명시했다.
+
+- Source `7a8f00cea9ce30174a47a077df46d26709702f76`.
+- Deployment `appgdep_6af0a83790a0819183c3daabe8f7f47e`, succeeded.
+- Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_5acea5c5dd0c819198e74a98f4a66f86`.
+- Safari 로컬 화면에서 경위서 제목·본문·표·목차를 확인하고 전체 로컬 자료 링크를 검사했다. 기존 소유자 전용 접근과 이전 보고서를 보존했다.
+- 원작 패키지·실행 파일·계정 정보는 게시하지 않았다. 실기기 성능 계측과 헬기 C++ 로직 전수진단은 TODO에 남겼다. 이번 게시에 게임 코드·자원 변경은 없다.
+
+# 헬기와 원작 유닛의 파일·렌더링 경로 — 2026-11-09
+
+[원본 PNG와 파일·렌더링 대조](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-asset-parity-20261109)를 추가 게시했다. 원본 IPA의 PNG 서명·CgBI·IHDR 검사, 헬기 28개 파일과 실제 조립 참조 17개, 공통점·차이·남은 전수 대조 범위를 담았다. 원본 패키지·실행 파일은 올리지 않았다. 생성한 전체 로컬 자료 링크를 검사했다.
+
+- Source `671424c74d1d255085e20cd17fcf9fcb84a7d0b8`.
+- Deployment `appgdep_6af0a3be500c8191a88c34ddf13eca56`, succeeded.
+- Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_bbced09a04588191801e12a356729e0e`.
+- 기존 소유자 전용 접근과 이전 보고서는 보존했다. 추가 조사는 앱 변경을 포함하지 않는다.
+
+# 헬기와 지상 유닛의 부품·입체감 비교 — 2026-11-09
+
+[부품·그림자·선회 변환 조사](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-depth-20261109)를 추가 게시했다. 사용자 관찰과 가설, 실제 조립 파츠 수, 벨루가의 미연결 별도 부품, AH-10의 비표시 무장, 정면 이미지를 변형하는 선회 경로를 구분했다. 4종의 선회 스프라이트 재제작과 정지·이동 입체감 비교는 TODO에 남겼다.
+
+- Source `2f8e41728cef9e2472fea0ee952c9013509503fd`.
+- Deployment `appgdep_6af0a2670f988191844f40a327bc1b6e`, succeeded.
+- Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_a9d1e80b60c8819182e9e7edb090ddf7`.
+- Safari 로컬 제목·목차·비교 표·본문 표시와 로컬 자료 링크를 확인했다. 기존 소유자 전용 접근과 이전 게시물을 보존했다.
+
+# 헬기 효과·도장과 다음 작업 — 2026-11-09
+
+[수정 결과와 후속 계획](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-followup-20261109)을 기존 소유자 전용 사이트에 게시했다. 좌우 각 7개 플레어, 승인 도장 PNG 적용, 정지·선회·회피 이동 계획, 실제 웹 렌더 캡처와 검사 자료를 포함한다. 아이폰 정식 Release 설치와 저장 진척 보존을 확인했다. 기존 미적용 원인과 아이폰 대량 발동 성능 계측은 미확정·미완료로 구분했다.
+
+- Source `69f35c7285e39ac6796d631d0a821c1fa7e8c256`.
+- Deployment `appgdep_6af0a10d5d6c8191870a9d6c8866b20b`, succeeded.
+- Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_3a0e895bda2481918ac15e604b3ded69`.
+- Safari 로컬 화면에서 새 제목·본문·목차를 확인했다. 보고서 전체 로컬 파일 링크 누락은 0개다. 새 캡처 3개는 원본 RGBA와 같은 무손실 WebP다. 이전 보고서와 접근 범위를 보존했다.
+- 사용자가 뒤이어 요청한 헬기·지상 유닛의 입체감 비교 조사는 `MD-AIRCRAFT-DEPTH-01` TODO에 기록했다.
+
+아래는 이전 게시 기록이다.
+
+# 헬기 4종 도장과 채프·플레어 확대 시안 — 2026-11-09
+
+[도장·실제 웹 비교·확대 시안 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-markings-20261108)를 기존 소유자 전용 사이트에 게시했다. 도장 코드 `fa75480`, 확대 시안 `ca22c89`. 게임 채프·플레어 구현과 성능 검사는 아직 하지 않았다.
+
+- Source `fc244ea426c0360b874dc87104dd21838cd67ac2`.
+- Deployment `appgdep_6af08f392e8c8191a5532397ba761172`, succeeded.
+- Version `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_b01444c2a0a481918b9cb3c4d7ad3090`.
+- Safari 로컬 화면에서 도장 표·시안 격자·실제 웹 비교·확대 채프·플레어 그림을 확인했다. 게시 주소에서도 새 제목·도장 표·시안 격자 표시를 확인했다. 사이트 HTML 전체의 로컬 자료 링크 누락은 0개다.
+- 새 그림은 원본과 RGBA가 같은 무손실 WebP다. 용량 확보를 위해 기존 영상 1개의 72프레임·시간·반복 설정이 같은 무손실 WebP를 만들고, 바이트가 같은 기존 WebP 중복 20개는 같은 파일을 가리키도록 연결했다. 원본과 대응 기록은 로컬 보존 폴더에 남겼다. 보고 내용·화면·재생 시간을 삭제하거나 낮추지 않았다.
+- 배포 압축 해제 크기 266,427,392바이트로 256MiB 제한 이내다. 중복 제거로 줄인 크기는 6,772,224바이트다.
+- 사용자 후속 지시인 노랑·빨강 저채도 조정은 `MD-AIRCRAFT-FLARE-COLOR-01`에 기록했다. 다른 헬기 작업과 같은 시점에 진행하며 게시한 확대 시안의 색은 보존했다.
+- 게임 main·운영 PWA·기기 앱은 이번 결과로 배포하지 않았다.
+
+# 스카웃 AH-1Z 몸체 비율 수정 — 2026-11-08
+
+[스카웃 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#scout-ah1z-20261108)를 기존 소유자 전용 사이트에 게시했다. 생성 부품·몸체 비율 수정안·실제 웹 치트빌드 전후 비교·외곽 실측·검사 결과와 몸체 편집 도구 오류 전문을 제공한다. Safari 로컬 화면에서 제목·비교 이미지를 확인하고 새 자료 링크를 파일과 대조했다. 게시 상태는 succeeded다.
+
+- Source `2d2abbdc1650242a97da91282ea9aebde3afa1e5`.
+- Deployment `appgdep_6af077344a308191853b20ee1b7d415e`.
+- 이미지 3개는 원본과 RGBA 픽셀이 같은 무손실 WebP다. 기존 보고서 내용·이미지·오류 전문과 접근 범위는 보존했다.
+- 첫 업로드는 256MiB 확장 제한으로 거절됐다. 기존 PNG 13개의 무손실 변환은 용량이 줄지 않아 적용하지 않았다. 재포장 때 `COPYFILE_DISABLE=1`로 macOS 부가 메타데이터를 제외해 확장 크기를 269,067,264→267,851,776바이트로 줄였다. 보고 자료를 삭제하거나 해상도를 낮추지 않았다.
+- 게임 main·운영 PWA·실기기 앱은 이번 결과로 배포하지 않았다. [작업 근거](research/scout-ah1z-20261108.md).
+
+# 헬기 4종 Lv.1–10 수치안 — 2026-11-08
+
+[수치안](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-balance-20261108)을 기존 소유자 전용 보고서에 게시했다. 40개 기체 레벨·90개 무장 행과 강화 비용·증가율·고정 동작 수치, TSV·JSON·조회 코드를 제공한다. 수치 조건 439개·C++ 로더 540개 대조 통과. Safari 로컬 본문·표와 게시 주소의 새 제목 링크를 확인했다. 게임 적용·캠페인 검증은 하지 않았다.
+
+- Source `7df630a0da0378b20006b349aacb2e8563227c09`.
+- Deployment `appgdep_6af06b5d5364819190e0cfded372c441`, succeeded.
+- 기존 보고서·이미지·오류 전문과 소유자 전용 접근을 보존했다.
+
+# 승인한 헬기 형상 복구 — 2026-11-08
+
+[보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-approved-20261108)에 승인본 링크·현재 World 캡처·회색 오르카 원본·몸체 측정·검사·아이폰 설치 범위를 추가했다.
+
+- Source: `b319b98e64260676c5b3964bcfd7845ad5e7092c`.
+- Deployment: `appgdep_6aef64f3706c8191a06a04a17391f92f`, succeeded.
+- 접근: 기존 소유자 전용. 1280·390px의 이미지 로드·가로 범위·JS 오류 없음 확인.
+- 게임 main·운영 PWA 미배포. iPhone 정식 앱 02:45 빌드 설치·저장 보존, 기기 외형 직접 검사는 미완료.
+
+# 2026-11-08 헬기 생산 위치·미션 55 회피 검사
+
+[검사 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-evasion-20261108)를 기존 소유자 전용 사이트에 게시했다. 생산 위치·12방향 경로 수정, 원작 포탑의 폭발 범위, 미션 55 전후 사망 시각과 격리 웹 치트 영상을 함께 제공한다. 소형 3대가 수정 후에도 전멸한 결과를 명시했다.
+
+- Source `1d8e19a4e0a7e77121cb8553adf87e8a0d579cde`.
+- Deployment `appgdep_6aef570cf58481918ee45ebc5bd377a3`: succeeded.
+- 로컬 Chrome 1280·390px에서 새 단락 가로 범위, 영상 재생, 자료 링크 5개 응답을 확인했다. 게임 운영 PWA 배포와 별개다.
+
+# 아군 항공기 시험 보고 — 2026-11-08
+
+[아군 항공기 4종 시험](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-allied-20261108)을 기존 소유자 전용 통합 보고서에 게시했다. 임시 VTOL 도색, 기존 로터 복귀, 네 기체 조립·무장·경제 제안, 좌우 전환의 감속·정지·재가속과 약 22초의 실제 웹 영상을 포함한다.
+
+- 게임 코드 커밋: `029fa01`, `feat/art-parity-followup-20261107`.
+- 보고서 소스: `7f0a1abcbc5fe4774ad87f8c224ca300e6cc39ca`.
+- 배포: `appgdep_6aef4687ab6081918965075f7f6985ef`, succeeded.
+- 1440·390px에서 이미지 4개, 영상 재생, 가로 넘침 없음, 목차 300항목 연결을 확인했다.
+- 첫 업로드는 256MiB 확장 제한을 104KB 넘겨 거절됐다. 기존 PNG 56개를 무손실 WebP로 바꾸고 모든 RGBA 바이트의 일치를 검사했다. 원본과 변환 기록은 `.local/report-image-originals-20261108`에 보존했다. 보고서 본문과 이전 영상은 유지했다. 이 기록의 `.local` 경로는 기본 MachDefense 저장소 기준이다.
+- 정식 게임 main·운영 PWA·기기 설치본은 배포하지 않았다. [시험 근거](evidence/aircraft-allied-20261108.md).
+
+아래는 이전 게시 기록이다.
+
+# 헬기 실제 World 비교 — 2026-11-07
+
+[크기·로터·그림자 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-world-20261107)를 기존 소유자 전용 보고서 첫 부분에 게시했다. 네 유닛의 동일 지면 비교 캡처와 약 4초의 실제 웹 치트 로터 영상을 제공한다. [코드·검사 근거](research/aircraft-scale-20261107.md).
+
+- 게임 작업 커밋: `4fdaca5`, `feat/art-parity-followup-20261107`.
+- 보고서 소스: `253a0d7101ae3d7d8512dfe556dd5b73915a2588`.
+- 배포: `appgdep_6aef2c96c53c8191805995c2442760e1`, succeeded.
+- 1440·390px에서 캡처 로드·동영상 재생·가로 넘침 없음·목차 287항목 일치를 확인했다.
+- 최초 push 때 보고서 원격의 VTOL 배치 문서 추가와 이력이 갈렸다. 원격 변경을 정상 merge로 보존한 뒤 게시했다.
+- 기존 PNG 세 개를 무손실 WebP로 바꾸고 RGBA 바이트 동일성을 확인했다. 원본은 로컬 `.local/aircraft-report-backup`에 보존했다. 보고서 자원 총량 제한 안에서 새 자료를 추가했다.
+- main·운영 PWA·기기 앱에는 배포하지 않았다. 무장·기울임·캠페인 연결은 남아 있다.
+
+이전 게시 기록:
+
 # 원고·경위서 게시 정정 — 2026-11-08
 
 [통합 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#unease-20261108)와 [경위서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/incident.html)를 기존 소유자 전용 사이트에 게시했다. 사용자 지시를 인용해 책임을 돌리던 부분과 정정 설명에 반복했던 단서를 삭제했다. Codex의 업무 거부·미실행과 경위서 작성 중 책임 전가를 직접 기록했다. Safari에서 게시된 수정 본문을 확인했다.
@@ -236,3 +431,32 @@ Chrome에서 신규 부품 35개의 길이와 비율 보존·텍스처 잘림, �
 1280px·390px 로컬 Chrome에서 새 이미지 69개, 시안 35칸, 7계열 표시와 오류·가로 넘침 없음을 확인했다. 첫 게시 패키지는 크기 한도로 거절됐다. 기존 대형 PNG 3개를 픽셀 값이 같은 무손실 WebP로 바꾸고 참조를 갱신했다. RGBA 바이트 일치와 새 주소 응답을 검사했고 원본 PNG는 로컬에 보존했다.
 
 사이트 소스 `431944124b299bb8b1498eaff36cff4b67402832`, 배포 `appgdep_6aee57ddd8948191ba4b27355c28a8c9`가 succeeded로 완료됐다. 본인 전용 접근을 유지했다. [측정·설치·질감 검수 근거](evidence/turret-redraw-20261107.md).
+
+## 2026-11-07 헬기 무장 조립·아군 다중 무장 조사
+
+[헬기 무장 조립 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense#aircraft-modular-20261107). 원작 장갑차·초대형 탱크와 같은 World의 헬기 비교, 무기 파츠 5개, 빠른 로터·사격 영상, 추가 VTOL 시안 2개, 아군 생산·기지 무장 267단계 대조를 올렸다. [코드·검사 근거](evidence/aircraft-modular-20261107.md). 게임 구현 커밋은 `b0dd2b9`이며 캠페인·운영 앱에는 추가하지 않았다.
+
+최종 사이트 소스 `29c0aa500df9dcc138c2528452c27a7a91fcc700`, 배포 `appgdep_6aef3aa79b048191bb3d505d33e13c57`, 버전 `appgprj_6addbf55aea081918d3d182d7e496e88~appgver_8bf7fe00a0188191b6c5f423fdada9b6`가 succeeded다. 기존 소유자 전용 접근을 유지했다.
+
+1440×1000·390×844 Chrome에서 새 이미지 12개, 영상 2개 재생, 목차 295개와 검색·이동, 가로 넘침 없음·JS 오류 없음을 확인했다. 기존 PNG 9개를 RGBA 값이 같은 무손실 WebP로 바꿔 용량을 확보했다. 원본은 로컬에 보존했고 변환한 그림의 HTML 참조를 검사했다. 배포 압축 해제 크기는 268,330,496바이트다.
+
+## 2026-11-08 사용자 도안 1166·1167·1168
+
+[보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#user-aircraft-20261108)에 원본 3장, Beluga 적용 화면, AH-10·Cheyenne 생성 실패 응답과 기존 승인 불이행·허위 완료 보고 기록을 게시했다. 새 그림 완료로 표시한 것은 Beluga뿐이다. 로컬 Chrome 1280·390 폭에서 새 이미지 6개 로드와 가로 넘침 없음을 확인했다.
+
+Sites source `7acf9756f0d5e356d4ceeda99fc98f267995a41f`, deployment `appgdep_6aef85a553e081919184ae0b7d7888ee`, status `succeeded`. 사이트는 기존 소유자 전용 공개 범위를 유지한다. 게임 main·PWA·실기기 배포는 하지 않았다. 보고서 256MiB 제한 때문에 기존 전투 MP4 4개의 인코딩을 압축했다. 원본은 `.local/report-compression-originals/`에 보존했다. 해상도·프레임 수·길이·재생률을 대조했고 오디오는 복사했다. 손실 인코딩이므로 픽셀 일치를 주장하지 않는다.
+
+## 2026-11-09 헬기 이동 복구·선회 결함·잔여 작업
+
+[현재 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-status-20261109)에 이동 복구와 아이폰 재설치, 벨루가 구현 오류, 스카웃·벨루가 재작업 및 샤이엔 보존 지시, 실제 웹 치트빌드 3단계 비교, 표적 밀착 측정과 남은 성능 검사를 게시했다. 전체 수리 완료로 표시하지 않았다.
+
+사이트 소스 `acb5d6dd7e15ee614bfa0c1940362643ae80da53`, 배포 `appgdep_6af0c11034c481919ccad0c7d646e3da`, 버전 239는 `succeeded`다. 기존 소유자 전용 접근을 유지했다. [게시 근거](evidence/aircraft-repair-20261109/report-publication.json). 게임 main·운영 PWA는 배포하지 않았다.
+
+로컬 Safari에서 새 절·표·비교 이미지 표시를 확인했다. 게시 후 Safari 확인은 사용자 조작과 겹쳐 완료하지 않았다. 모바일 화면도 이번에 검사하지 않았다. Sites 배포 결과와 현재 버전은 확인했다.
+
+두 차례 압축 해제 크기 제한으로 거절된 뒤 기존 GIF 2개와 PNG 3개를 무손실 WebP로 변환하고, 바이트가 같은 중복 이미지 참조를 합치고, JSON 106개의 공백을 줄였다. 이미지 픽셀·애니메이션 프레임과 시간·JSON 값 보존을 검사했다. 기존 정적 WebP와 변환 애니메이션의 파일명을 분리했다. 원본은 로컬에 보존했다. 최종 묶음의 압축 해제 크기는 268,327,424바이트다. [형식 변환 검사](evidence/aircraft-repair-20261109/report-media-checks.json).
+## 2026-11-10 가로 타이틀 벼랑·하늘·구름 연결
+
+[원본과 외곽을 합친 시안](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-title-composite-20261109/)을 갱신했다. 원본 중앙을 보존하고 자연물 배경의 경계 색을 연결했다. 승인된 세로는 파일과 합성 픽셀이 이전과 같다. 가로·세로 경계 연결 전환, 원본 영역 표시, PNG 저장을 제공한다. Chrome·WebKit의 가로 3개 크기와 모바일 페이지를 검사했다. [제작·검사 범위](research/title-joins-20261110.md).
+
+사이트 소스 `981c0942ac6c415709617c40061bd466f4ec5247`, 배포 `appgdep_6af1e6929fdc8191a7cd917cf5cf63f2`는 `succeeded`다. 기존 소유자 전용 접근을 유지했다. 게임 적용과 운영 앱 배포는 하지 않았다. [게시 결과](evidence/title-joins-20261110/publication.json).

@@ -1,0 +1,113 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/save-transfer/.local/aircraft-repair-20261109/build
+      Start 34: NaturalCampaign
+      Start  9: ModuleParity
+      Start 48: Level10HUDSweep
+      Start 41: Campaign
+ 1/54 Test #41: Campaign .........................   Passed    2.62 sec
+      Start 49: TransferLevel10
+ 2/54 Test #48: Level10HUDSweep ..................   Passed    3.63 sec
+      Start 47: Level10Data
+ 3/54 Test  #9: ModuleParity .....................   Passed    4.25 sec
+      Start 11: EmergencySupport
+ 4/54 Test #47: Level10Data ......................   Passed    0.95 sec
+      Start 32: CoreContent
+ 5/54 Test #49: TransferLevel10 ..................   Passed    2.27 sec
+      Start 43: WorldSpecial
+ 6/54 Test #11: EmergencySupport .................   Passed    0.77 sec
+      Start 31: GameSession
+ 7/54 Test #32: CoreContent ......................   Passed    0.69 sec
+      Start 52: AircraftCampaign
+ 8/54 Test #43: WorldSpecial .....................   Passed    0.59 sec
+      Start 23: Transition
+ 9/54 Test #31: GameSession ......................   Passed    0.56 sec
+      Start  7: AlliedAircraft
+10/54 Test #52: AircraftCampaign .................   Passed    0.55 sec
+      Start  5: AircraftCountermeasure
+11/54 Test  #7: AlliedAircraft ...................   Passed    0.46 sec
+      Start 36: SaveFailure
+12/54 Test #23: Transition .......................   Passed    0.56 sec
+      Start  3: AircraftFireEffects
+13/54 Test  #5: AircraftCountermeasure ...........   Passed    0.42 sec
+      Start 50: LaserUnlock
+14/54 Test  #3: AircraftFireEffects ..............   Passed    0.36 sec
+      Start 44: SaveTransfer
+15/54 Test #36: SaveFailure ......................   Passed    0.39 sec
+      Start  4: AircraftArmament
+16/54 Test #50: LaserUnlock ......................   Passed    0.33 sec
+      Start 51: AircraftHandling
+17/54 Test #44: SaveTransfer .....................   Passed    0.31 sec
+      Start 35: FrameIO
+18/54 Test  #4: AircraftArmament .................   Passed    0.34 sec
+      Start 40: ValidationTools
+19/54 Test #51: AircraftHandling .................   Passed    0.31 sec
+      Start 14: Battle
+20/54 Test #35: FrameIO ..........................   Passed    0.29 sec
+      Start 19: Menu
+21/54 Test #40: ValidationTools ..................   Passed    0.27 sec
+      Start 45: TransferMenu
+22/54 Test #14: Battle ...........................   Passed    0.27 sec
+      Start  8: Aircraft
+23/54 Test #19: Menu .............................   Passed    0.25 sec
+      Start 33: WorldEffects
+24/54 Test #45: TransferMenu .....................   Passed    0.25 sec
+      Start 54: AircraftDodge
+25/54 Test  #8: Aircraft .........................   Passed    0.29 sec
+      Start 12: ActionAudio
+26/54 Test #33: WorldEffects .....................   Passed    0.26 sec
+      Start 27: World
+27/54 Test #54: AircraftDodge ....................   Passed    0.23 sec
+      Start  2: AircraftBalance
+28/54 Test #12: ActionAudio ......................   Passed    0.27 sec
+      Start 53: AircraftEvasion
+29/54 Test  #2: AircraftBalance ..................   Passed    0.24 sec
+      Start 46: TransferFileStore
+30/54 Test #27: World ............................   Passed    0.27 sec
+      Start 28: UpgradeDialog
+31/54 Test #53: AircraftEvasion ..................   Passed    0.24 sec
+      Start 26: GameHUD
+32/54 Test #28: UpgradeDialog ....................   Passed    0.23 sec
+      Start 17: Economy
+33/54 Test #46: TransferFileStore ................   Passed    0.26 sec
+      Start 13: DataTable
+34/54 Test #26: GameHUD ..........................   Passed    0.24 sec
+      Start 30: Loot
+35/54 Test #17: Economy ..........................   Passed    0.23 sec
+      Start 38: Formation
+36/54 Test #13: DataTable ........................   Passed    0.24 sec
+      Start  6: AircraftPaint
+37/54 Test #30: Loot .............................   Passed    0.24 sec
+      Start 39: ValidationPanel
+38/54 Test  #6: AircraftPaint ....................   Passed    0.23 sec
+      Start 24: PlayerParts
+39/54 Test #38: Formation ........................   Passed    0.24 sec
+      Start 22: Projectile
+40/54 Test #39: ValidationPanel ..................   Passed    0.23 sec
+      Start 25: Settlement
+41/54 Test #22: Projectile .......................   Passed    0.23 sec
+      Start 10: SaveData
+42/54 Test #24: PlayerParts ......................   Passed    0.24 sec
+      Start 21: Bipod
+43/54 Test #25: Settlement .......................   Passed    0.24 sec
+      Start 15: Button
+44/54 Test #10: SaveData .........................   Passed    0.23 sec
+      Start 29: SummaryDialog
+45/54 Test #21: Bipod ............................   Passed    0.23 sec
+      Start 20: Production
+46/54 Test #15: Button ...........................   Passed    0.23 sec
+      Start 37: Trail
+47/54 Test #29: SummaryDialog ....................   Passed    0.23 sec
+      Start 16: Combat
+48/54 Test #20: Production .......................   Passed    0.24 sec
+      Start 18: WeaponController
+49/54 Test #37: Trail ............................   Passed    0.24 sec
+      Start 42: SpecialAttack
+50/54 Test #18: WeaponController .................   Passed    0.22 sec
+      Start  1: PNGTestSize
+51/54 Test  #1: PNGTestSize ......................   Passed    0.00 sec
+52/54 Test #16: Combat ...........................   Passed    0.23 sec
+53/54 Test #42: SpecialAttack ....................   Passed    0.23 sec
+54/54 Test #34: NaturalCampaign ..................   Passed   14.45 sec
+
+100% tests passed out of 54
+
+Total Test time (real) =  14.46 sec

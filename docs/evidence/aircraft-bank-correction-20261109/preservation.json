@@ -1,0 +1,40 @@
+{
+  "protectedFilesChecked": 2652,
+  "protectedFilesChanged": [],
+  "changedExistingFiles": [
+    "Resources/Images/ALightBody.png",
+    "Art/Aircraft/runtime/assembly.json",
+    "Art/Aircraft/runtime/definition-resources.json",
+    "Art/Aircraft/runtime/png-optimization.json",
+    "Tests/AircraftHandlingTests.cpp",
+    "Tests/AircraftTests.cpp"
+  ],
+  "runtimeSourcesChanged": false,
+  "onlyChangedGameAsset": "Resources/Images/ALightBody.png",
+  "webCaptureComparison": [
+    {
+      "tile": 0,
+      "differentPixels": 0,
+      "differentPixelsOutsideScout": 0
+    },
+    {
+      "tile": 3,
+      "differentPixels": 4412,
+      "differentPixelsOutsideScout": 0
+    },
+    {
+      "tile": 6,
+      "differentPixels": 3799,
+      "differentPixelsOutsideScout": 0
+    }
+  ],
+  "approvedMovementReference": "38903e4",
+  "movementByteExact": true,
+  "textureUploadAllocationRGBA8Bytes": {
+    "before": 131072,
+    "after": 131072
+  },
+  "allocationNote": "Existing next-power-of-two upload dimensions; not a measured total GPU-memory result.",
+  "finalGameImageSHA256": "1080dd9446eb0fcadb7edcc483da204d4f560aaf18722d7a27a687676cb537ff",
+  "previewBoundsAndFitUnchanged": true
+}

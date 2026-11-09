@@ -1,0 +1,17 @@
+{
+  "version": "920e10d5a8e832bf",
+  "cheat": true,
+  "files": {
+    "game.js": "50e6cc0c128832357ac03d6783beab1cb333a79c5f94e311b0c3538f1b5ce6b3",
+    "game.wasm": "c0d03999007d24c5207df693c9a18f27c1ee161d7a850380a9a0c413bb0ec793",
+    "game.data": "1e3051576cbbb1902fb4a5b42f11b10ba87ab9e5af598b0386bb45a0f945eb88"
+  },
+  "url": "http://127.0.0.1:8971/",
+  "sourceBase": "e3118d0",
+  "sourceSHA256": {
+    "Sources/Core/Simulation/AircraftTactics.hpp": "0af95356ddd2da64914b535dedff478033912b099859a3c64341b35321b766f5",
+    "Tests/AircraftApproachTests.cpp": "319c41ca93a55cf2e9a127c77b0d2c86d321695dc4dbf093a8c72864af5311b5",
+    "Tests/AlliedAircraftTests.cpp": "1d4b34eddfd762c4f69e97e9196ecdda3b7fca28b6e1851576d1111c367c5d65",
+    "Web/tests/aircraft-approach.mjs": "50af72a3d125cc6c1e67ed377d7e5bb22e3e113b6d8bb7b514e007e809b9e3fa"
+  }
+}

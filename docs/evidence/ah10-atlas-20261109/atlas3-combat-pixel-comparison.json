@@ -1,0 +1,122 @@
+[
+  {
+    "engine": "chrome",
+    "level": 1,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "level": 2,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "level": 3,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "level": 4,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "level": 5,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "level": 6,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "level": 7,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "level": 8,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "level": 9,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "level": 10,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "level": 1,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "level": 2,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "level": 3,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "level": 4,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "level": 5,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "level": 6,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "level": 7,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "level": 8,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "level": 9,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "level": 10,
+    "exact": true,
+    "AE": "0 (0)"
+  }
+]

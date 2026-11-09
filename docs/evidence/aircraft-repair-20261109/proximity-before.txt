@@ -1,0 +1,8 @@
+phone Scout Heli range=150 bodyRadius=6 orbit=64 closest=7.62939e-06 seed=8 tick=156
+phone AH-10 range=225 bodyRadius=14 orbit=54.4 closest=4.63997 seed=18 tick=471
+phone Cheyenne range=140 bodyRadius=7 orbit=54.4 closest=0.174863 seed=8 tick=140
+phone Beluga range=255 bodyRadius=7 orbit=32 closest=2.19108 seed=1 tick=296
+pad Scout Heli range=300 bodyRadius=12 orbit=128 closest=1.52588e-05 seed=8 tick=156
+pad AH-10 range=450 bodyRadius=28 orbit=108.8 closest=9.27994 seed=18 tick=471
+pad Cheyenne range=280 bodyRadius=14 orbit=108.8 closest=0.349726 seed=8 tick=140
+pad Beluga range=510 bodyRadius=14 orbit=64 closest=4.38216 seed=1 tick=296

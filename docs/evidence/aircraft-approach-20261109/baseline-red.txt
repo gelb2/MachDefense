@@ -1,0 +1,3 @@
+Assertion failed: (nearest>=2*s[3]), function main, file baseline-probe.cpp, line 32.
+
+exit=-6

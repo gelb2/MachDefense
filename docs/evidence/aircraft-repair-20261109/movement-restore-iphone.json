@@ -1,0 +1,10 @@
+{
+  "release": true,
+  "signatureVerified": true,
+  "testBundlesAbsent": true,
+  "saveByteIdentical": true,
+  "saveBytes": 42496,
+  "movementMatchesCommit": "38903e4",
+  "newBankTexturesRetained": true,
+  "binarySHA256": "161ef3f012082a4cce9653b6f94ed18833b615e2608b1011e43b01f3951f5061"
+}

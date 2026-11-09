@@ -1,0 +1,85 @@
+{
+  "baseline": "b01d751",
+  "worldZoom": 2,
+  "render": "Web cheat command 8 / mode 4; north; rotor angle 0; shadows excluded",
+  "method": "Bounds of actual non-background rendered pixels; PNG alpha 0 contributes no pixels",
+  "rasterTolerancePixels": 2,
+  "rows": [
+    {
+      "name": "AH-10",
+      "factor": 1.1,
+      "before": {
+        "left": 91,
+        "top": 42,
+        "right": 359,
+        "bottom": 241,
+        "width": 268,
+        "height": 199
+      },
+      "after": {
+        "left": 527,
+        "top": 31,
+        "right": 823,
+        "bottom": 250,
+        "width": 296,
+        "height": 219
+      },
+      "widthRatio": 1.1044776119402986,
+      "heightRatio": 1.100502512562814,
+      "widthErrorPixels": 1.1999999999999886,
+      "heightErrorPixels": 0.09999999999999432,
+      "pass": true
+    },
+    {
+      "name": "Beluga",
+      "factor": 0.9,
+      "before": {
+        "left": 117,
+        "top": 336,
+        "right": 335,
+        "bottom": 566,
+        "width": 218,
+        "height": 230
+      },
+      "after": {
+        "left": 578,
+        "top": 347,
+        "right": 774,
+        "bottom": 554,
+        "width": 196,
+        "height": 207
+      },
+      "widthRatio": 0.8990825688073395,
+      "heightRatio": 0.9,
+      "widthErrorPixels": -0.20000000000001705,
+      "heightErrorPixels": 0,
+      "pass": true
+    },
+    {
+      "name": "Cheyenne",
+      "factor": 0.9,
+      "before": {
+        "left": 150,
+        "top": 643,
+        "right": 300,
+        "bottom": 842,
+        "width": 150,
+        "height": 199
+      },
+      "after": {
+        "left": 608,
+        "top": 654,
+        "right": 742,
+        "bottom": 833,
+        "width": 134,
+        "height": 179
+      },
+      "widthRatio": 0.8933333333333333,
+      "heightRatio": 0.8994974874371859,
+      "widthErrorPixels": -1,
+      "heightErrorPixels": -0.09999999999999432,
+      "pass": true
+    }
+  ],
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15"
+}

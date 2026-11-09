@@ -1,0 +1,37 @@
+[
+  {
+    "file": "md-ah10-parts-20261109/ah10-web-ycrop-rejected.json",
+    "saved_bytes": 172,
+    "values_unchanged": true
+  },
+  {
+    "file": "md-ah10-parts-20261109/ah10-web-performance.json",
+    "saved_bytes": 5968,
+    "values_unchanged": true
+  },
+  {
+    "file": "md-ah10-parts-20261109/ah10-web-preservation.json",
+    "saved_bytes": 54,
+    "values_unchanged": true
+  },
+  {
+    "file": "md-ah10-parts-20261109/manifest.json",
+    "saved_bytes": 3366,
+    "values_unchanged": true
+  },
+  {
+    "file": "md-ah10-parts-20261109/restored-fullcanvas-sha256.json",
+    "saved_bytes": 643,
+    "values_unchanged": true
+  },
+  {
+    "file": "md-ah10-parts-20261109/ah10-web-summary.json",
+    "saved_bytes": 617,
+    "values_unchanged": true
+  },
+  {
+    "file": "md-ah10-parts-20261109/muzzle-gap-distances.json",
+    "saved_bytes": 164,
+    "values_unchanged": true
+  }
+]

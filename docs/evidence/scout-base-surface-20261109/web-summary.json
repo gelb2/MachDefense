@@ -1,0 +1,573 @@
+{
+  "baseCommit": "10ae41c",
+  "testOnlyProbe": "Shared existing visual scene, level selected by mode/1000; actual product world and UI renderers",
+  "engines": [
+    {
+      "engine": "chromium",
+      "poses": 70,
+      "poseOK": true,
+      "newImagesRead": [
+        "/assets/Images/ALightCover_01.png",
+        "/assets/Images/ALightGun_01.png",
+        "/assets/Images/ALightMissile_01.png"
+      ],
+      "uploadsAfterWarmup": 0,
+      "uiOK": true,
+      "uiStates": [
+        {
+          "name": "reward-level1",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_01.png",
+            "ALightGun_01.png",
+            "ALightMissile_01.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "reward-level10-cheat",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_10.png",
+            "ALightGun_10.png",
+            "ALightMissile_10.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "production-level1",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_01.png",
+            "ALightGun_01.png",
+            "ALightMissile_01.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "upgrade-grid-level1",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_01.png",
+            "ALightGun_01.png",
+            "ALightMissile_01.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "upgrade-detail-level1",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_01.png",
+            "ALightCover_02.png",
+            "ALightGun_01.png",
+            "ALightGun_02.png",
+            "ALightMissile_01.png",
+            "ALightMissile_02.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "production-level10",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_10.png",
+            "ALightGun_10.png",
+            "ALightMissile_10.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "upgrade-grid-level10",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_10.png",
+            "ALightGun_10.png",
+            "ALightMissile_10.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "upgrade-detail-level10",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_10.png",
+            "ALightGun_10.png",
+            "ALightMissile_10.png",
+            "ALightRotor.png"
+          ]
+        }
+      ],
+      "combatOK": true,
+      "levels": 10,
+      "actualLoadouts": 40,
+      "initialAudio": {
+        "created": 2,
+        "closed": 0
+      },
+      "finalAudio": {
+        "created": 2,
+        "closed": 0
+      },
+      "errors": [],
+      "performance": [
+        {
+          "count": 40,
+          "enabled": false,
+          "frames": 600,
+          "p50": 16.69999999999891,
+          "p95": 16.799999999999272,
+          "p99": 16.80000000000109,
+          "over25ms": 0,
+          "cpuP99": 2,
+          "maxParticles": 0,
+          "uploadsDuring": 0,
+          "heapStart": 134217728,
+          "heapEnd": 134217728,
+          "writes": 0
+        },
+        {
+          "count": 40,
+          "enabled": true,
+          "frames": 600,
+          "p50": 16.69999999999709,
+          "p95": 33.29999999999927,
+          "p99": 66.70000000000073,
+          "over25ms": 32,
+          "cpuP99": 64.69999980926514,
+          "maxParticles": 132,
+          "uploadsDuring": 0,
+          "heapStart": 134217728,
+          "heapEnd": 134217728,
+          "writes": 0
+        },
+        {
+          "count": 100,
+          "enabled": false,
+          "frames": 600,
+          "p50": 16.69999999999709,
+          "p95": 16.700000000004366,
+          "p99": 16.80000000000291,
+          "over25ms": 0,
+          "cpuP99": 3.4000000953674316,
+          "maxParticles": 0,
+          "uploadsDuring": 0,
+          "heapStart": 134217728,
+          "heapEnd": 134217728,
+          "writes": 0
+        },
+        {
+          "count": 100,
+          "enabled": true,
+          "frames": 600,
+          "p50": 16.69999999999709,
+          "p95": 16.799999999995634,
+          "p99": 16.80000000000291,
+          "over25ms": 0,
+          "cpuP99": 3.8000001907348633,
+          "maxParticles": 132,
+          "uploadsDuring": 0,
+          "heapStart": 134217728,
+          "heapEnd": 134217728,
+          "writes": 0
+        }
+      ],
+      "combatSummary": [
+        {
+          "level": 1,
+          "writes": 0,
+          "sounds": 353,
+          "enemyHp": [
+            9999658,
+            9998895,
+            9999561,
+            9999730
+          ]
+        },
+        {
+          "level": 2,
+          "writes": 0,
+          "sounds": 367,
+          "enemyHp": [
+            9999451,
+            9998450,
+            9999357,
+            9999640
+          ]
+        },
+        {
+          "level": 3,
+          "writes": 0,
+          "sounds": 413,
+          "enemyHp": [
+            9999254,
+            9997742,
+            9999032,
+            9999550
+          ]
+        },
+        {
+          "level": 4,
+          "writes": 0,
+          "sounds": 427,
+          "enemyHp": [
+            9999056,
+            9997256,
+            9998758,
+            9999410
+          ]
+        },
+        {
+          "level": 5,
+          "writes": 0,
+          "sounds": 524,
+          "enemyHp": [
+            9998639,
+            9995623,
+            9998164,
+            9999192
+          ]
+        },
+        {
+          "level": 6,
+          "writes": 0,
+          "sounds": 533,
+          "enemyHp": [
+            9998299,
+            9994957,
+            9997787,
+            9999028
+          ]
+        },
+        {
+          "level": 7,
+          "writes": 0,
+          "sounds": 569,
+          "enemyHp": [
+            9997792,
+            9994347,
+            9997265,
+            9998576
+          ]
+        },
+        {
+          "level": 8,
+          "writes": 0,
+          "sounds": 583,
+          "enemyHp": [
+            9997278,
+            9993310,
+            9996849,
+            9998195
+          ]
+        },
+        {
+          "level": 9,
+          "writes": 0,
+          "sounds": 619,
+          "enemyHp": [
+            9996925,
+            9992713,
+            9996370,
+            9997892
+          ]
+        },
+        {
+          "level": 10,
+          "writes": 0,
+          "sounds": 654,
+          "enemyHp": [
+            9996468,
+            9991644,
+            9995912,
+            9996918
+          ]
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "poses": 70,
+      "poseOK": true,
+      "newImagesRead": [
+        "/assets/Images/ALightCover_01.png",
+        "/assets/Images/ALightGun_01.png",
+        "/assets/Images/ALightMissile_01.png"
+      ],
+      "uploadsAfterWarmup": 0,
+      "uiOK": true,
+      "uiStates": [
+        {
+          "name": "reward-level1",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_01.png",
+            "ALightGun_01.png",
+            "ALightMissile_01.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "reward-level10-cheat",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_10.png",
+            "ALightGun_10.png",
+            "ALightMissile_10.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "production-level1",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_01.png",
+            "ALightGun_01.png",
+            "ALightMissile_01.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "upgrade-grid-level1",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_01.png",
+            "ALightGun_01.png",
+            "ALightMissile_01.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "upgrade-detail-level1",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_01.png",
+            "ALightCover_02.png",
+            "ALightGun_01.png",
+            "ALightGun_02.png",
+            "ALightMissile_01.png",
+            "ALightMissile_02.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "production-level10",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_10.png",
+            "ALightGun_10.png",
+            "ALightMissile_10.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "upgrade-grid-level10",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_10.png",
+            "ALightGun_10.png",
+            "ALightMissile_10.png",
+            "ALightRotor.png"
+          ]
+        },
+        {
+          "name": "upgrade-detail-level10",
+          "scoutImages": [
+            "ALightBody.png",
+            "ALightCover_10.png",
+            "ALightGun_10.png",
+            "ALightMissile_10.png",
+            "ALightRotor.png"
+          ]
+        }
+      ],
+      "combatOK": true,
+      "levels": 10,
+      "actualLoadouts": 40,
+      "initialAudio": {
+        "created": 2,
+        "closed": 0
+      },
+      "finalAudio": {
+        "created": 2,
+        "closed": 0
+      },
+      "errors": [],
+      "performance": [
+        {
+          "count": 40,
+          "enabled": false,
+          "frames": 600,
+          "p50": 17,
+          "p95": 19,
+          "p99": 55,
+          "over25ms": 28,
+          "cpuP99": 2,
+          "maxParticles": 0,
+          "uploadsDuring": 0,
+          "heapStart": 134217728,
+          "heapEnd": 134217728,
+          "writes": 0
+        },
+        {
+          "count": 40,
+          "enabled": true,
+          "frames": 600,
+          "p50": 17,
+          "p95": 18,
+          "p99": 18,
+          "over25ms": 1,
+          "cpuP99": 3,
+          "maxParticles": 132,
+          "uploadsDuring": 0,
+          "heapStart": 134217728,
+          "heapEnd": 134217728,
+          "writes": 0
+        },
+        {
+          "count": 100,
+          "enabled": false,
+          "frames": 600,
+          "p50": 17,
+          "p95": 19,
+          "p99": 56,
+          "over25ms": 26,
+          "cpuP99": 5,
+          "maxParticles": 0,
+          "uploadsDuring": 0,
+          "heapStart": 134217728,
+          "heapEnd": 134217728,
+          "writes": 0
+        },
+        {
+          "count": 100,
+          "enabled": true,
+          "frames": 600,
+          "p50": 17,
+          "p95": 67,
+          "p99": 72,
+          "over25ms": 58,
+          "cpuP99": 7,
+          "maxParticles": 132,
+          "uploadsDuring": 0,
+          "heapStart": 134217728,
+          "heapEnd": 134217728,
+          "writes": 0
+        }
+      ],
+      "combatSummary": [
+        {
+          "level": 1,
+          "writes": 0,
+          "sounds": 353,
+          "enemyHp": [
+            9999658,
+            9998895,
+            9999561,
+            9999730
+          ]
+        },
+        {
+          "level": 2,
+          "writes": 0,
+          "sounds": 367,
+          "enemyHp": [
+            9999451,
+            9998450,
+            9999357,
+            9999640
+          ]
+        },
+        {
+          "level": 3,
+          "writes": 0,
+          "sounds": 413,
+          "enemyHp": [
+            9999254,
+            9997742,
+            9999032,
+            9999550
+          ]
+        },
+        {
+          "level": 4,
+          "writes": 0,
+          "sounds": 427,
+          "enemyHp": [
+            9999056,
+            9997256,
+            9998758,
+            9999410
+          ]
+        },
+        {
+          "level": 5,
+          "writes": 0,
+          "sounds": 524,
+          "enemyHp": [
+            9998639,
+            9995623,
+            9998164,
+            9999192
+          ]
+        },
+        {
+          "level": 6,
+          "writes": 0,
+          "sounds": 533,
+          "enemyHp": [
+            9998299,
+            9994957,
+            9997787,
+            9999028
+          ]
+        },
+        {
+          "level": 7,
+          "writes": 0,
+          "sounds": 569,
+          "enemyHp": [
+            9997792,
+            9994347,
+            9997265,
+            9998576
+          ]
+        },
+        {
+          "level": 8,
+          "writes": 0,
+          "sounds": 583,
+          "enemyHp": [
+            9997278,
+            9993310,
+            9996849,
+            9998195
+          ]
+        },
+        {
+          "level": 9,
+          "writes": 0,
+          "sounds": 619,
+          "enemyHp": [
+            9996925,
+            9992713,
+            9996370,
+            9997892
+          ]
+        },
+        {
+          "level": 10,
+          "writes": 0,
+          "sounds": 654,
+          "enemyHp": [
+            9996468,
+            9991644,
+            9995912,
+            9996918
+          ]
+        }
+      ]
+    }
+  ],
+  "performanceInterpretation": "CPU call duration and requestAnimationFrame interval observations only; no GPU timing or no-regression claim."
+}

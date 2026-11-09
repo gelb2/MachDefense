@@ -1,0 +1,2333 @@
+{
+  "status": "candidate preparation complete; actual World validation pending",
+  "cover_registration": {
+    "tile": [
+      28,
+      14
+    ],
+    "parentSocket": 0,
+    "selfSocket": [
+      6,
+      0
+    ],
+    "z": 2,
+    "body_center": [
+      49,
+      44
+    ]
+  },
+  "covers": [
+    {
+      "level": 1,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        16,
+        91,
+        279,
+        213
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        24,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "442839e6d0fa62ee7f55162ac4f6ed62774ed11fd668415c480c29d5d511213f",
+      "neutral_preserved": true
+    },
+    {
+      "level": 1,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        300,
+        90,
+        563,
+        212
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        24,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "0421bd0cced0f5d8e996243210b4c8b5d77b1ef48952b433768bd7f06ca2bf08",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        588,
+        87,
+        831,
+        207
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        22,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "f719fadc64601fad9853e4d832cc285e29e5cf53ba76516e94f456317bf89f47",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        858,
+        85,
+        1089,
+        206
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        21,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "b974e54c0d734123313ecfabeccf3f5d861f62f880946eb2ca63cf098bcae87b",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        1116,
+        92,
+        1374,
+        210
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        24,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "29635104142b093f53f04c7f57da71bc2a115fa80cb7a1c63a25b7016eecbae6",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        1392,
+        91,
+        1637,
+        207
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        22,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "71ca26229c2c0dc56d2610d4a525cc790b5b84dcf3d970db6b60f5460e8ea810",
+      "neutral_preserved": false
+    },
+    {
+      "level": 1,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        1660,
+        93,
+        1900,
+        206
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        22,
+        10
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "efcbdd5341a30ad58ec2203d35d83b4b072dc52bc9c3c6955a27021dda30d5ba",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        16,
+        332,
+        279,
+        460
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        24,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "08605af07accdc113b5450b3728067314fc78ed3a66aad1abbfb54d6ffafc9d9",
+      "neutral_preserved": true
+    },
+    {
+      "level": 2,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        300,
+        331,
+        563,
+        460
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        24,
+        12
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "adafe58b94779ed12053a20e68eff253a837cc4af9d6c1601e8d710ce985d870",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        589,
+        329,
+        832,
+        453
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        22,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "c6e60f8f3a7ea0248086eaa7434710573066f1db59b304ec514328bffce62177",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        859,
+        326,
+        1090,
+        452
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        21,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "7fb9a5bb6058bd5914cfbcc7265e2e3f4780130842f852d0a2ad9a77316a803b",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        1117,
+        333,
+        1374,
+        457
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        23,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "16756af8e1bd80fb2805092a907a38e3975e8d67349806a0fe062f6fa33cf8c1",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        1394,
+        333,
+        1637,
+        454
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        22,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "cecc806a5d22c0c1b2e9053d74826eed1ce372b7117f1d3b4a07e6bfa318744c",
+      "neutral_preserved": false
+    },
+    {
+      "level": 2,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        1662,
+        334,
+        1899,
+        453
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        22,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "9142ff4f1ae779fdb035738b8196ca8d1ff12a88e670adc149c3edead18a900f",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        16,
+        589,
+        280,
+        722
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        24,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "fb343c614410130095a078216d67c3c2a5252d823cbc5fa936b8efed1dd76433",
+      "neutral_preserved": true
+    },
+    {
+      "level": 3,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        300,
+        587,
+        564,
+        719
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        24,
+        12
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "8f6b518e6ae001a82b0ae05bd75adbbb436d69e93adc8df330c8e04d0d966997",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        588,
+        583,
+        833,
+        714
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        22,
+        12
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "2c9b75e6e94d1e6b30af919ae398575475051b5561558f96343e4a7555f06688",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        858,
+        580,
+        1091,
+        711
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        21,
+        12
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "7d92bea4dfc94639fa1c206812f12426891a1f68bda904732a530c4b207cde12",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        1115,
+        590,
+        1377,
+        718
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        24,
+        12
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "662ae3fb63e485d9054d8b0734365bbaeebf52341483303dd6f83f7991966ea4",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        1394,
+        591,
+        1638,
+        717
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        22,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "91780cef3107f17172063519ba0709b3a7598fb2c5daded43cd60ed47c8eddb1",
+      "neutral_preserved": false
+    },
+    {
+      "level": 3,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group1.png",
+      "source_box": [
+        1662,
+        592,
+        1900,
+        714
+      ],
+      "group_scale": 0.09125475285171103,
+      "drawn_size": [
+        22,
+        11
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        1
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "f05e5e0f84ccdc942f63f88f6913ecc868c034c06678c436ff25235ff6a6e1d2",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        18,
+        93,
+        320,
+        208
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        24,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "bbf856b59a0b41dec226a05577b58ac6221086322512c9f074fdf89618a1f871",
+      "neutral_preserved": true
+    },
+    {
+      "level": 4,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        341,
+        91,
+        632,
+        205
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "602f47cb216cbbc30a9f58d9e3b51ec57ed9d2cdd9435c0a31557bb6d107b3bc",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        654,
+        89,
+        936,
+        199
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        22,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "eaa97533c933a4fe6e71ec64efcab0f15d14760e8353d4d311aa94f6c23845e3",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        963,
+        95,
+        1230,
+        193
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        21,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "a49c64fef9abef605c47d870d0307ab0bfa6e43c29be3a5884c29f1ada76e1a9",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        1256,
+        93,
+        1540,
+        206
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "271f1c35bb2fe1ac3c1ebc187c06f27d45b3fcc7f19ebb9df84fc790a013aac0",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        1561,
+        89,
+        1845,
+        209
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        10
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "a3bf4285fe516f60d1d9c670da3e7d9415305046c4f8461efb888dabe25c3d21",
+      "neutral_preserved": false
+    },
+    {
+      "level": 4,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        1865,
+        85,
+        2152,
+        208
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        10
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "09c150282069746d79b3843af814f925f97179f07dca69232eac7b7638625b00",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        18,
+        304,
+        320,
+        421
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        24,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "64126e64a144abb0f8b94e382b80a677023be4991958814e1eed166e18d42102",
+      "neutral_preserved": true
+    },
+    {
+      "level": 5,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        340,
+        303,
+        633,
+        419
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "4e216b2985cd06c476b38d052f89201b05a1fb875bdfb51f9c99e4400a5d1993",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        655,
+        303,
+        936,
+        414
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        22,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "09dd611f7d8e5d8c871f4b973da2f9ce446ba95b385ca52226f99cfc088408a7",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        962,
+        309,
+        1230,
+        405
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        21,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "700149fcf85542fd373e0e352294886e7d08aaa0d0ba4478fb288e77e79c411e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        1256,
+        306,
+        1540,
+        419
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "a3609ab291602862ceb7d771fa19d6f5b4436025d6995404eef33038b213d5d9",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        1562,
+        303,
+        1847,
+        423
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        10
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "b1b9d0332dfe4b2f3c32c305f83240a3b1f98ff4a53b2ee92129aadab5bf9664",
+      "neutral_preserved": false
+    },
+    {
+      "level": 5,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        1867,
+        298,
+        2153,
+        422
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        10
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "4df9407d1217e066942b2d669c949f91e5d1f60a630783b2d713a77ebc3f03f0",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        18,
+        523,
+        320,
+        639
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        24,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "bdade3c030d2005a4388d42a50653ed9878b8334959a9d831511c3490b40ad09",
+      "neutral_preserved": true
+    },
+    {
+      "level": 6,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        341,
+        523,
+        633,
+        637
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "e68c1dbec0b484bed0d7e34b7216061c7bbf44c1883f4d35b1f16b8ad17e14a3",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        655,
+        523,
+        938,
+        631
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        22,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "0ad28694560e089c9350e4714811a598beae7c0ec40b991dd8d46b95d2fbdc72",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        964,
+        529,
+        1231,
+        625
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        21,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        3,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "2cf18dad1b0da144c3b0cb5cf0a26361823d48bd9c5b591d62b0bfff86fadbfe",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        1257,
+        526,
+        1541,
+        638
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "18de4755da5e5abfa6ae7cca1c660742139940ae189fa3cbb524bc80c5eea3d4",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        1562,
+        523,
+        1847,
+        642
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "5c075f33c95d03e8880d09d117d48b8683bea5eaa9170580a4f2a227a0543b9d",
+      "neutral_preserved": false
+    },
+    {
+      "level": 6,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group2.png",
+      "source_box": [
+        1867,
+        520,
+        2154,
+        641
+      ],
+      "group_scale": 0.07947019867549669,
+      "drawn_size": [
+        23,
+        10
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "22f099eb2d85809e418b189775d56115da1d0e7ab138b80bc30c3afa0d1ddff2",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        34,
+        68,
+        317,
+        168
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        24,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "5819eb985090c223db21014bf3f1d881699eb4fb1262896450d93cad4de6cd7e",
+      "neutral_preserved": true
+    },
+    {
+      "level": 7,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        343,
+        67,
+        617,
+        169
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "33c6d2d3219e9d53629d533f0696361bde183fcacc4101c751f8bbdbe0876aba",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        643,
+        67,
+        914,
+        166
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "f4b076127b81ae5bf2eae02eaf250681ebe7a9726138a0f225839417ee5a351f",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        942,
+        68,
+        1208,
+        164
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "dd5e417297cc3c5ea19c0873448e74b2ea3a814d70f7c55b10efba08a4d507c9",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1236,
+        69,
+        1507,
+        167
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "0bb74fae290021f00dbab0d26890ef89d740dd25dbed874917d1fffb56113f2e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1539,
+        70,
+        1809,
+        169
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "73ca2219d34f1d89c1f9bed723c95ee2844e75d3cc73b24d4a2fab9185f6a2ba",
+      "neutral_preserved": false
+    },
+    {
+      "level": 7,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1841,
+        67,
+        2117,
+        172
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "27b099b738d254533f9b2ca396132ac8fb1d8eb0d5fae7626550a54cd04e773e",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        34,
+        239,
+        319,
+        341
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        24,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "2ec2186a99bdefb6136fa5ae43469cc09f5d4341ac3a77b8b8e945ee58659d41",
+      "neutral_preserved": true
+    },
+    {
+      "level": 8,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        345,
+        238,
+        618,
+        342
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "74a210de32e6d98fda393e6a389e4e67d418c0d3193060a4ed2c0618dccb425a",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        643,
+        234,
+        917,
+        338
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "7884797675e20119b9274c1f64f16ef8497d7532bbec14b6188e93928dbc2d4f",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        943,
+        234,
+        1209,
+        335
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "05f3b603661d6f06fe510d6806df7187856d44c3044a1a93507091cb0c340cbc",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1236,
+        239,
+        1510,
+        341
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "4c5ed0a069b4a1b2af5ecbd327805e7a367a926fcb36970489261ae24956f9f8",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1538,
+        239,
+        1809,
+        342
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "0f0fdffd933faa43d05dcbf467cb4a5e72d2f5bbfd3916ef1cffeada1362d95d",
+      "neutral_preserved": false
+    },
+    {
+      "level": 8,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1838,
+        235,
+        2113,
+        342
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "142b6c3f5bd247bf8e913bfbf9b4c3380e3a96299b8f1479d1576798aa206a5c",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        34,
+        412,
+        318,
+        514
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        24,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "36dc5e127ca96f11cfb312f057a7cbc4c22732c70388c271826e02468df35606",
+      "neutral_preserved": true
+    },
+    {
+      "level": 9,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        344,
+        413,
+        616,
+        516
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "2b67db55a6b9fc706296c8ccf8616a605da87f8f458c084de65e4b50dd3ddeb8",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        642,
+        407,
+        917,
+        512
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "e3625bf645cf74a5277688fb5a0210d54eb71e76854d0ba6bfac5ce79bbbbaa9",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        943,
+        407,
+        1209,
+        511
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "5a56bda0d079601be8bc1b77cdc4c170bcfc11c8efbeb743b35951618926999c",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1237,
+        413,
+        1510,
+        514
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "79d0d3cca4c802130f4451461ff7de0c3a949c5c160a5b1be1123b9a19af94dd",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1541,
+        412,
+        1811,
+        516
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "63afaa5bec4e94da562973f025382ad5b8ba6ded5eef1780907c9a0875f37331",
+      "neutral_preserved": false
+    },
+    {
+      "level": 9,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1842,
+        410,
+        2116,
+        518
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "95f7fcbfc80f7798bb7af6509e29d4e873b14ec9d42617a35c30f57f4a48eacc",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 0,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        34,
+        590,
+        319,
+        691
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        24,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "9309da18596de7381bfa79adc4452bc1672c32534fd806bd008937d3f20a6a02",
+      "neutral_preserved": true
+    },
+    {
+      "level": 10,
+      "pose": 1,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        344,
+        589,
+        618,
+        693
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "1380187b1a8e9242a3f0663acd0c8d0fc94ca6e5f4707ff65dc9b11f467e8d95",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 2,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        643,
+        583,
+        916,
+        685
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "5736c4d0d6b3ddc40577e1de749425d09e2f541c9a1c437eaa9a2575bd74d6e6",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 3,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        942,
+        583,
+        1210,
+        685
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "b0239050b961adc29d2d42a844fa12344cae0d0baddcb9d7f5458e4aeb7d76f0",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 4,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1237,
+        591,
+        1510,
+        691
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        8
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        3
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "fef2914728c911ca891ecb126104ad4a215bba693b175ed46cb6f9eb9e2c2347",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 5,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1541,
+        590,
+        1812,
+        693
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "a72c9e821e95674821ca353b4bcc86690e4f78d42547642a53ad4c945b05c4f7",
+      "neutral_preserved": false
+    },
+    {
+      "level": 10,
+      "pose": 6,
+      "source": ".local/upgrade-plan-20261109/cheyenne/cheyenne_bank_group3.png",
+      "source_box": [
+        1841,
+        587,
+        2116,
+        692
+      ],
+      "group_scale": 0.08480565371024736,
+      "drawn_size": [
+        23,
+        9
+      ],
+      "cell": [
+        28,
+        14
+      ],
+      "cell_draw_offset": [
+        2,
+        2
+      ],
+      "body_cell_offset": [
+        35,
+        37
+      ],
+      "outside_alpha": 0,
+      "sha256": "85a82017e16efc310800f39783b886ded450d157256355bf3b64e7eed1e83384",
+      "neutral_preserved": false
+    }
+  ],
+  "weapons": [
+    {
+      "level": 1,
+      "path": ".local/upgrade-plan-20261109/cheyenne/ready/ADuctMissile_01.png",
+      "source": ".local/upgrade-plan-20261109/cheyenne/lv01-part1-crop.png",
+      "canvas": [
+        18,
+        13
+      ],
+      "rear_slot_width": 8,
+      "changed_pixels": 34,
+      "alpha_differences": 0,
+      "front_differences": 0,
+      "sha256": "bd1cf73f51d8def922c5a4595823b68816c4e0343779c5394230e2acb94aab74"
+    },
+    {
+      "level": 2,
+      "path": ".local/upgrade-plan-20261109/cheyenne/ready/ADuctMissile_02.png",
+      "source": ".local/upgrade-plan-20261109/cheyenne/lv02-part1-crop.png",
+      "canvas": [
+        18,
+        13
+      ],
+      "rear_slot_width": 8,
+      "changed_pixels": 34,
+      "alpha_differences": 0,
+      "front_differences": 0,
+      "sha256": "5c954bb37945adda492fbc78fe0bc9be6455d42b0e179150247a9cc28aec02f0"
+    },
+    {
+      "level": 3,
+      "path": ".local/upgrade-plan-20261109/cheyenne/ready/ADuctMissile_03.png",
+      "source": ".local/upgrade-plan-20261109/cheyenne/lv03-part1-crop.png",
+      "canvas": [
+        18,
+        13
+      ],
+      "rear_slot_width": 8,
+      "changed_pixels": 34,
+      "alpha_differences": 0,
+      "front_differences": 0,
+      "sha256": "6f1dad16a4877f8fc9c5433ed96e01fc33dac5b9cc4eabe45d5854ff1ae90744"
+    },
+    {
+      "level": 4,
+      "path": ".local/upgrade-plan-20261109/cheyenne/ready/ADuctMissile_04.png",
+      "source": ".local/upgrade-plan-20261109/cheyenne/lv04-part1-crop.png",
+      "canvas": [
+        18,
+        13
+      ],
+      "rear_slot_width": 8,
+      "changed_pixels": 34,
+      "alpha_differences": 0,
+      "front_differences": 0,
+      "sha256": "3d9d4a62f3ef3eaee5dae72c72f8da0a319f7252f0c961f9f28c1d266dae02bc"
+    },
+    {
+      "level": 5,
+      "path": ".local/upgrade-plan-20261109/cheyenne/ready/ADuctMissile_05.png",
+      "source": ".local/upgrade-plan-20261109/cheyenne/lv05-part1-crop.png",
+      "canvas": [
+        18,
+        13
+      ],
+      "rear_slot_width": 8,
+      "changed_pixels": 34,
+      "alpha_differences": 0,
+      "front_differences": 0,
+      "sha256": "89c17cd7143e4cf58d4338e19a2af317629453a1b943a0aefa90310ff1438411"
+    },
+    {
+      "level": 6,
+      "path": ".local/upgrade-plan-20261109/cheyenne/ready/ADuctMissile_06.png",
+      "source": ".local/upgrade-plan-20261109/cheyenne/lv06-part1-crop.png",
+      "canvas": [
+        18,
+        13
+      ],
+      "rear_slot_width": 8,
+      "changed_pixels": 34,
+      "alpha_differences": 0,
+      "front_differences": 0,
+      "sha256": "d1957067e5557c9bc9ea0a7eba7eb563a281211ccc5468d3f9f701207c15950c"
+    },
+    {
+      "level": 7,
+      "path": ".local/upgrade-plan-20261109/cheyenne/ready/ADuctMissile_07.png",
+      "source": ".local/upgrade-plan-20261109/cheyenne/lv07-part1-crop.png",
+      "canvas": [
+        18,
+        13
+      ],
+      "rear_slot_width": 8,
+      "changed_pixels": 34,
+      "alpha_differences": 0,
+      "front_differences": 0,
+      "sha256": "9f3a3ea6c7097ef01e0d2cb1c76b1a733a7aa2168c7c036a66f3593516b14bef"
+    },
+    {
+      "level": 8,
+      "path": ".local/upgrade-plan-20261109/cheyenne/ready/ADuctMissile_08.png",
+      "source": ".local/upgrade-plan-20261109/cheyenne/lv08-part1-crop.png",
+      "canvas": [
+        18,
+        13
+      ],
+      "rear_slot_width": 8,
+      "changed_pixels": 34,
+      "alpha_differences": 0,
+      "front_differences": 0,
+      "sha256": "416aa33ff80ee3c01dad9bfaf0671b5e5164eee55625af263c32526a0765b3e9"
+    },
+    {
+      "level": 9,
+      "path": ".local/upgrade-plan-20261109/cheyenne/ready/ADuctMissile_09.png",
+      "source": ".local/upgrade-plan-20261109/cheyenne/lv09-part1-crop.png",
+      "canvas": [
+        18,
+        13
+      ],
+      "rear_slot_width": 8,
+      "changed_pixels": 34,
+      "alpha_differences": 0,
+      "front_differences": 0,
+      "sha256": "dcb85f9bc385ccedeeea6c595f72ad41056919686e90dc02d7c5987b9119e878"
+    },
+    {
+      "level": 10,
+      "path": ".local/upgrade-plan-20261109/cheyenne/ready/ADuctMissile_10.png",
+      "source": ".local/upgrade-plan-20261109/cheyenne/lv10-part1-crop.png",
+      "canvas": [
+        18,
+        13
+      ],
+      "rear_slot_width": 8,
+      "changed_pixels": 34,
+      "alpha_differences": 0,
+      "front_differences": 0,
+      "sha256": "e7cd7bbc94817f5826cdde08664aa311007e134cff480e42c6132d60d30cec9f"
+    }
+  ]
+}

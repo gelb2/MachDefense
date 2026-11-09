@@ -1,0 +1,60 @@
+{
+  "sourceCommit": "8f10fda",
+  "status": "preserve size and design per user instruction",
+  "measurement": {
+    "worldZoom": 2,
+    "heading": "north",
+    "rotorAngle": 0,
+    "shadows": false
+  },
+  "units": {
+    "AH-10": {
+      "root": "AHeavyBody",
+      "assemblyScale": "1.32 * (231 / 296)",
+      "renderedBounds": [
+        230,
+        171
+      ]
+    },
+    "Beluga": {
+      "root": "ATransportBody",
+      "assemblyScale": ".765 * (164 / 196)",
+      "renderedBounds": [
+        164,
+        173
+      ]
+    },
+    "Cheyenne": {
+      "root": "ADuctBody",
+      "assemblyScale": ".765 * (118 / 134)",
+      "renderedBounds": [
+        118,
+        158
+      ]
+    }
+  },
+  "images": {
+    "Resources/Images/ADuctBody.png": "c8bf2a2288f4c8bbf295e9c609116e549950ee1691af485a3d1c3e931780a932",
+    "Resources/Images/ADuctBodyBankL.png": "b9ca7c1e20580ccf1daecbf7afb194ff8a50217bb8557e0e4d97ba3e87ffbb5e",
+    "Resources/Images/ADuctBodyBankR.png": "8a93e14cb68d58fc5670649701d6c56aae955dd6c93c21b6d6de68a7438ae5c4",
+    "Resources/Images/ADuctFan.png": "897937e733d22400f768faf3038852ca77d36b5a5a88bddbcd3812398396cab5",
+    "Resources/Images/ADuctGun.png": "9af767d12a692a9008a94673cf9a5263f84bfab3dd295dfc43c9124cba376dcb",
+    "Resources/Images/ADuctMissile.png": "9131514459b01d5860aa63ed5e2503c5144ea06852755e80843a2dddef605a4a",
+    "Resources/Images/AHeavyBody.png": "fbc13c890b6c219caae6a716c509d464abd0ef0c5bb142dbdc21696203a5612e",
+    "Resources/Images/AHeavyBodyBankL.png": "a7a81903fd1b97ccda3be13abddbfbb1ca30b854ef11f96e9c766cf5a226f40e",
+    "Resources/Images/AHeavyBodyBankR.png": "a9f30bde15fc9683a5676dc623277325f289990346199254b80621fa666f515e",
+    "Resources/Images/AHeavyCannon.png": "024fefa4e564c200ac1550f73ab5067b28a793eeba52bc63ba1b0c1068acfc36",
+    "Resources/Images/AHeavyGun.png": "0fef699a66c670bfdaf4e3c928939f0f4d5e573fff54782fb5e5eca660234c82",
+    "Resources/Images/AHeavyMissile.png": "1d9ae6eaad9bbf2e09212dfd03728218ee70b992b08eef6fed66c14e3b4473c6",
+    "Resources/Images/AHeavyRotor.png": "0e7c095a85ce5aabb8c470d0795e6bd7d59e7a690f2f991279b01001ee82374b",
+    "Resources/Images/ATransportBody.png": "6e844ce3217f9756ff6a99fdd64b2f120e001896974c6164cf59c228c1c4244e",
+    "Resources/Images/ATransportBodyBankL.png": "33adc052b5935b683d2db4c4c61d3e2177610dcf46b68f1abbe5327cfa3f1b2d",
+    "Resources/Images/ATransportBodyBankR.png": "8da434a1bb74b54006a5a803b8ffa3892a23c4ff0028d7de22d0fc4f7837a96f",
+    "Resources/Images/ATransportEngine.png": "aa2b4d5fae03d15d0ed6a9251d042a660fca5a3889feb320db3ece2ac29bdcf0",
+    "Resources/Images/ATransportFan.png": "c6e3bf23fe4df716ad29fdf3478b0cac30edb5b159d0028753dc9ead96bee9c6",
+    "Resources/Images/ATransportGun.png": "208f427acd9e8d125753f314879dedbe12fd74634cf46d2c9a72e56c48dbab7d",
+    "Resources/Images/ATransportMissile.png": "596b9f041a74b7e3233323906e67066e01095cde205595934bca3bbd2a43baf9",
+    "Resources/Images/ATransportWingL.png": "f617bb7cc718a344d93c3eda212263b9b1cf50090a20f022981d6919fbdac6b0",
+    "Resources/Images/ATransportWingR.png": "83e9e938de19d5403c9d8c81a52963690a814900e29f5359bf915f3419d119f9"
+  }
+}

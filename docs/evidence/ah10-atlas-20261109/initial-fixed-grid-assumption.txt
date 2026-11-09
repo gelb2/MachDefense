@@ -1,0 +1,20 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/ah10-atlas/.local/core
+    Start  2: AircraftDefinition
+1/5 Test  #2: AircraftDefinition ...............   Passed    0.33 sec
+    Start 53: AircraftHandling
+2/5 Test #53: AircraftHandling .................Subprocess aborted***Exception:   0.33 sec
+Assertion failed: (definition&&definition->tileCount==7&&definition->splitX==7), function main, file AircraftHandlingTests.cpp, line 23.
+
+    Start 54: AircraftCampaign
+3/5 Test #54: AircraftCampaign .................   Passed    0.53 sec
+    Start 55: AircraftEvasion
+4/5 Test #55: AircraftEvasion ..................   Passed    0.24 sec
+    Start 56: AircraftDodge
+5/5 Test #56: AircraftDodge ....................   Passed    0.24 sec
+
+80% tests passed, 1 tests failed out of 5
+
+Total Test time (real) =   1.67 sec
+
+The following tests FAILED:
+	 53 - AircraftHandling (Subprocess aborted)

@@ -1,0 +1,1416 @@
+{
+  "parts": [
+    {
+      "name": "ATransportBodyV5",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          30,
+          14
+        ],
+        [
+          30,
+          -14
+        ],
+        [
+          -1,
+          47
+        ],
+        [
+          -1,
+          -47
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportBodyV5.png",
+      "texture": {
+        "image": "ATransportBodyV5",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportWingLV5",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -12.0,
+          -40.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportWingLV5.png",
+      "texture": {
+        "image": "ATransportWingLV5",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportWingRV5",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -13.0,
+          38.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportWingRV5.png",
+      "texture": {
+        "image": "ATransportWingRV5",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportEngineV5",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          10.0,
+          -0.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportEngineV5.png",
+      "texture": {
+        "image": "ATransportEngineV5",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootLV5_01",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          -19.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_01.png",
+      "texture": {
+        "image": "ATransportRootLV5_01",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootRV5_01",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          18.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_01.png",
+      "texture": {
+        "image": "ATransportRootRV5_01",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootLV5_02",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -10.0,
+          -19.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_02.png",
+      "texture": {
+        "image": "ATransportRootLV5_02",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootRV5_02",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          18.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_02.png",
+      "texture": {
+        "image": "ATransportRootRV5_02",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootLV5_03",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          -19.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_03.png",
+      "texture": {
+        "image": "ATransportRootLV5_03",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootRV5_03",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -10.0,
+          18.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_03.png",
+      "texture": {
+        "image": "ATransportRootRV5_03",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootLV5_04",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -10.0,
+          -19.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_04.png",
+      "texture": {
+        "image": "ATransportRootLV5_04",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootRV5_04",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -10.0,
+          18.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_04.png",
+      "texture": {
+        "image": "ATransportRootRV5_04",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootLV5_05",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          -19.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_05.png",
+      "texture": {
+        "image": "ATransportRootLV5_05",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootRV5_05",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          18.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_05.png",
+      "texture": {
+        "image": "ATransportRootRV5_05",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootLV5_06",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -10.0,
+          -19.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_06.png",
+      "texture": {
+        "image": "ATransportRootLV5_06",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootRV5_06",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -10.0,
+          18.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_06.png",
+      "texture": {
+        "image": "ATransportRootRV5_06",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootLV5_07",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          -19.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_07.png",
+      "texture": {
+        "image": "ATransportRootLV5_07",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootRV5_07",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          18.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_07.png",
+      "texture": {
+        "image": "ATransportRootRV5_07",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootLV5_08",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          -19.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_08.png",
+      "texture": {
+        "image": "ATransportRootLV5_08",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootRV5_08",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          18.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_08.png",
+      "texture": {
+        "image": "ATransportRootRV5_08",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootLV5_09",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          -19.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_09.png",
+      "texture": {
+        "image": "ATransportRootLV5_09",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootRV5_09",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          18.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_09.png",
+      "texture": {
+        "image": "ATransportRootRV5_09",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootLV5_10",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          -19.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootLV5_10.png",
+      "texture": {
+        "image": "ATransportRootLV5_10",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportRootRV5_10",
+      "type": 0,
+      "tileCount": 7,
+      "sockets": [
+        [
+          -11.0,
+          18.0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportRootRV5_10.png",
+      "texture": {
+        "image": "ATransportRootRV5_10",
+        "grid": [
+          7,
+          1
+        ],
+        "firstTile": 0
+      }
+    },
+    {
+      "name": "ATransportFanV5",
+      "type": 7,
+      "tileCount": 1,
+      "sockets": [
+        [
+          0,
+          0
+        ]
+      ],
+      "preparedImage": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportFanV5.png",
+      "texture": {
+        "image": "ATransportFanV5",
+        "grid": [
+          1,
+          1
+        ],
+        "firstTile": 0
+      }
+    }
+  ],
+  "machine": {
+    "name": "AircraftTransport",
+    "parts": [
+      {
+        "name": "ATransportBodyV5",
+        "parentSocket": 0,
+        "zOrder": 1,
+        "children": [
+          {
+            "name": "ATransportWingLV5",
+            "parentSocket": 0,
+            "zOrder": 1,
+            "children": []
+          },
+          {
+            "name": "ATransportWingRV5",
+            "parentSocket": 0,
+            "zOrder": 1,
+            "children": []
+          },
+          {
+            "name": "ATransportEngineV5",
+            "parentSocket": 0,
+            "zOrder": 2,
+            "children": []
+          },
+          {
+            "name": "ATransportRootLV5_01",
+            "parentSocket": 0,
+            "zOrder": 2,
+            "children": []
+          },
+          {
+            "name": "ATransportRootRV5_01",
+            "parentSocket": 0,
+            "zOrder": 2,
+            "children": []
+          },
+          {
+            "name": "ATransportGun",
+            "parentSocket": 5,
+            "zOrder": 3,
+            "children": []
+          },
+          {
+            "name": "ATransportGun",
+            "parentSocket": 6,
+            "zOrder": 3,
+            "children": []
+          },
+          {
+            "name": "ATransportMissile",
+            "parentSocket": 7,
+            "zOrder": 3,
+            "children": []
+          },
+          {
+            "name": "ATransportMissile",
+            "parentSocket": 8,
+            "zOrder": 3,
+            "children": []
+          },
+          {
+            "name": "ATransportFanV5",
+            "parentSocket": 1,
+            "zOrder": 4,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "levelVariants": [
+    {
+      "name": "AircraftTransport_01",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_01",
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ATransportWingLV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportWingRV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportEngineV5",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootLV5_01",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootRV5_01",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_01",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_01",
+              "parentSocket": 6,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_01",
+              "parentSocket": 7,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_01",
+              "parentSocket": 8,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportFanV5",
+              "parentSocket": 1,
+              "zOrder": 4,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftTransport_02",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_02",
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ATransportWingLV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportWingRV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportEngineV5",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootLV5_02",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootRV5_02",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_02",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_02",
+              "parentSocket": 6,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_02",
+              "parentSocket": 7,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_02",
+              "parentSocket": 8,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportFanV5",
+              "parentSocket": 1,
+              "zOrder": 4,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftTransport_03",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_03",
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ATransportWingLV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportWingRV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportEngineV5",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootLV5_03",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootRV5_03",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_03",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_03",
+              "parentSocket": 6,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_03",
+              "parentSocket": 7,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_03",
+              "parentSocket": 8,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportFanV5",
+              "parentSocket": 1,
+              "zOrder": 4,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftTransport_04",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_04",
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ATransportWingLV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportWingRV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportEngineV5",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootLV5_04",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootRV5_04",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_04",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_04",
+              "parentSocket": 6,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_04",
+              "parentSocket": 7,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_04",
+              "parentSocket": 8,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportFanV5",
+              "parentSocket": 1,
+              "zOrder": 4,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftTransport_05",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_05",
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ATransportWingLV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportWingRV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportEngineV5",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootLV5_05",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootRV5_05",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_05",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_05",
+              "parentSocket": 6,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_05",
+              "parentSocket": 7,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_05",
+              "parentSocket": 8,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportFanV5",
+              "parentSocket": 1,
+              "zOrder": 4,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftTransport_06",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_06",
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ATransportWingLV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportWingRV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportEngineV5",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootLV5_06",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootRV5_06",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_06",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_06",
+              "parentSocket": 6,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_06",
+              "parentSocket": 7,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_06",
+              "parentSocket": 8,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportFanV5",
+              "parentSocket": 1,
+              "zOrder": 4,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftTransport_07",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_07",
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ATransportWingLV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportWingRV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportEngineV5",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootLV5_07",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootRV5_07",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_07",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_07",
+              "parentSocket": 6,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_07",
+              "parentSocket": 7,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_07",
+              "parentSocket": 8,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportFanV5",
+              "parentSocket": 1,
+              "zOrder": 4,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftTransport_08",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_08",
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ATransportWingLV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportWingRV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportEngineV5",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootLV5_08",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootRV5_08",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_08",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_08",
+              "parentSocket": 6,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_08",
+              "parentSocket": 7,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_08",
+              "parentSocket": 8,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportFanV5",
+              "parentSocket": 1,
+              "zOrder": 4,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftTransport_09",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_09",
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ATransportWingLV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportWingRV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportEngineV5",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootLV5_09",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootRV5_09",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_09",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_09",
+              "parentSocket": 6,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_09",
+              "parentSocket": 7,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_09",
+              "parentSocket": 8,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportFanV5",
+              "parentSocket": 1,
+              "zOrder": 4,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AircraftTransport_10",
+      "source": "AircraftTransport",
+      "weaponSuffix": "_10",
+      "parts": [
+        {
+          "name": "ATransportBodyV5",
+          "parentSocket": 0,
+          "zOrder": 1,
+          "children": [
+            {
+              "name": "ATransportWingLV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportWingRV5",
+              "parentSocket": 0,
+              "zOrder": 1,
+              "children": []
+            },
+            {
+              "name": "ATransportEngineV5",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootLV5_10",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportRootRV5_10",
+              "parentSocket": 0,
+              "zOrder": 2,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_10",
+              "parentSocket": 5,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportGun_10",
+              "parentSocket": 6,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_10",
+              "parentSocket": 7,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportMissile_10",
+              "parentSocket": 8,
+              "zOrder": 3,
+              "children": []
+            },
+            {
+              "name": "ATransportFanV5",
+              "parentSocket": 1,
+              "zOrder": 4,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "weaponImages": {
+    "ATransportGun": "ATransportGunV5",
+    "ATransportMissile": "ATransportMissileV5"
+  },
+  "weaponSockets": {
+    "ATransportGun": [
+      [
+        0,
+        0
+      ],
+      [
+        11,
+        1
+      ],
+      [
+        11,
+        -1
+      ]
+    ],
+    "ATransportMissile": [
+      [
+        0,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        -1
+      ]
+    ]
+  },
+  "weaponPreparedImages": {
+    "ATransportGunV5": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportGunV5.png",
+    "ATransportMissileV5": "Art/Aircraft/beluga-v5-20261109/rgba/ATransportMissileV5.png"
+  },
+  "bankTileNames": [
+    "ATransportBodyV5",
+    "ATransportWingLV5",
+    "ATransportWingRV5",
+    "ATransportEngineV5",
+    "ATransportRootLV5_01",
+    "ATransportRootRV5_01",
+    "ATransportRootLV5_02",
+    "ATransportRootRV5_02",
+    "ATransportRootLV5_03",
+    "ATransportRootRV5_03",
+    "ATransportRootLV5_04",
+    "ATransportRootRV5_04",
+    "ATransportRootLV5_05",
+    "ATransportRootRV5_05",
+    "ATransportRootLV5_06",
+    "ATransportRootRV5_06",
+    "ATransportRootLV5_07",
+    "ATransportRootRV5_07",
+    "ATransportRootLV5_08",
+    "ATransportRootRV5_08",
+    "ATransportRootLV5_09",
+    "ATransportRootRV5_09",
+    "ATransportRootLV5_10",
+    "ATransportRootRV5_10"
+  ],
+  "requiredAssemblyScale": ".765 * (164 / 196)",
+  "noWeaponInfoOrMovementChanges": true
+}

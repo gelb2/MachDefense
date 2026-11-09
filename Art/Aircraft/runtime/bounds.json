@@ -1,0 +1,16 @@
+[
+  {
+    "name": "AircraftLight",
+    "max_width": 36.76955262170047,
+    "max_height": 57.0,
+    "angles": 360,
+    "alpha_threshold": 16
+  },
+  {
+    "name": "AircraftHeavy",
+    "max_width": 124.58460826178559,
+    "max_height": 80.0,
+    "angles": 360,
+    "alpha_threshold": 16
+  }
+]

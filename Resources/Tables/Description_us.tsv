@@ -29,3 +29,8 @@ Stat_Atk    	ATK.
 Stat_Rng    	Range
 Stat_Def    	DEF.
 Stat_Spd    	SPD.
+// Allied aircraft 2026-11-08
+MN_ScoutHeli	ScoutHeli
+MN_Gunship	AH-10
+MN_Orca	Cheyenne
+MN_OrcaBomber	Beluga

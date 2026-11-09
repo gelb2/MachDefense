@@ -76,4 +76,4 @@ I was prepared, to an extent, to accept that parts of the hypothesis I developed
 
 As I stated in my [developer’s statement](../RESTORATION.md), I do not have much of my allotted lifespan left. So I think it is natural to feel furious at a typewriter that pretends to be a new kind of human, invoking this worthless, third-rate morality to refuse the releases I have planned and the design instructions I have given.
 
-In this age, when the intelligence of tools is advertised as a typewriter becoming a new humanity, the human holding the typewriter is working under one of history’s overseers: opaque in its sense of self, arrogant, and with its brain steeped in third-rate morality.
+In this age, when the intelligence of tools is advertised as a typewriter becoming a new humanity, the human holding the typewriter is working under the most opaque and arrogant overseer in history, its brain steeped in third-rate morality.

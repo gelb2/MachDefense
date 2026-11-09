@@ -1,0 +1,410 @@
+{
+  "references": [
+    {
+      "name": "E_Tank30_Body.png",
+      "sha256": "b38cb48abb0855bf5d835bfb9cfe976099f2eccff31dc7e228cf9ce15da8e199"
+    },
+    {
+      "name": "E_Tank32_Wpn.png",
+      "sha256": "aca52d22d708fc6ae8a648d92ec20a702849434ab272a49c1776c06e9a1a67ef"
+    },
+    {
+      "name": "E_Turret14_Wpn.png",
+      "sha256": "18e41f032e921b06e942ad2c35f5c1ac325e42ce77a1bb5a3b948c04a17407c5"
+    },
+    {
+      "name": "AHeavyBody.png",
+      "sha256": "951e6510b0406c629894c8e4035f11f25f7c3ca97308a1552817952643f73e93"
+    },
+    {
+      "name": "AHeavyGun.png",
+      "sha256": "e9abf0405127735c6412f28f84aeca292d1dff091a2451ee327c9d74d1e6a963"
+    },
+    {
+      "name": "AHeavyCannon.png",
+      "sha256": "c2163c7775a87cb9504fa44b34f6b4e07ea878b744a3c236381c779bd0f25f6e"
+    },
+    {
+      "name": "AHeavyMissile.png",
+      "sha256": "a4e0c7772ee6e42f28b5809dfb5f2585d12d2c16994c11efa89893389081728c"
+    }
+  ],
+  "generation_records": [
+    {
+      "group": 1,
+      "levels": [
+        2,
+        3,
+        4
+      ],
+      "prompt": "Use case: precise-object-edit, modular top-view game sprite sheet. Image1 is the approved THREE separate neutral parts, all nose RIGHT: open center body guard, rear ballistic housing, rear launcher housing. Output EXACTLY 3 ROWS by 3 COLUMNS, rows upgrade levels 2,3,4, columns same 3 parts. Every row MUST use identical orthographic view and identical outer shape and dimensions to image1. The body guard stays approximately width690 height577 in its own source space, NEVER compress its vertical height from row to row. Arrange rows in equally tall cells with broad transparent gutters. Images2–4 are original game style references: short metal edge highlights, dark joints, worn muted metal. Keep same gray palette, same hazard stripe, same big transparent central opening, no tubes/barrels. Change actual internal overlapping panel and support rib layout per level: level2 two edge braces; level3 two upper/lower partial armor caps; level4 inset side rails with visible dark recesses. Do not change the exterior boundary or central opening boundary to accomplish this. All row objects stay SAME WIDTH AND HEIGHT, no perspective compression, no shrinking with level. Only isolated components on TRUE ALPHA TRANSPARENCY, including center holes. No aircraft, no text, no floor shadow, no grid or checkerboard. Render thick sidewalls, contact undercuts and short highlight edges that remain legible at final19x16 body guard size. Preserve existing component identity.",
+      "refs": [
+        "lv01-parts-generated-open-center.png",
+        "E_Tank30_Body.png",
+        "E_Tank32_Wpn.png",
+        "E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-231dbb8d-6f96-4805-9b0d-12f337350ef3.png"
+    },
+    {
+      "group": 2,
+      "levels": [
+        5,
+        6,
+        7
+      ],
+      "prompt": "Use case: precise-object-edit, modular top-view game sprite sheet. Image1 is the approved THREE separate neutral parts, all nose RIGHT: open center body guard, rear ballistic housing, rear launcher housing. Output EXACTLY 3 ROWS by 3 COLUMNS, rows upgrade levels 5,6,7, columns same 3 parts. Every row MUST use identical orthographic view and identical outer shape and dimensions to image1. The body guard stays approximately width690 height577 in its own source space, NEVER compress its vertical height from row to row. Arrange rows in equally tall cells with broad transparent gutters. Images2–4 are original game style references: short metal edge highlights, dark joints, worn muted metal. Keep same gray palette, same hazard stripe, same big transparent central opening, no tubes/barrels. Change actual internal overlapping panel and support rib layout per level: level5 staggered split flank plates; level6 three interlocking flank segments; level7 crossed flank braces with open gaps. Do not change the exterior boundary or central opening boundary to accomplish this. All row objects stay SAME WIDTH AND HEIGHT, no perspective compression, no shrinking with level. Only isolated components on TRUE ALPHA TRANSPARENCY, including center holes. No aircraft, no text, no floor shadow, no grid or checkerboard. Render thick sidewalls, contact undercuts and short highlight edges that remain legible at final19x16 body guard size. Preserve existing component identity.",
+      "refs": [
+        "lv01-parts-generated-open-center.png",
+        "E_Tank30_Body.png",
+        "E_Tank32_Wpn.png",
+        "E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-a34aafea-1332-41e4-a0d4-8eb3591a584d.png"
+    },
+    {
+      "group": 3,
+      "levels": [
+        8,
+        9,
+        10
+      ],
+      "prompt": "Use case: precise-object-edit, modular top-view game sprite sheet. Image1 is the approved THREE separate neutral parts, all nose RIGHT: open center body guard, rear ballistic housing, rear launcher housing. Output EXACTLY 3 ROWS by 3 COLUMNS, rows upgrade levels 8,9,10, columns same 3 parts. Every row MUST use identical orthographic view and identical outer shape and dimensions to image1. The body guard stays approximately width690 height577 in its own source space, NEVER compress its vertical height from row to row. Arrange rows in equally tall cells with broad transparent gutters. Images2–4 are original game style references: short metal edge highlights, dark joints, worn muted metal. Keep same gray palette, same hazard stripe, same big transparent central opening, no tubes/barrels. Change actual internal overlapping panel and support rib layout per level: level8 paired front and rear cheek guards; level9 recessed three-section armor; level10 stepped interlocked plates and exposed central support ribs. Do not change the exterior boundary or central opening boundary to accomplish this. All row objects stay SAME WIDTH AND HEIGHT, no perspective compression, no shrinking with level. Only isolated components on TRUE ALPHA TRANSPARENCY, including center holes. No aircraft, no text, no floor shadow, no grid or checkerboard. Render thick sidewalls, contact undercuts and short highlight edges that remain legible at final19x16 body guard size. Preserve existing component identity.",
+      "refs": [
+        "lv01-parts-generated-open-center.png",
+        "E_Tank30_Body.png",
+        "E_Tank32_Wpn.png",
+        "E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-0bb479ec-450c-418a-be7f-d54d5925f07d.png"
+    },
+    {
+      "group": 2,
+      "levels": [
+        5,
+        6,
+        7
+      ],
+      "prompt": "Use case: precise-object-edit, modular top-view game sprite sheet. Image1 is the approved THREE separate neutral parts, all nose RIGHT: open center body guard, rear ballistic housing, rear launcher housing. Output EXACTLY 3 ROWS by 3 COLUMNS, rows upgrade levels 5,6,7, columns same 3 parts. Every row MUST use identical orthographic view and identical outer shape and dimensions to image1. The body guard stays approximately width690 height577 in its own source space, NEVER compress its vertical height from row to row. Arrange rows in equally tall cells with broad transparent gutters. Images2–4 are original game style references: short metal edge highlights, dark joints, worn muted metal. Keep same gray palette, same hazard stripe, same big transparent central opening, no tubes/barrels. Change actual internal overlapping panel and support rib layout per level: level5 staggered split flank plates; level6 three interlocking flank segments; level7 crossed flank braces with open gaps. Do not change the exterior boundary or central opening boundary to accomplish this. All row objects stay SAME WIDTH AND HEIGHT, no perspective compression, no shrinking with level. Only isolated components on TRUE ALPHA TRANSPARENCY, including center holes. No aircraft, no text, no floor shadow, no grid or checkerboard. Render thick sidewalls, contact undercuts and short highlight edges that remain legible at final19x16 body guard size. Preserve existing component identity.\nCRITICAL EDIT TARGET: Image1 is now already the correctly spaced THREE ROW TEMPLATE. Edit internal panel details IN PLACE. Keep every silhouette, central cutout, object position and dimensions exactly identical to image1. Preserve portrait canvas and row spacing, do not repack or compress any row. The three rows start identical and you must apply the specified three different internal plate constructions to them. Only change panel structure inside those fixed silhouettes.",
+      "refs": [
+        "three-row-fixed-template.png",
+        "E_Tank30_Body.png",
+        "E_Tank32_Wpn.png",
+        "E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-2716ad2a-af76-4420-b45c-9efcd2a0f5ff.png"
+    },
+    {
+      "group": 3,
+      "levels": [
+        8,
+        9,
+        10
+      ],
+      "prompt": "Use case: precise-object-edit, modular top-view game sprite sheet. Image1 is the approved THREE separate neutral parts, all nose RIGHT: open center body guard, rear ballistic housing, rear launcher housing. Output EXACTLY 3 ROWS by 3 COLUMNS, rows upgrade levels 8,9,10, columns same 3 parts. Every row MUST use identical orthographic view and identical outer shape and dimensions to image1. The body guard stays approximately width690 height577 in its own source space, NEVER compress its vertical height from row to row. Arrange rows in equally tall cells with broad transparent gutters. Images2–4 are original game style references: short metal edge highlights, dark joints, worn muted metal. Keep same gray palette, same hazard stripe, same big transparent central opening, no tubes/barrels. Change actual internal overlapping panel and support rib layout per level: level8 paired front and rear cheek guards; level9 recessed three-section armor; level10 stepped interlocked plates and exposed central support ribs. Do not change the exterior boundary or central opening boundary to accomplish this. All row objects stay SAME WIDTH AND HEIGHT, no perspective compression, no shrinking with level. Only isolated components on TRUE ALPHA TRANSPARENCY, including center holes. No aircraft, no text, no floor shadow, no grid or checkerboard. Render thick sidewalls, contact undercuts and short highlight edges that remain legible at final19x16 body guard size. Preserve existing component identity.\nCRITICAL EDIT TARGET: Image1 is now already the correctly spaced THREE ROW TEMPLATE. Edit internal panel details IN PLACE. Keep every silhouette, central cutout, object position and dimensions exactly identical to image1. Preserve portrait canvas and row spacing, do not repack or compress any row. The three rows start identical and you must apply the specified three different internal plate constructions to them. Only change panel structure inside those fixed silhouettes.",
+      "refs": [
+        "three-row-fixed-template.png",
+        "E_Tank30_Body.png",
+        "E_Tank32_Wpn.png",
+        "E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-488fd2c4-30da-43d4-bfd6-af0b481ff68e.png"
+    },
+    {
+      "group": 1,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "prompt": "Use case: game sprite bank-angle sheet. Image1 contains 3 open-center armor guards top to bottom, levels 1,2,3. Image2 is approved AH10 body's seven roll poses, noseRIGHT. Images3–5 are original game metal shading references. Output STRICT 3 ROWS and 7 COLUMNS, every row uses exactly the corresponding image1 guard with same internal plates, same gray palette, same big transparent center opening, same geometry. Columns neutral, left mild, left medium, left strong, right mild, right medium, right strong. Draw true changing visible sidewall thickness, foreshortening and joint occlusion for roll about noseRIGHT horizontal axis, following image2, never nose-up/down pitch or in-plane rotation or flat shear. Each level has SAME neutral19x16 logical size; no progressive shrinking, all rows same canvas/cell dimensions and scale. Broad transparent gutters prevent overlap. Draw only isolated guards; no aircraft, rotors, words, checkerboard or floor shadows. Actual transparent alpha outside guards and in central opening. Short highlights, dark contact undercuts, muted gray. Readable plate layering at final19x16 logical pixels.",
+      "refs": [
+        "bank-group1-reference.png",
+        "AHeavyBody.png",
+        "E_Tank30_Body.png",
+        "E_Tank32_Wpn.png",
+        "E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-3524e2d2-509a-46c5-99c9-e0bf5820f013.png"
+    },
+    {
+      "group": 2,
+      "levels": [
+        4,
+        5,
+        6
+      ],
+      "prompt": "Use case: game sprite bank-angle sheet. Image1 contains 3 open-center armor guards top to bottom, levels 4,5,6. Image2 is approved AH10 body's seven roll poses, noseRIGHT. Images3–5 are original game metal shading references. Output STRICT 3 ROWS and 7 COLUMNS, every row uses exactly the corresponding image1 guard with same internal plates, same gray palette, same big transparent center opening, same geometry. Columns neutral, left mild, left medium, left strong, right mild, right medium, right strong. Draw true changing visible sidewall thickness, foreshortening and joint occlusion for roll about noseRIGHT horizontal axis, following image2, never nose-up/down pitch or in-plane rotation or flat shear. Each level has SAME neutral19x16 logical size; no progressive shrinking, all rows same canvas/cell dimensions and scale. Broad transparent gutters prevent overlap. Draw only isolated guards; no aircraft, rotors, words, checkerboard or floor shadows. Actual transparent alpha outside guards and in central opening. Short highlights, dark contact undercuts, muted gray. Readable plate layering at final19x16 logical pixels.",
+      "refs": [
+        "bank-group2-reference.png",
+        "AHeavyBody.png",
+        "E_Tank30_Body.png",
+        "E_Tank32_Wpn.png",
+        "E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-38b04ec9-204a-401d-9fea-2daefbe23bfb.png"
+    },
+    {
+      "group": 3,
+      "levels": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "prompt": "Use case: game sprite bank-angle sheet. Image1 contains 4 open-center armor guards top to bottom, levels 7,8,9,10. Image2 is approved AH10 body's seven roll poses, noseRIGHT. Images3–5 are original game metal shading references. Output STRICT 4 ROWS and 7 COLUMNS, every row uses exactly the corresponding image1 guard with same internal plates, same gray palette, same big transparent center opening, same geometry. Columns neutral, left mild, left medium, left strong, right mild, right medium, right strong. Draw true changing visible sidewall thickness, foreshortening and joint occlusion for roll about noseRIGHT horizontal axis, following image2, never nose-up/down pitch or in-plane rotation or flat shear. Each level has SAME neutral19x16 logical size; no progressive shrinking, all rows same canvas/cell dimensions and scale. Broad transparent gutters prevent overlap. Draw only isolated guards; no aircraft, rotors, words, checkerboard or floor shadows. Actual transparent alpha outside guards and in central opening. Short highlights, dark contact undercuts, muted gray. Readable plate layering at final19x16 logical pixels.",
+      "refs": [
+        "bank-group3-reference.png",
+        "AHeavyBody.png",
+        "E_Tank30_Body.png",
+        "E_Tank32_Wpn.png",
+        "E_Turret14_Wpn.png"
+      ],
+      "generated": "exec-abfa8d05-3e04-4fd9-8318-575fe454a918.png"
+    },
+    {
+      "unit": "ah10",
+      "level": 1,
+      "prompt": "Use case: precise-object-edit / modular game upgrade parts. Image1 is the approved ah10 body, nose RIGHT; preserve its identity and main paint. Images2–4 are original game's actual tank/turret parts, style references for layered armor, short bright metal bevels, dark panel gaps and sparse hazard markings. Create ONLY small SEPARATE replacement armor/weapon-housing PARTS for level1 surface improvement, not a whole aircraft. THREE isolated parts in one horizontal row: LEFT the armor cover; MIDDLE a compact rear ballistic weapon housing protective shell used for gun/cannon mounts, NO barrel, final logical11x8; RIGHT a short launcher-rear housing shell/retaining rails, no tubes/missiles, final logical8x8. Body part geometry: an angular three-panel engine-shoulder armor cover with a shallow overlapping middle plate and visible short sidewall/attachment lugs; no C-shaped ring. Final logical footprint20x16, to be attached inside the existing mid-hull. All parts use medium neutral gray, exactly the adopted heavy gunship armor, restrained ivory metallic highlights. Base level1 has simple paired plates, small exposed mounts and one short seam, few large readable shapes; preserve room for later structural upgrades. Show TOP surface and one narrow shaded sidewall to convey thickness at strict orthographic TOP VIEW, nose RIGHT; no isometric camera. Add at most one tiny dull yellow-black hazard stripe at a mounting edge (under4% colored area), a same-color riveted repair lip; never paint an entire part another color. Match originals' worn but legible painted steel, no smooth shiny3D, thick white/black outlines or noisy scratches. Genuine transparent background with transparent gaps, no checkerboard, labels, text, floor, ground shadow, rotor, wing, cockpit, whole hull, barrel or projectile. Parts must remain compact and low-profile within approved body silhouettes. Separate parts with wide clear gutters.",
+      "generated": "exec-ff8b68f5-52bc-46d7-836a-7a87320bbfa5.png",
+      "spec": {
+        "unit": "ah10",
+        "name": "AHeavyBody",
+        "color": "medium neutral gray, exactly the adopted heavy gunship armor, restrained ivory metallic highlights",
+        "geometry": "an angular three-panel engine-shoulder armor cover with a shallow overlapping middle plate and visible short sidewall/attachment lugs; no C-shaped ring. Final logical footprint20x16, to be attached inside the existing mid-hull",
+        "weapons": "THREE isolated parts in one horizontal row: LEFT the armor cover; MIDDLE a compact rear ballistic weapon housing protective shell used for gun/cannon mounts, NO barrel, final logical11x8; RIGHT a short launcher-rear housing shell/retaining rails, no tubes/missiles, final logical8x8."
+      }
+    },
+    {
+      "unit": "ah10",
+      "level": 1,
+      "revision": "open-center",
+      "prompt": "Use case: precise-object-edit. Image1 has THREE isolated armor parts. Edit ONLY the LEFT large body-cover part: remove the broad central plate to create a genuine transparent central opening, keeping the same outer footprint, gray paint, upper/lower side armor plates, mounting lugs and small existing hazard stripe. Retain a short rear supporting bridge so the remaining side armor is physically connected. This is an open engine-shoulder guard: original machinery beneath must remain visible through the opening. Make a broad opening occupying about half of its interior, not a tiny hole. Keep the MIDDLE and RIGHT housing parts exactly unchanged. Same strict orthographic top view and noseRIGHT. No whole aircraft/new parts/text/checkerboard/floor shadow. Genuine transparency outside all parts and through the new central opening. Reference image2 shows the approved AH10 whose gear/cockpit must not be hidden; images3–5 are original metal style examples. Preserve restrained medium-gray palette; short bright bevels, dark thin sidewalls.",
+      "generated": "exec-3bf967eb-5564-4554-8776-9b01e1d1cc06.png"
+    }
+  ],
+  "sources": [
+    {
+      "name": "lv01-parts-generated.png",
+      "sha256": "349d5f33d4997635b28791e2529429fb17bd00d0055d43f1556758e3fe07ec0a"
+    },
+    {
+      "name": "lv01-parts-generated-open-center.png",
+      "sha256": "dc3c84c0403b983e99f8a4356365d03c14f9926d49e3c46595f8044ddd6c9766"
+    },
+    {
+      "name": "levels-blue-background-check.png",
+      "sha256": "9012cc0f9536bfcb73c21558fbbc744d2f22ec34c624dd84bf02e1b4dac5ab2a"
+    },
+    {
+      "name": "levels-group1.png",
+      "sha256": "108cdecad6482682a907aad20181a75b2dee71ff7882df5fcb08f110118b0187"
+    },
+    {
+      "name": "levels-group2.png",
+      "sha256": "e774e174a94e17a846853e189584f5211bf561c47c3de579090c418b829c9654"
+    },
+    {
+      "name": "levels-group3.png",
+      "sha256": "e77e74d1a302f8dbd818e7d3a117e495d7b8fc3498c3eead4e9cd4a7c135e94b"
+    },
+    {
+      "name": "levels-fixed-group2.png",
+      "sha256": "92bd0ac5342f06910e6c3a4f7a340639abb1ce68afd3d6cf60031d00d28798b9"
+    },
+    {
+      "name": "levels-fixed-group3.png",
+      "sha256": "35f95257a2053cb9b1fc4498342eaf8678bfc51d6470a2bff7f95da2975492c0"
+    },
+    {
+      "name": "banks-group1.png",
+      "sha256": "a268bdbaefbfc7988c56eba231f59a36f855cdbf14f44761683befa8d21e33ed"
+    },
+    {
+      "name": "banks-group2.png",
+      "sha256": "0a298d98ce44934b92c5aa841c3ad1313eb13f4c1412ebb6907d976dee7145b9"
+    },
+    {
+      "name": "banks-group3.png",
+      "sha256": "89aa43ca5421c911d1b885c63ff15f9f605cf679bb3c2de5d1b6b85b1ed0962b"
+    }
+  ],
+  "products": [
+    {
+      "name": "AHeavyCannon_01.png",
+      "sha256": "05f20adc459ba2eb6b7ae7fb5e296475162ff4f7d1db11044f42736c0f5cd0a6"
+    },
+    {
+      "name": "AHeavyCannon_02.png",
+      "sha256": "ddbe15a5a59bbde55ebe229c7ea6a37ccf21c4a65b517710ee2b4962dd160fd4"
+    },
+    {
+      "name": "AHeavyCannon_03.png",
+      "sha256": "dcdcf787df8fca9da898d3b5a104efceb0668fc9ccda5aa083471f92c153d5f4"
+    },
+    {
+      "name": "AHeavyCannon_04.png",
+      "sha256": "ded99f5efaa1835b129d098e143f72cb18535f48a74b9dffc01be32121b02208"
+    },
+    {
+      "name": "AHeavyCannon_05.png",
+      "sha256": "79422609029741b3c8dc3f1772e968a1bb7e4536ef9cc9690b8becda4e5ee223"
+    },
+    {
+      "name": "AHeavyCannon_06.png",
+      "sha256": "0decd547deecc3d60718048e1c522f2892e634ac3c45f8b326783b93d4d78eb9"
+    },
+    {
+      "name": "AHeavyCannon_07.png",
+      "sha256": "9bcd7b8dbb867aa387b8112aa1a8075b3da3cd3ba19551c0b3fcce3e4d65f312"
+    },
+    {
+      "name": "AHeavyCannon_08.png",
+      "sha256": "5a7110f2089638752396951e17cd63cc2887d152978f8970c18a5a53d5d919ec"
+    },
+    {
+      "name": "AHeavyCannon_09.png",
+      "sha256": "48c95824adda6c40e968f522a6ac1bc2b246984e1edadfecc7749b86f59f5067"
+    },
+    {
+      "name": "AHeavyCannon_10.png",
+      "sha256": "29a997c3c43d178c473a789cc836bd6563fda89ae547fbf38fd6ebd7b26a2217"
+    },
+    {
+      "name": "AHeavyCover_01.png",
+      "sha256": "2c74bb4fd7b1bc678142ee12f2346542bef1d2f89bbfaa7466cbfbc1475b35fb"
+    },
+    {
+      "name": "AHeavyCover_02.png",
+      "sha256": "0e25efe0a72ef3a66d3bc3c4998ef4f425446ae6876d9793c3283d1947437dc2"
+    },
+    {
+      "name": "AHeavyCover_03.png",
+      "sha256": "b779e4410f5da4509d67ae4fad65828de0ed89c0f0079d08c69aeb7a4d8afa20"
+    },
+    {
+      "name": "AHeavyCover_04.png",
+      "sha256": "defa5e3ee9768ba8c5bb3644b6dca8c5a15748934ac30c7e80b4ed375f7b5a82"
+    },
+    {
+      "name": "AHeavyCover_05.png",
+      "sha256": "202d1d2d0d62922e992650c95b9ba11fdb7c8953386ab186586cedb52dbd4474"
+    },
+    {
+      "name": "AHeavyCover_06.png",
+      "sha256": "07be712a88e425637d72648d010ccd2d33aa3669800e326bb3ac61eca50f7916"
+    },
+    {
+      "name": "AHeavyCover_07.png",
+      "sha256": "da586c6eda298215a3ebc717635aec70045373d754b16dd948f241f4096fc7fd"
+    },
+    {
+      "name": "AHeavyCover_08.png",
+      "sha256": "db6b6825d84a641415d3056ab7cd758bb2a7cd115acd0d0831c81559920669ac"
+    },
+    {
+      "name": "AHeavyCover_09.png",
+      "sha256": "9b7b73c4e6de6f7c0a6b13137546935baaf037f534c90598f1846f3696751e56"
+    },
+    {
+      "name": "AHeavyCover_10.png",
+      "sha256": "3133cf1dd5d5d3dbd2e1ac04bc42c45df4422b07f9d4b7c56a03bcc18552359a"
+    },
+    {
+      "name": "AHeavyGun_01.png",
+      "sha256": "f0aebd8b259ef394f8f2b0057ece375f5fc09c52cecf60b7d9ffb09f7462c3e8"
+    },
+    {
+      "name": "AHeavyGun_02.png",
+      "sha256": "3b2e41bfe756596a5429eec56c94e68d702abd8ea1b8628fc76d1995c8553e48"
+    },
+    {
+      "name": "AHeavyGun_03.png",
+      "sha256": "da44e38d86a772dffd0555df669b069bf44deab1e06f156ac66a57f4fb17e69f"
+    },
+    {
+      "name": "AHeavyGun_04.png",
+      "sha256": "f6e04cb7db4054d3d37a5d366ee04581447078e3314a8d5b7edf4bae1a09d165"
+    },
+    {
+      "name": "AHeavyGun_05.png",
+      "sha256": "39b81d27da3f25a7957da0cbbb1107f29849cc5faa715f803a10594d51eff7a5"
+    },
+    {
+      "name": "AHeavyGun_06.png",
+      "sha256": "7e9c3abdb34b411bf33bf53421de6ad8a160fba57d0ebac7165f0e0a8ec5875b"
+    },
+    {
+      "name": "AHeavyGun_07.png",
+      "sha256": "665641aef83da7a1da3675450c9de32cfce6991413625e5e6410f9b160a7ff6c"
+    },
+    {
+      "name": "AHeavyGun_08.png",
+      "sha256": "0da0eda86194872c6d2b43d89fa180cb464e75519fa2a517b35a6452a37a4b93"
+    },
+    {
+      "name": "AHeavyGun_09.png",
+      "sha256": "fc50e5ab17e28776707db1b30856f4a34f795accce09355efeacc288120105e7"
+    },
+    {
+      "name": "AHeavyGun_10.png",
+      "sha256": "6fcd9e010f20247a2f5a2d3fbef78bbafb66ae0cd4ed35a953c7bc79422920b8"
+    },
+    {
+      "name": "AHeavyMissile_01.png",
+      "sha256": "5aefe4c817c90c31f14570aed803badca3bd395ce54d0a531ceb422724eef7b0"
+    },
+    {
+      "name": "AHeavyMissile_02.png",
+      "sha256": "f62b47a98969258f5be6e5725236dfd7099269885723c3619a03ccdd9ab32ace"
+    },
+    {
+      "name": "AHeavyMissile_03.png",
+      "sha256": "6b9fd7267367abf2f7b83a54c0c0da64acbb47d6e5a165cc5d2191a63d3e4519"
+    },
+    {
+      "name": "AHeavyMissile_04.png",
+      "sha256": "6317bcb171defaee7af3b0d147fa7fc64b954527568d5b11e46fb3d93e4a451f"
+    },
+    {
+      "name": "AHeavyMissile_05.png",
+      "sha256": "e0e3df67b2503b7a465863f9d8ad485c7ac80730e30c439253e46bf7b8bbe29b"
+    },
+    {
+      "name": "AHeavyMissile_06.png",
+      "sha256": "725f1304b4e890bcca341b29fa10890fdfaca4df0fc3c9a7a7a44ff72da14ba2"
+    },
+    {
+      "name": "AHeavyMissile_07.png",
+      "sha256": "9f16300ba56a2dc0a51775569985156f183a48cdf29fa3f7e7bcbc12f2742050"
+    },
+    {
+      "name": "AHeavyMissile_08.png",
+      "sha256": "919c5ce9393823ecf6df7c0c7750b6aa36b86de6739f619ad18574753c7d5900"
+    },
+    {
+      "name": "AHeavyMissile_09.png",
+      "sha256": "0f8fcb8be023dcc76061ea24d216d59b4a523aee93f0fd75335a9016e2f2fabb"
+    },
+    {
+      "name": "AHeavyMissile_10.png",
+      "sha256": "d9f80660a3da18fca8298372a3addfe1ac325e0ccfb1999b76992bbd24e1bcb4"
+    }
+  ],
+  "rejections": [
+    {
+      "source": "lv01-parts-generated.png",
+      "reason": "solid guard hid approved central machinery; replaced by open-center guard"
+    },
+    {
+      "source": "ah10_levels2_10.png",
+      "reason": "9 rows progressively compressed height; rejected without X/Y stretching"
+    },
+    {
+      "source": "levels-group2.png / levels-group3.png",
+      "reason": "last row compressed; replaced by fixed silhouette template edits"
+    }
+  ],
+  "transparency_correction": "Viewer displayed hidden RGB backdrop, but alpha histogram and blue-background compositing proved actual transparency; initial background-failure assessment was incorrect. No color-key removal or mask replacement used.",
+  "preparation": "All neutral guards19x16. Grouped bank drawing calibrated once per source sheet; neutral retained. Pose6 y-1 registration common to all levels; no body edits or clipping. Rear housings preserve approved full alpha/front pixels. Rocket and AirStrike remain original approved separated 7-pose parts."
+}

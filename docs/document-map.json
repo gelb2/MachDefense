@@ -7,7 +7,8 @@
     "docs/restoration-contract.md",
     "docs/design.md",
     "docs/current-status.md",
-    "docs/port-observations-20261104.md"
+    "docs/port-observations-20261104.md",
+    "docs/incident-review-policy.md"
   ],
   "domains": {
     "restoration": [
@@ -134,7 +135,9 @@
       "CHANGELOG.md",
       "docs/document-governance.md",
       "tools/document_contract.py",
-      "docs/evidence/document-hygiene-20261107.md"
+      "docs/evidence/document-hygiene-20261107.md",
+      "tools/incident_review.py",
+      ".agents/incident-review.json"
     ],
     "modules": [
       "docs/design.md",

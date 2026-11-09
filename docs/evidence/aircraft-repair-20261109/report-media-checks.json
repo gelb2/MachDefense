@@ -1,0 +1,875 @@
+{
+  "comparison.json": {
+    "source": "dist/media/gameplay-20261027/01-auto-aim.gif",
+    "output": "dist/media/gameplay-20261027/01-auto-aim-lossless.webp",
+    "sourceBytes": 3227732,
+    "outputBytes": 2896976,
+    "frames": 60,
+    "durationMilliseconds": 5000,
+    "loop": 0,
+    "pixelsAndTimingIdentical": true,
+    "updatedReferences": [
+      [
+        "dist/github.html",
+        1
+      ],
+      [
+        "dist/github.md",
+        1
+      ],
+      [
+        "dist/ios-gameplay.html",
+        2
+      ],
+      [
+        "dist/media/gameplay-20261027/README.md",
+        1
+      ],
+      [
+        "dist/media/gameplay-20261027/media-scenes.json",
+        1
+      ],
+      [
+        "dist/downloads/ai-experience/ios-gameplay-gallery-20261030.md",
+        1
+      ]
+    ]
+  },
+  "jump-comparison.json": {
+    "source": "dist/media/gameplay-20261027/08-jump-clip.gif",
+    "output": "dist/media/gameplay-20261027/08-jump-clip-lossless.webp",
+    "sourceBytes": 3121145,
+    "outputBytes": 2666446,
+    "frames": 72,
+    "durationMilliseconds": 6000,
+    "loop": 0,
+    "pixelsAndTimingIdentical": true,
+    "updatedReferences": [
+      [
+        "dist/github.html",
+        1
+      ],
+      [
+        "dist/github.md",
+        1
+      ],
+      [
+        "dist/ios-gameplay.html",
+        2
+      ],
+      [
+        "dist/media/gameplay-20261027/README.md",
+        1
+      ],
+      [
+        "dist/media/gameplay-20261027/media-scenes.json",
+        1
+      ],
+      [
+        "dist/downloads/ai-experience/ios-gameplay-gallery-20261030.md",
+        1
+      ]
+    ]
+  },
+  "duplicates.json": [
+    {
+      "old": "assets/save-recovery/tauri-gameplay.png",
+      "retained": "threads-media/06-tauri-mac.jpg",
+      "bytesIdentical": true,
+      "bytesSaved": 424091,
+      "references": [
+        "dist/save-recovery.html"
+      ]
+    },
+    {
+      "old": "media/hud-audit/HUD_normal_repeat.png",
+      "retained": "media/hud-audit/HUD_normal.png",
+      "bytesIdentical": true,
+      "bytesSaved": 76854,
+      "references": []
+    },
+    {
+      "old": "media/hud-audit/HUD_partitioned.png",
+      "retained": "media/hud-audit/HUD_normal.png",
+      "bytesIdentical": true,
+      "bytesSaved": 76854,
+      "references": [
+        "dist/hud-improvement.html",
+        "dist/hud-improvement-plan-20261028.md"
+      ]
+    }
+  ],
+  "png-lossless.json": [
+    {
+      "original": "media/machdefense/turret-body-only/laser.png",
+      "output": "media/machdefense/turret-body-only/laser-lossless.webp",
+      "pixelsIdentical": true,
+      "savedBytes": 37935,
+      "updatedReferences": [
+        "dist/machdefense.html"
+      ]
+    },
+    {
+      "original": "media/machdefense/turret-body-only/plasma.png",
+      "output": "media/machdefense/turret-body-only/plasma-lossless.webp",
+      "pixelsIdentical": true,
+      "savedBytes": 36389,
+      "updatedReferences": [
+        "dist/machdefense.html"
+      ]
+    },
+    {
+      "original": "md-user-aircraft-20261108/beluga-web.png",
+      "output": "md-user-aircraft-20261108/beluga-web-lossless.webp",
+      "pixelsIdentical": true,
+      "savedBytes": 43929,
+      "updatedReferences": [
+        "dist/machdefense.html"
+      ]
+    }
+  ],
+  "json-whitespace.json": [
+    {
+      "path": "dist/md-level10-art-prompts.json",
+      "valuesUnchanged": true,
+      "savedBytes": 2967,
+      "originalSHA256": "5e1f8231295b171335caff60e2e1889532651b8f97747db096ed9b9b27b2e1a0",
+      "publishedSHA256": "6d5face4bbe33a6988d5a6d728bbfc551ea69070148ab7be89a6831f5871028b"
+    },
+    {
+      "path": "dist/md-aircraft-size-20261108/check-safari.json",
+      "valuesUnchanged": true,
+      "savedBytes": 4544,
+      "originalSHA256": "288fec4aa44c59c0546ac4235d9589c78c53725fe1ce48a6485091229f72272d",
+      "publishedSHA256": "f108ab0610df85060b93943fb93754a9430c3c749e58add1f68b6610e06ddc9d"
+    },
+    {
+      "path": "dist/md-aircraft-size-20261108/size-check.json",
+      "valuesUnchanged": true,
+      "savedBytes": 662,
+      "originalSHA256": "ebcfc115cdf3eb68d1796d63d96571ba889e2faa54415654e0b5835dd9d7d035",
+      "publishedSHA256": "176ad4b07fef97e37ce94ac20b5ca695545cf513e8b0d90cfbec2a1756eea7bd"
+    },
+    {
+      "path": "dist/md-aircraft-size-20261108/bounding-boxes-safari.json",
+      "valuesUnchanged": true,
+      "savedBytes": 679,
+      "originalSHA256": "808805c6e56b554f6be996f351c181f6bce6f2a9897b55e9b6f0efb0c0baed48",
+      "publishedSHA256": "dbab9e51a35b01484003cf7d1271c65163446a4ba3ea4a6c20f2645677a6c5e4"
+    },
+    {
+      "path": "dist/md-art-20261107/ipad-performance.json",
+      "valuesUnchanged": true,
+      "savedBytes": 311,
+      "originalSHA256": "113ee373d369aa973203e44d3d347fa8d932eef32c1ea26d8e635c661dc21b3a",
+      "publishedSHA256": "ccfaa36f896ef685e21b166a7557dc2b31d96d19882ef4e985002fb3a14a89cd"
+    },
+    {
+      "path": "dist/md-user-aircraft-20261108/check-chromium.json",
+      "valuesUnchanged": true,
+      "savedBytes": 18547,
+      "originalSHA256": "b31c56a97c10e00bedd5d20398697a5c75dff94b4b2596575f9ebe8c0ba16173",
+      "publishedSHA256": "e55b5a0d478f65ae4e4a25b55579bab848a60fd340e64d15372bd51db69280db"
+    },
+    {
+      "path": "dist/md-user-aircraft-20261108/check-webkit.json",
+      "valuesUnchanged": true,
+      "savedBytes": 18547,
+      "originalSHA256": "b6a1da40c0cb76323085aa53a583a94539ae68409ad8ceccbd2aea7995b6d21d",
+      "publishedSHA256": "6d0b256335470dd70f407e5286e61a62b24a9893711a5f04ad14782605d948b1"
+    },
+    {
+      "path": "dist/md-user-aircraft-20261108/cheyenne-generation-error.json",
+      "valuesUnchanged": true,
+      "savedBytes": 79,
+      "originalSHA256": "21860c35bafc00e1d6b59814477fff3bfa83de2e1332cfe2049147a7e33d1513",
+      "publishedSHA256": "c50d99224bc51853c1235f1aa0c8b4a336ca42aac4c16274841ead0cd0394294"
+    },
+    {
+      "path": "dist/md-user-aircraft-20261108/previous-generation-error.json",
+      "valuesUnchanged": true,
+      "savedBytes": 75,
+      "originalSHA256": "9446cfd3d55806b59f26958b1ca28bb7e7fa4d90d046ed34da3afd0818a262b6",
+      "publishedSHA256": "479daee43487e097c639ce1aa4216fc4634f8b73b5c8dfdcefc2a8fa6d232e68"
+    },
+    {
+      "path": "dist/md-user-aircraft-20261108/packed-assets.json",
+      "valuesUnchanged": true,
+      "savedBytes": 121,
+      "originalSHA256": "f3ea2fc9e203000cb3038042f2c5906f006db684c1282dd7a81e216bd5475b56",
+      "publishedSHA256": "67a41ef65167fbd5751d80b78bc710dabf3982d812250e338cb96496138bfd0a"
+    },
+    {
+      "path": "dist/md-user-aircraft-20261108/ah10-generation-error.json",
+      "valuesUnchanged": true,
+      "savedBytes": 83,
+      "originalSHA256": "2ba876c1da52a567352a1f4d166f150084d9b30d49f4c0235eed0d86e9a5a5c2",
+      "publishedSHA256": "5066099b7f52e9dc35c5e3fcd922bd56d6955fcad4285ea6bd0479c8cd160aec"
+    },
+    {
+      "path": "dist/md-aircraft-scale2-20261108/references.json",
+      "valuesUnchanged": true,
+      "savedBytes": 617,
+      "originalSHA256": "afd68db4546f79e5757e97b1e7318dc7e27b7e60f142c1231f4d1611e064f704",
+      "publishedSHA256": "7e1645384640b0d9b4ce125c2883c688aa76cde8c5d49f5b062fb04d33ab318e"
+    },
+    {
+      "path": "dist/md-aircraft-scale2-20261108/png-preservation.json",
+      "valuesUnchanged": true,
+      "savedBytes": 13,
+      "originalSHA256": "f4a99085a75c6a7ca354da82fef4651edfd090848afb408808c85540abe60933",
+      "publishedSHA256": "172f5e51d7fd4762a4c3d20eca6980dff8b77b9eb337e25cb08343ff4f72f0f8"
+    },
+    {
+      "path": "dist/md-aircraft-scale2-20261108/combat-safari.json",
+      "valuesUnchanged": true,
+      "savedBytes": 4544,
+      "originalSHA256": "d80ddfebee556234b3d40be1973cabef5ccd5568f6027c9bed7d5dd972d844d7",
+      "publishedSHA256": "6fec9f60c4ced53b28d5a94d487288df29262019e3250b037ab7b488a987aa53"
+    },
+    {
+      "path": "dist/md-aircraft-scale2-20261108/before-after.json",
+      "valuesUnchanged": true,
+      "savedBytes": 679,
+      "originalSHA256": "1a7f0b92daebb107ae6c66f6abe56e5872b603b04bdeaa8a0fb5f548fd3ec804",
+      "publishedSHA256": "16f3a472216e18aabead6b6922ffa8df0ba6a4f8810e9779cf1f4c62ecf94b0f"
+    },
+    {
+      "path": "dist/md-scout-ah1z-20261108/runtime.json",
+      "valuesUnchanged": true,
+      "savedBytes": 994,
+      "originalSHA256": "21d8514de447e8f7e510ae370ac7ce37c07d4564bed3e088825d086853476c62",
+      "publishedSHA256": "445f0dfaafd1408644b49dc846e918a304778cdd1eaab6f29bd6407b248b8ae0"
+    },
+    {
+      "path": "dist/md-scout-ah1z-20261108/references.json",
+      "valuesUnchanged": true,
+      "savedBytes": 795,
+      "originalSHA256": "b570e862423de9fb5bec0631c8fc0eb51418a09a82e4433839f251fb01d393d7",
+      "publishedSHA256": "00a9a7083b4e04d46299cb97ca82c80826d3d7d242c1c9d23aa5719045e7cc04"
+    },
+    {
+      "path": "dist/md-scout-ah1z-20261108/image-verification.json",
+      "valuesUnchanged": true,
+      "savedBytes": 109,
+      "originalSHA256": "833199f3148b3f225e22206cf357588aa7d7517aa973d304c8fe7e971960aaae",
+      "publishedSHA256": "119f7ad0374b158c6b38b1d0c1d93d2a9a64925854c56bdd70c392a9f50b16a0"
+    },
+    {
+      "path": "dist/md-scout-ah1z-20261108/bounds.json",
+      "valuesUnchanged": true,
+      "savedBytes": 526,
+      "originalSHA256": "42c1a9c80d7ec79402ccb39eaf1c150d62e9fc5edfeb785020f49ed7fbf11533",
+      "publishedSHA256": "59e08aa6f07bcb6dbf854a083e3ff4ba3c682334d6daee1dd9eb3e261d798a29"
+    },
+    {
+      "path": "dist/md-scout-ah1z-20261108/combat-safari.json",
+      "valuesUnchanged": true,
+      "savedBytes": 4544,
+      "originalSHA256": "a886125cf2a7edb4bce209e2f1621731e8b17dcc2909f0c73239cff0d8e19a78",
+      "publishedSHA256": "412025a17245cdd573c12990c1899024760c784ccf32570dc46eb0dec23eda68"
+    },
+    {
+      "path": "dist/md-scout-ah1z-20261108/body-v2-imagegen-error.json",
+      "valuesUnchanged": true,
+      "savedBytes": 75,
+      "originalSHA256": "6f2459c74fc5e210d20ef270d5e450f724ac73d308ae71c23ce234eceec739bd",
+      "publishedSHA256": "6978cbfb459dc4ec718ea1f2e15c22085ad54fae3b886b31c6617d4d2e2aaa9f"
+    },
+    {
+      "path": "dist/md-scout-ah1z-20261108/body-v2-preservation.json",
+      "valuesUnchanged": true,
+      "savedBytes": 138,
+      "originalSHA256": "5b074ff95459e3215777b4f29130f547cc25d6509c74c73ae453ea5affbca6a7",
+      "publishedSHA256": "29aa387ab3418b10cd5f9f9f05f6fbb3bb2a1806d8e0c00b5de700c6b8ebe95a"
+    },
+    {
+      "path": "dist/md-scout-ah1z-20261108/rotor-bounds.json",
+      "valuesUnchanged": true,
+      "savedBytes": 169,
+      "originalSHA256": "f66aac10db29f3f9a1422f88461877ed2e5eb4599cd18848770c5793aad7a776",
+      "publishedSHA256": "917a6d0ff62eca667258ab59c6e3d0cc2e74ecc63afa2223ea98e23d88c02539"
+    },
+    {
+      "path": "dist/md-aircraft-resume-20261108/check-safari.json",
+      "valuesUnchanged": true,
+      "savedBytes": 4544,
+      "originalSHA256": "ee70a8772c2fd4b0d96e54dae57380554ae794e31d2b63bed6030a03f6eeef4f",
+      "publishedSHA256": "75538897feecab8546afe2f4fc8600762350dd31840b54245b2cc4e4fd90742c"
+    },
+    {
+      "path": "dist/md-aircraft-resume-20261108/packed-assets.json",
+      "valuesUnchanged": true,
+      "savedBytes": 337,
+      "originalSHA256": "0dc9906c1f017d19f3b7a09dad2dd56dd36052ebcd85e0389f1b28bcd81bc976",
+      "publishedSHA256": "9c903987870d015ea2e35ffd0ac268ab3b24659ec1781297ab4953d08ca7f295"
+    },
+    {
+      "path": "dist/md-aircraft-balance-20261108/validation.json",
+      "valuesUnchanged": true,
+      "savedBytes": 2260,
+      "originalSHA256": "29dab4f513e41bc95eac2729d4bafe055b0b2bc3c22ed3eab056ef2be8ad1c89",
+      "publishedSHA256": "8674230740e44334160eae30bcf5ae46937bf02ac0a12e37b939dc9e43d70800"
+    },
+    {
+      "path": "dist/md-aircraft-balance-20261108/proposal.json",
+      "valuesUnchanged": true,
+      "savedBytes": 50290,
+      "originalSHA256": "a0c77cf46ab7d0f62a35b482521dfea13717793dc8aa0d60562872ab99a13d1b",
+      "publishedSHA256": "c79168d1f1d478836208b2bae46f5f2456db6089d7e23b3cce023afede7932df"
+    },
+    {
+      "path": "dist/md-aircraft-evasion-20261108/checks.json",
+      "valuesUnchanged": true,
+      "savedBytes": 350,
+      "originalSHA256": "d3d75cc7346258e3add151ecef6b81b763ce3fcb1431bb8cc6a66161182b1d69",
+      "publishedSHA256": "87fe6422556e9c5f90f4fba6622b609f705ed0829f6dfe13a35d01c905407f8d"
+    },
+    {
+      "path": "dist/md-aircraft-followup-20261109/preservation.json",
+      "valuesUnchanged": true,
+      "savedBytes": 16,
+      "originalSHA256": "ed065566915fa5b5f01a93dc883f8c33d63f437c2acc5f56bda5db995bf40f24",
+      "publishedSHA256": "65ef594d9c85508fecf971f072e7968ec3a8ab7622e945c09d57413bf17aec37"
+    },
+    {
+      "path": "dist/md-aircraft-followup-20261109/web-100-repeat.json",
+      "valuesUnchanged": true,
+      "savedBytes": 179,
+      "originalSHA256": "f9d09b0421f50f008bf5fcfc693759409917326d07c62f4529db3966b38cea9f",
+      "publishedSHA256": "309bcda12ddd2a9f343ef26fac6547bf40a7492b589d2dbc8367e5c5c198d978"
+    },
+    {
+      "path": "dist/md-aircraft-followup-20261109/web-chrome.json",
+      "valuesUnchanged": true,
+      "savedBytes": 8820,
+      "originalSHA256": "c2ca0f5d146153437ab18d5da66b11c84a07de4bab55e557e6ede646f7dc2716",
+      "publishedSHA256": "67bb40ade81f82745784886f0a7d6d038902680f45280704222d19bc00eb3d26"
+    },
+    {
+      "path": "dist/md-aircraft-followup-20261109/web-webkit.json",
+      "valuesUnchanged": true,
+      "savedBytes": 8820,
+      "originalSHA256": "52fe8805ed74ed6892ef5362523230ca6dfdc5ee13cf3b5c3d54ad9ad50e5d05",
+      "publishedSHA256": "e166e005035507997fda7789c947703bf7b217fb972d5acbd3dd4b64cc208905"
+    },
+    {
+      "path": "dist/md-aircraft-followup-20261109/web-isolated.json",
+      "valuesUnchanged": true,
+      "savedBytes": 343,
+      "originalSHA256": "726984d3dd5fdd1dace776d0b10173c61736376c27cceb9e759d2cd54d4eff74",
+      "publishedSHA256": "33c1ace98ef0a5bae3162b5aed79fe705b1da6756cde02afa65c345cfa410e99"
+    },
+    {
+      "path": "dist/md-aircraft-followup-20261109/bundle-audit.json",
+      "valuesUnchanged": true,
+      "savedBytes": 16,
+      "originalSHA256": "4d3a3025a9cff4082a05fe8464f98f787377abd334e334fd731dac6667a86391",
+      "publishedSHA256": "9153bd5260f31070c17014e056e4699f00118132746350c90a5ef56960fec99c"
+    },
+    {
+      "path": "dist/md-unease-20261108/provenance.json",
+      "valuesUnchanged": true,
+      "savedBytes": 184,
+      "originalSHA256": "1ad80c8a277cbd8bfefd531a95820ee64af32add5713392de955588342f68165",
+      "publishedSHA256": "ff7e0038ec2d1f5b2de05be1dbb3523a7beeaeed8da8a07a100bae759c4dd350"
+    },
+    {
+      "path": "dist/md-unease-20261108/cheyenne-retry-error.json",
+      "valuesUnchanged": true,
+      "savedBytes": 25,
+      "originalSHA256": "897005bfcb5384fbb69992be6351f44a981da9c7c8068b02b114302445980d47",
+      "publishedSHA256": "a3571538c5deb2a19ef9b094ad58f1e875597ab95db6e2f942aaf6108188907c"
+    },
+    {
+      "path": "dist/md-unease-20261108/reference-manifest.json",
+      "valuesUnchanged": true,
+      "savedBytes": 190,
+      "originalSHA256": "14fce8145f231e9999e2229db612ff8393119fa6d97917f3ef9b0802149f6f01",
+      "publishedSHA256": "692a59f58698c1e69c8281207645dae10d2e70ea045d6c57bbc012ae9a0c9958"
+    },
+    {
+      "path": "dist/md-aircraft-paint-20261108/scout-approved-20261108.json",
+      "valuesUnchanged": true,
+      "savedBytes": 294,
+      "originalSHA256": "eb11cf4726c2b869ae828316e5f57e3355660d5363b3c14f5450786842a2d783",
+      "publishedSHA256": "73316dc70e50bcdda0d86d9fb60136dd25212c72e8bca25b8d8ad640d117e05e"
+    },
+    {
+      "path": "dist/md-aircraft-paint-20261108/image-verification.json",
+      "valuesUnchanged": true,
+      "savedBytes": 73,
+      "originalSHA256": "46a370c2de2c16ba8bff2a2788394def884e068c310ea04a5d3f0f168fb69fdf",
+      "publishedSHA256": "521ad3d67754a7b671a501d8c841d9dabc3da00f5cf36c367082ba187d302862"
+    },
+    {
+      "path": "dist/md-aircraft-paint-20261108/manifest.json",
+      "valuesUnchanged": true,
+      "savedBytes": 918,
+      "originalSHA256": "3cd23e920b93d2ec54d6a952c814e09dee064e8c3f8dea441db66ccd3c2fd770",
+      "publishedSHA256": "4752459fd287c300e6c3be079a3c662a847335db8a8ba5f1b01ac71cb64c6a3c"
+    },
+    {
+      "path": "dist/md-aircraft-markings-20261108/assemblies.json",
+      "valuesUnchanged": true,
+      "savedBytes": 7574,
+      "originalSHA256": "3d9e63a6cff9f22fabb931d93736e0503f7293f67078f889bbd2fa98cd5331ad",
+      "publishedSHA256": "26bc29186b8b6b40e4c245a72ef11f31c4a1e95886d153fb515aca93a7f4797d"
+    },
+    {
+      "path": "dist/md-aircraft-markings-20261108/machdefense-aircraft-markings-four-bounds-20261108.json",
+      "valuesUnchanged": true,
+      "savedBytes": 539,
+      "originalSHA256": "005c380403b46df066f2357762740d936452d50f6ae6d9a0bef5f7bb45175cda",
+      "publishedSHA256": "a4bcaee95d3d35e6ca7460bd8c5da2b220d99cbd14ca3c0c4d345c30686d3fa8"
+    },
+    {
+      "path": "dist/md-aircraft-markings-20261108/machdefense-aircraft-markings-four-combat-20261108.json",
+      "valuesUnchanged": true,
+      "savedBytes": 4544,
+      "originalSHA256": "8f5129ede429f157330a6974adbe5f755d18816fbb8107d9f41d2b66034ac9a1",
+      "publishedSHA256": "b89fa086a64d9a719fe8337938016d8ffe2f80f8011cae0a8311845d15078c17"
+    },
+    {
+      "path": "dist/md-aircraft-markings-20261108/manifest.json",
+      "valuesUnchanged": true,
+      "savedBytes": 373,
+      "originalSHA256": "387793fed2b1131e2171a90d8ac5811dc3b3967537a147b461e01af5602df85a",
+      "publishedSHA256": "9db5df074ba99377916b43b2bdd0f85833d3a0d76dc02d3ee68f2960c51d1cf7"
+    },
+    {
+      "path": "dist/md-aircraft-markings-20261108/inventory.json",
+      "valuesUnchanged": true,
+      "savedBytes": 6711,
+      "originalSHA256": "683b5cb5315f1f4262b6b7b831c087876d0ce0449ee12be85d8ffc7b3dc5884f",
+      "publishedSHA256": "4e239a86a12b807ea15406ae262d8641832d4c305a0fc6f6be641ebda426b8a4"
+    },
+    {
+      "path": "dist/md-aircraft-markings-20261108/assets.json",
+      "valuesUnchanged": true,
+      "savedBytes": 900,
+      "originalSHA256": "0b78eda2daa3e479946d79569757f1af6771df4e31d22311b1b3aae5f40290b2",
+      "publishedSHA256": "f415dc36ca51e3bec5c389cca1ae2adc73a9e5ffb944c55880243a18885fe463"
+    },
+    {
+      "path": "dist/md-aircraft-markings-20261108/texture-audit.json",
+      "valuesUnchanged": true,
+      "savedBytes": 2348,
+      "originalSHA256": "8930c1c34c7b6c6145a0a0e986d6f366dcabf42f0cd88c46d8fb71e0d62bd39e",
+      "publishedSHA256": "74444bc59174995c3b73abbe51a30a21039695186f12712142184793c732c30d"
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/calibration.json",
+      "valuesUnchanged": true,
+      "savedBytes": 6196,
+      "originalSHA256": "dfac6f2b33dcfe9be7ee0d32e0927976bd04867009215ff95df32d97faf03b27",
+      "publishedSHA256": "393936efe6289c81be26e46ade7ef8b880e2562c337bb84d4b95d846faa03cdf"
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/composition-v1.json",
+      "valuesUnchanged": true,
+      "savedBytes": 2643,
+      "originalSHA256": "1442be9f7745530c278ab68d691da7b122796ce863f318e03b65fca0df69b4c6",
+      "publishedSHA256": "edd99fafb83e378c64b4d8280651bbf1d982e425b87789cce743fd5e0d912b73"
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/original-stage-change.json",
+      "valuesUnchanged": true,
+      "savedBytes": 25253,
+      "originalSHA256": "29fc49dd664cd9019e5d192ba97c1ff7fe836cbaba390c1062a724eb5ae77317",
+      "publishedSHA256": "52b255926652b0ef23d87f9791594a916cf41f04ddf1c7f6bff02d4417b4163f"
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/prompts.json",
+      "valuesUnchanged": true,
+      "savedBytes": 931,
+      "originalSHA256": "c80351b86cffbd043b692c904be3cb407142a1623d3ae6594aa2133aa3487ad5",
+      "publishedSHA256": "816efd2e62c3891683460e15681d13707d6d87f61765f71c034833401d5e4c17"
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/composition.json",
+      "valuesUnchanged": true,
+      "savedBytes": 2866,
+      "originalSHA256": "0223ea5469605c4124c5a161cbe9402f212037d3e80a4d74012fe0d0c525f3c4",
+      "publishedSHA256": "bb2eaf58430d108f3eec2c811c64056a5d449c6dc1feee8ce6b2d0d5475c3a93"
+    },
+    {
+      "path": "dist/md-scout-width-20261108/preservation.json",
+      "valuesUnchanged": true,
+      "savedBytes": 56,
+      "originalSHA256": "61e3cc9ca1135b6da78589d9e78608f813dc68739721dd2217d52ea4a4c89646",
+      "publishedSHA256": "6a32b0c9fbf10ef197e34d88d6b2cd628e712d0f856d0cb8484f9e619d8f4b04"
+    },
+    {
+      "path": "dist/md-scout-width-20261108/bounds.json",
+      "valuesUnchanged": true,
+      "savedBytes": 358,
+      "originalSHA256": "29124fcb7db5121351badf647f7726de1c02756db122471d58ef30ba39f12972",
+      "publishedSHA256": "3e9dbe58a2248cd08b0b2c385c612dc02674acc9a10bc493715ddc18f572780e"
+    },
+    {
+      "path": "dist/md-scout-width-20261108/combat-safari.json",
+      "valuesUnchanged": true,
+      "savedBytes": 4544,
+      "originalSHA256": "f7b9bea83d78b646a14ced3b2bcad5c4bb64f571527de70dc66944f99936e853",
+      "publishedSHA256": "6eea303e69ac1da7dace5083dc99c05a7a8548616a518109f47a807201b9c51e"
+    },
+    {
+      "path": "dist/md-aircraft-allied-20261108/check-chromium.json",
+      "valuesUnchanged": true,
+      "savedBytes": 13507,
+      "originalSHA256": "9ddea973f170976ea268b8f7a655b07a031c3dd7c7e57cc5b2cb4be53870b261",
+      "publishedSHA256": "7a68f7e13bd17ca84f93506f9da1020eb68d98fb873719ef242fcf73990bcc58"
+    },
+    {
+      "path": "dist/md-aircraft-allied-20261108/check-webkit.json",
+      "valuesUnchanged": true,
+      "savedBytes": 13507,
+      "originalSHA256": "799214cace5a4faec7fd6d462b36af375898571cefa5694a7f4a80391a737ad5",
+      "publishedSHA256": "c78185d63d59f6072831fc30464103e1cf9121df93294c56dce3c684f1d94733"
+    },
+    {
+      "path": "dist/md-aircraft-allied-20261108/velocity-trace.json",
+      "valuesUnchanged": true,
+      "savedBytes": 19,
+      "originalSHA256": "389ff0a89fa665c68b1b6d76da1f5bb2c85ff80dafe25c5d5dadc8189cbd8235",
+      "publishedSHA256": "daddbd4e85c8df024077d9ff1dd921007317396e334960e370b27d1bfece89c6"
+    },
+    {
+      "path": "dist/md-aircraft-allied-20261108/inertia-check.json",
+      "valuesUnchanged": true,
+      "savedBytes": 216,
+      "originalSHA256": "cac82357fe6096a45414fc280f71deeb763c3e6847cb4bec0b58e16f6a301808",
+      "publishedSHA256": "e4024721491796a7510d9367ec60e78f212992dea9390ab3447cbe4d5e63750a"
+    },
+    {
+      "path": "dist/md-aircraft-allied-20261108/bounds.json",
+      "valuesUnchanged": true,
+      "savedBytes": 169,
+      "originalSHA256": "a862fa3b958c01a0bb13f2bb91fac574027b96a6dd354918840de4146fc56419",
+      "publishedSHA256": "9745bfac512180e568a90281f0b80e2c0324b8056d408e80812f550aadade621"
+    },
+    {
+      "path": "dist/md-aircraft-allied-20261108/manifest.json",
+      "valuesUnchanged": true,
+      "savedBytes": 1879,
+      "originalSHA256": "72af0f8cad161540317d855ac1afdfa173cf15831c4383a81c8a81bbf8b73a41",
+      "publishedSHA256": "d3c8acc53efee93c62950a7b89b0c817f51f480aea0b0bfa4f100e889e0440ee"
+    },
+    {
+      "path": "dist/md-turret-redraw-20261107/measurements.json",
+      "valuesUnchanged": true,
+      "savedBytes": 12574,
+      "originalSHA256": "91044da648732f6b916a427959e6a4cddf5d74245cdf1619357f5e31e2add382",
+      "publishedSHA256": "8c29683cda0a642d54b53ee527e48634929a32c58371800919826f70d2031192"
+    },
+    {
+      "path": "dist/md-turret-review-20261107/measurements.json",
+      "valuesUnchanged": true,
+      "savedBytes": 10361,
+      "originalSHA256": "6bf88c7a2f930c202cb09e088f9d958e0a5324ba487c5f81fb79207086dff28a",
+      "publishedSHA256": "51a7afb2884c3377ff64282f4d6994bde4bf407a4cd81254714a51299134144d"
+    },
+    {
+      "path": "dist/md-aircraft-status-20261109/movement-restore-iphone.json",
+      "valuesUnchanged": true,
+      "savedBytes": 32,
+      "originalSHA256": "9c73632496c4c45d2b3be73c6878164b1e58d7626d0f709e2b5ad0290c13d034",
+      "publishedSHA256": "d26a56c46fca8cbec80b2b58a4c450f567ea767dd4cccbf30f5daca61edc0f3f"
+    },
+    {
+      "path": "dist/md-aircraft-status-20261109/movement-restore-checks.json",
+      "valuesUnchanged": true,
+      "savedBytes": 33,
+      "originalSHA256": "ab0e9c0542e34c08032bbd30911554eea9cc96730e23ac1e46bf03723dba82ea",
+      "publishedSHA256": "77bc794713a0fc567fd703569735ce9a6b8cd540cff6371cbf2eda30c9436af3"
+    },
+    {
+      "path": "dist/md-aircraft-asset-parity-20261109/asset-format-audit.json",
+      "valuesUnchanged": true,
+      "savedBytes": 2598,
+      "originalSHA256": "554fa5084b542411a006ecef0a3b96bb01a5814582cfca4e10ac72ea32f3901f",
+      "publishedSHA256": "177088fa209e52160609364df75a3302914f6579f97174134eab3e6f4beac7bf"
+    },
+    {
+      "path": "dist/md-aircraft-asset-parity-20261109/original-png-audit.json",
+      "valuesUnchanged": true,
+      "savedBytes": 988,
+      "originalSHA256": "aeddb9cca83b83bea92b57fb50f1cc2495aa0e234e4481a8dad111734fb7b806",
+      "publishedSHA256": "c3c058d37621c3a37134466682eb1f616240af5a898246570216f37dbd8da028"
+    },
+    {
+      "path": "dist/md-aircraft-width-20261108/references.json",
+      "valuesUnchanged": true,
+      "savedBytes": 799,
+      "originalSHA256": "0d765ef73e5e59334acd967ef03b479fbaab23dafc3ae7c2fa8ef3d82933f167",
+      "publishedSHA256": "0091ab8dcbbf12973798c706582163bf8e20702f64a7c0d8fa751621fd62f878"
+    },
+    {
+      "path": "dist/md-aircraft-width-20261108/png-preservation.json",
+      "valuesUnchanged": true,
+      "savedBytes": 13,
+      "originalSHA256": "f4a99085a75c6a7ca354da82fef4651edfd090848afb408808c85540abe60933",
+      "publishedSHA256": "172f5e51d7fd4762a4c3d20eca6980dff8b77b9eb337e25cb08343ff4f72f0f8"
+    },
+    {
+      "path": "dist/md-aircraft-width-20261108/combat-safari.json",
+      "valuesUnchanged": true,
+      "savedBytes": 4544,
+      "originalSHA256": "5dda005c0f76dc20553eae22e9e56e1947714318b6c82b18c042ddc47c4dc700",
+      "publishedSHA256": "fbdf3237c79963208e9b7054868dc7c29169763bca9baabd8978564012cfef23"
+    },
+    {
+      "path": "dist/md-aircraft-width-20261108/before-after.json",
+      "valuesUnchanged": true,
+      "savedBytes": 679,
+      "originalSHA256": "b8840eaf169fcb9f320fb768e4b50ad1d200b48b361c3716fdb6f6be221cafd5",
+      "publishedSHA256": "c38a5f8694ebc9c0efa1fe4039cc970d7995d474cae9c2817597cb57de49dd22"
+    },
+    {
+      "path": "dist/md-aircraft-approved-20261108/measurements.json",
+      "valuesUnchanged": true,
+      "savedBytes": 397,
+      "originalSHA256": "3c3ea72ca0c23c518db715936658a1098fc6dca4f4206f0e4402cf9b0a3c8ef6",
+      "publishedSHA256": "165f1ec69215d8e7c5d5a3845da32391790937b16a8a0307fa669187eaebf4bb"
+    },
+    {
+      "path": "dist/md-aircraft-cgbi-20261109/audit.json",
+      "valuesUnchanged": true,
+      "savedBytes": 5534,
+      "originalSHA256": "2c17148a75913ef7642565ed93615b5fdf085e755bf6eb86e63dbafb6a757592",
+      "publishedSHA256": "b44131845cf05da8cff62096d5fa2a4d7329ca070c7a9367a6f7759c2a4b5df6"
+    },
+    {
+      "path": "dist/md-aircraft-cgbi-20261109/texture-budget.json",
+      "valuesUnchanged": true,
+      "savedBytes": 2332,
+      "originalSHA256": "50b12b24ed0896a708bd7c47a5400d2ceacfabca8ec391c9df14d4360a2616ca",
+      "publishedSHA256": "37cdf7356b89a43d3aad7c35eed0908f6efe7fcb78fb7809f998286f8ee23b15"
+    },
+    {
+      "path": "dist/md-aircraft-cgbi-20261109/release-bundle.json",
+      "valuesUnchanged": true,
+      "savedBytes": 468,
+      "originalSHA256": "4e3b2903a4108dd4082ba99d7607f3fc15ca4cbfa202f960e3c20a85ce8254ce",
+      "publishedSHA256": "1b1b65c2bbf5250d082cf83d166928d980bae0fbff941ea8617e140450a489d3"
+    },
+    {
+      "path": "dist/downloads/vtol-world-distribution-20261107.json",
+      "valuesUnchanged": true,
+      "savedBytes": 3412,
+      "originalSHA256": "30888248ec350159a041a79a4774dde3625819104d5ce84988b282b84af71d8d",
+      "publishedSHA256": "3aee0a07a6a116b3c731f4bfdc9f58387dd9dd4b8c65a9e1baae4fccb422ee65"
+    },
+    {
+      "path": "dist/md-turret-scale-20261107/turret-body-scale-20261107.json",
+      "valuesUnchanged": true,
+      "savedBytes": 21807,
+      "originalSHA256": "0a41c8eeaaa9a75dc72b400ddb6e5ca5067a3eaf5204cbd9228de879e333707b",
+      "publishedSHA256": "885fae351ca090368048e2f26008dda99dae95c73ffcd784b18abbe907a38eab"
+    },
+    {
+      "path": "dist/media/machdefense/turret-design-v5/measurements.json",
+      "valuesUnchanged": true,
+      "savedBytes": 3713,
+      "originalSHA256": "f125f203f4b1218a24bb56392fe8b0d721c5ec2ee53fb81df8283a76e41fdd21",
+      "publishedSHA256": "7f96754f78ac3f6b6bb11efbd0f219e8e508bdd1e9d70d5a116285ac1e90566d"
+    },
+    {
+      "path": "dist/assets/machdefense-og-20261107/license-comparison.json",
+      "valuesUnchanged": true,
+      "savedBytes": 172,
+      "originalSHA256": "40f9a944a76e060b17f82afce2a855554975f06eb24f64255b8960b38c1e8acf",
+      "publishedSHA256": "ed1ffeed62e0f8d7135ab0166b0d06837b940b0240883505b33afdd70d937800"
+    },
+    {
+      "path": "dist/assets/machdefense-og-20261107/report-image-conversions.json",
+      "valuesUnchanged": true,
+      "savedBytes": 840,
+      "originalSHA256": "83d352f27d82e88582046d7acc64d8673217358758eb749460310918886af6aa",
+      "publishedSHA256": "88af7752ceb292091cb994ad8d9f5f6a18eca6ad96931631445c2a0da37008bc"
+    },
+    {
+      "path": "dist/assets/machdefense-og-20261107/chromium-web-audit.json",
+      "valuesUnchanged": true,
+      "savedBytes": 1910,
+      "originalSHA256": "c9431523b49af4a659a9957993f7daf2e71c687874e649ca495f74ac58e16694",
+      "publishedSHA256": "8527cb506537c8137f8da5ac06d5652b39d89aeaf1097fa3fc19e15547c9038e"
+    },
+    {
+      "path": "dist/assets/machdefense-og-20261107/webkit-web-audit.json",
+      "valuesUnchanged": true,
+      "savedBytes": 1860,
+      "originalSHA256": "76b234f68b457a7227feae99f740eeafca9fc42a393f445fe7de27ae0a7f688b",
+      "publishedSHA256": "6973cc7dcf93a801417c5bf3cbc5ca7a0bf32e073291ca8eaf3f7d24b4200c13"
+    },
+    {
+      "path": "dist/assets/machdefense-og-20261107/installed.json",
+      "valuesUnchanged": true,
+      "savedBytes": 123,
+      "originalSHA256": "9e3afc8f655b13ac46c7ffa93b18305a2b7a3cf35abed03dc3065972da6d63b8",
+      "publishedSHA256": "894555702401a46eb49043280342962e275681c3843601dae0e0fbecf9cf1df2"
+    },
+    {
+      "path": "dist/assets/machdefense-og-20261107/package-audit.json",
+      "valuesUnchanged": true,
+      "savedBytes": 977,
+      "originalSHA256": "c73afca97337ab9319a0dff8eeb7c52e8c7510746cf64d0f07df8ce7c3f76261",
+      "publishedSHA256": "bd9b9efb6340a64c4ae90a2caf69dda09ab1cbaee42e928d252f4a6e7348bd91"
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/v2/refinements.json",
+      "valuesUnchanged": true,
+      "savedBytes": 109,
+      "originalSHA256": "647226ff43a20e6db30756da365e3b9fc8f91e04fd6c75a4fe46cd8718c96bb1",
+      "publishedSHA256": "56379686e50a5d5b47a2b36ee88351e79241cddc5207f13e49e83e8b9f1dd1d3"
+    },
+    {
+      "path": "dist/md-body-concepts-20261107/v2/prompts.json",
+      "valuesUnchanged": true,
+      "savedBytes": 337,
+      "originalSHA256": "11baabe41608ce46aba808ad534b2e0f103583ca6eaa4df4b114fc6f9ea8d78a",
+      "publishedSHA256": "ee7e253c0d8d6bc02c6faafa231d78d51cd2a52fda69db76c326ab83b478efe8"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-audit-20261109/asset-inventory.json",
+      "valuesUnchanged": true,
+      "savedBytes": 278981,
+      "originalSHA256": "6939f5f75cf9987d89af9b3b4c45e4837c2b535638f8d239129c2351beca1487",
+      "publishedSHA256": "b85bdc22854d295700e7586d87f3fa8ff7326091663fc4097d030ffdfd4d6b4e"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-audit-20261109/resize-aircraft.json",
+      "valuesUnchanged": true,
+      "savedBytes": 361,
+      "originalSHA256": "e5ac0f667716891bd479eb25d07e78739ee67405551d2333528c7bd02591ed11",
+      "publishedSHA256": "7b0103258a2c7a2d90fe38b37427af4250397a0108bd66345793f9ac98bb0049"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-audit-20261109/alpha-distribution.json",
+      "valuesUnchanged": true,
+      "savedBytes": 25761,
+      "originalSHA256": "2d9916a646f9d244ff57c7326a8a6e5a976ae7e574e8fd1abf81b0c2be1a928e",
+      "publishedSHA256": "c57636d3cc2f93fc2b77ab53241c39d187ef15700a3f23ba98bb8d9ecb78d06a"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-audit-20261109/core-execution.json",
+      "valuesUnchanged": true,
+      "savedBytes": 122,
+      "originalSHA256": "409cfd3b57627100d1ea6928d5aee4e8268e101f04e8e04caa2d0ee74faeee84",
+      "publishedSHA256": "3667df430d507b01a2324ff2ff179e257867e8375fd5cf6c764e21bc4ea85222"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-audit-20261109/imagegen-call-comparison.json",
+      "valuesUnchanged": true,
+      "savedBytes": 5041,
+      "originalSHA256": "ef1737bf9cee4a802e878643939051ac8ea195468be8eceb7a3b1277576ca82f",
+      "publishedSHA256": "e8a198803257985f427964ee654083e8096e54647038f365f7ff2a75f0f67022"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-audit-20261109/tauri-embedding.json",
+      "valuesUnchanged": true,
+      "savedBytes": 248,
+      "originalSHA256": "8dbcfc66319558aa2b2075bdfcaac475d89b5d8b6b7ce31ad03b4bafb2edb8cd",
+      "publishedSHA256": "422a0e269410f95bf75bc5c542fa2f3e9471908284944fce9082ee343e180060"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-audit-20261109/resize-ground.json",
+      "valuesUnchanged": true,
+      "savedBytes": 3421,
+      "originalSHA256": "0faabe68e86a15e1f60b3dd2dbb96ce7a753717c8e3b8d333268ae19dc5a482b",
+      "publishedSHA256": "6189d135f1987ccc2cefe2faa42e04c4a4552bcbe1896430556755d67be5b00a"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-audit-20261109/packaged-assets.json",
+      "valuesUnchanged": true,
+      "savedBytes": 562,
+      "originalSHA256": "928081bdff8d63a22f53866a1cd1f5edd6879461c99d6ef38bdce9dbe94dcb9e",
+      "publishedSHA256": "334e5b1d9ddef4ce6bf4bddbeb96574c3ee6f5ab15f5981e5677fdd7cef77cef"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-audit-20261109/provenance-summary.json",
+      "valuesUnchanged": true,
+      "savedBytes": 63,
+      "originalSHA256": "55e3907fc9c94cc44c8ed4eeb2d66f48d7d93d889998f32f922898131092cbbb",
+      "publishedSHA256": "e84e123aa3a14025e00e7c243554787a8ce3779e7829664cf5ae61a3b45ff5a8"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-hotfix-20261109/web-tauri-validation.json",
+      "valuesUnchanged": true,
+      "savedBytes": 9153,
+      "originalSHA256": "c96a4f6f68accf6420596d95f226af59625209fc5e774675e08ef8112a3d3d48",
+      "publishedSHA256": "cdcbef68e548c62480d391e076774637c922928aabd33b47c9eb1c26f122a19d"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-hotfix-20261109/android-package.json",
+      "valuesUnchanged": true,
+      "savedBytes": 438,
+      "originalSHA256": "57cee61f50cdc742f48bd6d01309b4d1df3b01b6fb8e304112db13f58ae836e4",
+      "publishedSHA256": "cce374f4837c9c843df2bfe416c4d1614415b0b199fc3d7a7dfa8da457c5c52e"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-hotfix-20261109/independent-review.json",
+      "valuesUnchanged": true,
+      "savedBytes": 2339,
+      "originalSHA256": "7145d5002c29ce309240bd32f2b565d0fcbc1d076448458939b5254e79c0fe4c",
+      "publishedSHA256": "1d0bed190fffe50db7249376d80ec90239e25464b1d467310d1ff80210338492"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-hotfix-20261109/platform-validation.json",
+      "valuesUnchanged": true,
+      "savedBytes": 748,
+      "originalSHA256": "64826bc135991f620df0c037c7a3f06123a03a72cc1dfca11f493e2133cc40d4",
+      "publishedSHA256": "96a7b5bc0969dbac7d82afaaecbd765e0a63a1a70ae8e5fbfca00b5dac5312d6"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-hotfix-20261109/pwa-package.json",
+      "valuesUnchanged": true,
+      "savedBytes": 430,
+      "originalSHA256": "62c62937f946e7f6d75d137ea73bb8369392941e88436c4c5e76e95641a5ca29",
+      "publishedSHA256": "a766374d637590c2dbf2605ecea7e145efb34303e58be3254b39205da5d65659"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-hotfix-20261109/preserved-inputs.json",
+      "valuesUnchanged": true,
+      "savedBytes": 29880,
+      "originalSHA256": "8bdb7fb5abf999d71b65aa4c96b4a25bd05539e9d4e6233fcfdfce66565c2b5d",
+      "publishedSHA256": "fecf20aa5514b4fea76101ac122c36fa256db880925463c4190284f39264f4f6"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-hotfix-20261109/premultiply-inverse-probe.json",
+      "valuesUnchanged": true,
+      "savedBytes": 93,
+      "originalSHA256": "19b387c86568a92be61f7b523d4984c657588ff0232fc93ee6cfb86046d039d1",
+      "publishedSHA256": "adfa6d555c354430192f920d2c49942fed298af5d0d8d41d907e09ea3a9b5ae1"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-hotfix-20261109/public-pwa.json",
+      "valuesUnchanged": true,
+      "savedBytes": 600,
+      "originalSHA256": "58f266cd8baab8ccc28d0a1294cacb2034ec88c33418d23f5b981e2a27553f0e",
+      "publishedSHA256": "0360f8586dca6a6b95f4a58ddb6c6655e83cee0ba9b4bd7a50aaf0193d5153d3"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-hotfix-20261109/release.json",
+      "valuesUnchanged": true,
+      "savedBytes": 142,
+      "originalSHA256": "29e207d7ba8fda7dc558461245542f79fc211d194874a8495d1a5906dad0a7d0",
+      "publishedSHA256": "014da3f2ac349ae0963f0370030d4b980842151c8f346751c1e122c059479db2"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-hotfix-20261109/android-emulator.json",
+      "valuesUnchanged": true,
+      "savedBytes": 4356,
+      "originalSHA256": "4448701933004d7fca265de3bec0ef1dd6b3e3f68c761a385621c6eabae0b65d",
+      "publishedSHA256": "2a2afc15d6677e584ba89773b9a4fc35e014bb71bf440ccc697d5ca52501bc6c"
+    },
+    {
+      "path": "dist/new-unit-audit-20261109/docs/evidence/new-unit-hotfix-20261109/core-trace-comparison.json",
+      "valuesUnchanged": true,
+      "savedBytes": 4661,
+      "originalSHA256": "af28df73f7eff5f70bbeeb767bc521876e7b66102bbd5d6ef9b71949b7e066cf",
+      "publishedSHA256": "924e7854719cdcc72f42d2be0a0c1842a25d8c198523e91e9cb225e318d8cfca"
+    }
+  ]
+}

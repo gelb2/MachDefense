@@ -1,0 +1,102 @@
+{
+  "scope": "Scout and Beluga only; preserve approved neutral pixels, motion, Cheyenne/AH-10 and original assets",
+  "aircraft": [
+    {
+      "name": "scout",
+      "body": "ALightBody",
+      "source": "Art/Aircraft/banking-correction-20261109/scout-candidate-02.png",
+      "paint": "existing prepareAircraftPaint colour curves; no new coordinate markings",
+      "padding": [
+        1,
+        4
+      ],
+      "rotorSocket": [
+        7.21,
+        0
+      ],
+      "rotorCenters": [
+        [
+          267,
+          192
+        ],
+        [
+          789,
+          192
+        ],
+        [
+          1307,
+          192
+        ],
+        [
+          265,
+          705
+        ],
+        [
+          755,
+          705
+        ],
+        [
+          1242,
+          705
+        ]
+      ],
+      "angles": [
+        -8,
+        -16,
+        -24,
+        8,
+        16,
+        24
+      ]
+    },
+    {
+      "name": "beluga",
+      "body": "ATransportBody",
+      "source": "Art/Aircraft/banking-correction-20261109/beluga-authoritative-06.png",
+      "paint": "Existing colour curves and approved markings projected onto drawn wing span",
+      "projectExistingMarkings": true,
+      "padding": [
+        0,
+        0
+      ],
+      "rotorSocket": [
+        10,
+        1
+      ],
+      "rotorCenters": [
+        [
+          256,
+          219
+        ],
+        [
+          777,
+          219
+        ],
+        [
+          1293,
+          219
+        ],
+        [
+          257,
+          732
+        ],
+        [
+          755,
+          732
+        ],
+        [
+          1258,
+          732
+        ]
+      ],
+      "angles": [
+        -8,
+        -16,
+        -24,
+        8,
+        16,
+        24
+      ]
+    }
+  ]
+}

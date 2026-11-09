@@ -1,0 +1,415 @@
+{
+  "decoder": "Production stb with iPhone conversion and unpremultiply enabled",
+  "textures": [
+    {
+      "image": "ADuctBody.png",
+      "size": [
+        110,
+        88
+      ],
+      "sha256": "77765d79fd6014eea89e12b341c7ecf43582d95befb0d6c64674b703ea8edc99",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 4017,
+      "maxAlphaWeightedRGBDifference": 0.996078431372549,
+      "sourceBytes": 17098,
+      "optimizedBytes": 14942
+    },
+    {
+      "image": "ADuctBodyBankL.png",
+      "size": [
+        65,
+        62
+      ],
+      "sha256": "c5140e726bf033ad27630e72f7fc6854148d5686b165b53c408ebb444f2a194c",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 2015,
+      "maxAlphaWeightedRGBDifference": 0.996078431372549,
+      "sourceBytes": 8323,
+      "optimizedBytes": 8008
+    },
+    {
+      "image": "ADuctBodyBankR.png",
+      "size": [
+        65,
+        62
+      ],
+      "sha256": "1d377b535bf30955522fa2c39aaab2d53f175bc1bf6967a9e0750358da6eeddf",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 2017,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 8341,
+      "optimizedBytes": 8001
+    },
+    {
+      "image": "ADuctFan.png",
+      "size": [
+        24,
+        24
+      ],
+      "sha256": "7d27159d1c310f29bd377b75a9288318affcfae1c3213b6d0d2e472188d8e551",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 414,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 2083,
+      "optimizedBytes": 1827
+    },
+    {
+      "image": "ADuctGun.png",
+      "size": [
+        18,
+        7
+      ],
+      "sha256": "7d9bee093f414a82f498b028e62a5cdc08f7a3705b128f39db41c38f7c24dd53",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 74,
+      "maxAlphaWeightedRGBDifference": 0.8705882352941177,
+      "sourceBytes": 539,
+      "optimizedBytes": 462
+    },
+    {
+      "image": "ADuctMissile.png",
+      "size": [
+        18,
+        13
+      ],
+      "sha256": "3820ef8b43aa43d085bedc5073e0a9bdfd83a99c782f6fb62de44ee3e052fffd",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 172,
+      "maxAlphaWeightedRGBDifference": 0.9647058823529412,
+      "sourceBytes": 865,
+      "optimizedBytes": 936
+    },
+    {
+      "image": "ADuctMissileR.png",
+      "size": [
+        18,
+        13
+      ],
+      "sha256": "3820ef8b43aa43d085bedc5073e0a9bdfd83a99c782f6fb62de44ee3e052fffd",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 172,
+      "maxAlphaWeightedRGBDifference": 0.9647058823529412,
+      "sourceBytes": 865,
+      "optimizedBytes": 936
+    },
+    {
+      "image": "AHeavyBody.png",
+      "size": [
+        76,
+        112
+      ],
+      "sha256": "a26f14826ec58ed1a2952cc3e8e54ccbadda0ce18e12cde2b6bf4d315530552d",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 4350,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 16678,
+      "optimizedBytes": 16358
+    },
+    {
+      "image": "AHeavyBodyBankL.png",
+      "size": [
+        108,
+        154
+      ],
+      "sha256": "cc831ad36449bb3ad01807eb6360ecbfe1599c86cb4785dc2af95d07487657be",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 9882,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 29335,
+      "optimizedBytes": 32668
+    },
+    {
+      "image": "AHeavyBodyBankR.png",
+      "size": [
+        108,
+        154
+      ],
+      "sha256": "8b8f15256a6d9d800fe2f530b30a5e3ffcd97162d2e9c0bab36a51e14816195c",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 9712,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 28968,
+      "optimizedBytes": 32623
+    },
+    {
+      "image": "AHeavyCannon.png",
+      "size": [
+        18,
+        10
+      ],
+      "sha256": "01a59447875d67daae1b7aede450d6c7f1ecffee67127c7c494ff061ade0b6da",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 119,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 659,
+      "optimizedBytes": 639
+    },
+    {
+      "image": "AHeavyGun.png",
+      "size": [
+        25,
+        10
+      ],
+      "sha256": "e881d01f4fc9870fe692b3076d07a7773798c4ce85edda42d3ddf7f9c119770e",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 160,
+      "maxAlphaWeightedRGBDifference": 0.984313725490196,
+      "sourceBytes": 910,
+      "optimizedBytes": 829
+    },
+    {
+      "image": "AHeavyMissile.png",
+      "size": [
+        16,
+        12
+      ],
+      "sha256": "4199a072ece32db503cfb1e36f167be86b20e1b11c7b232293d0088adc795d3d",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 134,
+      "maxAlphaWeightedRGBDifference": 0.9568627450980393,
+      "sourceBytes": 691,
+      "optimizedBytes": 727
+    },
+    {
+      "image": "AHeavyRotor.png",
+      "size": [
+        88,
+        88
+      ],
+      "sha256": "d049e683583bd48886d3a034c6822c58080b3915c9ea7df167cab3c9d1d13c25",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 638,
+      "maxAlphaWeightedRGBDifference": 0.9686274509803922,
+      "sourceBytes": 5620,
+      "optimizedBytes": 2960
+    },
+    {
+      "image": "ALightBody.png",
+      "size": [
+        62,
+        39
+      ],
+      "sha256": "4337939c25a3fbd130ff84089f3b91910d849663d254c1a738bad3338ea5b1db",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 888,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 6287,
+      "optimizedBytes": 3755
+    },
+    {
+      "image": "ALightBodyBankL.png",
+      "size": [
+        82,
+        35
+      ],
+      "sha256": "9eb749b28031f7acec3313422414c78ee1a2b49c21ebca1b0c1de6000ebea97d",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 1334,
+      "maxAlphaWeightedRGBDifference": 0.996078431372549,
+      "sourceBytes": 6882,
+      "optimizedBytes": 5333
+    },
+    {
+      "image": "ALightBodyBankR.png",
+      "size": [
+        82,
+        35
+      ],
+      "sha256": "0a9a2d342985bce4b86d388c0047a2dc370f1d745d6c19e13206047d4d0dacd1",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 1352,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 6941,
+      "optimizedBytes": 5366
+    },
+    {
+      "image": "ALightGun.png",
+      "size": [
+        14,
+        7
+      ],
+      "sha256": "a2ecf277cccf9d67d4d9dce5cc7ad68d9a68f1bf216f5cd9823b84790b164c65",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 60,
+      "maxAlphaWeightedRGBDifference": 0.9215686274509803,
+      "sourceBytes": 442,
+      "optimizedBytes": 368
+    },
+    {
+      "image": "ALightMissile.png",
+      "size": [
+        13,
+        8
+      ],
+      "sha256": "f900f0f1c5f299eef82a7fae9ffb4c97d74bbeba042b8b0b7f1473960415fa20",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 69,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 455,
+      "optimizedBytes": 457
+    },
+    {
+      "image": "ALightRotor.png",
+      "size": [
+        59,
+        59
+      ],
+      "sha256": "a4ee0d905afb2607f72ef96b4a4518101647dd30c09b36e1de64fc3ec3efa405",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 746,
+      "maxAlphaWeightedRGBDifference": 0.984313725490196,
+      "sourceBytes": 9191,
+      "optimizedBytes": 3300
+    },
+    {
+      "image": "ATransportBody.png",
+      "size": [
+        140,
+        131
+      ],
+      "sha256": "e743a56f5f491e11e537bae277c3ed83bdabe7a86423b2498b3ec90a0d28f010",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 5361,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 26588,
+      "optimizedBytes": 20492
+    },
+    {
+      "image": "ATransportBodyBankL.png",
+      "size": [
+        72,
+        71
+      ],
+      "sha256": "f412caaa01fd412e95a06f5f846c4cb04e454d32565e910f70088f7af1692170",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 2442,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 10733,
+      "optimizedBytes": 10050
+    },
+    {
+      "image": "ATransportBodyBankR.png",
+      "size": [
+        72,
+        71
+      ],
+      "sha256": "a258ab5c2c3b5b7e8be0034c7f4f6a820658d1af94cda6303824892cc3936ec6",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 2419,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 10799,
+      "optimizedBytes": 10006
+    },
+    {
+      "image": "ATransportEngine.png",
+      "size": [
+        50,
+        29
+      ],
+      "sha256": "8d4f06772fd6477b612c151d104282d8bc387aa141fb4e8c920233fb7c000f9b",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 1050,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 4479,
+      "optimizedBytes": 4298
+    },
+    {
+      "image": "ATransportFan.png",
+      "size": [
+        80,
+        80
+      ],
+      "sha256": "d3da6d1eb4ee4a91e4fec53bbbfd6fca2e073fce950d8f98199f6a75ba244b65",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 1193,
+      "maxAlphaWeightedRGBDifference": 0.996078431372549,
+      "sourceBytes": 10764,
+      "optimizedBytes": 5463
+    },
+    {
+      "image": "ATransportGun.png",
+      "size": [
+        21,
+        11
+      ],
+      "sha256": "bd5aeafceadf08195e59b62c8cc1ecc9666f3520fef341c508a1be6afd164a8b",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 128,
+      "maxAlphaWeightedRGBDifference": 0.9764705882352941,
+      "sourceBytes": 757,
+      "optimizedBytes": 633
+    },
+    {
+      "image": "ATransportMissile.png",
+      "size": [
+        21,
+        13
+      ],
+      "sha256": "6e12e1c522ffc13cc3e5dabe0e3f58c83a1e8ece0f9a0ce43933c854f161cf24",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 134,
+      "maxAlphaWeightedRGBDifference": 0.9882352941176471,
+      "sourceBytes": 944,
+      "optimizedBytes": 718
+    },
+    {
+      "image": "ATransportWingL.png",
+      "size": [
+        31,
+        49
+      ],
+      "sha256": "9728aff89208cc375bde3577bc6d1a94b70c0d53c1f8ff9116d840002209c0f7",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 872,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 4261,
+      "optimizedBytes": 3651
+    },
+    {
+      "image": "ATransportWingR.png",
+      "size": [
+        31,
+        49
+      ],
+      "sha256": "1cc22db847b91b057c049973304aaf12a82ca07866ddcaf5beef632609a300e8",
+      "alphaUnchanged": true,
+      "opaqueRGBUnchanged": true,
+      "partialAlphaPixels": 863,
+      "maxAlphaWeightedRGBDifference": 0.9921568627450981,
+      "sourceBytes": 4225,
+      "optimizedBytes": 3639
+    }
+  ],
+  "textureCount": 29,
+  "sourceBytes": 224723,
+  "optimizedBytes": 199445,
+  "maxAlphaWeightedRGBDifference": 0.996078431372549
+}

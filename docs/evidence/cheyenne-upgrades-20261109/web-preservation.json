@@ -1,0 +1,994 @@
+{
+  "baseline": "837ff38 Scout verified 10-level frames",
+  "checkedFrames": 140,
+  "excludedCheyenneScreenRect": [
+    580,
+    160,
+    760,
+    350
+  ],
+  "allOtherPixelsExact": true,
+  "all20ImagesActuallyOpenedEachBrowser": true,
+  "frames": [
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 1,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 2,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 3,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 4,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 5,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 6,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 7,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 8,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 9,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "chrome",
+      "level": 10,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 1,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 2,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 3,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 4,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 5,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 6,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 7,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 8,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 9,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 0,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 1,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 2,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 3,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 4,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 5,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    },
+    {
+      "engine": "webkit",
+      "level": 10,
+      "pose": 6,
+      "outsideCheyenneRegionChangedPixels": 0,
+      "imageChanged": true
+    }
+  ]
+}

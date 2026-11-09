@@ -1,0 +1,262 @@
+[
+  {
+    "engine": "chromium",
+    "size": "1600,900",
+    "geometry": {
+      "wide": {
+        "width": 1600,
+        "height": 900,
+        "original": {
+          "x": 500,
+          "y": 0,
+          "width": 600,
+          "height": 900
+        },
+        "blendWidth": 0
+      },
+      "tall": {
+        "width": 390,
+        "height": 844,
+        "original": {
+          "x": 0,
+          "y": 129.5,
+          "width": 390,
+          "height": 585
+        },
+        "blendWidth": 14.625
+      }
+    },
+    "original": [
+      {
+        "id": "wide",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      },
+      {
+        "id": "tall",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "size": "1280,800",
+    "geometry": {
+      "wide": {
+        "width": 1280,
+        "height": 800,
+        "original": {
+          "x": 373.3333333333333,
+          "y": 0,
+          "width": 533.3333333333334,
+          "height": 800
+        },
+        "blendWidth": 0
+      },
+      "tall": {
+        "width": 390,
+        "height": 844,
+        "original": {
+          "x": 0,
+          "y": 129.5,
+          "width": 390,
+          "height": 585
+        },
+        "blendWidth": 14.625
+      }
+    },
+    "original": [
+      {
+        "id": "wide",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      },
+      {
+        "id": "tall",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "size": "2560,1440",
+    "geometry": {
+      "wide": {
+        "width": 2560,
+        "height": 1440,
+        "original": {
+          "x": 800,
+          "y": 0,
+          "width": 960,
+          "height": 1440
+        },
+        "blendWidth": 0
+      },
+      "tall": {
+        "width": 390,
+        "height": 844,
+        "original": {
+          "x": 0,
+          "y": 129.5,
+          "width": 390,
+          "height": 585
+        },
+        "blendWidth": 14.625
+      }
+    },
+    "original": [
+      {
+        "id": "wide",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      },
+      {
+        "id": "tall",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "engine": "chromium",
+    "mobileOverflow": false,
+    "controls": true,
+    "download": "machdefense-title-wide-composite.png",
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "size": "1600,900",
+    "geometry": {
+      "wide": {
+        "width": 1600,
+        "height": 900,
+        "original": {
+          "x": 500,
+          "y": 0,
+          "width": 600,
+          "height": 900
+        },
+        "blendWidth": 0
+      },
+      "tall": {
+        "width": 390,
+        "height": 844,
+        "original": {
+          "x": 0,
+          "y": 129.5,
+          "width": 390,
+          "height": 585
+        },
+        "blendWidth": 14.625
+      }
+    },
+    "original": [
+      {
+        "id": "wide",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      },
+      {
+        "id": "tall",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "size": "1280,800",
+    "geometry": {
+      "wide": {
+        "width": 1280,
+        "height": 800,
+        "original": {
+          "x": 373.3333333333333,
+          "y": 0,
+          "width": 533.3333333333334,
+          "height": 800
+        },
+        "blendWidth": 0
+      },
+      "tall": {
+        "width": 390,
+        "height": 844,
+        "original": {
+          "x": 0,
+          "y": 129.5,
+          "width": 390,
+          "height": 585
+        },
+        "blendWidth": 14.625
+      }
+    },
+    "original": [
+      {
+        "id": "wide",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      },
+      {
+        "id": "tall",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "size": "2560,1440",
+    "geometry": {
+      "wide": {
+        "width": 2560,
+        "height": 1440,
+        "original": {
+          "x": 800,
+          "y": 0,
+          "width": 960,
+          "height": 1440
+        },
+        "blendWidth": 0
+      },
+      "tall": {
+        "width": 390,
+        "height": 844,
+        "original": {
+          "x": 0,
+          "y": 129.5,
+          "width": 390,
+          "height": 585
+        },
+        "blendWidth": 14.625
+      }
+    },
+    "original": [
+      {
+        "id": "wide",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      },
+      {
+        "id": "tall",
+        "differentChannels": 0,
+        "maxChannelDifference": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "mobileOverflow": false,
+    "controls": true,
+    "download": "machdefense-title-wide-composite.png",
+    "errors": []
+  }
+]

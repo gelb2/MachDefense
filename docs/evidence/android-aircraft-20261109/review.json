@@ -1,0 +1,814 @@
+{
+  "status": "40 detail screenshots visually reviewed",
+  "deviceModel": "SM-S731N",
+  "detailLevelsReviewed": {
+    "Scout": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "AH-10": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "Cheyenne": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "Beluga": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "productionScreensVisuallyReviewed": {
+    "Scout": [
+      3
+    ],
+    "AH-10": [
+      10
+    ]
+  },
+  "observations": {
+    "Scout": "Body, rotor and weapon art present at all levels. New V5 body is shown in Lv9 next preview and Lv10 current preview.",
+    "AH-10": "Body, rotor and armament present at all levels; external stage differences are subtle at the actual UI size.",
+    "Cheyenne": "Body, both duct fans, tail and weapon art present at all levels.",
+    "Beluga": "Adopted V5 body, both main wings, independent rotor and changing central reinforcement plates present at all levels.",
+    "allFour": "No blank or missing helicopter texture observed in the 40 detail images. Every Lv10 detail has an empty next-preview box and disabled 0cr upgrade button."
+  },
+  "limitations": [
+    "Production captures were not all visually reviewed; the runner separately checked 40 live actor/assembly cases.",
+    "Some first-production screenshots show the newly spawned aircraft partly behind the lower HUD; they do not establish a complete unobscured airframe view.",
+    "Fine differences between adjacent AH-10/Cheyenne stages are not large at UI scale."
+  ],
+  "contactSheet": {
+    "png": ".local/android-aircraft-20261109/android-levels.png",
+    "webp": ".local/android-aircraft-20261109/android-levels.webp",
+    "webpBytes": 25046,
+    "webpQuality": 65,
+    "layout": "Four unit rows; ten level columns; current preview only. Existing screenshot pixels cropped and uniformly resized, no artwork generation.",
+    "dimensions": [
+      1100,
+      452
+    ],
+    "cropProof": [
+      {
+        "unit": "Scout",
+        "level": 1,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/scout-level01-detail.png",
+        "sourceSHA256": "14339f31af2252bf2d2a5b7cf44ac485c3e967d816ff4f94928aff97f056c9b8",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Scout",
+        "level": 2,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/scout-level02-detail.png",
+        "sourceSHA256": "668edbaa21cb225241143e33814a72f8bf5decc6823323faa0f7dce225dbe668",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Scout",
+        "level": 3,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/scout-level03-detail.png",
+        "sourceSHA256": "8f139a68236c0cdf930c354970786977fee3e74c502522483f6a01d5f0427000",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Scout",
+        "level": 4,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/scout-level04-detail.png",
+        "sourceSHA256": "2e27fa660e8f302118aa5cdc43341e2d351d538aeb3c0b414a10c27c48bf1b97",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Scout",
+        "level": 5,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/scout-level05-detail.png",
+        "sourceSHA256": "cee366d4feef17c3e34256af017e057bc741c3d0795b97c0b5c1d2c3bb1b75af",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Scout",
+        "level": 6,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/scout-level06-detail.png",
+        "sourceSHA256": "006985628b6ff4c3ac8c55f13de4a5c86628f03afa6e614c57b85f9f6125549e",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Scout",
+        "level": 7,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/scout-level07-detail.png",
+        "sourceSHA256": "722686d70d9795ab3c17f5921ef665204e9795b07424dd7c96ab9910fa6a5765",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Scout",
+        "level": 8,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/scout-level08-detail.png",
+        "sourceSHA256": "074f9d3d1d881a47f068da85436b6a286d0a2bebdc3944d3eb957f72a557b856",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Scout",
+        "level": 9,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/scout-level09-detail.png",
+        "sourceSHA256": "df8a490db1b8d1a70c16c47323ebef36104f9a3f8c3fbe772bc9ebfb5c4a2b37",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Scout",
+        "level": 10,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/scout-level10-detail.png",
+        "sourceSHA256": "a218503865f9b79066911960ae53395535c5f22acabd0b3ad15d3117daf4b4c3",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "AH-10",
+        "level": 1,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/ah-10-level01-detail.png",
+        "sourceSHA256": "50d00ac2a2927ead5bca520ab6517a1dd8f07d0654998ae49ee3df84036ae3ff",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "AH-10",
+        "level": 2,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/ah-10-level02-detail.png",
+        "sourceSHA256": "8dc50f00fd2255accc557564e95e58e6c67ef0e1cb924a14708d759883ece787",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "AH-10",
+        "level": 3,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/ah-10-level03-detail.png",
+        "sourceSHA256": "f2278ea37698ab9465758c0406ca87d6c7b2f9d0b1cde77d98e3c94fd3f362ac",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "AH-10",
+        "level": 4,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/ah-10-level04-detail.png",
+        "sourceSHA256": "1742dc8d3b6c3f45839e0720dd7c8429a2142736c1101b586ca558442de1bb07",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "AH-10",
+        "level": 5,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/ah-10-level05-detail.png",
+        "sourceSHA256": "39f90a0bc3db6afa9714f83bc3f5e1ad0e147be66d055b5ade0f1123775fac3a",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "AH-10",
+        "level": 6,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/ah-10-level06-detail.png",
+        "sourceSHA256": "5d7c7ffc6ba201bed0d308ebb7b962583523867df3221005c1f93834ad495d71",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "AH-10",
+        "level": 7,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/ah-10-level07-detail.png",
+        "sourceSHA256": "a5ff04bd8ffdb2796ef5657c4d1137487f50d600c7e845b6ff74161775ab59dc",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "AH-10",
+        "level": 8,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/ah-10-level08-detail.png",
+        "sourceSHA256": "6f75f822e4260ae37453ebe1651b07027fbc8ba5de480a6b53978a818c5156cd",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "AH-10",
+        "level": 9,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/ah-10-level09-detail.png",
+        "sourceSHA256": "522727701b5fa96ab3577d127bd2d9fbf26c2a5ba79965d5f9d02680d272911e",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "AH-10",
+        "level": 10,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/ah-10-level10-detail.png",
+        "sourceSHA256": "002b07b1b309b8197b67d8e1e8a302a3a84364687d68c79431222b24cb07e232",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Cheyenne",
+        "level": 1,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/cheyenne-level01-detail.png",
+        "sourceSHA256": "2aea7128cf247716992a52bdbb002d75ede1923056fae75f8a20de29747d0d37",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Cheyenne",
+        "level": 2,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/cheyenne-level02-detail.png",
+        "sourceSHA256": "ae4efcb74ae927c21205718f9538d3f242f5aa1ca368614062e485515becf6a0",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Cheyenne",
+        "level": 3,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/cheyenne-level03-detail.png",
+        "sourceSHA256": "5693285b93c36a3af61809ab8a9d631df99b30cba25983500dbdc2a4bd7145f2",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Cheyenne",
+        "level": 4,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/cheyenne-level04-detail.png",
+        "sourceSHA256": "ceafd55ca9fafad5878f4694ac476526437e553410eb2e1a8ac7fb9adc759a0a",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Cheyenne",
+        "level": 5,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/cheyenne-level05-detail.png",
+        "sourceSHA256": "8037dad0c122e69fc473292eca5552fb068d995858390a5dc50f29937e89f383",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Cheyenne",
+        "level": 6,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/cheyenne-level06-detail.png",
+        "sourceSHA256": "6ad3adaff1ce265a33a8fb1acb5dbd7f6d04c343ce8faa4e0844b24147525c25",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Cheyenne",
+        "level": 7,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/cheyenne-level07-detail.png",
+        "sourceSHA256": "fa211291785576f0a497ce71f1d020d44a62b5a12182796463a1414b61fd1ec5",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Cheyenne",
+        "level": 8,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/cheyenne-level08-detail.png",
+        "sourceSHA256": "5bf2e092dc9aadcc747816b65bd6614b47223b9d906325d30c8ce29eb3010774",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Cheyenne",
+        "level": 9,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/cheyenne-level09-detail.png",
+        "sourceSHA256": "bbb48d66f00db1dd17303b8fc9a784671f0f9d6e94082a7bd0faae27081a57ae",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Cheyenne",
+        "level": 10,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/cheyenne-level10-detail.png",
+        "sourceSHA256": "06be705e51fdd8ad39f54cdde64a2139bbcb3be556c0a80d4d52af113e19a125",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Beluga",
+        "level": 1,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/beluga-level01-detail.png",
+        "sourceSHA256": "07448f26d186987518973d56031f591c3ef6bd9e407030c5144a3c1b12414737",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Beluga",
+        "level": 2,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/beluga-level02-detail.png",
+        "sourceSHA256": "6125759653173e5a218560cc706457a4f45930900c7f0f3ec8de8d4d8b41d1a7",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Beluga",
+        "level": 3,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/beluga-level03-detail.png",
+        "sourceSHA256": "472888fb6cadd8752ca277f9de0a0cda96453e5cb2f21fe490d544b093f3ce47",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Beluga",
+        "level": 4,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/beluga-level04-detail.png",
+        "sourceSHA256": "be3b2f8729c05b5eb8be796ad4ac3dfbfcd003200cf5b3197ddac36b1d158173",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Beluga",
+        "level": 5,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/beluga-level05-detail.png",
+        "sourceSHA256": "9c70fa2df8d4dd785aca7a7a69e203a87ede57998a552c4f2aae072c73dd31e7",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Beluga",
+        "level": 6,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/beluga-level06-detail.png",
+        "sourceSHA256": "06484d7c06c071d9323231e9ce1f537275c33bb91b5c4a63cfbb997595db812c",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Beluga",
+        "level": 7,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/beluga-level07-detail.png",
+        "sourceSHA256": "7d82359229538318a77e684fb815d38f344116b22e9272cb2e3659e82619cf85",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Beluga",
+        "level": 8,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/beluga-level08-detail.png",
+        "sourceSHA256": "782e0e974dec378643f1d2f431a096d1024fe70822784435d786b491186a214d",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Beluga",
+        "level": 9,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/beluga-level09-detail.png",
+        "sourceSHA256": "1140509a8dbfb9685e80dd91caf1889bc09896b661200bd1ecd61a3eba35b2c9",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      },
+      {
+        "unit": "Beluga",
+        "level": 10,
+        "source": ".local/android-aircraft-20261109/level-up-results-20261109-124708-131796/beluga-level10-detail.png",
+        "sourceSHA256": "1b7859fdaa633076c373842be87c63be9a8457aafb9db2b11cade5d56af71be3",
+        "physicalCrop": [
+          128,
+          1241,
+          148,
+          162
+        ],
+        "logicalCrop": [
+          38,
+          367.565,
+          44,
+          48
+        ]
+      }
+    ],
+    "allCurrentPartRotatedBoundsInsideCrop": true,
+    "allCurrentPartBoundsRelativeToDetailBackground": [
+      49.10135,
+      38.45195,
+      79.70945,
+      81.19185
+    ]
+  }
+}

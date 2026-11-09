@@ -1,0 +1,78 @@
+{
+  "baseline": "cf6f68f (old Scout capture from db6e0a8)",
+  "worldZoom": 2,
+  "rotorAngle": 0,
+  "shadows": false,
+  "cells": [
+    {
+      "name": "Scout BEFORE (game capture)",
+      "left": 91,
+      "top": 69,
+      "width": 118,
+      "height": 162
+    },
+    {
+      "name": "Scout AH-1Z candidate",
+      "left": 391,
+      "top": 56,
+      "width": 118,
+      "height": 182
+    },
+    {
+      "name": "Cheyenne reference",
+      "left": 691,
+      "top": 65,
+      "width": 118,
+      "height": 158
+    },
+    {
+      "name": "Scout BODY",
+      "left": 120,
+      "top": 362,
+      "width": 60,
+      "height": 176
+    },
+    {
+      "name": "Scout ROTOR",
+      "left": 391,
+      "top": 391,
+      "width": 118,
+      "height": 118
+    },
+    {
+      "name": "Scout GUN / POD",
+      "left": 713,
+      "top": 436,
+      "width": 75,
+      "height": 28
+    },
+    {
+      "name": "AH-10 preserved",
+      "left": 35,
+      "top": 657,
+      "width": 230,
+      "height": 171
+    },
+    {
+      "name": "Beluga preserved",
+      "left": 369,
+      "top": 664,
+      "width": 164,
+      "height": 173
+    },
+    {
+      "name": "MachineGun Lv.10",
+      "left": 690,
+      "top": 702,
+      "width": 118,
+      "height": 88
+    }
+  ],
+  "checks": {
+    "sameWidth": true,
+    "preservedAH10": true,
+    "preservedBeluga": true,
+    "preservedCheyenne": true
+  },
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15"
+}
