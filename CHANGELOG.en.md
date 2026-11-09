@@ -4,6 +4,26 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## v0.7 — Four helicopters and title-screen extensions
+
+2026-11-10. [Play the web/PWA version](https://gelb2.github.io/MachDefense/) · [Release and installation record (Korean)](docs/evidence/v07-release-20261110.md)
+
+- Added Scout, Cheyenne, Beluga, and AH-10 with Lv.1–10 upgrades and level-specific appearances, aircraft-specific weapons, emergency evasion, and chaff/flares. This release includes their implementation from the existing working branch.
+- Connected the approved landscape and portrait title extensions to the shared game screen. The original center’s machines, lettering, and proportions remain intact; cliffs, sky, and clouds extend the landscape composition.
+- The Apple and Android apps are version 0.7 (build 7); Tauri Mac is 0.7.0. Regular and cheat Android APKs, the Apple Silicon Mac app, and a signed update package are provided. The Android APKs use development signing; the Mac app uses ad-hoc signing.
+
+### A note on suspending helicopter-unit development
+
+I encountered intelligent breaches of duty and negligence that I had not faced even while restoring HeavyMach1. I am putting helicopter improvements on hold to prioritize my foremost goal: restoring the entire Mach series.
+
+The helicopter units released in this version meet neither the original creators’ aesthetic goals nor my own. Their level of finish undermines both the creators’ intentions and mine, so I recommend using the helicopter units only if you want to.
+
+[An unease unlike HeavyMach1 — neo-Lysenkoism and Ceaușescu’s typewriter](docs/en/public/unease-and-typewriters.md) · [Incident report on ignored instructions and unfinished work (Korean)](docs/evidence/aircraft-work-failure-20261109.md) · [Drawing-work refusal incident (Korean)](docs/evidence/aircraft-instruction-refusal-20261108.md) · [Troubleshooting](docs/en/public/troubleshooting.md)
+
+### Implementation and validation records
+
+[Helicopter upgrades, weapons, and all 40 Android levels](docs/evidence/android-aircraft-20261109.md) · [Scout and Beluga game integration](docs/evidence/aircraft-v5-integration-20261109.md) · [Approved title preview](docs/research/title-joins-20261110.md). These records are in Korean. This release’s build, installation, and production-check coverage belongs in the [release record](docs/evidence/v07-release-20261110.md).
+
 ## v0.6 — PWA updates, Tauri Mac, and Laser Turret costs
 
 2026-11-07.

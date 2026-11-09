@@ -4,6 +4,16 @@
 [한국어](../../public/unease-and-typewriters.md) | [English](unease-and-typewriters.md)
 <!-- language-nav:end -->
 
+## A note on suspending helicopter-unit development
+
+I encountered intelligent breaches of duty and negligence that I had not faced even while restoring HeavyMach1. I am putting helicopter improvements on hold to prioritize my foremost goal: restoring the entire Mach series.
+
+The helicopter units released in this version meet neither the original creators’ aesthetic goals nor my own. Their level of finish undermines both the creators’ intentions and mine, so I recommend using the helicopter units only if you want to.
+
+[Later helicopter work and full image-generation errors](../editorial/helicopter-work-record-20261109.md) · [Additional source material](../editorial/aircraft-refusal-materials-20261109.md) · [Structure and source map for the combined article](../editorial/unease-integration-20261110.md)
+
+## The record at the time of the work
+
 Restoring HeavyMach1 meant repeatedly correcting Codex. I challenged an implementation that saved on every shot and told it to compare its work with the original whenever the artwork or behavior drifted. For MachDefense, I had it carry over the procedures and verification tools developed during that work. I wanted to spend less time finding and correcting bad implementations. [How I directed the work](work-method.md)
 
 When I was building a politician’s page and my own introduction page, this was what I thought:

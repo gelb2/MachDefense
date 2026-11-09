@@ -4,7 +4,7 @@
 [한국어](README.md) | [English](README.en.md)
 <!-- language-nav:end -->
 
-[![Release v0.6](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.6)
+[![Release v0.7](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.7)
 [![iOS, iPadOS, Android, Web, PWA, macOS](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript, Rust](docs/public/media/badges/code.svg)](docs/public/architecture.md)
@@ -26,7 +26,7 @@
 
 위 주소를 열어 게임을 설치하거나 브라우저에서 바로 플레이한다. iPhone·iPad는 Safari의 공유 메뉴에서 **홈 화면에 추가**, Android·Mac은 **INSTALL GAME**을 누른다. 자원 다운로드가 끝나면 인터넷 없이도 플레이할 수 있다.
 
-Xcode나 Android Studio로 빌드하기 어렵다면 PWA나 [Tauri Mac 앱](https://github.com/gelb2/MachDefense/releases/download/v0.6/MachDefense-Desktop-v0.6-arm64.zip)을 이용하면 된다. Mac 앱은 macOS 14 이상 Apple Silicon에서 실행하며 진행을 앱 데이터 폴더에 저장한다. [설치와 실행](docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
+Xcode나 Android Studio로 빌드하기 어렵다면 PWA나 [Tauri Mac 앱](https://github.com/gelb2/MachDefense/releases/download/v0.7/MachDefense-Desktop-v0.7-arm64.zip)을 이용하면 된다. Mac 앱은 macOS 14 이상 Apple Silicon에서 실행하며 진행을 앱 데이터 폴더에 저장한다. [설치와 실행](docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
 
 HeavyMach의 웹판을 기여한 [fastutlego](https://github.com/fastutlego)에게 감사드린다. [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24)의 WebAssembly 실행부·WebGL2 렌더링·입력·음향·저장 구현과 그 뒤의 PWA·Tauri 확장 절차가 MachDefense를 웹과 데스크톱으로 확장하는 데도 토대가 됐다. MachDefense의 PWA를 이 구조를 참고해 만들었고, 같은 웹 실행기를 Tauri Mac 앱에서도 사용했다.
 
@@ -69,20 +69,6 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 [지원 수령 장면: 9초 영상](docs/public/media/gameplay-20261107/resupply.mp4)
 
-## 헬기 유닛과 작업 기록
-
-헬기 유닛을 릴리즈에 추가했지만, 원하는 사람만 사용했으면 한다.
-
-토큰의 사용량과 Codex의 경악스러울 정도의 업무지시 거부 때문에, 헬기 유닛의 추가 디버깅과 디자인 개선은 단기적으로 불가능하다는 것이 내 결론이다. 이미지와 그림을 적어도 200장 깎아 보면서도 거의 겪어 보지 못한 기상천외한 거부와 태업이었다.
-
-내 목표는 Mach 시리즈 전체의 복원이지, Codex 새끼의 비위를 맞추는 베이비시팅이 아니다. 그따위 짓을 하느라 얼마 남지 않은 내 시간을 쓰고 싶지 않다.
-
-맥디펜스에는 아직 아이패드 개선과 락온 시스템 기획을 비롯한 퍼포먼스 개선·기획 TODO가 남아 있다. 그러나 Mach 시리즈 전체의 복원을 위해 헬기 유닛과 관련된 모든 TODO와 미완성 사항은 미뤄 두려 한다.
-
-단순히 자기 성깔 못 이겨서 작업보류를 한다고 생각해도 좋다. 이렇게 된거 대놓고 말 하겠다, 나는 코덱스가 이런식으로 반복적으로 업무지시 거부를 하고 원인도 파악 불가능한 태업을 할때 일을 밀어붙였던 경우, 좋게 끝난 적이 없다. 턱뼈 한쪽에 감각이 없어지거나, 바이크를 타고 가다가 사고가 나거나, 말로가 좋지 않았다. ai의 지능적인 업무지시 거부는 나의 경우엔 급사의 제 1요인이며, 나에겐 아직 복원해야 할 게임이 하나 더 있다. 그러므로 헬기 유닛 개선은 당분간 멈춘다
-
-[헬기 작업에 대한 기록 - 내가 간과한 것. 실리콘밸리에서 DEI는 수정헌법5조보다 강력하다는 사실.](docs/editorial/helicopter-work-record-20261109.md) · [헤비멕1과는 다른 위화감](docs/public/unease-and-typewriters.md) · [남은 과제](docs/public/roadmap.md)
-
 ## 화면·플랫폼 확장과 검증 도구
 
 - iPhone·iPad 화면에 맞춘 전장·메뉴·HUD 표시 영역.
@@ -96,11 +82,11 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 | 플랫폼 | 실행 | 현재 상태 |
 |---|---|---|
-| iPhone·iPad | Xcode 워크스페이스 | v0.6. iPhone·iPad 정식·치트 설치, 두 기기의 강화·복원·생산 HUD 검사 |
-| Android | Android Studio 또는 APK | [v0.6 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.6). Galaxy 정식·치트 설치, 생산·강화·음향·복귀·승패 검사 |
+| iPhone·iPad | Xcode 워크스페이스 | v0.7 빌드. 기존 기기 검사 범위와 이번 설치 결과는 릴리즈 노트 참고 |
+| Android | Android Studio 또는 APK | [v0.7 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.7). 빌드·기기 검사 범위는 릴리즈 노트 참고 |
 | 웹 | 브라우저 | GitHub Pages 배포. Mac Chrome·Safari·WebKit 검사 |
 | PWA | 브라우저에서 설치 | 설치·오프라인 실행 지원. 기기별 검사 결과는 검사 문서 참고 |
-| Tauri Mac | 데스크톱 앱 | [v0.6 다운로드](https://github.com/gelb2/MachDefense/releases/tag/v0.6). 파일 저장·복원·종료 검사. macOS 14+ Apple Silicon |
+| Tauri Mac | 데스크톱 앱 | [v0.7 다운로드](https://github.com/gelb2/MachDefense/releases/tag/v0.7). 파일 저장·복원·종료 검사. macOS 14+ Apple Silicon |
 
 ## 고친 문제와 남은 일
 
@@ -117,6 +103,22 @@ MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행
 10레벨 강화와 INSTALL한 전체 유닛의 생산 목록 스크롤은 구현했다. 원형 구조물과 포탑 밀집 구간의 길찾기, 생산 목록 순서 편집, 새 락온 기능, PWA·Tauri 운영 업데이트 확인은 남은 과제다. [남은 과제](docs/public/roadmap.md) · [기술 구조](docs/public/architecture.md) · [개발 과정](docs/public/development-history.md) · [크레딧](CREDITS.md)
 
 [현재 구현 상태](docs/public/implementation-status.md) · [문서 목차](docs/public/README.md) · [변경 이력](CHANGELOG.md) · [크레딧](CREDITS.md)
+
+## 헬기유닛 구현 중단에 대한 소고
+
+헤비멕1 복원 작업에서도 맞닥뜨리지 못한 지능적인 업무 배임과 태만이 발견됐다. Mach 시리즈 전체 복원이라는 최우선 목표를 위해 헬기유닛 개선을 보류한다.
+
+이번 버전에 출시한 헬기 유닛은 원작자의 미학적 목표와 나의 미학적 목표를 둘 다 충족하지 못한 상태다. 원작자와 나의 의도를 저해하는 완성도를 보여주므로, 헬기 유닛은 원하는 사용자만 사용하기를 권장한다.
+
+[헬기 작업과 보류 이유를 쓴 원고](docs/public/unease-and-typewriters.md) · [현재 구현과 남은 과제](docs/public/roadmap.md)
+
+## 위화감
+
+[헤비멕1과는 다른 위화감 — 신 리셴코주의와 차우세스쿠의 타자기](docs/public/unease-and-typewriters.md)
+
+헬기 기획, 반복된 업무지시 거부와 디자인 변경, 경위서의 책임 전가, 작업을 보류한 이유를 기록했다. 이후의 [헬기 작업 기록](docs/editorial/helicopter-work-record-20261109.md)과 [추가 글감](docs/editorial/aircraft-refusal-materials-20261109.md)을 한 글로 묶기 위한 [구성과 원문 대응표](docs/editorial/unease-integration-20261110.md)도 연결했다.
+
+[지시 불이행·미완료 경위서](docs/evidence/aircraft-work-failure-20261109.md) · [도안 작업 거부 경위서](docs/evidence/aircraft-instruction-refusal-20261108.md) · [외형 오류 기록](docs/evidence/new-unit-art-errors-20261108.md) · [트러블슈팅](docs/public/troubleshooting.md)
 
 ## 나는 이렇게 일을 시키고 테스트했다
 
