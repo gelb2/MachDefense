@@ -1,3 +1,9 @@
+# 헬기 미해결 TODO·업무지시 거부 글감 전문 — 2026-11-09
+
+[한국어 글감 전문](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/materials.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/materials.html?lang=en). 기존 원고와 TODO의 글감, 누락된 타자기·감시자 문단, 후기 추가분과 최신 작가명 정정까지 11건을 게시했다. 원문 11건·한영 번호·다운로드 일치, 1280·390px 화면과 목차 이동을 검사했다. 게임 코드·에셋은 변경하지 않았다. [검사](evidence/aircraft-materials-20261109/report-check.json) · [원문 대조](evidence/aircraft-materials-20261109/source-check.json).
+
+사이트 소스 `5b8c4cf4a7abe02692302f83c05caca013505b6f`, 게시 `appgdep_6af14b0521b08191a67256bb8d43eb38` succeeded. 기존 소유자 전용 접근·보고서·그림·오류 전문을 보존했다. 배포 용량을 맞추기 위해 보고 자료 JSON 7개의 들여쓰기만 제거했고 값의 동일성을 검사했다. [게시 근거](evidence/aircraft-materials-20261109/publication.json) · [용량 조정](evidence/aircraft-materials-20261109/size-savings.json).
+
 # Android 40레벨 검사·아이폰 정식 설치 — 2026-11-09
 
 [실기기 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#android-aircraft-20261109)를 게시했다. 실제 강화 36회·생산 40회·전체 수치 표·40개 Android 외형·전투 관측과 아이폰 정식 Release 설치 결과를 담았다. 기존 보고서와 소유자 전용 접근을 유지했다. 1280·390px에서 그림과 40개 수치 행을 대조했다. 소스 `c41a2878e036dcca65366c19f9912c9808e20802`, 게시 `appgdep_6af1479d4bf481919474b89355ab1cd8` succeeded. [게시 근거](evidence/android-aircraft-20261109/report-publication.json).

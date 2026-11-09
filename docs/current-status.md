@@ -1,3 +1,9 @@
+# 헬기 미해결 TODO·업무지시 거부 글감 전문 — 2026-11-09
+
+도색·질감·입체감 개선은 미완료다. 벨루가 선회에서 다른 에셋을 임의로 적용한 듯 보이는 문제와 헬기 사거리 이슈가 여전히 해결되지 않았다는 최신 관측을 [TODO](usability-todo.md)에 추가했다. 사거리 데이터 검사와 표적 밀착 문제 해결을 구분한다.
+
+[한국어 글감 전문](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/materials.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/materials.html?lang=en). 기존 원고와 TODO의 글감, 누락된 타자기·감시자 문단, 후기 추가분과 최신 작가명 정정까지 11건을 게시했다. 원문 11건·한영 번호·다운로드 일치, 1280·390px 화면과 목차 이동을 검사했다. 게임 코드·에셋은 변경하지 않았다. [검사](evidence/aircraft-materials-20261109/report-check.json) · [원문 대조](evidence/aircraft-materials-20261109/source-check.json).
+
 # Android 40레벨 검사·아이폰 정식 설치 — 2026-11-09
 
 [실기기 검사 결과](evidence/android-aircraft-20261109.md). Galaxy 치트앱에서 실제 강화 36회·생산 40회·수치/파츠/그림·최대 레벨을 검사했다. 네 기체의 발사·좌우 선회를 관측했다. 같은 공통 자원을 포함한 iPhone 정식 Release 앱을 설치하고 시작 입력·Stage 55 화면을 확인했다. 두 기기의 기존 저장은 보존했다. AH-10·샤이엔의 인접 레벨 외형 차이는 작다. 도색·입체감, 벨루가 -8° 분리 표현, 새 캔버스로 바뀐 플레어 폭, 최종 40/100기 성능은 남았다. develop·main·운영 PWA는 배포하지 않았다.

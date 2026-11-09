@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "lang": "ko",
+      "width": 1280,
+      "sections": 11,
+      "allTextExact": true,
+      "downloadExact": true,
+      "noOverflow": true,
+      "navigation": true
+    },
+    {
+      "lang": "en",
+      "width": 1280,
+      "sections": 11,
+      "allTextExact": true,
+      "downloadExact": true,
+      "noOverflow": true,
+      "navigation": true
+    },
+    {
+      "lang": "ko",
+      "width": 390,
+      "sections": 11,
+      "allTextExact": true,
+      "downloadExact": true,
+      "noOverflow": true,
+      "navigation": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "sections": 11,
+      "allTextExact": true,
+      "downloadExact": true,
+      "noOverflow": true,
+      "navigation": true
+    }
+  ]
+}
