@@ -35,12 +35,26 @@ public:
     using DrawBase=std::function<void(Frame&,const std::array<BaseUpgradeRow,6>&,Vec2 topLeftCenter,float)>;
     UpgradeDialog(ResourceAccess&,DrawUnit={},DrawBase={});
     void setState(UpgradeDialogState);
+    void setLayout(FrameLayout);
+    bool scrollUnits(Vec2,float);
     void append(Frame&)const;
     bool touch(const Touch&);
     std::vector<HUDAction> takeActions();
 private:
     ResourceAccess& resources_;SpriteFont bold_,regular_;DrawUnit unit_;DrawBase base_;
     UpgradeDialogState state_;int selectedBase_=-1;
+    FrameLayout layout_;
+    float unitScroll_=0;
+    struct UnitGesture {std::uint64_t id;Vec2 origin;float initialScroll;std::optional<std::size_t> row;bool dragged=false,cancelled=false;};
+    std::optional<UnitGesture> unitGesture_;
+    std::vector<std::uint64_t> ignoredTouches_;
+    float unitTopShift()const;
+    float unitListHeight()const;
+    float maximumUnitScroll()const;
+    Rect unitViewport()const;
+    Vec2 unitGrid(std::size_t)const;
+    void cancelUnitGesture();
+    void setUnitScroll(float);
     struct Control{unsigned id;std::size_t row;Button button;};
     std::vector<Control> controls_;std::vector<HUDAction> actions_;
     void configure();
