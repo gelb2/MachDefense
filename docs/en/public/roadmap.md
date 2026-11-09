@@ -6,6 +6,10 @@
 
 As of 2026-11-07. See [implementation status](implementation-status.md) for what is released and working. The following items need research or development.
 
+## Helicopter work on hold — 2026-11-09
+
+All helicopter TODO items and unfinished work are on hold to prioritize restoring the entire Mach series. This includes paint, depth, banking, range, debugging, design and performance validation. Helicopters in the release are optional: use them only if you want to. Improvements for iPad, lock-on planning and other performance and design tasks remain. [The work record and reasons for postponement](../editorial/helicopter-work-record-20261109.md).
+
 ## Distribution and platforms
 
 - Local PWA transition, hash, reuse and 95-chunk checks passed. Compare saved progress and runtime resources during production updates as well.

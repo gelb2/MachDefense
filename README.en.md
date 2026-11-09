@@ -69,6 +69,18 @@ I did not want a one-time handout. I wanted small amounts of credits and cells t
 
 [Claiming supplies: 9-second clip](docs/public/media/gameplay-20261107/resupply.mp4)
 
+## Helicopter units and the work record
+
+I included the helicopter units in the release, but I would like only those who want to use them to do so.
+
+My conclusion is that further debugging and design improvements to the helicopter units are impossible in the short term because of token consumption and Codex’s staggering refusals to carry out work instructions. Including my experience making images and artwork, I had almost never encountered such bizarre refusals and shirking even while making at least 200 pictures.
+
+My goal is to restore the entire Mach series, not to babysit that bastard Codex and keep it happy. I do not want to spend what little time I have left on that kind of bullshit.
+
+MachDefense still has further performance improvements and design tasks on its TODO list, including improvements for iPad and planning the lock-on system. But to restore the entire Mach series, I intend to postpone all TODO items and unfinished work related to the helicopter units.
+
+[A record of the helicopter work](docs/en/editorial/helicopter-work-record-20261109.md) · [An unease unlike HeavyMach1](docs/en/public/unease-and-typewriters.md) · [Roadmap](docs/en/public/roadmap.md)
+
 ## Screen support, platforms, and testing tools
 
 - Expanded battlefield, menu, and HUD display areas for iPhone and iPad screens.

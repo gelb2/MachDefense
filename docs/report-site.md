@@ -1,3 +1,13 @@
+# 헬기 작업 기록 원고·서문·전체 보류 — 2026-11-09
+
+[한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record-en.html) · [별도 방법론 글감](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/method-material.html). 지정 제목으로 원고를 작성하고, 선택 사용·토큰 사용·200장 경험·시리즈 전체 복원·헬기 작업 보류 서문을 한영 README와 동일하게 넣었다. 업무지시 거부, 승인 그림 교체, 크기·색·선회·조립·파츠·레벨 외형·이동 변경과 잘못된 완료 보고를 서술했다. 이미지 생성 오류는 요청 ID 기준 7건이며 오류 객체 5개와 보존 필드 2개를 본문 뒤에 수록했다. 글씨 편집 도구 미호출은 별도 거부로 기록했다.
+
+헬기 관련 모든 TODO와 미완성 작업은 보류했다. 기존 요구와 실패 기록을 보존하며, 아이패드·락온 및 헬기 외 과제는 남겨 둔다. 게임 코드·에셋·설치 앱은 이번 문서 작업에서 변경하지 않았다.
+
+[본문·다운로드·1280/390px 검사](evidence/helicopter-work-record-20261109/report-check.json) · [오류 원문 대조](evidence/helicopter-work-record-20261109/source-check.json) · [README·서문 대조](evidence/helicopter-work-record-20261109/preface-check.json) · [게시 근거](evidence/helicopter-work-record-20261109/publication.json).
+
+사이트 소스 `6e80fdb226e2a5aa29c3278fef43b6b0d31bb169`, 게시 `appgdep_6af152bdab288191bcaa1c601bc44825` succeeded. 기존 소유자 전용 접근과 보고 자료를 유지했다. 보고 이미지 8개는 RGBA 픽셀·크기·메타데이터가 같은 무손실 재압축으로 168,676바이트를 줄였다. [압축 대조](evidence/helicopter-work-record-20261109/report-repack.json).
+
 # 헬기 미해결 TODO·업무지시 거부 글감 전문 — 2026-11-09
 
 [한국어 글감 전문](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/materials.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/materials.html?lang=en). 기존 원고와 TODO의 글감, 누락된 타자기·감시자 문단, 후기 추가분과 최신 작가명 정정까지 11건을 게시했다. 원문 11건·한영 번호·다운로드 일치, 1280·390px 화면과 목차 이동을 검사했다. 게임 코드·에셋은 변경하지 않았다. [검사](evidence/aircraft-materials-20261109/report-check.json) · [원문 대조](evidence/aircraft-materials-20261109/source-check.json).

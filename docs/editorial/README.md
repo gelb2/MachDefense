@@ -9,3 +9,5 @@
 [GitHub 원고 전문](github-manuscripts-20261106.md) — README, 개발자의 변, 추가 기능, 개발 과정, 기술 구조, 트러블슈팅, 조작·설치·검사, 릴리스·크레딧.
 
 [Sass 세션용 집필 안내](sass-publication-guide.md) — Apps·Mags 작업 시 참고할 원고와 검사 자료.
+
+[헬기 작업 기록 원고](helicopter-work-record-20261109.md) · [별도 방법론 글감](ai-argument-method-material-20261109.md)
