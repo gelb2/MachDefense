@@ -72,44 +72,44 @@ PlasmaCannon_10	1030	0	12	1	UNIT	Bot_P03	Tur_Pla_10
 // Allied aircraft 2026-11-08
 ScoutHeli_01	72	240	3	3	MACH	-	AircraftLight_01
 Gunship_01	720	1200	12	2	MACH	-	AircraftHeavy_01
-Orca_01	288	560	9	3	MACH	-	AircraftDuct_01
-OrcaBomber_01	504	880	12	3	MACH	-	AircraftTransport_01
+Orca_01	216	420	9	3	MACH	-	AircraftDuct_01
+OrcaBomber_01	378	660	12	3	MACH	-	AircraftTransport_01
 ScoutHeli_02	96	600	3	3	MACH	-	AircraftLight_02
 Gunship_02	840	2400	12	2	MACH	-	AircraftHeavy_02
-Orca_02	344	1200	9	3	MACH	-	AircraftDuct_02
-OrcaBomber_02	592	1800	12	3	MACH	-	AircraftTransport_02
+Orca_02	258	900	9	3	MACH	-	AircraftDuct_02
+OrcaBomber_02	444	1350	12	3	MACH	-	AircraftTransport_02
 ScoutHeli_03	120	1200	3	3	MACH	-	AircraftLight_03
 Gunship_03	960	4800	12	2	MACH	-	AircraftHeavy_03
-Orca_03	400	2400	9	3	MACH	-	AircraftDuct_03
-OrcaBomber_03	680	3600	12	3	MACH	-	AircraftTransport_03
+Orca_03	300	1800	9	3	MACH	-	AircraftDuct_03
+OrcaBomber_03	510	2700	12	3	MACH	-	AircraftTransport_03
 ScoutHeli_04	144	2400	3	3	MACH	-	AircraftLight_04
 Gunship_04	1080	9600	12	2	MACH	-	AircraftHeavy_04
-Orca_04	456	4800	9	3	MACH	-	AircraftDuct_04
-OrcaBomber_04	768	7200	12	3	MACH	-	AircraftTransport_04
+Orca_04	342	3600	9	3	MACH	-	AircraftDuct_04
+OrcaBomber_04	576	5400	12	3	MACH	-	AircraftTransport_04
 ScoutHeli_05	180	4800	3	3	MACH	-	AircraftLight_05
 Gunship_05	1200	19200	12	2	MACH	-	AircraftHeavy_05
-Orca_05	520	9600	9	3	MACH	-	AircraftDuct_05
-OrcaBomber_05	860	14400	12	3	MACH	-	AircraftTransport_05
+Orca_05	390	7200	9	3	MACH	-	AircraftDuct_05
+OrcaBomber_05	645	10800	12	3	MACH	-	AircraftTransport_05
 ScoutHeli_06	240	9600	5	3	MACH	-	AircraftLight_06
 Gunship_06	1320	38400	15	2	MACH	-	AircraftHeavy_06
-Orca_06	600	19200	9	3	MACH	-	AircraftDuct_06
-OrcaBomber_06	960	28800	15	3	MACH	-	AircraftTransport_06
+Orca_06	450	14400	9	3	MACH	-	AircraftDuct_06
+OrcaBomber_06	720	21600	15	3	MACH	-	AircraftTransport_06
 ScoutHeli_07	300	19200	5	3	MACH	-	AircraftLight_07
 Gunship_07	1440	76800	15	2	MACH	-	AircraftHeavy_07
-Orca_07	680	38400	9	3	MACH	-	AircraftDuct_07
-OrcaBomber_07	1060	57600	15	3	MACH	-	AircraftTransport_07
+Orca_07	510	28800	9	3	MACH	-	AircraftDuct_07
+OrcaBomber_07	795	43200	15	3	MACH	-	AircraftTransport_07
 ScoutHeli_08	384	38400	5	3	MACH	-	AircraftLight_08
 Gunship_08	1560	153600	15	2	MACH	-	AircraftHeavy_08
-Orca_08	776	76800	9	3	MACH	-	AircraftDuct_08
-OrcaBomber_08	1168	115200	15	3	MACH	-	AircraftTransport_08
+Orca_08	582	57600	9	3	MACH	-	AircraftDuct_08
+OrcaBomber_08	876	86400	15	3	MACH	-	AircraftTransport_08
 ScoutHeli_09	480	76800	5	3	MACH	-	AircraftLight_09
 Gunship_09	1680	307200	15	2	MACH	-	AircraftHeavy_09
-Orca_09	880	153600	9	3	MACH	-	AircraftDuct_09
-OrcaBomber_09	1280	230400	15	3	MACH	-	AircraftTransport_09
+Orca_09	660	115200	9	3	MACH	-	AircraftDuct_09
+OrcaBomber_09	960	172800	15	3	MACH	-	AircraftTransport_09
 ScoutHeli_10	600	0	5	3	MACH	-	AircraftLight_10
 Gunship_10	1800	0	15	2	MACH	-	AircraftHeavy_10
-Orca_10	1000	0	9	3	MACH	-	AircraftDuct_10
-OrcaBomber_10	1400	0	15	3	MACH	-	AircraftTransport_10
+Orca_10	750	0	9	3	MACH	-	AircraftDuct_10
+OrcaBomber_10	1050	0	15	3	MACH	-	AircraftTransport_10
 MachName    	Cost	UpgCost	Bld	Mul	Type  	Armor 	Weapon	Foot	Size
 MachineGun_01	60  	200 	3	5	MACH	11001	10041	12007	20
 MachineGun_02	80  	500 	3	5	MACH 	11002	10011	12008	20
@@ -345,44 +345,44 @@ Tur_Pla_10	9800	25	0	TURRET	-	28	100	5	NULL	Turret_b_05
 // Allied aircraft 2026-11-08
 AircraftLight_01	105	0	2.0	PLANE	-	12	0	0	NULL	AircraftLight
 AircraftHeavy_01	1170	0	1.0	PLANE	-	28	0	0	NULL	AircraftHeavy
-AircraftDuct_01	460	0	2.1	PLANE	-	14	0	0	NULL	AircraftDuct
-AircraftTransport_01	815	0	1.9	PLANE	-	14	0	0	NULL	AircraftTransport
+AircraftDuct_01	425	0	2.1	PLANE	-	14	0	0	NULL	AircraftDuct
+AircraftTransport_01	750	0	1.9	PLANE	-	14	0	0	NULL	AircraftTransport
 AircraftLight_02	115	0	2.03	PLANE	-	12	0	0	NULL	AircraftLight
 AircraftHeavy_02	1530	0	1.015	PLANE	-	28	0	0	NULL	AircraftHeavy
-AircraftDuct_02	587	0	2.13	PLANE	-	14	0	0	NULL	AircraftDuct
-AircraftTransport_02	1058	0	1.93	PLANE	-	14	0	0	NULL	AircraftTransport
+AircraftDuct_02	468	0	2.13	PLANE	-	14	0	0	NULL	AircraftDuct
+AircraftTransport_02	875	0	1.93	PLANE	-	14	0	0	NULL	AircraftTransport
 AircraftLight_03	130	0	2.06	PLANE	-	12	0	0	NULL	AircraftLight
 AircraftHeavy_03	1980	0	1.03	PLANE	-	28	0	0	NULL	AircraftHeavy
-AircraftDuct_03	747	0	2.16	PLANE	-	14	0	0	NULL	AircraftDuct
-AircraftTransport_03	1363	0	1.96	PLANE	-	14	0	0	NULL	AircraftTransport
+AircraftDuct_03	531	0	2.16	PLANE	-	14	0	0	NULL	AircraftDuct
+AircraftTransport_03	1013	0	1.96	PLANE	-	14	0	0	NULL	AircraftTransport
 AircraftLight_04	147	0	2.09	PLANE	-	12	0	0	NULL	AircraftLight
 AircraftHeavy_04	2520	0	1.045	PLANE	-	28	0	0	NULL	AircraftHeavy
-AircraftDuct_04	938	0	2.19	PLANE	-	14	0	0	NULL	AircraftDuct
-AircraftTransport_04	1729	0	1.99	PLANE	-	14	0	0	NULL	AircraftTransport
+AircraftDuct_04	595	0	2.19	PLANE	-	14	0	0	NULL	AircraftDuct
+AircraftTransport_04	1150	0	1.99	PLANE	-	14	0	0	NULL	AircraftTransport
 AircraftLight_05	168	0	2.12	PLANE	-	12	0	0	NULL	AircraftLight
 AircraftHeavy_05	3150	0	1.06	PLANE	-	28	0	0	NULL	AircraftHeavy
-AircraftDuct_05	1162	0	2.22	PLANE	-	14	0	0	NULL	AircraftDuct
-AircraftTransport_05	2156	0	2.02	PLANE	-	14	0	0	NULL	AircraftTransport
+AircraftDuct_05	680	0	2.22	PLANE	-	14	0	0	NULL	AircraftDuct
+AircraftTransport_05	1350	0	2.02	PLANE	-	14	0	0	NULL	AircraftTransport
 AircraftLight_06	189	0	2.15	PLANE	-	12	0	0	NULL	AircraftLight
 AircraftHeavy_06	3870	0	1.075	PLANE	-	28	0	0	NULL	AircraftHeavy
-AircraftDuct_06	1416	0	2.25	PLANE	-	14	0	0	NULL	AircraftDuct
-AircraftTransport_06	2643	0	2.05	PLANE	-	14	0	0	NULL	AircraftTransport
+AircraftDuct_06	765	0	2.25	PLANE	-	14	0	0	NULL	AircraftDuct
+AircraftTransport_06	1650	0	2.05	PLANE	-	14	0	0	NULL	AircraftTransport
 AircraftLight_07	217	0	2.18	PLANE	-	12	0	0	NULL	AircraftLight
 AircraftHeavy_07	4680	0	1.09	PLANE	-	28	0	0	NULL	AircraftHeavy
-AircraftDuct_07	1705	0	2.28	PLANE	-	14	0	0	NULL	AircraftDuct
-AircraftTransport_07	3192	0	2.08	PLANE	-	14	0	0	NULL	AircraftTransport
+AircraftDuct_07	850	0	2.28	PLANE	-	14	0	0	NULL	AircraftDuct
+AircraftTransport_07	1900	0	2.08	PLANE	-	14	0	0	NULL	AircraftTransport
 AircraftLight_08	245	0	2.21	PLANE	-	12	0	0	NULL	AircraftLight
 AircraftHeavy_08	5580	0	1.105	PLANE	-	28	0	0	NULL	AircraftHeavy
-AircraftDuct_08	2023	0	2.31	PLANE	-	14	0	0	NULL	AircraftDuct
-AircraftTransport_08	3802	0	2.11	PLANE	-	14	0	0	NULL	AircraftTransport
+AircraftDuct_08	978	0	2.31	PLANE	-	14	0	0	NULL	AircraftDuct
+AircraftTransport_08	2225	0	2.11	PLANE	-	14	0	0	NULL	AircraftTransport
 AircraftLight_09	280	0	2.24	PLANE	-	12	0	0	NULL	AircraftLight
 AircraftHeavy_09	6570	0	1.12	PLANE	-	28	0	0	NULL	AircraftHeavy
-AircraftDuct_09	2377	0	2.34	PLANE	-	14	0	0	NULL	AircraftDuct
-AircraftTransport_09	4473	0	2.14	PLANE	-	14	0	0	NULL	AircraftTransport
+AircraftDuct_09	1105	0	2.34	PLANE	-	14	0	0	NULL	AircraftDuct
+AircraftTransport_09	2600	0	2.14	PLANE	-	14	0	0	NULL	AircraftTransport
 AircraftLight_10	322	0	2.27	PLANE	-	12	0	0	NULL	AircraftLight
 AircraftHeavy_10	7650	0	1.135	PLANE	-	28	0	0	NULL	AircraftHeavy
-AircraftDuct_10	2765	0	2.37	PLANE	-	14	0	0	NULL	AircraftDuct
-AircraftTransport_10	5207	0	2.17	PLANE	-	14	0	0	NULL	AircraftTransport
+AircraftDuct_10	1275	0	2.37	PLANE	-	14	0	0	NULL	AircraftDuct
+AircraftTransport_10	3050	0	2.17	PLANE	-	14	0	0	NULL	AircraftTransport
 MachName    	Rate
 Tanker      	100000
 ShotGun     	100000
