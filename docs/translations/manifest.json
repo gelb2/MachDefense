@@ -12,9 +12,9 @@
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "878d370fd86568247ad70247a30f2ec13b8bcd0cf02dab8fa71a562b8fce947a",
-      "en_sha256": "9a318bc59ffd3894c24f1bf86f747b7485b85d05277284047b00ece8566a8fda",
-      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
+      "ko_sha256": "6afd6c44c9d785354853e622259ea70ac4b8bc86d9971681e02085c481949c9e",
+      "en_sha256": "1831dbf785e2eeffa01d7fab809a58dac9a858ef9b3cad2dcb1321115f680587",
+      "review": "2026-11-10: matched actual pre-release test scope, 56/58 core result and two unchanged earlier V5 expectation failures; deployment and iPhone installation results remain a separate release record."
     },
     {
       "ko": "CREDITS.md",
