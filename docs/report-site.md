@@ -1,3 +1,11 @@
+# 타이틀 원본·외곽 합성 시안 — 2026-11-09
+
+[가로 웹·세로 폰 합성 시안](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-title-composite-20261109/)을 게시했다. 원본 영역 표시·경계 연결 전후·가로 3크기·PNG 저장을 제공한다. 생성 그림의 중앙 대신 원본 JPG를 그대로 사용했다. 게임 코드·자원·헬기·설치 앱은 변경하지 않았다.
+
+Chrome·WebKit에서 중앙 내부 픽셀 일치, 버튼·다운로드와 390px 배치를 검사했다. 외곽 구조·색의 최종 채택은 남았다. [시안과 확인 범위](research/title-composite-20261109.md) · [검사](evidence/title-composite-20261109/check.json) · [게시 근거](evidence/title-composite-20261109/publication.json).
+
+사이트 소스 `a7efb9faabb7fe2eac18fc8ae5c887fc7236f6a1`, 배포 `appgdep_6af16635a3348191b54922e4185a482f` succeeded. 기존 소유자 전용 접근과 보고 자료를 유지했다.
+
 # 원고 임의 완화 정정 — 2026-11-09
 
 [한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/work-record-en.html). Codex는 쉴카·퉁구스카·다른 게임의 모티브에 관한 원문을 조건부 연상으로 바꾸고, DEI 비판에 원문에 없는 “느꼈다” 등의 문장을 넣었다. 지적된 네 문단을 보존된 원문의 다섯 구절로 복원했다. 과학적 사회주의에 관한 후속 정정도 원문대로 넣었다. 영어 본문과 다운로드를 맞췄다.
