@@ -1,3 +1,9 @@
+# 스카웃10·벨루가 V5 적용과 원고 추가 — 2026-11-09
+
+[실제 웹 조립 비교](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-v5-game-20261109), [추가 원고 한국어](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/draft.html#reference-experience-20261109), [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/draft-en.html#reference-experience-20261109)를 게시했다. 작가명은 마지막 지시대로 카라바지오 / 젠틸레스키 / 백신스키 / 에곤 실레로 반영했다. 기존 원고를 보존하고 추가분과 다운로드를 대조했다.
+
+게임 자원 커밋은 `b4184ed`다. 보고 사이트 소스 `d56321df9965dbdea7fffe6697928d75d26c8ec3`, 게시 `appgdep_6af13d69b44081919e60ed90fc9b7c47`는 succeeded다. 기존 소유자 전용 접근을 유지했다. 1280·390px에서 3페이지의 원문·이미지를 검사했다. 기존 SVG 4개의 내장 PNG는 픽셀·메타데이터를 보존하는 무손실 압축으로 용량을 줄였다. [게시·검사 근거](evidence/aircraft-v5-integration-20261109/report-publication.json). 게임 main·운영 PWA·아이폰 배포와 구분한다.
+
 # 벨루가·AH-10 파츠 분리 — 2026-11-09
 
 [AH-10 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#ah10-parts-20261109)와 [벨루가 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/machdefense.html#aircraft-parts-20261109)를 게시했다. AH-10 로켓·공습 파츠 연결, 승인 그림과 웹 전투 비교, 크롭 후보 기각, 100기 전투에서 증가한 GPU 처리 시간과 남은 작업을 기록했다. 4종 레벨별 외형·도색·질감 개선은 완료되지 않았다.

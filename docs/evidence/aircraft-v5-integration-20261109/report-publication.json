@@ -1,0 +1,15 @@
+{
+  "project_id": "appgprj_6addbf55aea081918d3d182d7e496e88",
+  "source_commit": "d56321df9965dbdea7fffe6697928d75d26c8ec3",
+  "deployment_id": "appgdep_6af13d69b44081919e60ed90fc9b7c47",
+  "version_id": "appgprj_6addbf55aea081918d3d182d7e496e88~appgver_5b15de856770819190ccfb6a3aeca2a4",
+  "status": "succeeded",
+  "url": "https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site",
+  "access": "existing owner-only",
+  "archiveExpandedBytes": 268361728,
+  "gameCommit": "b4184ed",
+  "gameDeployment": false,
+  "localPageChecks": 6,
+  "unchangedDecodedPixelsCompressionSavings": 238272,
+  "reportImages": "Separate lossy WebP display exports; lossless comparison images retained in game evidence directory."
+}
