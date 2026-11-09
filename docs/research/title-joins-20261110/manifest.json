@@ -1,0 +1,117 @@
+{
+  "date": "2026-11-10",
+  "kind": "browser-composite-preview",
+  "game_applied": false,
+  "original_source": "Resources/Images/Title.jpg",
+  "original_size": [
+    640,
+    960
+  ],
+  "generated": [
+    {
+      "path": "docs/research/title-composite-20261109/generated-wide.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1e9b1131f54273ebc1590f3137fa24b02ea94572c34b441825d15dc4619f72a9"
+    },
+    {
+      "path": "docs/research/title-composite-20261109/generated-tall.png",
+      "width": 977,
+      "height": 1610,
+      "sha256": "10cd4692890caaae1c848dc6ddd5a4cfc5ade40296b35c6ea9c0563cc41e84ae"
+    },
+    {
+      "path": "docs/research/title-composite-20261109/generated-tall-v2.png",
+      "width": 851,
+      "height": 1847,
+      "sha256": "1ea7863f73b7634dcb8ec50736665a60d7c98f3461da19c05a8a1f9bf337d2b6"
+    }
+  ],
+  "files": {
+    "composite.js": {
+      "bytes": 5185,
+      "sha256": "ac9bcd63acf75582a844a4ebb46464fc45f7774c3f942f7c7e060d4dcfe0bf28"
+    },
+    "index.html": {
+      "bytes": 5397,
+      "sha256": "8bf35b885268d6d3b5063f51f5700f2aefb5714e6c485805f00f1e42650228cf"
+    },
+    "joins-prompt.md": {
+      "bytes": 4584,
+      "sha256": "b1203ac810a81e89bec13dd209b8f34dd37a597946a38d02c51e171e5698ffb5"
+    },
+    "natural-prompt.md": {
+      "bytes": 4624,
+      "sha256": "a35f86bcd514f8ac6bb684061fe2c8c8048572ca544936ca86e3a1e97371f915"
+    },
+    "original.jpg": {
+      "bytes": 172705,
+      "sha256": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696"
+    },
+    "prompts.md": {
+      "bytes": 4280,
+      "sha256": "5117e65b9b0adea66e572dc5e3d119e6ce5559b4078c71d0efc401e13a334004"
+    },
+    "tall.webp": {
+      "bytes": 132400,
+      "sha256": "1aef5dc6bb3b9acda6ecab8afb48530d9776ae3cb8ba0fc54aabbab441985a0e"
+    },
+    "wide-natural.webp": {
+      "bytes": 140164,
+      "sha256": "d35766b1e9d4cd2560f716bf51ba47f67f5873d44a41b63346ab31b5ac8c3d5f"
+    },
+    "wide.webp": {
+      "bytes": 213918,
+      "sha256": "4e0f7785e9b6fc5c74d4d8aeab58221f67f0f86fdc6d1a696d86e2306c3b2003"
+    }
+  },
+  "wide_original_rect": [
+    500,
+    0,
+    600,
+    900
+  ],
+  "tall_original_rect": [
+    0,
+    129.5,
+    390,
+    585
+  ],
+  "blend": "Portrait unchanged: reflected 12 logical unit strip. Landscape: natural scenery only, no reflected or stretched edge.",
+  "report_encoding": "generated previews WebP q90; original JPG unchanged",
+  "tool": "built-in image_gen",
+  "revision": "cliffs-sky-clouds-20261110",
+  "accepted": {
+    "tall": "generated-tall-v2.png",
+    "wide": false
+  },
+  "wide_reflected_edge": false,
+  "wide_source": "docs/research/title-joins-20261110/generated-nature.png",
+  "preserved_tall_and_original": {
+    "tall.webp": "1aef5dc6bb3b9acda6ecab8afb48530d9776ae3cb8ba0fc54aabbab441985a0e",
+    "original.jpg": "50ce101b40757018130437f411e64dd8709234ebf649f7f8e9d555bb73cbf696"
+  },
+  "landscape_status": "revised scenery composite for review; not applied to game",
+  "landscape_nature_source": "docs/research/title-joins-20261110/generated-nature.png",
+  "landscape_join": "Generated scenery color correction outside original only. Spatial averaging widens with distance; no reflected or stretched original shapes.",
+  "current_generation": [
+    {
+      "path": "docs/research/title-joins-20261110/generated-nature.png",
+      "bytes": 1899691,
+      "sha256": "afac94d99036a8fa2bd7e1765e12f2fb0c113363b723efa1527c83a0ac101653",
+      "role": "used environment background"
+    },
+    {
+      "path": "docs/research/title-joins-20261110/generated-wide-v1.png",
+      "bytes": 2037713,
+      "sha256": "cc4825ae6922a4b322ee9b66218ca8f7e70a452c09b7d9b09fa09b9565e45e44",
+      "role": "rejected intermediate"
+    },
+    {
+      "path": "docs/research/title-joins-20261110/generated-wide-v2.png",
+      "bytes": 1974363,
+      "sha256": "73ecefcdec6e88a8b74a11f76940a46676dabdda36b60ce4d35fbac8ae2a56f3",
+      "role": "rejected intermediate"
+    }
+  ]
+}

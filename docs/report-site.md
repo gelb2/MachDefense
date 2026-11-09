@@ -443,3 +443,8 @@ Sites source `7acf9756f0d5e356d4ceeda99fc98f267995a41f`, deployment `appgdep_6ae
 로컬 Safari에서 새 절·표·비교 이미지 표시를 확인했다. 게시 후 Safari 확인은 사용자 조작과 겹쳐 완료하지 않았다. 모바일 화면도 이번에 검사하지 않았다. Sites 배포 결과와 현재 버전은 확인했다.
 
 두 차례 압축 해제 크기 제한으로 거절된 뒤 기존 GIF 2개와 PNG 3개를 무손실 WebP로 변환하고, 바이트가 같은 중복 이미지 참조를 합치고, JSON 106개의 공백을 줄였다. 이미지 픽셀·애니메이션 프레임과 시간·JSON 값 보존을 검사했다. 기존 정적 WebP와 변환 애니메이션의 파일명을 분리했다. 원본은 로컬에 보존했다. 최종 묶음의 압축 해제 크기는 268,327,424바이트다. [형식 변환 검사](evidence/aircraft-repair-20261109/report-media-checks.json).
+## 2026-11-10 가로 타이틀 벼랑·하늘·구름 연결
+
+[원본과 외곽을 합친 시안](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-title-composite-20261109/)을 갱신했다. 원본 중앙을 보존하고 자연물 배경의 경계 색을 연결했다. 승인된 세로는 파일과 합성 픽셀이 이전과 같다. 가로·세로 경계 연결 전환, 원본 영역 표시, PNG 저장을 제공한다. Chrome·WebKit의 가로 3개 크기와 모바일 페이지를 검사했다. [제작·검사 범위](research/title-joins-20261110.md).
+
+사이트 소스 `981c0942ac6c415709617c40061bd466f4ec5247`, 배포 `appgdep_6af1e6929fdc8191a7cd917cf5cf63f2`는 `succeeded`다. 기존 소유자 전용 접근을 유지했다. 게임 적용과 운영 앱 배포는 하지 않았다. [게시 결과](evidence/title-joins-20261110/publication.json).
