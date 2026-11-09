@@ -115,6 +115,7 @@ def audit():
             textures[image] = {'path': path, 'sha256': sha(b), **png(b)}
         return {'part': part_name, 'type': typ, 'tileCount': tiles,
                 'sockets': sockets, 'image': image, 'grid': grid,
+                'firstTile': int(alias['No']) if alias else 0,
                 'imageExists': exists, 'visible': exists}
     def describe_machine(machine_name):
         tree = machines[machine_name]

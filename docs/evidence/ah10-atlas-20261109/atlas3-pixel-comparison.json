@@ -1,0 +1,86 @@
+[
+  {
+    "engine": "chrome",
+    "tile": 0,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 1,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 2,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 3,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 4,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 5,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "chrome",
+    "tile": 6,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 0,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 1,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 2,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 3,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 4,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 5,
+    "exact": true,
+    "AE": "0 (0)"
+  },
+  {
+    "engine": "webkit",
+    "tile": 6,
+    "exact": true,
+    "AE": "0 (0)"
+  }
+]

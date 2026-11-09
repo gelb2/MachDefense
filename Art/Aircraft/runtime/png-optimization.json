@@ -109,15 +109,15 @@
     },
     {
       "image": "AHeavyBody.png",
-      "sourcePath": "Art/Aircraft/banking-20261109/prepared/AHeavyBody.png",
-      "sourceSHA256": "1dab8787dbdd4954cc31d8c4fbcf832b5b071ff214c498c7399505866d0c5655",
-      "outputSHA256": "32fb830199458230ef62dfca08c3a0337d4bee595574fcbdb7c4fabe6e087a9d",
+      "sourcePath": "Art/Aircraft/parts-separation-20261109/ah10/atlas/AHeavyBody.png",
+      "sourceSHA256": "4787dd902d2864469452d520a7d28415bc4625d89467a576d3f3da5540ad0f99",
+      "outputSHA256": "a92d644d68ad1c3e54b60aab0d571772ca62a8498efc28c067cdc6e32cd8f48e",
       "size": [
-        532,
+        1596,
         112
       ],
-      "inputBytes": 105349,
-      "outputBytes": 107376,
+      "inputBytes": 117727,
+      "outputBytes": 112235,
       "cgbi": true,
       "alphaUnchanged": true,
       "opaqueRGBUnchanged": true

@@ -20,16 +20,17 @@ int main(int argc,char**argv){assert(argc==2);Resources r;r.root=argv[1];
   {"ALightBody",{64,47}},{"AHeavyBody",{76,112}},
   {"ADuctBody",{110,88}},{"ATransportBody",{140,131}}}}){
   const auto models=BattleModels::load(r);const auto* definition=models.part(body.first);
-  assert(definition&&definition->tileCount==7&&definition->splitX==7);
-  const auto size=r.imageSize(definition->image);assert(size.x==body.second.x*7&&size.y==body.second.y);
+  const unsigned columns=std::string_view(body.first)=="AHeavyBody"?21:7;
+  assert(definition&&definition->tileCount==7&&definition->splitX==columns);
+  const auto size=r.imageSize(definition->image);assert(size.x==body.second.x*columns&&size.y==body.second.y);
   Sprite sprite;sprite.image=definition->image;sprite.sourcePx=Rect{0,0,body.second.x,body.second.y};
   sprite.destination={10,20,body.second.x,body.second.y};sprite.nearest=true;
   for(unsigned tile=0;tile<7;++tile){
    const float bank=tile==0?0.f:(tile<=3?-float(tile):float(tile-3))*.13962634f;
    auto mesh=aircraftBankMesh(sprite,{100,100},0,bank,size);
    assert(mesh.nearest&&mesh.image==sprite.image&&mesh.vertices.size()==4);
-   assert(std::abs(mesh.vertices[0].uv.x-float(tile)/7)<.000001f);
-   assert(std::abs(mesh.vertices[1].uv.x-float(tile+1)/7)<.000001f);
+   assert(std::abs(mesh.vertices[0].uv.x-float(tile)/columns)<.000001f);
+   assert(std::abs(mesh.vertices[1].uv.x-float(tile+1)/columns)<.000001f);
    assert(mesh.vertices[0].position.x==10&&mesh.vertices[0].position.y==20);
    assert(mesh.vertices[3].position.x==10+body.second.x&&mesh.vertices[3].position.y==20+body.second.y);
   }

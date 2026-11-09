@@ -1,0 +1,46 @@
+{
+  "baseline": "fe72d80",
+  "productEdits": false,
+  "candidateTool": "prepare-atlas3.py",
+  "dimensions": [
+    1596,
+    112
+  ],
+  "tileGrid": [
+    21,
+    1
+  ],
+  "cellSize": [
+    76,
+    112
+  ],
+  "baseTileByPart": {
+    "AHeavyBody": 0,
+    "AHeavyRocket": 7,
+    "AHeavyAirStrike": 14
+  },
+  "textureResource": "AHeavyBody.png",
+  "decodedStripsExact": true,
+  "regularWasmIdenticalToBaseline": true,
+  "bankingCapturesExact": 14,
+  "combatCapturesExact": 20,
+  "combatChecks": "Chromium/WebKit4species\u00d710levels600ticks each; weapons/damage/audio/dodge; noDBwrites",
+  "memoryBackingBefore": 1572864,
+  "memoryBackingAfter": 1048576,
+  "memoryBackingSaved": 524288,
+  "draws100StationaryBefore": 1352,
+  "draws100StationaryAfter": 1352,
+  "textureSwitchesBefore": 1152,
+  "textureSwitchesAfter": 1102,
+  "GPUtimingForAtlas3": "Notmeasured; two-stripatlas timingmustnotbeappliedtothisthree-stripcandidate",
+  "mergeWarning": "Merge onlyAH10PartList/TileListentries andnewatlasfile into currentrepo; donotreplace fulltablefromprivatefe72d80snapshot orrevertScout/movementchanges",
+  "sourceGeometryUnchanged": true,
+  "existingLayerOrderUnchanged": true,
+  "runtimeChangedImageFiles": "AHeavyBody.png only; separatepreparedcomponentimages andunusedoriginalruntimeweaponPNGsretained as evidence",
+  "proofFiles": [
+    "atlas3-preparation.json",
+    "atlas3-pixel-comparison.json",
+    "atlas3-combat-pixel-comparison.json",
+    "atlas3-draw.json"
+  ]
+}

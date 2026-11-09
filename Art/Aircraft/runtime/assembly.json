@@ -112,7 +112,15 @@
           -18.0
         ]
       ],
-      "preparedImage": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyBody.png"
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/ah10/atlas/AHeavyBody.png",
+      "texture": {
+        "image": "AHeavyBody",
+        "grid": [
+          21,
+          1
+        ],
+        "firstTile": 0
+      }
     },
     {
       "name": "AHeavyRotor",
@@ -192,7 +200,15 @@
           68
         ]
       ],
-      "preparedImage": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyRocket.png"
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyRocket.png",
+      "texture": {
+        "image": "AHeavyBody",
+        "grid": [
+          21,
+          1
+        ],
+        "firstTile": 7
+      }
     },
     {
       "name": "AHeavyAirStrike",
@@ -208,7 +224,15 @@
           -36
         ]
       ],
-      "preparedImage": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyAirStrike.png"
+      "preparedImage": "Art/Aircraft/parts-separation-20261109/ah10/AHeavyAirStrike.png",
+      "texture": {
+        "image": "AHeavyBody",
+        "grid": [
+          21,
+          1
+        ],
+        "firstTile": 14
+      }
     },
     {
       "name": "ADuctBody",

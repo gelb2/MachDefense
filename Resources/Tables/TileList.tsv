@@ -54,6 +54,7 @@ Base10.png	1	1
 BaseWpn10.png	1	1
 Base10_Rader.png	1	1
 // Aircraft persisted level aliases 2026-11-09
+AHeavyBody.png	21	1
 ALightGun.png	1	1
 ALightMissile.png	1	1
 ALightGun_02.png	1	1
@@ -77,8 +78,6 @@ ALightMissile_10.png	1	1
 AHeavyGun.png	1	1
 AHeavyMissile.png	1	1
 AHeavyCannon.png	1	1
-AHeavyRocket.png	7	1
-AHeavyAirStrike.png	7	1
 ADuctMissile_01.png	1	1
 ADuctMissile_02.png	1	1
 ADuctMissile_03.png	1	1

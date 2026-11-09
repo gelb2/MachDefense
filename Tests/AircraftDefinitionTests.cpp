@@ -72,6 +72,23 @@ int main(int argc,char**argv){
    }++cases;
   }
  }
+ // All three independent nodes consume distinct full-size strips of one atlas.
+ for(unsigned level=1;level<=10;++level){
+  char suffix[8];snprintf(suffix,sizeof suffix,"_%02u",level);
+  auto poses=actual.pose(std::string("AircraftHeavy")+suffix,1.f,0,0,0);
+  Frame frame;actual.appendSprites(frame,poses,{},[&](std::string_view n){return r.imageSize(n);});
+  unsigned visible=0;
+  for(const auto& sprite:frame.sprites)if(sprite.image=="AHeavyBody.png"&&sprite.color.r>0){
+   assert(sprite.sourcePx->width==76&&sprite.sourcePx->height==112);
+   assert(sprite.sourcePx->x==0||sprite.sourcePx->x==532||sprite.sourcePx->x==1064);
+   for(float bank:{-.41887902f,-.27925268f,-.13962634f,0.f,.13962634f,.27925268f,.41887902f}){
+    auto mesh=aircraftBankMesh(sprite,{},0,bank,r.imageSize(sprite.image));
+    assert(std::abs(mesh.vertices.front().uv.x-(sprite.sourcePx->x+aircraftBankTile(bank)*76)/1596.f)<.0001f);
+   }
+   ++visible;
+  }
+  assert(visible==3);
+ }
  // Fixed AH-10 pods use the original muzzle coordinates despite moving their
  // image pivot to the complete body canvas. Check every level/roll/heading.
  unsigned fixedCases=0;
@@ -85,7 +102,9 @@ int main(int argc,char**argv){
    bool rocket=p.definition->name.starts_with("AHeavyRocket"),strike=p.definition->name.starts_with("AHeavyAirStrike");
    if(!rocket&&!strike)continue;
    assert(std::abs(p.localCenter.x)<.0001f&&std::abs(p.localCenter.y)<.0001f&&p.angle==angle);
-   assert(p.definition->tileCount==7&&p.definition->splitX==7);
+   assert(p.definition->tileCount==7&&p.definition->splitX==21&&p.definition->splitY==1);
+   assert(p.definition->image=="AHeavyBody.png"&&p.definition->tileNo==(rocket?7:14));
+   auto imageSize=r.imageSize(p.definition->image);assert(imageSize.x/21==76&&imageSize.y==112);
    auto muzzle=p.muzzle();assert(muzzle);const Vec2 old=rocket?Vec2{17,34}:Vec2{36,-18};
    const Vec2 expected{(old.x*std::cos(angle)-old.y*std::sin(angle))*k,(old.x*std::sin(angle)+old.y*std::cos(angle))*k};
    assert(std::abs(muzzle->x-expected.x)<.0001f&&std::abs(muzzle->y-expected.y)<.0001f);

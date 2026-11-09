@@ -66,5 +66,7 @@ def run():
   gaps[name]={'oldMuzzlePixel':muzzle,'forwardAlphaEdge':max(x for x,y in points),'forwardAlphaOnMuzzleRow':row,'nearestAlphaPixel':min(points,key=lambda p:(p[0]-muzzle[0])**2+(p[1]-muzzle[1])**2),'gapOnMuzzleRow':muzzle[0]-row}
  report={'decodedRuntimeDifferentChannels':runtime_diff,'existingMuzzleArtGaps':gaps,'source':str(SOURCE.relative_to(ROOT)),'sourceSHA256':hashlib.sha256(raw).hexdigest(),'preparedRecompositionByteIdentical':True,'overlappingNonzeroAlphaPixels':0,'counts':counts,'rocketPolygons':ROCKET,'airstrikeBoxes':AIRSTRIKE,'records':records,'mountBehavior':'Existing WorldCombat embedded body angle and recoil zero retained; no independently rotating weapon or support backfill added.','muzzlePixelsNeutral':{'AHeavyRocket':[55,22],'AHeavyAirStrike':[74,74]},'runtimeVisualVerification':'pending'}
  (OUT/'manifest.json').write_text(json.dumps(report,indent=2)+'\n')
+ from prepare_ah10_atlas import run as prepare_atlas
+ prepare_atlas()
  print(json.dumps(report))
 if __name__=='__main__':run()

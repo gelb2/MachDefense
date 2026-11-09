@@ -51,14 +51,27 @@ def run():
  # Keep all pre-existing rows byte-identical, including original unit aliases.
  marker=b'// Aircraft persisted level aliases 2026-11-09'
  table_rows={'PartsList':[],'TileList':[]};tile_names=set()
- for alias,source in aliases.items():
+ # Explicit texture selections may share a wider atlas while each part keeps
+ # its authored tileCount (number of bank poses) and independent assembly node.
+ selections={p['name']:(p,p['name']) for p in spec['parts'] if p.get('texture')}
+ selections.update({alias:(source,alias_images[alias]) for alias,source in aliases.items()})
+ for alias,(source,image_name) in selections.items():
   if not source['tileCount']:continue
-  table_rows['PartsList'].append(f"{alias}\tWPON\t0\t{alias_images[alias]}\n".encode())
-  image=alias_images[alias]+'.png'
+  texture=source.get('texture',{})
+  image_name=texture.get('image',image_name)
+  first=texture.get('firstTile',0);grid=texture.get('grid',[source['tileCount'],1])
+  assert 0<=first and first+source['tileCount']<=grid[0]*grid[1]
+  table_rows['PartsList'].append(f"{alias}\tWPON\t{first}\t{image_name}\n".encode())
+  image=image_name+'.png'
   if image not in tile_names:
-   table_rows['TileList'].append(f"{image}\t{source['tileCount']}\t1\n".encode());tile_names.add(image)
+   table_rows['TileList'].append(f"{image}\t{grid[0]}\t{grid[1]}\n".encode());tile_names.add(image)
  for table,rows in table_rows.items():
   path=ROOT/'Resources/Tables'/(table+'.tsv');before=path.read_bytes().split(marker)[0]
+  # Replace only explicitly authored atlas rows if present before our marker.
+  # Every unrelated/original row retains its exact bytes and line ending.
+  explicit={p['name'] if table=='PartsList' else p['texture']['image']+'.png' for p in spec['parts'] if p.get('texture')}
+  replacement={row.split(b'\t')[0]:row for row in rows}
+  before=b''.join(replacement.get(line.split(b'\t')[0],line) if line.split(b'\t')[0].decode(errors='replace') in explicit else line for line in before.splitlines(keepends=True))
   existing={line.split(b'\t')[0].strip() for line in before.splitlines() if line and not line.startswith(b'//')}
   additions=[row for row in rows if row.split(b'\t')[0] not in existing]
   separator=b'' if before.endswith(b'\n') else b'\n'
