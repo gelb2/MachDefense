@@ -1,0 +1,26 @@
+[
+  {
+    "engine": "chromium",
+    "before_size": [
+      390,
+      845
+    ],
+    "after_size": [
+      390,
+      845
+    ],
+    "pixels_equal": true
+  },
+  {
+    "engine": "webkit",
+    "before_size": [
+      390,
+      845
+    ],
+    "after_size": [
+      390,
+      845
+    ],
+    "pixels_equal": true
+  }
+]

@@ -1,3 +1,9 @@
+# 가로 자연물 재시안·세로 채택 — 2026-11-09
+
+[현재 합성 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-title-composite-20261109/). 앞선 가로의 메크 다리·탱크 차체 연장은 지시 불이행으로 기각했다. 가로 바깥을 자연물만으로 다시 그렸고 기체 반사·연장 처리를 제거했다. 원본과 외곽의 색·명암 경계는 남아 있다. 세로 두 번째 시안을 채택본으로 고정했고 파일과 Chrome·WebKit 합성 픽셀이 이전과 같은지 확인했다.
+
+[시안·확인 범위](research/title-natural-20261109.md) · [검사](evidence/title-natural-20261109/check.json) · [세로 보존](evidence/title-natural-20261109/tall-preserved.json) · [게시 근거](evidence/title-natural-20261109/publication.json). 게임 적용은 하지 않았다. 소스 `b4386d8ae6da0cd94b166d48750ac2775a61ec19`, 배포 `appgdep_6af16d2d675c8191b6a6b13a0d100eb1` succeeded. 기존 접근 범위를 유지했다.
+
 # 타이틀 원본·외곽 합성 시안 — 2026-11-09
 
 [가로 웹·세로 폰 합성 시안](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-title-composite-20261109/)을 게시했다. 원본 영역 표시·경계 연결 전후·가로 3크기·PNG 저장을 제공한다. 생성 그림의 중앙 대신 원본 JPG를 그대로 사용했다. 게임 코드·자원·헬기·설치 앱은 변경하지 않았다.
