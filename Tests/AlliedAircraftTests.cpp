@@ -25,9 +25,13 @@ int main(int argc,char** argv){assert(argc==2);Resources r;r.root=argv[1];
  std::cout<<"model,level,cells,hp,upgradeCredits,buildSeconds\n";
  for(unsigned k=0;k<4;++k){int hp=0,cells=0;for(unsigned level=1;level<=10;++level){auto e=md::validation::aircraftTrialEconomy(k,level,builds,items,md::BattleGeometry::pad());assert(e.hp>hp&&e.cells>cells);hp=e.hp;cells=e.cells;std::cout<<md::validation::alliedAircraft[k].model<<","<<level<<","<<e.cells<<","<<e.hp<<","<<e.upgradeCredits<<","<<e.duration<<"\n";}}
  // All clock directions remain in the map; the moving target updates the orbit center.
- md::AircraftTactics route;std::set<int> directions;
- for(int i=0;i<24;++i){auto p=route.destination(i*10,{0,0},{0,200},300,512,800,12);directions.insert(route.sector);assert(std::abs(p.x)<=244&&std::abs(p.y)<=788);}
- assert(directions.size()==12);route.destination(250,{0,0},{0,400},300,512,800,12);assert(route.anchor.y==400);
+ md::AircraftTactics route;std::set<int> directions;md::AircraftMotion orbitMotion;orbitMotion.moveSpeed=2;
+ for(int tick=0;tick<7200;++tick){auto p=route.destination(tick/60.,orbitMotion.position,{0,200},300,512,800,12);directions.insert(route.sector);assert(std::abs(p.x)<=244&&std::abs(p.y)<=788);orbitMotion.setDestination(p);route.advance(orbitMotion);}
+ assert(directions.size()==12);route.destination(250,orbitMotion.position,{0,400},300,512,800,12);assert(route.anchor.y==400);
+ // Before reaching the circle, elapsed time alone must not send an aircraft across its target.
+ md::AircraftTactics entering;entering.destination(0,{0,0},{0,200},300,512,800,12);
+ const auto entryLeg=entering.leg;const auto entrySector=entering.sector;
+ for(int i=1;i<24;++i){entering.destination(i*10,{0,0},{0,200},300,512,800,12);assert(entering.enteringOrbit&&entering.leg==entryLeg&&entering.sector==entrySector);}
 
  // Right-to-left and left-to-right both decelerate to an exact stopped frame.
  for(float sign:{-1.f,1.f}){

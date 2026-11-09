@@ -1,0 +1,28 @@
+{
+  "void face(": {
+    "unchanged": true,
+    "sha256": "eab3bc7d88d8448275506ca160b520603ef7c4a0917846a0d443eec9162ba26f"
+  },
+  "bool invulnerable(": {
+    "unchanged": true,
+    "sha256": "b59474abdd189e5ba213c4fc12796e1c615edc1279e16b906436310af0fcabe6"
+  },
+  "void finishDodge(": {
+    "unchanged": true,
+    "sha256": "d04b446ccc27fab7faa0db7ecffd57e7ec90ad4f955b1b312675293e9871d2d1"
+  },
+  "bool updateDodge(": {
+    "unchanged": true,
+    "sha256": "c08d971f2b0ecbd97e273d88cde66ff7ba12619459eef894801c94b103e3af7f"
+  },
+  "std::uint32_t next(": {
+    "unchanged": true,
+    "sha256": "d0f4c93dfff9212a6c2383ad0b1a0582a15b32001160986990c89c633d7a7e51"
+  },
+  "void advance(": {
+    "unchanged": true,
+    "sha256": "1659a897ced7817d70fe34acb8b35bb0852e23eec94ec86dc4085dd6e37a0b47"
+  },
+  "trace160Equal": true,
+  "sourceSHA256": "0af95356ddd2da64914b535dedff478033912b099859a3c64341b35321b766f5"
+}

@@ -13,7 +13,8 @@ struct AircraftTactics {
     unsigned leg=0, sector=0, sectorStep=1;
     double nextChange=0;
     Vec2 anchor{}, waypoint{};
-    bool engaged=false, braking=false;
+    bool engaged=false, braking=false, enteringOrbit=false;
+    float entryClearance=0;
     float bank=0; // radians, positive toward the local left side
     Vec2 velocityChange{};
     float noseStep=.02908882f, weaponStep=.05235988f;
@@ -70,26 +71,57 @@ struct AircraftTactics {
     std::uint32_t next(){random^=random<<13;random^=random>>17;random^=random<<5;return random;}
     Vec2 destination(double time,Vec2 position,Vec2 target,float range,float mapWidth,float mapHalfLength,float radius){
         const float edge=std::max(0.f,mapWidth*.5f-radius);
-        // Twelve clock positions around the target. The sweep stays inside the
-        // aircraft's existing movement envelope and its weapon acquisition range.
         const float orbit=std::max(0.f,std::min(mapWidth*widthFraction*.5f,range*.72f));
         const float top=std::max(0.f,mapHalfLength-radius);
+        const auto point=[&](unsigned s){
+            const float angle=float(s)*6.28318530718f/12.f;
+            return Vec2{std::clamp(target.x+std::sin(angle)*orbit,-edge,edge),
+                        std::clamp(target.y+std::cos(angle)*orbit,-top,top)};
+        };
+        const float entryDistance=std::hypot(position.x-target.x,position.y-target.y);
+        // Actors already inside the preferred circle need distinct outward
+        // approaches; a path cannot start outside a circle it is already in.
         const bool starting=!engaged;
+        if(starting)entryClearance=std::min(orbit*.8f,std::max(radius*2,entryDistance*.8f));
+        const float clearance=(starting||enteringOrbit)?entryClearance:orbit*.8f;
+        const auto clear=[&](Vec2 p){const float x=p.x-target.x,y=p.y-target.y;return x*x+y*y>=clearance*clearance;};
         const float turnDistance=std::max(mapWidth/128.f,radius*.35f);
         const float dx=position.x-waypoint.x,dy=position.y-waypoint.y;
-        if(starting||time>=nextChange||dx*dx+dy*dy<=turnDistance*turnDistance){
-            if(starting){sector=next()%12;sectorStep=(next()&1u)?1u:11u;engaged=true;}
-            else sector=(sector+sectorStep)%12;
+        const bool arrived=dx*dx+dy*dy<=turnDistance*turnDistance;
+        if(!starting&&(arrived||entryDistance<=orbit+turnDistance))enteringOrbit=false;
+        if(starting||(!enteringOrbit&&time>=nextChange)||arrived){
+            if(starting){
+                sector=next()%12;sectorStep=(next()&1u)?1u:11u;engaged=true;enteringOrbit=true;
+            }else{
+                // A clipped point near a map edge can collapse onto the target.
+                // Sweep back along the existing circle rather than cut across it.
+                if(!clear(point((sector+sectorStep)%12)))sectorStep=12-sectorStep;
+                sector=(sector+sectorStep)%12;
+            }
             ++leg;
-            // Each actor owns its phase/direction/timing; simultaneous builds
-            // do not share a left-first route or a world RNG draw.
             nextChange=time+2.4+double(next()%1601)*.001;
             if(!starting&&leg%12==0)sectorStep=(next()&1u)?1u:11u;
         }
-        anchor=target;
-        const float angle=float(sector)*6.28318530718f/12.f;
-        waypoint={std::clamp(target.x+std::sin(angle)*orbit,-edge,edge),
-                  std::clamp(target.y+std::cos(angle)*orbit,-top,top)};
+        anchor=target;waypoint=point(sector);
+        // Keep safe random entries. Redirect a target-crossing entry or a
+        // path made unsafe by target movement to the nearest usable clock point.
+        const Vec2 path{waypoint.x-position.x,waypoint.y-position.y};
+        const float length2=path.x*path.x+path.y*path.y;
+        const float along=length2>0?std::clamp(((target.x-position.x)*path.x+(target.y-position.y)*path.y)/length2,0.f,1.f):0.f;
+        if(!clear({position.x+along*path.x,position.y+along*path.y})){
+            float best=1e30f;std::array<unsigned,12> safeEntries{};unsigned count=0;
+            for(unsigned i=0;i<12;++i){
+                const Vec2 p=point(i);const float x=p.x-position.x,y=p.y-position.y;
+                if(!clear(p))continue;
+                if(x*x+y*y<best){best=x*x+y*y;sector=i;waypoint=p;}
+                const float length=x*x+y*y;
+                const float t=length>0?std::clamp(((target.x-position.x)*x+(target.y-position.y)*y)/length,0.f,1.f):0.f;
+                if(clear({position.x+t*x,position.y+t*y}))safeEntries[count++]=i;
+            }
+            // Retain per-aircraft entry variation among the safe approaches.
+            // Reuse this actor's RNG state without taking another random draw.
+            if(starting&&count){sector=safeEntries[random%count];waypoint=point(sector);}
+        }
         return waypoint;
     }
     // New aircraft only. Velocity changes by bounded acceleration at the

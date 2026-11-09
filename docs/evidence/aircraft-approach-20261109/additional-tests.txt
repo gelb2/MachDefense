@@ -1,0 +1,65 @@
+Test project /Users/sokol/Git/ProjectGameDev-Hub/MachDefense/.local/worktrees/cheyenne-salvo-clock/build/salvo-clock
+    Start  4: AircraftBalance
+1/7 Test  #4: AircraftBalance ..................   Passed    0.25 sec
+    Start  9: AircraftCountermeasure
+2/7 Test  #9: AircraftCountermeasure ...........   Passed    0.43 sec
+    Start 11: AlliedAircraft
+3/7 Test #11: AlliedAircraft ...................Subprocess aborted***Exception:   0.25 sec
+Assertion failed: (directions.size()==12), function main, file AlliedAircraftTests.cpp, line 30.
+model,level,cells,hp,upgradeCredits,buildSeconds
+AircraftLight,1,75,210,200,3
+AircraftLight,2,100,231,500,3
+AircraftLight,3,125,259,1000,3
+AircraftLight,4,150,294,2000,3
+AircraftLight,5,190,336,4000,3
+AircraftLight,6,250,378,8000,5
+AircraftLight,7,315,434,16000,5
+AircraftLight,8,400,490,32000,5
+AircraftLight,9,500,560,64000,5
+AircraftLight,10,625,644,0,5
+AircraftHeavy,1,265,350,2000,9
+AircraftHeavy,2,275,385,5000,9
+AircraftHeavy,3,300,434,10000,9
+AircraftHeavy,4,350,497,20000,9
+AircraftHeavy,5,400,560,40000,9
+AircraftHeavy,6,475,630,75000,9
+AircraftHeavy,7,565,700,150000,9
+AircraftHeavy,8,675,770,300000,9
+AircraftHeavy,9,840,875,500000,9
+AircraftHeavy,10,1000,1050,0,9
+AircraftDuct,1,375,700,3000,12
+AircraftDuct,2,400,770,5000,12
+AircraftDuct,3,440,840,9000,12
+AircraftDuct,4,500,910,17000,12
+AircraftDuct,5,565,1050,33000,12
+AircraftDuct,6,650,1190,65000,15
+AircraftDuct,7,750,1400,120000,15
+AircraftDuct,8,875,1610,230000,15
+AircraftDuct,9,1000,1820,650000,15
+AircraftDuct,10,1150,2100,0,15
+AircraftTransport,1,1000,700,4300,10
+AircraftTransport,2,1250,840,7800,10
+AircraftTransport,3,1500,980,14500,10
+AircraftTransport,4,1750,1120,30700,10
+AircraftTransport,5,2125,1260,61400,10
+AircraftTransport,6,2500,1400,125800,12
+AircraftTransport,7,3000,1610,227000,12
+AircraftTransport,8,3500,1820,458000,12
+AircraftTransport,9,4000,2100,921000,12
+AircraftTransport,10,4500,2380,0,12
+
+    Start 12: Aircraft
+4/7 Test #12: Aircraft .........................   Passed    0.30 sec
+    Start 55: AircraftHandling
+5/7 Test #55: AircraftHandling .................   Passed    0.30 sec
+    Start 56: AircraftCampaign
+6/7 Test #56: AircraftCampaign .................   Passed    0.57 sec
+    Start 58: AircraftDodge
+7/7 Test #58: AircraftDodge ....................   Passed    0.28 sec
+
+86% tests passed, 1 tests failed out of 7
+
+Total Test time (real) =   2.38 sec
+
+The following tests FAILED:
+	 11 - AlliedAircraft (Subprocess aborted)
