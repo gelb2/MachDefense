@@ -1,0 +1,48 @@
+{
+  "baseline": "10ae41ce9496365bd8893df402ef32dab2de7025",
+  "changedExistingSources": [
+    "Sources/Core/Simulation/AircraftVisual.hpp"
+  ],
+  "changedExistingResources": [
+    "Resources/RawData/AircraftMachines.mcb",
+    "Resources/RawData/AircraftParts.mcb",
+    "Resources/RawData/Level10Machines.mcb",
+    "Resources/RawData/Level10Parts.mcb"
+  ],
+  "existingImageAndAudioFilesUnchanged": true,
+  "movementAndWeaponsUnchanged": true,
+  "newRuntimeImageFiles": [
+    "Resources/Images/ATransportRoot0_01.png",
+    "Resources/Images/ATransportRoot0_02.png",
+    "Resources/Images/ATransportRoot0_03.png",
+    "Resources/Images/ATransportRoot0_04.png",
+    "Resources/Images/ATransportRoot0_05.png",
+    "Resources/Images/ATransportRoot0_06.png",
+    "Resources/Images/ATransportRoot0_07.png",
+    "Resources/Images/ATransportRoot0_08.png",
+    "Resources/Images/ATransportRoot0_09.png",
+    "Resources/Images/ATransportRoot0_10.png",
+    "Resources/Images/ATransportRoot1_01.png",
+    "Resources/Images/ATransportRoot1_02.png",
+    "Resources/Images/ATransportRoot1_03.png",
+    "Resources/Images/ATransportRoot1_04.png",
+    "Resources/Images/ATransportRoot1_05.png",
+    "Resources/Images/ATransportRoot1_06.png",
+    "Resources/Images/ATransportRoot1_07.png",
+    "Resources/Images/ATransportRoot1_08.png",
+    "Resources/Images/ATransportRoot1_09.png",
+    "Resources/Images/ATransportRoot1_10.png"
+  ],
+  "inputSHA256": {
+    "Art/Aircraft/runtime/assembly.json": "8fe42e6e724e4463e915fa72bd5eecc3066259b7c4c126dc761ce10472ec5891",
+    "Art/Aircraft/runtime/definition-resources.json": "72935de3ce05133181e9cdeabf35ad3a85b009d8fae19d9fea130255d8decb91",
+    "Resources/RawData/AircraftMachines.mcb": "726f024efcd782fccbe5ca3d1088e66b69cfa78e31331d2e44bbc8b11ae41223",
+    "Resources/RawData/AircraftParts.mcb": "cf2070db97e8b6a719dbc58116c0e9d2082d9c7a204be82dda1a75257ab59b11",
+    "Resources/RawData/Level10Machines.mcb": "185b5745ae81bc0811f48f77a5a64e87e264f4fba43090b1898024da37d6e456",
+    "Resources/RawData/Level10Parts.mcb": "d073e0ba8b28f4b4ade2ec7cbfde9ca01fe53ff70c5f2406c8eafbb4b1f406cb",
+    "Sources/Core/Simulation/AircraftVisual.hpp": "d96d961d5b0e2ec0fe975242d59cb82f9ab91ffdcafd986ba21c1a659052790e",
+    "Tests/AircraftAuditTests.py": "63d81be20cd709b736c616da7396ead58872f73665176e15537a1e8b4cb68cb7",
+    "Tests/AircraftDefinitionTests.cpp": "6bac6d66476211b88031223a146374d97a209f538c53a979ed4fb4169d1a901e",
+    "Tests/AircraftTests.cpp": "c35bfe6b29bdc3c3a44d32d3adb5cf4e687304b84a1d881b6ea9923a78fe26ce"
+  }
+}

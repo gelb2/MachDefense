@@ -1,0 +1,608 @@
+{
+  "method": "Bank-specific approved metal fragments assembled into separate reinforcement parts",
+  "source": "Art/Aircraft/banking-correction-20261109/prepared/ATransportBody.png",
+  "sourceSHA256": "6e476cc8ef23076931e8c23c828112f3e5a821098b7f627d976e76cc6ed9fae6",
+  "records": [
+    {
+      "name": "ATransportRoot0_01",
+      "sourceSHA256": "8b4827bff360d2955693af2fff70163f61a0458ade0c634a2e0bed5ccff58b3d",
+      "runtimeSHA256": "2b70655a5222a620d29a8f4b244e1dcec5286d667c7461cd640eeb052bfa5ed1",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        28
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "971e9db16bdea480999487c743828a54b9fb23b4d3de615dd35e1dda90926507",
+        "44f37d101bb9d26c2d99eebbf65a766f17214221823b96b7cb52035eba8829c9",
+        "5924498bf4e1461a933645f3e01b35d41e6e29565e2a9b7f06d11a714f203278",
+        "8b5c57416d7a0e2569b2d6c873e2da7da6ff3c263588e5a5329e1459a77c50ad",
+        "634439e2f6a673b35e86ca3745e3e2787c18038c952cf37d7178bed5221c185a",
+        "b91105f6d81aa00ee813cffd8443c00fdfc855e0dbe07e090733cca2078e2b4a",
+        "7caa21a17d35e521da5ea1dc01b1beec7b2cf374d3f57538714d96e984a04e9b"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot0_02",
+      "sourceSHA256": "f3335962a4d74c06e053d22210960ecbc07f6c1ad455844277c4e5ad9fa61833",
+      "runtimeSHA256": "7fc56a9edd09b77940e295ed22fa50a22f6edbef0d2697d90e4e46b01215947e",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        28
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "5b0c5bef3d18d38fc75a7e9ab1fc1c74de79da344bc050ab1c008d147d561345",
+        "26abf2501b2e1526b9a4a1ccce2131674ad6ca4df012f12d21128d06865acc4f",
+        "9c01e93cf457b56175f7f69fde2e753bb03109f4bce2919e75dc3a3f6489c4b5",
+        "2fb655623bca2644e13a4fc9eab80e3e4c4abb578f86283d8055874cb7b49cc2",
+        "0decfc27951477b6540600d0145a4c607589deb1d7b2c2462b40cc754c56d68d",
+        "89401e97a99123c3eb7e0cd83901e3c1660c21d358d18259ef9dae9299c57e4d",
+        "2e92270522737b56caa8bca6c6c21d72077d449bf9afa1556cf3e22a6d5a352a"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot0_03",
+      "sourceSHA256": "39fa77eef415226499c1bdbff323f8359fb81091780312e492ffe2f70a1ef548",
+      "runtimeSHA256": "a93383687baa4f8a1411839ffe5837abfb87d23507b32c6a38aa713724b8cebe",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        28
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "01dd11aa106eda7436e37e270895a4f51ae14b87dd6dfa72006f3d7f6558235b",
+        "a7ec73a9170187ae7728237d47526260426e173ef4ad0f651fdab99ee0ef0f68",
+        "c0d913443e3cb5f4819d0dbf11de18b38184dad7f6d6451b8c404f40fb4a6d88",
+        "168178b3d85578c25b30e59f3167d8a971c7808b57821fa580ba17648a357a99",
+        "60b0dd79fe2e57afac0f89a4b97cecb4c42ec3dd08cab396822acaf2ed2e8085",
+        "8da9e32645b5b5c3c068acdaf4d7be3ae39cf43acd5e5de708560ee39c76cac9",
+        "15e34c80871c43c132eca766049495de3213147e7b10d352027412d71526aa59"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot0_04",
+      "sourceSHA256": "a7eb923fad33571caf983ccd3491f1e2b7388dd1fbbea4b1f4d8d23749efc47c",
+      "runtimeSHA256": "70508c0d8c46dd6136e1aac5418ba338ef03daf372e879162a515973d1c26655",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        28
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "2f168c856753838dac9d6ed0f121e8f5db52c1bc276005a6a96d5edb23ed5c2f",
+        "8baa2e30f11674ec3a719d2ea809cd1e137dfb3b4fc044ab62c682638293931c",
+        "a706fff4341ce7aa40255849c7ca75fb5b08331aeae6007b30bd05b0150df4c0",
+        "ca8799334775cf9b36d8266be17f53133a57277586d32c7b9fc188a6b83ac2fb",
+        "9407bc5e39f8ee6d9bcfc6d94e0e27d9ea829388fae701a933a1be521b873545",
+        "e6a33eae92b6a04c44007bf70371f9a8fa94da82b4e0279607dc3b353fc1478b",
+        "2771cb94517632c155417f15fd3489b95ccee09034f87974fe330dfc5b783c4c"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot0_05",
+      "sourceSHA256": "da9f4be839c0dc2529d46405d0ebbf6d178bba685a8e3729da25286c1a928d28",
+      "runtimeSHA256": "91adafa44d943145d1d037cb9f71ecf4c25ea606c8bd3f34e9e75cead8970487",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        28
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "1c22d9ed591bf10acf6b0b06cfc635bb57ff7dcb3a3c76e7534b4edc2d69b595",
+        "64f8234975140d387296b3ee0b63da42469697160670a37038a06c7b4f14801f",
+        "75c2d85fc435422e0a49c0a0f1ad146582a297650240b745e3bd30e1bcf13c97",
+        "2bbef39113e656d2f87dc8c727c14acf4d133fe37593491d95a062ae0e2dedf0",
+        "e7a2b7e421dd3359e4762c2cc7d79e9913c97e2ac0f2cf78a83cea9f7c8dcbd0",
+        "f53c475247fdfb3a632b0070f2ed8934eb7ca99cb071e6c94a8e30c7fad81b7e",
+        "eee15ec36a8f0838dbe2667c454a083127dc78dfa995e9933c60c3a42733a8f2"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot0_06",
+      "sourceSHA256": "de10bf17fe35b2de8cf06dceda4fef240ad8ead1751c8f0c2f02cfc903c4bc21",
+      "runtimeSHA256": "25d199a088550014f57dc19ebf87b1e0a3cb5a1b00bf641c599d32e6c6c436b4",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        28
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "ff1598489db6995aae439cc4cd20feaf7d2d2042f58c2365d89add8cff05a324",
+        "f5ecf24240b7240fb2b84130d33676f7c74edf872a7e8b73d4ccf237b1422bcc",
+        "0ea025d41732d0f6b70ad8c9e14e126fc3bb32b8a02c03253f9ed557c4b34ffd",
+        "2e8a2a220b7091117162266989654d000aa762936f720309cb8531aa4676c80b",
+        "921c82f6ab657229a4159f29ef3c541fbb7d23ed513dcdfac46bb7b8c0af5ff2",
+        "63592568d2ef891fec39245a3557d8a4ec597a4a7e49d2a486f14a4bf793c585",
+        "4d2737915bdf5d9b66d319237ef84a5102c2bcb02679b346775a1ddc465f18ed"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot0_07",
+      "sourceSHA256": "756d684b6c46a81be0df7abb52850bfbb6f587a980e36a1274fb72ff34bc9cce",
+      "runtimeSHA256": "3b16c657a45982e02d65647157a972a157da0997a484aa11acea7a55ddd81c42",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        28
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "a009abdd763d353c4cf96eb53ae263ad9a3269323bb9b702ad4add02e63713ea",
+        "707d897a6956a47432228c08197eeb9b4f6783f63e59bbf9fece994647871306",
+        "a64f5a40ebfe943390fd9ec0aba16a72d081392f5f9749f8c4aa51df4e7c5600",
+        "6a07c1b5ae39582a2781b936226b28a6fc0729ea240f9e2801a0b2415c6c97d6",
+        "474835455af3bbb8dc13c67624fcd1ac779219d3e2bb0304b651b19de32e69ea",
+        "0b16af46c37e30b30999d0904d1a2fe6214b32ad4b1cfa1eb51ac7681b7113ba",
+        "5d45e575fb9076faeddab25d14d2734e84c10b5ca4e4a5a89eda13274f5c439e"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot0_08",
+      "sourceSHA256": "fd971230774d086b611f2ea9f809d4b8e27325b06401b6f481f2c0d5eaff631b",
+      "runtimeSHA256": "3187edf648a5f8444a352c22b412175523d9e7068a6d5fc11d6d866c20d9b2cd",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        28
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "7cb61290b22db8664f5ab5e77c77a59eda2df9cbb9bff3ff000a91096bfa747b",
+        "44560e18a1b8c618f46ad48d71f7ea1e99b073ec88f32fb9c55c5688999a8163",
+        "70d62c5938832697bc545681dc7c093113b4dd191f064eb7424910a792eed971",
+        "23c4fea98817f0ba8812039617761903024440ca6b9808b3136daaef14814908",
+        "55d43bb7a7663d2996552231eb6e01c53d732200c8d6dfa63422b75edb8f40d6",
+        "0332c17769d19119f12d029b5ab19328e64289361388cdd35028444c8d7e58e5",
+        "3054ac213bbe800531b7b3854b5f18f560f27b0ee0a4038cb204d34d6e8152ec"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot0_09",
+      "sourceSHA256": "8c031d7d30362ffe256de41597554e52101a9d58e9e025400ed41e56288cc391",
+      "runtimeSHA256": "3085dbc3abad1308cc2271687243ad90e6fa83a1941f1867ae7142dfb315de83",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        28
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "314a72956943647c8a034e828dfc181e3314c750c8fa2a8d144624c70f02fec0",
+        "a083dba96a51f71655e6f72500e936687037585af2c53aa1779f935606b121e7",
+        "cbdb8547192d7acb1dbe8f58d54165c33495f7aa0f014b527a3c500aab03fb1a",
+        "cd47300a918f79139e938bd7f6c8b1c15898d8f70f39f440f08329d3ceb432c4",
+        "8d8593acd31401fa13b65e167a6de279f28704b7af42ac557ba91926a099f951",
+        "561058df3a1ce2cb00bbe4c79915570235b367ae1cfec4503aa6598b47b2d17a",
+        "48f057fb7ea9621b353a461559daf69b4bc0305d81ab5c50b58691a7285775cb"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot0_10",
+      "sourceSHA256": "e37d0b37e8d50d1ba5bc5602dfdf40be9cc2a5024efad0a74038f16dac8845fa",
+      "runtimeSHA256": "0715ff9ab6ab9f65a2a4b0297afabedbe84ce235550608aa0d15b64346f8efbc",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        28
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "8bb7565477d9c6660d90dd651d0c4c0a20a32fc511aa9fd7225c99252522c5dd",
+        "92c37d086b3b3952a66c73b20964a924fb8798a39e4a4d6731b56e451b690437",
+        "1d9a82b0ad3cba8d6ed8bcb50c8ba191c0a31048e0e05a08bf575da14a993025",
+        "9af12668b05c8a9b1effd9ccb5750813c2c2fe8ea48e701dc04d92cce4f77f35",
+        "3ba4afd875fee632166e47c244a5e36f9ede617880a780b73be4d6d6aaf94af0",
+        "2fd89253bf6fc031f6066605d78457321f9b4e12801a4ba8572b6b645326f9ab",
+        "79ac099f8eea2fc191bfaaf5848fbbb841cce3cb6bb561af60b896f70d38cbe8"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot1_01",
+      "sourceSHA256": "75a48e135f22f2eced3423990b772ae7d97d0eac7ad8ff7b2afbbada347c7a41",
+      "runtimeSHA256": "891bee4dbff18fef8e93978f24fed11bbe39003a3b0b35058921d76116cbe690",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        76
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "6ecd5ffec8b8cfda30c3dbb396bf186b64b5b331a16bcd74e03e76624f70c52b",
+        "01fd6b04065f29df8d493831d8a8905bcfdcc208f3c878067ab2b480d77962bd",
+        "b1529165f1c1bb5733927f231ed1640f304494f70ce5f32c1dac05566d06d577",
+        "702370e9ecc6a4c3006d9a0f3ef8b2413e72b7d36a9e96b5a8dd73dc4b946ba1",
+        "297b974e4e8b2dad733e4b5ca8b7d3f2992e41823bf3fe7d34eb52c246ac173a",
+        "7bb34cb5f93ac18f785988d18d130b6737b9da068fb9e8f00f9ed97d11b0dc7e",
+        "2e113f64bb9d273a616d8c94a6f7ebdd788ff383647b786ae9e586710960b12b"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot1_02",
+      "sourceSHA256": "d893b823991158337e4787c93556f99fc1dd44a02a9ce554a9dd258e8707cec2",
+      "runtimeSHA256": "6bd82737f0db3646c9c6cdfdf99d87ea08572ee134ba97a32b411c61c339a57d",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        76
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "1c9aa18b3a92a50759570c81cb08f98ec242ab2d0855c54759b90cd6c7093217",
+        "bba4efec2a4937e45730d45c8a0dc3a2aa243f56331dd9c36c5972d46ddeda60",
+        "1fcb69c9e941d5e801e06798f9eddbdcfc27620a8a5823146f9421f59cff9bbc",
+        "3b00d23502571686093e558d8b034164b664c70e6ccde2a4fb061b77e77e346b",
+        "7cba63ad9eb0e1edab3e65d0944a4f9f7b92626e514cd8d64410c5c1cff58d6b",
+        "dad66472dd4513ab68d0ed9b5c56f191d71db786c5ab49055ced1f63a2a5d2b7",
+        "bc7e0bf68e4e5bd537c3ca30c66986e2e6afecf8f24194c3bb26c74cd47e902b"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot1_03",
+      "sourceSHA256": "1eda3c46463aadaabc779d5841b8dcd8c6656579e6120ff3adc911a6584805d4",
+      "runtimeSHA256": "1b00f10886d0bce3027214f56eacee3f61b8f40ddac22c75b953d0c5cbd5486c",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        76
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "4d408d8d932adfa78ef3fb908b48c82ab001d5299fe932972a49394a657d4a98",
+        "690be981b01553c43e332fd54ff341dd9ec4746b7720f3ed03ecffe0c2aa0194",
+        "03c6c620641f145257fd4ba3c1e70aa014f88b6c66d16e3bb0f3341720664557",
+        "5ef080e60f4084545205d67e0dfaa9a769f6d5fbf52f3e3b4ec8c418ff5a7e91",
+        "6ca1e760f4ffc7e4b8c9050b47f8766d5df83c727aa2cc0109bd170c7d997104",
+        "0b4266135855f8bed611f39404d95683d9446b0556b3785cfacd5312f38819ab",
+        "786bb076d508a8aa751790536be71e0cb91fa446756d2b98003025c4204a9b86"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot1_04",
+      "sourceSHA256": "5abe278563f77c0ca0f868173c1149cad1c765a65f3c4034ff53d740bf959f5d",
+      "runtimeSHA256": "a052a95ba228b83f55dd41e73e6b28878de8cdcb7e5b239082c6aac72140a958",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        76
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "ea6e8110058ac1215f4b0d9468c8d74b944b4fd0912dc1032c4d272cb6353af0",
+        "e5051e56b9c360b577b73d9c9194dc4b5632d4097e2a8336bf094198562947c4",
+        "c41408aac673aa9a04ea7e8f113a6e58f6eed8990acce5e14425e2e574f721ed",
+        "4af5c175dd63d55a203001526303d350b10c95f593ee3c8512cf075f9ede85c9",
+        "6c2a823e55ffe65f6a20593c2a881fe050d92dd0fc75d76a9560e48cfb743fef",
+        "2449f6becc0e2a746119b28f02e2de5b0a8206a7a6c952662a060768a3a51a9a",
+        "c89af72bfa3cc1d21914a3d75add83adb3418f323b86437946924f1baa02dd69"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot1_05",
+      "sourceSHA256": "85e6efe80538308477f28a9a8d37b85d4fd70d4eb4878a5b1ba5efc720a15189",
+      "runtimeSHA256": "6c11b7fb615a6ffb6773e6e2bdabd220cc7e4fbca526bdee5549ad0e29c046be",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        76
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "53d3e855b0fc5ee58dfef680f02482c03c2b527cce8d94854c67ba156f46a0d7",
+        "1aefe17be5d995e00a670b2edf4664909d03295286993305f6e9ed9bc88ef386",
+        "dcded1ec908d2712f78789328f008d574dcf0370ff2542560602909026848573",
+        "0f5575e36e0a8d1020ab39785e204337908cbb737c3deccd4b277b9e01f9d7ee",
+        "50d08aa68aa7b1229b6074f427ccb6fa32702ff755844038b7f2bf824b1f6cbe",
+        "3db11b342b0c1ea9ccb21d22d6d38ea29ef8d6e3514b8c0a1fa2e3702c0e7cae",
+        "09a30e480b69ec5a38d1ed96f8c9f039365bc1e6c9607cf7d794074340a00dd2"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot1_06",
+      "sourceSHA256": "3586b5088af92f16094dc4c984bb2983528cd801d219f60ff0fec3b8244f9d47",
+      "runtimeSHA256": "733d22116564b00c6f3556d660517a3518425c963cecd0e4081439621923c558",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        76
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "f2a70a280b4a91bb0e277591d5b812069d84ffd98f41ae45f2df0b4bb3648fa8",
+        "c80978f050c04b124fdc6e66aceebd29316627d30b9c5e2433e1eb24a0be0429",
+        "886865b8e5dce50f8575d1c70a5c470fed33b0bbf23374ff9b03b2744600d024",
+        "8e393e38c21159dbb6fb27c3e65482e8965ce35de054f53a8f326473997ffbe7",
+        "4451f58f8779455e63b95da01a37cf6fcd9061a670bf1ac3b8f5acf6b5866d9e",
+        "78c1c0352bc3b2b965c9573c81b5c23e5373f96bed40a263d518af0a4c2499dc",
+        "f1d8ad24509b9400d33ce9298dc1894a7f827976dfceb595e6da7103a1203b97"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot1_07",
+      "sourceSHA256": "b90afd1890d17fd7aa73a4dd2e4402410db1e1bdbc4f1e963335f00230412dbd",
+      "runtimeSHA256": "a0c99a29f974aa3f5607ca8c0cdaf4f6b1d4a98e5264a637c463bcddde118ff3",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        76
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "2153d6b44f23175dc7579891084b762f32b40662a1b370967b06f59e33a66030",
+        "d0dfa60cf7fe31030619a9a680f7cf255dd7b29bf8ee8bb15a578eff2ce5795d",
+        "bc6c59401b6b85f6d1d7292c2e4e7934111ded7239742ee14a1be7abaaf9a8cb",
+        "3facd0792de1d36e0fae1cee2519945370008b7f4009773bb98341260e51ebbc",
+        "823af1e8afe453c0c88e10a110037e3fd63917c5619f79605e8ada34c4170860",
+        "0e1cbe58b420eccf315ffdd87ae00631cc30f219001e1c62f3d4418367e0011a",
+        "b94bd7f9c9dca52f14bb60610f03ea43575c1ca3621503159b4c815278cf39f0"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot1_08",
+      "sourceSHA256": "c37593ac44bfe7f7878bfc51dd7fabe88f4cf85c1bc8653c4bc3ab5662d84bc6",
+      "runtimeSHA256": "d5bf77d510a747786376277b721d150e94b849cae6aea85fd07e15f7d78a5659",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        76
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "4024973fc0ef276046a6021865e27f925ad3e1ada8d2613db53864c90920143e",
+        "c80a7c03a06796df4dd6efc1fccfd3e35348e2992b936b58220109f9c2d6e993",
+        "af420f5508177ca72ba6d04d4f1e18a419886dc7dd5913a4ea7e9fc2f7477445",
+        "e59e86f7c362ee9dd76a75f0bba0c3b4d3596695808c4682eccf293cb7f957f3",
+        "6ed4223a868105d68d89b515c9858febf69293774de0da9401d2b5586b4539c3",
+        "c7f517b8fa454d0be9f7a4424afb72f22dc7d799b703d660f783250fdd15ad9e",
+        "6d33968f6973ac84128e0cdcb86329415db02a669dd275d3e563c504faf89274"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot1_09",
+      "sourceSHA256": "2086047f77e7d5036e9e2a4bd542fb8aed2978d42a3213547840df697c2bef61",
+      "runtimeSHA256": "37b93e06651a0c9b4cab2cc78cacc36a80ab8c67a1b62e8f7a6d14aa4b6baa82",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        76
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "dc50a8c51414404dba941809dd7620998bc595ed83336c48643a0a3caee56151",
+        "1b65f10347d08af45dcb06066a6707b7e0348aeecaff8cf6596a250807b8f1e5",
+        "882d34449589fa8b6b7ba4644c183cdd579bb81fc4d57f4f769bdca4c4467d18",
+        "26d0abc369e563b541e39a1fb65ded088f655452c203f606b470ae1aace0c45a",
+        "5a7ed6a49449f5b6c39543cd651c26e1ba0f2c8ba74921c40e837f78576c3ab0",
+        "94eb731873d4337ad11f03ed8eab43533ae77f24d297505b51b6eaa81de18951",
+        "4745365f0315af3709d7d4765cf0170d362b80219bb47e9c9bd74e036d387cf1"
+      ],
+      "potRGBABytes": 32768
+    },
+    {
+      "name": "ATransportRoot1_10",
+      "sourceSHA256": "63776c25cad34dd8879fee702ac4d01622956820a5cdd8c62dce695d5023d847",
+      "runtimeSHA256": "76f867ac331779850ad40687f7a2e56f39581d0b13cb336e0c3f477e0db5f5ef",
+      "size": [
+        224,
+        29
+      ],
+      "cell": [
+        32,
+        29
+      ],
+      "bodyTopLeft": [
+        64,
+        76
+      ],
+      "cgbi": true,
+      "alphaPreserved": true,
+      "outsideApprovedAlphaPixels": 0,
+      "poseHashes": [
+        "e569ae528ea0b8ba0fb65f8ba7b0c445e7d49bedd98671b8183de78828ddca61",
+        "1c4cde1dcb35c5faf22e2a26bccc6881bc5b8695f3c37c6176b17207ab2693e1",
+        "f54eef77224b37e03634e87ab69573297a63115360af2bdfa7da59766ea5edbe",
+        "9b4b455be00ce49d21533c39631106a61ceb56194897c1a7291128064efb4772",
+        "05a66fa22ee9a5bae7836e161e69668418d7388407ab47cc3f311baa6ac6a70c",
+        "049b5ec41750e4d319a35c4c94a0e9eec6fba2e93b063f66fac33ae58fc9b231",
+        "ebde3e23c76eab3585c15d250c2a019c564e7b960f10839ff963b93a5e85c0ab"
+      ],
+      "potRGBABytes": 32768
+    }
+  ],
+  "potRGBABytes": 655360
+}
