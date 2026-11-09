@@ -384,14 +384,17 @@ void GameSession::tick(){state_->tick();}
 void GameSession::touch(const Touch& t){state_->touch(t);}
 bool GameSession::scrollProduction(Vec2 point,float delta){
     auto& s=*state_;
-    if(!s.active||s.transition.visible()||s.mapLoadingStep<6||!s.world||s.validationOpen||s.help||s.summaryState.visible||s.supportDialog.visible()||!s.message.empty()||s.upgradeState.kind!=UpgradeDialogState::Kind::hidden)return false;
-    const bool consumed=s.hud.scrollProduction(point,delta);if(consumed)s.rebuild();return consumed;
+    if(!s.active||s.transition.visible()||s.mapLoadingStep<6||!s.world||s.validationOpen||s.help||s.summaryState.visible||s.supportDialog.visible()||!s.message.empty())return false;
+    bool consumed=false;
+    if(s.upgradeState.kind==UpgradeDialogState::Kind::units){const auto offset=s.upgradeOffset();consumed=s.upgrades.scrollUnits({point.x-offset.x,point.y-offset.y},delta);}
+    else if(s.upgradeState.kind==UpgradeDialogState::Kind::hidden)consumed=s.hud.scrollProduction(point,delta);
+    if(consumed)s.rebuild();return consumed;
 }
 void GameSession::setActive(bool active){if(!active){state_->cancelGameTouches();state_->activeTouches.clear();}state_->active=active;if(!active&&state_->world)state_->paused=true;state_->updatePause();state_->refreshHUD();state_->rebuild();}
 void GameSession::resize(float w,float h,float top,float bottom){
     auto& s=*state_;auto next=s.layout;next.resize(w,h,top,bottom);
     if(next.width==s.layout.width&&next.height==s.layout.height&&next.top==s.layout.top&&next.bottom==s.layout.bottom)return;
-    s.cancelGameTouches();s.activeTouches.clear();s.layout=next;s.hud.setLayout(s.layout);s.menu.setLayout(s.layout);
+    s.cancelGameTouches();s.activeTouches.clear();s.layout=next;s.hud.setLayout(s.layout);s.menu.setLayout(s.layout);s.upgrades.setLayout(s.layout);
     if(s.world){s.world->setUIMargin(62+s.panelOffset+s.layout.bottom);s.world->setViewport(s.layout.width,s.layout.height,s.layout.top);s.refreshHUD();}
     s.rebuild();
 }

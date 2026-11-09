@@ -4,6 +4,12 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## 2026-11-10 Web hotfix — upgrade-list overlap
+
+Adding four helicopters expanded the upgrade list to four rows, causing the unit detail panel to overlap the list and hide Ion Cannon and Vulcan entries. Updated the shared UI to position the detail panel and close button according to the list height and allow scrolling within the list on shorter screens.
+
+Chromium and WebKit cheat-build checks passed for selecting, upgrading, installing, uninstalling and reaching Lv.10 across all 18 units, and for preventing accidental purchases while dragging at four screen sizes. The fix is intended for deployment to the regular web/PWA build. Native apps remain at 0.7 (build 7), and the latest GitHub release remains v0.7.
+
 ## v0.7 — Four helicopters and title-screen extensions
 
 2026-11-10. [Play the web/PWA version](https://gelb2.github.io/MachDefense/) · [Release and installation record (Korean)](docs/evidence/v07-release-20261110.md)

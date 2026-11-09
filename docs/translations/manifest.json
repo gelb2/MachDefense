@@ -12,9 +12,9 @@
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "6afd6c44c9d785354853e622259ea70ac4b8bc86d9971681e02085c481949c9e",
-      "en_sha256": "1831dbf785e2eeffa01d7fab809a58dac9a858ef9b3cad2dcb1321115f680587",
-      "review": "2026-11-10: matched actual pre-release test scope, 56/58 core result and two unchanged earlier V5 expectation failures; deployment and iPhone installation results remain a separate release record."
+      "ko_sha256": "c7dbdf0b61aa243fd647269cc23879f12f3e6470241f4a42280d9fcefd7ebbbe",
+      "en_sha256": "2abe2b8316902daa3cdb5d2110521ed0f729a96c904b4cc9590600be00b56d8c",
+      "review": "2026-11-10: matched implemented upgrade-list layout fix, Chromium/WebKit cheat checks for all 18 units and four screen sizes, and planned regular web/PWA deployment. Native 0.7(7) and latest GitHub release v0.7 remain unchanged; production publication is not claimed."
     },
     {
       "ko": "CREDITS.md",
