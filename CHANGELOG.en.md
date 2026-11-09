@@ -4,6 +4,11 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## 2026-11-10 web hotfix — Cheyenne and Beluga HP and prices
+
+- Adjusted HP, purchase cells and upgrade credits together across Lv.1–10. Cheyenne uses 85% of same-level Plasma Mech HP; Beluga uses the midpoint between Plasma Mech and Tanker HP, rounded to the original HP unit. Both purchase and upgrade prices are 25% lower.
+- Both web cheat browsers verified HP at all 20 aircraft levels, purchase prices, actual upgrade deductions and the Lv.10 cap. [Full schedule and validation](docs/evidence/aircraft-hp-price-hotfix-20261110.md). Production web uses the regular build. The iPhone Release installation follows production web deployment.
+
 ## 2026-11-10 Web hotfix — upgrade-list overlap
 
 Adding four helicopters expanded the upgrade list to four rows, causing the unit detail panel to overlap the list and hide Ion Cannon and Vulcan entries. Updated the shared UI to position the detail panel and close button according to the list height and allow scrolling within the list on shorter screens.

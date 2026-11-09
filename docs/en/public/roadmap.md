@@ -10,6 +10,36 @@ As of 2026-11-07. See [implementation status](implementation-status.md) for what
 
 All helicopter TODO items and unfinished work are on hold to prioritize restoring the entire Mach series. This includes paint, depth, banking, range, debugging, design and performance validation. Helicopters in the release are optional: use them only if you want to. Improvements for iPad, lock-on planning and other performance and design tasks remain. [The work record and reasons for postponement](../editorial/helicopter-work-record-20261109.md).
 
+### HP and price adjustments — added 2026-11-10
+
+The HP and price adjustments below were implemented under the follow-up instruction of 2026-11-10. Other helicopter improvements remain on hold.
+
+- [x] Set Cheyenne HP 15% below Plasma Mech HP (85% of Plasma Mech HP).
+- [x] Set Beluga HP to the midpoint between Tanker HP and Plasma Mech HP at the same level.
+- [x] Reduce both purchase prices and each upgrade-step price for Cheyenne and Beluga by **25%**, alongside the HP adjustments. Use the Lv.1–10 schedule below.
+
+| Lv. | Cheyenne HP | Purchase cells | Next upgrade credits | Beluga HP | Purchase cells | Next upgrade credits |
+|---|---:|---:|---:|---:|---:|---:|
+| 1 | 850 | 216 | 420 | 1,500 | 378 | 660 |
+| 2 | 936 | 258 | 900 | 1,750 | 444 | 1,350 |
+| 3 | 1,062 | 300 | 1,800 | 2,026 | 510 | 2,700 |
+| 4 | 1,190 | 342 | 3,600 | 2,300 | 576 | 5,400 |
+| 5 | 1,360 | 390 | 7,200 | 2,700 | 645 | 10,800 |
+| 6 | 1,530 | 450 | 14,400 | 3,300 | 720 | 21,600 |
+| 7 | 1,700 | 510 | 28,800 | 3,800 | 795 | 43,200 |
+| 8 | 1,956 | 582 | 57,600 | 4,450 | 876 | 86,400 |
+| 9 | 2,210 | 660 | 115,200 | 5,200 | 960 | 172,800 |
+| 10 | 2,550 | 750 | — | 6,100 | 1,050 | — |
+
+The original loader doubles the integer HP field. Preserve that procedure by rounding HP to the nearest multiple of 2, with ties rounded up. Cheyenne differs from the calculated 85% target by at most 1 HP. Round Beluga’s midpoint HP the same way.
+
+Current Lv.7 HP is 3,410 for Cheyenne and 6,384 for Beluga. The adjusted values are **1,700** and **3,800**. Apply the purchase and upgrade prices in the table together with HP at every level.
+
+Purchase prices use production cells; upgrade prices use credits. Upgrade costs apply from the listed level to the next; Lv.10 is the cap. Total Lv.1→10 upgrade costs are **229,920 credits** for Cheyenne (previously 306,560) and **344,910 credits** for Beluga (previously 459,880).
+
+
+The shared game tables now use the matching-level values from Lv.1 to Lv.10. Both web cheat browsers verified actual HP and upgrade deductions. [Changes and validation](../../evidence/aircraft-hp-price-hotfix-20261110.md).
+
 ## Distribution and platforms
 
 - Local PWA transition, hash, reuse and 95-chunk checks passed. Compare saved progress and runtime resources during production updates as well.
