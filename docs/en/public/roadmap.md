@@ -10,6 +10,12 @@ As of 2026-11-07. See [implementation status](implementation-status.md) for what
 
 All helicopter TODO items and unfinished work are on hold to prioritize restoring the entire Mach series. This includes paint, depth, banking, range, debugging, design and performance validation. Helicopters in the release are optional: use them only if you want to. Improvements for iPad, lock-on planning and other performance and design tasks remain. [The work record and reasons for postponement](../editorial/helicopter-work-record-20261109.md).
 
+### Cheyenne’s new appearance and assets are not applied — added 2026-11-10
+
+- [ ] Cheyenne’s newly prepared appearance changes and assets have not been applied in-game. Compare the adopted source, MCB/part definitions, prepared resources, and deployed/installed web and native builds; fix the connection and verify production, upgrade previews and combat at Lv.1–10. Preserve original units, other aircraft, and Cheyenne’s current behavior and stats.
+
+Earlier connection and test records do not resolve this issue. This is an open TODO; implementation remains on hold. [Detailed TODO](../../usability-todo.md#md-aircraft-cheyenne-asset-apply-01--샤이엔-새-외형에셋-미적용).
+
 ### HP and price adjustments — added 2026-11-10
 
 The HP and price adjustments below were implemented under the follow-up instruction of 2026-11-10. Other helicopter improvements remain on hold.
@@ -33,7 +39,7 @@ The HP and price adjustments below were implemented under the follow-up instruct
 
 The original loader doubles the integer HP field. Preserve that procedure by rounding HP to the nearest multiple of 2, with ties rounded up. Cheyenne differs from the calculated 85% target by at most 1 HP. Round Beluga’s midpoint HP the same way.
 
-Current Lv.7 HP is 3,410 for Cheyenne and 6,384 for Beluga. The adjusted values are **1,700** and **3,800**. Apply the purchase and upgrade prices in the table together with HP at every level.
+Before the adjustment, Lv.7 HP was 3,410 for Cheyenne and 6,384 for Beluga. Current HP is **1,700** and **3,800**, respectively. The purchase and upgrade prices in the table were applied together with HP at every level.
 
 Purchase prices use production cells; upgrade prices use credits. Upgrade costs apply from the listed level to the next; Lv.10 is the cap. Total Lv.1→10 upgrade costs are **229,920 credits** for Cheyenne (previously 306,560) and **344,910 credits** for Beluga (previously 459,880).
 

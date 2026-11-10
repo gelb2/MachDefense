@@ -180,9 +180,9 @@
     {
       "ko": "docs/public/roadmap.md",
       "en": "docs/en/public/roadmap.md",
-      "ko_sha256": "effa3a953703e709992b45208eacb2f1186a8161a36be7d7478a39ac2f65907e",
-      "en_sha256": "1fbce467233d4441d7f8c3a1fcef730a0d0373e09e737e1729b7329a3824ccaf",
-      "review": "2026-11-10: compared applied Lv.1–10 HP and price schedule, shared table path, 25% reduction, original HP rounding, two-browser verification scope, remaining helicopter hold and deployment/install timing."
+      "ko_sha256": "ce6f7b36b9268f4740b34f24d329388860272f524c13ad559a95a70950b76439",
+      "en_sha256": "1736fcd8559cad6a6cd93de2bb346756881619cbb6b94e7bc59f8c874b450e19",
+      "review": "2026-11-10: compared the new open Cheyenne appearance/asset application issue, adopted-source-to-installed-build checks, Lv.1–10 visual verification and preservation requirements; corrected HP paragraph to applied/current tense in both languages."
     },
     {
       "ko": "LICENSE-SCOPE.md",
