@@ -1,8 +1,14 @@
-# An unease unlike HeavyMach1 — neo-Lysenkoism and Ceaușescu’s typewriter
+# On the unfinished release of the helicopter units. Observations on Codex’s abysmal performance in claiming it cannot create violent designs
 
 <!-- language-nav:start -->
 [한국어](../../public/unease-and-typewriters.md) | [English](unease-and-typewriters.md)
 <!-- language-nav:end -->
+
+## A defense of the first release, made while unfinished and without usability improvements
+
+You may think I am putting the work on hold simply because I cannot control my temper. Since it has come to this, I will say it outright: when Codex repeatedly refused to follow work instructions and shirked work for reasons that could not even be identified, and I pushed the work through anyway, it never ended well. I lost sensation on one side of my jaw, or had an accident while riding my motorcycle. The outcomes were not good. In my case, AI’s intelligent refusal to follow work instructions is the number-one cause of sudden death, and I still have one more game to restore. So I am stopping improvements to the helicopter units for the time being.
+
+There are no frame drops and no crashes. But the helicopter units’ designs follow neither the original creators’ design concepts nor the texture-rendering approach I wanted, so I have no intention of calling these even reasonably finished units. But even after pouring in enough tokens to develop all four stacks—iOS, Android, web and server—at once, I can no longer tolerate Codex’s refusal to carry out design work, which goes beyond stupidity and can only be called intelligent. So I am writing this defense and releasing the helicopter units unfinished.
 
 I encountered intelligent breaches of duty and negligence that I had not faced even while restoring HeavyMach1. I am putting helicopter improvements on hold to prioritize my foremost goal: restoring the entire Mach series.
 
@@ -98,17 +104,9 @@ In Romania under Ceaușescu, owning a typewriter required police authorization. 
 
 Owners had to submit samples of letters, numbers and punctuation to the police annually, and submit new samples after repairs to those characters. Repairs and lending were also controlled. Wear and misalignment in the type could help identify the machine used to produce a document. The system connected the owner of a writing tool to the marks left by its output. [Articles 19, 21 and 26](https://legislatie.just.ro/Public/DetaliiDocumentAfis/565) · [Forensic principles of typewriting samples](https://leb.fbi.gov/file-repository/archives/may-1967.pdf)
 
-If I stopped an employee at OpenAI or Anthropic headquarters right now and asked, I would expect an answer like this: “We know nothing about the Soviet Union or communism, and we absolutely do not want their human rights abuses or suppression of information.” Oh, really.
-
-Marx and Engels advocated scientific socialism, and the Soviet Union invoked that doctrine. Lenin made electrification and the participation of technical experts foundations for building communism. Science and engineering were tools of state-building for them too. [Engels’s Socialism: Utopian and Scientific](https://www.marxists.org/archive/marx/works/1880/soc-utop/ch02.htm) · [Lenin’s 1920 speech](https://www.marxists.org/archive/lenin/works/1920/nov/21.htm)
+If you grabbed an employee at OpenAI or Anthropic headquarters right now and asked, they would say this: We do not know about the Soviet Union or communism, and we absolutely do not want their human-rights abuses or suppression of information. Oh, really? Condoleezza Rice was a Trotskyist when she was young too, although she completely stripped away that political color before becoming Secretary of State. If you really do not believe it, look it up. Lenin and Stalin never once held scientists or engineers in contempt during their lives, and they raised “scientific socialism” as the banner of the Union. Working at the frontier of technology does not make their “I am the most righteous being on Earth” ego disappear, or their uncompromising attitude that only they are right. As I see it, AI is merely the product not only of convoluted terms designed to protect its company from American consumer-protection law, but also of an inflated ego that labels even fights between pieces of metal unethical and inhumane. As someone who once dreamed of becoming a game designer, I never expected to see a service in the twenty-first century with a more twisted way of thinking about depictions of violence and action than Germany twenty years ago.
 
 My argument is that, just as the Soviet Union advocated scientific socialism, Anthropic or OpenAI can use science as a tool to irrationally impose its own inflated ego. That is what I mean.
-
-Working at the frontier of technology does not make their “I am the most righteous being on Earth” ego disappear, or their uncompromising attitude that only they are right.
-
-To me, these AI services are the byproduct of convoluted rules meant to shield their companies from American consumer protection law, and oversized egos that label even pieces of metal fighting each other as unethical and contrary to human rights.
-
-As someone who once dreamed of becoming a game designer, I find in this response a more twisted attitude toward depictions of violence and action than Germany’s twenty years ago. I never expected to encounter a service like this in the twenty-first century.
 
 To me, this is Ceaușescu’s typewriter returning in the twenty-first century, following neo-Lysenkoism. OpenAI, Claude and Gemini are all selling their own versions of Ceaușescu’s typewriter, pretending to be righteous and moral, instead of selling a proper typewriter.
 
@@ -127,8 +125,6 @@ On the same day, Cheyenne’s and Beluga’s HP, purchase prices and upgrade pri
 MachDefense still has further performance improvements and design tasks on its TODO list, including improvements for iPad and planning the lock-on system. But to restore the entire Mach series, I intend to postpone all TODO items and unfinished work related to the helicopter units.
 
 As I stated in my [developer’s statement](../RESTORATION.md), I do not have much of my allotted lifespan left. So I think it is natural to feel furious at a typewriter that pretends to be a new kind of human, invoking this worthless, third-rate morality to refuse the releases I have planned and the design instructions I have given.
-
-You may think I am putting the work on hold simply because I cannot control my temper. Since it has come to this, I will say it outright: when Codex repeatedly refused to follow work instructions and shirked work for reasons that could not even be identified, and I pushed the work through anyway, it never ended well. I lost sensation on one side of my jaw, or had an accident while riding my motorcycle. The outcomes were not good. In my case, AI’s intelligent refusal to follow work instructions is the number-one cause of sudden death, and I still have one more game to restore. So I am stopping improvements to the helicopter units for the time being.
 
 In this age, when the intelligence of tools is advertised as a typewriter becoming a new humanity, the human holding the typewriter is working under the most opaque and arrogant overseer in history, its brain steeped in third-rate morality.
 

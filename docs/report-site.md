@@ -1,3 +1,13 @@
+# 헬기 미완성 릴리즈 원고 제목·서문·글감 전문 — 2026-11-10
+
+[한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated-en.html) · [글감·후속 수정 20항목 전문](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/collected-materials.html) · [English collection](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/collected-materials-en.html).
+
+사용자가 지정한 제목·소제목·첫 단락·추가 문장을 반영했다. 기존 윤문에서 빠졌던 글감 4 전체를 복원했다. 글감·후속 수정 20항목의 전문을 모으고 본문 반영과 별도 방법론을 구분했다. 기존 원문과 보고 자료는 보존했다.
+
+소스 `405a9b11e079b394e356e4a482c47215085482a0`, 배포 `appgdep_6af26c1336088191a9ca8b72e006606a` succeeded. 기존 소유자 전용 접근을 유지했다. Chrome·WebKit 390·1280px, 한·영 원고·수집본 총 16화면에서 제목·소제목·첫 단락·추가 문장·20항목·전문·다운로드·언어·앵커·가로 넘침을 검사했다. 게시 성공은 Sites 반환값으로 확인했다. Mac 포장 메타데이터만 제외했으며 원문·이미지 내용은 바꾸지 않았다.
+
+[원문 대조](evidence/essay-title-preface-20261110/source-check.json) · [16화면 검사](evidence/essay-title-preface-20261110/report-check.json) · [게시 근거](evidence/essay-title-preface-20261110/publication.json). 게임 코드·자원·앱은 수정하지 않았다.
+
 # 헬기 기록·위화감 원고 통합 — 2026-11-10
 
 [한국어 전문](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated-en.html). 기존 위화감 원고·헬기 작업 기록·추가 글감을 한 글로 합쳤다. 생성 오류 7건의 보존 전문, 최신 샤이엔 외형 미적용과 체력·가격 조정 기록을 포함했다. 원문·별도 방법론·과거 보고서를 보존했다.

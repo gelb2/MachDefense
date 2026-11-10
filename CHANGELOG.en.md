@@ -29,7 +29,7 @@ I encountered intelligent breaches of duty and negligence that I had not faced e
 
 The helicopter units released in this version meet neither the original creators’ aesthetic goals nor my own. Their level of finish undermines both the creators’ intentions and mine, so I recommend using the helicopter units only if you want to.
 
-[An unease unlike HeavyMach1 — neo-Lysenkoism and Ceaușescu’s typewriter](docs/en/public/unease-and-typewriters.md) · [Incident report on ignored instructions and unfinished work (Korean)](docs/evidence/aircraft-work-failure-20261109.md) · [Drawing-work refusal incident (Korean)](docs/evidence/aircraft-instruction-refusal-20261108.md) · [Troubleshooting](docs/en/public/troubleshooting.md)
+[On the unfinished release of the helicopter units. Observations on Codex’s abysmal performance in claiming it cannot create violent designs](docs/en/public/unease-and-typewriters.md) · [Incident report on ignored instructions and unfinished work (Korean)](docs/evidence/aircraft-work-failure-20261109.md) · [Drawing-work refusal incident (Korean)](docs/evidence/aircraft-instruction-refusal-20261108.md) · [Troubleshooting](docs/en/public/troubleshooting.md)
 
 ### Implementation and validation records
 

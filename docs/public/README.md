@@ -30,6 +30,6 @@
 - [나는 이렇게 일을 시켰다](work-method.md)
 - [나는 이렇게 테스트했다](testing-method.md)
 
-- [헤비멕1과는 다른 위화감 — 신 리셴코주의와 차우세스쿠의 타자기](unease-and-typewriters.md)
+- [헬기유닛 미완성 릴리즈에 대한 소고. 폭력적인 디자인을 만들 수 없다는 Codex의 저열한 성능에 대한 관측 기록](unease-and-typewriters.md)
 
 - [헬기 작업에 대한 기록 - 내가 간과한 것. 실리콘밸리에서 DEI는 수정헌법5조보다 강력하다는 사실.](../editorial/helicopter-work-record-20261109.md)

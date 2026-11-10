@@ -1,3 +1,9 @@
+# 헬기 원고 제목·변론 서문·글감 재수집 — 2026-11-10
+
+사용자가 지정한 새 제목 「헬기유닛 미완성 릴리즈에 대한 소고. 폭력적인 디자인을 만들 수 없다는 Codex의 저열한 성능에 대한 관측 기록」과 소제목을 [한·영 통합 원고](public/unease-and-typewriters.md)에 반영했다. 보류·사고 경험 원문을 소제목 바로 아래 첫 단락으로 옮기고 미완성 릴리즈 변론 문장을 원문대로 추가했다. 기존 본문에 빠졌던 글감 4를 복원했다.
+
+[글감·후속 수정 20항목 전문](editorial/helicopter-writing-inventory-20261110.md)에 사용자 글감·최신 정정·TODO 방법론·서문·작업 평가·제목 지시를 모으고 본문 반영과 별도 분리를 구분했다. [수정 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html)와 [글감 수집본](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/collected-materials.html)을 기존 소유자 전용 사이트에 한영으로 게시했다. 이번에는 문서·보고서만 수정했고 게임 구현·검사·빌드·설치는 하지 않았다. [원문 대조](evidence/essay-title-preface-20261110/source-check.json) · [16화면 검사](evidence/essay-title-preface-20261110/report-check.json).
+
 # 헬기 기록 후속 집필·원고 통합 — 2026-11-10
 
 [한·영 통합 원고](public/unease-and-typewriters.md)에 기존 위화감 원고·헬기 작업 기록·추가 글감을 합쳤다. 이미지 생성 오류 7건 전문, 승인 시안·원작 절차·움직임 누락과 경위서 책임 전가, 레퍼런스 가설과 개선 보류 이유를 연결했다. 최신 샤이엔 외형·에셋 미적용과 완료한 체력·가격 핫픽스도 구분했다. 사용자 원문·후속 정정과 별도 초안을 보존하고 방법론 원고는 분리했다. [한국어 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html)와 [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated-en.html)를 기존 소유자 전용 보고 사이트에 게시했다. [통합 내역](editorial/unease-integration-20261110.md) · [원문 대조](evidence/unease-integration-20261110/source-check.json). 게임 코드·에셋·앱은 이번 집필에서 수정하지 않았다.

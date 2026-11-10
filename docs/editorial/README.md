@@ -11,3 +11,5 @@
 [Sass 세션용 집필 안내](sass-publication-guide.md) — Apps·Mags 작업 시 참고할 원고와 검사 자료.
 
 [헬기 작업 기록 원고](helicopter-work-record-20261109.md) · [별도 방법론 글감](ai-argument-method-material-20261109.md)
+
+[현재 통합 원고](../public/unease-and-typewriters.md) · [글감·후속 수정 20항목 전문](helicopter-writing-inventory-20261110.md)

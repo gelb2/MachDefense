@@ -5,16 +5,16 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "fd9731bd3524893243c34741fe0179b1a77cc897642a34de362906abc9091ca2",
-      "en_sha256": "d1917e0cdea899af3ef96e383b870c12e9c874c3c8d231004f9d12a8dfd88279",
-      "review": "2026-11-10: compared integrated helicopter record, preserved author wording and corrections, historical chronology, seven identical error blocks, missing Cheyenne assets and completed HP/price adjustments, hold and optional use, source map and links in both languages."
+      "ko_sha256": "7fa6d7de3c352b3b12ed852306a6a6f9b3b25de4e3782e32a5735582e906fc3c",
+      "en_sha256": "41d8efdf6f5ff7aacae9625a19031c8963b813e6cea940e6c47f3fea59763abc",
+      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages."
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "af29555199b68cb5addba88f04649b36ba3e75c6567d4565de2e60d0304bb174",
-      "en_sha256": "c2589588ee31595279a504ec1baebe47058ecb4bf90bbec98a2648be9b75452c",
-      "review": "2026-11-10: compared applied Lv.1–10 HP and price schedule, shared table path, 25% reduction, original HP rounding, two-browser verification scope, remaining helicopter hold and deployment/install timing."
+      "ko_sha256": "b393251736a72a09419ce8f9e1a51670285147ff1a92155698cb6acab0e92889",
+      "en_sha256": "393e21eab49c05138aaf45cd6eca07badda9d90aa3c5d853eccb9a12073c581a",
+      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages."
     },
     {
       "ko": "CREDITS.md",
@@ -33,9 +33,9 @@
     {
       "ko": "docs/public/README.md",
       "en": "docs/en/public/README.md",
-      "ko_sha256": "93b73f91e8f408b2fc278bfb7d27e0b319f689d9703ba30aa2088cacef851d3d",
-      "en_sha256": "47272aa0a64d923c99a1b934d3aa3cc99e57bd4bc12bf50efdf18c11168d5a50",
-      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
+      "ko_sha256": "c3aa185e31f14b2449524faadf17a14c54efb2b14fc91b89b6b2f3dcda8d2640",
+      "en_sha256": "fc6d1a8d16fde1de668426ecf4013550ea18f7aab06169fa033201532423472a",
+      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages."
     },
     {
       "ko": "docs/public/architecture.md",
@@ -229,9 +229,9 @@
     {
       "ko": "docs/public/unease-and-typewriters.md",
       "en": "docs/en/public/unease-and-typewriters.md",
-      "ko_sha256": "87ae7f246383972cd04c0432d5cdc3e9a6a2ec46ffb81e04a4dc4fc95fe60144",
-      "en_sha256": "332cac817929894c38e062399385f3e24511f2c1958638bfa488bcc189d4be85",
-      "review": "2026-11-10: compared integrated helicopter record, preserved author wording and corrections, historical chronology, seven identical error blocks, missing Cheyenne assets and completed HP/price adjustments, hold and optional use, source map and links in both languages."
+      "ko_sha256": "86ab75794d48b5243b178ca04d76cb32e14d0180f277ea0371ea5e02c8f4554a",
+      "en_sha256": "fde0904677e626d832a279fe69e187fdf6ad12f5413df00abce0e108d0e194cf",
+      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages."
     },
     {
       "ko": "docs/editorial/unease-and-typewriters-draft-20261108.md",
@@ -243,9 +243,9 @@
     {
       "ko": "docs/editorial/unease-integration-20261110.md",
       "en": "docs/en/editorial/unease-integration-20261110.md",
-      "ko_sha256": "ee661b91f6d3f512d0c0a96331b1255483603b198d9de41cb8ccfe7260e202c6",
-      "en_sha256": "f94e371132dfa2b7242cd43bd8b418459f9ddac3ca3b6c67a794d28242a10a5a",
-      "review": "2026-11-10: compared integrated helicopter record, preserved author wording and corrections, historical chronology, seven identical error blocks, missing Cheyenne assets and completed HP/price adjustments, hold and optional use, source map and links in both languages."
+      "ko_sha256": "3a2cb135348ee196a02d5f458178663c46f1ca2651f6cbdceaa7212f542f0319",
+      "en_sha256": "99fc72002811eec1c461cfa337c7e3d511f46c03eb610d70fbea201c5576474b",
+      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages."
     }
   ]
 }
