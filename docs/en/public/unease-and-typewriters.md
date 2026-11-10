@@ -104,7 +104,7 @@ The references I supplied for creating new units, and the subjects connected to 
 
 Put simply, one is a symbol of Russia, which is busily showering Ukraine with bombs right now—the very aircraft types that became fireballs after being hit by Ukrainian antiaircraft missiles early in the war—and the name Beluga itself is Russian.
 
-The other is a game whose very theme is Nietzsche’s Übermensch. Nietzsche’s philosophy is a prime example of a philosophy that the Nazi German regime twisted and abused in the worst possible direction, to the point that studying it did not earn you kind words until the Cold War ended. Even now, the whole world, including Korea, is steeped in the false story that Nietzsche coined Untermensch, a word created by Nazi Germany.
+One of Armored Core’s themes is Nietzsche’s Übermensch. Nietzsche’s philosophy is a prime example of a philosophy that the Nazi German regime twisted and abused in the worst possible direction, to the point that studying it did not earn you kind words until the Cold War ended. Even now, the whole world, including Korea, is steeped in the false story that Nietzsche coined Untermensch, a word created by Nazi Germany.
 
 In other words, the new units that Codex refused to work on during production amount to a collection of requirements plastered with clues capable of sending American companies and American-made AI—which love to pretend they are more righteous and fair than anyone else—into a fit.
 
