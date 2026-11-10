@@ -126,17 +126,15 @@ MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행
 
 [현재 구현 상태](docs/public/implementation-status.md) · [문서 목차](docs/public/README.md) · [변경 이력](CHANGELOG.md) · [크레딧](CREDITS.md)
 
-## 헬기유닛 구현 중단에 대한 소고
+## 위화감 - 헬기유닛 구현 중단에 대한 소고
+
+[헬기유닛 미완성 릴리즈에 대한 소고. 폭력적인 디자인을 만들 수 없다는 Codex의 저열한 성능에 대한 관측 기록](docs/public/unease-and-typewriters.md)
+
+[현재 구현과 남은 과제](docs/public/roadmap.md)
 
 헤비멕1 복원 작업에서도 맞닥뜨리지 못한 지능적인 업무 배임과 태만이 발견됐다. Mach 시리즈 전체 복원이라는 최우선 목표를 위해 헬기유닛 개선을 보류한다.
 
 이번 버전에 출시한 헬기 유닛은 원작자의 미학적 목표와 나의 미학적 목표를 둘 다 충족하지 못한 상태다. 원작자와 나의 의도를 저해하는 완성도를 보여주므로, 헬기 유닛은 원하는 사용자만 사용하기를 권장한다.
-
-[헬기 작업과 보류 이유를 쓴 원고](docs/public/unease-and-typewriters.md) · [현재 구현과 남은 과제](docs/public/roadmap.md)
-
-## 위화감
-
-[헬기유닛 미완성 릴리즈에 대한 소고. 폭력적인 디자인을 만들 수 없다는 Codex의 저열한 성능에 대한 관측 기록](docs/public/unease-and-typewriters.md)
 
 헬기를 기획한 이유, 디자인·디버깅 업무지시 거부와 이미지 생성 오류 7건, 경위서의 책임 전가, DEI와 차우세스쿠의 타자기에 관한 비판을 담았다. [통합 내역과 원문 대응표](docs/editorial/unease-integration-20261110.md). [글감·후속 수정 20항목 전문](docs/editorial/helicopter-writing-inventory-20261110.md).
 

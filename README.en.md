@@ -126,17 +126,15 @@ Level-10 upgrades and scrolling through all INSTALLed units in the production li
 
 [Implementation status](docs/en/public/implementation-status.md) · [Documentation](docs/en/public/README.md) · [Changelog](CHANGELOG.en.md) · [Credits](CREDITS.en.md)
 
-## A note on suspending helicopter-unit development
+## Unease — a note on suspending helicopter-unit development
+
+[On the unfinished release of the helicopter units. Observations on Codex’s abysmal performance in claiming it cannot create violent designs](docs/en/public/unease-and-typewriters.md)
+
+[Current implementation and remaining work](docs/en/public/roadmap.md)
 
 I encountered intelligent breaches of duty and negligence that I had not faced even while restoring HeavyMach1. I am putting helicopter improvements on hold to prioritize my foremost goal: restoring the entire Mach series.
 
 The helicopter units released in this version meet neither the original creators’ aesthetic goals nor my own. Their level of finish undermines both the creators’ intentions and mine, so I recommend using the helicopter units only if you want to.
-
-[The helicopter work and why I am putting it on hold](docs/en/public/unease-and-typewriters.md) · [Current implementation and remaining work](docs/en/public/roadmap.md)
-
-## Unease
-
-[On the unfinished release of the helicopter units. Observations on Codex’s abysmal performance in claiming it cannot create violent designs](docs/en/public/unease-and-typewriters.md)
 
 The article covers why I planned the helicopters, refusals to carry out design and debugging instructions, all seven image-generation error records, responsibility shifted in the incident report, and criticism concerning DEI and Ceaușescu’s typewriter. [Integration and source map](docs/en/editorial/unease-integration-20261110.md). [Complete collection of 20 writing-material and revision entries](docs/en/editorial/helicopter-writing-inventory-20261110.md).
 

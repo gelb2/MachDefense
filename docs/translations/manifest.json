@@ -5,9 +5,9 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "4134d851d427f1f4a0a98d8095fe561c0c426ceff2aa22b550c303fe26a233a9",
-      "en_sha256": "cae5e556e3e7f8ed3a087b2147d18f7c3ae697dacadb04ed31c2ddf39cf8b70c",
-      "review": "2026-11-10 gameplay publication: matched original/additional feature distinction, four helicopter names and unfinished status, supplied Stage 55 image and existing video captions, full-image links and original clip times in both languages."
+      "ko_sha256": "1253473c4cb1ade32de97bd25197a611239eba2ee3496ff4c22c6af3c28c6ddd",
+      "en_sha256": "bbb1b79fc6b9804667956af648c8244e1837502edc4a49205093c5bf56405a69",
+      "review": "2026-11-10 gameplay publication and author GitHub README edit: preserved author wording and combined Unease/helicopter-hold section order; matched four helicopter names, unfinished status, supplied Stage 55 capture and existing clip captions in both languages."
     },
     {
       "ko": "CHANGELOG.md",
