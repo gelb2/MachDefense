@@ -4,7 +4,7 @@
 [한국어](../../public/roadmap.md) | [English](roadmap.md)
 <!-- language-nav:end -->
 
-As of 2026-11-07. See [implementation status](implementation-status.md) for what is released and working. The following items need research or development.
+Updated 2026-11-11. See [implementation status](implementation-status.md) for what is released and working. The following items need research or development.
 
 ## Helicopter work on hold — 2026-11-09
 
@@ -71,7 +71,7 @@ The shared game tables now use the matching-level values from Lv.1 to Lv.10. Bot
 - Directly check an installed iPhone PWA, return after photos/alarms/calls/locking, and rotation/input in both portrait orientations.
 - Investigate correction, initial loading, menus, and combat for local saves containing invalid levels. This is separate from valid-code recovery tests.
 - Further compare port name entry, price composition, English selection, filtering, MapInfo, and combat under matching random conditions.
-- Write “How I tested it” and “How I directed the work” from the author's material and validation evidence. Organize Sass writing sources separately.
+- The Korean/English “How I tested it” and “How I directed the work” articles and the [Sass writing guide (Korean)](../../editorial/sass-publication-guide.md) are written. Keep them current when features, manuscripts, or media change. The Sass session handles Apps/Mags writing and service publication.
 - Prepare a contact channel and English thank-you draft for Mesabloo. The author reviews it before sending.
 
 Detailed requirements and historical records are in the [development TODO](../../usability-todo.md). [Documentation](README.md)

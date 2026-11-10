@@ -146,6 +146,8 @@ MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행
 
 [나는 이렇게 일을 시켰다](docs/public/work-method.md) · [나는 이렇게 테스트했다](docs/public/testing-method.md)
 
+[Sass Apps·Mags 집필 자료](docs/editorial/sass-publication-guide.md)
+
 ## 라이선스와 자원
 
 이 프로젝트에서 새로 작성한 코드에는 [MIT](LICENSE)를 적용한다. [코드 적용 범위](LICENSE-SCOPE.md), [그림·음원·게임 데이터](ASSET-LICENSES.md), [외부 라이브러리 고지](THIRD_PARTY_NOTICES.md)를 구분해 정리했다.

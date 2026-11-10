@@ -5,9 +5,9 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "1253473c4cb1ade32de97bd25197a611239eba2ee3496ff4c22c6af3c28c6ddd",
-      "en_sha256": "bbb1b79fc6b9804667956af648c8244e1837502edc4a49205093c5bf56405a69",
-      "review": "2026-11-10 gameplay publication and author GitHub README edit: preserved author wording and combined Unease/helicopter-hold section order; matched four helicopter names, unfinished status, supplied Stage 55 capture and existing clip captions in both languages."
+      "ko_sha256": "8d16e978f645c0fea94cf64164a1d76060a152c485e89ac4f5e6aa2c6a6f2eec",
+      "en_sha256": "2a888cdd7f8309f57866a4d116ee8494bc3f81ac12e0928a35053c3989fb9fed",
+      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages."
     },
     {
       "ko": "CHANGELOG.md",
@@ -33,9 +33,9 @@
     {
       "ko": "docs/public/README.md",
       "en": "docs/en/public/README.md",
-      "ko_sha256": "c3aa185e31f14b2449524faadf17a14c54efb2b14fc91b89b6b2f3dcda8d2640",
-      "en_sha256": "fc6d1a8d16fde1de668426ecf4013550ea18f7aab06169fa033201532423472a",
-      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages."
+      "ko_sha256": "5488d23a69e56a8d8e2280c31ce61e90a1118637739fb84444d035e85b3c68b3",
+      "en_sha256": "a6549afc394b1be9d475f680eddbbd76606469f1674056b33f0f3123f01d4f9b",
+      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages."
     },
     {
       "ko": "docs/public/architecture.md",
@@ -173,16 +173,16 @@
     {
       "ko": "docs/public/implementation-status.md",
       "en": "docs/en/public/implementation-status.md",
-      "ko_sha256": "9b1f874b7b8d9124b8fb7ac9b3fead9a324804b95c2a3146940f79b654a22390",
-      "en_sha256": "c97e2f090a089fd5ec95bd338caa45c8e423d6279b69f735edfc0a49186629f6",
-      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved."
+      "ko_sha256": "b1430189190fd13449f5da2803e4dac246c65ce30a684657583da1b9a5d2506e",
+      "en_sha256": "1f9b55197319519dd9d454eba58b1d5f8469ee071a22967e528ce59fd97caf4b",
+      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages."
     },
     {
       "ko": "docs/public/roadmap.md",
       "en": "docs/en/public/roadmap.md",
-      "ko_sha256": "cf6ef9e0c57467f28c2db8e0ca2903847be11ba73787096b1015e52952527bb2",
-      "en_sha256": "44652c209f33d8f8f87ed4d17e75ce8d1a99490e5dc809934a1a9beac6895828",
-      "review": "2026-11-10: compared integrated helicopter record, preserved author wording and corrections, historical chronology, seven identical error blocks, missing Cheyenne assets and completed HP/price adjustments, hold and optional use, source map and links in both languages."
+      "ko_sha256": "67631f8976e733f606fa2686c2ce3b106704ea415da25f94e6e8c5cebb04a98d",
+      "en_sha256": "1639dd17bfe0abf4375a880783643eb18e79054566ab6c7068b6340a4c217c05",
+      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages."
     },
     {
       "ko": "LICENSE-SCOPE.md",
