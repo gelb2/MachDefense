@@ -5,9 +5,9 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "9247c1dab026ef6e63b90db9b856f4c8ca8aad415b39427eaf4cc28f4f985f04",
-      "en_sha256": "8e670cf5e2f019b13707d4ccfbc157769933717a1ef70aa7003460c73ff1af18",
-      "review": "2026-11-10 local editor article-ko v1: compared exact Korean payload, author-added headings and paragraphs, deletions including the Rice passage and old follow-up status, revised Scout/Cheyenne comparison, company names and ending; translated current source without restoring removed wording; all seven original error blocks and links retained."
+      "ko_sha256": "4134d851d427f1f4a0a98d8095fe561c0c426ceff2aa22b550c303fe26a233a9",
+      "en_sha256": "cae5e556e3e7f8ed3a087b2147d18f7c3ae697dacadb04ed31c2ddf39cf8b70c",
+      "review": "2026-11-10 gameplay publication: matched original/additional feature distinction, four helicopter names and unfinished status, supplied Stage 55 image and existing video captions, full-image links and original clip times in both languages."
     },
     {
       "ko": "CHANGELOG.md",
@@ -61,9 +61,9 @@
     {
       "ko": "docs/public/features.md",
       "en": "docs/en/public/features.md",
-      "ko_sha256": "b073576e1263964a06e040484e88d50fc43ee059f343cb02977758175c9946e7",
-      "en_sha256": "217635cbf8ee49f95a97c49f0195bd90a75d92768c2d8e8754fe671872d482fa",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "ko_sha256": "54ac22046219ccd78373cc76d31211f44d2f6cb3e59b3e7a8f9736d5c2fd88b2",
+      "en_sha256": "b669da5855c7783fa93c289db1f1c187c74bf7b9add01bc12d92183eb2cfee30",
+      "review": "2026-11-10 gameplay publication: matched original/additional feature distinction, four helicopter names and unfinished status, supplied Stage 55 image and existing video captions, full-image links and original clip times in both languages."
     },
     {
       "ko": "docs/public/gameplay.md",
@@ -208,9 +208,9 @@
     {
       "ko": "docs/public/gameplay-gallery.md",
       "en": "docs/en/public/gameplay-gallery.md",
-      "review": "captions, scene times, source provenance, media and navigation links",
-      "ko_sha256": "90e92f98f19437ccdc1a6e37189d4ae0135a6a1bec9d5734e2e007c94d49d521",
-      "en_sha256": "ae30117595857040606477da0c029242862fd8e5b1e1b5ecda30c65598b30075"
+      "review": "2026-11-10 gameplay publication: matched original/additional feature distinction, four helicopter names and unfinished status, supplied Stage 55 image and existing video captions, full-image links and original clip times in both languages.",
+      "ko_sha256": "c3d0961f0c5109b3878970b6e455d3f782cd4e48668f945ac6b87d3435498bbb",
+      "en_sha256": "024ea497a5f3336a0458e5214036aa52e57d0a65220e8a8890c36fad4a0c8522"
     },
     {
       "ko": "docs/public/work-method.md",

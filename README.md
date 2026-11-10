@@ -48,6 +48,10 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 ![보유 장비와 강화 단계](docs/evidence/images/android-20261106/normal-iphone-upgrades.png)
 
+## 게임 플레이 캡처
+
+내가 직접 플레이하며 녹화한 전투와 특수공격 장면이다. 짧은 영상은 원래 재생 속도와 HUD를 포함한 화면 전체를 유지했다.
+
 <img src="docs/public/media/gameplay-20261107/combat.gif" alt="포탑 사격과 메크 교전" width="360">
 
 [12초 전투 영상](docs/public/media/gameplay-20261107/combat.mp4) · [전체 캡처와 영상](docs/public/gameplay-gallery.md)
@@ -60,6 +64,10 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 ## 내가 기획해 추가한 기능
 
+아래는 원작에 없던 기능과 원작의 상한을 확장한 내용이다. 내가 기획과 동작·수치·외형 기준을 정했고, Codex가 코드와 그림을 만들었다.
+
+### 긴급지원
+
 긴급지원은 원작 복원과 별개로 내가 구상한 기능이다. 타워디펜스의 난관이 결국 결제로 산 아이템을 써야 넘어갈 수 있는 것으로 바뀌는 것이 마음에 걸렸다. 작동하지 않는 인앱결제 버튼을 긴급지원 창으로 바꾼 이유다.
 
 한 번 받고 끝내는 지원을 원한 것은 아니었다. 게임 시간에 따라 소량의 크레딧과 셀을 반복해서 받도록 했다. 사용자가 결제 없이 난관을 돌파할 수 있게 하고 싶었다. 지급량은 현재 셀 용량과 생산량, 미션 보상을 기준으로 계산했다. 지급 간격·반복 수령·자원 용량을 고려한 계산을 지시했고, Codex가 공통 C++ 코드와 원작 에셋으로 구현했다.
@@ -68,6 +76,20 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 <img src="docs/public/media/gameplay-20261107/resupply.jpg" alt="전투 중 긴급지원 수령" width="360">
 
 [지원 수령 장면: 9초 영상](docs/public/media/gameplay-20261107/resupply.mp4)
+
+### 헬기 유닛 4종
+
+스카웃·샤이엔·벨루가·AH-10은 원작에 없던 아군 유닛이다. 기존의 맷집·공격력·배치 외에도 비유도 발사체를 피하는 움직임으로 전투를 풀 수 있도록 기획했다. 선회하며 싸우고, 긴급회피 중에는 잠시 피해를 받지 않도록 했다. 기존 메크·포탑의 무장·발사 효과·소리를 재사용하며, 회피 때는 채프·플레어를 뿌린다. 네 기체 모두 Lv.10까지 강화한다.
+
+<a href="docs/public/media/gameplay-20261110/iphone-stage55-helicopters.png"><img src="docs/public/media/gameplay-20261110/iphone-stage55-helicopters.png" alt="Stage 55: 스카웃·샤이엔과 메크가 교전하고 오른쪽 생산 목록에 헬기 4종이 표시된 화면" width="360"></a>
+
+내가 제공한 Stage 55 플레이 캡처다. 전장의 스카웃·샤이엔과 메크, 오른쪽 목록의 스카웃·샤이엔·벨루가·AH-10을 볼 수 있다. [원본 크기 캡처](docs/public/media/gameplay-20261110/iphone-stage55-helicopters.png) · [게임 플레이 캡처 모음](docs/public/gameplay-gallery.md)
+
+헬기는 미완성 상태로 출시했다. 도색·질감·입체감과 선회 외형·사거리 관련 과제가 남아 있고, 추가 개선은 보류했다. 원하는 사용자만 사용하기를 권장한다. [헬기 작업과 보류 이유](docs/public/unease-and-typewriters.md)
+
+### 10레벨 강화와 생산 목록 스크롤
+
+원작에서 강화 상한이 10보다 낮았던 포탑·기지·특수공격에 추가 단계를 만들었다. 새 단계의 성능·가격을 정하고, 포탑 몸체와 기지 부품에는 채택한 추가 그림을 연결했다. INSTALL한 전체 유닛은 오른쪽 생산 목록을 스크롤해 선택한다. [추가 단계·화면·플랫폼 기능](docs/public/features.md)
 
 ## 화면·플랫폼 확장과 검증 도구
 

@@ -7,6 +7,12 @@
 
 아이폰과 Galaxy에서 직접 플레이하며 찍은 화면이다. 영상은 2026년 11월 6일과 7일 아이폰에서 녹화했다. 원본 영상 두 개는 4분 12초, 4분 16초다. 아래 클립은 재생 속도와 HUD를 포함한 화면 전체를 유지했다.
 
+## Stage 55: 헬기와 메크의 교전
+
+<a href="media/gameplay-20261110/iphone-stage55-helicopters.png"><img src="media/gameplay-20261110/iphone-stage55-helicopters.png" alt="Stage 55: 헬기와 메크의 교전" width="360"></a>
+
+스카웃·샤이엔과 메크가 함께 교전하고, 오른쪽 생산 목록에 스카웃·샤이엔·벨루가·AH-10이 표시된다. 사용자가 바탕화면에 제공한 IMG_1199.PNG를 자르거나 다시 그리지 않고 그대로 저장했다. [원본 크기 이미지와 출처](media/gameplay-20261110/scenes.json).
+
 ## 전투 영상
 
 ### 포탑 사격과 메크 교전
