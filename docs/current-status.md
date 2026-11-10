@@ -1,3 +1,23 @@
+# 로컬 에디터 사용자 수정본 v1 반영 — 2026-11-10
+
+바탕화면의 article-ko v1 저장본을 [한국어 원고](public/unease-and-typewriters.md)에 바이트 그대로 적용했다. 소제목·문장 추가·삭제·말투·줄바꿈을 임의로 고치지 않았다. [영문 원고](en/public/unease-and-typewriters.md)도 현재 한국어의 6개 소제목과 본문에 맞췄다. 생성 오류 7개 JSON 블록은 보존했다. [보고 사이트](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html)의 한영 본문·다운로드·편집기 초기 원고도 갱신했다. 기존 글감 수집본과 통합 내역은 작성 당시 기록으로 구분했다.
+
+[반영 기록](editorial/editor-sync-state.json) · [원문 해시·대조](evidence/editor-import-20261110/source-check.json). 게임 코드·에셋·앱은 변경하지 않았다. 아래는 이전 작업 기록이다.
+
+# 원고 로컬 편집기 — 2026-11-10
+
+기존 보고 사이트에 [로컬 편집기](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-manuscript-editor-20261110/)를 게시했다. 서버 저장 없이 브라우저와 내려받는 파일에 수정본을 보관한다. 사용자가 수정했다고 채팅에 통보하면 [정해진 절차](editorial/local-editor-workflow.md)로 그 파일을 원문 그대로 적용하고 커밋·푸시·develop→main 병합을 진행한다. 저장 버튼이 GitHub를 변경하지 않는다. 기존 원고·게임 코드는 보존했다. [검사 결과](evidence/local-manuscript-editor-20261110/check-summary.md).
+
+# 헬기 원고 제목·변론 서문·글감 재수집 — 2026-11-10
+
+사용자가 지정한 새 제목 「헬기유닛 미완성 릴리즈에 대한 소고. 폭력적인 디자인을 만들 수 없다는 Codex의 저열한 성능에 대한 관측 기록」과 소제목을 [한·영 통합 원고](public/unease-and-typewriters.md)에 반영했다. 보류·사고 경험 원문을 소제목 바로 아래 첫 단락으로 옮기고 미완성 릴리즈 변론 문장을 원문대로 추가했다. 기존 본문에 빠졌던 글감 4를 복원했다.
+
+[글감·후속 수정 20항목 전문](editorial/helicopter-writing-inventory-20261110.md)에 사용자 글감·최신 정정·TODO 방법론·서문·작업 평가·제목 지시를 모으고 본문 반영과 별도 분리를 구분했다. [수정 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html)와 [글감 수집본](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/collected-materials.html)을 기존 소유자 전용 사이트에 한영으로 게시했다. 이번에는 문서·보고서만 수정했고 게임 구현·검사·빌드·설치는 하지 않았다. [원문 대조](evidence/essay-title-preface-20261110/source-check.json) · [16화면 검사](evidence/essay-title-preface-20261110/report-check.json).
+
+# 헬기 기록 후속 집필·원고 통합 — 2026-11-10
+
+[한·영 통합 원고](public/unease-and-typewriters.md)에 기존 위화감 원고·헬기 작업 기록·추가 글감을 합쳤다. 이미지 생성 오류 7건 전문, 승인 시안·원작 절차·움직임 누락과 경위서 책임 전가, 레퍼런스 가설과 개선 보류 이유를 연결했다. 최신 샤이엔 외형·에셋 미적용과 완료한 체력·가격 핫픽스도 구분했다. 사용자 원문·후속 정정과 별도 초안을 보존하고 방법론 원고는 분리했다. [한국어 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html)와 [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated-en.html)를 기존 소유자 전용 보고 사이트에 게시했다. [통합 내역](editorial/unease-integration-20261110.md) · [원문 대조](evidence/unease-integration-20261110/source-check.json). 게임 코드·에셋·앱은 이번 집필에서 수정하지 않았다.
+
 # 헬기 관련 작업 전체 보류 — 2026-11-09
 
 사용자는 Mach 시리즈 전체 복원을 우선하기 위해 헬기 유닛과 관련된 모든 TODO와 미완성 작업을 보류했다. 토큰 사용량과 반복된 업무지시 거부·태업으로 추가 디버깅과 디자인 개선을 단기적으로 진행할 수 없다는 판단이다. 아래 헬기 항목의 과거 순서·착수 표현보다 이 지시를 우선한다. 별도 재개 지시 전에는 헬기 디버깅·디자인·도색·입체감·선회·사거리·파츠·레벨 외형·효과·성능 검증 작업을 재개하지 않는다. 기존 요구·실패·미완료 기록은 보존한다.

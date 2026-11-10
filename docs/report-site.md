@@ -1,3 +1,35 @@
+# 사용자 로컬 수정본 v1 게시 — 2026-11-10
+
+[한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated-en.html). 사용자가 저장한 한국어를 바이트 그대로 반영하고 영문·다운로드·편집기 초기 원고를 맞췄다. 기존 로컬 편집기와 소유자 전용 접근을 유지했다.
+
+소스 `3849c943735a472e99e829aa6bcea6bad9cdd287`, 배포 `appgdep_6af27f8e3b0081919d653c15339b483c` succeeded. Chrome·WebKit 390·1280px, 원고·수집본의 한영 16화면에서 전문·다운로드 바이트·소제목·오류7건·언어 전환·앵커·가로 넘침을 확인했다. 기존 사이트의 최신 원격 변경도 보존했다. 최초 포장 용량 초과 뒤 USTAR로 다시 포장했고 1,323개 파일의 경로·내용이 동일함을 검사했다.
+
+[입력 원문 대조](evidence/editor-import-20261110/source-check.json) · [16화면 검사](evidence/editor-import-20261110/report-check.json) · [게시 근거](evidence/editor-import-20261110/publication.json). 게임 코드·자원·앱은 변경하지 않았다.
+
+# 원고 로컬 편집기 — 2026-11-10
+
+[원고 편집 열기](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-manuscript-editor-20261110/). 원고·글감 한국어·영어 네 문서에 편집 링크를 붙였다. 저장은 브라우저와 내려받는 로컬 파일에서만 처리한다. 사용자가 채팅으로 수정 통보를 하면 그 파일을 읽어 기존 GitHub 커밋·푸시·작업 브랜치→develop→main 병합을 진행한다. 서버 저장과 GitHub 자동 쓰기는 없다.
+
+Chrome·WebKit 네 화면의 저장·다운로드·복원·충돌·실패 보존을 확인했다. 편집·저장의 서버 쓰기·외부 전송은 0건이다. 기존 소유자 전용 접근, 보고서 본문과 이미지, static 배포를 보존했다. source `5817e9dd6d195626357c1c6144fdf3f9e29ab35d`, 배포 `appgdep_6af272d91ef48191bc8987214bc20cfc` succeeded. [검사·보존·게시](evidence/local-manuscript-editor-20261110/check-summary.md) · [통보 뒤 반영 절차](editorial/local-editor-workflow.md).
+
+# 헬기 미완성 릴리즈 원고 제목·서문·글감 전문 — 2026-11-10
+
+[한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated-en.html) · [글감·후속 수정 20항목 전문](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/collected-materials.html) · [English collection](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/collected-materials-en.html).
+
+사용자가 지정한 제목·소제목·첫 단락·추가 문장을 반영했다. 기존 윤문에서 빠졌던 글감 4 전체를 복원했다. 글감·후속 수정 20항목의 전문을 모으고 본문 반영과 별도 방법론을 구분했다. 기존 원문과 보고 자료는 보존했다.
+
+소스 `405a9b11e079b394e356e4a482c47215085482a0`, 배포 `appgdep_6af26c1336088191a9ca8b72e006606a` succeeded. 기존 소유자 전용 접근을 유지했다. Chrome·WebKit 390·1280px, 한·영 원고·수집본 총 16화면에서 제목·소제목·첫 단락·추가 문장·20항목·전문·다운로드·언어·앵커·가로 넘침을 검사했다. 게시 성공은 Sites 반환값으로 확인했다. Mac 포장 메타데이터만 제외했으며 원문·이미지 내용은 바꾸지 않았다.
+
+[원문 대조](evidence/essay-title-preface-20261110/source-check.json) · [16화면 검사](evidence/essay-title-preface-20261110/report-check.json) · [게시 근거](evidence/essay-title-preface-20261110/publication.json). 게임 코드·자원·앱은 수정하지 않았다.
+
+# 헬기 기록·위화감 원고 통합 — 2026-11-10
+
+[한국어 전문](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated-en.html). 기존 위화감 원고·헬기 작업 기록·추가 글감을 한 글로 합쳤다. 생성 오류 7건의 보존 전문, 최신 샤이엔 외형 미적용과 체력·가격 조정 기록을 포함했다. 원문·별도 방법론·과거 보고서를 보존했다.
+
+기존 소유자 전용 접근을 유지해 게시했다. 소스 `215588e1b6fd6bf771260fa77c862113217309bf`, 배포 `appgdep_6af262e1d0888191a50d1755010ea10c` succeeded. Chrome·WebKit 390·1280px 총 8화면의 전문·다운로드·언어 전환·오류 앵커·가로 넘침 검사를 통과했다. 게시 성공은 Sites 반환값으로 확인했다. 초기 게시 실패는 256MiB 한도 초과였으며 macOS 포장 메타데이터만 제외해 다시 포장했다. 본문·JSON·이미지는 바꾸지 않았다.
+
+[통합 내역](editorial/unease-integration-20261110.md) · [원문 대조](evidence/unease-integration-20261110/source-check.json) · [화면 검사](evidence/unease-integration-20261110/report-check.json) · [게시 근거](evidence/unease-integration-20261110/publication.json). 게임 코드·자원·앱은 이번 집필에서 변경하지 않았다.
+
 # 가로 자연물 재시안·세로 채택 — 2026-11-09
 
 [현재 합성 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-title-composite-20261109/). 앞선 가로의 메크 다리·탱크 차체 연장은 지시 불이행으로 기각했다. 가로 바깥을 자연물만으로 다시 그렸고 기체 반사·연장 처리를 제거했다. 원본과 외곽의 색·명암 경계는 남아 있다. 세로 두 번째 시안을 채택본으로 고정했고 파일과 Chrome·WebKit 합성 픽셀이 이전과 같은지 확인했다.

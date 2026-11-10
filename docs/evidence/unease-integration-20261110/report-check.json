@@ -1,0 +1,103 @@
+{
+  "environment": "local report preview",
+  "url": "http://127.0.0.1:8992/md-unease-20261108/integrated.html",
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "key": "integrated",
+      "full_text": true,
+      "error_blocks": 7,
+      "download_equal": true,
+      "language_switch": true,
+      "error_anchor": true,
+      "no_horizontal_overflow": true,
+      "page_errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "key": "integrated-en",
+      "full_text": true,
+      "error_blocks": 7,
+      "download_equal": true,
+      "language_switch": true,
+      "error_anchor": true,
+      "no_horizontal_overflow": true,
+      "page_errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "key": "integrated",
+      "full_text": true,
+      "error_blocks": 7,
+      "download_equal": true,
+      "language_switch": true,
+      "error_anchor": true,
+      "no_horizontal_overflow": true,
+      "page_errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "key": "integrated-en",
+      "full_text": true,
+      "error_blocks": 7,
+      "download_equal": true,
+      "language_switch": true,
+      "error_anchor": true,
+      "no_horizontal_overflow": true,
+      "page_errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "key": "integrated",
+      "full_text": true,
+      "error_blocks": 7,
+      "download_equal": true,
+      "language_switch": true,
+      "error_anchor": true,
+      "no_horizontal_overflow": true,
+      "page_errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "key": "integrated-en",
+      "full_text": true,
+      "error_blocks": 7,
+      "download_equal": true,
+      "language_switch": true,
+      "error_anchor": true,
+      "no_horizontal_overflow": true,
+      "page_errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "key": "integrated",
+      "full_text": true,
+      "error_blocks": 7,
+      "download_equal": true,
+      "language_switch": true,
+      "error_anchor": true,
+      "no_horizontal_overflow": true,
+      "page_errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "key": "integrated-en",
+      "full_text": true,
+      "error_blocks": 7,
+      "download_equal": true,
+      "language_switch": true,
+      "error_anchor": true,
+      "no_horizontal_overflow": true,
+      "page_errors": []
+    }
+  ],
+  "ok": true
+}

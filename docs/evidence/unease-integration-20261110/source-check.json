@@ -1,0 +1,28 @@
+{
+  "baseline": "b2ba929",
+  "checks": {
+    "verbatim_material_9": true,
+    "verbatim_material_10": true,
+    "verbatim_material_11": true,
+    "verbatim_material_12": true,
+    "ko_error_blocks_equal": true,
+    "en_error_blocks_equal": true,
+    "seven_error_records": true,
+    "author_final_correction": true,
+    "science_correction": true,
+    "method_separate": true,
+    "existing_anchors": true,
+    "no_new_subheadings": true,
+    "preserved_sources": true
+  },
+  "source_sha256": {
+    "docs__en__public__unease-and-typewriters.md": "306edb5e101ca4e23306b82c0d1595a779f1e2f5b55468152595cb9551536440",
+    "docs__editorial__aircraft-refusal-materials-20261109.md": "33c427d845a64087d9c7ab1360d15dd5b5b5c1aa666cbc5994fee1e3b416fb9d",
+    "docs__editorial__ai-argument-method-material-20261109.md": "9505ababc0d951ecc8d1bd8a968b075ade73e1eaf1fe70e63bc9c5a2a23f183a",
+    "docs__en__editorial__helicopter-work-record-20261109.md": "74c71fef3faf81abef149486c624333fef32f0bf40439b9859c9e753df8a1662",
+    "docs__editorial__helicopter-work-record-20261109.md": "043f609e06717aeff9b420527b15fbc90ebaeb4050d19e5d31398f4a38e5c809",
+    "docs__public__unease-and-typewriters.md": "d645a24c4221a20e62be4d0f64bfa112d97ff1204abd0f9b2d2b783421408729"
+  },
+  "ko_sha256": "87ae7f246383972cd04c0432d5cdc3e9a6a2ec46ffb81e04a4dc4fc95fe60144",
+  "en_sha256": "332cac817929894c38e062399385f3e24511f2c1958638bfa488bcc189d4be85"
+}

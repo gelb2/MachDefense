@@ -114,9 +114,9 @@ The helicopter units released in this version meet neither the original creators
 
 ## Unease
 
-[An unease unlike HeavyMach1 — neo-Lysenkoism and Ceaușescu’s typewriter](docs/en/public/unease-and-typewriters.md)
+[On the unfinished release of the helicopter units. Observations on Codex’s abysmal performance in claiming it cannot create violent designs](docs/en/public/unease-and-typewriters.md)
 
-I recorded the helicopter design, repeated refusals to follow instructions and changes to the artwork, the shifting of responsibility in the incident report, and why I put the work on hold. The later [helicopter work record](docs/en/editorial/helicopter-work-record-20261109.md) and [additional writing material](docs/en/editorial/aircraft-refusal-materials-20261109.md) are connected through an [article structure and source map](docs/en/editorial/unease-integration-20261110.md) prepared for combining them into one article.
+The article covers why I planned the helicopters, refusals to carry out design and debugging instructions, all seven image-generation error records, responsibility shifted in the incident report, and criticism concerning DEI and Ceaușescu’s typewriter. [Integration and source map](docs/en/editorial/unease-integration-20261110.md). [Complete collection of 20 writing-material and revision entries](docs/en/editorial/helicopter-writing-inventory-20261110.md).
 
 [Incident report on ignored instructions and unfinished work (Korean)](docs/evidence/aircraft-work-failure-20261109.md) · [Drawing-work refusal incident (Korean)](docs/evidence/aircraft-instruction-refusal-20261108.md) · [Visual-error record (Korean)](docs/evidence/new-unit-art-errors-20261108.md) · [Troubleshooting](docs/en/public/troubleshooting.md)
 

@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "documents": {
+    "article-ko": {
+      "version": 1,
+      "contentSha256": "bb557aa6dd4186a9ec7024687ba83686a9b239edc20d10e223d485f95dcbcf61",
+      "sourceSha256": "86ab75794d48b5243b178ca04d76cb32e14d0180f277ea0371ea5e02c8f4554a",
+      "sourceCommit": "0c3a7dfef1165ee189dc2122b384ccaee095ac50",
+      "savedAt": "2026-11-10T02:05:31.761Z",
+      "siteProjectId": "appgprj_6addbf55aea081918d3d182d7e496e88"
+    }
+  }
+}

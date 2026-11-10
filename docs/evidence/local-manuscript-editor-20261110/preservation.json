@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "static_site_retained": true,
+    "no_runtime_binding": true,
+    "source_manuscripts_unchanged": true,
+    "preserved_article_integrated.html": true,
+    "preserved_article_integrated-en.html": true,
+    "preserved_article_collected-materials.html": true,
+    "preserved_article_collected-materials-en.html": true
+  },
+  "editor_sha256": "b514d2387a3c83df6f7eb91a85cfa7f3cd3362086c228676b9743ff13f78e1e3",
+  "seed_sha256": "a0f47f476a913f8938446941f7e804aba20742bfa1274043bb04c469092dad89",
+  "unused_server_prototype_deployed": false,
+  "manuscript_table_deployed": false
+}
