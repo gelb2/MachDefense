@@ -5,9 +5,9 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "79c6e569bc1e046a2b850b82bd36924a499b4f17bd777ff52d67558e913dca21",
-      "en_sha256": "dc8f68d30d7547e9f1b4faf558a724617950b65536baba54e16406135064bedc",
-      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
+      "ko_sha256": "fd9731bd3524893243c34741fe0179b1a77cc897642a34de362906abc9091ca2",
+      "en_sha256": "d1917e0cdea899af3ef96e383b870c12e9c874c3c8d231004f9d12a8dfd88279",
+      "review": "2026-11-10: compared integrated helicopter record, preserved author wording and corrections, historical chronology, seven identical error blocks, missing Cheyenne assets and completed HP/price adjustments, hold and optional use, source map and links in both languages."
     },
     {
       "ko": "CHANGELOG.md",
@@ -180,9 +180,9 @@
     {
       "ko": "docs/public/roadmap.md",
       "en": "docs/en/public/roadmap.md",
-      "ko_sha256": "ce6f7b36b9268f4740b34f24d329388860272f524c13ad559a95a70950b76439",
-      "en_sha256": "1736fcd8559cad6a6cd93de2bb346756881619cbb6b94e7bc59f8c874b450e19",
-      "review": "2026-11-10: compared the new open Cheyenne appearance/asset application issue, adopted-source-to-installed-build checks, Lv.1–10 visual verification and preservation requirements; corrected HP paragraph to applied/current tense in both languages."
+      "ko_sha256": "cf6ef9e0c57467f28c2db8e0ca2903847be11ba73787096b1015e52952527bb2",
+      "en_sha256": "44652c209f33d8f8f87ed4d17e75ce8d1a99490e5dc809934a1a9beac6895828",
+      "review": "2026-11-10: compared integrated helicopter record, preserved author wording and corrections, historical chronology, seven identical error blocks, missing Cheyenne assets and completed HP/price adjustments, hold and optional use, source map and links in both languages."
     },
     {
       "ko": "LICENSE-SCOPE.md",
@@ -229,9 +229,9 @@
     {
       "ko": "docs/public/unease-and-typewriters.md",
       "en": "docs/en/public/unease-and-typewriters.md",
-      "ko_sha256": "d645a24c4221a20e62be4d0f64bfa112d97ff1204abd0f9b2d2b783421408729",
-      "en_sha256": "306edb5e101ca4e23306b82c0d1595a779f1e2f5b55468152595cb9551536440",
-      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
+      "ko_sha256": "87ae7f246383972cd04c0432d5cdc3e9a6a2ec46ffb81e04a4dc4fc95fe60144",
+      "en_sha256": "332cac817929894c38e062399385f3e24511f2c1958638bfa488bcc189d4be85",
+      "review": "2026-11-10: compared integrated helicopter record, preserved author wording and corrections, historical chronology, seven identical error blocks, missing Cheyenne assets and completed HP/price adjustments, hold and optional use, source map and links in both languages."
     },
     {
       "ko": "docs/editorial/unease-and-typewriters-draft-20261108.md",
@@ -243,9 +243,9 @@
     {
       "ko": "docs/editorial/unease-integration-20261110.md",
       "en": "docs/en/editorial/unease-integration-20261110.md",
-      "ko_sha256": "fcc782fb925596ff458c39519768f1600ee3c91a16ba165f2db2cf658759e5d1",
-      "en_sha256": "3ac5b0a4e55a09f361a0954cc1160e635687b805241a4cf3036e9a2f49e97ab9",
-      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
+      "ko_sha256": "ee661b91f6d3f512d0c0a96331b1255483603b198d9de41cb8ccfe7260e202c6",
+      "en_sha256": "f94e371132dfa2b7242cd43bd8b418459f9ddac3ca3b6c67a794d28242a10a5a",
+      "review": "2026-11-10: compared integrated helicopter record, preserved author wording and corrections, historical chronology, seven identical error blocks, missing Cheyenne assets and completed HP/price adjustments, hold and optional use, source map and links in both languages."
     }
   ]
 }

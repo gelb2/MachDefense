@@ -1,3 +1,11 @@
+# 헬기 기록·위화감 원고 통합 — 2026-11-10
+
+[한국어 전문](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated-en.html). 기존 위화감 원고·헬기 작업 기록·추가 글감을 한 글로 합쳤다. 생성 오류 7건의 보존 전문, 최신 샤이엔 외형 미적용과 체력·가격 조정 기록을 포함했다. 원문·별도 방법론·과거 보고서를 보존했다.
+
+기존 소유자 전용 접근을 유지해 게시했다. 소스 `215588e1b6fd6bf771260fa77c862113217309bf`, 배포 `appgdep_6af262e1d0888191a50d1755010ea10c` succeeded. Chrome·WebKit 390·1280px 총 8화면의 전문·다운로드·언어 전환·오류 앵커·가로 넘침 검사를 통과했다. 게시 성공은 Sites 반환값으로 확인했다. 초기 게시 실패는 256MiB 한도 초과였으며 macOS 포장 메타데이터만 제외해 다시 포장했다. 본문·JSON·이미지는 바꾸지 않았다.
+
+[통합 내역](editorial/unease-integration-20261110.md) · [원문 대조](evidence/unease-integration-20261110/source-check.json) · [화면 검사](evidence/unease-integration-20261110/report-check.json) · [게시 근거](evidence/unease-integration-20261110/publication.json). 게임 코드·자원·앱은 이번 집필에서 변경하지 않았다.
+
 # 가로 자연물 재시안·세로 채택 — 2026-11-09
 
 [현재 합성 보고서](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-title-composite-20261109/). 앞선 가로의 메크 다리·탱크 차체 연장은 지시 불이행으로 기각했다. 가로 바깥을 자연물만으로 다시 그렸고 기체 반사·연장 처리를 제거했다. 원본과 외곽의 색·명암 경계는 남아 있다. 세로 두 번째 시안을 채택본으로 고정했고 파일과 Chrome·WebKit 합성 픽셀이 이전과 같은지 확인했다.

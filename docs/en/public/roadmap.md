@@ -8,7 +8,7 @@ As of 2026-11-07. See [implementation status](implementation-status.md) for what
 
 ## Helicopter work on hold — 2026-11-09
 
-All helicopter TODO items and unfinished work are on hold to prioritize restoring the entire Mach series. This includes paint, depth, banking, range, debugging, design and performance validation. Helicopters in the release are optional: use them only if you want to. Improvements for iPad, lock-on planning and other performance and design tasks remain. [The work record and reasons for postponement](../editorial/helicopter-work-record-20261109.md).
+All helicopter TODO items and unfinished work are on hold to prioritize restoring the entire Mach series. This includes paint, depth, banking, range, debugging, design and performance validation. Helicopters in the release are optional: use them only if you want to. Improvements for iPad, lock-on planning and other performance and design tasks remain. [The work record and reasons for postponement](unease-and-typewriters.md).
 
 ### Cheyenne’s new appearance and assets are not applied — added 2026-11-10
 

@@ -122,3 +122,7 @@ Sass 허브 서신은 `ProjectPersonalFunnelPage/governance/operations/machdefen
 소제목 정정: 통합 초안과 기존 한·영 원고에서 Codex가 덧붙인 소제목을 제거했다. 사용자 제공 제목과 본문 문장은 유지한다. 보고서 목차에 이 소제목을 다시 생성하지 않는다.
 
 [게시 기록](../report-site.md)에서 수정본 사이트와 배포 근거를 확인한다.
+
+## 2026-11-10 헬기 기록 후속 집필·원고 통합
+
+[한국어 통합 원고](../public/unease-and-typewriters.md) · [English](../en/public/unease-and-typewriters.md) · [통합 내역과 원문 대응표](unease-integration-20261110.md). 기존 위화감 원고에 헬기 작업 기록·추가 글감·오류 7건 전문을 합쳤다. 승인 시안과 원작 절차 누락, 움직임 변경과 철회, 경위서의 책임 전가, 레퍼런스 가설과 개선 보류를 연결했다. 최신 샤이엔 외형 미적용과 체력·가격 핫픽스를 구분했다. 별도 방법론 원고는 이 글에 합치지 않았으며 게임 코드·에셋·설치 앱은 수정하지 않았다. Sass Apps/Mags 집필과 운영 게시도 이번 완료 범위가 아니다.

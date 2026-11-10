@@ -116,7 +116,7 @@ MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행
 
 [헤비멕1과는 다른 위화감 — 신 리셴코주의와 차우세스쿠의 타자기](docs/public/unease-and-typewriters.md)
 
-헬기 기획, 반복된 업무지시 거부와 디자인 변경, 경위서의 책임 전가, 작업을 보류한 이유를 기록했다. 이후의 [헬기 작업 기록](docs/editorial/helicopter-work-record-20261109.md)과 [추가 글감](docs/editorial/aircraft-refusal-materials-20261109.md)을 한 글로 묶기 위한 [구성과 원문 대응표](docs/editorial/unease-integration-20261110.md)도 연결했다.
+헬기 기획, 반복된 업무지시 거부와 디자인 변경, 원작 절차 누락, 경위서의 책임 전가, 레퍼런스 가설과 개선 보류 이유를 한 글로 합쳤다. 이미지 생성 오류 7건의 전문, 최신 샤이엔 외형·에셋 미적용과 체력·가격 조정 기록도 같은 글에서 읽을 수 있다. [통합 내역과 원문 대응표](docs/editorial/unease-integration-20261110.md).
 
 [지시 불이행·미완료 경위서](docs/evidence/aircraft-work-failure-20261109.md) · [도안 작업 거부 경위서](docs/evidence/aircraft-instruction-refusal-20261108.md) · [외형 오류 기록](docs/evidence/new-unit-art-errors-20261108.md) · [트러블슈팅](docs/public/troubleshooting.md)
 

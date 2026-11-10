@@ -1,0 +1,20 @@
+{
+  "ko": {
+    "source": "docs/public/unease-and-typewriters.md",
+    "sha256": "87ae7f246383972cd04c0432d5cdc3e9a6a2ec46ffb81e04a4dc4fc95fe60144",
+    "characters_including_markdown_and_whitespace": 18433,
+    "paragraphs": 88,
+    "error_blocks": 7,
+    "full_render_text_equal": true,
+    "download_byte_equal": true
+  },
+  "en": {
+    "source": "docs/en/public/unease-and-typewriters.md",
+    "sha256": "332cac817929894c38e062399385f3e24511f2c1958638bfa488bcc189d4be85",
+    "characters_including_markdown_and_whitespace": 32923,
+    "paragraphs": 90,
+    "error_blocks": 7,
+    "full_render_text_equal": true,
+    "download_byte_equal": true
+  }
+}
