@@ -25,6 +25,8 @@
 
 과거 자료: [웹·PWA 첫 릴리스 당시 초안](web-pwa-release-draft.md). 세부 개발 기록은 각 문서의 근거 링크와 [개발 TODO](../usability-todo.md)에서 확인한다.
 
+- [Sass Apps·Mags 집필 안내와 미디어 자료](../editorial/sass-publication-guide.md)
+
 ## 작업 지시와 검증 경험
 
 - [나는 이렇게 일을 시켰다](work-method.md)

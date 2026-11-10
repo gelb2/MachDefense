@@ -124,7 +124,18 @@
       "docs/translations/scope.json",
       "docs/editorial/sass-publication-guide.md",
       "docs/public/work-method.md",
-      "docs/public/testing-method.md"
+      "docs/public/testing-method.md",
+      "docs/editorial/README.md",
+      "docs/public/implementation-status.md",
+      "docs/public/roadmap.md",
+      "docs/public/gameplay-gallery.md",
+      "docs/public/media/gameplay-20261107/scenes.json",
+      "docs/public/media/gameplay-20261110/scenes.json",
+      "docs/public/unease-and-typewriters.md",
+      "docs/editorial/helicopter-writing-inventory-20261110.md",
+      "docs/editorial/ai-argument-method-material-20261109.md",
+      "docs/editorial/local-editor-workflow.md",
+      "docs/evidence/sass-guide-refresh-20261111.json"
     ],
     "repository": [
       "docs/repository-management.md",

@@ -1,0 +1,76 @@
+{
+  "reviewed": "2026-11-11",
+  "reference_main": "80f6a037bce2617aba3486e1cd70618c67a0bd49",
+  "release": {
+    "tag": "v0.7",
+    "url": "https://github.com/gelb2/MachDefense/releases/tag/v0.7",
+    "assets": [
+      "android-SHA256SUMS.txt",
+      "desktop-SHA256SUMS.txt",
+      "MachDefense-Desktop-v0.7-arm64.app.tar.gz",
+      "MachDefense-Desktop-v0.7-arm64.app.tar.gz.sig",
+      "MachDefense-Desktop-v0.7-arm64.zip",
+      "MachDefense-v0.7-cheat-arm64.apk",
+      "MachDefense-v0.7-normal-arm64.apk",
+      "tauri-update.json"
+    ]
+  },
+  "hp_hotfix": {
+    "main": "9fbd39ed71ae17e3a765b37311e0b7406ed41a31",
+    "web_build": {
+      "version": "f9f26e94f1d4e3d6",
+      "cheat": false
+    },
+    "web_update": {
+      "version": "f9f26e94f1d4e3d6",
+      "previousVersion": "191e310b7d6c18ea",
+      "savePreserved": true,
+      "runtimeTablesMatch": true,
+      "offlineSavePreserved": true,
+      "previousCacheRetained": true,
+      "ok": true
+    },
+    "iphone": {
+      "sourceCommit": "9fbd39ed71ae17e3a765b37311e0b7406ed41a31",
+      "normalRelease": true,
+      "version": "0.7",
+      "build": "7",
+      "signatureVerified": true,
+      "testBundlesAbsent": true,
+      "installSucceeded": true,
+      "launchSucceeded": true,
+      "physicalTitleObserved": true,
+      "appTerminated": true,
+      "homeScreenObserved": true
+    },
+    "save_review": {
+      "before_launch_byte_identical": true,
+      "after_launch_only_selection_timestamp_and_checksum_changed": true,
+      "progress_fields_identical": true
+    },
+    "source_evidence_file": "deployment-result.json"
+  },
+  "intro_media": {
+    "stills": 10,
+    "gifs": 2,
+    "mp4s": 3,
+    "new_scene": "stage55-helicopters",
+    "capture_build": "not recorded"
+  },
+  "author_text_preserved": [
+    "docs/RESTORATION.md",
+    "docs/editorial/developer-interview-20261106.md",
+    "docs/public/unease-and-typewriters.md",
+    "docs/en/public/unease-and-typewriters.md",
+    "docs/editorial/helicopter-writing-inventory-20261110.md",
+    "docs/en/editorial/helicopter-writing-inventory-20261110.md"
+  ],
+  "author_source_sha256": {
+    "docs/RESTORATION.md": "8d2340416f3cf96af9075e28987ef203febffc330f947574612e5444cd06d19d",
+    "docs/editorial/developer-interview-20261106.md": "1ca58e4f71939165660814f4414e3c4faccd00679208995d1bb0d5e516c62d40",
+    "docs/public/unease-and-typewriters.md": "6287cc619caf09d454477faf717fb67c257190b7bf70bf25bad2612309ed25b2",
+    "docs/en/public/unease-and-typewriters.md": "3a8fbe96a0839eba10a94c4d0fab86520ada662f683945bbeb2cceda29495fad",
+    "docs/editorial/helicopter-writing-inventory-20261110.md": "543969be4bb33f5746f23111a42d8d49d404c95017e3b445f252deba59ee5954",
+    "docs/en/editorial/helicopter-writing-inventory-20261110.md": "c21f6153dd48c36746edf88ea39522d2ca165209a4b298c24e3b77860c59a284"
+  }
+}

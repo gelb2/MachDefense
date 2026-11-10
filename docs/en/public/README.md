@@ -25,6 +25,8 @@
 
 Historical material: [draft for the first web/PWA release](../../public/web-pwa-release-draft.md). Detailed development records are available through each document's evidence links and the [development TODO](../../usability-todo.md).
 
+- [Sass Apps/Mags writing guide and media sources (Korean)](../../editorial/sass-publication-guide.md)
+
 ## Directing and testing the work
 
 - [How I directed the work](work-method.md)
