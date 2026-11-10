@@ -5,9 +5,9 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "7fa6d7de3c352b3b12ed852306a6a6f9b3b25de4e3782e32a5735582e906fc3c",
-      "en_sha256": "41d8efdf6f5ff7aacae9625a19031c8963b813e6cea940e6c47f3fea59763abc",
-      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages."
+      "ko_sha256": "9247c1dab026ef6e63b90db9b856f4c8ca8aad415b39427eaf4cc28f4f985f04",
+      "en_sha256": "8e670cf5e2f019b13707d4ccfbc157769933717a1ef70aa7003460c73ff1af18",
+      "review": "2026-11-10 local editor article-ko v1: compared exact Korean payload, author-added headings and paragraphs, deletions including the Rice passage and old follow-up status, revised Scout/Cheyenne comparison, company names and ending; translated current source without restoring removed wording; all seven original error blocks and links retained."
     },
     {
       "ko": "CHANGELOG.md",
@@ -229,9 +229,9 @@
     {
       "ko": "docs/public/unease-and-typewriters.md",
       "en": "docs/en/public/unease-and-typewriters.md",
-      "ko_sha256": "86ab75794d48b5243b178ca04d76cb32e14d0180f277ea0371ea5e02c8f4554a",
-      "en_sha256": "fde0904677e626d832a279fe69e187fdf6ad12f5413df00abce0e108d0e194cf",
-      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages."
+      "ko_sha256": "bb557aa6dd4186a9ec7024687ba83686a9b239edc20d10e223d485f95dcbcf61",
+      "en_sha256": "995afce9e34a8e2780d54a98ad035cfb781a032c72ad705de59feaa954f337ae",
+      "review": "2026-11-10 local editor article-ko v1: compared exact Korean payload, author-added headings and paragraphs, deletions including the Rice passage and old follow-up status, revised Scout/Cheyenne comparison, company names and ending; translated current source without restoring removed wording; all seven original error blocks and links retained."
     },
     {
       "ko": "docs/editorial/unease-and-typewriters-draft-20261108.md",
@@ -243,9 +243,9 @@
     {
       "ko": "docs/editorial/unease-integration-20261110.md",
       "en": "docs/en/editorial/unease-integration-20261110.md",
-      "ko_sha256": "3a2cb135348ee196a02d5f458178663c46f1ca2651f6cbdceaa7212f542f0319",
-      "en_sha256": "99fc72002811eec1c461cfa337c7e3d511f46c03eb610d70fbea201c5576474b",
-      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages."
+      "ko_sha256": "6e817e5c364692633208571e27d094e4b32e9c473dd2e6a913416ab0e9466b9d",
+      "en_sha256": "513b5cfdd400970ef07bde7bd46246ec0060a80398ac1b1afeb6da0faa2bc66e",
+      "review": "2026-11-10 local editor article-ko v1: compared exact Korean payload, author-added headings and paragraphs, deletions including the Rice passage and old follow-up status, revised Scout/Cheyenne comparison, company names and ending; translated current source without restoring removed wording; all seven original error blocks and links retained."
     }
   ]
 }

@@ -4,6 +4,8 @@
 [한국어](../../editorial/unease-integration-20261110.md) | [English](unease-integration-20261110.md)
 <!-- language-nav:end -->
 
+**Current article: article-ko v1 saved by the author in the local editor on 2026-11-10.** The integration and restoration notes below record their respective earlier stages. The current Korean article is byte-for-byte the author’s revision, including additions, deletions, headings and voice. Deleted sentences were not restored. [Import evidence](../../evidence/editor-import-20261110/source-check.json).
+
 2026-11-10. The title is now **On the unfinished release of the helicopter units. Observations on Codex’s abysmal performance in claiming it cannot create violent designs**. Its previous title was “An unease unlike HeavyMach1 — neo-Lysenkoism and Ceaușescu’s typewriter.” The README’s “Unease” section and the release notes link to [this article](../public/unease-and-typewriters.md). The original article, November 9 helicopter work record and additional source materials are now combined into one article. The hold and optional-use preface leads into the design intent, failures, refusals, hypothesis, historical sources and remaining time. All seven image-generation error records appear at the end of the same article. The November 10 missing Cheyenne assets and HP/price hotfix are separate follow-up events. Source texts and separate drafts are preserved.
 
 ## Integrated article and source map

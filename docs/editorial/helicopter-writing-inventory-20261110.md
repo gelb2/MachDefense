@@ -4,6 +4,8 @@
 [한국어](helicopter-writing-inventory-20261110.md) | [English](../en/editorial/helicopter-writing-inventory-20261110.md)
 <!-- language-nav:end -->
 
+이 수집본의 원문과 반영 표는 최초 수집 당시의 기록이다. 현재 통합 글은 이후 사용자가 직접 수정한 article-ko v1을 따른다. 사용자가 삭제·변경한 문구를 이 표를 근거로 다시 넣지 않는다. [현재 원고](../public/unease-and-typewriters.md) · [수정 반영 근거](../evidence/editor-import-20261110/source-check.json).
+
 2026-11-10. 이 대화의 집필용 글감·후속 정정과 TODO 원문을 20항목으로 모았다. 게임 구현 지시나 일상 대화 전체를 글감으로 세지 않는다. 원문 수집과 통합 본문 반영은 아래에서 구분한다. 별도 방법론을 본문에 합치지 않는다.
 
 | 번호 | 글감·후속 지시 | 현재 반영 |

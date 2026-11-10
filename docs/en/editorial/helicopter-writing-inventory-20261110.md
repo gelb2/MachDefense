@@ -4,6 +4,8 @@
 [한국어](../../editorial/helicopter-writing-inventory-20261110.md) | [English](helicopter-writing-inventory-20261110.md)
 <!-- language-nav:end -->
 
+The originals and treatment table in this collection record the initial collection stage. The current article follows the author’s later article-ko v1 revision. This table is not grounds for restoring wording the author deleted or changed. [Current article](../public/unease-and-typewriters.md) · [Import evidence](../../evidence/editor-import-20261110/source-check.json).
+
 2026-11-10. Twenty entries collect the writing material, subsequent revisions and TODO original from this conversation. General conversation and game-implementation instructions are not all counted as writing material. Collection of the original is distinguished from inclusion in the integrated article. The separate methodology is not merged into that article.
 
 | No. | Material or subsequent instruction | Current treatment |

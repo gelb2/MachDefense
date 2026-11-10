@@ -1,0 +1,18 @@
+{
+  "source_filename": "MachDefense-editor-article-ko-20261110020531761-v1.json",
+  "document_id": "article-ko",
+  "version": 1,
+  "saved_at": "2026-11-10T02:05:31.761Z",
+  "source_commit": "0c3a7dfef1165ee189dc2122b384ccaee095ac50",
+  "source_sha256": "86ab75794d48b5243b178ca04d76cb32e14d0180f277ea0371ea5e02c8f4554a",
+  "content_sha256": "bb557aa6dd4186a9ec7024687ba83686a9b239edc20d10e223d485f95dcbcf61",
+  "english_sha256": "995afce9e34a8e2780d54a98ad035cfb781a032c72ad705de59feaa954f337ae",
+  "checks": {
+    "korean_exact_saved_content": true,
+    "korean_sha256_matches": true,
+    "english_six_headings": true,
+    "korean_six_headings": true,
+    "desktop_export_not_staged": true,
+    "seven_error_blocks_preserved": true
+  }
+}

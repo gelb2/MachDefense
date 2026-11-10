@@ -1,3 +1,9 @@
+# 로컬 에디터 사용자 수정본 v1 반영 — 2026-11-10
+
+바탕화면의 article-ko v1 저장본을 [한국어 원고](public/unease-and-typewriters.md)에 바이트 그대로 적용했다. 소제목·문장 추가·삭제·말투·줄바꿈을 임의로 고치지 않았다. [영문 원고](en/public/unease-and-typewriters.md)도 현재 한국어의 6개 소제목과 본문에 맞췄다. 생성 오류 7개 JSON 블록은 보존했다. 기존 글감 수집본과 통합 내역은 작성 당시 기록으로 구분했다.
+
+[반영 기록](editorial/editor-sync-state.json) · [원문 해시·대조](evidence/editor-import-20261110/source-check.json). 게임 코드·에셋·앱은 변경하지 않았다. 아래는 이전 작업 기록이다.
+
 # 원고 로컬 편집기 — 2026-11-10
 
 기존 보고 사이트에 [로컬 편집기](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-manuscript-editor-20261110/)를 게시했다. 서버 저장 없이 브라우저와 내려받는 파일에 수정본을 보관한다. 사용자가 수정했다고 채팅에 통보하면 [정해진 절차](editorial/local-editor-workflow.md)로 그 파일을 원문 그대로 적용하고 커밋·푸시·develop→main 병합을 진행한다. 저장 버튼이 GitHub를 변경하지 않는다. 기존 원고·게임 코드는 보존했다. [검사 결과](evidence/local-manuscript-editor-20261110/check-summary.md).

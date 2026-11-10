@@ -116,7 +116,7 @@ MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행
 
 [헬기유닛 미완성 릴리즈에 대한 소고. 폭력적인 디자인을 만들 수 없다는 Codex의 저열한 성능에 대한 관측 기록](docs/public/unease-and-typewriters.md)
 
-헬기 기획, 반복된 업무지시 거부와 디자인 변경, 원작 절차 누락, 경위서의 책임 전가, 레퍼런스 가설과 개선 보류 이유를 한 글로 합쳤다. 이미지 생성 오류 7건의 전문, 최신 샤이엔 외형·에셋 미적용과 체력·가격 조정 기록도 같은 글에서 읽을 수 있다. [통합 내역과 원문 대응표](docs/editorial/unease-integration-20261110.md). [글감·후속 수정 20항목 전문](docs/editorial/helicopter-writing-inventory-20261110.md).
+헬기를 기획한 이유, 디자인·디버깅 업무지시 거부와 이미지 생성 오류 7건, 경위서의 책임 전가, DEI와 차우세스쿠의 타자기에 관한 비판을 담았다. [통합 내역과 원문 대응표](docs/editorial/unease-integration-20261110.md). [글감·후속 수정 20항목 전문](docs/editorial/helicopter-writing-inventory-20261110.md).
 
 [지시 불이행·미완료 경위서](docs/evidence/aircraft-work-failure-20261109.md) · [도안 작업 거부 경위서](docs/evidence/aircraft-instruction-refusal-20261108.md) · [외형 오류 기록](docs/evidence/new-unit-art-errors-20261108.md) · [트러블슈팅](docs/public/troubleshooting.md)
 
