@@ -229,9 +229,9 @@
     {
       "ko": "docs/public/unease-and-typewriters.md",
       "en": "docs/en/public/unease-and-typewriters.md",
-      "ko_sha256": "bb557aa6dd4186a9ec7024687ba83686a9b239edc20d10e223d485f95dcbcf61",
-      "en_sha256": "995afce9e34a8e2780d54a98ad035cfb781a032c72ad705de59feaa954f337ae",
-      "review": "2026-11-10 local editor article-ko v1: compared exact Korean payload, author-added headings and paragraphs, deletions including the Rice passage and old follow-up status, revised Scout/Cheyenne comparison, company names and ending; translated current source without restoring removed wording; all seven original error blocks and links retained."
+      "ko_sha256": "6287cc619caf09d454477faf717fb67c257190b7bf70bf25bad2612309ed25b2",
+      "en_sha256": "3a8fbe96a0839eba10a94c4d0fab86520ada662f683945bbeb2cceda29495fad",
+      "review": "2026-11-10 author correction: Armored Core explicitly named; Nietzsche’s Übermensch described as one of its themes. Only the specified Korean clause and corresponding English sentence changed."
     },
     {
       "ko": "docs/editorial/unease-and-typewriters-draft-20261108.md",
