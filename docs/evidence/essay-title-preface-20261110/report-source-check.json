@@ -1,0 +1,38 @@
+{
+  "integrated": {
+    "source": "docs/public/unease-and-typewriters.md",
+    "sha256": "86ab75794d48b5243b178ca04d76cb32e14d0180f277ea0371ea5e02c8f4554a",
+    "characters_including_markdown_and_whitespace": 18603,
+    "paragraphs": 85,
+    "error_blocks": 7,
+    "full_render_text_equal": true,
+    "download_byte_equal": true
+  },
+  "integrated-en": {
+    "source": "docs/en/public/unease-and-typewriters.md",
+    "sha256": "fde0904677e626d832a279fe69e187fdf6ad12f5413df00abce0e108d0e194cf",
+    "characters_including_markdown_and_whitespace": 33471,
+    "paragraphs": 87,
+    "error_blocks": 7,
+    "full_render_text_equal": true,
+    "download_byte_equal": true
+  },
+  "collected-materials": {
+    "source": "docs/editorial/helicopter-writing-inventory-20261110.md",
+    "sha256": "d33331e0157d59ef0a955483f76c2819110f86f24907f8c0fffbd0bf740bf399",
+    "characters_including_markdown_and_whitespace": 11945,
+    "paragraphs": 46,
+    "error_blocks": 0,
+    "full_render_text_equal": true,
+    "download_byte_equal": true
+  },
+  "collected-materials-en": {
+    "source": "docs/en/editorial/helicopter-writing-inventory-20261110.md",
+    "sha256": "28665440e5f367cd3dddad63c040bccf8c2749357c4e4e57f1abe75b50da84d7",
+    "characters_including_markdown_and_whitespace": 25774,
+    "paragraphs": 48,
+    "error_blocks": 0,
+    "full_render_text_equal": true,
+    "download_byte_equal": true
+  }
+}

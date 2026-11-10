@@ -1,0 +1,41 @@
+{
+  "source_commit": "822edf1d9e51f02e688dcf8cd670ff408dca5348",
+  "documents": {
+    "integrated": {
+      "source": "docs/public/unease-and-typewriters.md",
+      "sha256": "bb557aa6dd4186a9ec7024687ba83686a9b239edc20d10e223d485f95dcbcf61",
+      "full_text_equal": true,
+      "download_byte_equal": true,
+      "h2_count": 6,
+      "error_blocks": 7,
+      "editor_link_preserved": true
+    },
+    "integrated-en": {
+      "source": "docs/en/public/unease-and-typewriters.md",
+      "sha256": "995afce9e34a8e2780d54a98ad035cfb781a032c72ad705de59feaa954f337ae",
+      "full_text_equal": true,
+      "download_byte_equal": true,
+      "h2_count": 6,
+      "error_blocks": 7,
+      "editor_link_preserved": true
+    },
+    "collected-materials": {
+      "source": "docs/editorial/helicopter-writing-inventory-20261110.md",
+      "sha256": "543969be4bb33f5746f23111a42d8d49d404c95017e3b445f252deba59ee5954",
+      "full_text_equal": true,
+      "download_byte_equal": true,
+      "h2_count": 20,
+      "error_blocks": 0,
+      "editor_link_preserved": true
+    },
+    "collected-materials-en": {
+      "source": "docs/en/editorial/helicopter-writing-inventory-20261110.md",
+      "sha256": "c21f6153dd48c36746edf88ea39522d2ca165209a4b298c24e3b77860c59a284",
+      "full_text_equal": true,
+      "download_byte_equal": true,
+      "h2_count": 20,
+      "error_blocks": 0,
+      "editor_link_preserved": true
+    }
+  }
+}

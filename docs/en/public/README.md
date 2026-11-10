@@ -30,6 +30,6 @@ Historical material: [draft for the first web/PWA release](../../public/web-pwa-
 - [How I directed the work](work-method.md)
 - [How I tested the game](testing-method.md)
 
-- [An unease unlike HeavyMach1 — neo-Lysenkoism and Ceaușescu’s typewriter](unease-and-typewriters.md)
+- [On the unfinished release of the helicopter units. Observations on Codex’s abysmal performance in claiming it cannot create violent designs](unease-and-typewriters.md)
 
 - [A record of the helicopter work — what I overlooked](../editorial/helicopter-work-record-20261109.md)

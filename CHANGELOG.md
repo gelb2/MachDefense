@@ -29,7 +29,7 @@ Chromium·WebKit 웹 치트 빌드에서 18개 유닛의 선택·강화·장착�
 
 이번 버전에 출시한 헬기 유닛은 원작자의 미학적 목표와 나의 미학적 목표를 둘 다 충족하지 못한 상태다. 원작자와 나의 의도를 저해하는 완성도를 보여주므로, 헬기 유닛은 원하는 사용자만 사용하기를 권장한다.
 
-[헤비멕1과는 다른 위화감 — 신 리셴코주의와 차우세스쿠의 타자기](docs/public/unease-and-typewriters.md) · [지시 불이행·미완료 경위서](docs/evidence/aircraft-work-failure-20261109.md) · [도안 작업 거부 경위서](docs/evidence/aircraft-instruction-refusal-20261108.md) · [트러블슈팅](docs/public/troubleshooting.md)
+[헬기유닛 미완성 릴리즈에 대한 소고. 폭력적인 디자인을 만들 수 없다는 Codex의 저열한 성능에 대한 관측 기록](docs/public/unease-and-typewriters.md) · [지시 불이행·미완료 경위서](docs/evidence/aircraft-work-failure-20261109.md) · [도안 작업 거부 경위서](docs/evidence/aircraft-instruction-refusal-20261108.md) · [트러블슈팅](docs/public/troubleshooting.md)
 
 ### 구현과 검사 근거
 

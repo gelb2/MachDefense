@@ -5,16 +5,16 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "79c6e569bc1e046a2b850b82bd36924a499b4f17bd777ff52d67558e913dca21",
-      "en_sha256": "dc8f68d30d7547e9f1b4faf558a724617950b65536baba54e16406135064bedc",
-      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
+      "ko_sha256": "9247c1dab026ef6e63b90db9b856f4c8ca8aad415b39427eaf4cc28f4f985f04",
+      "en_sha256": "8e670cf5e2f019b13707d4ccfbc157769933717a1ef70aa7003460c73ff1af18",
+      "review": "2026-11-10 local editor article-ko v1: compared exact Korean payload, author-added headings and paragraphs, deletions including the Rice passage and old follow-up status, revised Scout/Cheyenne comparison, company names and ending; translated current source without restoring removed wording; all seven original error blocks and links retained."
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "af29555199b68cb5addba88f04649b36ba3e75c6567d4565de2e60d0304bb174",
-      "en_sha256": "c2589588ee31595279a504ec1baebe47058ecb4bf90bbec98a2648be9b75452c",
-      "review": "2026-11-10: compared applied Lv.1–10 HP and price schedule, shared table path, 25% reduction, original HP rounding, two-browser verification scope, remaining helicopter hold and deployment/install timing."
+      "ko_sha256": "b393251736a72a09419ce8f9e1a51670285147ff1a92155698cb6acab0e92889",
+      "en_sha256": "393e21eab49c05138aaf45cd6eca07badda9d90aa3c5d853eccb9a12073c581a",
+      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages."
     },
     {
       "ko": "CREDITS.md",
@@ -33,9 +33,9 @@
     {
       "ko": "docs/public/README.md",
       "en": "docs/en/public/README.md",
-      "ko_sha256": "93b73f91e8f408b2fc278bfb7d27e0b319f689d9703ba30aa2088cacef851d3d",
-      "en_sha256": "47272aa0a64d923c99a1b934d3aa3cc99e57bd4bc12bf50efdf18c11168d5a50",
-      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
+      "ko_sha256": "c3aa185e31f14b2449524faadf17a14c54efb2b14fc91b89b6b2f3dcda8d2640",
+      "en_sha256": "fc6d1a8d16fde1de668426ecf4013550ea18f7aab06169fa033201532423472a",
+      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages."
     },
     {
       "ko": "docs/public/architecture.md",
@@ -180,9 +180,9 @@
     {
       "ko": "docs/public/roadmap.md",
       "en": "docs/en/public/roadmap.md",
-      "ko_sha256": "effa3a953703e709992b45208eacb2f1186a8161a36be7d7478a39ac2f65907e",
-      "en_sha256": "1fbce467233d4441d7f8c3a1fcef730a0d0373e09e737e1729b7329a3824ccaf",
-      "review": "2026-11-10: compared applied Lv.1–10 HP and price schedule, shared table path, 25% reduction, original HP rounding, two-browser verification scope, remaining helicopter hold and deployment/install timing."
+      "ko_sha256": "cf6ef9e0c57467f28c2db8e0ca2903847be11ba73787096b1015e52952527bb2",
+      "en_sha256": "44652c209f33d8f8f87ed4d17e75ce8d1a99490e5dc809934a1a9beac6895828",
+      "review": "2026-11-10: compared integrated helicopter record, preserved author wording and corrections, historical chronology, seven identical error blocks, missing Cheyenne assets and completed HP/price adjustments, hold and optional use, source map and links in both languages."
     },
     {
       "ko": "LICENSE-SCOPE.md",
@@ -229,9 +229,9 @@
     {
       "ko": "docs/public/unease-and-typewriters.md",
       "en": "docs/en/public/unease-and-typewriters.md",
-      "ko_sha256": "d645a24c4221a20e62be4d0f64bfa112d97ff1204abd0f9b2d2b783421408729",
-      "en_sha256": "306edb5e101ca4e23306b82c0d1595a779f1e2f5b55468152595cb9551536440",
-      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
+      "ko_sha256": "bb557aa6dd4186a9ec7024687ba83686a9b239edc20d10e223d485f95dcbcf61",
+      "en_sha256": "995afce9e34a8e2780d54a98ad035cfb781a032c72ad705de59feaa954f337ae",
+      "review": "2026-11-10 local editor article-ko v1: compared exact Korean payload, author-added headings and paragraphs, deletions including the Rice passage and old follow-up status, revised Scout/Cheyenne comparison, company names and ending; translated current source without restoring removed wording; all seven original error blocks and links retained."
     },
     {
       "ko": "docs/editorial/unease-and-typewriters-draft-20261108.md",
@@ -243,9 +243,9 @@
     {
       "ko": "docs/editorial/unease-integration-20261110.md",
       "en": "docs/en/editorial/unease-integration-20261110.md",
-      "ko_sha256": "fcc782fb925596ff458c39519768f1600ee3c91a16ba165f2db2cf658759e5d1",
-      "en_sha256": "3ac5b0a4e55a09f361a0954cc1160e635687b805241a4cf3036e9a2f49e97ab9",
-      "review": "2026-11-10: compared Korean/English release scope, helicopter hold and optional-use wording, author corrections, source-preservation mapping and links. New release validation remains in the release evidence record; no blanket crash/performance claim."
+      "ko_sha256": "6e817e5c364692633208571e27d094e4b32e9c473dd2e6a913416ab0e9466b9d",
+      "en_sha256": "513b5cfdd400970ef07bde7bd46246ec0060a80398ac1b1afeb6da0faa2bc66e",
+      "review": "2026-11-10 local editor article-ko v1: compared exact Korean payload, author-added headings and paragraphs, deletions including the Rice passage and old follow-up status, revised Scout/Cheyenne comparison, company names and ending; translated current source without restoring removed wording; all seven original error blocks and links retained."
     }
   ]
 }
