@@ -146,6 +146,8 @@ I recorded how I used plans and reports to check the scope of changes, and compa
 
 [How I directed the work](docs/en/public/work-method.md) · [How I tested the game](docs/en/public/testing-method.md)
 
+[Sass Apps/Mags writing sources (Korean)](docs/editorial/sass-publication-guide.md)
+
 ## License and resources
 
 Newly written code in this project uses [MIT](LICENSE). See [code scope](LICENSE-SCOPE.en.md), [artwork, audio, and game data](ASSET-LICENSES.en.md), and [third-party notices](THIRD_PARTY_NOTICES.en.md) for their respective terms.
