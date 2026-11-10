@@ -20,6 +20,14 @@ Pausing the game also pauses resupply time. The calculation uses shared game tim
 
 I specified the intervals, recurring claims, and capacity-aware supplies. Codex proposed the formulas and implemented the amounts I chose in shared C++. I confirmed receipt in the actual app. [Calculations and examples](../../emergency-resupply-economy.md) · [Implementation and device checks](../../evidence/emergency-resupply-20261105.md)
 
+## Four helicopter units
+
+Scout, Cheyenne, Beluga, and AH-10 were added as allied units absent from the original game. I designed circling flight and emergency evasion to avoid unguided projectiles, with brief invulnerability and chaff and flares during a dodge. They reuse existing mech and turret weapons, firing effects, and sounds. All four have a maximum upgrade level of 10.
+
+The [Stage 55 gameplay capture](gameplay-gallery.md#stage-55-helicopters-and-mechs-in-combat) shows helicopters fighting alongside mechs and the production list. Cheyenne and Beluga health, purchase costs, and upgrade costs follow the [per-level adjustments (Korean)](../../evidence/aircraft-hp-price-hotfix-20261110.md).
+
+The helicopters are unfinished. Paint, texture, depth, banking appearance, and range issues remain, and improvement work is on hold. I recommend using them only if you want to. [Helicopter work record and reasons for the hold](unease-and-typewriters.md)
+
 ## Level-10 upgrades and production-list scrolling
 
 59 upgrade steps were added across 6 turret types, base attack and defense, and 5 special attacks, bringing permanent upgrade caps to 10. Existing levels retain their statistics, art, and sounds. The new turret levels use original Lv.5 weapon art and the original final-level sounds. Accepted new artwork is used for turret bodies at Lv.6–10 and base parts at Lv.8–10. [v0.5 artwork and checks](../../evidence/v05-release-20261107.md). Turret damage, health, and range increase, as do base attack and defense. Special attacks increase damage, projectile count, radius, or freeze duration according to their type. [All values](../../research/level10-plan-20261107.md)

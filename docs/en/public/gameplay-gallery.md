@@ -7,6 +7,12 @@
 
 These are captures from my own gameplay on iPhone and Galaxy. I recorded the videos on my iPhone on November 6 and 7, 2026. The two recordings run for 4:12 and 4:16. The clips below keep their original speed and full screen, including the HUD.
 
+## Stage 55: helicopters and mechs in combat
+
+<a href="../../public/media/gameplay-20261110/iphone-stage55-helicopters.png"><img src="../../public/media/gameplay-20261110/iphone-stage55-helicopters.png" alt="Stage 55: helicopters and mechs in combat" width="360"></a>
+
+Scout and Cheyenne helicopters fight alongside mechs. The production list on the right includes Scout, Cheyenne, Beluga, and AH-10. IMG_1199.PNG, supplied on the desktop, was saved unchanged, without cropping or redrawing. [Full-size image and source record](../../public/media/gameplay-20261110/scenes.json).
+
 ## Combat clips
 
 ### Turret fire and mech combat

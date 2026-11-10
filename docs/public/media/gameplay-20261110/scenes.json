@@ -1,0 +1,41 @@
+{
+  "date_added": "2026-11-10",
+  "sources": [
+    {
+      "id": "IMG_1199",
+      "filename": "IMG_1199.PNG",
+      "sha256": "64a6d9f630159ffa2032a522347e0f445748d8ab20f6fad04e5281570133d831",
+      "bytes": 3645926,
+      "width": 1260,
+      "height": 2736,
+      "capture": "user gameplay",
+      "platform": "not independently identified",
+      "build": "not recorded"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "stage55-helicopters",
+      "source": "IMG_1199",
+      "file": "iphone-stage55-helicopters.png",
+      "sha256": "64a6d9f630159ffa2032a522347e0f445748d8ab20f6fad04e5281570133d831",
+      "caption_ko": "Stage 55: 스카웃·샤이엔과 메크의 교전. 오른쪽 생산 목록에는 헬기 4종이 보인다.",
+      "caption_en": "Stage 55: Scout and Cheyenne helicopters fighting alongside mechs. All four helicopter types appear in the production list.",
+      "transform": "none; byte-for-byte copy of the supplied PNG"
+    }
+  ],
+  "reused_videos": [
+    {
+      "filename": "ScreenRecording_11-06-2026 09-56-15_1.mov",
+      "sha256": "07d17f7c3a2ad4c390af63c547d860420cc16a89435946765c95ab1af6b7acf1",
+      "existing_scene_manifest": "../gameplay-20261107/scenes.json",
+      "desktop_source_matches": true
+    },
+    {
+      "filename": "ScreenRecording_11-07-2026 02-25-50_1.mov",
+      "sha256": "76f9b9dfd670d288c6721fecc15b7d8e41f09ab43e8fe40eaa8006804ec23ea9",
+      "existing_scene_manifest": "../gameplay-20261107/scenes.json",
+      "desktop_source_matches": true
+    }
+  ]
+}

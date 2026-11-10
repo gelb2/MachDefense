@@ -48,6 +48,10 @@ Choose a unit from the list on the right to produce it using cells. Spend credit
 
 ![Owned equipment and upgrade levels](docs/evidence/images/android-20261106/normal-iphone-upgrades.png)
 
+## Gameplay captures
+
+These combat and special-attack scenes come from my own gameplay recordings. The short clips preserve the original playback speed and the full screen, including the HUD.
+
 <img src="docs/public/media/gameplay-20261107/combat.gif" alt="Turret fire and mech combat" width="360">
 
 [12-second combat clip](docs/public/media/gameplay-20261107/combat.mp4) · [All screenshots and clips](docs/en/public/gameplay-gallery.md)
@@ -60,6 +64,10 @@ Choose a unit from the list on the right to produce it using cells. Spend credit
 
 ## Features I designed and added
 
+The following features were absent from the original game or extend its original limits. I specified their design, behavior, statistics, and visual requirements; Codex produced the code and artwork.
+
+### Emergency resupply
+
 Emergency resupply was my own idea, separate from restoring the original game. I was troubled by the way tower-defense challenges could become obstacles that required purchased items to overcome. That is why I replaced the nonfunctional in-app purchase button with a resupply window.
 
 I did not want a one-time handout. I wanted small amounts of credits and cells to become available repeatedly as game time passed, so players could overcome difficult sections without paying. The amounts use current cell capacity, production, and mission rewards. I directed the calculations to account for intervals, repeated claims, and resource capacity. Codex implemented them in shared C++ using the original assets.
@@ -68,6 +76,20 @@ I did not want a one-time handout. I wanted small amounts of credits and cells t
 <img src="docs/public/media/gameplay-20261107/resupply.jpg" alt="Emergency supplies during battle" width="360">
 
 [Claiming supplies: 9-second clip](docs/public/media/gameplay-20261107/resupply.mp4)
+
+### Four helicopter units
+
+Scout, Cheyenne, Beluga, and AH-10 are allied units that were not in the original game. I designed them to offer another way to handle combat: evading unguided projectiles, alongside the existing choices of durability, firepower, and positioning. They circle targets and briefly avoid damage during emergency evasive maneuvers. They reuse existing mech and turret weapons, firing effects, and sounds, and release chaff and flares when dodging. All four can be upgraded to Lv.10.
+
+<a href="docs/public/media/gameplay-20261110/iphone-stage55-helicopters.png"><img src="docs/public/media/gameplay-20261110/iphone-stage55-helicopters.png" alt="Stage 55: Scout and Cheyenne helicopters fighting alongside mechs, with all four helicopter types in the production list" width="360"></a>
+
+This is a Stage 55 gameplay capture I provided. Scout and Cheyenne helicopters fight alongside mechs, while Scout, Cheyenne, Beluga, and AH-10 appear in the list on the right. [Full-size capture](docs/public/media/gameplay-20261110/iphone-stage55-helicopters.png) · [Gameplay gallery](docs/en/public/gameplay-gallery.md)
+
+The helicopters were released unfinished. Paint, texture, depth, banking appearance, and range issues remain, and further improvements are on hold. I recommend using them only if you want to. [The helicopter work and why it is on hold](docs/en/public/unease-and-typewriters.md)
+
+### Level-10 upgrades and production-list scrolling
+
+I added upgrade stages for turrets, base equipment, and special attacks whose original caps were below 10. I specified the new statistics and prices, and accepted new artwork was connected to turret bodies and base parts. All INSTALLed units can be selected by scrolling the production list on the right. [Additional levels, screen support, and platform features](docs/en/public/features.md)
 
 ## Screen support, platforms, and testing tools
 
@@ -104,17 +126,15 @@ Level-10 upgrades and scrolling through all INSTALLed units in the production li
 
 [Implementation status](docs/en/public/implementation-status.md) · [Documentation](docs/en/public/README.md) · [Changelog](CHANGELOG.en.md) · [Credits](CREDITS.en.md)
 
-## A note on suspending helicopter-unit development
+## Unease — a note on suspending helicopter-unit development
+
+[On the unfinished release of the helicopter units. Observations on Codex’s abysmal performance in claiming it cannot create violent designs](docs/en/public/unease-and-typewriters.md)
+
+[Current implementation and remaining work](docs/en/public/roadmap.md)
 
 I encountered intelligent breaches of duty and negligence that I had not faced even while restoring HeavyMach1. I am putting helicopter improvements on hold to prioritize my foremost goal: restoring the entire Mach series.
 
 The helicopter units released in this version meet neither the original creators’ aesthetic goals nor my own. Their level of finish undermines both the creators’ intentions and mine, so I recommend using the helicopter units only if you want to.
-
-[The helicopter work and why I am putting it on hold](docs/en/public/unease-and-typewriters.md) · [Current implementation and remaining work](docs/en/public/roadmap.md)
-
-## Unease
-
-[On the unfinished release of the helicopter units. Observations on Codex’s abysmal performance in claiming it cannot create violent designs](docs/en/public/unease-and-typewriters.md)
 
 The article covers why I planned the helicopters, refusals to carry out design and debugging instructions, all seven image-generation error records, responsibility shifted in the incident report, and criticism concerning DEI and Ceaușescu’s typewriter. [Integration and source map](docs/en/editorial/unease-integration-20261110.md). [Complete collection of 20 writing-material and revision entries](docs/en/editorial/helicopter-writing-inventory-20261110.md).
 
