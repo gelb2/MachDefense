@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "exact_download": true,
+      "local_reload": true,
+      "history_restore": true,
+      "failed_write_preserves_input": true,
+      "concurrent_save_conflict": true,
+      "server_write_requests": 0,
+      "external_requests": 0,
+      "page_errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "exact_download": true,
+      "local_reload": true,
+      "history_restore": true,
+      "failed_write_preserves_input": true,
+      "concurrent_save_conflict": true,
+      "server_write_requests": 0,
+      "external_requests": 0,
+      "page_errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "exact_download": true,
+      "local_reload": true,
+      "history_restore": true,
+      "failed_write_preserves_input": true,
+      "concurrent_save_conflict": true,
+      "server_write_requests": 0,
+      "external_requests": 0,
+      "page_errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "exact_download": true,
+      "local_reload": true,
+      "history_restore": true,
+      "failed_write_preserves_input": true,
+      "concurrent_save_conflict": true,
+      "server_write_requests": 0,
+      "external_requests": 0,
+      "page_errors": []
+    }
+  ],
+  "ok": true
+}

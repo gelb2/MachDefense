@@ -1,3 +1,7 @@
+# 원고 로컬 편집기 — 2026-11-10
+
+기존 보고 사이트에 [로컬 편집기](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-manuscript-editor-20261110/)를 게시했다. 서버 저장 없이 브라우저와 내려받는 파일에 수정본을 보관한다. 사용자가 수정했다고 채팅에 통보하면 [정해진 절차](editorial/local-editor-workflow.md)로 그 파일을 원문 그대로 적용하고 커밋·푸시·develop→main 병합을 진행한다. 저장 버튼이 GitHub를 변경하지 않는다. 기존 원고·게임 코드는 보존했다. [검사 결과](evidence/local-manuscript-editor-20261110/check-summary.md).
+
 # 헬기 원고 제목·변론 서문·글감 재수집 — 2026-11-10
 
 사용자가 지정한 새 제목 「헬기유닛 미완성 릴리즈에 대한 소고. 폭력적인 디자인을 만들 수 없다는 Codex의 저열한 성능에 대한 관측 기록」과 소제목을 [한·영 통합 원고](public/unease-and-typewriters.md)에 반영했다. 보류·사고 경험 원문을 소제목 바로 아래 첫 단락으로 옮기고 미완성 릴리즈 변론 문장을 원문대로 추가했다. 기존 본문에 빠졌던 글감 4를 복원했다.

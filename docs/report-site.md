@@ -1,3 +1,9 @@
+# 원고 로컬 편집기 — 2026-11-10
+
+[원고 편집 열기](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-manuscript-editor-20261110/). 원고·글감 한국어·영어 네 문서에 편집 링크를 붙였다. 저장은 브라우저와 내려받는 로컬 파일에서만 처리한다. 사용자가 채팅으로 수정 통보를 하면 그 파일을 읽어 기존 GitHub 커밋·푸시·작업 브랜치→develop→main 병합을 진행한다. 서버 저장과 GitHub 자동 쓰기는 없다.
+
+Chrome·WebKit 네 화면의 저장·다운로드·복원·충돌·실패 보존을 확인했다. 편집·저장의 서버 쓰기·외부 전송은 0건이다. 기존 소유자 전용 접근, 보고서 본문과 이미지, static 배포를 보존했다. source `5817e9dd6d195626357c1c6144fdf3f9e29ab35d`, 배포 `appgdep_6af272d91ef48191bc8987214bc20cfc` succeeded. [검사·보존·게시](evidence/local-manuscript-editor-20261110/check-summary.md) · [통보 뒤 반영 절차](editorial/local-editor-workflow.md).
+
 # 헬기 미완성 릴리즈 원고 제목·서문·글감 전문 — 2026-11-10
 
 [한국어 원고](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html) · [English](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated-en.html) · [글감·후속 수정 20항목 전문](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/collected-materials.html) · [English collection](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/collected-materials-en.html).
