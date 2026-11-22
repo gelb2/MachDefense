@@ -4,6 +4,8 @@
 [한국어](../RESTORATION.md) | [English](RESTORATION.md)
 <!-- language-nav:end -->
 
+[HeavyMach 1 developer’s statement](https://github.com/gelb2/HeavyMach/blob/main/docs/en/RESTORATION.md) ([한국어](https://github.com/gelb2/HeavyMach/blob/main/docs/RESTORATION.md)) · [HeavyMach 2 developer’s statement](https://github.com/gelb2/HeavyMach2/blob/main/docs/en/heavymach2-restoration.md) ([한국어](https://github.com/gelb2/HeavyMach2/blob/main/docs/RESTORATION.md))
+
 ## Why I rebuilt the Mach series
 
 There was someone named [mesabloo](https://github.com/Mesabloo/hm-defense) who worked on a similar project. He obtained the assets for HeavyMach Defense and wrote the source code from scratch. He appears to have stopped while implementing combat between units. I had a better starting point than he did, since he had to write the source code from the ground up.
