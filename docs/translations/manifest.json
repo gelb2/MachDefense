@@ -5,9 +5,9 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "8d16e978f645c0fea94cf64164a1d76060a152c485e89ac4f5e6aa2c6a6f2eec",
-      "en_sha256": "2a888cdd7f8309f57866a4d116ee8494bc3f81ac12e0928a35053c3989fb9fed",
-      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages."
+      "ko_sha256": "fde0fc990859d7238b217cf20ae06ebe1e95ddd9c83f3397912c952aacd59b66",
+      "en_sha256": "ecd86e3b03b3b3957dc7e19c0aa0889bec93b74e569c3e1e195d2b120b5bc7a1",
+      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main."
     },
     {
       "ko": "CHANGELOG.md",
@@ -26,9 +26,9 @@
     {
       "ko": "docs/RESTORATION.md",
       "en": "docs/en/RESTORATION.md",
-      "ko_sha256": "8d2340416f3cf96af9075e28987ef203febffc330f947574612e5444cd06d19d",
+      "ko_sha256": "5a7554886443b9814199735ce08231f087dff51d3a7145f53ff6cd2fdfa59b57",
       "en_sha256": "54b4819e5ad6325c6dfe4ba3039e8e365103562e336997dfdebc02bb733d01f8",
-      "review": "paragraphs, author voice, figures, status, commands, links"
+      "review": "paragraphs, author voice, figures, status, commands, links 2026-11-22: retained the author’s existing Korean edits as published on main. The Korean and English statement files are unchanged from main."
     },
     {
       "ko": "docs/public/README.md",
