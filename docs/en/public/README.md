@@ -9,6 +9,7 @@
 - [Game overview](../../../README.en.md)
 - [Quick Play — PWA and shared recovery code](quick-play.md)
 - [Developer's statement](../RESTORATION.md)
+- [HeavyMach 1 developer’s statement](https://github.com/gelb2/HeavyMach/blob/main/docs/en/RESTORATION.md) ([한국어](https://github.com/gelb2/HeavyMach/blob/main/docs/RESTORATION.md)) · [HeavyMach 2 developer’s statement](https://github.com/gelb2/HeavyMach2/blob/main/docs/en/heavymach2-restoration.md) ([한국어](https://github.com/gelb2/HeavyMach2/blob/main/docs/RESTORATION.md))
 - [Added features and design intentions](features.md)
 - [Restoration and development](development-history.md)
 - [Controls and saves](gameplay.md)

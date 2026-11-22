@@ -9,6 +9,7 @@
 - [게임 소개](../../README.md)
 - [Quick Play — PWA와 공유 복원 코드](quick-play.md)
 - [개발자의 변](../RESTORATION.md)
+- [헤비멕1 개발자의 변](https://github.com/gelb2/HeavyMach/blob/main/docs/RESTORATION.md) ([English](https://github.com/gelb2/HeavyMach/blob/main/docs/en/RESTORATION.md)) · [헤비멕2 개발자의 변](https://github.com/gelb2/HeavyMach2/blob/main/docs/RESTORATION.md) ([English](https://github.com/gelb2/HeavyMach2/blob/main/docs/en/heavymach2-restoration.md))
 - [내가 추가한 기능과 기획 의도](features.md)
 - [복원과 개발 과정](development-history.md)
 - [조작과 저장](gameplay.md)

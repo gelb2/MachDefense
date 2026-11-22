@@ -10,6 +10,7 @@
 - [기술 구성](public/architecture.md)
 - [기기별 검사](public/validation.md)
 - [개발자의 변](RESTORATION.md)
+- [헤비멕1 개발자의 변](https://github.com/gelb2/HeavyMach/blob/main/docs/RESTORATION.md) ([English](https://github.com/gelb2/HeavyMach/blob/main/docs/en/RESTORATION.md)) · [헤비멕2 개발자의 변](https://github.com/gelb2/HeavyMach2/blob/main/docs/RESTORATION.md) ([English](https://github.com/gelb2/HeavyMach2/blob/main/docs/en/heavymach2-restoration.md))
 - [릴리스 노트](../CHANGELOG.md)
 - [릴리스 절차](release-process.md)
 
