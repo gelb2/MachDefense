@@ -2,6 +2,8 @@ const VERSION='__BUILD_VERSION__',CACHE='machdefense-assets-'+VERSION;
 const MANIFEST=__ASSET_MANIFEST__;
 const BASE=new URL('./',self.location.href),BLOBS='machdefense-chunks-v1';
 const urlFor=name=>new URL(name,BASE).href;
+const release=releaseIntegrity(BASE.href,'machdefense-assets-',CACHE,async key=>
+ Boolean(await (await caches.open(key)).match(urlFor('asset-manifest.json'))));
 const scopedClients=async()=> (await self.clients.matchAll({includeUncontrolled:true,type:'window'})).filter(client=>client.url.startsWith(BASE.href));
 const digest=async bytes=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
 let preparation=null;
@@ -27,7 +29,7 @@ async function prepare(){
  if(MANIFEST.version!==VERSION)throw Error('Mixed resource versions');
  const cache=await caches.open(CACHE),blobs=await caches.open(BLOBS);
  const old=[];
- for(const key of await caches.keys())if(key.startsWith('machdefense-assets-')&&key!==CACHE)old.push(await caches.open(key));
+ for(const key of await release.olderCaches())old.push(await caches.open(key));
  let done=0,downloaded=0,reused=0;const total=MANIFEST.files.reduce((n,f)=>n+f.size,0);
  for(const file of MANIFEST.files){
   let bytes=null;
@@ -45,66 +47,90 @@ async function prepare(){
    // Store only the chunks. A second full data copy doubles the offline quota.
    await cache.delete(urlFor(file.url));
   }else{
-   bytes=await checked(await cache.match(urlFor(file.url)),file);
+   const local=await checked(await cache.match(urlFor(file.url)),file);
+   bytes=local;
    if(!bytes)for(const source of old){bytes=await checked(await source.match(urlFor(file.url)),file);if(bytes)break;}
    if(bytes)reused+=file.size;
    else{bytes=await download(file);downloaded+=bytes.byteLength;}
+   if(!local)await cache.put(urlFor(file.url),responseFor(bytes,file.url));
   }
-  if(!file.parts)await cache.put(urlFor(file.url),responseFor(bytes,file.url));done+=file.size;
+  done+=file.size;
   for(const client of await scopedClients())client.postMessage({kind:'download',version:VERSION,done,total,downloaded,reused});
  }
  // Only complete, verified releases receive this marker. Progress lives in
  // IndexedDB and is never touched by this worker.
- await cache.put(urlFor('asset-manifest.json'),responseFor(JSON.stringify(MANIFEST),'asset-manifest.json'));
- await cache.put(urlFor('build.json'),responseFor(JSON.stringify({version:VERSION,cheat:MANIFEST.cheat}),'build.json'));
+ const metadata={'asset-manifest.json':MANIFEST,'build.json':{version:VERSION,cheat:MANIFEST.cheat}};
+ for(const [name,value] of Object.entries(metadata)){
+  const text=JSON.stringify(value);
+  if(await (await cache.match(urlFor(name)))?.text()!==text)await cache.put(urlFor(name),responseFor(text,name));
+ }
  return {version:VERSION,downloaded,reused};
 }
-self.addEventListener('install',event=>event.waitUntil(prepareResources().catch(async error=>{await caches.delete(CACHE);if(!self.registration.active)await caches.delete(BLOBS);throw error;})));
+self.addEventListener('install',event=>event.waitUntil((async()=>{
+ const older=await release.olderCaches();
+ try{
+  await prepareResources();
+  await release.stage(await caches.open(CACHE),older);
+  await retainChunks();
+  await self.skipWaiting();
+ }catch(error){
+  await caches.delete(CACHE);
+  await retainChunks().catch(()=>{});
+  throw error;
+ }
+})()));
 self.addEventListener('message',event=>{
  const reply=value=>event.ports[0]?.postMessage(value);
- if(event.data?.kind==='prepare')event.waitUntil(prepareResources().then(result=>reply({ok:true,...result}),error=>reply({ok:false,error:error.message})));
+ if(event.data?.kind==='prepare')event.waitUntil((async()=>{
+  const edition=await release.edition(event.source?.id);
+  if(edition===CACHE){reply({ok:true,...await prepareResources()});return;}
+  const previous=await (await (await caches.open(edition)).match(urlFor('build.json')))?.json();
+  if(!previous)throw Error('Reopen the app to load a verified release.');
+  reply({ok:true,version:previous.version});
+ })().catch(error=>reply({ok:false,error:error.message})));
  if(event.data?.kind==='activate')event.waitUntil((async()=>{
-  // Only a launcher which has not loaded the game asks to activate. Another
-  // open tab may still be playing the previous release, so leave it alone.
-  const clients=await scopedClients();
-  if(clients.some(c=>c.id!==event.source?.id)){reply({ok:false,waiting:true});return;}
   await prepareResources();reply({ok:true,version:VERSION});await self.skipWaiting();
  })().catch(error=>reply({ok:false,error:error.message})));
 });
-async function retireOldResources(){
- const versions=(await caches.keys()).filter(k=>k.startsWith('machdefense-assets-')&&k!==CACHE);
- // Activation only occurs after old game clients close, or one launcher asks.
- // Keep the most recent previous build as a fallback, plus the current build.
- const previous=versions.pop();for(const key of versions)await caches.delete(key);
+async function retainChunks(){
+ const versions=await release.olderCaches();
+ if((await caches.keys()).includes(CACHE))versions.push(CACHE);
  const needed=new Set();
- for(const key of [CACHE,previous].filter(Boolean)){
+ for(const key of versions){
   const cache=await caches.open(key),response=await cache.match(urlFor('asset-manifest.json'));
   if(!response)continue;const manifest=await response.json();
   for(const file of manifest.files)for(const part of file.parts||[])needed.add(urlFor(part.url));
  }
- const blobs=await caches.open(BLOBS);for(const request of await blobs.keys())if(!needed.has(request.url))await blobs.delete(request);
+ const blobs=await caches.open(BLOBS);for(const request of await blobs.keys())if(request.url.startsWith(urlFor('chunks/'))&&!needed.has(request.url))await blobs.delete(request);
 }
-self.addEventListener('activate',event=>event.waitUntil((async()=>{await retireOldResources();await self.clients.claim();})()));
+self.addEventListener('activate',event=>event.waitUntil(release.activate()));
 self.addEventListener('fetch',event=>{
  const url=new URL(event.request.url);if(url.origin!==BASE.origin||!url.pathname.startsWith(BASE.pathname)||event.request.method!=='GET')return;
  // SW updates must always reach the server. Never cache the worker script.
  if(url.pathname===new URL('sw.js',BASE).pathname)return;
- const name=event.request.mode==='navigate'?'index.html':decodeURIComponent(url.pathname.slice(BASE.pathname.length));
- const file=MANIFEST.files.find(f=>f.url===name);
- if(!file&&!['build.json','asset-manifest.json'].includes(name))return;
+ const navigation=event.request.mode==='navigate';
+ const name=navigation?'index.html':decodeURIComponent(url.pathname.slice(BASE.pathname.length));
  event.respondWith((async()=>{
-  const cache=await caches.open(CACHE);let response=await cache.match(urlFor(name));
+  const edition=navigation?CACHE:await release.edition(event.clientId);
+  const cache=await caches.open(edition);
+  const manifest=edition===CACHE?MANIFEST:await (await cache.match(urlFor('asset-manifest.json')))?.json();
+  let response=await cache.match(urlFor(name));
+  const file=manifest?.files.find(file=>file.url===name);
+  if(!manifest&&response)return response;
+  if(!file&&!['build.json','asset-manifest.json'].includes(name))throw Error('Unlisted release file');
+
   if(file?.parts){
    const assemble=async()=>{
     const blobs=await caches.open(BLOBS),output=new Uint8Array(file.size);let offset=0;
     for(const part of file.parts){const bytes=await checked(await blobs.match(urlFor(part.url)),part);if(!bytes)return null;output.set(new Uint8Array(bytes),offset);offset+=bytes.byteLength;}
     return offset===file.size&&await digest(output)===file.sha256?output:null;
    };
-   let bytes=await assemble();if(!bytes){await prepareResources();bytes=await assemble();}
+   let bytes=await assemble();if(!bytes&&edition===CACHE){await prepareResources();bytes=await assemble();}
    if(!bytes)throw Error('Resource assembly unavailable');return responseFor(bytes,name);
   }
   if(file){const bytes=await checked(response,file);if(bytes)return responseFor(bytes,name);}
-  else return responseFor(JSON.stringify(name==='build.json'?{version:VERSION,cheat:MANIFEST.cheat}:MANIFEST),name);
+  else if(manifest)return responseFor(JSON.stringify(name==='build.json'?{version:manifest.version,cheat:manifest.cheat}:manifest),name);
+  if(edition!==CACHE)throw Error('Reopen the app to load a verified release.');
   await prepareResources();response=await cache.match(urlFor(name));
   if(!response)throw Error('Resource unavailable: '+name);return response;
  })().catch(async error=>{const message=name+': '+String(error);for(const client of await self.clients.matchAll())client.postMessage({kind:'resource-error',message});return new Response(message,{status:503});}));

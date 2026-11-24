@@ -50,8 +50,8 @@ function workerRequest(worker,kind){return new Promise((resolve,reject)=>{
  channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();e.data.ok||e.data.waiting?resolve(e.data):reject(Error(e.data.error));};
  worker.postMessage({kind},[channel.port2]);
 });}
-function waitInstallation(worker){return new Promise((resolve,reject)=>{
- const check=()=>{if(['installed','activated'].includes(worker.state)){cleanup();resolve();}else if(worker.state==='redundant'){cleanup();reject(Error('Resource download failed.'));}};
+function waitInstallation(worker, activated=false){return new Promise((resolve,reject)=>{
+ const check=()=>{if(worker.state==='activated'||(!activated&&worker.state==='installed')){cleanup();resolve();}else if(worker.state==='redundant'){cleanup();reject(Error('Resource download failed.'));}};
  const timer=setTimeout(()=>{cleanup();reject(Error('Resource download timed out.'));},180000);
  function cleanup(){clearTimeout(timer);worker.removeEventListener('statechange',check);}
  worker.addEventListener('statechange',check);check();
@@ -62,7 +62,22 @@ async function prepare(){try{
  if(!('serviceWorker'in navigator))throw Error('Open this game over HTTPS to enable offline play.');
  navigator.serviceWorker.addEventListener('message',e=>{if(preparing&&e.data.kind==='download'){$('progress').value=100*e.data.done/e.data.total;$('status').textContent='Checking game resources… '+Math.round(e.data.done/1048576)+' / '+Math.round(e.data.total/1048576)+' MB';}});
  const reg=await navigator.serviceWorker.register('sw.js',{updateViaCache:'none'});
- try{await reg.update();if(reg.installing)await waitInstallation(reg.installing);}
+ let controller=navigator.serviceWorker.controller,checking;
+ navigator.serviceWorker.addEventListener('controllerchange',()=>{
+  const next=navigator.serviceWorker.controller,previous=controller;
+  controller=next;
+  if(previous&&next&&next!==previous)waitInstallation(next,true).then(()=>{
+   if(navigator.serviceWorker.controller===next&&!module&&!running)location.reload();
+  }).catch(()=>{});
+ });
+ const check=()=>{
+  if(document.hidden||!navigator.onLine)return;
+  checking??=reg.update().finally(()=>{checking=undefined;});
+  return checking;
+ };
+ for(const target of ['pageshow','online'])addEventListener(target,()=>check()?.catch(()=>{}));
+ document.addEventListener('visibilitychange',()=>check()?.catch(()=>{}));
+ try{await check();if(reg.installing)await waitInstallation(reg.installing);}
  catch(error){if(!reg.active)throw error;/* Keep a complete older release when the update fails. */}
  if(!reg.active&&reg.installing)await waitInstallation(reg.installing);
  if(reg.waiting){
@@ -78,7 +93,7 @@ async function prepare(){try{
  const ready=await workerRequest(navigator.serviceWorker.controller,'prepare');
  if(ready.version&&ready.version!==build.version){location.reload();return;}
  window.MDResourceCheck=ready;await MDStore.open(build.cheat);
- preparing=false;$('progress').value=100;$('status').textContent=window.MDUpdateWaiting?'Ready. Close other game windows to apply the update.':'Ready for offline play';$('play').disabled=false;updateInstall();
+ preparing=false;$('progress').value=100;$('status').textContent=window.MDUpdateWaiting?'Ready. Close other game windows to apply the update.':'Ready for offline play · '+ready.version.slice(0,8);$('play').disabled=false;updateInstall();
 }catch(e){MDError('Cannot prepare game: '+e.message);$('status').textContent='Reload to retry.';}}
 $('play').onclick=async()=>{try{$('play').disabled=true;$('status').textContent='Loading game…';await navigator.storage?.persist?.();await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='game.js';s.onload=resolve;s.onerror=reject;document.body.append(s);});module=await createMachDefense({canvas,printErr:console.error});window.MDModule=module;await MDAudio.prepare(module);await MDAudio.context.resume();canvas.hidden=false;const ok=await call('md_start',[],[],'number');if(!ok)throw Error('Cannot start game renderer or audio');await resize();$('launcher').hidden=true;running=true;requestAnimationFrame(frame);canvas.focus();}catch(e){MDError(String(e));}};
 window.MDTest={call,async advance(n){window.MD_TEST_PAUSE=true;for(let i=0;i<n;i++)await call('md_tick');},async tap(x,y){await call('md_touch',['number','number','number','number'],[1,0,x,y]);await call('md_touch',['number','number','number','number'],[1,2,x,y]);},async state(){return JSON.parse(await call('md_debug',[],[],'string'));},async sprites(){return JSON.parse(await call('md_ui',[],[],'string'));},async save(){return JSON.parse(await call('md_save_info',[],[],'string'));},activity};

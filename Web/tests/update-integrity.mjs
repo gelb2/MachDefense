@@ -25,19 +25,25 @@ const server=http.createServer(async(req,res)=>{try{
  }catch{res.writeHead(404);res.end();}});
 await new Promise(r=>server.listen(0,'127.0.0.1',r));const url=`http://127.0.0.1:${server.address().port}/MachDefense/`;
 const kind=process.env.MD_BROWSER||'chrome';const browser=await (kind==='webkit'?webkit:chromium).launch(kind==='webkit'?{headless:true}:{channel:'chrome',headless:true});
-const context=await browser.newContext();const unrelated=await context.newPage();await unrelated.goto(new URL('/other/',url).href);let page=await context.newPage();const result={browser:kind,errors:[]};page.on("response",async r=>{if(r.status()===503)result.errors.push(r.url()+": "+await r.text().catch(()=>"?"));});page.on("pageerror",e=>result.errors.push(e.message));page.on("console",e=>{if(e.type()==="error")result.errors.push(e.text());});
+const context=await browser.newContext({viewport:{width:390,height:844}});const unrelated=await context.newPage();await unrelated.goto(new URL('/other/',url).href);let page=await context.newPage();const result={browser:kind,errors:[]};page.on("response",async r=>{if(r.status()===503)result.errors.push(r.url()+": "+await r.text().catch(()=>"?"));});page.on("pageerror",e=>result.errors.push(e.message));page.on("console",e=>{if(e.type()==="error")result.errors.push(e.text());});
 await page.addInitScript(()=>navigator.serviceWorker?.addEventListener('message',e=>{if(e.data.kind==='resource-error')console.error(JSON.stringify(e.data));}));
 async function ready(){await page.goto(url);await page.waitForSelector('#play:not([disabled])',{timeout:180000});}
 try{
  // Reject a bad first install before showing the Play button.
  corrupt='title.jpg';await page.goto(url);await page.waitForSelector('#error:not([hidden])',{timeout:120000});assert(await page.$eval('#play',e=>e.disabled));result.corruptInstallRejected=true;
  corrupt=null;await ready();const initial=await page.evaluate(()=>MDResourceCheck);result.storage=await page.evaluate(()=>navigator.storage.estimate());assert.equal(initial.version,original.version);result.initial=initial;result.cacheCount=await page.evaluate(async()=>(await caches.keys()).length);
- await page.click('#play');await page.waitForFunction(()=>!!window.MDModule);await page.evaluate(()=>MDTest.advance(60));result.gameStarted=true;
- const seed=Array.from(Buffer.alloc(42496));assert(await page.evaluate(b=>MDStore.write(new Uint8Array(b)),seed));
- // While a game is open, the new worker must wait.
- edition=1;await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update();});await page.evaluate(async()=>{window.MDTestRegistration=await navigator.serviceWorker.getRegistration();});await page.waitForFunction(()=>!!window.MDTestRegistration.waiting,null,{timeout:180000});
+ await page.click('#play');await page.waitForFunction(()=>!!window.MDModule&&document.querySelector('#launcher').hidden);await page.evaluate(()=>MDTest.advance(60));result.gameStarted=true;
+ const fixture=process.argv[4];
+ if(!fixture)throw Error('Pass a disposable, checksummed MachDefense.sav fixture as argument 3');
+ const seed=Array.from(await fs.readFile(fixture));
+ assert(await page.evaluate(b=>MDStore.write(new Uint8Array(b)),seed));
+ const saved=await page.evaluate(()=>MDTest.save());
+ assert(saved[0]?.active);
+ result.activeProfileFixture=true;
+ // An already running game keeps its files while the new launcher is available.
+ edition=1;await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update();});await page.evaluate(async()=>{window.MDTestRegistration=await navigator.serviceWorker.getRegistration();});await page.waitForFunction(async version=>window.MDTestRegistration.active?.state==='activated'&&(await caches.keys()).includes('machdefense-assets-'+version),manifest().version,{timeout:180000});
  assert.equal(await page.evaluate(async()=>(await(await fetch('build.json')).json()).version),original.version);result.runningVersionHeld=true;
- const other=await context.newPage();await other.goto(url);await other.waitForSelector('#play:not([disabled])',{timeout:180000});assert.equal(await other.evaluate(()=>MDUpdateWaiting),true);await other.close();result.otherPlayingTabHeld=true;
+ const other=await context.newPage();await other.goto(url);await other.waitForSelector('#play:not([disabled])',{timeout:180000});assert.equal(await other.evaluate(()=>MDResourceCheck.version),manifest().version);await other.close();result.newLauncherAvailableWhilePlaying=true;
  requests.length=0;await ready();assert.equal(await page.evaluate(()=>MDResourceCheck.version),manifest().version);assert.deepEqual(await page.evaluate(()=>Array.from(MDStore.current)),seed);result.firstLauncherUsesNewVersion=true;result.unrelatedProjectDoesNotBlockUpdate=true;result.savePreserved=true;
  assert(!requests.some(n=>['game.data','game.wasm','game.js'].includes(n)||n.startsWith('chunks/')));result.unchangedGameNotDownloaded=true;
  // A broken update leaves the complete previous release playable.
@@ -46,9 +52,10 @@ try{
  await page.evaluate(async()=>{const c=await caches.open('machdefense-assets-'+MDResourceCheck.version);await c.put(new URL('game.wasm',location.href),new Response('bad'));});
  edition=1;requests.length=0;await ready();assert(requests.includes('game.wasm')||await page.evaluate(()=>MDResourceCheck.reused>0));
  const wasm=await page.evaluate(async()=>Array.from(new Uint8Array(await(await fetch('game.wasm')).arrayBuffer())));assert.equal(hash(Buffer.from(wasm)),original.files.find(f=>f.url==='game.wasm').sha256);result.corruptCacheRepaired=true;
- edition=3;requests.length=0;await ready();assert.equal(await page.evaluate(()=>MDResourceCheck.version),manifest().version);
+ edition=3;requests.length=0;await ready();
+ await page.waitForFunction(version=>window.MDResourceCheck?.version===version,manifest().version,{timeout:180000});
  assert.deepEqual(requests.filter(n=>n.startsWith('chunks/')),[changedPartURL]);assert(!requests.includes('game.data'));result.changedChunkOnly=true;result.changedChunkBytes=changedPart.length;result.fullPackageBytes=changedData.length;
  const assembled=await page.evaluate(async()=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',await(await fetch('game.data')).arrayBuffer())),x=>x.toString(16).padStart(2,'0')).join(''));assert.equal(assembled,hash(changedData));result.assembledPackageVerified=true;
- await context.setOffline(true);await ready();assert.deepEqual(await page.evaluate(()=>Array.from(MDStore.current)),seed);await page.click('#play');await page.waitForFunction(()=>!!window.MDModule);await page.evaluate(()=>MDTest.advance(60));result.offlineGameAndSave=true;
+ await context.setOffline(true);await ready();assert.deepEqual(await page.evaluate(()=>Array.from(MDStore.current)),seed);await page.click('#play');await page.waitForFunction(()=>!!window.MDModule&&document.querySelector('#launcher').hidden);await page.evaluate(()=>MDTest.advance(60));assert.deepEqual(await page.evaluate(()=>MDTest.save()),saved);result.offlineGameAndSave=true;
  result.ok=true;
 }catch(error){result.error=error.stack;result.screen=await page.locator("#error").textContent().catch(()=>null);process.exitCode=1;}finally{await fs.mkdir(path.dirname(out),{recursive:true});await fs.writeFile(out,JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));await browser.close();await new Promise(r=>server.close(r));}
