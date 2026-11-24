@@ -103,7 +103,9 @@ async function retainChunks(){
  }
  const blobs=await caches.open(BLOBS);for(const request of await blobs.keys())if(request.url.startsWith(urlFor('chunks/'))&&!needed.has(request.url))await blobs.delete(request);
 }
-self.addEventListener('activate',event=>event.waitUntil(release.activate()));
+// A reopened Safari app can start without a controller while an older cache
+// remains. Take control only after install has staged the verified release.
+self.addEventListener('activate',event=>event.waitUntil(self.clients.claim()));
 self.addEventListener('fetch',event=>{
  const url=new URL(event.request.url);if(url.origin!==BASE.origin||!url.pathname.startsWith(BASE.pathname)||event.request.method!=='GET')return;
  // SW updates must always reach the server. Never cache the worker script.

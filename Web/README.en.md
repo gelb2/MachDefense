@@ -71,7 +71,7 @@ Thank you to [fastutlego](https://github.com/fastutlego) for contributing the He
 
 ## Installed updates
 
-The service worker prepares the next release in a separate cache before activation. It checks the SHA-256 of each downloaded or reused file, each data chunk, and the assembled data package. The launcher updates after activation. It reuses verified files without rewriting them. If staging fails, the worker clears the rejected cache and discards chunks that no retained release uses. A game already running uses its own release. The save database and revision checks stay in place. The release check compares the packaged virtual asset paths to the approved inputs and checks the deployed files against the build receipt.
+The service worker prepares the next release in a separate cache before activation. It checks the SHA-256 of each downloaded or reused file, each data chunk, and the assembled data package. The verified worker takes control after activation so a reopened Safari app can start. It reuses verified files without rewriting them. If staging fails, the worker clears the rejected cache and discards chunks that no retained release uses. A game already running uses its own release. The save database and revision checks stay in place. The release check compares the packaged virtual asset paths to the approved inputs and checks the deployed files against the build receipt.
 
 To exercise a prepared build with an existing save, run:
 
