@@ -110,9 +110,9 @@
     {
       "ko": "Web/README.md",
       "en": "Web/README.en.md",
-      "ko_sha256": "43eec9c37303e19e8ddc0596cfc18c32ce5ea8cbd7dcdbd7b907e8ee58e5b782",
-      "en_sha256": "b08ff03def4752746563b77315244d9d0e4b64459824b9a3a4d14dae3b5ef847",
-      "review": "2026-11-07 PWA/Tauri follow-up: contributor attribution, shared runtime, save handling, tested scope and pending release checked in both languages."
+      "ko_sha256": "905f1ebf9b05d36a9fa397c61671391e4a62ca7c58c778e6464dc1edd1de8c73",
+      "en_sha256": "332b8df463a67d10bd08ab879175aaecc2eb46b8669556bc355fe994775acd49",
+      "review": "2026-11-07 PWA/Tauri follow-up: contributor attribution, shared runtime, save handling, tested scope and pending release checked in both languages. 2026-11-24: compared the update and fallback procedure, saved progress, storage limits, and executable examples in both languages."
     },
     {
       "ko": "Desktop/Tauri/README.md",
