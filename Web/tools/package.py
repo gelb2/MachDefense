@@ -5,7 +5,7 @@ p=argparse.ArgumentParser();p.add_argument('dist',type=pathlib.Path);p.add_argum
 root=pathlib.Path(__file__).resolve().parents[2]
 a.dist.mkdir(parents=True,exist_ok=True)
 for f in (root/'Distribution/Web').iterdir():
- if f.is_file():shutil.copy2(f,a.dist/f.name)
+ if f.is_file() and f.name!='release-integrity.js':shutil.copy2(f,a.dist/f.name)
 # Original menu artwork for the pre-game launcher, not a second in-game UI.
 shutil.copy2(root/'Resources/Images/Title.jpg',a.dist/'title.jpg')
 icons=list((root/'Apple').rglob('AppIcon*.png'))
@@ -37,10 +37,11 @@ for f in sorted(a.dist.iterdir()):
   b=f.read_bytes();entry=dict(url=f.name,size=len(b),sha256=hashlib.sha256(b).hexdigest())
   if f.name=='game.data':entry['parts']=parts
   files.append(entry)
-version=hashlib.sha256(json.dumps(files,sort_keys=True).encode()+(a.dist/'sw.js').read_bytes()).hexdigest()[:16]
+worker=(root/'Distribution/Web/release-integrity.js').read_text()+'\n'+(a.dist/'sw.js').read_text()
+version=hashlib.sha256(json.dumps(files,sort_keys=True).encode()+worker.encode()).hexdigest()[:16]
 manifest=dict(version=version,cheat=a.cheat,files=files)
 (a.dist/'asset-manifest.json').write_text(json.dumps(manifest))
 (a.dist/'build.json').write_text(json.dumps(dict(version=version,cheat=a.cheat)))
 
 sw=a.dist/"sw.js"
-sw.write_text(sw.read_text().replace("__BUILD_VERSION__",version).replace("__ASSET_MANIFEST__",json.dumps(manifest)))
+sw.write_text(worker.replace("__BUILD_VERSION__",version).replace("__ASSET_MANIFEST__",json.dumps(manifest)))

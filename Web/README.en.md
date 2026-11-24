@@ -68,3 +68,23 @@ python3 Web/tests/compare-frame.py .local/pwa-20261106
 The check compares non-floating-point data exactly across 144,000 frames and records the maximum floating-point difference. The current threshold is 0.001. Original full-bit hash results are also retained; game calculations are not changed for this comparison.
 
 Thank you to [fastutlego](https://github.com/fastutlego) for contributing the HeavyMach web port. The WebAssembly host, WebGL2 renderer, input, audio and saves in [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24), together with the subsequent PWA and Tauri work, also laid the groundwork for bringing MachDefense to the web and desktop. I used that architecture for the MachDefense PWA and used the same web host in the Tauri Mac app.
+
+## Installed updates
+
+The service worker prepares the next release in a separate cache before activation. It checks the SHA-256 of each downloaded or reused file, each data chunk, and the assembled data package. The verified worker takes control after activation so a reopened Safari app can start. It reuses verified files without rewriting them. If staging fails, the worker clears the rejected cache and discards chunks that no retained release uses. During the first update from release `f9f26e94f1d4e3d6`, the verified worker can serve that release from the existing cache if preparing the new release fails. It verifies the saved manifest against the published manifest hash and checks the cached game files before offering play. Reopening the launcher retries the update. A game already running uses its own release. The save database and revision checks stay in place. The release check compares the packaged virtual asset paths to the approved inputs and checks the deployed files against the build receipt.
+
+To exercise a prepared build with an existing save, run:
+
+```sh
+node Web/tests/update-integrity.mjs build/web-normal/dist .local/update-integrity.json /path/to/test/MachDefense.sav
+```
+
+Use a disposable save with an active first slot. The test reopens the launcher offline and checks the decoded slot as well as the stored bytes.
+
+To check a first update with restricted storage in Chrome:
+
+```sh
+MD_QUOTA_HEADROOM=2100000 node Web/tests/legacy-update.mjs /path/to/published-web build/web-normal/dist .local/legacy-quota.json /path/to/test/MachDefense.sav
+```
+
+The test starts release `f9f26e94f1d4e3d6` from the published directory, caps browser storage, and verifies that the new worker can open the previous game with the same save. It then removes the limit and verifies that the same worker completes the update on reopening.
