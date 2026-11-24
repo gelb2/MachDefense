@@ -2,11 +2,15 @@ const VERSION='__BUILD_VERSION__',CACHE='machdefense-assets-'+VERSION;
 const MANIFEST=__ASSET_MANIFEST__;
 const BASE=new URL('./',self.location.href),BLOBS='machdefense-chunks-v1';
 const urlFor=name=>new URL(name,BASE).href;
+// The first published worker rewrites every cached file during preparation.
+// Pin its manifest so this worker can serve its verified cache without writing it.
+const LEGACY_CACHE='machdefense-assets-f9f26e94f1d4e3d6';
+const LEGACY_MANIFEST_SHA256='60f4870d3efe8d8b6de31643f2d08ce845172bca6daf79f556415da947e0744a';
 const release=releaseIntegrity(BASE.href,'machdefense-assets-',CACHE,async key=>
  Boolean(await (await caches.open(key)).match(urlFor('asset-manifest.json'))));
 const scopedClients=async()=> (await self.clients.matchAll({includeUncontrolled:true,type:'window'})).filter(client=>client.url.startsWith(BASE.href));
 const digest=async bytes=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
-let preparation=null;
+let preparation=null, promotion=null, fallback;
 async function checked(response,file){
  if(!response?.ok)return null;
  const bytes=await response.arrayBuffer();
@@ -66,22 +70,70 @@ async function prepare(){
  }
  return {version:VERSION,downloaded,reused};
 }
-self.addEventListener('install',event=>event.waitUntil((async()=>{
- const older=await release.olderCaches();
- try{
-  await prepareResources();
-  await release.stage(await caches.open(CACHE),older);
-  await retainChunks();
-  await self.skipWaiting();
- }catch(error){
-  await caches.delete(CACHE);
-  await retainChunks().catch(()=>{});
-  throw error;
+async function assemble(file){
+ const blobs=await caches.open(BLOBS),output=new Uint8Array(file.size);let offset=0;
+ for(const part of file.parts){
+  const bytes=await checked(await blobs.match(urlFor(part.url)),part);
+  if(!bytes||offset+bytes.byteLength>output.byteLength)return null;
+  output.set(new Uint8Array(bytes),offset);
+  offset+=bytes.byteLength;
  }
+ return offset===file.size&&await digest(output)===file.sha256?output:null;
+}
+async function legacyManifest(){
+ if(MANIFEST.cheat||!await caches.has(LEGACY_CACHE))return null;
+ const cache=await caches.open(LEGACY_CACHE);
+ const response=await cache.match(urlFor('asset-manifest.json'));
+ if(!response)return null;
+ const bytes=await response.arrayBuffer();
+ if(await digest(bytes)!==LEGACY_MANIFEST_SHA256)return null;
+ return JSON.parse(new TextDecoder().decode(bytes));
+}
+async function verifyLegacy(manifest){
+ const cache=await caches.open(LEGACY_CACHE);
+ for(const file of manifest.files){
+  const bytes=file.parts?await assemble(file):await checked(await cache.match(urlFor(file.url)),file);
+  if(!bytes)throw Error('Cached release file failed verification: '+file.url);
+ }
+}
+async function usingFallback(){
+ if(fallback!==undefined)return fallback;
+ const published=await caches.has(CACHE)&&
+  await (await caches.open(CACHE)).match(urlFor('.client-editions'));
+ fallback=!published&&Boolean(await legacyManifest());
+ return fallback;
+}
+function promoteRelease(){
+ if(promotion)return promotion;
+ promotion=(async()=>{
+  const older=await release.olderCaches();
+  try{
+   const result=await prepareResources();
+   await release.stage(await caches.open(CACHE),older);
+   await retainChunks();
+   fallback=false;
+   return result;
+  }catch(error){
+   await caches.delete(CACHE);
+   await retainChunks().catch(()=>{});
+   if(older.at(-1)!==LEGACY_CACHE)throw error;
+   const manifest=await legacyManifest();
+   if(!manifest)throw error;
+   await verifyLegacy(manifest);
+   fallback=true;
+   return {version:manifest.version,downloaded:0,reused:manifest.files.reduce((n,file)=>n+file.size,0)};
+  }
+ })().finally(()=>{promotion=null;});
+ return promotion;
+}
+self.addEventListener('install',event=>event.waitUntil((async()=>{
+ await promoteRelease();
+ await self.skipWaiting();
 })()));
 self.addEventListener('message',event=>{
  const reply=value=>event.ports[0]?.postMessage(value);
  if(event.data?.kind==='prepare')event.waitUntil((async()=>{
+  if(await usingFallback()){reply({ok:true,...await promoteRelease()});return;}
   const edition=await release.edition(event.source?.id);
   if(edition===CACHE){reply({ok:true,...await prepareResources()});return;}
   const previous=await (await (await caches.open(edition)).match(urlFor('build.json')))?.json();
@@ -89,7 +141,8 @@ self.addEventListener('message',event=>{
   reply({ok:true,version:previous.version});
  })().catch(error=>reply({ok:false,error:error.message})));
  if(event.data?.kind==='activate')event.waitUntil((async()=>{
-  await prepareResources();reply({ok:true,version:VERSION});await self.skipWaiting();
+  const result=await usingFallback()?await promoteRelease():await prepareResources();
+  reply({ok:true,version:result.version});await self.skipWaiting();
  })().catch(error=>reply({ok:false,error:error.message})));
 });
 async function retainChunks(){
@@ -113,21 +166,18 @@ self.addEventListener('fetch',event=>{
  const navigation=event.request.mode==='navigate';
  const name=navigation?'index.html':decodeURIComponent(url.pathname.slice(BASE.pathname.length));
  event.respondWith((async()=>{
-  const edition=navigation?CACHE:await release.edition(event.clientId);
+  const edition=await usingFallback()?LEGACY_CACHE:navigation?CACHE:await release.edition(event.clientId);
   const cache=await caches.open(edition);
-  const manifest=edition===CACHE?MANIFEST:await (await cache.match(urlFor('asset-manifest.json')))?.json();
+  const manifest=edition===CACHE?MANIFEST:edition===LEGACY_CACHE?await legacyManifest():
+   await (await cache.match(urlFor('asset-manifest.json')))?.json();
+  if(edition===LEGACY_CACHE&&!manifest)throw Error('Cached release manifest failed verification');
   let response=await cache.match(urlFor(name));
   const file=manifest?.files.find(file=>file.url===name);
   if(!manifest&&response)return response;
   if(!file&&!['build.json','asset-manifest.json'].includes(name))throw Error('Unlisted release file');
 
   if(file?.parts){
-   const assemble=async()=>{
-    const blobs=await caches.open(BLOBS),output=new Uint8Array(file.size);let offset=0;
-    for(const part of file.parts){const bytes=await checked(await blobs.match(urlFor(part.url)),part);if(!bytes)return null;output.set(new Uint8Array(bytes),offset);offset+=bytes.byteLength;}
-    return offset===file.size&&await digest(output)===file.sha256?output:null;
-   };
-   let bytes=await assemble();if(!bytes&&edition===CACHE){await prepareResources();bytes=await assemble();}
+   let bytes=await assemble(file);if(!bytes&&edition===CACHE){await prepareResources();bytes=await assemble(file);}
    if(!bytes)throw Error('Resource assembly unavailable');return responseFor(bytes,name);
   }
   if(file){const bytes=await checked(response,file);if(bytes)return responseFor(bytes,name);}

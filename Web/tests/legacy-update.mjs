@@ -13,9 +13,41 @@ try{
  const old=JSON.parse(await fs.readFile(path.join(legacy,'build.json'))),next=JSON.parse(await fs.readFile(path.join(current,'build.json')));result.before=old.version;result.after=next.version;
  await boot(old.version);
  const save=await fs.readFile(savePath);assert(await page.evaluate(b=>MDStore.write(new Uint8Array(b)),Array.from(save)));
- active=path.resolve(current);await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update();});await page.evaluate(async()=>{window.MDTestRegistration=await navigator.serviceWorker.getRegistration();});await page.waitForFunction(async version=>window.MDTestRegistration.active?.state==='activated'&&(await caches.keys()).includes('machdefense-assets-'+version),next.version,{timeout:180000});
- assert.equal(await page.evaluate(async()=>(await(await fetch('build.json')).json()).version),old.version);result.oldGameNotReplaced=true;
- result.beforeClose=await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();return {active:r.active?.state,waiting:r.waiting?.state};});await page.close();page=await context.newPage();await boot(next.version);result.afterOpen=await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();return {active:r.active?.state,waiting:r.waiting?.state,controller:navigator.serviceWorker.controller?.state,check:window.MDResourceCheck,caches:await caches.keys()};});
+ const headroom=process.env.MD_QUOTA_HEADROOM;
+ const origin=new URL(url).origin;
+ let storage;
+ if(headroom!==undefined){
+  assert.equal(engine,'chromium','Quota override is a Chromium test');
+  storage=await context.newCDPSession(page);
+  const {usage}=await storage.send('Storage.getUsageAndQuota',{origin});
+  result.quota=Math.ceil(usage)+Number(headroom);
+  await storage.send('Storage.overrideQuotaForOrigin',{origin,quotaSize:result.quota});
+ }
+ active=path.resolve(current);
+ await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update();});
+ if(storage){
+  await page.goto(url);
+  await page.waitForFunction(async version=>
+   window.MDResourceCheck?.version===version.old&&
+   (await fetch('index.html')).headers.get('X-MachDefense-Version')===version.next,
+   {old:old.version,next:next.version},{timeout:60000});
+  await boot(old.version);
+  assert.equal(hash(new Uint8Array(await page.evaluate(()=>Array.from(MDStore.current)))),hash(save));
+  result.legacyPlayedUnderQuota=true;
+  await storage.send('Storage.overrideQuotaForOrigin',{origin});
+ }else{
+  await page.evaluate(async()=>{window.MDTestRegistration=await navigator.serviceWorker.getRegistration();});
+  await page.waitForFunction(async version=>window.MDTestRegistration.active?.state==='activated'&&(await caches.keys()).includes('machdefense-assets-'+version),next.version,{timeout:180000});
+  assert.equal(await page.evaluate(async()=>(await(await fetch('build.json')).json()).version),old.version);
+  result.oldGameNotReplaced=true;
+ }
+ await page.close();
+ page=await context.newPage();
+ await boot(next.version);
+ result.afterOpen=await page.evaluate(async()=>{
+  const r=await navigator.serviceWorker.getRegistration();
+  return {active:r.active?.state,waiting:r.waiting?.state,controller:navigator.serviceWorker.controller?.state,check:window.MDResourceCheck,caches:await caches.keys()};
+ });
  assert.equal(await page.evaluate(async()=>(await(await fetch('build.json')).json()).version),next.version);
  assert.equal(hash(new Uint8Array(await page.evaluate(()=>Array.from(MDStore.current)))),hash(save));result.savePreserved=true;
  const table=await page.evaluate(()=>Array.from(MDModule.FS.readFile('/assets/Tables/MachBuild_Name.tsv')));assert.equal(hash(new Uint8Array(table)),hash(await fs.readFile('Resources/Tables/MachBuild_Name.tsv')));result.runtimePriceTableMatches=true;
