@@ -68,3 +68,25 @@ python3 Web/tests/compare-frame.py .local/pwa-20261106
 144,000프레임의 비실수 데이터는 정확히 대조하고 실수 차이의 최대값을 기록한다. 현재 검사 한도는 0.001이다. 원래 전체 비트 해시 결과도 보존하며 이 비교 때문에 게임 계산을 바꾸지 않는다.
 
 HeavyMach의 웹판을 기여한 [fastutlego](https://github.com/fastutlego)에게 감사드린다. [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24)의 WebAssembly 실행부·WebGL2 렌더링·입력·음향·저장 구현과 그 뒤의 PWA·Tauri 확장 절차가 MachDefense를 웹과 데스크톱으로 확장하는 데도 토대가 됐다. MachDefense의 PWA를 이 구조를 참고해 만들었고, 같은 웹 실행기를 Tauri Mac 앱에서도 사용했다.
+
+## 설치한 PWA 갱신
+
+서비스 워커는 다음 판을 별도 캐시에 준비한 뒤 활성화한다. 내려받거나 재사용한 파일, 데이터 조각, 조립한 데이터 파일의 SHA-256을 각각 검사한다. 검증한 워커는 활성화 후 앱을 제어해 Safari에서도 다시 열면 시작할 수 있게 한다. 이미 검증한 파일은 캐시에 다시 쓰지 않는다. 새 판을 준비하지 못하면 해당 캐시와 보존 중인 판에서 쓰지 않는 조각을 지운다.
+
+공개판 `f9f26e94f1d4e3d6`에서 처음 갱신할 때 새 판 준비에 실패하면 기존 캐시로 게임을 시작할 수 있다. 서비스 워커는 보관한 목록을 기존 공개판의 해시와 대조한 뒤 기존 게임 파일을 검사한다. 시작 화면을 다시 열면 갱신을 재시도한다. 이미 실행 중인 게임은 시작할 때 받은 판으로 계속 동작한다. 저장 데이터베이스와 저장 버전 검사는 유지한다. 배포 검사에서 번들 안의 에셋 경로를 승인한 입력과 대조하고, 공개 서버의 파일을 빌드 기록과 대조한다.
+
+기존 저장으로 갱신과 실행을 확인한다.
+
+```sh
+node Web/tests/update-integrity.mjs build/web-normal/dist .local/update-integrity.json /path/to/test/MachDefense.sav
+```
+
+첫 슬롯을 사용 중인 시험용 저장 파일을 쓴다. 이 검사는 연결을 끊은 상태에서 시작 화면을 다시 열고, 디코딩한 슬롯과 저장 파일의 바이트를 함께 대조한다.
+
+Chrome에서 저장 공간이 부족한 조건의 첫 갱신을 확인한다.
+
+```sh
+MD_QUOTA_HEADROOM=2100000 node Web/tests/legacy-update.mjs /path/to/published-web build/web-normal/dist .local/legacy-quota.json /path/to/test/MachDefense.sav
+```
+
+공개판 폴더에서 `f9f26e94f1d4e3d6`을 실행한 뒤 브라우저 저장 공간을 제한한다. 새 워커가 같은 저장으로 기존 게임을 열 수 있는지 확인한다. 제한을 해제하고 다시 열어 같은 워커가 갱신을 마치는지도 확인한다.
