@@ -74,7 +74,9 @@ The following features were absent from the original game or extend its original
 
 ### Enemy air raids
 
-The enemy uses the original allied strike's flight and explosions. From stage 11, F-15 STOL/MTD aircraft in Lux Lunae livery drop cluster bombs on a red reticle. [The livery, candidate 09, spawn timing, and damage calculation](docs/en/public/enemy-air-raids.md).
+I gave the enemy the air strike that supported the player in the original game. From Stage 11 onward, enemy jets drop cluster bombs where a red reticle appears.
+
+I chose the F-15 STOL/MTD and gave it a black airframe, gold stripes, and a gold canopy. I used the same Lux Lunae livery for an enemy squadron when I restored HeavyMach 1. [Why I chose the livery and how we made the raids](docs/en/public/enemy-air-raids.md)
 
 ### Emergency resupply
 

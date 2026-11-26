@@ -5,9 +5,9 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "02870dfd67ce1d646e85cf0114b550401bd8fc590d0486c1b07090b391c5f452",
-      "en_sha256": "608bc483f7de9b10bcc92ab47095b0a0a6802996ffe24888deea39d0f208a2a9",
-      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main. 2026-11-23: checked both languages of the links to the other developer statements. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages."
+      "ko_sha256": "26dd4bee0c0a3c1e853e921584403c4ce25abe211571233e791d48ada4183596",
+      "en_sha256": "48fb9663a0120851ef5f47bae0199ba5621585826bc3832d96ce1104e2f329a5",
+      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main. 2026-11-23: checked both languages of the links to the other developer statements. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Compared the raid section with the author’s restored-game README and linked the design essay in both languages."
     },
     {
       "ko": "CHANGELOG.md",
@@ -61,9 +61,9 @@
     {
       "ko": "docs/public/features.md",
       "en": "docs/en/public/features.md",
-      "ko_sha256": "79d866f9cc69956776ed2fcfe3f2a120cebe2d395153f4237060db6df7e0b352",
-      "en_sha256": "a0dcc979f690b8da687a008c4d2e3f1d2a9a9b7999795bcc1ab8902a152fa55a",
-      "review": "2026-11-10 gameplay publication: matched original/additional feature distinction, four helicopter names and unfinished status, supplied Stage 55 image and existing video captions, full-image links and original clip times in both languages. 2026-11-27: checked v0.8 release and enemy raid wording in both languages."
+      "ko_sha256": "a158f86b20ebc734a66a801687bb79df5604af75b40672bc02c3776be237aaaf",
+      "en_sha256": "7b387e090e8b58397c167d641659f22af033d0f48ea08493dc9e5d6856af1b76",
+      "review": "2026-11-10 gameplay publication: matched original/additional feature distinction, four helicopter names and unfinished status, supplied Stage 55 image and existing video captions, full-image links and original clip times in both languages. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. Rewrote the raid summary in both languages and checked warning and wave timing against the schedule."
     },
     {
       "ko": "docs/public/gameplay.md",
@@ -250,9 +250,9 @@
     {
       "ko": "docs/public/enemy-air-raids.md",
       "en": "docs/en/public/enemy-air-raids.md",
-      "review": "2026-11-27: compared the published HeavyMach 1 essay, the candidate 09 art record, the exact damage formula, and the first three stage 11 waves. Corrected attribution to the author of the restoration essay in both languages.",
-      "ko_sha256": "1be890669e06e76d48ed7b0eb24c254b2a7ac6c1c1a3cbb29e1493e5272bed61",
-      "en_sha256": "a9631d9c312036589837b16dbce302c01ccd8fe4c741fa74508bb40a26c64c81"
+      "review": "2026-11-27: compared the published HeavyMach 1 essay, the candidate 09 art record, the exact damage formula, and the first three stage 11 waves. Corrected attribution to the author of the restoration essay in both languages. Checked the personal account against the pinned HeavyMach 1 restoration essay and reviewed the art, schedule and damage against their sources in both languages.",
+      "ko_sha256": "89cba03591d98909bdc37fa7313e9c0e792a5e2a7780e6e7d905ec3372900323",
+      "en_sha256": "670b3e69b475931509c2367fb1e3ff96f7859f7768f44d4842e4d5e1b0dea2fc"
     }
   ]
 }
