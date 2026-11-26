@@ -5,9 +5,9 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "26dd4bee0c0a3c1e853e921584403c4ce25abe211571233e791d48ada4183596",
-      "en_sha256": "48fb9663a0120851ef5f47bae0199ba5621585826bc3832d96ce1104e2f329a5",
-      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main. 2026-11-23: checked both languages of the links to the other developer statements. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Compared the raid section with the author’s restored-game README and linked the design essay in both languages."
+      "ko_sha256": "9beecefe455f7fad63504fc245f884c86e5693cbf4e8cdee914b44b897b06b99",
+      "en_sha256": "40ae91a511d464120c8c762666a05962bdcbc64145dc2fce604dbb2b1bf63da2",
+      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main. 2026-11-23: checked both languages of the links to the other developer statements. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Compared the raid section with the author’s restored-game README and linked the design essay in both languages. Matched the before-and-after gameplay captures and their version labels in both languages."
     },
     {
       "ko": "CHANGELOG.md",
@@ -250,9 +250,9 @@
     {
       "ko": "docs/public/enemy-air-raids.md",
       "en": "docs/en/public/enemy-air-raids.md",
-      "review": "2026-11-27: compared the published HeavyMach 1 essay, the candidate 09 art record, the exact damage formula, and the first three stage 11 waves. Corrected attribution to the author of the restoration essay in both languages. Checked the personal account against the pinned HeavyMach 1 restoration essay and reviewed the art, schedule and damage against their sources in both languages.",
-      "ko_sha256": "89cba03591d98909bdc37fa7313e9c0e792a5e2a7780e6e7d905ec3372900323",
-      "en_sha256": "670b3e69b475931509c2367fb1e3ff96f7859f7768f44d4842e4d5e1b0dea2fc"
+      "review": "2026-11-27: compared the published HeavyMach 1 essay, the candidate 09 art record, the exact damage formula, and the first three stage 11 waves. Corrected attribution to the author of the restoration essay in both languages. Checked the personal account against the pinned HeavyMach 1 restoration essay and reviewed the art, schedule and damage against their sources in both languages. Matched the before-and-after gameplay captures and their version labels in both languages.",
+      "ko_sha256": "3d319650043a6d82242cbc5541b247cc85f7b09958218e415fe44217b9cf695c",
+      "en_sha256": "893221481d11a79072864d801894db86d5242414ba048d035e97f6849c0c056a"
     }
   ]
 }
