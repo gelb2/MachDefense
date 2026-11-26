@@ -114,7 +114,6 @@ private:
     int minimumMechHP_=0;
     struct ScheduledEnemyRaid {EnemyAirRaid raid;EnemyAirRaidSchedule schedule;};
     std::optional<ScheduledEnemyRaid> scheduledEnemyRaid_;
-    ParticleState* enemyRaidWarning_=nullptr;
     void updateEnemyAirRaid();
     AirStrike beginAirStrike(const WeaponDefinition&,Vec2,float,bool enemy);
     std::vector<WorldAirStrike> airStrikes_;

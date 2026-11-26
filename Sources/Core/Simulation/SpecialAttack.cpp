@@ -26,7 +26,7 @@ std::string specialWeaponName(std::string_view prefix,float level) {
 std::optional<EnemyAirRaid> EnemyAirRaid::forStage(unsigned stage, std::size_t stageCount, int minimumMechHP) {
     constexpr unsigned firstRaidStage = 10;
     if (stage < firstRaidStage || stage >= stageCount || minimumMechHP < 2) return {};
-    const auto cap = static_cast<std::int64_t>(minimumMechHP / 2);
+    const auto cap = static_cast<std::int64_t>(minimumMechHP) * 4 / 5;
     const auto span = static_cast<std::int64_t>(stageCount - 1 - firstRaidStage);
     const auto progress = static_cast<std::int64_t>(stage - firstRaidStage);
     // Half the safe budget at first appearance, rising linearly to the full cap.
@@ -40,31 +40,40 @@ int EnemyAirRaid::damageForDrop(unsigned dropIndex, unsigned shotCount) const {
 EnemyAirRaidSchedule EnemyAirRaidSchedule::fromTable(const DataTable& table, unsigned stageNumber) {
     const auto& columns=table.columns();
     const auto row=table.findRow(std::to_string(stageNumber));
-    if (!row || columns.size()<4 || columns[0]!="Stage" || columns[1]!="CycleSeconds")
+    if (!row || columns.size()<6 || columns.size()%2!=0 || columns[0]!="Stage" || columns[1]!="CycleSeconds")
         throw std::runtime_error("Missing enemy raid schedule for stage "+std::to_string(stageNumber));
 
     EnemyAirRaidSchedule schedule;
-    const auto first=table.integer(*row,columns[2]);
-    if (!first || *first!=EnemyAirRaid::startsAfter)
-        throw std::runtime_error("Enemy raid schedule must start at 60 seconds");
-    schedule.times_.push_back(*first);
     constexpr int minimumGap=20, maximumGap=45;
-    for (std::size_t i=3;i<columns.size();++i) {
-        const auto at=table.integer(*row,columns[i]);
-        const auto previous=schedule.times_.back();
-        if (!at || *at<previous+minimumGap || *at>previous+maximumGap)
-            throw std::runtime_error("Enemy raid schedule gap must be 20–45 seconds");
-        schedule.times_.push_back(*at);
+    constexpr double aircraftInterval=1.5;
+    constexpr int maximumAircraft=3;
+    std::int64_t previousWave=0;
+    for (std::size_t i=2;i<columns.size();i+=2) {
+        const std::string_view timeColumn=columns[i], countColumn=columns[i+1];
+        if (!timeColumn.starts_with("At") || !countColumn.starts_with("Count") ||
+            timeColumn.substr(2)!=countColumn.substr(5))
+            throw std::runtime_error("Enemy raid schedule needs matching time and aircraft columns");
+        const auto at=table.integer(*row,timeColumn);
+        if (i==2 && (!at || *at!=EnemyAirRaid::startsAfter))
+            throw std::runtime_error("Enemy raid schedule must start at 60 seconds");
+        if (i>2 && (!at || *at<previousWave+minimumGap || *at>previousWave+maximumGap))
+            throw std::runtime_error("Enemy raid schedule gap must be 20–45 seconds between waves");
+        const auto count=table.integer(*row,countColumn);
+        if (!count || *count<1 || *count>maximumAircraft)
+            throw std::runtime_error("Enemy raid aircraft count must be 1–3");
+        for (int aircraft=0;aircraft<*count;++aircraft)
+            schedule.times_.push_back(static_cast<double>(*at)+aircraft*aircraftInterval);
+        previousWave=*at;
     }
     const auto period=table.integer(*row,"CycleSeconds");
-    const auto span=schedule.times_.back()-schedule.times_.front();
+    const auto span=previousWave-EnemyAirRaid::startsAfter;
     if (!period || *period<span+minimumGap || *period>span+maximumGap)
         throw std::runtime_error("Enemy raid schedule needs a 20–45 second gap between cycles");
     schedule.cycleSeconds_=static_cast<double>(*period);
     return schedule;
 }
 bool EnemyAirRaidSchedule::takeDue(double elapsed) {
-    if (elapsed<cycleStart_+static_cast<double>(times_[next_])) return false;
+    if (elapsed<cycleStart_+times_[next_]) return false;
     if (++next_==times_.size()) {
         next_=0;
         cycleStart_+=cycleSeconds_;

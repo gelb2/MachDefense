@@ -116,7 +116,7 @@ void World::appendSprites(Frame& frame)const{
                                     image.columns,image.rows,worldToView(position),imageScale);
         if (!sprite) continue;
         // The passing aircraft must not obscure the ground warning.
-        auto& layer = (&particle==enemyRaidWarning_) ? layers.back() : layers[5];
+        auto& layer = (image.image==enemyRaidReticleImage) ? layers.back() : layers[5];
         layer.sprites.push_back(std::move(*sprite));
     }
     struct MovingVisual {std::uint64_t order;const WorldTrail* trail=nullptr;const WorldProjectile* projectile=nullptr;};

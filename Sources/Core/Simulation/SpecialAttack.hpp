@@ -24,7 +24,7 @@ public:
     bool takeDue(double elapsed);
 private:
     EnemyAirRaidSchedule()=default;
-    std::vector<std::int64_t> times_;
+    std::vector<double> times_;
     double cycleSeconds_=0;
     double cycleStart_=0;
     std::size_t next_=0;

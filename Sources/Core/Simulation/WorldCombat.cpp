@@ -29,7 +29,6 @@ AirStrike World::beginAirStrike(const WeaponDefinition& weapon,Vec2 point,float 
             if (enemy) setParticleImage(particle,enemyRaidReticleImage,1,1);
             else setParticleImage(particle,"Target.png",2,1);
         }
-        if (enemy) enemyRaidWarning_=particle;
         return particle;
     };
     auto strike = AirStrike::start(weapon,point,delay,time(),geometry_.deviceScale,random_,marker,float(time()),enemy);

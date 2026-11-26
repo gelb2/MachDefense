@@ -72,7 +72,6 @@ void World::start(unsigned stage){
         scheduledEnemyRaid_.reset();
     }
     validationArtScene_=false;
-    enemyRaidWarning_=nullptr;
     stage_=stage;startTime_=time();statistics_={};actors_.clear();loot_.clear();projectiles_.clear();trails_.clear();airStrikes_.clear();spawners_.clear();production_.clear();events_.clear();
     for(auto& p:particles_->particles())p.shown=false;
     countermeasures_->clear();
@@ -146,7 +145,6 @@ void World::tick(){
     std::erase_if(trails_,[](const auto& trail){return trail.motion->removed();});
     updateProjectiles();
     for(auto& p:particles_->particles())p.tick(float(time()),geometry_.deviceScale==.5f?240.f:512.f);
-    if (enemyRaidWarning_ && !enemyRaidWarning_->shown) enemyRaidWarning_=nullptr;
     countermeasures_->tick(float(time()));
     std::vector<LootCollector> collectors;for(const auto& a:actors_)if(a->player&&!a->removed)collectors.push_back({a->id,a->position,a->type,a->hp});
     for(auto& item:loot_)if(auto pickup=item.tick(time(),collectors,random_)){
@@ -162,8 +160,9 @@ void World::tick(){
 }
 void World::finish(WorldState state){
     scheduledEnemyRaid_.reset();
-    if (enemyRaidWarning_) enemyRaidWarning_->shown=false;
-    enemyRaidWarning_=nullptr;
+    auto particles=particles_->particles();
+    for (std::size_t i=0;i<particles.size();++i)
+        if (particleImages_[i].image==enemyRaidReticleImage) particles[i].shown=false;
     std::erase_if(airStrikes_, [](const auto& strike) { return strike.raid.has_value(); });
     // finish may run inside updateProjectiles; keep its iterator valid.
     for (auto& projectile : projectiles_)

@@ -18,6 +18,22 @@ struct Resources:md::ResourceAccess{
 };
 struct Host:md::HostServices{int writes=0,sounds=0;unsigned groundExplosions=0,airStrikeStarts=0;std::optional<md::Bytes>readSave()override{return{};}bool writeSave(std::span<const std::uint8_t>)override{++writes;return true;}void playSound(std::string_view name,float,float)override{++sounds;groundExplosions+=name=="SFX_ExplGround.wav";airStrikeStarts+=name=="SFX_AirStrike.wav";}void playMusic(std::string_view,float)override{}void stopMusic()override{}void requestName(std::string,std::size_t,std::function<void(std::optional<std::string>)>)override{}};
 
+struct RaidWave { double at; unsigned count; };
+
+std::vector<RaidWave> raidWaves(const md::DataTable& table,unsigned stageNumber) {
+    const auto row=table.findRow(std::to_string(stageNumber));
+    assert(row);
+    std::vector<RaidWave> waves;
+    const auto& columns=table.columns();
+    for (std::size_t i=2;i<columns.size();i+=2) {
+        const auto seconds=table.integer(*row,columns[i]);
+        const auto count=table.integer(*row,columns[i+1]);
+        assert(seconds && count && *count>=1 && *count<=3);
+        waves.push_back({static_cast<double>(*seconds),static_cast<unsigned>(*count)});
+    }
+    return waves;
+}
+
 int checkEnemyRaidDamage(Resources& resources, md::BattleGeometry geometry) {
     using namespace md;
     auto readTable = [&](std::string_view name) {
@@ -56,6 +72,7 @@ int checkEnemyRaidDamage(Resources& resources, md::BattleGeometry geometry) {
         const auto* build=builds.find(b.name+"_01");
         return build && build->setType==0 && PlayerLoadout::fromBuild(*build,items,geometry).hp==minimum;
     }));
+    const int cap = minimum * 80 / 100;
     int previous = 0;
     unsigned activeStages = 0;
     for (unsigned stage=0; stage<stages; ++stage) {
@@ -63,6 +80,8 @@ int checkEnemyRaidDamage(Resources& resources, md::BattleGeometry geometry) {
         assert(raid.has_value()==(stage>=10));
         if (!raid) continue;
         ++activeStages;
+        const unsigned span=stages-11;
+        assert(raid->maximumDamage==cap*(span+stage-10)/(2*span));
         if (previous) assert(raid->maximumDamage>=previous);
         previous=raid->maximumDamage;
         auto players=fullHealth;
@@ -77,18 +96,18 @@ int checkEnemyRaidDamage(Resources& resources, md::BattleGeometry geometry) {
         }
         for (std::size_t i=0; i<players.size(); ++i) {
             assert(players[i].hp==fullHealth[i].hp-total);
-            assert(2*players[i].hp>=fullHealth[i].hp);
+            assert(5*players[i].hp>=fullHealth[i].hp);
         }
-        assert(total==raid->maximumDamage && total<=minimum/2 && enemies[0].hp==minimum);
+        assert(total==raid->maximumDamage && total<=cap && enemies[0].hp==minimum);
     }
-    assert(activeStages==stages-10 && previous==minimum/2);
+    assert(activeStages==stages-10 && previous==cap);
     std::cout << "Enemy raid: " << stages << " stages, " << activeStages << " active, "
               << fullHealth.size() << " mech builds, minimum " << minimum << " (" << weakest
               << "), final-stage cap " << previous << "\n";
     return minimum;
 }
 
-double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, unsigned stage, int minimumMechHPForTest, bool testFinish=false) {
+double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, unsigned stage, unsigned aircraftCount, int minimumMechHPForTest, bool testFinish=false) {
     using namespace md;
     auto save = SaveData::empty(1);
     save.createProfile(upgraded?"UPGRADED":"STARTER",1);
@@ -105,12 +124,13 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
     assert(world.enqueueBuild("MachineGun"));
     WorldActor* mech=nullptr;
     unsigned drops=0;
-    int total=0;
-    bool detected=false;
+    constexpr unsigned shotsPerAircraft=10;
+    std::vector<int> aircraftDamage(aircraftCount);
+    bool detected=false,mechHit=false;
     const unsigned initialExplosions=host.groundExplosions;
     double warningTime=0,lastImpact=0;
     std::optional<std::uint64_t> lastRaidProjectile;
-    const bool expected=stage>=10;
+    const bool expected=aircraftCount>0;
     const auto isRaidReticle=[](const Sprite& sprite) {
         return sprite.image==enemyRaidReticleImage;
     };
@@ -122,10 +142,13 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
                 mech=a.get();
                 a->position=a->bipod.position={0,-330};
                 a->bipod.setDestination(a->position);
+                // Keep a target alive to measure each aircraft in multi-plane waves.
+                if (aircraftCount>1) a->hp=a->maxHP;
             }
         }
         const unsigned before=host.groundExplosions;
         world.tick();
+        if (mech && mech->hp<mech->maxHP) mechHit=true;
         if (host.groundExplosions!=before) lastImpact=world.time();
         if (!detected && world.time()-world.startTime()>=60) {
             Frame frame;
@@ -153,7 +176,8 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
         for (const auto& p:world.projectiles()) {
             if (!p.damageOverride || (lastRaidProjectile && p.renderOrder<=*lastRaidProjectile)) continue;
             assert(p.motion.drop && p.motion.toPlayer);
-            total+=*p.damageOverride;
+            assert(drops<aircraftCount*shotsPerAircraft);
+            aircraftDamage[drops/shotsPerAircraft]+=*p.damageOverride;
             ++drops;
             lastRaidProjectile=p.renderOrder;
         }
@@ -169,7 +193,9 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
                 assert(sprite.image!=enemyRaidImage && sprite.image!="Blt_Bullet.png");
                 assert(!isRaidReticle(sprite));
             }
-            world.tick();
+            const unsigned starts=host.airStrikeStarts;
+            for (int i=0;i<180;++i) world.tick();
+            assert(host.airStrikeStarts==starts);
             assert(world.projectiles().empty() && host.groundExplosions==initialExplosions);
             return 0;
         }
@@ -179,54 +205,52 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
     world.appendSprites(settledFrame);
     assert(std::none_of(settledFrame.sprites.begin(),settledFrame.sprites.end(),isRaidReticle));
     if (expected) {
-        assert(drops==10 && host.groundExplosions-initialExplosions==drops && lastImpact-warningTime<5);
+        assert(drops==aircraftCount*shotsPerAircraft && host.groundExplosions-initialExplosions==drops);
+        assert(lastImpact-warningTime<5+(aircraftCount-1)*1.5);
         const auto budget=EnemyAirRaid::forStage(stage,80,minimumMechHPForTest);
-        assert(budget && total==budget->maximumDamage);
-        assert(2*mech->hp>=mech->maxHP);
-        if (stage==10||stage==79) assert(mech->hp<mech->maxHP);
+        assert(budget);
+        for (const int total:aircraftDamage) assert(total==budget->maximumDamage);
+        if (aircraftCount==1) assert(5*mech->hp>=mech->maxHP);
+        if (stage==10||stage==79) assert(mechHit);
         return lastImpact-warningTime;
     }
     assert(!drops && host.groundExplosions==initialExplosions && mech->hp==mech->maxHP);
     return 0;
 }
 
-std::vector<double> raidTimes(const md::DataTable& table,unsigned stageNumber) {
-    const auto row=table.findRow(std::to_string(stageNumber));
-    assert(row);
-    std::vector<double> times;
-    const auto& columns=table.columns();
-    for (std::size_t i=2;i<columns.size();++i) {
-        const auto seconds=table.integer(*row,columns[i]);
-        assert(seconds);
-        times.push_back(static_cast<double>(*seconds));
-    }
-    return times;
-}
-
 void checkPrecomputedRaids(const md::DataTable& table) {
     using md::EnemyAirRaidSchedule;
     assert(table.rowCount()==70);
+    std::array<unsigned,3> counts{};
     for (unsigned stage=11;stage<=80;++stage) {
         auto schedule=EnemyAirRaidSchedule::fromTable(table,stage);
-        const auto times=raidTimes(table,stage);
+        const auto waves=raidWaves(table,stage);
         const auto row=*table.findRow(std::to_string(stage));
         const double period=static_cast<double>(*table.integer(row,"CycleSeconds"));
-        assert(times.front()==60 && times.size()==32);
+        assert(waves.front().at==60 && waves.size()==32);
         double previous=-1;
         for (int cycle=0;cycle<3;++cycle) {
-            for (const auto time:times) {
-                const double at=time+period*cycle;
-                if (previous>=0) assert(at-previous>=20 && at-previous<=45);
-                assert(!schedule.takeDue(at-.01));
-                assert(schedule.takeDue(at));
-                assert(!schedule.takeDue(at));
-                previous=at;
+            for (const auto wave:waves) {
+                const double first=wave.at+period*cycle;
+                if (previous>=0) assert(first-previous>=20 && first-previous<=45);
+                if (cycle==0) ++counts[wave.count-1];
+                for (unsigned aircraft=0;aircraft<wave.count;++aircraft) {
+                    const double at=first+aircraft*1.5;
+                    assert(!schedule.takeDue(at-.01));
+                    assert(schedule.takeDue(at));
+                    assert(!schedule.takeDue(at));
+                }
+                previous=first;
             }
         }
     }
-    for (const auto row:{"11\t65\t59\t85", "11\t65\t60\t79", "11\t70\t60\t106",
-                         "11\t39\t60\t80", "11\t66\t60\t80", "11\t60\t60\tmissing"}) {
-        const auto malformed=md::DataTable::parse(std::string("Stage\tCycleSeconds\tAt01\tAt02\n")+row);
+    assert(std::all_of(counts.begin(),counts.end(),[](unsigned count) { return count>0; }));
+    for (const auto row:{"11\t65\t59\t1\t85\t2", "11\t65\t60\t1\t79\t3",
+                         "11\t70\t60\t1\t106\t2", "11\t39\t60\t1\t80\t3",
+                         "11\t66\t60\t1\t80\t2", "11\t60\t60\t1\tmissing\t2",
+                         "11\t60\t60\t0\t80\t2", "11\t60\t60\t1\t80\t4",
+                         "11\t60\t60\t1\t80\tmissing"}) {
+        const auto malformed=md::DataTable::parse(std::string("Stage\tCycleSeconds\tAt01\tCount01\tAt02\tCount02\n")+row);
         bool rejected=false;
         try {
             EnemyAirRaidSchedule::fromTable(malformed,11);
@@ -240,9 +264,9 @@ void checkPrecomputedRaids(const md::DataTable& table) {
 void checkWorldRaidSchedule(Resources& resources,Host& host,const md::DataTable& table) {
     using namespace md;
     constexpr unsigned stage=10;
-    auto times=raidTimes(table,stage+1);
+    auto waves=raidWaves(table,stage+1);
     const auto row=*table.findRow(std::to_string(stage+1));
-    times.push_back(times.front()+static_cast<double>(*table.integer(row,"CycleSeconds")));
+    waves.push_back({waves.front().at+static_cast<double>(*table.integer(row,"CycleSeconds")),waves.front().count});
 
     auto save=SaveData::empty(1);
     save.createProfile("RAID SCHEDULE",1);
@@ -252,9 +276,11 @@ void checkWorldRaidSchedule(Resources& resources,Host& host,const md::DataTable&
         world.setValidationCells(10000);
         bool queued=false;
         const auto elapsed=[&] {return world.time()-world.startTime();};
-        const std::size_t end=skipFirst?3:times.size();
+        const std::size_t end=skipFirst?3:waves.size();
         std::size_t next=skipFirst?1:0;
-        while (elapsed()<times[end-1]+6) {
+        unsigned aircraft=0;
+        const auto last=waves[end-1];
+        while (elapsed()<last.at+(last.count-1)*1.5+6) {
             if (!queued && (!skipFirst || elapsed()>=65)) {
                 assert(world.enqueueBuild("MachineGun"));
                 queued=true;
@@ -272,17 +298,26 @@ void checkWorldRaidSchedule(Resources& resources,Host& host,const md::DataTable&
             world.tick();
             if (host.airStrikeStarts==starts) continue;
             assert(host.airStrikeStarts==starts+1 && next<end);
-            const auto scheduled=times[next++];
+            const auto wave=waves[next];
+            const auto scheduled=wave.at+aircraft*1.5;
             assert(elapsed()>=scheduled && elapsed()-scheduled<.017);
             Frame frame;
             world.appendSprites(frame);
-            assert(std::any_of(frame.sprites.begin(),frame.sprites.end(),[](const auto& sprite) {
+            const auto planes=std::count_if(frame.sprites.begin(),frame.sprites.end(),[](const auto& sprite) {
+                return sprite.image==enemyRaidImage;
+            });
+            const auto warnings=std::count_if(frame.sprites.begin(),frame.sprites.end(),[](const auto& sprite) {
                 return sprite.image==enemyRaidReticleImage;
-            }));
+            });
+            assert(planes==aircraft+1 && warnings==aircraft+1);
+            if (++aircraft==wave.count) {
+                aircraft=0;
+                ++next;
+            }
         }
-        assert(next==end);
+        assert(next==end && aircraft==0);
     }
-    std::cout<<"Stage 11: "<<times.size()<<" scheduled raids through wrap; retry skips a missing target without retiming\n";
+    std::cout<<"Stage 11: "<<waves.size()<<" waves through wrap, 1.5s between aircraft; no retiming on retry\n";
 }
 
 int main(int argc,char**argv){assert(argc==2);Resources resources;resources.root=argv[1];Host host;
@@ -292,10 +327,12 @@ int main(int argc,char**argv){assert(argc==2);Resources resources;resources.root
     const auto minimum=checkEnemyRaidDamage(resources,md::BattleGeometry::phone());
     assert(checkEnemyRaidDamage(resources,md::BattleGeometry::pad())==minimum);
     double latestImpact=0;
-    for (unsigned stage=0;stage<80;++stage)
-        latestImpact=std::max(latestImpact,checkEnemyRaidInWorld(resources,host,false,stage,minimum));
-    latestImpact=std::max(latestImpact,checkEnemyRaidInWorld(resources,host,true,79,minimum));
-    checkEnemyRaidInWorld(resources,host,false,10,minimum,true);
+    for (unsigned stage=0;stage<80;++stage) {
+        const auto aircraft=stage>=10 ? raidWaves(table,stage+1).front().count : 0;
+        latestImpact=std::max(latestImpact,checkEnemyRaidInWorld(resources,host,false,stage,aircraft,minimum));
+    }
+    latestImpact=std::max(latestImpact,checkEnemyRaidInWorld(resources,host,true,79,raidWaves(table,80).front().count,minimum));
+    checkEnemyRaidInWorld(resources,host,false,11,raidWaves(table,12).front().count,minimum,true);
     std::cout << "All world stages checked; latest raid impact " << latestImpact
               << "s after warning, stage finish on replay and profile independence checked\n";
     assert(host.writes==0);

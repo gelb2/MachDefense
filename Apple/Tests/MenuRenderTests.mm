@@ -207,6 +207,7 @@ public:
                 if (actor->player && !actor->base && actor->type==0) {
                     actor->position=actor->bipod.position=mechPosition;
                     actor->bipod.setDestination(mechPosition);
+                    if (seconds>=80) actor->hp=actor->maxHP;
                     positionedMech=true;
                 }
             }
@@ -306,14 +307,23 @@ public:
     XCTAssertTrue(scheduleRow.has_value());
     if (!scheduleRow) return;
     const md::Vec2 repeatTarget{-25,-345};
+    const auto countPlanes=[&] {
+        const auto& sprites=game.frame().sprites;
+        return std::count_if(sprites.begin(),sprites.end(),[](const auto& sprite) {
+            return sprite.image==md::enemyRaidImage;
+        });
+    };
     for (const std::string_view column:{"At02","At03"}) {
         const auto seconds=table.integer(*scheduleRow,column);
-        XCTAssertTrue(seconds.has_value());
-        if (!seconds) return;
+        const auto count=table.integer(*scheduleRow,"Count"+std::string(column.substr(2)));
+        XCTAssertTrue(seconds.has_value() && count.has_value());
+        if (!seconds || !count) return;
         const double at=static_cast<double>(*seconds);
         advanceTo(at-.1,repeatTarget);
         XCTAssertTrue(std::none_of(game.frame().sprites.begin(),game.frame().sprites.end(),isEnemyReticle));
+        XCTAssertEqual(countPlanes(),0);
         advanceTo(at+.65,repeatTarget);
+        XCTAssertEqual(countPlanes(),1);
         const auto& repeatFrame=game.frame();
         const auto repeat=std::find_if(repeatFrame.sprites.begin(),repeatFrame.sprites.end(),isEnemyReticle);
         XCTAssertTrue(repeat!=repeatFrame.sprites.end());
@@ -322,6 +332,19 @@ public:
         [self capture:[NSString stringWithFormat:@"scheduled-enemy-raid-%.0f",at] renderer:renderer];
         NSLog(@"MD_RAID_PLATFORM %@ %.0fx%.0f raid %.0f",
               tablet?@"iPad":@"iPhone",repeatFrame.logicalWidth,repeatFrame.logicalHeight,at);
+        for (std::int64_t aircraft=1;aircraft<*count;++aircraft) {
+            const double arrival=at+aircraft*1.5;
+            advanceTo(arrival-.1,repeatTarget);
+            XCTAssertEqual(countPlanes(),aircraft);
+            advanceTo(arrival+.1,repeatTarget);
+            XCTAssertEqual(countPlanes(),aircraft+1);
+            const auto& arrivalFrame=game.frame();
+            const auto warnings=std::count_if(arrivalFrame.sprites.begin(),arrivalFrame.sprites.end(),isEnemyReticle);
+            XCTAssertEqual(warnings,aircraft+1);
+            XCTAssertTrue([renderer drawFrame:arrivalFrame toLayer:layer],@"%@",renderer.lastError);
+            [self capture:[NSString stringWithFormat:@"scheduled-enemy-raid-%.1f",arrival] renderer:renderer];
+            NSLog(@"MD_RAID_AIRCRAFT %.1fs aircraft %lld",arrival,(long long)(aircraft+1));
+        }
     }
     XCTAssertEqual(host.saves,0u);
     [renderer finish];
