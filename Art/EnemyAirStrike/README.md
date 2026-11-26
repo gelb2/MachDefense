@@ -10,8 +10,9 @@
 | 검은색·금색 수정 원본 | [MTD-black-gold.png](MTD-black-gold.png) | `04dfd9eb8df7d63b67feef17340ed74f13b44d511f9ee4f66ffdaa97f5f10107` |
 | 검은색·금색 수정 시안의 전투 소비본 | `8d54723`의 `Resources/Images/EnemyAirStrikeMTD.png` | `fe0c215275cee8197d2e2453526b82a2351b2977fb2a32d48f1d11bac66d3c37` |
 | 사용자 승인 09번 | [MTD-09-approved.png](MTD-09-approved.png) | `b530f83a5845b24c4c7c2ed97e0ddc65fdf41d754e33607ae0a40b1533ec53f5` |
-| 상판 도장 수정 원본 | [MTD-upper-surface.svg](MTD-upper-surface.svg) | `4442d1501698dbe49f20c1ba945b5824bb0d40ffbdb8b6ec4a36cdd73e9e47d0` |
-| 현행 전투 소비 | [EnemyAirStrikeMTD.png](../../Resources/Images/EnemyAirStrikeMTD.png) | `95662bc5d5cd8c262fb332300e030deaabb3381c4bb28c547d68216158f6bf1f` |
+| v0.8 상판 도장 원본과 게임 PNG | `v0.8`의 `MTD-upper-surface.svg` 및 `Resources/Images/EnemyAirStrikeMTD.png` | `4442d1501698dbe49f20c1ba945b5824bb0d40ffbdb8b6ec4a36cdd73e9e47d0` · `95662bc5d5cd8c262fb332300e030deaabb3381c4bb28c547d68216158f6bf1f` |
+| v0.8.1 조종석 수정 원본 | [MTD-upper-surface.svg](MTD-upper-surface.svg) | `79315ffbafec0579eb613a6c67af36081f6cff81ab462ae4c8ed495d0f171071` |
+| 현행 전투 소비 | [EnemyAirStrikeMTD.png](../../Resources/Images/EnemyAirStrikeMTD.png) | `21171d69727ec0d518626cbe0b1c40666035731f7cc4dc39cddc1e0762902e88` |
 
 첫 편집에는 첫 시안과 아래 네 장을 직접 첨부했다. 두 번째 편집에서는 수정 시안·공식 도장 사진·원작 공습기 PNG를 다시 첨부해 표식 위치를 고쳤다. 두 편집 모두 투명 배경을 사용했다.
 
@@ -59,3 +60,10 @@ magick /tmp/mtd-upper-surface.png -trim +repage -resize 208x208 \
 ```
 
 iPhone Air 시뮬레이터에서 적기와 아군 공습기를 같은 전투 프레임에 그리는 테스트가 통과했다. 승인본 화면과 픽셀 차이는 적기 영역에 있었다. 수정 PNG는 빌드 및 테스트 번들의 파일과 SHA-256이 일치했다. [09번 승인 화면](../../docs/evidence/enemy-airstrike-20261127/ios-simulator-mtd-09-approved.png) · [상판 수정 화면](../../docs/evidence/enemy-airstrike-20261127/ios-simulator-mtd-painted.png)
+
+
+## v0.8.1 조종석과 기체 표시 크기
+
+기수가 오른쪽을 향한 원본 SVG에서 조종석 벡터만 중심 `x=293`을 기준으로 길이 방향에 0.5배를 적용했다. 게임 PNG의 조종석 중앙에서 금색 유리가 차지하는 가로 범위는 44픽셀에서 22픽셀이 됐다. 변환한 PNG는 이전과 같은 256×256 캔버스와 알파 윤곽을 사용한다.
+
+공용 전투 렌더에서 적기의 표시 폭과 높이를 각각 0.5배로 그린다. 기체를 회전시키는 중심, 아군 공습의 배율, 빨간 조준점은 기존 값을 사용한다. [전투 렌더](../../Sources/Core/Presentation/WorldPresentation.cpp) · [전투 크기 검사](../../Tests/WorldSpecialTests.cpp).

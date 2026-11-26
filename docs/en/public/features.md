@@ -6,7 +6,7 @@
 
 ## Enemy air raids
 
-In stages 11–80, enemy F-15 STOL/MTD aircraft drop cluster bombs on the location marked by a red reticle. The first raid starts 60 seconds into battle. Each wave has one to three aircraft from a precomputed schedule, entering 1.5 seconds apart. [Aircraft design, spawn conditions, and damage calculation](enemy-air-raids.md).
+Starting in Stage 11, enemy jets target allied mechs. A red reticle marks where the cluster bombs will fall. The first raid comes 60 seconds into battle. Further raids come every 20 to 45 seconds with one to three jets, arriving one at a time at 1.5-second intervals. [Raid schedule and damage](enemy-air-raids.md)
 
 ## Recurring emergency resupply
 

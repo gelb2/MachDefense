@@ -155,7 +155,13 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
             world.appendSprites(frame);
             bool plane=false, warning=false;
             for (const auto& sprite : frame.sprites) {
-                plane|=sprite.image==enemyRaidImage;
+                if (sprite.image==enemyRaidImage) {
+                    plane=true;
+                    const auto size=resources.imageSize(enemyRaidImage);
+                    const float previousScale=1.3f*BattleGeometry::phone().deviceScale;
+                    assert(std::abs(sprite.destination.width-size.x*previousScale*.5f)<.001f);
+                    assert(std::abs(sprite.destination.height-size.y*previousScale*.5f)<.001f);
+                }
                 if (!isRaidReticle(sprite)) continue;
                 assert(mech && !warning);
                 const auto center=world.worldToScreen(mech->position);
