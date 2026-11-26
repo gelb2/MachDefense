@@ -4,6 +4,10 @@
 [한국어](../../public/features.md) | [English](features.md)
 <!-- language-nav:end -->
 
+## Enemy air raids
+
+In stages 11–80, enemy F-15 STOL/MTD aircraft drop cluster bombs on the location marked by a red reticle. The first raid starts 60 seconds into battle. Each wave has one to three aircraft from a precomputed schedule, entering 1.5 seconds apart. [Aircraft design, spawn conditions, and damage calculation](enemy-air-raids.md).
+
 ## Recurring emergency resupply
 
 The original purchase button now opens an emergency-resupply window. Credit, cell, and mixed supplies become ready every 30, 45, and 60 seconds of game time. Unclaimed supplies remain available across intervals. If cell capacity is insufficient, the player receives only what fits; the remainder stays in the window.
