@@ -11,8 +11,10 @@
 | 검은색·금색 수정 시안의 전투 소비본 | `8d54723`의 `Resources/Images/EnemyAirStrikeMTD.png` | `fe0c215275cee8197d2e2453526b82a2351b2977fb2a32d48f1d11bac66d3c37` |
 | 사용자 승인 09번 | [MTD-09-approved.png](MTD-09-approved.png) | `b530f83a5845b24c4c7c2ed97e0ddc65fdf41d754e33607ae0a40b1533ec53f5` |
 | v0.8 상판 도장 원본과 게임 PNG | `v0.8`의 `MTD-upper-surface.svg` 및 `Resources/Images/EnemyAirStrikeMTD.png` | `4442d1501698dbe49f20c1ba945b5824bb0d40ffbdb8b6ec4a36cdd73e9e47d0` · `95662bc5d5cd8c262fb332300e030deaabb3381c4bb28c547d68216158f6bf1f` |
-| v0.8.1 조종석 수정 원본 | [MTD-upper-surface.svg](MTD-upper-surface.svg) | `79315ffbafec0579eb613a6c67af36081f6cff81ab462ae4c8ed495d0f171071` |
-| 현행 전투 소비 | [EnemyAirStrikeMTD.png](../../Resources/Images/EnemyAirStrikeMTD.png) | `21171d69727ec0d518626cbe0b1c40666035731f7cc4dc39cddc1e0762902e88` |
+| v0.8.1 조종석 수정 원본과 게임 PNG | `v0.8.1`의 `MTD-upper-surface.svg` 및 `Resources/Images/EnemyAirStrikeMTD.png` | `79315ffbafec0579eb613a6c67af36081f6cff81ab462ae4c8ed495d0f171071` · `21171d69727ec0d518626cbe0b1c40666035731f7cc4dc39cddc1e0762902e88` |
+| 사용자 채택 C안 | [MTD-C-approved.svg](MTD-C-approved.svg) | `361f363719678621440f8521104fac9d6d8136d22c2bbd4c20b93499cbcf16aa` |
+| C안 기수 수정 원본 | [MTD-upper-surface.svg](MTD-upper-surface.svg) | `5957cdeb5d8a9f50a38e095e85aace04c301cfbf1f16c697f535d1e426091fb0` |
+| C안 기수 수정 게임 PNG | [EnemyAirStrikeMTD.png](../../Resources/Images/EnemyAirStrikeMTD.png) | `006af798f2ecca544d8fc358306bb1ae4387a3d376f9ef991b0e5dbaae522cbe` |
 
 첫 편집에는 첫 시안과 아래 네 장을 직접 첨부했다. 두 번째 편집에서는 수정 시안·공식 도장 사진·원작 공습기 PNG를 다시 첨부해 표식 위치를 고쳤다. 두 편집 모두 투명 배경을 사용했다.
 
@@ -67,3 +69,26 @@ iPhone Air 시뮬레이터에서 적기와 아군 공습기를 같은 전투 프
 기수가 오른쪽을 향한 원본 SVG에서 조종석 벡터만 중심 `x=293`을 기준으로 길이 방향에 0.5배를 적용했다. 게임 PNG의 조종석 중앙에서 금색 유리가 차지하는 가로 범위는 44픽셀에서 22픽셀이 됐다. 변환한 PNG는 이전과 같은 256×256 캔버스와 알파 윤곽을 사용한다.
 
 공용 전투 렌더에서 적기의 표시 폭과 높이를 각각 0.5배로 그린다. 기체를 회전시키는 중심, 아군 공습의 배율, 빨간 조준점은 기존 값을 사용한다. [전투 렌더](../../Sources/Core/Presentation/WorldPresentation.cpp) · [전투 크기 검사](../../Tests/WorldSpecialTests.cpp).
+
+## C안의 검은 도장과 짧은 기수
+
+사용자가 검은 도장 시안 C를 채택했다. 조종석 바로 앞 `x=316`을 기준으로 그 앞의 기수만 길이 방향으로 0.5배 줄였다. SVG를 세 배 크기로 그렸을 때 기준점부터 기수 끝까지 261픽셀에서 131픽셀로 줄었다. 256×256 게임 PNG는 같은 좌표에 그리며, 금색 유리를 포함한 기수 뒤쪽의 RGBA 픽셀은 채택 C안과 같다.
+
+두 SVG는 C안의 원래 크롭 `1192x799+17+9`와 208픽셀 기준 폭으로 고정해 변환한다. C안에는 `v0.8.1` 게임 PNG의 알파 채널을 사용한다. 게임 PNG의 0~185열에는 채택 C안, 186열부터는 짧아진 기수를 그린 결과를 사용한다.
+
+```sh
+cairosvg Art/EnemyAirStrike/MTD-C-approved.svg -o /tmp/mtd-c.png
+cairosvg Art/EnemyAirStrike/MTD-upper-surface.svg -o /tmp/mtd-short-nose.png
+for art in mtd-c mtd-short-nose; do
+  magick "/tmp/$art.png" -crop 1192x799+17+9 +repage -resize 208x208 \
+    -background none -gravity center -extent 256x256 "PNG32:/tmp/$art-game.png"
+done
+git show v0.8.1:Resources/Images/EnemyAirStrikeMTD.png > /tmp/mtd-v081.png
+magick /tmp/mtd-c-game.png -alpha off \
+  \( /tmp/mtd-v081.png -alpha extract \) -compose CopyOpacity -composite PNG32:/tmp/mtd-c-approved.png
+magick /tmp/mtd-c-approved.png -crop 186x256+0+0 +repage \
+  \( /tmp/mtd-short-nose-game.png -crop 70x256+186+0 +repage \) \
+  +append -strip PNG32:Resources/Images/EnemyAirStrikeMTD.png
+```
+
+정식 웹 빌드에서 11스테이지의 61.6초와 62.2초를 C안과 비교했다. 바뀐 화면 픽셀은 기수에만 있었다. iPhone Air 시뮬레이터에서도 새 PNG로 적 공습기와 아군 공습기를 같은 전투 화면에 그렸다.
