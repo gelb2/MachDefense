@@ -12,9 +12,9 @@
 | 사용자 승인 09번 | [MTD-09-approved.png](MTD-09-approved.png) | `b530f83a5845b24c4c7c2ed97e0ddc65fdf41d754e33607ae0a40b1533ec53f5` |
 | v0.8 상판 도장 원본과 게임 PNG | `v0.8`의 `MTD-upper-surface.svg` 및 `Resources/Images/EnemyAirStrikeMTD.png` | `4442d1501698dbe49f20c1ba945b5824bb0d40ffbdb8b6ec4a36cdd73e9e47d0` · `95662bc5d5cd8c262fb332300e030deaabb3381c4bb28c547d68216158f6bf1f` |
 | v0.8.1 조종석 수정 원본과 게임 PNG | `v0.8.1`의 `MTD-upper-surface.svg` 및 `Resources/Images/EnemyAirStrikeMTD.png` | `79315ffbafec0579eb613a6c67af36081f6cff81ab462ae4c8ed495d0f171071` · `21171d69727ec0d518626cbe0b1c40666035731f7cc4dc39cddc1e0762902e88` |
-| C안 기수 수정 래스터 | [MTD-C-raster.png](MTD-C-raster.png) | `76a32e904738dfba07e6317368a995088c3de20dd34e9f66d5eb643f69613814` |
-| CgBI 준비본 | [MTD-C-source-cgbi.png](MTD-C-source-cgbi.png) | `868b6124f225af6c2b7fb519c6253bb3b2459722181cf1182559aabd957494dc` |
-| 전투용 RGBA | [EnemyAirStrikeMTD.png](../../Resources/Images/EnemyAirStrikeMTD.png) | `ceaa6b20681e97f5429396fba4059de6de81c50e0757fc506fedd77167d8f2d1` |
+| 채택 C안 래스터 | [MTD-C-raster.png](MTD-C-raster.png) | `8b7fdcfbc43ad6d2129710f8bff495a466fe3f1820c5e60c7cd9a2ec1bdaa288` |
+| CgBI 준비본 | [MTD-C-source-cgbi.png](MTD-C-source-cgbi.png) | `e108e4c8d85f048b86aeeda4241a2476c61d997145cddcd91b3436be83f15a4f` |
+| 전투용 RGBA | [EnemyAirStrikeMTD.png](../../Resources/Images/EnemyAirStrikeMTD.png) | `0b4f4064283c40d299c77689913534c2312668bd7fa6f1bfdbdf617c56740581` |
 
 첫 편집에는 첫 시안과 아래 네 장을 직접 첨부했다. 두 번째 편집에서는 수정 시안·공식 도장 사진·원작 공습기 PNG를 다시 첨부해 표식 위치를 고쳤다. 두 편집 모두 투명 배경을 사용했다.
 
@@ -73,10 +73,14 @@ iPhone Air 시뮬레이터에서 적기와 아군 공습기를 같은 전투 프
 
 ## C안의 검은 도장과 짧은 기수
 
-256×256 래스터에서 채택 C안의 조종석 바로 앞을 기준으로 기수를 절반으로 줄였다. 승인한 윤곽과 금줄을 래스터에 맞췄다. 래스터의 보이는 픽셀은 수정 승인본과 일치한다.
+기수 축소 작업 당시 256×256 래스터에서 채택 C안의 조종석 바로 앞을 기준으로 기수를 절반으로 줄였다. 승인한 윤곽과 금줄을 래스터에 맞췄다. 래스터의 보이는 픽셀은 수정 승인본과 일치한다.
 
 Apple `pngcrush -iphone`으로 래스터를 사전 곱셈 BGRA로 준비했다. [원작 아군 공습기 CgBI](../../Resources/OriginalImages/Airplane.png)와 같은 헤더·색좌표·픽셀 밀도·단일 IDAT 구조로 저장했다. [기존 준비 도구](../../tools/prepare_resources.py)의 PNG 디코딩, 알파 역산, RGBA 인코딩을 같은 순서로 적용했다. 투명도와 불투명 색, 금색 유리 픽셀은 준비 전후 동일하다. 반투명 경계에서 사전 곱셈 채널 값의 차이는 최대 1 미만이다.
 
 전투에서는 아군기와 적기 모두 기존의 `AirStrike::appendSprite()`로 한 장을 그린다. 적기는 앞서 정한 절반 배율을 사용한다. [공습 스프라이트](../../Sources/Core/Simulation/SpecialAttack.cpp) · [전투 레이어](../../Sources/Core/Presentation/WorldPresentation.cpp)
 
 iPhone Air와 Android 에뮬레이터, 오프라인 Web/PWA, Tauri의 치트 검사에서 최종 파일을 확인했다. iPhone에서는 아군기와 적기가 같은 전투 화면에 표시됐다. 다른 게임 자원과 공용 로드·렌더 파일은 기준 브랜치와 일치한다.
+
+## v0.8.2 C안 적용
+
+C안에서 기수를 줄이기 전 길이로 복구했다. 금색 유리와 256×256 캔버스, 공용 렌더 배율은 유지했다. 래스터에서 CgBI를 만든 뒤 아군기와 같은 규칙으로 전투용 RGBA를 준비했다.
