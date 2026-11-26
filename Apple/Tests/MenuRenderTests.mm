@@ -190,6 +190,9 @@ public:
     const auto isEnemyReticle=[](const md::Sprite& sprite) {
         return sprite.image==md::enemyRaidReticleImage;
     };
+    const auto isAllyReticle=[](const md::Sprite& sprite) {
+        return sprite.image=="Target.png" && sprite.sourcePx && sprite.sourcePx->x==0;
+    };
     bool launchedAlly=false;
     const auto elapsed=[&] { return world->time()-world->startTime(); };
     bool positionedMech=false;
@@ -212,13 +215,22 @@ public:
         }
         XCTAssertGreaterThanOrEqual(elapsed(),seconds);
     };
+    advanceTo(60.10,enemyTarget);
+    const auto& openingFrame=game.frame();
+    const auto openingEnemy=std::find_if(openingFrame.sprites.begin(),openingFrame.sprites.end(),isEnemyReticle);
+    const auto openingAlly=std::find_if(openingFrame.sprites.begin(),openingFrame.sprites.end(),isAllyReticle);
+    XCTAssertTrue(openingEnemy!=openingFrame.sprites.end() && openingAlly!=openingFrame.sprites.end());
+    if (openingEnemy==openingFrame.sprites.end() || openingAlly==openingFrame.sprites.end()) return;
+    const auto initialEnemy=*openingEnemy, initialAlly=*openingAlly;
+    const double openingTime=elapsed();
+    XCTAssertTrue([renderer drawFrame:openingFrame toLayer:layer],@"%@",renderer.lastError);
+    [self capture:@"reticles-during-opening-animation" renderer:renderer];
+
     advanceTo(60.65,enemyTarget);
     XCTAssertTrue(positionedMech && launchedAlly);
     const auto& warningFrame=game.frame();
     const auto enemy=std::find_if(warningFrame.sprites.begin(),warningFrame.sprites.end(),isEnemyReticle);
-    const auto ally=std::find_if(warningFrame.sprites.begin(),warningFrame.sprites.end(),[](const auto& sprite) {
-        return sprite.image=="Target.png" && sprite.sourcePx && sprite.sourcePx->x==0;
-    });
+    const auto ally=std::find_if(warningFrame.sprites.begin(),warningFrame.sprites.end(),isAllyReticle);
     XCTAssertTrue(enemy!=warningFrame.sprites.end() && ally!=warningFrame.sprites.end());
     if (enemy==warningFrame.sprites.end() || ally==warningFrame.sprites.end()) return;
     const auto checkCenter=[&](const md::Sprite& sprite,md::Vec2 point) {
@@ -228,6 +240,17 @@ public:
     };
     checkCenter(*enemy,enemyTarget);
     checkCenter(*ally,allyTarget);
+    for (const auto* sprite:{enemy.operator->(),ally.operator->()}) {
+        const auto& initial=isEnemyReticle(*sprite)?initialEnemy:initialAlly;
+        XCTAssertGreaterThan(initial.destination.width,sprite->destination.width*2);
+        XCTAssertLessThan(sprite->rotationDegrees,initial.rotationDegrees);
+        XCTAssertLessThan(sprite->color.a,initial.color.a);
+        NSLog(@"MD_RETICLE_MOTION %s %.3f..%.3fs width %.2f -> %.2f angle %.2f -> %.2f opacity %.3f -> %.3f",
+              sprite->image.c_str(),openingTime,elapsed(),initial.destination.width,sprite->destination.width,
+              initial.rotationDegrees,sprite->rotationDegrees,initial.color.a,sprite->color.a);
+    }
+    XCTAssertEqualWithAccuracy(enemy->rotationDegrees-initialEnemy.rotationDegrees,
+                               ally->rotationDegrees-initialAlly.rotationDegrees,.01);
     XCTAssertTrue(std::none_of(world->projectiles().begin(),world->projectiles().end(),[](const auto& projectile) {
         return projectile.damageOverride.has_value();
     }));

@@ -77,3 +77,5 @@
 아군 스킬의 `Target.png`에서 녹색 신호값을 투명도로 옮겨 32×32 빨간 조준점을 만들었다. 적 공습이 표적 좌표를 확정하면 투하 전에 그 위치에 표시한다. 적기가 표적 위를 지날 때도 보인다. [빨간 조준점 PNG](../../Resources/Images/TargetEnemyRaid.png) · [표시 코드](../../Sources/Core/Presentation/WorldPresentation.cpp)
 
 iPhone Air 시뮬레이터에서 치트판의 TEST 기능으로 11스테이지를 열었다. 투하 전 적 표적에는 빨간 조준점, 아군 스킬 표적에는 녹색 조준점이 보였다. 메크가 이동하고 적기가 표적 위를 지나가는 동안에도 빨간 조준점은 최초 표적에 남았다. 공용 코어 검사 4개와 치트판 렌더 검사 1개가 통과했다. [투하 전](../evidence/enemy-airstrike-20261127/ios-cheat-enemy-red-reticle-before-bombs.png) · [메크 이동 후 적기 통과](../evidence/enemy-airstrike-20261127/ios-cheat-enemy-air-raid-and-allied-airstrike.png)
+
+치트판에서 발동 0.109초와 0.656초 프레임을 비교했다. 빨간 조준점의 스프라이트 폭은 84.28에서 24.15px로, 녹색은 96.34에서 24.18px로 줄었다. 같은 구간에 두 조준점 모두 약 189° 회전하고 옅어졌다. 녹색은 3초, 빨간색은 5초 표시되므로 빨간색이 더 천천히 옅어진다. [치트판 프레임 비교](../evidence/enemy-airstrike-20261127/ios-cheat-reticle-motion.png)
