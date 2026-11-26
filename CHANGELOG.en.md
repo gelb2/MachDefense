@@ -4,6 +4,12 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## v0.8.1 — Smaller enemy strike aircraft
+
+November 27, 2026. Shortened the F-15 STOL/MTD's gold cockpit to half its previous length. Halved the enemy aircraft's displayed width and height in battle. [Art and display-size changes (Korean)](Art/EnemyAirStrike/README.md#v081-조종석과-기체-표시-크기).
+
+The design article now attributes the motorcycle journey to the author of the HeavyMach 1 restoration essay. [Corrected design article](docs/en/public/enemy-air-raids.md). The Apple and Android apps are version 0.8.1 (build 9), and the Tauri Mac app is 0.8.1.
+
 ## v0.8 — Enemy air raids
 
 November 27, 2026. Added enemy F-15 STOL/MTD aircraft in Lux Lunae livery to stages 11–80. The first raid occurs at 60 seconds of battle time. Later waves come 20–45 seconds apart and contain one to three aircraft, as set by the precomputed schedule. Aircraft enter one at a time, 1.5 seconds apart. A red ground reticle marks the target.

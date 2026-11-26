@@ -4,7 +4,7 @@ from pathlib import Path
 import base64,hashlib,json,re,shutil,subprocess
 root=Path(__file__).resolve().parents[3];desktop=root/'Desktop/Tauri'
 version=json.loads((desktop/'src-tauri/tauri.conf.json').read_text())['version']
-tag='v'+'.'.join(version.split('.')[:2]);out=root/'build/release'/tag;out.mkdir(parents=True,exist_ok=True)
+tag='v'+version.removesuffix('.0');out=root/'build/release'/tag;out.mkdir(parents=True,exist_ok=True)
 bundle=desktop/'src-tauri/target/release/bundle/macos';source=bundle/'MachDefense Desktop.app.tar.gz'
 subprocess.run(['codesign','--verify','--deep','--strict',str(bundle/'MachDefense Desktop.app')],check=True)
 signature=(bundle/(source.name+'.sig')).read_text().strip()

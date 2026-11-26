@@ -137,7 +137,8 @@ void World::appendSprites(Frame& frame)const{
     countermeasures_->append(layers[6],float(time()),[&](Vec2 p){return worldToView(p);},[&](std::string_view n){return resources_.imageSize(n);});
     for (const auto& strike : airStrikes_) {
         const auto image = strike.raid ? enemyRaidImage : std::string_view{"Airplane.png"};
-        strike.motion.appendSprite(layers[7],worldToView(strike.motion.position),resources_.imageSize(image),scale,image);
+        const float aircraftScale = strike.raid ? scale * .5f : scale;
+        strike.motion.appendSprite(layers[7],worldToView(strike.motion.position),resources_.imageSize(image),aircraftScale,image);
     }
     for(auto& layer:layers){const auto offset=frame.sprites.size();for(auto& mesh:layer.meshes){mesh.beforeSpriteIndex+=offset;frame.meshes.push_back(std::move(mesh));}for(auto& sprite:layer.sprites)frame.sprites.push_back(std::move(sprite));}
 

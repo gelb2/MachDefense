@@ -5,16 +5,16 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "c288a8ad49b98a7d6cd3c4856f48b1ef4836d23cc16e92f7bdf71e7341f01423",
-      "en_sha256": "55073c9cfcd160e0a4bdb75cccb2662b3bff8c49d0fc2eb63869b37749671d37",
-      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main. 2026-11-23: checked both languages of the links to the other developer statements. 2026-11-27: checked v0.8 release and enemy raid wording in both languages."
+      "ko_sha256": "26dd4bee0c0a3c1e853e921584403c4ce25abe211571233e791d48ada4183596",
+      "en_sha256": "48fb9663a0120851ef5f47bae0199ba5621585826bc3832d96ce1104e2f329a5",
+      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main. 2026-11-23: checked both languages of the links to the other developer statements. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Compared the raid section with the author’s restored-game README and linked the design essay in both languages."
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "ab7a13466bb8463edcb13adfc23b304f665b1a0741f62e00cca98c86eff4451a",
-      "en_sha256": "927c46fc2c5872f065c2efde50d3a3ed14c2430a9dc769120dc7c9004cb56812",
-      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages. 2026-11-27: checked v0.8 release and enemy raid wording in both languages."
+      "ko_sha256": "907887a741cff9eb40b67a41465c1080516736a9773ce26d27c4e74570ffbc32",
+      "en_sha256": "bc774d034f88bdd6793e57f6c99d6bed3f82b9abcff8d16701bd49f95205ab6c",
+      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages."
     },
     {
       "ko": "CREDITS.md",
@@ -47,9 +47,9 @@
     {
       "ko": "docs/public/build-and-install.md",
       "en": "docs/en/public/build-and-install.md",
-      "ko_sha256": "40179824a4f684827337c066dffaec22a7395227c180811a313a8a1fca7ca719",
-      "en_sha256": "b292ad4b64cab0c20def6c7c2f56763c701bac99098d64de255d18e51f6738f4",
-      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved. 2026-11-27: checked v0.8 release and enemy raid wording in both languages."
+      "ko_sha256": "110af2210ab7bfe6420f022e6a88ad7d09068ffd6b942f02f51e9f60a77a2479",
+      "en_sha256": "7362e19d67939e72c53fcd1378a2382fddc700c725994459d90626b3eef716f5",
+      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages."
     },
     {
       "ko": "docs/public/development-history.md",
@@ -61,9 +61,9 @@
     {
       "ko": "docs/public/features.md",
       "en": "docs/en/public/features.md",
-      "ko_sha256": "79d866f9cc69956776ed2fcfe3f2a120cebe2d395153f4237060db6df7e0b352",
-      "en_sha256": "a0dcc979f690b8da687a008c4d2e3f1d2a9a9b7999795bcc1ab8902a152fa55a",
-      "review": "2026-11-10 gameplay publication: matched original/additional feature distinction, four helicopter names and unfinished status, supplied Stage 55 image and existing video captions, full-image links and original clip times in both languages. 2026-11-27: checked v0.8 release and enemy raid wording in both languages."
+      "ko_sha256": "a158f86b20ebc734a66a801687bb79df5604af75b40672bc02c3776be237aaaf",
+      "en_sha256": "7b387e090e8b58397c167d641659f22af033d0f48ea08493dc9e5d6856af1b76",
+      "review": "2026-11-10 gameplay publication: matched original/additional feature distinction, four helicopter names and unfinished status, supplied Stage 55 image and existing video captions, full-image links and original clip times in both languages. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. Rewrote the raid summary in both languages and checked warning and wave timing against the schedule."
     },
     {
       "ko": "docs/public/gameplay.md",
@@ -250,9 +250,9 @@
     {
       "ko": "docs/public/enemy-air-raids.md",
       "en": "docs/en/public/enemy-air-raids.md",
-      "review": "2026-11-27: compared the published HeavyMach 1 essay, the candidate 09 art record, the exact damage formula, and the first three stage 11 waves.",
-      "ko_sha256": "c9d0d858838b664645bf9f7fe1141cdc5181b46f1da9eefbac31bae1e46eb192",
-      "en_sha256": "943ed1856e6691d472fcfd694b2a42858c74a6bd376ef927ef1ac7802d114d51"
+      "review": "2026-11-27: compared the published HeavyMach 1 essay, the candidate 09 art record, the exact damage formula, and the first three stage 11 waves. Corrected attribution to the author of the restoration essay in both languages. Checked the personal account against the pinned HeavyMach 1 restoration essay and reviewed the art, schedule and damage against their sources in both languages.",
+      "ko_sha256": "89cba03591d98909bdc37fa7313e9c0e792a5e2a7780e6e7d905ec3372900323",
+      "en_sha256": "670b3e69b475931509c2367fb1e3ff96f7859f7768f44d4842e4d5e1b0dea2fc"
     }
   ]
 }
