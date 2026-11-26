@@ -250,9 +250,9 @@
     {
       "ko": "docs/public/enemy-air-raids.md",
       "en": "docs/en/public/enemy-air-raids.md",
-      "review": "2026-11-27: compared the published HeavyMach 1 essay, the candidate 09 art record, the exact damage formula, and the first three stage 11 waves.",
-      "ko_sha256": "c9d0d858838b664645bf9f7fe1141cdc5181b46f1da9eefbac31bae1e46eb192",
-      "en_sha256": "943ed1856e6691d472fcfd694b2a42858c74a6bd376ef927ef1ac7802d114d51"
+      "review": "2026-11-27: compared the published HeavyMach 1 essay, the candidate 09 art record, the exact damage formula, and the first three stage 11 waves. Corrected attribution to the author of the restoration essay in both languages.",
+      "ko_sha256": "1be890669e06e76d48ed7b0eb24c254b2a7ac6c1c1a3cbb29e1493e5272bed61",
+      "en_sha256": "a9631d9c312036589837b16dbce302c01ccd8fe4c741fa74508bb40a26c64c81"
     }
   ]
 }
