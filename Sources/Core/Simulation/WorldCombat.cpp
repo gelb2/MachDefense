@@ -37,7 +37,7 @@ AirStrike World::beginAirStrike(const WeaponDefinition& weapon,Vec2 point,float 
     return strike;
 }
 void World::updateEnemyAirRaid() {
-    if (!pendingEnemyRaid_ || time()-startTime_ < EnemyAirRaid::startsAfter) return;
+    if (!scheduledEnemyRaid_ || !scheduledEnemyRaid_->schedule.takeDue(time()-startTime_)) return;
     const WorldActor* target = nullptr;
     for (const auto& actor : actors_) {
         if (!actor->player || actor->type != 0 || actor->hp <= 0 || actor->removed) continue;
@@ -49,8 +49,7 @@ void World::updateEnemyAirRaid() {
     if (!weapon || weapon->type != WeaponType::bomb || weapon->damageRange <= 0 || !weapon->shotCount)
         throw std::runtime_error("Enemy air raid requires the area-damage airstrike bomb");
     constexpr float warningSeconds = 1.5f;
-    airStrikes_.push_back({std::string(bomb),beginAirStrike(*weapon,target->position,warningSeconds,true),pendingEnemyRaid_});
-    pendingEnemyRaid_.reset();
+    airStrikes_.push_back({std::string(bomb),beginAirStrike(*weapon,target->position,warningSeconds,true),scheduledEnemyRaid_->raid});
 }
 bool World::activateSpecial(std::string_view name,Vec2 point){
     if(!started_||paused_||state_!=WorldState::running)return false;

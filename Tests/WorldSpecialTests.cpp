@@ -16,7 +16,7 @@ struct Resources:md::ResourceAccess{
     md::Bytes read(std::string_view path)override{std::ifstream f(root/path,std::ios::binary);if(!f)throw std::runtime_error(std::string(path));return {std::istreambuf_iterator<char>(f),{}};}
     md::Vec2 imageSize(std::string_view name)override{auto it=sizes.find(std::string(name));if(it!=sizes.end())return it->second;if(!std::filesystem::exists(root/"Images"/name))return {};auto b=read("Images/"+std::string(name));if(b.size()>24&&b[0]==137){return sizes[std::string(name)]=mdtest::pngSize(b);}return {};}
 };
-struct Host:md::HostServices{int writes=0,sounds=0;unsigned groundExplosions=0;std::optional<md::Bytes>readSave()override{return{};}bool writeSave(std::span<const std::uint8_t>)override{++writes;return true;}void playSound(std::string_view name,float,float)override{++sounds;groundExplosions+=name=="SFX_ExplGround.wav";}void playMusic(std::string_view,float)override{}void stopMusic()override{}void requestName(std::string,std::size_t,std::function<void(std::optional<std::string>)>)override{}};
+struct Host:md::HostServices{int writes=0,sounds=0;unsigned groundExplosions=0,airStrikeStarts=0;std::optional<md::Bytes>readSave()override{return{};}bool writeSave(std::span<const std::uint8_t>)override{++writes;return true;}void playSound(std::string_view name,float,float)override{++sounds;groundExplosions+=name=="SFX_ExplGround.wav";airStrikeStarts+=name=="SFX_AirStrike.wav";}void playMusic(std::string_view,float)override{}void stopMusic()override{}void requestName(std::string,std::size_t,std::function<void(std::optional<std::string>)>)override{}};
 
 int checkEnemyRaidDamage(Resources& resources, md::BattleGeometry geometry) {
     using namespace md;
@@ -190,7 +190,105 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
     return 0;
 }
 
+std::vector<double> raidTimes(const md::DataTable& table,unsigned stageNumber) {
+    const auto row=table.findRow(std::to_string(stageNumber));
+    assert(row);
+    std::vector<double> times;
+    const auto& columns=table.columns();
+    for (std::size_t i=2;i<columns.size();++i) {
+        const auto seconds=table.integer(*row,columns[i]);
+        assert(seconds);
+        times.push_back(static_cast<double>(*seconds));
+    }
+    return times;
+}
+
+void checkPrecomputedRaids(const md::DataTable& table) {
+    using md::EnemyAirRaidSchedule;
+    assert(table.rowCount()==70);
+    for (unsigned stage=11;stage<=80;++stage) {
+        auto schedule=EnemyAirRaidSchedule::fromTable(table,stage);
+        const auto times=raidTimes(table,stage);
+        const auto row=*table.findRow(std::to_string(stage));
+        const double period=static_cast<double>(*table.integer(row,"CycleSeconds"));
+        assert(times.front()==60 && times.size()==32);
+        double previous=-1;
+        for (int cycle=0;cycle<3;++cycle) {
+            for (const auto time:times) {
+                const double at=time+period*cycle;
+                if (previous>=0) assert(at-previous>=20 && at-previous<=45);
+                assert(!schedule.takeDue(at-.01));
+                assert(schedule.takeDue(at));
+                assert(!schedule.takeDue(at));
+                previous=at;
+            }
+        }
+    }
+    for (const auto row:{"11\t65\t59\t85", "11\t65\t60\t79", "11\t70\t60\t106",
+                         "11\t39\t60\t80", "11\t66\t60\t80", "11\t60\t60\tmissing"}) {
+        const auto malformed=md::DataTable::parse(std::string("Stage\tCycleSeconds\tAt01\tAt02\n")+row);
+        bool rejected=false;
+        try {
+            EnemyAirRaidSchedule::fromTable(malformed,11);
+        } catch (const std::runtime_error&) {
+            rejected=true;
+        }
+        assert(rejected);
+    }
+}
+
+void checkWorldRaidSchedule(Resources& resources,Host& host,const md::DataTable& table) {
+    using namespace md;
+    constexpr unsigned stage=10;
+    auto times=raidTimes(table,stage+1);
+    const auto row=*table.findRow(std::to_string(stage+1));
+    times.push_back(times.front()+static_cast<double>(*table.integer(row,"CycleSeconds")));
+
+    auto save=SaveData::empty(1);
+    save.createProfile("RAID SCHEDULE",1);
+    World world(resources,host,save,0,BattleGeometry::phone(),43);
+    for (const bool skipFirst:{false,true}) {
+        world.start(stage);
+        world.setValidationCells(10000);
+        bool queued=false;
+        const auto elapsed=[&] {return world.time()-world.startTime();};
+        const std::size_t end=skipFirst?3:times.size();
+        std::size_t next=skipFirst?1:0;
+        while (elapsed()<times[end-1]+6) {
+            if (!queued && (!skipFirst || elapsed()>=65)) {
+                assert(world.enqueueBuild("MachineGun"));
+                queued=true;
+            }
+            for (const auto& actor:world.actors()) {
+                actor->weapons.clear();
+                if (!actor->player && !actor->base) actor->removed=true;
+                if (actor->player && !actor->base && actor->type==0) {
+                    actor->position=actor->bipod.position={0,-330};
+                    actor->bipod.setDestination(actor->position);
+                    actor->hp=actor->maxHP;
+                }
+            }
+            const unsigned starts=host.airStrikeStarts;
+            world.tick();
+            if (host.airStrikeStarts==starts) continue;
+            assert(host.airStrikeStarts==starts+1 && next<end);
+            const auto scheduled=times[next++];
+            assert(elapsed()>=scheduled && elapsed()-scheduled<.017);
+            Frame frame;
+            world.appendSprites(frame);
+            assert(std::any_of(frame.sprites.begin(),frame.sprites.end(),[](const auto& sprite) {
+                return sprite.image==enemyRaidReticleImage;
+            }));
+        }
+        assert(next==end);
+    }
+    std::cout<<"Stage 11: "<<times.size()<<" scheduled raids through wrap; retry skips a missing target without retiming\n";
+}
+
 int main(int argc,char**argv){assert(argc==2);Resources resources;resources.root=argv[1];Host host;
+    const auto table=md::DataTable::load(resources.root/"Tables"/"EnemyAirRaidSchedule.tsv");
+    checkPrecomputedRaids(table);
+    checkWorldRaidSchedule(resources,host,table);
     const auto minimum=checkEnemyRaidDamage(resources,md::BattleGeometry::phone());
     assert(checkEnemyRaidDamage(resources,md::BattleGeometry::pad())==minimum);
     double latestImpact=0;

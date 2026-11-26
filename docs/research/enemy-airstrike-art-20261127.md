@@ -79,3 +79,11 @@
 iPhone Air 시뮬레이터에서 치트판의 TEST 기능으로 11스테이지를 열었다. 투하 전 적 표적에는 빨간 조준점, 아군 스킬 표적에는 녹색 조준점이 보였다. 메크가 이동하고 적기가 표적 위를 지나가는 동안에도 빨간 조준점은 최초 표적에 남았다. 공용 코어 검사 4개와 치트판 렌더 검사 1개가 통과했다. [투하 전](../evidence/enemy-airstrike-20261127/ios-cheat-enemy-red-reticle-before-bombs.png) · [메크 이동 후 적기 통과](../evidence/enemy-airstrike-20261127/ios-cheat-enemy-air-raid-and-allied-airstrike.png)
 
 치트판에서 발동 0.109초와 0.656초 프레임을 비교했다. 빨간 조준점의 스프라이트 폭은 84.28에서 24.15px로, 녹색은 96.34에서 24.18px로 줄었다. 같은 구간에 두 조준점 모두 약 189° 회전하고 옅어졌다. 녹색은 3초, 빨간색은 5초 표시되므로 빨간색이 더 천천히 옅어진다. [치트판 프레임 비교](../evidence/enemy-airstrike-20261127/ios-cheat-reticle-motion.png)
+
+## 반복 출격 표
+
+지상 적의 `ESpawn_*.tsv`에는 시간 지정 규칙과 난이도별 규칙이 있다. `World::start()`가 시간 지정 규칙을 읽고 생성 웨이브를 계산한다. 난이도별 규칙 선택과 한 웨이브 안의 개별 출현 간격은 전투 중에도 계산한다. 적 공습은 시간표 방식으로 연결했다. [지상 적 출격 코드](../../Sources/Core/Simulation/Spawning.cpp)
+
+11~80스테이지마다 첫 60초와 후속 출격 31회의 절대 시각을 기록했다. 제작 시 20~45초 정수 간격 32개를 무작위로 뽑았다. 마지막 간격은 다음 주기의 첫 출격까지 이어진다. 전투 코드는 스테이지 시작 시 읽은 한 행을 소비한다. 출격 간격을 정하기 위해 난수를 호출하거나 저장 파일에 기록하지 않는다. [출격 표](../../Resources/Tables/EnemyAirRaidSchedule.tsv) · [표 읽기](../../Sources/Core/Simulation/World.cpp) · [시각 소비](../../Sources/Core/Simulation/SpecialAttack.cpp)
+
+공용 코어 검사 5개가 통과했다. 70개 행을 각각 세 주기 검사했다. 11스테이지 전투에서는 첫 32회와 다음 주기의 첫 출격까지 표와 일치했다. 아군 메크가 60초에 없던 재도전은 첫 회차를 건너뛰고 81초와 119초에 출격했다. iPhone Air 시뮬레이터 치트판의 첫 출격과 표적 표시 검사도 통과했다. [전투 검사](../../Tests/WorldSpecialTests.cpp) · [치트판 렌더 검사](../../Apple/Tests/MenuRenderTests.mm)

@@ -1,4 +1,5 @@
 #pragma once
+#include "Core/Data/DataTable.hpp"
 #include "Core/Simulation/Projectile.hpp"
 #include <string>
 #include <string_view>
@@ -16,6 +17,17 @@ struct EnemyAirRaid {
     static constexpr double startsAfter = 60;
     static std::optional<EnemyAirRaid> forStage(unsigned stage, std::size_t stageCount, int minimumMechHP);
     int damageForDrop(unsigned dropIndex, unsigned shotCount) const;
+};
+class EnemyAirRaidSchedule {
+public:
+    static EnemyAirRaidSchedule fromTable(const DataTable&, unsigned stageNumber);
+    bool takeDue(double elapsed);
+private:
+    EnemyAirRaidSchedule()=default;
+    std::vector<std::int64_t> times_;
+    double cycleSeconds_=0;
+    double cycleStart_=0;
+    std::size_t next_=0;
 };
 // GobAirStrike 0x8150/0x82bc/0x86e0. Each tick is one original update.
 struct AirStrike {

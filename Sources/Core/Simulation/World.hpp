@@ -112,7 +112,8 @@ private:
     std::vector<std::unique_ptr<WorldActor>> actors_;
     struct WorldAirStrike {std::string weapon;AirStrike motion;std::optional<EnemyAirRaid> raid={};};
     int minimumMechHP_=0;
-    std::optional<EnemyAirRaid> pendingEnemyRaid_;
+    struct ScheduledEnemyRaid {EnemyAirRaid raid;EnemyAirRaidSchedule schedule;};
+    std::optional<ScheduledEnemyRaid> scheduledEnemyRaid_;
     ParticleState* enemyRaidWarning_=nullptr;
     void updateEnemyAirRaid();
     AirStrike beginAirStrike(const WeaponDefinition&,Vec2,float,bool enemy);

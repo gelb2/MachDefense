@@ -64,9 +64,15 @@ WorldActor& World::addParts(const BuildDefinition& definition,Vec2 position){
 }
 void World::start(unsigned stage){
     if(stage>=80||stage>=maps_.children.size()||stage>=mapTable_.rowCount())throw std::out_of_range("Original stage index");
+    if (const auto raid=EnemyAirRaid::forStage(stage,mapTable_.rowCount(),minimumMechHP_)) {
+        scheduledEnemyRaid_=ScheduledEnemyRaid{
+            *raid, EnemyAirRaidSchedule::fromTable(table(resources_,"EnemyAirRaidSchedule"),stage+1)
+        };
+    } else {
+        scheduledEnemyRaid_.reset();
+    }
     validationArtScene_=false;
     enemyRaidWarning_=nullptr;
-    pendingEnemyRaid_=EnemyAirRaid::forStage(stage,mapTable_.rowCount(),minimumMechHP_);
     stage_=stage;startTime_=time();statistics_={};actors_.clear();loot_.clear();projectiles_.clear();trails_.clear();airStrikes_.clear();spawners_.clear();production_.clear();events_.clear();
     for(auto& p:particles_->particles())p.shown=false;
     countermeasures_->clear();
@@ -155,7 +161,7 @@ void World::tick(){
     std::erase_if(actors_,[](const auto& a){return a->flightTactics&&a->removed;});
 }
 void World::finish(WorldState state){
-    pendingEnemyRaid_.reset();
+    scheduledEnemyRaid_.reset();
     if (enemyRaidWarning_) enemyRaidWarning_->shown=false;
     enemyRaidWarning_=nullptr;
     std::erase_if(airStrikes_, [](const auto& strike) { return strike.raid.has_value(); });

@@ -1,6 +1,7 @@
 #include "Core/Simulation/SpecialAttack.hpp"
 #include <cmath>
 #include <cstdio>
+#include <stdexcept>
 
 namespace md {
 namespace {
@@ -35,6 +36,40 @@ std::optional<EnemyAirRaid> EnemyAirRaid::forStage(unsigned stage, std::size_t s
 int EnemyAirRaid::damageForDrop(unsigned dropIndex, unsigned shotCount) const {
     const auto count = static_cast<int>(shotCount);
     return maximumDamage / count + (dropIndex < static_cast<unsigned>(maximumDamage % count) ? 1 : 0);
+}
+EnemyAirRaidSchedule EnemyAirRaidSchedule::fromTable(const DataTable& table, unsigned stageNumber) {
+    const auto& columns=table.columns();
+    const auto row=table.findRow(std::to_string(stageNumber));
+    if (!row || columns.size()<4 || columns[0]!="Stage" || columns[1]!="CycleSeconds")
+        throw std::runtime_error("Missing enemy raid schedule for stage "+std::to_string(stageNumber));
+
+    EnemyAirRaidSchedule schedule;
+    const auto first=table.integer(*row,columns[2]);
+    if (!first || *first!=EnemyAirRaid::startsAfter)
+        throw std::runtime_error("Enemy raid schedule must start at 60 seconds");
+    schedule.times_.push_back(*first);
+    constexpr int minimumGap=20, maximumGap=45;
+    for (std::size_t i=3;i<columns.size();++i) {
+        const auto at=table.integer(*row,columns[i]);
+        const auto previous=schedule.times_.back();
+        if (!at || *at<previous+minimumGap || *at>previous+maximumGap)
+            throw std::runtime_error("Enemy raid schedule gap must be 20–45 seconds");
+        schedule.times_.push_back(*at);
+    }
+    const auto period=table.integer(*row,"CycleSeconds");
+    const auto span=schedule.times_.back()-schedule.times_.front();
+    if (!period || *period<span+minimumGap || *period>span+maximumGap)
+        throw std::runtime_error("Enemy raid schedule needs a 20–45 second gap between cycles");
+    schedule.cycleSeconds_=static_cast<double>(*period);
+    return schedule;
+}
+bool EnemyAirRaidSchedule::takeDue(double elapsed) {
+    if (elapsed<cycleStart_+static_cast<double>(times_[next_])) return false;
+    if (++next_==times_.size()) {
+        next_=0;
+        cycleStart_+=cycleSeconds_;
+    }
+    return true;
 }
 AirStrike AirStrike::start(const WeaponDefinition& weapon,Vec2 target,float delay,double time,
                            float scale,DarwinRandom& random,const std::function<ParticleState*()>& acquire,float animationTime,bool reverseApproach) {
