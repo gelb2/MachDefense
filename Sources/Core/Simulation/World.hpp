@@ -35,7 +35,7 @@ struct WorldActor {
     EnemySteering enemyAI; PlayerSteering playerAI;
     std::vector<AssemblyPart> assembly; std::vector<WorldWeapon> weapons;
 };
-struct WorldProjectile { std::string weapon; Projectile motion; ActorId attacker=0; std::shared_ptr<Trail> trail; int layer=5;std::uint64_t renderOrder=0; };
+struct WorldProjectile { std::string weapon; Projectile motion; ActorId attacker=0; std::shared_ptr<Trail> trail; int layer=5;std::uint64_t renderOrder=0; std::optional<int> damageOverride={}; };
 struct WorldStatistics { unsigned enemyDestroyed=0,playerDestroyed=0,produced=0;int score=0; };
 struct WorldEvent {
     enum class Kind { enemyDestroyed,playerDestroyed,stageCleared,stageFailed } kind;
@@ -110,11 +110,16 @@ private:
     std::vector<EnemySpawner> spawners_;StageSpawnPlan plan_;
     std::vector<TerrainSegment> terrain_;std::array<std::vector<std::size_t>,64> collisionGrid_;
     std::vector<std::unique_ptr<WorldActor>> actors_;
-    struct WorldAirStrike {std::string weapon;AirStrike motion;};
+    struct WorldAirStrike {std::string weapon;AirStrike motion;std::optional<EnemyAirRaid> raid={};};
+    int minimumMechHP_=0;
+    struct ScheduledEnemyRaid {EnemyAirRaid raid;EnemyAirRaidSchedule schedule;};
+    std::optional<ScheduledEnemyRaid> scheduledEnemyRaid_;
+    void updateEnemyAirRaid();
+    AirStrike beginAirStrike(const WeaponDefinition&,Vec2,float,bool enemy);
     std::vector<WorldAirStrike> airStrikes_;
     struct WorldTrail {std::shared_ptr<Trail> motion;int layer;std::uint64_t renderOrder;};
     std::vector<WorldTrail> trails_;std::uint64_t nextRenderOrder_=0;
-    void addProjectile(std::string,Projectile,ActorId,int layer=5);
+    void addProjectile(std::string,Projectile,ActorId,int layer=5,std::optional<int> damageOverride={});
     std::vector<WorldProjectile> projectiles_;std::vector<WorldEvent> events_;
     AircraftThreatGrid aircraftThreats_;
     std::unordered_map<std::string,LootDefinition> lootDefinitions_;std::vector<LootState> loot_;

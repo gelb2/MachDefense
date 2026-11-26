@@ -102,9 +102,25 @@ void World::appendSprites(Frame& frame)const{
         }
     }
     for(const auto& item:loot_)item.appendSprites(layers[0],worldToView(item.position),[&](std::string_view n){return resources_.imageSize(n);});
-    auto particles=particles_->particles();for(std::size_t i=0;i<particles.size();++i){const auto& p=particles[i];const auto& image=particleImages_[i];if(!p.shown||image.image.empty())continue;const float imageScale=image.assetScale?image.assetScale:scale;if(auto s=p.sprite(image.image,resources_.imageSize(image.image),image.columns,image.rows,worldToView({p.position.x-image.origin.x*p.scale.x*imageScale,p.position.y-image.origin.y*p.scale.y*imageScale}),imageScale))layers[5].sprites.push_back(std::move(*s));}
+    const auto particles=particles_->particles();
+    for (std::size_t i=0;i<particles.size();++i) {
+        const auto& particle=particles[i];
+        const auto& image=particleImages_[i];
+        if (!particle.shown || image.image.empty()) continue;
+        const float imageScale=image.assetScale?image.assetScale:scale;
+        const Vec2 position{
+            particle.position.x-image.origin.x*particle.scale.x*imageScale,
+            particle.position.y-image.origin.y*particle.scale.y*imageScale
+        };
+        auto sprite=particle.sprite(image.image,resources_.imageSize(image.image),
+                                    image.columns,image.rows,worldToView(position),imageScale);
+        if (!sprite) continue;
+        // The passing aircraft must not obscure the ground warning.
+        auto& layer = (image.image==enemyRaidReticleImage) ? layers.back() : layers[5];
+        layer.sprites.push_back(std::move(*sprite));
+    }
     struct MovingVisual {std::uint64_t order;const WorldTrail* trail=nullptr;const WorldProjectile* projectile=nullptr;};
-    std::vector<MovingVisual> moving;for(const auto& trail:trails_)moving.push_back({trail.renderOrder,&trail,nullptr});for(const auto& p:projectiles_)moving.push_back({p.renderOrder,nullptr,&p});
+    std::vector<MovingVisual> moving;for(const auto& trail:trails_)moving.push_back({trail.renderOrder,&trail,nullptr});for(const auto& p:projectiles_)if(!p.motion.removed)moving.push_back({p.renderOrder,nullptr,&p});
     std::sort(moving.begin(),moving.end(),[](const auto& a,const auto& b){return a.order<b.order;});
     for(const auto& visual:moving){
         if(visual.trail){visual.trail->motion->appendMesh(layers[visual.trail->layer],[&](Vec2 p){return worldToView(p);});continue;}
@@ -119,7 +135,10 @@ void World::appendSprites(Frame& frame)const{
         if(!w->effectImage.empty())if(auto effect=p.motion.attachedEffect(*w,resources_.imageSize(w->effectImage),worldToView(p.motion.position),scale))layers[p.layer].sprites.push_back(std::move(*effect));
     }
     countermeasures_->append(layers[6],float(time()),[&](Vec2 p){return worldToView(p);},[&](std::string_view n){return resources_.imageSize(n);});
-    for(const auto& strike:airStrikes_)strike.motion.appendSprite(layers[7],worldToView(strike.motion.position),resources_.imageSize("Airplane.png"),scale);
+    for (const auto& strike : airStrikes_) {
+        const auto image = strike.raid ? enemyRaidImage : std::string_view{"Airplane.png"};
+        strike.motion.appendSprite(layers[7],worldToView(strike.motion.position),resources_.imageSize(image),scale,image);
+    }
     for(auto& layer:layers){const auto offset=frame.sprites.size();for(auto& mesh:layer.meshes){mesh.beforeSpriteIndex+=offset;frame.meshes.push_back(std::move(mesh));}for(auto& sprite:layer.sprites)frame.sprites.push_back(std::move(sprite));}
 
     // Transform every world layer together, including shadows and trail meshes.

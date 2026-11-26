@@ -36,6 +36,29 @@ int main() {
     strike.tick(bomb,15.001,airRandom);assert(strike.removed);
     AirStrike visible;Frame frame;visible.appendSprite(frame,{50,60},{100,200});assert(frame.sprites.size()==1);
     assert(frame.sprites[0].image=="Airplane.png"&&frame.sprites[0].destination.width==65);
+    for (const float scale:{.5f,1.f}) {
+        DarwinRandom allyRandom(711),enemyRandom(711);
+        auto ally=AirStrike::start(bomb,{0,0},1.5f,0,scale,allyRandom);
+        auto enemy=AirStrike::start(bomb,{0,0},1.5f,0,scale,enemyRandom,{},0,true);
+        assert(std::abs(std::hypot(ally.velocity.x,ally.velocity.y)-4*scale)<.0001f);
+        const auto checkMirror=[&] {
+            assert(ally.position.x==enemy.position.x && ally.position.y==-enemy.position.y);
+            assert(ally.velocity.x==enemy.velocity.x && ally.velocity.y==-enemy.velocity.y);
+        };
+        checkMirror();
+        unsigned ticks=0;
+        while (!ally.removed && ticks<400) {
+            const auto speed=std::hypot(ally.velocity.x,ally.velocity.y);
+            const double time=++ticks*.0166015625;
+            const auto allyDrop=ally.tick(bomb,time,allyRandom);
+            const auto enemyDrop=enemy.tick(bomb,time,enemyRandom);
+            assert(allyDrop.has_value()==enemyDrop.has_value() && ally.removed==enemy.removed);
+            const auto after=std::hypot(ally.velocity.x,ally.velocity.y);
+            assert(after>speed && std::abs(after/speed-1.01f)<.00001f);
+            checkMirror();
+        }
+        assert(ally.removed && enemy.removed);
+    }
     BotRecovery bot;int hp=9;assert(!bot.tick(hp,10,5));assert(bot.tick(hp,10,5.001)&&hp==10);
     assert(!bot.tick(hp,10,100));hp=0;assert(!bot.tick(hp,10,100));
     assert(botReadyToTransform({1,2},{5,6},0,"Turret"));

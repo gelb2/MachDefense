@@ -1,6 +1,8 @@
 #include "Core/Simulation/Production.hpp"
 #include "Core/Simulation/AlliedAircraft.hpp"
+#include "Core/Simulation/PlayerParts.hpp"
 #include <algorithm>
+#include <limits>
 #include <stdexcept>
 namespace md {
 BuildCatalog BuildCatalog::load(const DataTable& parts,const DataTable& names){
@@ -21,6 +23,17 @@ BuildCatalog BuildCatalog::load(const DataTable& parts,const DataTable& names){
     load(parts,0);load(names,1);return result;
 }
 const BuildDefinition* BuildCatalog::find(std::string_view name)const {auto i=definitions_.find(std::string(name));return i==definitions_.end()?nullptr:&i->second;}
+int BuildCatalog::minimumMechHP(const DataTable& items, BattleGeometry geometry) const {
+    int minimum = std::numeric_limits<int>::max();
+    for (const auto& [name, build] : definitions_) {
+        if (build.setType != 0) continue;
+        const int hp = PlayerLoadout::fromBuild(build, items, geometry).hp;
+        if (hp <= 0) throw std::runtime_error("Invalid mech maximum HP: " + name);
+        minimum = std::min(minimum, hp);
+    }
+    if (minimum == std::numeric_limits<int>::max()) throw std::runtime_error("No mech build definitions");
+    return minimum;
+}
 std::vector<ProductionProgress> ProductionQueue::rows(double time)const{
     std::vector<ProductionProgress> result;for(const auto& j:jobs_)result.push_back({j.definition.name,j.timer.progress(time)});return result;
 }
