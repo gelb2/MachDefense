@@ -23,7 +23,7 @@ Open the installed app and check that the download has finished. Progress is sto
 
 ## Tauri Mac
 
-[Download the Mac app](https://github.com/gelb2/MachDefense/releases/download/v0.8/MachDefense-Desktop-v0.8-arm64.zip). Extract it, move MachDefense Desktop.app to Applications, and launch it. It requires macOS 14 or later on Apple Silicon. Game resources are included for offline play from the first launch.
+[Download the Mac app](https://github.com/gelb2/MachDefense/releases/download/v0.8.1/MachDefense-Desktop-v0.8.1-arm64.zip). Extract it, move MachDefense Desktop.app to Applications, and launch it. It requires macOS 14 or later on Apple Silicon. Game resources are included for offline play from the first launch.
 
 The app is ad-hoc signed and has not been notarized by Apple. If macOS blocks it, use System Settings → Privacy & Security → Open Anyway. Use the keyboard for text entry and the mouse or trackpad to play. Drag to move the battlefield; wheel and trackpad scrolling work in the production list. Keyboard battlefield movement is not implemented yet.
 

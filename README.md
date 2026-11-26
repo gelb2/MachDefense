@@ -4,7 +4,7 @@
 [한국어](README.md) | [English](README.en.md)
 <!-- language-nav:end -->
 
-[![Release v0.8](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.8)
+[![Release v0.8.1](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.8.1)
 [![iOS, iPadOS, Android, Web, PWA, macOS](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript, Rust](docs/public/media/badges/code.svg)](docs/public/architecture.md)
@@ -32,7 +32,7 @@
 
 위 주소를 열어 게임을 설치하거나 브라우저에서 바로 플레이한다. iPhone·iPad는 Safari의 공유 메뉴에서 **홈 화면에 추가**, Android·Mac은 **INSTALL GAME**을 누른다. 자원 다운로드가 끝나면 인터넷 없이도 플레이할 수 있다.
 
-Xcode나 Android Studio로 빌드하기 어렵다면 PWA나 [Tauri Mac 앱](https://github.com/gelb2/MachDefense/releases/download/v0.8/MachDefense-Desktop-v0.8-arm64.zip)을 이용하면 된다. Mac 앱은 macOS 14 이상 Apple Silicon에서 실행하며 진행을 앱 데이터 폴더에 저장한다. [설치와 실행](docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
+Xcode나 Android Studio로 빌드하기 어렵다면 PWA나 [Tauri Mac 앱](https://github.com/gelb2/MachDefense/releases/download/v0.8.1/MachDefense-Desktop-v0.8.1-arm64.zip)을 이용하면 된다. Mac 앱은 macOS 14 이상 Apple Silicon에서 실행하며 진행을 앱 데이터 폴더에 저장한다. [설치와 실행](docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
 
 HeavyMach의 웹판을 기여한 [fastutlego](https://github.com/fastutlego)에게 감사드린다. [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24)의 WebAssembly 실행부·WebGL2 렌더링·입력·음향·저장 구현과 그 뒤의 PWA·Tauri 확장 절차가 MachDefense를 웹과 데스크톱으로 확장하는 데도 토대가 됐다. MachDefense의 PWA를 이 구조를 참고해 만들었고, 같은 웹 실행기를 Tauri Mac 앱에서도 사용했다.
 
@@ -114,11 +114,11 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 | 플랫폼 | 실행 | 현재 상태 |
 |---|---|---|
-| iPhone·iPad | Xcode 워크스페이스 | v0.8 빌드. 기존 기기 검사 범위와 이번 설치 결과는 릴리즈 노트 참고 |
-| Android | Android Studio 또는 APK | [v0.8 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.8). 빌드·기기 검사 범위는 릴리즈 노트 참고 |
+| iPhone·iPad | Xcode 워크스페이스 | v0.8.1 빌드. 기존 기기 검사 범위와 이번 설치 결과는 릴리즈 노트 참고 |
+| Android | Android Studio 또는 APK | [v0.8.1 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.8.1). 빌드·기기 검사 범위는 릴리즈 노트 참고 |
 | 웹 | 브라우저 | GitHub Pages 배포. Mac Chrome·Safari·WebKit 검사 |
 | PWA | 브라우저에서 설치 | 설치·오프라인 실행 지원. 기기별 검사 결과는 검사 문서 참고 |
-| Tauri Mac | 데스크톱 앱 | [v0.8 다운로드](https://github.com/gelb2/MachDefense/releases/tag/v0.8). 파일 저장·복원·종료 검사. macOS 14+ Apple Silicon |
+| Tauri Mac | 데스크톱 앱 | [v0.8.1 다운로드](https://github.com/gelb2/MachDefense/releases/tag/v0.8.1). 파일 저장·복원·종료 검사. macOS 14+ Apple Silicon |
 
 ## 고친 문제와 남은 일
 

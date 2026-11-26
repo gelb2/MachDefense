@@ -23,7 +23,7 @@
 
 ## Tauri Mac
 
-[Mac 앱 다운로드](https://github.com/gelb2/MachDefense/releases/download/v0.8/MachDefense-Desktop-v0.8-arm64.zip). 압축을 풀고 MachDefense Desktop.app을 응용 프로그램 폴더로 옮겨 실행한다. macOS 14 이상 Apple Silicon용이다. 첫 실행부터 게임 자원이 포함되어 있다.
+[Mac 앱 다운로드](https://github.com/gelb2/MachDefense/releases/download/v0.8.1/MachDefense-Desktop-v0.8.1-arm64.zip). 압축을 풀고 MachDefense Desktop.app을 응용 프로그램 폴더로 옮겨 실행한다. macOS 14 이상 Apple Silicon용이다. 첫 실행부터 게임 자원이 포함되어 있다.
 
 앱은 ad-hoc 서명이며 Apple 공증을 받지 않았다. 실행이 차단되면 시스템 설정 → 개인정보 보호 및 보안 → 확인 없이 열기를 선택한다. 키보드로 텍스트를 입력하고 마우스·트랙패드로 게임을 조작한다. 전장 이동은 눌러 끌기이며 휠·트랙패드 스크롤은 생산 목록에서 동작한다. 전장 키보드 이동은 아직 없다.
 
