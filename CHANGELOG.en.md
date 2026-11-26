@@ -4,6 +4,10 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## v0.8.2 — Enemy aircraft design C
+
+November 27, 2026. Applied design C with its black livery and restored the nose to its length before the trim. The gold canopy and in-game drawing scale are unchanged. Apple and Android are 0.8.2 (build 10), and Tauri for Mac is 0.8.2. [Aircraft artwork](Art/EnemyAirStrike/README.md#v082-c안-적용)
+
 ## v0.8.1 — Smaller enemy strike aircraft
 
 November 27, 2026. Shortened the F-15 STOL/MTD's gold cockpit to half its previous length. Halved the enemy aircraft's displayed width and height in battle. [Art and display-size changes (Korean)](Art/EnemyAirStrike/README.md#v081-조종석과-기체-표시-크기).

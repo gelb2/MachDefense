@@ -4,6 +4,10 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## v0.8.2 — 적 공습기 C안
+
+2026-11-27. 검은 도장의 C안을 적용했다. 기수는 C안에서 줄이기 전 길이로 돌렸다. 금색 조종석과 전투에서 그리는 배율은 유지했다. Apple·Android 앱은 0.8.2(10), Tauri Mac 앱은 0.8.2다. [기체 그림](Art/EnemyAirStrike/README.md#v082-c안-적용)
+
 ## v0.8.1 — 적 공습기 크기 조정
 
 2026-11-27. F-15 STOL/MTD 적 공습기의 금색 조종석 길이를 절반으로 줄였다. 전투에서 적기의 표시 폭과 높이도 각각 절반으로 줄였다. [조종석과 기체 표시 크기](Art/EnemyAirStrike/README.md#v081-조종석과-기체-표시-크기).
