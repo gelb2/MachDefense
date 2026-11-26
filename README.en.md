@@ -76,7 +76,7 @@ The following features were absent from the original game or extend its original
 
 I gave the enemy the air strike that supported the player in the original game. From Stage 11 onward, enemy jets drop cluster bombs where a red reticle appears.
 
-I chose the F-15 STOL/MTD and gave it a black airframe, gold stripes, and a gold canopy. I used the same Lux Lunae livery for an enemy squadron when I restored HeavyMach 1. [Why I chose the livery and how we made the raids](docs/en/public/enemy-air-raids.md)
+I chose the F-15 STOL/MTD and gave it a black airframe, gold stripes, and a gold canopy. I used the same Lux Lunae livery for an enemy squadron when I restored HeavyMach 1. [Why I chose the livery and how we made the raids](docs/en/public/enemy-air-raids.md) · [Aircraft size before and after](docs/en/public/enemy-air-raids.md#gameplay-comparison)
 
 ### Emergency resupply
 

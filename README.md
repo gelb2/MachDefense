@@ -76,7 +76,7 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 원작에서 아군을 지원하던 공습을 적도 쓰게 했다. 11스테이지부터 빨간 조준점이 뜨면 적기가 그 자리에 집속탄을 떨어뜨린다.
 
-기체는 F-15 STOL/MTD로 정했다. 검은 동체에 금줄과 금색 조종석을 넣었다. HeavyMach 1을 복원할 때 적 편대에 입힌 럭스루나에 도장이다. [도장을 고른 이유와 적 공습기를 만든 과정](docs/public/enemy-air-raids.md)
+기체는 F-15 STOL/MTD로 정했다. 검은 동체에 금줄과 금색 조종석을 넣었다. HeavyMach 1을 복원할 때 적 편대에 입힌 럭스루나에 도장이다. [도장을 고른 이유와 적 공습기를 만든 과정](docs/public/enemy-air-raids.md) · [기체 크기 변경 전후](docs/public/enemy-air-raids.md#전투-화면-비교)
 
 ### 긴급지원
 
