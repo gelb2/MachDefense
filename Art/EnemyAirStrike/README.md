@@ -12,9 +12,9 @@
 | 사용자 승인 09번 | [MTD-09-approved.png](MTD-09-approved.png) | `b530f83a5845b24c4c7c2ed97e0ddc65fdf41d754e33607ae0a40b1533ec53f5` |
 | v0.8 상판 도장 원본과 게임 PNG | `v0.8`의 `MTD-upper-surface.svg` 및 `Resources/Images/EnemyAirStrikeMTD.png` | `4442d1501698dbe49f20c1ba945b5824bb0d40ffbdb8b6ec4a36cdd73e9e47d0` · `95662bc5d5cd8c262fb332300e030deaabb3381c4bb28c547d68216158f6bf1f` |
 | v0.8.1 조종석 수정 원본과 게임 PNG | `v0.8.1`의 `MTD-upper-surface.svg` 및 `Resources/Images/EnemyAirStrikeMTD.png` | `79315ffbafec0579eb613a6c67af36081f6cff81ab462ae4c8ed495d0f171071` · `21171d69727ec0d518626cbe0b1c40666035731f7cc4dc39cddc1e0762902e88` |
-| 사용자 채택 C안 | [MTD-C-approved.svg](MTD-C-approved.svg) | `361f363719678621440f8521104fac9d6d8136d22c2bbd4c20b93499cbcf16aa` |
-| C안 기수 수정 원본 | [MTD-upper-surface.svg](MTD-upper-surface.svg) | `5957cdeb5d8a9f50a38e095e85aace04c301cfbf1f16c697f535d1e426091fb0` |
-| C안 기수 수정 게임 PNG | [EnemyAirStrikeMTD.png](../../Resources/Images/EnemyAirStrikeMTD.png) | `006af798f2ecca544d8fc358306bb1ae4387a3d376f9ef991b0e5dbaae522cbe` |
+| C안 기수 수정 래스터 | [MTD-C-raster.png](MTD-C-raster.png) | `76a32e904738dfba07e6317368a995088c3de20dd34e9f66d5eb643f69613814` |
+| CgBI 준비본 | [MTD-C-source-cgbi.png](MTD-C-source-cgbi.png) | `868b6124f225af6c2b7fb519c6253bb3b2459722181cf1182559aabd957494dc` |
+| 전투용 RGBA | [EnemyAirStrikeMTD.png](../../Resources/Images/EnemyAirStrikeMTD.png) | `ceaa6b20681e97f5429396fba4059de6de81c50e0757fc506fedd77167d8f2d1` |
 
 첫 편집에는 첫 시안과 아래 네 장을 직접 첨부했다. 두 번째 편집에서는 수정 시안·공식 도장 사진·원작 공습기 PNG를 다시 첨부해 표식 위치를 고쳤다. 두 편집 모두 투명 배경을 사용했다.
 
@@ -56,7 +56,8 @@ magick Art/EnemyAirStrike/MTD-black-gold.png -crop 1376x845+179+21 +repage   -fi
 ImageGen 편집 시안은 승인본과 외곽 겹침이 92.30%여서 제외했다. 승인 SVG의 외곽, 금색선, 캐노피, 배기구 경로와 색 정의를 유지하고 안쪽 상판 레이어를 수정했다. 두 게임 PNG 모두 256×256이고 알파 범위는 x 24–231, y 58–196이다. 알파 128 이상 외곽은 99.92% 겹쳤다. [편집 시안에 사용한 프롬프트](upper-surface-prompt.txt)
 
 ```sh
-cairosvg Art/EnemyAirStrike/MTD-upper-surface.svg -o /tmp/mtd-upper-surface.png
+git show v0.8:Art/EnemyAirStrike/MTD-upper-surface.svg > /tmp/mtd-upper-surface.svg
+cairosvg /tmp/mtd-upper-surface.svg -o /tmp/mtd-upper-surface.png
 magick /tmp/mtd-upper-surface.png -trim +repage -resize 208x208 \
   -background none -gravity center -extent 256x256 PNG32:Resources/Images/EnemyAirStrikeMTD.png
 ```
@@ -72,23 +73,10 @@ iPhone Air 시뮬레이터에서 적기와 아군 공습기를 같은 전투 프
 
 ## C안의 검은 도장과 짧은 기수
 
-사용자가 검은 도장 시안 C를 채택했다. 조종석 바로 앞 `x=316`을 기준으로 그 앞의 기수만 길이 방향으로 0.5배 줄였다. SVG를 세 배 크기로 그렸을 때 기준점부터 기수 끝까지 261픽셀에서 131픽셀로 줄었다. 256×256 게임 PNG는 같은 좌표에 그리며, 금색 유리를 포함한 기수 뒤쪽의 RGBA 픽셀은 채택 C안과 같다.
+256×256 래스터에서 채택 C안의 조종석 바로 앞을 기준으로 기수를 절반으로 줄였다. 승인한 윤곽과 금줄을 래스터에 맞췄다. 래스터의 보이는 픽셀은 수정 승인본과 일치한다.
 
-두 SVG는 C안의 원래 크롭 `1192x799+17+9`와 208픽셀 기준 폭으로 고정해 변환한다. C안에는 `v0.8.1` 게임 PNG의 알파 채널을 사용한다. 게임 PNG의 0~185열에는 채택 C안, 186열부터는 짧아진 기수를 그린 결과를 사용한다.
+Apple `pngcrush -iphone`으로 래스터를 사전 곱셈 BGRA로 준비했다. [원작 아군 공습기 CgBI](../../Resources/OriginalImages/Airplane.png)와 같은 헤더·색좌표·픽셀 밀도·단일 IDAT 구조로 저장했다. [기존 준비 도구](../../tools/prepare_resources.py)의 PNG 디코딩, 알파 역산, RGBA 인코딩을 같은 순서로 적용했다. 투명도와 불투명 색, 금색 유리 픽셀은 준비 전후 동일하다. 반투명 경계에서 사전 곱셈 채널 값의 차이는 최대 1 미만이다.
 
-```sh
-cairosvg Art/EnemyAirStrike/MTD-C-approved.svg -o /tmp/mtd-c.png
-cairosvg Art/EnemyAirStrike/MTD-upper-surface.svg -o /tmp/mtd-short-nose.png
-for art in mtd-c mtd-short-nose; do
-  magick "/tmp/$art.png" -crop 1192x799+17+9 +repage -resize 208x208 \
-    -background none -gravity center -extent 256x256 "PNG32:/tmp/$art-game.png"
-done
-git show v0.8.1:Resources/Images/EnemyAirStrikeMTD.png > /tmp/mtd-v081.png
-magick /tmp/mtd-c-game.png -alpha off \
-  \( /tmp/mtd-v081.png -alpha extract \) -compose CopyOpacity -composite PNG32:/tmp/mtd-c-approved.png
-magick /tmp/mtd-c-approved.png -crop 186x256+0+0 +repage \
-  \( /tmp/mtd-short-nose-game.png -crop 70x256+186+0 +repage \) \
-  +append -strip PNG32:Resources/Images/EnemyAirStrikeMTD.png
-```
+전투에서는 아군기와 적기 모두 기존의 `AirStrike::appendSprite()`로 한 장을 그린다. 적기는 앞서 정한 절반 배율을 사용한다. [공습 스프라이트](../../Sources/Core/Simulation/SpecialAttack.cpp) · [전투 레이어](../../Sources/Core/Presentation/WorldPresentation.cpp)
 
-정식 웹 빌드에서 11스테이지의 61.6초와 62.2초를 C안과 비교했다. 바뀐 화면 픽셀은 기수에만 있었다. iPhone Air 시뮬레이터에서도 새 PNG로 적 공습기와 아군 공습기를 같은 전투 화면에 그렸다.
+iPhone Air와 Android 에뮬레이터, 오프라인 Web/PWA, Tauri의 치트 검사에서 최종 파일을 확인했다. iPhone에서는 아군기와 적기가 같은 전투 화면에 표시됐다. 다른 게임 자원과 공용 로드·렌더 파일은 기준 브랜치와 일치한다.
