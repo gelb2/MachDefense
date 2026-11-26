@@ -16,9 +16,13 @@ I started with the F-15E as a reference and chose the experimental F-15 STOL/MTD
 
 The early aircraft looked gray-green, and the gold faded at gameplay size. I chose design 09, where I could see the airframe shape, the black paint, and the gold details together. The upper surface still looked like stacked panels. We softened the shading to make it look like a painted aircraft and kept the approved outline and stripe placement. In v0.8.1, we halved the gold canopy’s length in the artwork and halved the aircraft’s on-screen width and height. [Design 09 and the size adjustment](../../../Art/EnemyAirStrike/README.md) · [Design comparisons (Korean)](../../research/enemy-airstrike-art-20261127.md)
 
-![Enemy jet, allied aircraft, and red reticle in a v0.8 battle](../../evidence/enemy-airstrike-20261127/ios-cheat-enemy-air-raid-and-allied-airstrike.png)
+## Gameplay comparison
 
-*The v0.8 battle screen, before the enemy aircraft was scaled down.*
+Both shots show Stage 11 at 61.6 seconds, at the same screen size. The enemy jet entering from the upper left is half as wide and half as tall in v0.8.1. Select either image to see it at full size.
+
+| v0.8 · Before | v0.8.1 · After |
+| --- | --- |
+| <a href="../../public/media/enemy-air-raids/enemy-air-raid-v0.8.png"><img src="../../public/media/enemy-air-raids/enemy-air-raid-v0.8.png" alt="Stage 11 at 61.6 seconds, showing the original enemy jet size" width="260"></a> | <a href="../../public/media/enemy-air-raids/enemy-air-raid-v0.8.1.png"><img src="../../public/media/enemy-air-raids/enemy-air-raid-v0.8.1.png" alt="Stage 11 at 61.6 seconds, showing the enemy jet at half the width and height" width="260"></a> |
 
 ## When the raids appear
 

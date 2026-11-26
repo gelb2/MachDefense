@@ -16,9 +16,13 @@ F-15E를 참고해 시작했고, 외형은 앞날개가 달린 F-15 STOL/MTD 실
 
 초기 그림은 동체가 회녹색으로 보였고, 실제 게임 크기로 줄이자 금색도 흐렸다. 외형과 검은색, 금색이 함께 보이는 9번을 골랐다. 상판에는 여전히 판재를 덧댄 것 같은 경계가 보였다. 승인한 기체 외곽과 금줄 위치를 유지한 채, 도료를 칠한 기체처럼 보이도록 상판의 명암을 다듬었다. v0.8.1에서는 그림 속 금색 조종석의 길이와 전투 화면에 그리는 기체의 폭과 높이를 각각 절반으로 줄였다. [9번 시안과 크기 수정](../../Art/EnemyAirStrike/README.md) · [시안 비교](../research/enemy-airstrike-art-20261127.md)
 
-![v0.8 전투 화면의 적 공습기, 아군 공습기, 빨간 조준점](../evidence/enemy-airstrike-20261127/ios-cheat-enemy-air-raid-and-allied-airstrike.png)
+## 전투 화면 비교
 
-*v0.8 전투 화면. 적기의 표시 크기를 줄이기 전이다.*
+두 화면은 11스테이지 전투 시작 61.6초에 같은 화면 크기로 캡처했다. 왼쪽 위에서 내려오는 적기의 폭과 높이가 v0.8.1에서 각각 절반으로 줄었다. 이미지를 누르면 원본 크기로 볼 수 있다.
+
+| v0.8 · 변경 전 | v0.8.1 · 변경 후 |
+| --- | --- |
+| <a href="media/enemy-air-raids/enemy-air-raid-v0.8.png"><img src="media/enemy-air-raids/enemy-air-raid-v0.8.png" alt="11스테이지 61.6초. 축소 전 적 공습기" width="260"></a> | <a href="media/enemy-air-raids/enemy-air-raid-v0.8.1.png"><img src="media/enemy-air-raids/enemy-air-raid-v0.8.1.png" alt="11스테이지 61.6초. 폭과 높이가 절반으로 줄어든 적 공습기" width="260"></a> |
 
 ## 언제 공습하는가
 
