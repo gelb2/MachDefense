@@ -157,7 +157,9 @@ public:
     NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
     XCTAssertNotNil(root);
     if (!root) return;
-    UIWindow* window=[[UIWindow alloc] initWithFrame:CGRectMake(0,0,320,480)];
+    const bool tablet=UIDevice.currentDevice.userInterfaceIdiom==UIUserInterfaceIdiomPad;
+    const CGFloat width=tablet?768:320,height=tablet?1024:480;
+    UIWindow* window=[[UIWindow alloc] initWithFrame:CGRectMake(0,0,width,height)];
     window.rootViewController=[UIViewController new];
     MDMenuSurface* surface=[[MDMenuSurface alloc] initWithFrame:window.bounds];
     surface.contentScaleFactor=1;
@@ -170,6 +172,7 @@ public:
     MenuResources resources(root,renderer);
     MenuHost host;
     md::GameSession game(resources,host,true);
+    game.resize(width,height);
     const auto command=[&](md::ValidationCommand action) {
         XCTAssertTrue(game.applyValidationCommand(unsigned(action)));
     };
@@ -181,7 +184,7 @@ public:
     XCTAssertNotEqual(world,nullptr);
     if (!world) return;
     XCTAssertEqual(world->stage(),10u);
-    sweepTap(game,160,450); // Close the first-run combat help.
+    sweepTap(game,game.frame().logicalWidth*.5f,game.frame().logicalHeight*.5f+210);
     XCTAssertFalse(world->paused());
     command(md::ValidationCommand::fillCells);
     XCTAssertTrue(world->enqueueBuild("MachineGun"));
@@ -283,7 +286,7 @@ public:
     const auto onScreen=[&](std::string_view name) {
         return std::any_of(frame.sprites.begin(),frame.sprites.end(),[&](const auto& s) {
             const float x=s.destination.x+s.destination.width/2,y=s.destination.y+s.destination.height/2;
-            return s.image==name&&x>0&&x<256&&y>0&&y<480;
+            return s.image==name&&x>0&&x<frame.logicalWidth&&y>0&&y<frame.logicalHeight;
         });
     };
     XCTAssertTrue(onScreen("Airplane.png"));
@@ -296,6 +299,30 @@ public:
     if (visibleWarning!=frame.sprites.end()) checkCenter(*visibleWarning,enemyTarget);
     XCTAssertTrue([renderer drawFrame:frame toLayer:layer],@"%@",renderer.lastError);
     [self capture:@"enemy-air-raid-and-allied-airstrike" renderer:renderer];
+
+    const auto bytes=resources.read("Tables/EnemyAirRaidSchedule.tsv");
+    const auto table=md::DataTable::parse({reinterpret_cast<const char*>(bytes.data()),bytes.size()});
+    const auto scheduleRow=table.findRow("11");
+    XCTAssertTrue(scheduleRow.has_value());
+    if (!scheduleRow) return;
+    const md::Vec2 repeatTarget{-25,-345};
+    for (const std::string_view column:{"At02","At03"}) {
+        const auto seconds=table.integer(*scheduleRow,column);
+        XCTAssertTrue(seconds.has_value());
+        if (!seconds) return;
+        const double at=static_cast<double>(*seconds);
+        advanceTo(at-.1,repeatTarget);
+        XCTAssertTrue(std::none_of(game.frame().sprites.begin(),game.frame().sprites.end(),isEnemyReticle));
+        advanceTo(at+.65,repeatTarget);
+        const auto& repeatFrame=game.frame();
+        const auto repeat=std::find_if(repeatFrame.sprites.begin(),repeatFrame.sprites.end(),isEnemyReticle);
+        XCTAssertTrue(repeat!=repeatFrame.sprites.end());
+        if (repeat!=repeatFrame.sprites.end()) checkCenter(*repeat,repeatTarget);
+        XCTAssertTrue([renderer drawFrame:repeatFrame toLayer:layer],@"%@",renderer.lastError);
+        [self capture:[NSString stringWithFormat:@"scheduled-enemy-raid-%.0f",at] renderer:renderer];
+        NSLog(@"MD_RAID_PLATFORM %@ %.0fx%.0f raid %.0f",
+              tablet?@"iPad":@"iPhone",repeatFrame.logicalWidth,repeatFrame.logicalHeight,at);
+    }
     XCTAssertEqual(host.saves,0u);
     [renderer finish];
     window.hidden=YES;

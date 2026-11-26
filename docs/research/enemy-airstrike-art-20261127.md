@@ -87,3 +87,9 @@ iPhone Air 시뮬레이터에서 치트판의 TEST 기능으로 11스테이지�
 11~80스테이지마다 첫 60초와 후속 출격 31회의 절대 시각을 기록했다. 제작 시 20~45초 정수 간격 32개를 무작위로 뽑았다. 마지막 간격은 다음 주기의 첫 출격까지 이어진다. 전투 코드는 스테이지 시작 시 읽은 한 행을 소비한다. 출격 간격을 정하기 위해 난수를 호출하거나 저장 파일에 기록하지 않는다. [출격 표](../../Resources/Tables/EnemyAirRaidSchedule.tsv) · [표 읽기](../../Sources/Core/Simulation/World.cpp) · [시각 소비](../../Sources/Core/Simulation/SpecialAttack.cpp)
 
 공용 코어 검사 5개가 통과했다. 70개 행을 각각 세 주기 검사했다. 11스테이지 전투에서는 첫 32회와 다음 주기의 첫 출격까지 표와 일치했다. 아군 메크가 60초에 없던 재도전은 첫 회차를 건너뛰고 81초와 119초에 출격했다. iPhone Air 시뮬레이터 치트판의 첫 출격과 표적 표시 검사도 통과했다. [전투 검사](../../Tests/WorldSpecialTests.cpp) · [치트판 렌더 검사](../../Apple/Tests/MenuRenderTests.mm)
+
+### 플랫폼별 치트판 대조
+
+iPhone Air와 iPad Air 시뮬레이터, Android API 36 에뮬레이터, Chromium과 WebKit 브라우저, 오프라인으로 다시 연 설치형 PWA, macOS Tauri 검증 앱에서 11스테이지의 60·81·119초 출격과 빨간 조준점을 확인했다. macOS 검증 앱은 웹 치트 빌드를 독립 검증 번들에 넣어 실제 WKWebView에서 실행했다. [Apple 전투 검사](../../Apple/Tests/MenuRenderTests.mm)
+
+아군과 적군 공습기는 같은 `AirStrike` 갱신을 사용한다. 진입 방향의 세로 성분은 반대다. 초기 속력은 같은 배율에서 같고, 이후 매 시뮬레이션 틱에 1%씩 증가한다. 이 가속은 투하 뒤 퇴장까지 이어진다. 같은 난수와 무기로 두 경로를 시작해 퇴장까지 위치와 속력을 틱마다 비교했다. [공습 코드](../../Sources/Core/Simulation/SpecialAttack.cpp) · [비행 대조 검사](../../Tests/SpecialAttackTests.cpp)
