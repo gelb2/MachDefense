@@ -8,7 +8,10 @@
 | 수정 시안 원본 | [MTD-revised.png](MTD-revised.png) | `34d1b6f71a82d0be1915510dc72f723c689bfad4d93900442eae187fcac373eb` |
 | 회녹색 수정 시안의 전투 소비본 | `9e12afc`의 `Resources/Images/EnemyAirStrikeMTD.png` | `7effc765c23adfb7e1b7454f5543dc05e443f448a2ede5db33a8925df048b35a` |
 | 검은색·금색 수정 원본 | [MTD-black-gold.png](MTD-black-gold.png) | `04dfd9eb8df7d63b67feef17340ed74f13b44d511f9ee4f66ffdaa97f5f10107` |
-| 현행 전투 소비 | [EnemyAirStrikeMTD.png](../../Resources/Images/EnemyAirStrikeMTD.png) | `fe0c215275cee8197d2e2453526b82a2351b2977fb2a32d48f1d11bac66d3c37` |
+| 검은색·금색 수정 시안의 전투 소비본 | `8d54723`의 `Resources/Images/EnemyAirStrikeMTD.png` | `fe0c215275cee8197d2e2453526b82a2351b2977fb2a32d48f1d11bac66d3c37` |
+| 사용자 승인 09번 | [MTD-09-approved.png](MTD-09-approved.png) | `b530f83a5845b24c4c7c2ed97e0ddc65fdf41d754e33607ae0a40b1533ec53f5` |
+| 상판 도장 수정 원본 | [MTD-upper-surface.svg](MTD-upper-surface.svg) | `4442d1501698dbe49f20c1ba945b5824bb0d40ffbdb8b6ec4a36cdd73e9e47d0` |
+| 현행 전투 소비 | [EnemyAirStrikeMTD.png](../../Resources/Images/EnemyAirStrikeMTD.png) | `95662bc5d5cd8c262fb332300e030deaabb3381c4bb28c547d68216158f6bf1f` |
 
 첫 편집에는 첫 시안과 아래 네 장을 직접 첨부했다. 두 번째 편집에서는 수정 시안·공식 도장 사진·원작 공습기 PNG를 다시 첨부해 표식 위치를 고쳤다. 두 편집 모두 투명 배경을 사용했다.
 
@@ -42,3 +45,17 @@ magick Art/EnemyAirStrike/MTD-revised.png -crop 1376x845+179+21 +repage \
 ```sh
 magick Art/EnemyAirStrike/MTD-black-gold.png -crop 1376x845+179+21 +repage   -filter Lanczos -resize 212x212 -background none -gravity center   -extent 256x256 -strip PNG32:Resources/Images/EnemyAirStrikeMTD.png
 ```
+
+## 09번 승인과 상판 도장 수정
+
+사용자가 09번의 형상과 도장을 승인하고 상판 질감 수정을 지시했다. 각진 명암과 두꺼운 패널 경계를 걷어내고, 검은 무광 도장 위에 옅은 곡면 반사와 낮은 대비의 이음매를 그렸다. 실기 사진은 표면 명암의 참조로 사용했다. [NASA F-15 상판 사진](https://www.nasa.gov/image-article/f-15b-during-active-project-flight/)
+
+ImageGen 편집 시안은 승인본과 외곽 겹침이 92.30%여서 제외했다. 승인 SVG의 외곽, 금색선, 캐노피, 배기구 경로와 색 정의를 유지하고 안쪽 상판 레이어를 수정했다. 두 게임 PNG 모두 256×256이고 알파 범위는 x 24–231, y 58–196이다. 알파 128 이상 외곽은 99.92% 겹쳤다. [편집 시안에 사용한 프롬프트](upper-surface-prompt.txt)
+
+```sh
+cairosvg Art/EnemyAirStrike/MTD-upper-surface.svg -o /tmp/mtd-upper-surface.png
+magick /tmp/mtd-upper-surface.png -trim +repage -resize 208x208 \
+  -background none -gravity center -extent 256x256 PNG32:Resources/Images/EnemyAirStrikeMTD.png
+```
+
+iPhone Air 시뮬레이터에서 적기와 아군 공습기를 같은 전투 프레임에 그리는 테스트가 통과했다. 승인본 화면과 픽셀 차이는 적기 영역에 있었다. 수정 PNG는 빌드 및 테스트 번들의 파일과 SHA-256이 일치했다. [09번 승인 화면](../../docs/evidence/enemy-airstrike-20261127/ios-simulator-mtd-09-approved.png) · [상판 수정 화면](../../docs/evidence/enemy-airstrike-20261127/ios-simulator-mtd-painted.png)
