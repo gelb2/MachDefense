@@ -25,7 +25,10 @@ void World::configureWeapons(WorldActor& actor){
 AirStrike World::beginAirStrike(const WeaponDefinition& weapon,Vec2 point,float delay,bool enemy) {
     auto marker = [&]() {
         auto* particle = particles_->acquire(float(time()),random_);
-        if (particle) setParticleImage(particle,"Target.png",2,1);
+        if (particle) {
+            if (enemy) setParticleImage(particle,enemyRaidReticleImage,1,1);
+            else setParticleImage(particle,"Target.png",2,1);
+        }
         if (enemy) enemyRaidWarning_=particle;
         return particle;
     };

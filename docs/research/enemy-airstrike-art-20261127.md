@@ -71,3 +71,9 @@
 사용자가 전투 화면에서 검은색과 금색을 알아보기 어렵다고 지적했다. 이번 편집에는 헤비멕1 채택 F-22·MiG-31을 도장 기준으로 직접 첨부했다. MachDefense의 `Airplane.png`는 무광 표면과 부드러운 명암을 맞추는 데 사용했다. STOL/MTD의 카나드·가는 복좌 캐노피·사각 노즐을 남기고 동체를 검은 차콜색으로 바꿨다. 금색 유리와 기수 양옆 도장선의 명도와 면적을 높였다. [참조와 실제 프롬프트](../../Art/EnemyAirStrike/README.md#검은색과-금색-도장-수정).
 
 [회녹색 수정본 캡처](../evidence/enemy-airstrike-20261127/ios-simulator-revised.png) · [검은색·금색 캡처](../evidence/enemy-airstrike-20261127/ios-simulator-black-gold.png). 같은 iPhone Air 시뮬레이터 전투의 320×480 프레임을 비교했다. 검은 동체와 금색 유리·선이 배율을 확대하지 않아도 보인다. 흰색 `055`는 원본 그림에서 읽히며 전투 프레임에서는 작다. 캡처의 픽셀 변화는 적기 영역에만 있다. 변경한 PNG가 빌드 및 테스트 앱 번들에 들어간 것을 바이트로 대조했다.
+
+## 빨간 공습 표적
+
+아군 스킬의 `Target.png`에서 녹색 신호값을 투명도로 옮겨 32×32 빨간 조준점을 만들었다. 적 공습이 표적 좌표를 확정하면 투하 전에 그 위치에 표시한다. 적기가 표적 위를 지날 때도 보인다. [빨간 조준점 PNG](../../Resources/Images/TargetEnemyRaid.png) · [표시 코드](../../Sources/Core/Presentation/WorldPresentation.cpp)
+
+iPhone Air 시뮬레이터에서 치트판의 TEST 기능으로 11스테이지를 열었다. 투하 전 적 표적에는 빨간 조준점, 아군 스킬 표적에는 녹색 조준점이 보였다. 메크가 이동하고 적기가 표적 위를 지나가는 동안에도 빨간 조준점은 최초 표적에 남았다. 공용 코어 검사 4개와 치트판 렌더 검사 1개가 통과했다. [투하 전](../evidence/enemy-airstrike-20261127/ios-cheat-enemy-red-reticle-before-bombs.png) · [메크 이동 후 적기 통과](../evidence/enemy-airstrike-20261127/ios-cheat-enemy-air-raid-and-allied-airstrike.png)

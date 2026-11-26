@@ -9,6 +9,7 @@ std::vector<Projectile> crossfireProjectiles(const WeaponDefinition&,Vec2 origin
                                              float bodyAngle,double time,DarwinRandom&);
 std::string specialWeaponName(std::string_view itemString,float itemLevel);
 inline constexpr std::string_view enemyRaidImage = "EnemyAirStrikeMTD.png";
+inline constexpr char enemyRaidReticleImage[] = "TargetEnemyRaid.png";
 // New campaign raid. Stage indices are zero-based.
 struct EnemyAirRaid {
     int maximumDamage;

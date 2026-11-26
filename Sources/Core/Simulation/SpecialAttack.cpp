@@ -45,10 +45,10 @@ AirStrike AirStrike::start(const WeaponDefinition& weapon,Vec2 target,float dela
     strike.position={target.x-direction.x*1200.f,target.y-direction.y*1200.f};
     strike.angle=static_cast<float>(std::atan2(static_cast<double>(direction.y),static_cast<double>(direction.x)));
     if(acquire)if(auto* marker=acquire()) {
-        marker->blend=Blend::additive;marker->life=reverseApproach?5.f:3.f;marker->tile=reverseApproach?1:0;marker->position=target;
+        marker->blend=reverseApproach?Blend::alpha:Blend::additive;
+        marker->life=reverseApproach?5.f:3.f;marker->tile=0;marker->position=target;
         marker->scale={15,15};marker->easyOutScale=1.5f;marker->easyOutDivisor=6;
         marker->rotationVelocity=.1f;marker->start(animationTime);
-        // World binds this acquired particle to Target.png, 2 columns / 1 row.
     }
     strike.velocity={direction.x*4.f,direction.y*4.f};
     strike.startTime=static_cast<float>(time+static_cast<double>(delay));

@@ -111,6 +111,9 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
     double warningTime=0,lastImpact=0;
     std::optional<std::uint64_t> lastRaidProjectile;
     const bool expected=stage>=10;
+    const auto isRaidReticle=[](const Sprite& sprite) {
+        return sprite.image==enemyRaidReticleImage;
+    };
     for (int tick=0; tick<4250; ++tick) {
         for (const auto& a:world.actors()) {
             a->weapons.clear();
@@ -130,7 +133,14 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
             bool plane=false, warning=false;
             for (const auto& sprite : frame.sprites) {
                 plane|=sprite.image==enemyRaidImage;
-                warning|=sprite.image=="Target.png" && sprite.sourcePx && sprite.sourcePx->x==32;
+                if (!isRaidReticle(sprite)) continue;
+                assert(mech && !warning);
+                const auto center=world.worldToScreen(mech->position);
+                assert(std::abs(sprite.destination.x+sprite.destination.width*.5f-center.x)<.01f);
+                assert(std::abs(sprite.destination.y+sprite.destination.height*.5f-center.y)<.01f);
+                assert(sprite.sourcePx && sprite.sourcePx->x==0 && sprite.sourcePx->width==32);
+                assert(sprite.blend==Blend::alpha && sprite.color.a>0 && !lastRaidProjectile);
+                warning=true;
             }
             assert(plane==expected && warning==expected);
             detected=true;
@@ -157,7 +167,7 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
             world.appendSprites(frame);
             for (const auto& sprite:frame.sprites) {
                 assert(sprite.image!=enemyRaidImage && sprite.image!="Blt_Bullet.png");
-                assert(sprite.image!="Target.png" || !sprite.sourcePx || sprite.sourcePx->x!=32);
+                assert(!isRaidReticle(sprite));
             }
             world.tick();
             assert(world.projectiles().empty() && host.groundExplosions==initialExplosions);
@@ -165,6 +175,9 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
         }
     }
     assert(detected && mech && !testFinish);
+    Frame settledFrame;
+    world.appendSprites(settledFrame);
+    assert(std::none_of(settledFrame.sprites.begin(),settledFrame.sprites.end(),isRaidReticle));
     if (expected) {
         assert(drops==10 && host.groundExplosions-initialExplosions==drops && lastImpact-warningTime<5);
         const auto budget=EnemyAirRaid::forStage(stage,80,minimumMechHPForTest);
@@ -201,7 +214,15 @@ int main(int argc,char**argv){assert(argc==2);Resources resources;resources.root
         auto attacks=save.attacks(0);const auto initial=attacks[0].count;
         assert(world.activateSpecial(attacks[0].name,{0,0}));assert(save.attacks(0)[0].count==initial-1);
         md::Frame frame;world.appendSprites(frame);bool plane=false,marker=false;
-        for(const auto& s:frame.sprites){plane|=s.image=="Airplane.png";marker|=s.image=="Target.png";}assert(plane&&marker);
+        for(const auto& s:frame.sprites){
+            plane|=s.image=="Airplane.png";
+            if(s.image!="Target.png")continue;
+            assert(s.sourcePx && s.sourcePx->x==0);
+            assert(s.color.r==1 && s.color.g==1 && s.color.b==1);
+            assert(s.blend==md::Blend::additive);
+            marker=true;
+        }
+        assert(plane&&marker);
         bool drop=false;for(int i=0;i<120;++i){world.tick();for(const auto& b:world.projectiles())drop|=b.motion.drop;}assert(drop);
         world.start(0);attacks=save.attacks(0);attacks.push_back({"Crossfire-Missile",0,3,true});save.setAttacks(0,attacks);
         assert(!world.activateSpecial("Crossfire-Missile",{0,0}));assert(save.attacks(0).back().count==3);

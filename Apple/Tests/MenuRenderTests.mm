@@ -6,6 +6,7 @@
 #include "Core/Presentation/Menu.hpp"
 #include "Core/Session/GameSession.hpp"
 #include "Core/Simulation/World.hpp"
+#include "Core/Validation/ValidationTools.hpp"
 #include "../../Tests/ContentSweep.hpp"
 #include "../../Tests/NuclearDamageSweep.hpp"
 #include "../../Tests/BaseUpgradeEffectSweep.hpp"
@@ -168,31 +169,94 @@ public:
     MDRenderer* renderer=[[MDRenderer alloc] initWithResourceRoot:root];
     MenuResources resources(root,renderer);
     MenuHost host;
-    auto save=md::SaveData::empty(1);
-    save.createProfile("AIR RAID",1);
-    md::World world(resources,host,save,0,md::BattleGeometry::phone(),781);
-    world.start(10);
-    world.setValidationCells(10000);
-    XCTAssertTrue(world.enqueueBuild("MachineGun"));
+    md::GameSession game(resources,host,true);
+    const auto command=[&](md::ValidationCommand action) {
+        XCTAssertTrue(game.applyValidationCommand(unsigned(action)));
+    };
+    command(md::ValidationCommand::newProfile);
+    for (int i=0;i<10;++i) command(md::ValidationCommand::missionNext);
+    command(md::ValidationCommand::startMission);
+    sweepTicks(game);
+    auto* world=game.validationWorld();
+    XCTAssertNotEqual(world,nullptr);
+    if (!world) return;
+    XCTAssertEqual(world->stage(),10u);
+    sweepTap(game,160,450); // Close the first-run combat help.
+    XCTAssertFalse(world->paused());
+    command(md::ValidationCommand::fillCells);
+    XCTAssertTrue(world->enqueueBuild("MachineGun"));
+
+    const md::Vec2 enemyTarget{-51,-330}, allyTarget{70,-350};
+    const auto isEnemyReticle=[](const md::Sprite& sprite) {
+        return sprite.image==md::enemyRaidReticleImage;
+    };
     bool launchedAlly=false;
-    auto elapsed=[&] { return world.time()-world.startTime(); };
-    while(elapsed()<62.35) {
-        for(const auto& a:world.actors()) {
-            a->weapons.clear();
-            if(!a->player&&!a->base) a->removed=true;
-            if(a->player&&!a->base&&a->type==0) {
-                a->position=a->bipod.position={-51,-330};
-                a->bipod.setDestination(a->position);
+    const auto elapsed=[&] { return world->time()-world->startTime(); };
+    bool positionedMech=false;
+    const auto advanceTo=[&](double seconds,md::Vec2 mechPosition) {
+        for (int tick=0;tick<4000 && elapsed()<seconds;++tick) {
+            for (const auto& actor:world->actors()) {
+                actor->weapons.clear();
+                if (!actor->player && !actor->base) actor->removed=true;
+                if (actor->player && !actor->base && actor->type==0) {
+                    actor->position=actor->bipod.position=mechPosition;
+                    actor->bipod.setDestination(mechPosition);
+                    positionedMech=true;
+                }
             }
+            if (!launchedAlly && elapsed()>=60) {
+                XCTAssertTrue(world->activateSpecial("AirStrike-Bomb",allyTarget));
+                launchedAlly=true;
+            }
+            game.tick();
         }
-        if(!launchedAlly&&elapsed()>=60) {
-            XCTAssertTrue(world.activateSpecial("AirStrike-Bomb",{70,-350}));
-            launchedAlly=true;
+        XCTAssertGreaterThanOrEqual(elapsed(),seconds);
+    };
+    advanceTo(60.65,enemyTarget);
+    XCTAssertTrue(positionedMech && launchedAlly);
+    const auto& warningFrame=game.frame();
+    const auto enemy=std::find_if(warningFrame.sprites.begin(),warningFrame.sprites.end(),isEnemyReticle);
+    const auto ally=std::find_if(warningFrame.sprites.begin(),warningFrame.sprites.end(),[](const auto& sprite) {
+        return sprite.image=="Target.png" && sprite.sourcePx && sprite.sourcePx->x==0;
+    });
+    XCTAssertTrue(enemy!=warningFrame.sprites.end() && ally!=warningFrame.sprites.end());
+    if (enemy==warningFrame.sprites.end() || ally==warningFrame.sprites.end()) return;
+    const auto checkCenter=[&](const md::Sprite& sprite,md::Vec2 point) {
+        const auto expected=world->worldToScreen(point);
+        XCTAssertEqualWithAccuracy(sprite.destination.x+sprite.destination.width*.5f,expected.x,.01);
+        XCTAssertEqualWithAccuracy(sprite.destination.y+sprite.destination.height*.5f,expected.y,.01);
+    };
+    checkCenter(*enemy,enemyTarget);
+    checkCenter(*ally,allyTarget);
+    XCTAssertTrue(std::none_of(world->projectiles().begin(),world->projectiles().end(),[](const auto& projectile) {
+        return projectile.damageOverride.has_value();
+    }));
+
+    md::Frame control=warningFrame;
+    control.sprites[enemy-warningFrame.sprites.begin()].color.a=0;
+    XCTAssertTrue([renderer drawFrame:control toLayer:layer],@"%@",renderer.lastError);
+    NSData* without=[renderer readFramebufferRGBA];
+    XCTAssertTrue([renderer drawFrame:warningFrame toLayer:layer],@"%@",renderer.lastError);
+    NSData* with=[renderer readFramebufferRGBA];
+    XCTAssertGreaterThan(without.length,0u);
+    XCTAssertEqual(with.length,without.length);
+    if (with.length==without.length) {
+        const auto* before=static_cast<const unsigned char*>(without.bytes);
+        const auto* after=static_cast<const unsigned char*>(with.bytes);
+        unsigned long red=0,green=0,blue=0;
+        for (NSUInteger i=0;i+3<with.length;i+=4) {
+            red+=std::max(0,int(after[i])-before[i]);
+            green+=std::max(0,int(after[i+1])-before[i+1]);
+            blue+=std::max(0,int(after[i+2])-before[i+2]);
         }
-        world.tick();
+        XCTAssertGreaterThan(red,0ul);
+        XCTAssertGreaterThan(red,green*5);
+        XCTAssertGreaterThan(red,blue*5);
     }
-    md::Frame frame;
-    world.appendSprites(frame);
+    [self capture:@"enemy-red-reticle-before-bombs" renderer:renderer];
+
+    advanceTo(62.35,{-97,-325});
+    const auto& frame=game.frame();
     const auto onScreen=[&](std::string_view name) {
         return std::any_of(frame.sprites.begin(),frame.sprites.end(),[&](const auto& s) {
             const float x=s.destination.x+s.destination.width/2,y=s.destination.y+s.destination.height/2;
@@ -201,6 +265,12 @@ public:
     };
     XCTAssertTrue(onScreen("Airplane.png"));
     XCTAssertTrue(onScreen(md::enemyRaidImage));
+    const auto enemyPlane=std::find_if(frame.sprites.begin(),frame.sprites.end(),[](const auto& sprite) {
+        return sprite.image==md::enemyRaidImage;
+    });
+    const auto visibleWarning=std::find_if(enemyPlane,frame.sprites.end(),isEnemyReticle);
+    XCTAssertTrue(visibleWarning!=frame.sprites.end());
+    if (visibleWarning!=frame.sprites.end()) checkCenter(*visibleWarning,enemyTarget);
     XCTAssertTrue([renderer drawFrame:frame toLayer:layer],@"%@",renderer.lastError);
     [self capture:@"enemy-air-raid-and-allied-airstrike" renderer:renderer];
     XCTAssertEqual(host.saves,0u);
