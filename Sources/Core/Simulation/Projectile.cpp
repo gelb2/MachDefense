@@ -189,9 +189,10 @@ ParticleState* ParticlePool::acquire(float time,DarwinRandom& random) {
     for(auto& p:particles_) if(!p.shown) {p.reset(time,random);return &p;}return nullptr;
 }
 std::vector<ProjectileHit> projectileCollide(const WeaponDefinition& weapon,Vec2 position,bool toPlayer,
-        double time,std::span<ProjectileTarget> enemies,std::span<ProjectileTarget> players) {
+        double time,std::span<ProjectileTarget> enemies,std::span<ProjectileTarget> players, std::optional<int> damageOverride) {
     std::vector<ProjectileHit> hits;
     const auto special=projectileSpecialDamage(weapon,time);
+    const int damage = damageOverride.value_or(weapon.damage);
     auto apply=[&](std::span<ProjectileTarget> targets,std::size_t i,bool player,int damage,bool secondary) {
         const auto hp=static_cast<std::int64_t>(targets[i].hp)-damage;
         targets[i].hp=static_cast<int>(std::clamp<std::int64_t>(hp,0,INT32_MAX));
@@ -202,12 +203,12 @@ std::vector<ProjectileHit> projectileCollide(const WeaponDefinition& weapon,Vec2
         for(std::size_t i=0;i<enemies.size();++i) {
             if(enemies[i].hp<=0) continue;
             if(lengthSquared(difference(position,enemies[i].position))>=enemies[i].radius*enemies[i].radius) continue;
-            apply(enemies,i,false,weapon.damage,false);
+            apply(enemies,i,false,damage,false);
             if(weapon.type==WeaponType::laser) { // set2ndDamage 0x9f80
                 for(std::size_t j=0;j<enemies.size();++j) {
                     if(j==i||enemies[j].hp<=0) continue;
                     if(lengthSquared(difference(position,enemies[j].position))<weapon.special1*weapon.special1)
-                        apply(enemies,j,false,static_cast<int>(static_cast<float>(weapon.damage)*.5f),true);
+                        apply(enemies,j,false,static_cast<int>(static_cast<float>(damage)*.5f),true);
                 }
             }
         }
@@ -218,7 +219,7 @@ std::vector<ProjectileHit> projectileCollide(const WeaponDefinition& weapon,Vec2
             const Vec2 delta=difference(position,targets[i].position);
             if(std::abs(delta.x)>=range||std::abs(delta.y)>=range) continue;
             const float falloff=1.0f-std::sqrt(lengthSquared(delta))/range;
-            if(falloff>0) apply(targets,i,toPlayer,static_cast<int>(static_cast<float>(weapon.damage)*std::min(1.0f,falloff+.5f)),false);
+            if(falloff>0) apply(targets,i,toPlayer,static_cast<int>(static_cast<float>(damage)*std::min(1.0f,falloff+.5f)),false);
         }
     }
     return hits;

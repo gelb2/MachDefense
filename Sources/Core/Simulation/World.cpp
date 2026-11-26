@@ -19,6 +19,7 @@ World::World(ResourceAccess& r,HostServices& h,SaveData& s,std::size_t slot,Batt
     uiMargin_=g.deviceScale==.5f?62.f:178.f;
     if(slot>=SaveData::slotCount||!s.active(slot))throw std::invalid_argument("World requires an original active save slot");
     particles_=std::make_unique<ParticlePool>(float(time()),random_);
+    minimumMechHP_=builds_.minimumMechHP(itemsTable_,geometry_);
     countermeasures_=std::make_unique<AircraftCountermeasures>(geometry_.deviceScale);
     for(std::size_t i=0;i<itemsTable_.rowCount();++i){auto d=LootDefinition::fromTable(itemsTable_,i);if(d.type!=LootType::other)lootDefinitions_.emplace(d.code,std::move(d));}
 }
@@ -63,6 +64,13 @@ WorldActor& World::addParts(const BuildDefinition& definition,Vec2 position){
 }
 void World::start(unsigned stage){
     if(stage>=80||stage>=maps_.children.size()||stage>=mapTable_.rowCount())throw std::out_of_range("Original stage index");
+    if (const auto raid=EnemyAirRaid::forStage(stage,mapTable_.rowCount(),minimumMechHP_)) {
+        scheduledEnemyRaid_=ScheduledEnemyRaid{
+            *raid, EnemyAirRaidSchedule::fromTable(table(resources_,"EnemyAirRaidSchedule"),stage+1)
+        };
+    } else {
+        scheduledEnemyRaid_.reset();
+    }
     validationArtScene_=false;
     stage_=stage;startTime_=time();statistics_={};actors_.clear();loot_.clear();projectiles_.clear();trails_.clear();airStrikes_.clear();spawners_.clear();production_.clear();events_.clear();
     for(auto& p:particles_->particles())p.shown=false;
@@ -118,8 +126,20 @@ void World::tick(){
     const bool aircraftActive=std::any_of(actors_.begin(),actors_.end(),[](const auto& a){return a->flightTactics&&a->hp>0&&!a->removed;});
     if(aircraftActive)for(const auto& p:projectiles_)if(const auto* w=weapons_.find(p.weapon))aircraftThreats_.add(p.motion,*w);
     const auto count=actors_.size();for(std::size_t i=0;i<count;++i)updateActor(*actors_[i]);
-    for(auto& strike:airStrikes_)if(const auto* weapon=weapons_.find(strike.weapon))
-        if(auto bullet=strike.motion.tick(*weapon,time(),random_))addProjectile(strike.weapon,*bullet,0,0);
+    if (state_ == WorldState::running && !validationArtScene_) updateEnemyAirRaid();
+    for (auto& strike : airStrikes_) {
+        const auto* weapon = weapons_.find(strike.weapon);
+        if (!weapon) continue;
+        auto bullet = strike.motion.tick(*weapon,time(),random_);
+        if (!bullet) continue;
+        std::optional<int> damageOverride;
+        if (strike.raid) {
+            bullet->toPlayer = true;
+            const unsigned dropIndex = weapon->shotCount - strike.motion.remainingShots - 1;
+            damageOverride = strike.raid->damageForDrop(dropIndex, weapon->shotCount);
+        }
+        addProjectile(strike.weapon,*bullet,0,0,damageOverride);
+    }
     std::erase_if(airStrikes_,[](const auto& strike){return strike.motion.removed;});
     for(auto& trail:trails_)trail.motion->tick(time(),random_);
     std::erase_if(trails_,[](const auto& trail){return trail.motion->removed();});
@@ -139,6 +159,14 @@ void World::tick(){
     std::erase_if(actors_,[](const auto& a){return a->flightTactics&&a->removed;});
 }
 void World::finish(WorldState state){
+    scheduledEnemyRaid_.reset();
+    auto particles=particles_->particles();
+    for (std::size_t i=0;i<particles.size();++i)
+        if (particleImages_[i].image==enemyRaidReticleImage) particles[i].shown=false;
+    std::erase_if(airStrikes_, [](const auto& strike) { return strike.raid.has_value(); });
+    // finish may run inside updateProjectiles; keep its iterator valid.
+    for (auto& projectile : projectiles_)
+        if (projectile.damageOverride) projectile.motion.removed = true;
     state_=state;events_.push_back({state==WorldState::cleared?WorldEvent::Kind::stageCleared:WorldEvent::Kind::stageFailed,0,0});
     if(finishHandler_)finishHandler_(state);
     std::vector<ActorId> ids;for(const auto& a:actors_)if(a->player==(state==WorldState::failed)&&a->hp>0)ids.push_back(a->id);

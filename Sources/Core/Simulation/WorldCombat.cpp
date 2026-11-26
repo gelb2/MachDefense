@@ -22,6 +22,34 @@ void World::configureWeapons(WorldActor& actor){
         }
     };walk(actor.assembly,{});
 }
+AirStrike World::beginAirStrike(const WeaponDefinition& weapon,Vec2 point,float delay,bool enemy) {
+    auto marker = [&]() {
+        auto* particle = particles_->acquire(float(time()),random_);
+        if (particle) {
+            if (enemy) setParticleImage(particle,enemyRaidReticleImage,1,1);
+            else setParticleImage(particle,"Target.png",2,1);
+        }
+        return particle;
+    };
+    auto strike = AirStrike::start(weapon,point,delay,time(),geometry_.deviceScale,random_,marker,float(time()),enemy);
+    host_.playSound("SFX_AirStrike.wav");
+    return strike;
+}
+void World::updateEnemyAirRaid() {
+    if (!scheduledEnemyRaid_ || !scheduledEnemyRaid_->schedule.takeDue(time()-startTime_)) return;
+    const WorldActor* target = nullptr;
+    for (const auto& actor : actors_) {
+        if (!actor->player || actor->type != 0 || actor->hp <= 0 || actor->removed) continue;
+        if (!target || actor->position.y > target->position.y) target = actor.get();
+    }
+    if (!target) return;
+    constexpr std::string_view bomb = "AS_BOMB_01";
+    const auto* weapon = weapons_.find(bomb);
+    if (!weapon || weapon->type != WeaponType::bomb || weapon->damageRange <= 0 || !weapon->shotCount)
+        throw std::runtime_error("Enemy air raid requires the area-damage airstrike bomb");
+    constexpr float warningSeconds = 1.5f;
+    airStrikes_.push_back({std::string(bomb),beginAirStrike(*weapon,target->position,warningSeconds,true),scheduledEnemyRaid_->raid});
+}
 bool World::activateSpecial(std::string_view name,Vec2 point){
     if(!started_||paused_||state_!=WorldState::running)return false;
     auto owned=save_.attacks(slot_);auto selected=std::find_if(owned.begin(),owned.end(),[&](const auto& a){return a.name==name;});
@@ -33,8 +61,8 @@ bool World::activateSpecial(std::string_view name,Vec2 point){
     const auto* weapon=weapons_.find(weaponName);if(!weapon)return false;
     auto acquireMarker=[&](){auto* p=particles_->acquire(float(time()),random_);if(p)setParticleImage(p,"Target.png",2,1);return p;};
     if(prefix.starts_with("AS_")){
-        auto motion=AirStrike::start(*weapon,point,itemsTable_.number(*row,"Param2").value_or(0),time(),geometry_.deviceScale,random_,acquireMarker,float(time()));
-        airStrikes_.push_back({weaponName,std::move(motion)});host_.playSound("SFX_AirStrike.wav");
+        auto motion=beginAirStrike(*weapon,point,itemsTable_.number(*row,"Param2").value_or(0),false);
+        airStrikes_.push_back({weaponName,std::move(motion)});
     }else if(prefix.starts_with("CF_")){
         unsigned fired=0;
         for(const auto& a:actors_)if(a->player&&!a->removed&&a->hp>0&&(a->type==0||a->flightTactics)&&a->position.y<point.y){
@@ -136,8 +164,8 @@ void World::updateWeapons(WorldActor& a){
         gun.recoil=fired.recoil;
     }
 }
-void World::addProjectile(std::string name,Projectile motion,ActorId attacker,int layer){
-    WorldProjectile bullet{std::move(name),std::move(motion),attacker,{},layer,0};
+void World::addProjectile(std::string name,Projectile motion,ActorId attacker,int layer,std::optional<int> damageOverride){
+    WorldProjectile bullet{std::move(name),std::move(motion),attacker,{},layer,0,damageOverride};
     if(const auto* weapon=weapons_.find(bullet.weapon)){
         const bool launched=bullet.motion.launchVelocity.x!=0||bullet.motion.launchVelocity.y!=0;
         if(auto trail=Trail::forWeapon(*weapon,geometry_.deviceScale,launched?Vec2{}:bullet.motion.position)){
@@ -168,7 +196,7 @@ void World::updateProjectiles(){
             }
             host_.playSound("SFX_ExplGround.wav");
         }
-        const auto hits=projectileCollide(*weapon,p.motion.position,p.motion.toPlayer,time(),enemies,players);
+        const auto hits=projectileCollide(*weapon,p.motion.position,p.motion.toPlayer,time(),enemies,players,p.damageOverride);
         for(const auto& hit:hits){auto id=(hit.player?playerIds:enemyIds).at(hit.index);damage(id,hit.damage,p.attacker);if(hit.special){auto* a=actor(id);if(a&&a->hp>0&&!(a->flightTactics&&a->flightTactics->invulnerable(time()))&&a->specialDamage.add(*hit.special)){a->target=0;setDestination(*a,a->position);}}if(hit.secondary)if(const auto* a=actor(id))emitSecondaryImpact(*weapon,p.motion.position,a->position);}
         emitWeaponImpact(*weapon,p.motion.position,0,.04f);
         p.motion.removed=true;
