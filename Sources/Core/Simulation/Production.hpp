@@ -17,6 +17,7 @@ public:
     static BuildCatalog load(const DataTable& parts,const DataTable& names);
     const BuildDefinition* find(std::string_view name) const;
     std::size_t size()const{return definitions_.size();}
+    int minimumMechHP(const DataTable& items, BattleGeometry geometry) const;
 private:
     std::unordered_map<std::string,BuildDefinition> definitions_;
 };

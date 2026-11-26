@@ -8,6 +8,14 @@ namespace md {
 std::vector<Projectile> crossfireProjectiles(const WeaponDefinition&,Vec2 origin,Vec2 target,
                                              float bodyAngle,double time,DarwinRandom&);
 std::string specialWeaponName(std::string_view itemString,float itemLevel);
+inline constexpr std::string_view enemyRaidImage = "EnemyAirStrikeMTD.png";
+// New campaign raid. Stage indices are zero-based.
+struct EnemyAirRaid {
+    int maximumDamage;
+    static constexpr double startsAfter = 60;
+    static std::optional<EnemyAirRaid> forStage(unsigned stage, std::size_t stageCount, int minimumMechHP);
+    int damageForDrop(unsigned dropIndex, unsigned shotCount) const;
+};
 // GobAirStrike 0x8150/0x82bc/0x86e0. Each tick is one original update.
 struct AirStrike {
     Vec2 position,velocity,target;
@@ -16,9 +24,9 @@ struct AirStrike {
     bool removed=false;
     static AirStrike start(const WeaponDefinition&,Vec2 target,float itemDelay,double time,
                            float deviceScale,DarwinRandom&,
-                           const std::function<ParticleState*()>& acquireMarker={},float animationTime=0);
+                           const std::function<ParticleState*()>& acquireMarker={},float animationTime=0,bool reverseApproach=false);
     std::optional<Projectile> tick(const WeaponDefinition&,double time,DarwinRandom&);
-    void appendSprite(Frame&,Vec2 screenPosition,Vec2 imageSize,float retinaScale=.5f) const;
+    void appendSprite(Frame&,Vec2 screenPosition,Vec2 imageSize,float retinaScale=.5f,std::string_view image="Airplane.png") const;
 };
 // Original GobHvM_Bot::process_Etc 0xcd5c. D/R job methods themselves
 // (0xce4c/0xd134) return immediately; no extra defense/repair AI is implied.

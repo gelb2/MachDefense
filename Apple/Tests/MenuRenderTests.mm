@@ -152,6 +152,61 @@ public:
     }catch(const std::exception& e){XCTFail(@"Viewport: %s",e.what());}
     [renderer finish];window.hidden=YES;
 }
+- (void)testEnemyAirRaidSpriteInBattle {
+    NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
+    XCTAssertNotNil(root);
+    if (!root) return;
+    UIWindow* window=[[UIWindow alloc] initWithFrame:CGRectMake(0,0,320,480)];
+    window.rootViewController=[UIViewController new];
+    MDMenuSurface* surface=[[MDMenuSurface alloc] initWithFrame:window.bounds];
+    surface.contentScaleFactor=1;
+    surface.layer.contentsScale=1;
+    CAEAGLLayer* layer=(CAEAGLLayer*)surface.layer;
+    layer.drawableProperties=@{kEAGLDrawablePropertyRetainedBacking:@YES,kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8};
+    [window.rootViewController.view addSubview:surface];
+    [window makeKeyAndVisible];
+    MDRenderer* renderer=[[MDRenderer alloc] initWithResourceRoot:root];
+    MenuResources resources(root,renderer);
+    MenuHost host;
+    auto save=md::SaveData::empty(1);
+    save.createProfile("AIR RAID",1);
+    md::World world(resources,host,save,0,md::BattleGeometry::phone(),781);
+    world.start(10);
+    world.setValidationCells(10000);
+    XCTAssertTrue(world.enqueueBuild("MachineGun"));
+    bool launchedAlly=false;
+    auto elapsed=[&] { return world.time()-world.startTime(); };
+    while(elapsed()<62.35) {
+        for(const auto& a:world.actors()) {
+            a->weapons.clear();
+            if(!a->player&&!a->base) a->removed=true;
+            if(a->player&&!a->base&&a->type==0) {
+                a->position=a->bipod.position={-51,-330};
+                a->bipod.setDestination(a->position);
+            }
+        }
+        if(!launchedAlly&&elapsed()>=60) {
+            XCTAssertTrue(world.activateSpecial("AirStrike-Bomb",{70,-350}));
+            launchedAlly=true;
+        }
+        world.tick();
+    }
+    md::Frame frame;
+    world.appendSprites(frame);
+    const auto onScreen=[&](std::string_view name) {
+        return std::any_of(frame.sprites.begin(),frame.sprites.end(),[&](const auto& s) {
+            const float x=s.destination.x+s.destination.width/2,y=s.destination.y+s.destination.height/2;
+            return s.image==name&&x>0&&x<256&&y>0&&y<480;
+        });
+    };
+    XCTAssertTrue(onScreen("Airplane.png"));
+    XCTAssertTrue(onScreen(md::enemyRaidImage));
+    XCTAssertTrue([renderer drawFrame:frame toLayer:layer],@"%@",renderer.lastError);
+    [self capture:@"enemy-air-raid-and-allied-airstrike" renderer:renderer];
+    XCTAssertEqual(host.saves,0u);
+    [renderer finish];
+    window.hidden=YES;
+}
 - (void)testNuclearDamageAllLevels {
     NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
     MDRenderer* renderer=[[MDRenderer alloc]initWithResourceRoot:root];MenuResources resources(root,renderer);

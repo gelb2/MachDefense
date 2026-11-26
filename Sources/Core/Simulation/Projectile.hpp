@@ -94,5 +94,5 @@ struct ProjectileHit {
 // Apply each event once to real units (including original onDamage side effects).
 std::vector<ProjectileHit> projectileCollide(const WeaponDefinition&,Vec2 position,bool toPlayer,
                                            double time,std::span<ProjectileTarget> enemies,
-                                           std::span<ProjectileTarget> players);
+                                           std::span<ProjectileTarget> players, std::optional<int> damageOverride = {});
 }

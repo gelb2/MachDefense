@@ -29,6 +29,7 @@ void World::validationAircraftComparison(){
     if(!started_)throw std::runtime_error("Start comparison World first");
     validation::appendAircraftModels(models_);validation::appendAircraftWeapons(weapons_);validationArtScene_=true;
     actors_.clear();spawners_.clear();loot_.clear();projectiles_.clear();trails_.clear();airStrikes_.clear();production_.clear();
+    enemyRaidWarning_=nullptr;
     for(auto& p:particles_->particles())p.shown=false;
     const float s=geometry_.deviceScale;
     // All four use the same world scale, facing north. Camera centers on them.

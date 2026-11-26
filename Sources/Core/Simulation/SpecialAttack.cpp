@@ -22,16 +22,30 @@ std::string specialWeaponName(std::string_view prefix,float level) {
     char suffix[32];std::snprintf(suffix,sizeof(suffix),"_%02d",static_cast<int>(level));
     return std::string(prefix)+suffix;
 }
+std::optional<EnemyAirRaid> EnemyAirRaid::forStage(unsigned stage, std::size_t stageCount, int minimumMechHP) {
+    constexpr unsigned firstRaidStage = 10;
+    if (stage < firstRaidStage || stage >= stageCount || minimumMechHP < 2) return {};
+    const auto cap = static_cast<std::int64_t>(minimumMechHP / 2);
+    const auto span = static_cast<std::int64_t>(stageCount - 1 - firstRaidStage);
+    const auto progress = static_cast<std::int64_t>(stage - firstRaidStage);
+    // Half the safe budget at first appearance, rising linearly to the full cap.
+    const auto damage = span ? cap * (span + progress) / (2 * span) : cap;
+    return EnemyAirRaid{static_cast<int>(damage)};
+}
+int EnemyAirRaid::damageForDrop(unsigned dropIndex, unsigned shotCount) const {
+    const auto count = static_cast<int>(shotCount);
+    return maximumDamage / count + (dropIndex < static_cast<unsigned>(maximumDamage % count) ? 1 : 0);
+}
 AirStrike AirStrike::start(const WeaponDefinition& weapon,Vec2 target,float delay,double time,
-                           float scale,DarwinRandom& random,const std::function<ParticleState*()>& acquire,float animationTime) {
+                           float scale,DarwinRandom& random,const std::function<ParticleState*()>& acquire,float animationTime,bool reverseApproach) {
     AirStrike strike;strike.target=target;strike.deviceScale=scale;strike.remainingShots=weapon.shotCount;
-    Vec2 direction{randomFloat(random)*.4f-.2f,1};
+    Vec2 direction{randomFloat(random)*.4f-.2f,reverseApproach?-1.f:1.f};
     const float length=std::sqrt(direction.x*direction.x+direction.y*direction.y);
     direction.x=direction.x/length*scale;direction.y=direction.y/length*scale;
     strike.position={target.x-direction.x*1200.f,target.y-direction.y*1200.f};
     strike.angle=static_cast<float>(std::atan2(static_cast<double>(direction.y),static_cast<double>(direction.x)));
     if(acquire)if(auto* marker=acquire()) {
-        marker->blend=Blend::additive;marker->life=3;marker->tile=0;marker->position=target;
+        marker->blend=Blend::additive;marker->life=reverseApproach?5.f:3.f;marker->tile=reverseApproach?1:0;marker->position=target;
         marker->scale={15,15};marker->easyOutScale=1.5f;marker->easyOutDivisor=6;
         marker->rotationVelocity=.1f;marker->start(animationTime);
         // World binds this acquired particle to Target.png, 2 columns / 1 row.
@@ -60,10 +74,10 @@ std::optional<Projectile> AirStrike::tick(const WeaponDefinition& weapon,double 
     bullet.drop=true;--remainingShots;fireTime=static_cast<float>(time+static_cast<double>(fireDelay));
     return bullet;
 }
-void AirStrike::appendSprite(Frame& frame,Vec2 screen,Vec2 size,float retinaScale) const {
+void AirStrike::appendSprite(Frame& frame,Vec2 screen,Vec2 size,float retinaScale,std::string_view image) const {
     if(removed||size.x<=0||size.y<=0)return;
     const float w=size.x*1.3f*retinaScale,h=size.y*1.3f*retinaScale;
-    Sprite sprite;sprite.image="Airplane.png";sprite.destination={screen.x-w*.5f,screen.y-h*.5f,w,h};
+    Sprite sprite;sprite.image=image;sprite.destination={screen.x-w*.5f,screen.y-h*.5f,w,h};
     sprite.rotationDegrees=-angle*180.f/3.14159265358979323846f;frame.sprites.push_back(std::move(sprite));
 }
 bool BotRecovery::tick(int& hp,int maximumHP,double time) {
