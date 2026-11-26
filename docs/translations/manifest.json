@@ -5,16 +5,16 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "9beecefe455f7fad63504fc245f884c86e5693cbf4e8cdee914b44b897b06b99",
-      "en_sha256": "40ae91a511d464120c8c762666a05962bdcbc64145dc2fce604dbb2b1bf63da2",
-      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main. 2026-11-23: checked both languages of the links to the other developer statements. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Compared the raid section with the author’s restored-game README and linked the design essay in both languages. Matched the before-and-after gameplay captures and their version labels in both languages."
+      "ko_sha256": "194e34637f6b0d8298da06dfc47b490f97565f39546f1f5d4f97314ce44a508c",
+      "en_sha256": "7aed9bfafbc44deefa26f7f051469f821aef1278251bfa73fb774304f1a2f330",
+      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main. 2026-11-23: checked both languages of the links to the other developer statements. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Compared the raid section with the author’s restored-game README and linked the design essay in both languages. Matched the before-and-after gameplay captures and their version labels in both languages. Matched the v0.8.2 release and current download references in both languages."
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "907887a741cff9eb40b67a41465c1080516736a9773ce26d27c4e74570ffbc32",
-      "en_sha256": "bc774d034f88bdd6793e57f6c99d6bed3f82b9abcff8d16701bd49f95205ab6c",
-      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages."
+      "ko_sha256": "2eeb8ffe9e0239b2d7b843950df59d85547a00bfdec51a87b2819ba8c2de6b0b",
+      "en_sha256": "fe49b8ae3551abf43a2be3c0799015d204b025e991487cd29c31874ae31c747f",
+      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Matched the v0.8.2 release and current download references in both languages."
     },
     {
       "ko": "CREDITS.md",
@@ -47,9 +47,9 @@
     {
       "ko": "docs/public/build-and-install.md",
       "en": "docs/en/public/build-and-install.md",
-      "ko_sha256": "110af2210ab7bfe6420f022e6a88ad7d09068ffd6b942f02f51e9f60a77a2479",
-      "en_sha256": "7362e19d67939e72c53fcd1378a2382fddc700c725994459d90626b3eef716f5",
-      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages."
+      "ko_sha256": "67645b885fd7abd993fd0c054a9a56bc25ea158a543226c7020846b0f01ec16c",
+      "en_sha256": "1ca348ec15854b42047af15da2a8216c9f566d7aa593fa76e198b750b1343949",
+      "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Matched the v0.8.2 release and current download references in both languages."
     },
     {
       "ko": "docs/public/development-history.md",
