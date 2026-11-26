@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-27",
   "state": "implemented",
   "pairs": [
     {
@@ -175,6 +175,11 @@
     {
       "ko": "docs/editorial/unease-integration-20261110.md",
       "en": "docs/en/editorial/unease-integration-20261110.md",
+      "status": "reviewed"
+    },
+    {
+      "ko": "docs/public/enemy-air-raids.md",
+      "en": "docs/en/public/enemy-air-raids.md",
       "status": "reviewed"
     }
   ],

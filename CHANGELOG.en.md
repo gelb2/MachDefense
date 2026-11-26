@@ -4,6 +4,14 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## v0.8 — Enemy air raids
+
+November 27, 2026. Added enemy F-15 STOL/MTD aircraft in Lux Lunae livery to stages 11–80. The first raid occurs at 60 seconds of battle time. Later waves come 20–45 seconds apart and contain one to three aircraft, as set by the precomputed schedule. Aircraft enter one at a time, 1.5 seconds apart. A red ground reticle marks the target.
+
+The maximum damage per aircraft increases linearly through the campaign. In the final stage, it reaches 80% of the weakest deployable mech's maximum HP. [Why Lux Lunae, candidate 09, spawn conditions, and damage calculation](docs/en/public/enemy-air-raids.md).
+
+The shared core checks covered all 80 stages and 70 mech configurations. The iPhone Air simulator showed the separate stage 11 entries at 81, 82.5, and 84 seconds and at 119 and 120.5 seconds. The Apple and Android apps are version 0.8 (build 8), and the Tauri Mac app is 0.8.0.
+
 ## 2026-11-10 web hotfix — Cheyenne and Beluga HP and prices
 
 - Adjusted HP, purchase cells and upgrade credits together across Lv.1–10. Cheyenne uses 85% of same-level Plasma Mech HP; Beluga uses the midpoint between Plasma Mech and Tanker HP, rounded to the original HP unit. Both purchase and upgrade prices are 25% lower.
