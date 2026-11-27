@@ -4,6 +4,10 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## v0.8.3 — 크로스파이어 자동 락온
+
+2026-11-27. 발사할 수 있는 적 한 대를 `LOCKED`로 표시한다. 그 적을 터치하면 발사할 수 있는 메크 중 가장 가까운 한 대가 현재 크로스파이어 레벨의 미사일을 발사한다. 탭 발사는 메크별로 전투 시간 10초를 기다리고 스킬 재고를 보존한다. 기존 스킬 버튼의 발사와 재고 차감은 그대로다. Apple·Android 앱은 0.8.3(11), Tauri Mac 앱은 0.8.3이다. [사용법](docs/public/features.md#크로스파이어-자동-락온) · [검사 결과](docs/evidence/crossfire-lockon-20261127.md).
+
 ## v0.8.2 — 적 공습기 C안
 
 2026-11-27. 검은 도장의 C안을 적용했다. 기수는 C안에서 줄이기 전 길이로 돌렸다. 금색 조종석과 전투에서 그리는 배율은 유지했다. Apple·Android 앱은 0.8.2(10), Tauri Mac 앱은 0.8.2다. [기체 그림](Art/EnemyAirStrike/README.md#v082-c안-적용)

@@ -72,6 +72,9 @@ void World::start(unsigned stage){
         scheduledEnemyRaid_.reset();
     }
     validationArtScene_=false;
+    crossfireLockTarget_=crossfireTouchTarget_=0;
+    nextCrossfireScan_=time();
+    refreshCrossfireLockWeapon(save_.attacks(slot_));
     stage_=stage;startTime_=time();statistics_={};actors_.clear();loot_.clear();projectiles_.clear();trails_.clear();airStrikes_.clear();spawners_.clear();production_.clear();events_.clear();
     for(auto& p:particles_->particles())p.shown=false;
     countermeasures_->clear();
@@ -157,6 +160,7 @@ void World::tick(){
     // per-entity dodge state after the original wreck lifetime has finished.
     // Original ground actor retention is unchanged.
     std::erase_if(actors_,[](const auto& a){return a->flightTactics&&a->removed;});
+    updateCrossfireLock();
 }
 void World::finish(WorldState state){
     scheduledEnemyRaid_.reset();

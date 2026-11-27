@@ -10,6 +10,21 @@
 #include "Core/Simulation/WorldSupport.hpp"
 namespace md {
 using namespace world_detail;
+namespace {
+constexpr std::string_view crossfireAttack = "Crossfire-Missile";
+constexpr double crossfireReuseSeconds = 10.0;
+constexpr double crossfireScanSeconds = 0.25;
+
+std::optional<float> crossfireDistance(const WorldActor& shooter,
+                                       const WeaponDefinition& weapon, Vec2 point) {
+    if (!shooter.player || shooter.removed || shooter.hp<=0 ||
+        !(shooter.type==0 || shooter.flightTactics) || shooter.position.y>=point.y) return {};
+    const float distance=distanceSquared(shooter.position,point);
+    if (distance>10000.f && distance<=float(weapon.shotRange*weapon.shotRange)) return distance;
+    return {};
+}
+}
+
 void World::configureWeapons(WorldActor& actor){
     actor.weapons.clear();actor.range=0;
     std::function<void(std::vector<AssemblyPart>&,std::vector<std::size_t>)> walk=[&](auto& nodes,auto path){
@@ -50,26 +65,34 @@ void World::updateEnemyAirRaid() {
     constexpr float warningSeconds = 1.5f;
     airStrikes_.push_back({std::string(bomb),beginAirStrike(*weapon,target->position,warningSeconds,true),scheduledEnemyRaid_->raid});
 }
+World::SpecialWeapon World::specialWeapon(const OwnedAttack& owned)const {
+    const auto& attack=attacks_.definition(owned);
+    char code[16];
+    std::snprintf(code,sizeof code,"%05d",attack.itemId);
+    const auto row=itemsTable_.findRow(code);
+    if (!row) return {};
+    const auto prefix=itemsTable_.value(*row,"strParam");
+    return {weapons_.find(specialWeaponName(prefix,itemsTable_.number(*row,"Param1").value_or(0))),
+            itemsTable_.number(*row,"Param2").value_or(0)};
+}
+void World::fireCrossfire(const WeaponDefinition& weapon, const WorldActor& shooter, Vec2 point) {
+    auto bullets=crossfireProjectiles(weapon,shooter.position,point,shooter.angle,time(),random_);
+    for (auto& bullet:bullets) addProjectile(weapon.name,std::move(bullet),shooter.id,1);
+}
 bool World::activateSpecial(std::string_view name,Vec2 point){
     if(!started_||paused_||state_!=WorldState::running)return false;
     auto owned=save_.attacks(slot_);auto selected=std::find_if(owned.begin(),owned.end(),[&](const auto& a){return a.name==name;});
     if(selected==owned.end()||selected->count==0)return false;
-    const auto& attack=attacks_.definition(*selected);char code[16];std::snprintf(code,sizeof code,"%05d",attack.itemId);
-    const auto row=itemsTable_.findRow(code);if(!row)return false;
-    const auto prefix=itemsTable_.value(*row,"strParam");
-    const auto weaponName=specialWeaponName(prefix,itemsTable_.number(*row,"Param1").value_or(0));
-    const auto* weapon=weapons_.find(weaponName);if(!weapon)return false;
+    const auto [weapon,delay]=specialWeapon(*selected);if(!weapon)return false;
     auto acquireMarker=[&](){auto* p=particles_->acquire(float(time()),random_);if(p)setParticleImage(p,"Target.png",2,1);return p;};
-    if(prefix.starts_with("AS_")){
-        auto motion=beginAirStrike(*weapon,point,itemsTable_.number(*row,"Param2").value_or(0),false);
-        airStrikes_.push_back({weaponName,std::move(motion)});
-    }else if(prefix.starts_with("CF_")){
+    if(weapon->name.starts_with("AS_")){
+        auto motion=beginAirStrike(*weapon,point,delay,false);
+        airStrikes_.push_back({weapon->name,std::move(motion)});
+    }else if(weapon->name.starts_with("CF_")){
         unsigned fired=0;
-        for(const auto& a:actors_)if(a->player&&!a->removed&&a->hp>0&&(a->type==0||a->flightTactics)&&a->position.y<point.y){
-            const float distance=distanceSquared(a->position,point);
-            if(distance>10000.f&&distance<=float(weapon->shotRange*weapon->shotRange)){
-                auto bullets=crossfireProjectiles(*weapon,a->position,point,a->angle,time(),random_);
-                for(auto& bullet:bullets)addProjectile(weaponName,std::move(bullet),a->id,1);
+        for(const auto& a:actors_){
+            if(crossfireDistance(*a,*weapon,point)){
+                fireCrossfire(*weapon,*a,point);
                 ++fired;
             }
         }
@@ -81,6 +104,71 @@ bool World::activateSpecial(std::string_view name,Vec2 point){
         if(!fired)return false;
     }else return false;
     --selected->count;save_.setAttacks(slot_,owned);return true;
+}
+
+void World::refreshCrossfireLockWeapon(std::span<const OwnedAttack> attacks) {
+    const auto owned=std::find_if(attacks.begin(),attacks.end(),[](const auto& attack) {
+        return attack.name==crossfireAttack;
+    });
+    const auto level = owned==attacks.end() ? std::nullopt : std::optional{owned->level};
+    if (level==crossfireLockLevel_) return;
+    crossfireLockLevel_=level;
+    crossfireLockWeapon_=level ? specialWeapon(*owned).definition : nullptr;
+    crossfireLockTarget_=0;
+    nextCrossfireScan_=time();
+}
+
+WorldActor* World::crossfireShooter(Vec2 point)const {
+    WorldActor* nearest=nullptr;
+    float closest=0;
+    for (const auto& ally:actors_) {
+        if (ally->type!=0 || time()<ally->crossfireReadyAt) continue;
+        if (const auto distance=crossfireDistance(*ally,*crossfireLockWeapon_,point);
+            distance && (!nearest || *distance<closest)) {
+            nearest=ally.get();
+            closest=*distance;
+        }
+    }
+    return nearest;
+}
+
+void World::updateCrossfireLock() {
+    if (state_!=WorldState::running || !crossfireLockWeapon_ || validationArtScene_) return;
+    if (const auto* locked=crossfireLockTarget_ ? actor(crossfireLockTarget_) : nullptr;
+        locked && crossfireTargetVisible(*locked) && crossfireShooter(locked->position)) return;
+    crossfireLockTarget_=0;
+    if (time()<nextCrossfireScan_) return;
+    nextCrossfireScan_=time()+crossfireScanSeconds;
+    const bool ready=std::any_of(actors_.begin(),actors_.end(),[&](const auto& ally) {
+        return ally->player && ally->type==0 && !ally->removed && ally->hp>0 &&
+               time()>=ally->crossfireReadyAt;
+    });
+    if (!ready) return;
+    for (const auto& enemy:actors_) {
+        if (crossfireTargetVisible(*enemy) && crossfireShooter(enemy->position)) {
+            crossfireLockTarget_=enemy->id;
+            crossfireLockAcquiredAt_=time();
+            return;
+        }
+    }
+}
+
+bool World::tapCrossfireLock(Vec2 point) {
+    if (!started_ || paused_ || state_!=WorldState::running || !crossfireLockWeapon_ ||
+        !crossfireTouchTarget_ || crossfireTouchTarget_!=crossfireLockTarget_ ||
+        !crossfireLockContains(point)) return false;
+    crossfireTouchTarget_=0;
+    const auto* enemy=actor(crossfireLockTarget_);
+    auto* shooter=crossfireShooter(enemy->position);
+    if (!shooter) {
+        updateCrossfireLock();
+        return false;
+    }
+    fireCrossfire(*crossfireLockWeapon_,*shooter,enemy->position);
+    shooter->crossfireReadyAt=time()+crossfireReuseSeconds;
+    host_.playSound("SFX_AirStrike.wav");
+    updateCrossfireLock();
+    return true;
 }
 void World::updateWeapons(WorldActor& a){
     auto* target=actor(a.target);

@@ -4,7 +4,7 @@
 [한국어](README.md) | [English](README.en.md)
 <!-- language-nav:end -->
 
-[![Release v0.8.2](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.8.2)
+[![Release v0.8.3](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.8.3)
 [![iOS, iPadOS, Android, Web, PWA, macOS](docs/public/media/badges/platforms.svg)](docs/en/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/en/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript, Rust](docs/public/media/badges/code.svg)](docs/en/public/architecture.md)
@@ -32,7 +32,7 @@ This has nothing to do with what I felt while restoring the trilogy, but I’ve 
 
 Open the link to install the game or play in your browser. On iPhone and iPad, choose **Add to Home Screen** in Safari's Share menu. On Android and Mac, press **INSTALL GAME**. Once the resources finish downloading, you can play offline.
 
-If building with Xcode or Android Studio is difficult, use the PWA or the [Tauri Mac app](https://github.com/gelb2/MachDefense/releases/download/v0.8.2/MachDefense-Desktop-v0.8.2-arm64.zip). The Mac app requires macOS 14 or later on Apple Silicon and stores progress in its app data folder. [Build and installation](docs/en/public/build-and-install.md) also explains how to install the native apps.
+If building with Xcode or Android Studio is difficult, use the PWA or the [Tauri Mac app](https://github.com/gelb2/MachDefense/releases/download/v0.8.3/MachDefense-Desktop-v0.8.3-arm64.zip). The Mac app requires macOS 14 or later on Apple Silicon and stores progress in its app data folder. [Build and installation](docs/en/public/build-and-install.md) also explains how to install the native apps.
 
 Thank you to [fastutlego](https://github.com/fastutlego) for contributing the HeavyMach web port. The WebAssembly host, WebGL2 renderer, input, audio and saves in [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24), together with the subsequent PWA and Tauri work, also laid the groundwork for bringing MachDefense to the web and desktop. I used that architecture for the MachDefense PWA and used the same web host in the Tauri Mac app.
 
@@ -78,6 +78,10 @@ I gave the enemy the air strike that supported the player in the original game. 
 
 I chose the F-15 STOL/MTD and gave it a black airframe, gold stripes, and a gold canopy. I used the same Lux Lunae livery for an enemy squadron when I restored HeavyMach 1. [Why I chose the livery and how we made the raids](docs/en/public/enemy-air-raids.md) · [Aircraft size before and after](docs/en/public/enemy-air-raids.md#gameplay-comparison)
 
+### Automatic Crossfire lock-on
+
+Once you have Crossfire, tap the enemy marked with a green `LOCKED` reticle. The nearest mech that can fire launches the missiles. Each mech can fire this way once every 10 seconds of battle time. [How automatic lock-on works](docs/en/public/features.md#automatic-crossfire-lock-on).
+
 ### Emergency resupply
 
 Emergency resupply was my own idea, separate from restoring the original game. I was troubled by the way tower-defense challenges could become obstacles that required purchased items to overcome. That is why I replaced the nonfunctional in-app purchase button with a resupply window.
@@ -116,11 +120,11 @@ I added upgrade stages for turrets, base equipment, and special attacks whose or
 
 | Platform | How to run | Current status |
 |---|---|---|
-| iPhone / iPad | Xcode workspace | v0.8.2 build. See the release notes for prior device checks and this release’s installation results |
-| Android | Android Studio or APK | [v0.8.2 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.8.2). See the release notes for build and device-check coverage |
+| iPhone / iPad | Xcode workspace | v0.8.3 build. See the release notes for prior device checks and this release’s installation results |
+| Android | Android Studio or APK | [v0.8.3 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.8.3). See the release notes for build and device-check coverage |
 | Web | Browser | Deployed to GitHub Pages. Checked in Mac Chrome, Safari, and WebKit |
 | PWA | Install through the browser | Installation and offline play supported. See the validation document for device results |
-| Tauri Mac | Desktop app | [Download v0.8.2](https://github.com/gelb2/MachDefense/releases/tag/v0.8.2). File saves, recovery and exit checked. macOS 14+ on Apple Silicon |
+| Tauri Mac | Desktop app | [Download v0.8.3](https://github.com/gelb2/MachDefense/releases/tag/v0.8.3). File saves, recovery and exit checked. macOS 14+ on Apple Silicon |
 
 ## Fixed problems and remaining work
 
@@ -130,11 +134,11 @@ Codex attached and detached the audio context on every shot, although the origin
 
 [Troubleshooting](docs/en/public/troubleshooting.md) · [Validation results](docs/en/public/validation.md)
 
-I am also considering a new lock-on feature. It would mark enemies within range and let the mech nearest the enemy the player taps fire Crossfire. Enemy turrets and tanks would also be targets, with a 3-second interval per mech. Damage, projectile count, speed, and effects would follow the current Crossfire level. I remember a friend trying HeavyMach1's added auto-aim and saying, “At least this makes it easier to play. My shoulder was about to give out.”
+I remember a friend trying HeavyMach1's added auto-aim and saying, “At least this makes it easier to play. My shoulder was about to give out.”
 
-The idea for MachDefense is to give the player more opportunities to watch and make decisions without changing the original enemy placement, attack power, or allied and enemy behavior. It would reuse Crossfire's assets, aiming, and range logic while leaving the existing Crossfire skill intact.
+The idea for MachDefense is to give the player more opportunities to watch and make decisions without changing the original enemy placement, attack power, or allied and enemy behavior. It uses Crossfire's assets, aiming, and range rules. The existing skill button still works as before.
 
-Level-10 upgrades and scrolling through all INSTALLed units in the production list are implemented. Pathfinding around round structures and tightly packed turrets, production-list reordering, the new lock-on feature, and final production update checks for PWA and Tauri Mac remain to be done. [Roadmap](docs/en/public/roadmap.md) · [Architecture](docs/en/public/architecture.md) · [Development history](docs/en/public/development-history.md) · [Credits](CREDITS.en.md)
+Level-10 upgrades and scrolling through all INSTALLed units in the production list are implemented. Pathfinding around round structures and tightly packed turrets, production-list reordering, and final production update checks for PWA and Tauri Mac remain to be done. [Roadmap](docs/en/public/roadmap.md) · [Architecture](docs/en/public/architecture.md) · [Development history](docs/en/public/development-history.md) · [Credits](CREDITS.en.md)
 
 [Implementation status](docs/en/public/implementation-status.md) · [Documentation](docs/en/public/README.md) · [Changelog](CHANGELOG.en.md) · [Credits](CREDITS.en.md)
 

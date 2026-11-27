@@ -4,7 +4,7 @@
 [한국어](README.md) | [English](README.en.md)
 <!-- language-nav:end -->
 
-[![Release v0.8.2](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.8.2)
+[![Release v0.8.3](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.8.3)
 [![iOS, iPadOS, Android, Web, PWA, macOS](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript, Rust](docs/public/media/badges/code.svg)](docs/public/architecture.md)
@@ -32,7 +32,7 @@
 
 위 주소를 열어 게임을 설치하거나 브라우저에서 바로 플레이한다. iPhone·iPad는 Safari의 공유 메뉴에서 **홈 화면에 추가**, Android·Mac은 **INSTALL GAME**을 누른다. 자원 다운로드가 끝나면 인터넷 없이도 플레이할 수 있다.
 
-Xcode나 Android Studio로 빌드하기 어렵다면 PWA나 [Tauri Mac 앱](https://github.com/gelb2/MachDefense/releases/download/v0.8.2/MachDefense-Desktop-v0.8.2-arm64.zip)을 이용하면 된다. Mac 앱은 macOS 14 이상 Apple Silicon에서 실행하며 진행을 앱 데이터 폴더에 저장한다. [설치와 실행](docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
+Xcode나 Android Studio로 빌드하기 어렵다면 PWA나 [Tauri Mac 앱](https://github.com/gelb2/MachDefense/releases/download/v0.8.3/MachDefense-Desktop-v0.8.3-arm64.zip)을 이용하면 된다. Mac 앱은 macOS 14 이상 Apple Silicon에서 실행하며 진행을 앱 데이터 폴더에 저장한다. [설치와 실행](docs/public/build-and-install.md)에서 네이티브 앱 설치법도 확인할 수 있다.
 
 HeavyMach의 웹판을 기여한 [fastutlego](https://github.com/fastutlego)에게 감사드린다. [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24)의 WebAssembly 실행부·WebGL2 렌더링·입력·음향·저장 구현과 그 뒤의 PWA·Tauri 확장 절차가 MachDefense를 웹과 데스크톱으로 확장하는 데도 토대가 됐다. MachDefense의 PWA를 이 구조를 참고해 만들었고, 같은 웹 실행기를 Tauri Mac 앱에서도 사용했다.
 
@@ -78,6 +78,10 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 기체는 F-15 STOL/MTD로 정했다. 검은 동체에 금줄과 금색 조종석을 넣었다. HeavyMach 1을 복원할 때 적 편대에 입힌 럭스루나에 도장이다. [도장을 고른 이유와 적 공습기를 만든 과정](docs/public/enemy-air-raids.md) · [기체 크기 변경 전후](docs/public/enemy-air-raids.md#전투-화면-비교)
 
+### 크로스파이어 자동 락온
+
+크로스파이어를 획득한 뒤 녹색 `LOCKED`가 뜬 적을 터치하면, 발사 조건을 충족한 메크 중 가장 가까운 한 대가 미사일을 발사한다. 탭 발사는 메크마다 전투 시간 10초 간격이다. [자동 락온 사용법](docs/public/features.md#크로스파이어-자동-락온).
+
 ### 긴급지원
 
 긴급지원은 원작 복원과 별개로 내가 구상한 기능이다. 타워디펜스의 난관이 결국 결제로 산 아이템을 써야 넘어갈 수 있는 것으로 바뀌는 것이 마음에 걸렸다. 작동하지 않는 인앱결제 버튼을 긴급지원 창으로 바꾼 이유다.
@@ -116,11 +120,11 @@ HeavyMach1에서는 직접 전차를 조종했다. MachDefense에서는 유닛�
 
 | 플랫폼 | 실행 | 현재 상태 |
 |---|---|---|
-| iPhone·iPad | Xcode 워크스페이스 | v0.8.2 빌드. 기존 기기 검사 범위와 이번 설치 결과는 릴리즈 노트 참고 |
-| Android | Android Studio 또는 APK | [v0.8.2 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.8.2). 빌드·기기 검사 범위는 릴리즈 노트 참고 |
+| iPhone·iPad | Xcode 워크스페이스 | v0.8.3 빌드. 기존 기기 검사 범위와 이번 설치 결과는 릴리즈 노트 참고 |
+| Android | Android Studio 또는 APK | [v0.8.3 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.8.3). 빌드·기기 검사 범위는 릴리즈 노트 참고 |
 | 웹 | 브라우저 | GitHub Pages 배포. Mac Chrome·Safari·WebKit 검사 |
 | PWA | 브라우저에서 설치 | 설치·오프라인 실행 지원. 기기별 검사 결과는 검사 문서 참고 |
-| Tauri Mac | 데스크톱 앱 | [v0.8.2 다운로드](https://github.com/gelb2/MachDefense/releases/tag/v0.8.2). 파일 저장·복원·종료 검사. macOS 14+ Apple Silicon |
+| Tauri Mac | 데스크톱 앱 | [v0.8.3 다운로드](https://github.com/gelb2/MachDefense/releases/tag/v0.8.3). 파일 저장·복원·종료 검사. macOS 14+ Apple Silicon |
 
 ## 고친 문제와 남은 일
 
@@ -130,11 +134,11 @@ Codex는 원작에서 유지하던 오디오 컨텍스트를 발사 때마다 �
 
 [트러블슈팅](docs/public/troubleshooting.md) · [검사 결과](docs/public/validation.md)
 
-새 락온 기능도 생각하고 있다. 사거리 안의 적을 표시하고, 사용자가 터치한 적과 가장 가까운 메크 한 대가 크로스파이어를 발사하는 방식이다. 적 포탑과 탱크도 대상이며 메크마다 3초 간격을 둔다. 피해와 발사 수·속도·효과는 현재 크로스파이어 레벨을 따른다. HeavyMach1에 넣은 자동조준을 보고 지인이 “아 이거라도 있으니 게임 쉽게 할 수 있다. 어깨 빠지는 줄 알았네”라고 했던 기억이 있다.
+HeavyMach1에 넣은 자동조준을 보고 지인이 “아 이거라도 있으니 게임 쉽게 할 수 있다. 어깨 빠지는 줄 알았네”라고 했던 기억이 있다.
 
-MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행동을 바꾸지 않으면서 화면을 보고 판단할 기회를 더하려는 구상이다. 기존 크로스파이어의 에셋과 조준·사거리 로직을 쓰되, 크로스파이어 자체는 그대로 둘 생각이다.
+MachDefense의 락온은 원작의 적 배치와 공격력, 적과 아군의 행동을 바꾸지 않으면서 화면을 보고 판단할 기회를 더하려는 구상이다. 기존 크로스파이어의 에셋과 조준·사거리 로직을 사용하며 기존 스킬 버튼도 그대로 작동한다.
 
-10레벨 강화와 INSTALL한 전체 유닛의 생산 목록 스크롤은 구현했다. 원형 구조물과 포탑 밀집 구간의 길찾기, 생산 목록 순서 편집, 새 락온 기능, PWA·Tauri 운영 업데이트 확인은 남은 과제다. [남은 과제](docs/public/roadmap.md) · [기술 구조](docs/public/architecture.md) · [개발 과정](docs/public/development-history.md) · [크레딧](CREDITS.md)
+10레벨 강화와 INSTALL한 전체 유닛의 생산 목록 스크롤은 구현했다. 원형 구조물과 포탑 밀집 구간의 길찾기, 생산 목록 순서 편집, PWA·Tauri 운영 업데이트 확인은 남은 과제다. [남은 과제](docs/public/roadmap.md) · [기술 구조](docs/public/architecture.md) · [개발 과정](docs/public/development-history.md) · [크레딧](CREDITS.md)
 
 [현재 구현 상태](docs/public/implementation-status.md) · [문서 목차](docs/public/README.md) · [변경 이력](CHANGELOG.md) · [크레딧](CREDITS.md)
 

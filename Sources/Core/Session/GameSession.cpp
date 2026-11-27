@@ -198,7 +198,9 @@ struct GameSession::State {
             row.enabled=s.upgradeMode||(world->state()==WorldState::running&&world->cells()>=d->cost&&world->productionRows().size()<7&&row.occupied<row.capacity);
             s.production.push_back(std::move(row));
         }
-        for(const auto& a:save.attacks(slot))if(a.onSlot){const auto& d=attacks.definition(a);
+        const auto ownedAttacks=save.attacks(slot);
+        world->refreshCrossfireLockWeapon(ownedAttacks);
+        for(const auto& a:ownedAttacks)if(a.onSlot){const auto& d=attacks.definition(a);
             s.attacks.push_back({a.name,attackIcon(d.itemId),a.level,attacks.maximumLevel(a.name),a.count,std::uint64_t(attacks.upgradeCost(a)),a.level+1<attacks.maximumLevel(a.name)});}
         for(const auto& q:world->productionRows())s.queue.push_back({q.name,q.progress});hud.setState(std::move(s));
     }
@@ -325,7 +327,7 @@ struct GameSession::State {
     void rebuild(){
         if(screen<4)frame=menu.frame();else{
             frame.sprites.clear();frame.meshes.clear();frame.logicalWidth=layout.width;frame.logicalHeight=layout.height;
-            if(world)world->appendSprites(frame);hud.append(frame);
+            if(world)world->appendSprites(frame,!placement&&!selectedAttack);hud.append(frame);
             auto n=frame.sprites.size(),m=frame.meshes.size();upgrades.append(frame);
             translateFrame(frame,n,m,upgradeOffset());
             n=frame.sprites.size();m=frame.meshes.size();summary.append(frame);if(help)help->append(frame);
@@ -372,6 +374,7 @@ struct GameSession::State {
             else if(auto point=world->touch(t)){
                 if(placement&&world->enqueueBuild(*placement,*point)){placement.reset();refreshHUD();}
                 else if(selectedAttack){std::size_t row=0;for(const auto& a:save.attacks(slot))if(a.onSlot){if(row++==*selectedAttack){if(world->activateSpecial(a.name,*point))selectedAttack.reset();break;}}refreshHUD();}
+                else if(!placement)world->tapCrossfireLock(*point);
             }
         }
         rebuild();

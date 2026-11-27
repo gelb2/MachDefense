@@ -23,6 +23,7 @@ struct WorldActor {
     bool player=false,base=false,removed=false,moveToTarget=false;
     int hp=0,maxHP=0,type=0,referenceType=0,experience=0,coin=0,coinRate=0;
     float radius=0,range=0,angle=0,radarAngle=0,attackCheck=0,targetCheck=0,crashTime=0;
+    double crossfireReadyAt=0;
     // Visual-only aircraft properties. Original actors retain their original defaults.
     float rotorStep=.2f,artHeadingOffset=0,flightHeight=0,countermeasureWidth=0;
     std::optional<AircraftTactics> flightTactics; // New trial aircraft only.
@@ -77,6 +78,8 @@ public:
     void validationCountermeasureBurst();
     ActorId validationAlliedAircraft(unsigned kind,Vec2 position);
     bool activateSpecial(std::string_view ownedBaseName,Vec2 worldPoint);
+    void refreshCrossfireLockWeapon(std::span<const OwnedAttack>);
+    bool tapCrossfireLock(Vec2 worldPoint);
     void setUIMargin(float);
     void setViewport(float width,float height,float safeTop=0);
     // Returns a world-space tap only after the original camera tap/drag test.
@@ -87,7 +90,7 @@ public:
     float cameraTargetY()const{return camera_;}
     Vec2 cameraVisibleY()const{return {camera_-height()*.5f+bottomMargin(),camera_+height()*.5f};}
     void prepareDraw();
-    void appendSprites(Frame&)const;
+    void appendSprites(Frame&, bool showCrossfireLock=true)const;
     const std::vector<std::unique_ptr<WorldActor>>& actors()const{return actors_;}
     const std::vector<WorldProjectile>& projectiles()const{return projectiles_;}
     unsigned countermeasureBursts()const{return countermeasures_->bursts();}
@@ -116,6 +119,19 @@ private:
     std::optional<ScheduledEnemyRaid> scheduledEnemyRaid_;
     void updateEnemyAirRaid();
     AirStrike beginAirStrike(const WeaponDefinition&,Vec2,float,bool enemy);
+    struct SpecialWeapon {const WeaponDefinition* definition=nullptr; float delay=0;};
+    SpecialWeapon specialWeapon(const OwnedAttack&)const;
+    void fireCrossfire(const WeaponDefinition&, const WorldActor&, Vec2);
+    const WeaponDefinition* crossfireLockWeapon_=nullptr;
+    std::optional<unsigned> crossfireLockLevel_;
+    ActorId crossfireLockTarget_=0,crossfireTouchTarget_=0;
+    double crossfireLockAcquiredAt_=0;
+    double nextCrossfireScan_=0;
+    void updateCrossfireLock();
+    WorldActor* crossfireShooter(Vec2 point)const;
+    bool crossfireTargetVisible(const WorldActor&)const;
+    std::optional<Rect> crossfireLockBounds()const;
+    bool crossfireLockContains(Vec2 worldPoint)const;
     std::vector<WorldAirStrike> airStrikes_;
     struct WorldTrail {std::shared_ptr<Trail> motion;int layer;std::uint64_t renderOrder;};
     std::vector<WorldTrail> trails_;std::uint64_t nextRenderOrder_=0;
@@ -156,8 +172,11 @@ private:
     void updateProjectiles();
     void buildTerrain();void collideTerrain(WorldActor&);void collideGroundBodies(WorldActor&);
     void updateCamera();void clampCamera();
+    Vec2 radarCenter()const;
+    bool overRadar(Vec2 fromBottom)const;
     void finish(WorldState);
     float width()const{return viewWidth_?viewWidth_/presentationScale_:(geometry_.deviceScale==.5f?320.f:768.f);}
+    float battlefieldWidth()const{return geometry_.deviceScale==.5f?256.f:640.f;}
     float height()const{return viewHeight_?viewHeight_/presentationScale_:(geometry_.deviceScale==.5f?480.f:1024.f);}
     float cameraX()const{return geometry_.deviceScale==.5f?32.f+(width()-320.f)*.5f:0.f;}
     float bottomMargin()const{return uiMargin_/presentationScale_;}
