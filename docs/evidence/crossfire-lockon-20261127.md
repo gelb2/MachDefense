@@ -29,9 +29,9 @@ Mac의 동일 코어 장면에 아군 24기와 적 72기를 배치했다. 100프
 
 ## 10초 간격과 HeavyMach 1 표시
 
-탭 발사 재사용 간격은 이제 메크마다 전투 시간 10초다. HeavyMach 1 소스의 `HMAimOverlay.hpp`와 `HMGameView::drawAimControls`에서 네 모서리, 사선과 가로선, `LOCKED` 획을 가져왔다. 표적 획득 후 0.15초 동안 모서리가 조여지고 연결선이 펼쳐진다. 글자는 0.15초부터 0.24초 직전까지 흰색으로 점등된다. 맥디펜스는 이 표시를 공용 렌더러에서 한 번에 그리며, 각 게임의 표적 경계와 화면 크기를 사용한다. [표시 코드](../../Sources/Core/Presentation/CrossfireLockOverlay.hpp) · [CgBI 준비본](../../Art/CrossfireLock/Stroke-cgbi.png) · [전투용 PNG](../../Resources/Images/CrossfireLockStroke.png).
+탭 발사 재사용 간격은 이제 메크마다 전투 시간 10초다. HeavyMach 1 소스의 `HMAimOverlay.hpp`와 `HMGameView::drawAimControls`에서 네 모서리, 사선과 가로선, `LOCKED` 획을 가져왔다. 표적 획득 후 0.15초 동안 모서리가 조여지고 연결선이 펼쳐진다. 맥디펜스 구현은 표적 획득 후 0.15초부터 0.24초 직전까지 `LOCKED` 글자만 흰색으로 그린다. 모서리와 연결선은 녹색으로 유지한다. 맥디펜스는 이 표시를 공용 렌더러에서 한 번에 그리며, 각 게임의 표적 경계와 화면 크기를 사용한다. [표시 코드](../../Sources/Core/Presentation/CrossfireLockOverlay.hpp) · [CgBI 준비본](../../Art/CrossfireLock/Stroke-cgbi.png) · [전투용 PNG](../../Resources/Images/CrossfireLockStroke.png).
 
-HeavyMach 1의 `e6be2495`와 같은 표적 경계와 표시 폭을 넣어 648개 조건에서 모서리·연결선·글자의 좌표와 색을 대조했다. 양쪽 화면 가장자리, 연결선이 펼쳐지는 중간, 흰색 점등 시작과 종료를 포함했다. 맥디펜스에서는 생산 패널 앞까지를 표시 폭으로 사용한다. 오른쪽 끝 표적의 `LOCKED`는 왼쪽으로 붙어 패널에 가려지지 않는다.
+HeavyMach 1의 `e6be2495`와 같은 표적 경계와 표시 폭을 넣어 648개 조건에서 모서리·연결선·글자의 좌표와 색 계산을 대조했다. 양쪽 화면 가장자리, 연결선이 펼쳐지는 중간, 흰색 글자 구간의 시작과 종료를 포함했다. HeavyMach 1이 실제 전투에서 `TRACK`, `BLOCKED`, `LOCKED`를 바꾸는 과정은 이 검사에 포함되지 않았다. [조사와 경위서](crossfire-reticle-incident-20261127.md). 맥디펜스에서는 생산 패널 앞까지를 표시 폭으로 사용한다. 오른쪽 끝 표적의 `LOCKED`는 왼쪽으로 붙어 패널에 가려지지 않는다.
 
 iPhone 시뮬레이터 치트판에서 매 단계의 화면을 캡처했다. 두 메크의 재사용 시점이 각 발사 시각에서 10초 뒤인지, 일시정지 동안 전투 시간이 멈추는지, 10초 직전 탭이 발사되지 않는지 확인했다. 10초 뒤 다음 표적 탐색에서 레티클이 복귀했다. 기존 크로스파이어의 복수 발사와 재고 차감, 적 공습 회귀도 확인했다. 관련 코어 검사 7개를 통과했다. Chrome과 WebKit의 오프라인 치트판에서도 레티클을 보고 탭해 11발을 발사했다. [iPhone 검사 소스](../../Apple/Tests/MenuRenderTests.mm).
 
