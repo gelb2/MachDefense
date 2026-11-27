@@ -27,6 +27,6 @@
 
 헬기 개선은 Mach 시리즈 전체 복원을 우선하기 위해 보류했다. 샤이엔 새 외형·에셋 미적용, 도색·질감·입체감·선회·표적 접근/사거리·성능 과제가 남아 있다. 출시 전 코어 검사는 58개 중 56개 통과, AircraftAudit·AircraftCampaign 2개 실패였다. 후속 일부 검사 통과를 전체 해결이나 미술 승인으로 바꾸지 않는다. [출시 전 검사](../evidence/v07-release-20261110.md) · [현재 원고](unease-and-typewriters.md).
 
-락온은 기획 단계다. iPad 개선, 생산 목록 순서 편집·길찾기와 장시간·기기별 성능/음향 검사는 남아 있다. 과거 검사 수치는 당시 기기·빌드와 함께 [검사 결과](validation.md)에서 읽는다. [남은 과제](roadmap.md)
+크로스파이어 자동 락온과 탭 발사는 v0.8.3에 포함된다. [사용법](features.md#크로스파이어-자동-락온). iPad 개선, 생산 목록 순서 편집·길찾기와 장시간·기기별 성능/음향 검사는 남아 있다. 과거 검사 수치는 당시 기기·빌드와 함께 [검사 결과](validation.md)에서 읽는다. [남은 과제](roadmap.md)
 
 [게임 소개](../../README.md) · [문서 목차](README.md) · [Sass 집필 안내](../editorial/sass-publication-guide.md)

@@ -1,8 +1,8 @@
 # 크로스파이어 자동 락온과 탭 발사 — 2026-11-27
 
-작업 브랜치 `feat/crossfire-lockon`에 구현했다. 화면 안의 적 한 대를 표시하며, 탭하면 발사 조건을 충족한 메크 중 가장 가까운 한 대가 기존 크로스파이어 탄을 발사한다. iPhone 시뮬레이터, Android 에뮬레이터, Chrome·WebKit의 오프라인 웹, macOS Tauri 치트 빌드에서 확인했다. [동작과 검사 결과](evidence/crossfire-lockon-20261127.md).
+v0.8.3에 포함한다. 화면 안의 적 한 대를 표시하며, 탭하면 발사 조건을 충족한 메크 중 가장 가까운 한 대가 기존 크로스파이어 탄을 발사한다. iPhone 시뮬레이터, Android 에뮬레이터, Chrome·WebKit의 오프라인 웹, macOS Tauri 치트 빌드에서 확인했다. [동작과 검사 결과](evidence/crossfire-lockon-20261127.md).
 
-후속 수정에서 메크별 탭 발사 재사용 간격을 10초로 바꾸고 HeavyMach 1의 연결선과 `LOCKED` 점등을 적용했다. [후속 검사](evidence/crossfire-lockon-20261127.md#10초-간격과-heavymach-1-표시).
+후속 수정에서 메크별 탭 발사 재사용 간격을 10초로 바꾸고 네 모서리와 연결선, `LOCKED` 글자를 추가했다. 참조 화면과 맥디펜스 구현의 차이를 [레티클 조사](evidence/crossfire-reticle-incident-20261127.md)에 기록했다. [후속 검사](evidence/crossfire-lockon-20261127.md#10초-간격과-heavymach-1-표시).
 
 # 로컬 에디터 사용자 수정본 v1 반영 — 2026-11-10
 
