@@ -1,3 +1,7 @@
+# 크로스파이어 자동 락온과 탭 발사 — 2026-11-27
+
+작업 브랜치 `feat/crossfire-lockon`에 구현했다. 화면 안의 적 한 대를 표시하며, 탭하면 발사 조건을 충족한 메크 중 가장 가까운 한 대가 기존 크로스파이어 탄을 발사한다. iPhone 시뮬레이터, Android 에뮬레이터, Chrome·WebKit의 오프라인 웹, macOS Tauri 치트 빌드에서 확인했다. [동작과 검사 결과](evidence/crossfire-lockon-20261127.md).
+
 # 로컬 에디터 사용자 수정본 v1 반영 — 2026-11-10
 
 바탕화면의 article-ko v1 저장본을 [한국어 원고](public/unease-and-typewriters.md)에 바이트 그대로 적용했다. 소제목·문장 추가·삭제·말투·줄바꿈을 임의로 고치지 않았다. [영문 원고](en/public/unease-and-typewriters.md)도 현재 한국어의 6개 소제목과 본문에 맞췄다. 생성 오류 7개 JSON 블록은 보존했다. [보고 사이트](https://heavymach-dev-report-20261025.hiphopxy.chatgpt.site/md-unease-20261108/integrated.html)의 한영 본문·다운로드·편집기 초기 원고도 갱신했다. 기존 글감 수집본과 통합 내역은 작성 당시 기록으로 구분했다.

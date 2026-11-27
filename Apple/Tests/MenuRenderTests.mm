@@ -153,6 +153,151 @@ public:
     }catch(const std::exception& e){XCTFail(@"Viewport: %s",e.what());}
     [renderer finish];window.hidden=YES;
 }
+- (void)testCrossfireLockTapInCheatBattle {
+    NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
+    XCTAssertNotNil(root);
+    if (!root) return;
+    const CGFloat width=320,height=480;
+    UIWindow* window=[[UIWindow alloc] initWithFrame:CGRectMake(0,0,width,height)];
+    window.rootViewController=[UIViewController new];
+    MDMenuSurface* surface=[[MDMenuSurface alloc] initWithFrame:window.bounds];
+    surface.contentScaleFactor=1;
+    surface.layer.contentsScale=1;
+    CAEAGLLayer* layer=(CAEAGLLayer*)surface.layer;
+    layer.drawableProperties=@{kEAGLDrawablePropertyRetainedBacking:@YES,kEAGLDrawablePropertyColorFormat:kEAGLColorFormatRGBA8};
+    [window.rootViewController.view addSubview:surface];
+    [window makeKeyAndVisible];
+    MDRenderer* renderer=[[MDRenderer alloc] initWithResourceRoot:root];
+    MenuResources resources(root,renderer);
+    MenuHost host;
+    auto save=md::SaveData::empty(123);
+    save.createProfile("LOCKON",1);
+    auto owned=save.attacks(0);
+    owned.push_back({"Crossfire-Missile",9,2,true});
+    save.setAttacks(0,owned);
+    host.saved=save.encode();
+    md::GameSession game(resources,host,true);
+    game.resize(width,height);
+    XCTAssertTrue(game.applyValidationCommand(unsigned(md::ValidationCommand::startMission)));
+    sweepTicks(game);
+    auto* world=game.validationWorld();
+    XCTAssertNotEqual(world,nullptr);
+    if (!world) return;
+    sweepTap(game,width*.5f,height*.5f+210);
+    XCTAssertFalse(world->paused());
+    XCTAssertTrue(game.applyValidationCommand(unsigned(md::ValidationCommand::fillCells)));
+    XCTAssertTrue(world->enqueueBuild("MachineGun"));
+    XCTAssertTrue(world->enqueueBuild("MachineGun"));
+
+    const auto corners=[&] {
+        return std::count_if(game.frame().sprites.begin(),game.frame().sprites.end(),
+                             [](const md::Sprite& sprite){return sprite.image=="CrossfireLockCorner.png";});
+    };
+    const auto missiles=[&](md::ActorId shooter) {
+        return std::count_if(world->projectiles().begin(),world->projectiles().end(),[&](const auto& projectile) {
+            return projectile.weapon=="CF_MISSILE_10" && projectile.attacker==shooter && projectile.motion.lockOn;
+        });
+    };
+    const auto stock=[&] { return game.validationSave()->attacks(0).back().count; };
+    const auto advance=[&](int ticks) {
+        for (int i=0;i<ticks;++i) {
+            for (const auto& actor:world->actors()) {
+                actor->weapons.clear();
+                actor->target=0;
+                actor->targetCheck=1e9f;
+                actor->range=0;
+                actor->enemyAI.stopDelay=1e9f;
+                actor->playerAI.isOrder=true;
+            }
+            game.tick();
+        }
+    };
+    advance(450);
+    std::vector<md::WorldActor*> mechs;
+    for (const auto& actor:world->actors()) {
+        if (actor->player && actor->type==0) mechs.push_back(actor.get());
+        if (!actor->player && !actor->base) actor->removed=true;
+    }
+    XCTAssertEqual(mechs.size(),2u);
+    if (mechs.size()!=2) return;
+    const auto spot=world->screenToWorld({155,215});
+    const auto put=[&](md::WorldActor* mech,md::Vec2 target,float behind) {
+        mech->position=mech->destination={target.x,target.y-behind};
+        mech->bipod.position=mech->position;
+        mech->bipod.setDestination(mech->position);
+    };
+    const auto radar=world->screenToWorld({18,82});
+    put(mechs[0],radar,140);
+    const auto behindRadar=world->validationSpawn("E_Tank_01",false,radar);
+    advance(18);
+    XCTAssertEqual(corners(),0);
+    world->actor(behindRadar)->removed=true;
+
+    put(mechs[0],spot,90);
+    put(mechs[1],spot,180);
+    const auto enemy=world->validationSpawn("E_Turret_13",false,spot);
+    const auto second=world->validationSpawn("E_Tank_01",false,{spot.x+76,spot.y+38});
+    advance(18);
+    XCTAssertEqual(corners(),4);
+    XCTAssertTrue([renderer drawFrame:game.frame() toLayer:layer],@"%@",renderer.lastError);
+    [self capture:@"crossfire-lock-four-corners" renderer:renderer];
+    const auto tap=[&](md::ActorId id) {
+        const auto point=world->worldToScreen(world->actor(id)->position);
+        sweepTap(game,point.x,point.y);
+    };
+    tap(second);
+    XCTAssertEqual(missiles(mechs[1]->id),0);
+    const auto touch=world->worldToScreen(spot);
+    game.touch({1,md::TouchPhase::began,touch});
+    game.touch({1,md::TouchPhase::ended,{touch.x,touch.y+20}});
+    XCTAssertEqual(missiles(mechs[1]->id),0);
+    tap(enemy);
+    XCTAssertEqual(missiles(mechs[0]->id),0);
+    XCTAssertEqual(missiles(mechs[1]->id),11);
+    put(mechs[0],spot,140);
+    advance(18);
+    tap(enemy);
+    XCTAssertEqual(missiles(mechs[0]->id),11);
+    XCTAssertEqual(corners(),0);
+    tap(enemy);
+    XCTAssertEqual(missiles(mechs[0]->id),11);
+    XCTAssertEqual(stock(),2u);
+    XCTAssertTrue([renderer drawFrame:game.frame() toLayer:layer],@"%@",renderer.lastError);
+    [self capture:@"crossfire-tap-missiles" renderer:renderer];
+
+    world->setPaused(true);
+    const auto pausedAt=world->time();
+    advance(210);
+    XCTAssertEqual(world->time(),pausedAt);
+    XCTAssertEqual(corners(),0);
+    world->setPaused(false);
+    advance(152);
+    XCTAssertEqual(corners(),0);
+    advance(60);
+    XCTAssertEqual(corners(),4);
+    const auto before=missiles(mechs[0]->id)+missiles(mechs[1]->id);
+    XCTAssertTrue(world->activateSpecial("Crossfire-Missile",spot));
+    XCTAssertEqual(missiles(mechs[0]->id)+missiles(mechs[1]->id)-before,22);
+    XCTAssertEqual(stock(),1u);
+
+    advance(150);
+    const auto firstBefore=missiles(mechs[0]->id),secondBefore=missiles(mechs[1]->id);
+    const auto destroyed=world->statistics().enemyDestroyed;
+    const auto score=world->score();
+    XCTAssertTrue(world->setValidationHealth(enemy,1));
+    tap(enemy);
+    XCTAssertEqual(missiles(mechs[0]->id)-firstBefore,11);
+    tap(enemy);
+    XCTAssertEqual(missiles(mechs[1]->id)-secondBefore,11);
+    for (int i=0;i<180 && world->actor(enemy)->hp>0;++i) advance(1);
+    XCTAssertEqual(world->actor(enemy)->hp,0);
+    XCTAssertEqual(world->statistics().enemyDestroyed-destroyed,1u);
+    XCTAssertGreaterThan(world->score(),score);
+    XCTAssertEqual(stock(),1u);
+    XCTAssertEqual(host.saves,0u);
+    [renderer finish];
+    window.hidden=YES;
+}
 - (void)testEnemyAirRaidSpriteInBattle {
     NSURL* root=[[NSBundle bundleForClass:self.class] URLForResource:@"MachDefenseAssets" withExtension:@"bundle"];
     XCTAssertNotNil(root);

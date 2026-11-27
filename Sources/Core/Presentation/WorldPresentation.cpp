@@ -44,21 +44,55 @@ void World::updateCamera(){
 Vec2 World::worldToView(Vec2 p)const{return {p.x-cameraX()+width()*.5f,height()*.5f-(p.y-actualCamera_)};}
 Vec2 World::worldToScreen(Vec2 p)const{const auto v=worldToView(p);return {v.x*presentationScale_,v.y*presentationScale_};}
 Vec2 World::screenToWorld(Vec2 p)const{return {cameraX()-width()*.5f+p.x/presentationScale_,actualCamera_+height()*.5f-p.y/presentationScale_};}
+Vec2 World::radarCenter()const {
+    return geometry_.deviceScale==.5f ? Vec2{18,height()*presentationScale_-82-safeTop_} : Vec2{55,824};
+}
+bool World::overRadar(Vec2 fromBottom)const {
+    const auto center=radarCenter();
+    const Vec2 half=geometry_.deviceScale==.5f ? Vec2{16,64} : Vec2{32,128};
+    return std::abs(fromBottom.x-center.x)<half.x && std::abs(fromBottom.y-center.y)<half.y;
+}
+bool World::crossfireTargetVisible(const WorldActor& target)const {
+    if (target.player || target.removed || target.hp<=0) return false;
+    const auto center=worldToView(target.position);
+    const float battlefieldWidth=geometry_.deviceScale==.5f ? 256.f : 640.f;
+    return center.x>=0 && center.x<battlefieldWidth &&
+           center.y>=safeTop_/presentationScale_ && center.y<height()-bottomMargin() &&
+           !overRadar({center.x*presentationScale_,(height()-center.y)*presentationScale_});
+}
+std::optional<Rect> World::crossfireLockBounds()const {
+    if (paused_ || state_!=WorldState::running || !crossfireLockTarget_) return {};
+    const auto* target=actor(crossfireLockTarget_);
+    if (!target || !crossfireTargetVisible(*target)) return {};
+    const auto center=worldToView(target->position);
+    const float half=std::max(20.f*geometry_.deviceScale,target->radius+6.f*geometry_.deviceScale);
+    return Rect{center.x-half,center.y-half,2*half,2*half};
+}
+bool World::crossfireLockContains(Vec2 point)const {
+    const auto bounds=crossfireLockBounds();
+    if (!bounds) return false;
+    const auto p=worldToView(point);
+    return p.x>=bounds->x && p.x<bounds->x+bounds->width &&
+           p.y>=bounds->y && p.y<bounds->y+bounds->height;
+}
 std::optional<Vec2> World::touch(const Touch& t){
     if(!started_||paused_||state_!=WorldState::running)return {};
     const float x=t.position.x,y=height()*presentationScale_-t.position.y;
-    const bool phone=geometry_.deviceScale==.5f;Vec2 radar=phone?Vec2{18,height()*presentationScale_-82-safeTop_}:Vec2{55,824};Vec2 half=phone?Vec2{16,64}:Vec2{32,128};
+    const bool phone=geometry_.deviceScale==.5f;const Vec2 radar=radarCenter();
     if(t.phase==TouchPhase::began){
-        if(std::abs(x-radar.x)<half.x&&std::abs(y-radar.y)<half.y){radarTouch_=t.id;camera_=(y-radar.y)*8;clampCamera();}
-        else if(x>=0&&x<(phone?256.f*presentationScale_:640.f)&&y>uiMargin_&&!cameraTouch_){cameraTouch_=t.id;dragY_=y;onlyTap_=true;}
+        if(overRadar({x,y})){radarTouch_=t.id;camera_=(y-radar.y)*8;clampCamera();}
+        else if(x>=0&&x<(phone?256.f*presentationScale_:640.f)&&y>uiMargin_&&!cameraTouch_){
+            cameraTouch_=t.id;dragY_=y;onlyTap_=true;
+            crossfireTouchTarget_=crossfireLockContains(screenToWorld(t.position)) ? crossfireLockTarget_ : 0;
+        }
     }else if(radarTouch_==t.id){camera_=(y-radar.y)*8;clampCamera();if(t.phase==TouchPhase::ended||t.phase==TouchPhase::cancelled)radarTouch_.reset();}
     else if(cameraTouch_==t.id){
         if(onlyTap_){if(std::abs(y-dragY_)>16)onlyTap_=false;}
         else {cameraVelocity_=(dragY_-y)/presentationScale_;camera_+=cameraVelocity_;clampCamera();dragY_=y;}
-        if(t.phase==TouchPhase::ended||t.phase==TouchPhase::cancelled){cameraTouch_.reset();if(onlyTap_&&t.phase==TouchPhase::ended)return screenToWorld(t.position);if(std::abs(cameraVelocity_)<8)cameraVelocity_=0;}
+        if(t.phase==TouchPhase::ended||t.phase==TouchPhase::cancelled){cameraTouch_.reset();if(onlyTap_&&t.phase==TouchPhase::ended)return screenToWorld(t.position);crossfireTouchTarget_=0;if(std::abs(cameraVelocity_)<8)cameraVelocity_=0;}
     }return {};
 }
-void World::appendSprites(Frame& frame)const{
+void World::appendSprites(Frame& frame,bool showCrossfireLock)const{
     if(!started_)return;
     const auto firstSprite=frame.sprites.size(),firstMesh=frame.meshes.size();
     const float scale=geometry_.deviceScale;
@@ -141,6 +175,21 @@ void World::appendSprites(Frame& frame)const{
         strike.motion.appendSprite(layers[7],worldToView(strike.motion.position),resources_.imageSize(image),aircraftScale,image);
     }
     for(auto& layer:layers){const auto offset=frame.sprites.size();for(auto& mesh:layer.meshes){mesh.beforeSpriteIndex+=offset;frame.meshes.push_back(std::move(mesh));}for(auto& sprite:layer.sprites)frame.sprites.push_back(std::move(sprite));}
+
+    if (const auto bounds=showCrossfireLock ? crossfireLockBounds() : std::nullopt) {
+        const float size=16.f*scale;
+        const float right=bounds->x+bounds->width-size;
+        const float bottom=bounds->y+bounds->height-size;
+        const Vec2 corners[]={{bounds->x,bounds->y},{right,bounds->y},{right,bottom},{bounds->x,bottom}};
+        for (unsigned i=0;i<std::size(corners);++i) {
+            Sprite corner;
+            corner.image="CrossfireLockCorner.png";
+            corner.destination={corners[i].x,corners[i].y,size,size};
+            corner.rotationDegrees=90.f*i;
+            corner.nearest=true;
+            frame.sprites.push_back(std::move(corner));
+        }
+    }
 
     // Transform every world layer together, including shadows and trail meshes.
     if(presentationScale_!=1){
