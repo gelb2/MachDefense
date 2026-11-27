@@ -48,8 +48,10 @@ When adding Android, I instructed Codex not to change files used by the Apple ap
 
 On iPhone, iPad, Android, and web/PWA, GET CODE exports all 5 profiles as one line. ENTER CODE validates the input and restores the same slot states after confirmation. It transfers game-save data without a server or account. Every platform uses the shared codec and C++ menu. [Cross-platform recovery checks](../../evidence/save-transfer-all-platforms-20261106.md).
 
-## Planned lock-on feature
+## Automatic Crossfire lock-on
 
-The design includes all enemy units, including turrets and tanks. The mech nearest the tapped enemy would attack using the damage, projectile count, speed, and effects of the current Crossfire level, at a 3-second interval per mech. The reticle would hide when no enemy is within range, and release the lock when the target dies. Original spawns, attack power, behavior, and the existing Crossfire skill would remain. This feature is not implemented yet. [Feature TODO](../../usability-todo.md#md-lockon-strike-01--락온한-적을-터치해-처치)
+Once you have Crossfire, green corners, a leader line, and `LOCKED` mark one enemy on screen that an allied mech can fire at. Turrets and tanks can be marked. The reticle clears when the target leaves or no mech can fire.
+
+Tap the marked enemy to fire from the nearest mech that meets the direction and range requirements and has finished its cooldown. Damage, projectile count, speed, and effects follow your current Crossfire level. Each mech waits 10 seconds of battle time between tap-triggered shots. Tapping the enemy does not spend a skill charge. The existing Crossfire button fires from all eligible mechs and spends one charge. [Cheat build checks](../../evidence/crossfire-lockon-20261127.md).
 
 [Game overview](../../../README.en.md) · [Documentation](README.md)

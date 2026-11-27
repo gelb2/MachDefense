@@ -62,7 +62,6 @@ The shared game tables now use the matching-level values from Lv.1 to Lv.10. Bot
 - Compare long-term funds, difficulty, and performance with recurring emergency resupply.
 - Compare title/splash edges and iPad/desktop scaling against original resources and field of view. Do not use the rejected 1280×800 artwork.
 - Investigate world-background, HUD, and unit display boundaries. HUD visual redesign and turret retaliation against off-screen enemies are on hold.
-- Design a lock-on feature in which tapping an enemy makes a nearby mech fire Crossfire. Each mech has a 3-second interval; the existing special attack remains.
 
 ## Validation and writing
 

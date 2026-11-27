@@ -4,6 +4,10 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## v0.8.3 — Automatic Crossfire lock-on
+
+November 27, 2026. `LOCKED` marks one enemy that an allied mech can fire at. Tap the target to fire missiles from the nearest eligible mech at the current Crossfire level. Each mech waits 10 seconds of battle time between tap-triggered volleys. Tapping the target does not spend a skill charge. The existing skill button fires and spends charges as before. Apple and Android are 0.8.3 (build 11), and Tauri for Mac is 0.8.3. [How to use lock-on](docs/en/public/features.md#automatic-crossfire-lock-on) · [Test results](docs/evidence/crossfire-lockon-20261127.md).
+
 ## v0.8.2 — Enemy aircraft design C
 
 November 27, 2026. Applied design C with its black livery and restored the nose to its length before the trim. The gold canopy and in-game drawing scale are unchanged. Apple and Android are 0.8.2 (build 10), and Tauri for Mac is 0.8.2. [Aircraft artwork](Art/EnemyAirStrike/README.md#v082-c안-적용)

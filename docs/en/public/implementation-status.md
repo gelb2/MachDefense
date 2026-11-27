@@ -27,6 +27,6 @@ Cheyenne HP is 85% of the same-level Plasma Mech, and Beluga HP is the midpoint 
 
 Helicopter improvements are on hold to prioritize restoring the entire Mach series. Cheyenne’s new appearance/assets remain unapplied, and paint, texture, depth, banking, target approach/range, and performance tasks remain. Pre-release core checks passed 56 of 58 tests; AircraftAudit and AircraftCampaign failed. Later targeted passes do not establish that all issues are resolved or that the artwork was approved. [Pre-release checks (Korean)](../../evidence/v07-release-20261110.md) · [Current essay](unease-and-typewriters.md).
 
-Lock-on remains a design proposal. iPad improvements, production-list reordering, pathfinding, and long-duration/device-specific performance and audio checks remain. Read earlier measurements with their dates, devices, and builds in [validation results](validation.md). [Roadmap](roadmap.md)
+Automatic Crossfire lock-on and tap-to-fire are included in v0.8.3. [How to use it](features.md#automatic-crossfire-lock-on). iPad improvements, production-list reordering, pathfinding, and long-duration/device-specific performance and audio checks remain. Read earlier measurements with their dates, devices, and builds in [validation results](validation.md). [Roadmap](roadmap.md)
 
 [Game overview](../../../README.en.md) · [Documentation](README.md) · [Sass writing guide (Korean)](../../editorial/sass-publication-guide.md)
