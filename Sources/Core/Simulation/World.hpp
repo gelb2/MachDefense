@@ -125,6 +125,7 @@ private:
     const WeaponDefinition* crossfireLockWeapon_=nullptr;
     std::optional<unsigned> crossfireLockLevel_;
     ActorId crossfireLockTarget_=0,crossfireTouchTarget_=0;
+    double crossfireLockAcquiredAt_=0;
     double nextCrossfireScan_=0;
     void updateCrossfireLock();
     WorldActor* crossfireShooter(Vec2 point)const;
@@ -175,6 +176,7 @@ private:
     bool overRadar(Vec2 fromBottom)const;
     void finish(WorldState);
     float width()const{return viewWidth_?viewWidth_/presentationScale_:(geometry_.deviceScale==.5f?320.f:768.f);}
+    float battlefieldWidth()const{return geometry_.deviceScale==.5f?256.f:640.f;}
     float height()const{return viewHeight_?viewHeight_/presentationScale_:(geometry_.deviceScale==.5f?480.f:1024.f);}
     float cameraX()const{return geometry_.deviceScale==.5f?32.f+(width()-320.f)*.5f:0.f;}
     float bottomMargin()const{return uiMargin_/presentationScale_;}

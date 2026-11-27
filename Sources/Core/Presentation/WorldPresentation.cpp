@@ -1,5 +1,6 @@
 #include "Core/Simulation/AircraftVisual.hpp"
 #include "Core/Simulation/World.hpp"
+#include "Core/Presentation/CrossfireLockOverlay.hpp"
 #include "Core/Simulation/Formation.hpp"
 #include <algorithm>
 #include <cmath>
@@ -55,8 +56,7 @@ bool World::overRadar(Vec2 fromBottom)const {
 bool World::crossfireTargetVisible(const WorldActor& target)const {
     if (target.player || target.removed || target.hp<=0) return false;
     const auto center=worldToView(target.position);
-    const float battlefieldWidth=geometry_.deviceScale==.5f ? 256.f : 640.f;
-    return center.x>=0 && center.x<battlefieldWidth &&
+    return center.x>=0 && center.x<battlefieldWidth() &&
            center.y>=safeTop_/presentationScale_ && center.y<height()-bottomMargin() &&
            !overRadar({center.x*presentationScale_,(height()-center.y)*presentationScale_});
 }
@@ -78,10 +78,10 @@ bool World::crossfireLockContains(Vec2 point)const {
 std::optional<Vec2> World::touch(const Touch& t){
     if(!started_||paused_||state_!=WorldState::running)return {};
     const float x=t.position.x,y=height()*presentationScale_-t.position.y;
-    const bool phone=geometry_.deviceScale==.5f;const Vec2 radar=radarCenter();
+    const Vec2 radar=radarCenter();
     if(t.phase==TouchPhase::began){
         if(overRadar({x,y})){radarTouch_=t.id;camera_=(y-radar.y)*8;clampCamera();}
-        else if(x>=0&&x<(phone?256.f*presentationScale_:640.f)&&y>uiMargin_&&!cameraTouch_){
+        else if(x>=0&&x<battlefieldWidth()*presentationScale_&&y>uiMargin_&&!cameraTouch_){
             cameraTouch_=t.id;dragY_=y;onlyTap_=true;
             crossfireTouchTarget_=crossfireLockContains(screenToWorld(t.position)) ? crossfireLockTarget_ : 0;
         }
@@ -176,21 +176,6 @@ void World::appendSprites(Frame& frame,bool showCrossfireLock)const{
     }
     for(auto& layer:layers){const auto offset=frame.sprites.size();for(auto& mesh:layer.meshes){mesh.beforeSpriteIndex+=offset;frame.meshes.push_back(std::move(mesh));}for(auto& sprite:layer.sprites)frame.sprites.push_back(std::move(sprite));}
 
-    if (const auto bounds=showCrossfireLock ? crossfireLockBounds() : std::nullopt) {
-        const float size=16.f*scale;
-        const float right=bounds->x+bounds->width-size;
-        const float bottom=bounds->y+bounds->height-size;
-        const Vec2 corners[]={{bounds->x,bounds->y},{right,bounds->y},{right,bottom},{bounds->x,bottom}};
-        for (unsigned i=0;i<std::size(corners);++i) {
-            Sprite corner;
-            corner.image="CrossfireLockCorner.png";
-            corner.destination={corners[i].x,corners[i].y,size,size};
-            corner.rotationDegrees=90.f*i;
-            corner.nearest=true;
-            frame.sprites.push_back(std::move(corner));
-        }
-    }
-
     // Transform every world layer together, including shadows and trail meshes.
     if(presentationScale_!=1){
         const float z=presentationScale_;
@@ -199,6 +184,12 @@ void World::appendSprites(Frame& frame,bool showCrossfireLock)const{
         for(auto i=firstMesh;i<frame.meshes.size();++i)for(auto& v:frame.meshes[i].vertices){v.position.x*=z;v.position.y*=z;}
     }
 
+    if (const auto bounds=showCrossfireLock ? crossfireLockBounds() : std::nullopt) {
+        const float z=presentationScale_;
+        appendCrossfireLockOverlay(frame,{bounds->x*z,bounds->y*z,bounds->width*z,bounds->height*z},
+                                   std::min(width(),battlefieldWidth())*z,height()*z,
+                                   float(time()-crossfireLockAcquiredAt_));
+    }
 }
 
 }

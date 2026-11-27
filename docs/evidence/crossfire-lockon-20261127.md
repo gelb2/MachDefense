@@ -2,6 +2,8 @@
 
 2026-11-27. 작업 브랜치는 `feat/crossfire-lockon`이다. 기준은 `develop`의 `d16bf45`다.
 
+아래는 최초 구현의 검사 기록이다. 현행 동작과 후속 검사는 [10초 간격과 HeavyMach 1 표시](#10초-간격과-heavymach-1-표시)에 있다.
+
 ## 대상과 발사
 
 크로스파이어를 획득한 슬롯은 탭으로 누를 수 있는 적 한 대를 표시한다. 표시 중인 적이 유효하면 유지하고, 표시할 적이 없을 때 전투 시간 0.25초 간격으로 후보를 확인한다. 레이더와 하단 HUD의 터치 영역은 표시 대상에서 제외한다. 기존 스킬 조준이나 포탑 배치 중에는 레티클을 숨긴다.
@@ -10,7 +12,7 @@
 
 ## 전투 화면
 
-HeavyMach 1의 네 모서리 형태를 참고해 연녹색과 짙은 테두리로 8×8 PNG 한 칸을 그렸다. 적 주위 네 곳에 90도씩 돌려 배치하고 안쪽을 비웠다. 작업 PNG를 Apple `pngcrush -iphone`으로 준비한 뒤 저장소의 CgBI 해독 규칙으로 RGBA를 만들었다. 전투에서는 기존 스프라이트와 같은 렌더 경로를 사용한다. [CgBI 준비본](../../Art/CrossfireLock/Corner-cgbi.png) · [전투용 PNG](../../Resources/Images/CrossfireLockCorner.png) · [표시 코드](../../Sources/Core/Presentation/WorldPresentation.cpp).
+HeavyMach 1의 네 모서리 형태를 참고해 연녹색과 짙은 테두리로 8×8 PNG 한 칸을 그렸다. 적 주위 네 곳에 90도씩 돌려 배치하고 안쪽을 비웠다. 작업 PNG를 Apple `pngcrush -iphone`으로 준비한 뒤 저장소의 CgBI 해독 규칙으로 RGBA를 만들었다. 최초 구현은 기존 스프라이트 경로를 사용했다. [CgBI 준비본](../../Art/CrossfireLock/Corner-cgbi.png) · [당시 전투용 PNG](../../Art/CrossfireLock/Corner-rgba.png).
 
 ## 치트 빌드 검사
 
@@ -24,3 +26,13 @@ HeavyMach 1의 네 모서리 형태를 참고해 연녹색과 짙은 테두리�
 검사 중 전투에서 추가 저장 쓰기는 없었다. 코어 검사 58개 중 54개가 통과했다. `AircraftAudit`, `DataTable`, `Level10HUDSweep`, `AircraftCampaign`은 기준 코드에서도 같은 검사에 실패했다. [iPhone 검사 소스](../../Apple/Tests/MenuRenderTests.mm).
 
 Mac의 동일 코어 장면에 아군 24기와 적 72기를 배치했다. 100프레임을 가동한 뒤 600프레임씩 각 7회 실행했다. 월드 갱신과 스프라이트 목록 생성 시간의 중앙값 기준으로 p50·p95·p99는 각각 0.079·0.108·0.177ms에서 0.078·0.101·0.165ms였다. 프로세스 최대 메모리 중앙값은 5.77에서 5.41MiB였다. 이 계측에는 GPU 렌더와 실기기 메모리 검사가 포함되지 않는다.
+
+## 10초 간격과 HeavyMach 1 표시
+
+탭 발사 재사용 간격은 이제 메크마다 전투 시간 10초다. HeavyMach 1 소스의 `HMAimOverlay.hpp`와 `HMGameView::drawAimControls`에서 네 모서리, 사선과 가로선, `LOCKED` 획을 가져왔다. 표적 획득 후 0.15초 동안 모서리가 조여지고 연결선이 펼쳐진다. 글자는 0.15초부터 0.24초 직전까지 흰색으로 점등된다. 맥디펜스는 이 표시를 공용 렌더러에서 한 번에 그리며, 각 게임의 표적 경계와 화면 크기를 사용한다. [표시 코드](../../Sources/Core/Presentation/CrossfireLockOverlay.hpp) · [CgBI 준비본](../../Art/CrossfireLock/Stroke-cgbi.png) · [전투용 PNG](../../Resources/Images/CrossfireLockStroke.png).
+
+HeavyMach 1의 `e6be2495`와 같은 표적 경계와 표시 폭을 넣어 648개 조건에서 모서리·연결선·글자의 좌표와 색을 대조했다. 양쪽 화면 가장자리, 연결선이 펼쳐지는 중간, 흰색 점등 시작과 종료를 포함했다. 맥디펜스에서는 생산 패널 앞까지를 표시 폭으로 사용한다. 오른쪽 끝 표적의 `LOCKED`는 왼쪽으로 붙어 패널에 가려지지 않는다.
+
+iPhone 시뮬레이터 치트판에서 매 단계의 화면을 캡처했다. 두 메크의 재사용 시점이 각 발사 시각에서 10초 뒤인지, 일시정지 동안 전투 시간이 멈추는지, 10초 직전 탭이 발사되지 않는지 확인했다. 10초 뒤 다음 표적 탐색에서 레티클이 복귀했다. 기존 크로스파이어의 복수 발사와 재고 차감, 적 공습 회귀도 확인했다. 관련 코어 검사 7개를 통과했다. Chrome과 WebKit의 오프라인 치트판에서도 레티클을 보고 탭해 11발을 발사했다. [iPhone 검사 소스](../../Apple/Tests/MenuRenderTests.mm).
+
+Android 에뮬레이터와 macOS Tauri 치트판도 실제 전투에서 초록색 레티클을 그렸고 탭 한 번에 11발을 발사했다. 전투 중 추가 저장 쓰기는 0회였다.

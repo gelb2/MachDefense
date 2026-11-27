@@ -12,7 +12,7 @@ namespace md {
 using namespace world_detail;
 namespace {
 constexpr std::string_view crossfireAttack = "Crossfire-Missile";
-constexpr double crossfireReuseSeconds = 3.0;
+constexpr double crossfireReuseSeconds = 10.0;
 constexpr double crossfireScanSeconds = 0.25;
 
 std::optional<float> crossfireDistance(const WorldActor& shooter,
@@ -147,6 +147,7 @@ void World::updateCrossfireLock() {
     for (const auto& enemy:actors_) {
         if (crossfireTargetVisible(*enemy) && crossfireShooter(enemy->position)) {
             crossfireLockTarget_=enemy->id;
+            crossfireLockAcquiredAt_=time();
             return;
         }
     }
