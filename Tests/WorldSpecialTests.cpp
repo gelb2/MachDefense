@@ -72,7 +72,7 @@ int checkEnemyRaidDamage(Resources& resources, md::BattleGeometry geometry) {
         const auto* build=builds.find(b.name+"_01");
         return build && build->setType==0 && PlayerLoadout::fromBuild(*build,items,geometry).hp==minimum;
     }));
-    const int cap = minimum * 95 / 100;
+    const int cap = minimum * 125 / 100;
     int previous = 0;
     unsigned activeStages = 0;
     for (unsigned stage=0; stage<stages; ++stage) {
@@ -89,15 +89,16 @@ int checkEnemyRaidDamage(Resources& resources, md::BattleGeometry geometry) {
         int total=0;
         for (unsigned drop=0; drop<bomb->shotCount; ++drop) {
             const auto perDrop=raid->damageForDrop(drop,bomb->shotCount);
+            const auto alive=std::count_if(players.begin(),players.end(),[](const auto& target) {return target.hp>0;});
             const auto hits=projectileCollide(*bomb,{0,0},true,60,enemies,players,perDrop);
-            assert(hits.size()==players.size());
+            assert(hits.size()==static_cast<std::size_t>(alive));
             for (const auto& hit : hits) assert(hit.player && hit.damage==perDrop && !hit.special);
             total+=perDrop;
         }
         for (std::size_t i=0; i<players.size(); ++i) {
-            assert(players[i].hp==fullHealth[i].hp-total);
-            assert(20*players[i].hp>=fullHealth[i].hp);
+            assert(players[i].hp==std::max(0,fullHealth[i].hp-total));
         }
+        if (stage==stages-1) assert(std::any_of(players.begin(),players.end(),[](const auto& target) {return target.hp==0;}));
         assert(total==raid->maximumDamage && total<=cap && enemies[0].hp==minimum);
     }
     assert(activeStages==stages-10 && previous==cap);
@@ -216,7 +217,7 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
         const auto budget=EnemyAirRaid::forStage(stage,80,minimumMechHPForTest);
         assert(budget);
         for (const int total:aircraftDamage) assert(total==budget->maximumDamage);
-        if (aircraftCount==1) assert(20*mech->hp>=mech->maxHP);
+        if (aircraftCount==1) assert(mech->hp>=std::max(0,mech->maxHP-budget->maximumDamage));
         if (stage==10||stage==79) assert(mechHit);
         return lastImpact-warningTime;
     }
@@ -341,9 +342,9 @@ void checkSu33Campaign(Resources& resources, md::BattleGeometry geometry, unsign
     assert(helicopter && helicopter->flightTactics);
     helicopter->flightTactics->speed=0;
     helicopter->flightTactics->dodgeReady=1000;
-    const auto initial=helicopter->hp;
     const auto stock=md::DataTable::load(resources.root/"Tables"/"EnemyAirRaidSchedule.tsv");
     const unsigned planes=expectedDamage>0 ? raidWaves(stock,stage+1).front().count : 0;
+    const auto initial=helicopter->hp;
     bool sawPlane=false,sawBeam=false,sawReticle=false;
     for(unsigned tick=0;tick<4200;++tick) {
         for(const auto& unit:world.actors()) {
@@ -374,9 +375,12 @@ int main(int argc,char**argv){assert(argc==2);Resources resources;resources.root
     checkPrecomputedRaids(table);
     checkWorldRaidSchedule(resources,host,table);
     for(const auto geometry:{md::BattleGeometry::phone(),md::BattleGeometry::pad()}) {
-        checkSu33Campaign(resources,geometry,9,0);
-        checkSu33Campaign(resources,geometry,10,168);
-        checkSu33Campaign(resources,geometry,79,336);
+        constexpr unsigned firstRaid=10,lastStage=79,span=lastStage-firstRaid;
+        constexpr int scoutBattleHP=210,cap=scoutBattleHP*180/100;
+        for(unsigned stage=0;stage<=lastStage;++stage) {
+            const int expectedDamage=stage<firstRaid ? 0 : cap*int(span+stage-firstRaid)/(2*int(span));
+            checkSu33Campaign(resources,geometry,stage,expectedDamage);
+        }
     }
     const auto minimum=checkEnemyRaidDamage(resources,md::BattleGeometry::phone());
     assert(checkEnemyRaidDamage(resources,md::BattleGeometry::pad())==minimum);

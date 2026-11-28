@@ -4,7 +4,7 @@
 [한국어](README.md) | [English](README.en.md)
 <!-- language-nav:end -->
 
-[![Release v0.8.4](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.8.4)
+[![Release v0.8.5](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.8.5)
 [![iOS, iPadOS, Android, Web, PWA, macOS](docs/public/media/badges/platforms.svg)](docs/en/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/en/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript, Rust](docs/public/media/badges/code.svg)](docs/en/public/architecture.md)
@@ -32,7 +32,7 @@ This has nothing to do with what I felt while restoring the trilogy, but I’ve 
 
 Open the link to install the game or play in your browser. On iPhone and iPad, choose **Add to Home Screen** in Safari's Share menu. On Android and Mac, press **INSTALL GAME**. Once the resources finish downloading, you can play offline.
 
-If building with Xcode or Android Studio is difficult, use the PWA or the [Tauri Mac app](https://github.com/gelb2/MachDefense/releases/download/v0.8.3/MachDefense-Desktop-v0.8.3-arm64.zip). The Mac app requires macOS 14 or later on Apple Silicon and stores progress in its app data folder. [Build and installation](docs/en/public/build-and-install.md) also explains how to install the native apps.
+If building with Xcode or Android Studio is difficult, use the PWA or the [Tauri Mac app](https://github.com/gelb2/MachDefense/releases/download/v0.8.5/MachDefense-Desktop-v0.8.5-arm64.zip). The Mac app requires macOS 14 or later on Apple Silicon and stores progress in its app data folder. [Build and installation](docs/en/public/build-and-install.md) also explains how to install the native apps.
 
 Thank you to [fastutlego](https://github.com/fastutlego) for contributing the HeavyMach web port. The WebAssembly host, WebGL2 renderer, input, audio and saves in [HeavyMach PR #24](https://github.com/gelb2/HeavyMach/pull/24), together with the subsequent PWA and Tauri work, also laid the groundwork for bringing MachDefense to the web and desktop. I used that architecture for the MachDefense PWA and used the same web host in the Tauri Mac app.
 
@@ -120,11 +120,11 @@ I added upgrade stages for turrets, base equipment, and special attacks whose or
 
 | Platform | How to run | Current status |
 |---|---|---|
-| iPhone / iPad | Xcode workspace | v0.8.3 build. See the release notes for prior device checks and this release’s installation results |
-| Android | Android Studio or APK | [v0.8.3 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.8.3). See the release notes for build and device-check coverage |
+| iPhone / iPad | Xcode workspace | Source version 0.8.5 (13). See release notes for device-check coverage |
+| Android | Android Studio or APK | [v0.8.5 APK](https://github.com/gelb2/MachDefense/releases/tag/v0.8.5). See the release notes for build and device-check coverage |
 | Web | Browser | Deployed to GitHub Pages. Checked in Mac Chrome, Safari, and WebKit |
 | PWA | Install through the browser | Installation and offline play supported. See the validation document for device results |
-| Tauri Mac | Desktop app | [Download v0.8.3](https://github.com/gelb2/MachDefense/releases/tag/v0.8.3). File saves, recovery and exit checked. macOS 14+ on Apple Silicon |
+| Tauri Mac | Desktop app | [Download v0.8.5](https://github.com/gelb2/MachDefense/releases/tag/v0.8.5). macOS 14+ on Apple Silicon |
 
 ## Fixed problems and remaining work
 

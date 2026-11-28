@@ -60,11 +60,11 @@ async function checkScenario(index, name) {
     result.scenarios.push(report);
     if (index < 10 || index >= 100) {
         assert.deepEqual(state.targetPosition, first.initialPosition, name);
-        assert.equal(state.appliedLaserDamage, 168, name);
-        assert.equal(first.maxHP - state.hp, 336, name);
+        assert.equal(state.appliedLaserDamage, 189, name);
+        assert.equal(first.maxHP - state.hp, 378, name);
     } else if (index === 10 || index === 11) {
         assert.ok(maxTravel > 1, name);
-        assert.ok(state.appliedLaserDamage <= 168, name);
+        assert.ok(state.appliedLaserDamage <= 189, name);
     }
     if (index === 11) assert.ok(state.dodges > 0, name);
     assert.equal(state.writes, 0, name);
@@ -73,7 +73,7 @@ async function checkScenario(index, name) {
     assert.equal(state.rightShots, 7, name);
     assert.equal(state.wingSequence, 'LRLRLRLRLRLRLR', name);
     assert.equal(state.missiles, 2, name);
-    assert.equal(state.budget, 336, name);
+    assert.equal(state.budget, 378, name);
     assert.equal(state.scheduledDamage, state.budget, name);
     assert.ok(first.maxHP - state.hp <= state.budget, name);
     assert.ok(state.lastLaserAt > state.firstLaserAt, name);
