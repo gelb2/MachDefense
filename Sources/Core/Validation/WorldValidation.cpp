@@ -25,6 +25,52 @@ ActorId World::validationSpawn(std::string_view name,bool player,Vec2 position){
     if(!started_||!std::isfinite(position.x)||!std::isfinite(position.y))throw std::invalid_argument("Invalid validation spawn");
     return addNamed(name,position,player).id;
 }
+ActorId World::validationSu33Scene(unsigned scenario){
+    static constexpr Vec2 locations[]={
+        {0,0},{0,1},{0,-1},{-1,0},{1,0},{-1,1},{1,1},{-1,-1},{1,-1}
+    };
+    if (!started_ || stage_!=79 || scenario>11) throw std::invalid_argument("Invalid Su-33 validation scene");
+    // Keep the campaign renderer and combat step with a disposable lineup.
+    validationArtScene_=true;
+    actors_.clear();
+    spawners_.clear();
+    loot_.clear();
+    projectiles_.clear();
+    trails_.clear();
+    airStrikes_.clear();
+    production_.clear();
+    for (auto& particle:particles_->particles()) particle.shown=false;
+    countermeasures_->clear();
+    const float halfWidth=battlefieldWidth()*.5f;
+    const float halfLength=geometry_.halfLength();
+    Vec2 position{};
+    if (scenario<std::size(locations)) {
+        const auto direction=locations[scenario];
+        position={direction.x*(halfWidth-1),direction.y*(halfLength-1)};
+    } else if (scenario==9) {
+        position={halfWidth+36*geometry_.deviceScale,halfLength+48*geometry_.deviceScale};
+    } else if (scenario==11) {
+        position={0,baseBoundary_};
+    }
+    auto& target=addNamed(scenario==11?"AircraftLight_01":"AircraftHeavy_01",position,true);
+    target.weapons.clear();
+    // Full salvos fit in any tested target, even at the final-stage cap.
+    target.hp=target.maxHP=100000;
+    if (!target.flightTactics) throw std::runtime_error("Su-33 validation requires an allied helicopter");
+    if (scenario<=9) target.flightTactics->speed=0;
+    if (scenario!=11) target.flightTactics->dodgeReady=1e9;
+    if (scenario==10) {
+        auto& enemy=addNamed("E_Turret_13",{0,halfLength*.5f},false);
+        enemy.weapons.clear();
+        enemy.attackCheck=1e9f;
+        target.target=enemy.id;
+    }
+    camera_=position.y;
+    clampCamera();
+    actualCamera_=camera_;
+    if (!validationSu33Start(target.id)) throw std::runtime_error("Su-33 validation raid did not start");
+    return target.id;
+}
 void World::validationAircraftComparison(){
     if(!started_)throw std::runtime_error("Start comparison World first");
     validation::appendAircraftModels(models_);validation::appendAircraftWeapons(weapons_);validationArtScene_=true;

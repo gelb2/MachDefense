@@ -64,6 +64,9 @@ WorldActor& World::addParts(const BuildDefinition& definition,Vec2 position){
 }
 void World::start(unsigned stage){
     if(stage>=80||stage>=maps_.children.size()||stage>=mapTable_.rowCount())throw std::out_of_range("Original stage index");
+    su33Budget_=su33StageBudget(stage);
+    su33Raids_.clear();
+    su33Trace_={};
     if (const auto raid=EnemyAirRaid::forStage(stage,mapTable_.rowCount(),minimumMechHP_)) {
         scheduledEnemyRaid_=ScheduledEnemyRaid{
             *raid, EnemyAirRaidSchedule::fromTable(table(resources_,"EnemyAirRaidSchedule"),stage+1)
@@ -144,6 +147,7 @@ void World::tick(){
         addProjectile(strike.weapon,*bullet,0,0,damageOverride);
     }
     std::erase_if(airStrikes_,[](const auto& strike){return strike.motion.removed;});
+    if(state_==WorldState::running)tickSu33Raids();
     for(auto& trail:trails_)trail.motion->tick(time(),random_);
     std::erase_if(trails_,[](const auto& trail){return trail.motion->removed();});
     updateProjectiles();
@@ -164,6 +168,7 @@ void World::tick(){
 }
 void World::finish(WorldState state){
     scheduledEnemyRaid_.reset();
+    su33Raids_.clear();
     auto particles=particles_->particles();
     for (std::size_t i=0;i<particles.size();++i)
         if (particleImages_[i].image==enemyRaidReticleImage) particles[i].shown=false;

@@ -1,20 +1,20 @@
 {
-  "reviewed": "2026-11-27",
+  "reviewed": "2026-11-28",
   "source_basis": "20b714c helicopter records and 859fb67 release editorial; origin/main c7cfd8a author correction and remote publication history integrated paragraph by paragraph.",
   "pairs": [
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "c2314b8dac778f6a9c78f581619d44b11d44647d238975635e17d44307f788a0",
-      "en_sha256": "73edaaddb7b2e1e9462a0b637e712cc620017d941006eca95708a2598d45b8ce",
-      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main. 2026-11-23: checked both languages of the links to the other developer statements. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Compared the raid section with the author’s restored-game README and linked the design essay in both languages. Matched the before-and-after gameplay captures and their version labels in both languages. Matched the v0.8.2 release and current download references in both languages. 2026-11-27: matched Crossfire behavior, completion status, and current v0.8.3 references in both languages."
+      "ko_sha256": "882db23eceb5032ef3c390490f3a5d4caf94ee17da8fd81a8cb01244eca07938",
+      "en_sha256": "b573bce1ebbe0fcdf68e8a1cb7b1f8350694521837d5500221b4c2df990643e2",
+      "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main. 2026-11-23: checked both languages of the links to the other developer statements. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Compared the raid section with the author’s restored-game README and linked the design essay in both languages. Matched the before-and-after gameplay captures and their version labels in both languages. Matched the v0.8.2 release and current download references in both languages. 2026-11-27: matched Crossfire behavior, completion status, and current v0.8.3 references in both languages. 2026-11-28: matched the v0.8.4 source and PWA scope, and checked the updated enemy raid references and damage figures."
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "e5be1951fbab523d05fb7b7f792d350d0408683a21cd09576e44051558d6b88d",
-      "en_sha256": "fe54aa5178156cad5c5136f8c808e89f171a65499280102db7e3c50f87159e4b",
-      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Matched the v0.8.2 release and current download references in both languages. 2026-11-27: matched Crossfire behavior, completion status, and current v0.8.3 references in both languages."
+      "ko_sha256": "ce20475aada650f92a59bf36779815d12d510707130b3c42b36f2637033d6bfa",
+      "en_sha256": "cca24ec333aee824456ba6764d11c386d6c542656ec8170251852eb2929c8e3b",
+      "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Matched the v0.8.2 release and current download references in both languages. 2026-11-27: matched Crossfire behavior, completion status, and current v0.8.3 references in both languages. 2026-11-28: matched the v0.8.4 source and PWA scope, and checked the updated enemy raid references and damage figures."
     },
     {
       "ko": "CREDITS.md",
@@ -250,9 +250,9 @@
     {
       "ko": "docs/public/enemy-air-raids.md",
       "en": "docs/en/public/enemy-air-raids.md",
-      "review": "2026-11-27: compared the published HeavyMach 1 essay, the candidate 09 art record, the exact damage formula, and the first three stage 11 waves. Corrected attribution to the author of the restoration essay in both languages. Checked the personal account against the pinned HeavyMach 1 restoration essay and reviewed the art, schedule and damage against their sources in both languages. Matched the before-and-after gameplay captures and their version labels in both languages.",
-      "ko_sha256": "3d319650043a6d82242cbc5541b247cc85f7b09958218e415fe44217b9cf695c",
-      "en_sha256": "893221481d11a79072864d801894db86d5242414ba048d035e97f6849c0c056a"
+      "review": "2026-11-27: compared the published HeavyMach 1 essay, the candidate 09 art record, the exact damage formula, and the first three stage 11 waves. Corrected attribution to the author of the restoration essay in both languages. Checked the personal account against the pinned HeavyMach 1 restoration essay and reviewed the art, schedule and damage against their sources in both languages. Matched the before-and-after gameplay captures and their version labels in both languages. 2026-11-28: matched the v0.8.4 source and PWA scope, and checked the updated enemy raid references and damage figures.",
+      "ko_sha256": "b49c26f67c108befce1f8c620739328b0fd1f94a6fe2044591b8da9b6be41827",
+      "en_sha256": "ea621b0ba245424be17c74b586ab7a1a2ca57a9f629c16bcc327cabf4026aec4"
     }
   ]
 }

@@ -4,7 +4,7 @@
 [한국어](README.md) | [English](README.en.md)
 <!-- language-nav:end -->
 
-[![Release v0.8.3](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.8.3)
+[![Release v0.8.4](docs/public/media/badges/version.svg)](https://github.com/gelb2/MachDefense/releases/tag/v0.8.4)
 [![iOS, iPadOS, Android, Web, PWA, macOS](docs/public/media/badges/platforms.svg)](docs/public/build-and-install.md)
 [![arm64, WebAssembly](docs/public/media/badges/arch.svg)](docs/public/architecture.md)
 [![C++20, Objective-C++, Kotlin, JavaScript, Rust](docs/public/media/badges/code.svg)](docs/public/architecture.md)
