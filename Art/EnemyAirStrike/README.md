@@ -84,3 +84,23 @@ iPhone Air와 Android 에뮬레이터, 오프라인 Web/PWA, Tauri의 치트 검
 ## v0.8.2 C안 적용
 
 C안에서 기수를 줄이기 전 길이로 복구했다. 금색 유리와 256×256 캔버스, 공용 렌더 배율은 유지했다. 래스터에서 CgBI를 만든 뒤 아군기와 같은 규칙으로 전투용 RGBA를 준비했다.
+
+## Su-33
+
+사용자가 확인한 `su33-lux-lunae-concept.png`를 사용했다. 허브 미디어에 보존한 1,254×1,254 승인 원본의 SHA-256은 `eef737ab8e93357a11fffe6997500ae5ce4406adfb6e808a91dec7564ef5fefc`다. 그림을 다시 생성하거나 색을 바꾸지 않았다.
+
+```sh
+magick "$SU33_APPROVED_PNG" -crop 1084x736+86+259 +repage -filter Lanczos \
+  -resize 210x210 -background none -gravity center -extent 256x256 \
+  -strip PNG32:Art/EnemyAirStrike/Su33-raster.png
+```
+
+F-15와 같이 Apple `pngcrush -iphone -f 0`으로 사전 곱셈 BGRA를 만들었다. 원작 아군기의 색좌표와 픽셀 밀도 청크를 유지하고 IDAT를 한 개로 합쳤다. [기존 준비 도구](../../tools/prepare_resources.py)의 알파 역산과 RGBA 인코딩으로 전투용 PNG를 만들었다. 준비 전후 알파와 불투명 RGB는 일치한다. 반투명 픽셀의 사전 곱셈 RGB 반올림 오차는 최대 0.498이다.
+
+| 자원 | SHA-256 |
+|---|---|
+| [전투 크기에 맞춘 래스터](Su33-raster.png) | `2c765e9f14eec11567b812c8bbbf2adb08db125ab2ffd370ad3f0288ec483f26` |
+| [Apple CgBI 준비본](Su33-source-cgbi.png) | `cd78646015caf0d87cb5b4e5bd8b621099f2ee8438d858d18db85cc0ce76203d` |
+| [전투용 RGBA](../../Resources/Images/EnemyAirStrikeSu33.png) | `ebf9ca07f5aca5e37471d52338bdab90e3240b401b1f8614eebf6c767f771dbd` |
+
+전투용 이미지의 256×256 캔버스와 중앙 피벗 (128, 128)은 F-15와 같다. 알파 128 이상 외곽은 Su-33 208×141px, F-15 208×139px다. 우향 이미지의 날개 발사점은 왼쪽 (112, 90), 오른쪽 (112, 166)이며 캔버스의 y 좌표는 아래로 증가한다.

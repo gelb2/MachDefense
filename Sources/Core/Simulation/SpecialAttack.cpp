@@ -26,7 +26,7 @@ std::string specialWeaponName(std::string_view prefix,float level) {
 std::optional<EnemyAirRaid> EnemyAirRaid::forStage(unsigned stage, std::size_t stageCount, int minimumMechHP) {
     constexpr unsigned firstRaidStage = 10;
     if (stage < firstRaidStage || stage >= stageCount || minimumMechHP < 2) return {};
-    const auto cap = static_cast<std::int64_t>(minimumMechHP) * 4 / 5;
+    const auto cap = static_cast<std::int64_t>(minimumMechHP) * 95 / 100;
     const auto span = static_cast<std::int64_t>(stageCount - 1 - firstRaidStage);
     const auto progress = static_cast<std::int64_t>(stage - firstRaidStage);
     // Half the safe budget at first appearance, rising linearly to the full cap.
@@ -99,10 +99,13 @@ AirStrike AirStrike::start(const WeaponDefinition& weapon,Vec2 target,float dela
     strike.fireDelay=.3f/static_cast<float>(strike.remainingShots); // original division, even if zero
     return strike;
 }
-std::optional<Projectile> AirStrike::tick(const WeaponDefinition& weapon,double time,DarwinRandom& random) {
-    if(removed)return {};
+void AirStrike::advance() {
     position.x+=velocity.x;position.y+=velocity.y;
     velocity.x+=velocity.x*.01f;velocity.y+=velocity.y*.01f;
+}
+std::optional<Projectile> AirStrike::tick(const WeaponDefinition& weapon,double time,DarwinRandom& random) {
+    if(removed)return {};
+    advance();
     if(time<=static_cast<double>(startTime)||remainingShots<1) {
         if(time>static_cast<double>(startTime+4.f))removed=true;
         return {};

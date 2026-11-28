@@ -12,6 +12,7 @@
 #include "../../Tests/AircraftComparisonScene.hpp"
 #include "../../Tests/AircraftVisualFrame.hpp"
 #endif
+#include <algorithm>
 #include <sstream>
 #include <cmath>
 using namespace md;
@@ -49,6 +50,76 @@ struct Host:HostServices{
 std::string status;
 #if MD_WEB_CHEAT
 std::unique_ptr<validation::AircraftComparisonScene> aircraftScene;
+struct Su33BrowserScene {
+    validation::AircraftHost host;
+    SaveData save=SaveData::empty(1);
+    std::unique_ptr<World> world;
+    ActorId target=0;
+    Vec2 initialPosition;
+    float width,height;
+    Su33BrowserScene(ResourceAccess& resources,unsigned mode):
+        width(mode>=200?420:mode>=100?768:320),height(mode>=100&&mode<200?1024:640) {
+        save.createProfile("SU33 REVIEW",1);
+        const auto geometry=mode>=100&&mode<200?BattleGeometry::pad():BattleGeometry::phone();
+        world=std::make_unique<World>(resources,host,save,0,geometry,123);
+        world->start(79);
+        world->setViewport(width,height);
+        target=world->validationSu33Scene(mode%100);
+        initialPosition=world->actor(target)->position;
+    }
+    std::string inspect() {
+        Frame frame;
+        frame.logicalWidth=width;
+        frame.logicalHeight=height;
+        world->appendSprites(frame);
+        const auto countSprite=[&](std::string_view image) {
+            return std::count_if(frame.sprites.begin(),frame.sprites.end(),[&](const auto& sprite) {
+                return sprite.image==image;
+            });
+        };
+        const auto countMesh=[&](std::string_view image) {
+            return std::count_if(frame.meshes.begin(),frame.meshes.end(),[&](const auto& mesh) {
+                return mesh.image==image;
+            });
+        };
+        const bool planeOnScreen=std::any_of(frame.sprites.begin(),frame.sprites.end(),[&](const auto& sprite) {
+            const auto rect=sprite.destination;
+            return sprite.image=="EnemyAirStrikeSu33.png" && rect.x<width && rect.y<height &&
+                   rect.x+rect.width>0 && rect.y+rect.height>0;
+        });
+        const auto soundCount=[&](std::string_view name) {
+            return std::count(host.soundNames.begin(),host.soundNames.end(),name);
+        };
+        renderer.draw(frame,pw,ph);
+        const auto& trace=world->validationSu33Trace();
+        const auto* helicopter=world->actor(target);
+        std::ostringstream out;
+        out<<std::boolalpha<<"{\"time\":"<<world->time()<<",\"writes\":"<<host.writes
+           <<",\"laserShots\":"<<trace.laserShots<<",\"leftShots\":"<<trace.leftShots
+           <<",\"rightShots\":"<<trace.rightShots<<",\"missiles\":"<<trace.missiles
+           <<",\"budget\":"<<trace.budget<<",\"scheduledDamage\":"<<trace.scheduledDamage
+           <<",\"appliedLaserDamage\":"<<trace.appliedLaserDamage
+           <<",\"closestWhileFiring\":";
+        if (std::isfinite(trace.closestWhileFiring)) out<<trace.closestWhileFiring;
+        else out<<"null";
+        out<<",\"active\":"<<trace.active<<",\"exited\":"<<trace.exited<<",\"earlyClose\":"<<trace.earlyClose
+           <<",\"distanceAdjustments\":"<<trace.distanceAdjustments
+           <<",\"firstLaserAt\":"<<trace.firstLaserAt<<",\"lastLaserAt\":"<<trace.lastLaserAt
+           <<",\"wingSequence\":\""<<trace.wingSequence
+           <<"\",\"planeVisuals\":"<<countSprite("EnemyAirStrikeSu33.png")
+           <<",\"planeOnScreen\":"<<planeOnScreen
+           <<",\"beamVisuals\":"<<countSprite("Efx_Ion03.png")+countMesh("Efx_Ion03.png")
+           <<",\"warningVisuals\":"<<countSprite("TargetEnemyRaid.png")
+           <<",\"laserSounds\":"<<soundCount("Plasma02.wav")
+           <<",\"initialPosition\":["<<initialPosition.x<<','<<initialPosition.y<<']'
+           <<",\"targetPosition\":["<<helicopter->position.x<<','<<helicopter->position.y<<']'
+           <<",\"hp\":"<<helicopter->hp<<",\"maxHP\":"<<helicopter->maxHP
+           <<",\"dodges\":"<<helicopter->flightTactics->dodgeCount
+           <<",\"dodging\":"<<helicopter->flightTactics->dodging<<'}';
+        return out.str();
+    }
+};
+std::unique_ptr<Su33BrowserScene> su33Scene;
 #endif
 }
 extern "C" {
@@ -88,6 +159,16 @@ EMSCRIPTEN_KEEPALIVE const char* md_art_frame(unsigned family){
 EMSCRIPTEN_KEEPALIVE const char* md_aircraft_scene(int command,int mode){
 #if MD_WEB_CHEAT
  try {
+  if(command>=30&&command<=32) {
+   if(command==30)su33Scene=std::make_unique<Su33BrowserScene>(assets,unsigned(mode));
+   if(!su33Scene)throw std::logic_error("Start the Su-33 validation scene first");
+   if(command==31)for(int tick=0;tick<std::clamp(mode,1,16);++tick) {
+    su33Scene->world->tick();
+    su33Scene->world->prepareDraw();
+   }
+   status=su33Scene->inspect();
+   return status.c_str();
+  }
   if(command==8){renderer.draw(validation::aircraftVisualFrame(assets,unsigned(mode)),pw,ph);status="visual comparison at uniform 2x";return status.c_str();}
   if(command==20||command==21){aircraftScene=std::make_unique<validation::AircraftComparisonScene>(assets,3);aircraftScene->production(command==20?unsigned(mode):10,command==20?4:unsigned(std::clamp(mode,1,100)),command==20);}
   if(command==0||!aircraftScene)aircraftScene=std::make_unique<validation::AircraftComparisonScene>(assets,unsigned(mode));

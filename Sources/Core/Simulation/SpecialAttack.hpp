@@ -10,6 +10,7 @@ std::vector<Projectile> crossfireProjectiles(const WeaponDefinition&,Vec2 origin
                                              float bodyAngle,double time,DarwinRandom&);
 std::string specialWeaponName(std::string_view itemString,float itemLevel);
 inline constexpr std::string_view enemyRaidImage = "EnemyAirStrikeMTD.png";
+inline constexpr std::string_view enemySu33Image = "EnemyAirStrikeSu33.png";
 inline constexpr char enemyRaidReticleImage[] = "TargetEnemyRaid.png";
 // New campaign raid. Stage indices are zero-based.
 struct EnemyAirRaid {
@@ -38,6 +39,7 @@ struct AirStrike {
     static AirStrike start(const WeaponDefinition&,Vec2 target,float itemDelay,double time,
                            float deviceScale,DarwinRandom&,
                            const std::function<ParticleState*()>& acquireMarker={},float animationTime=0,bool reverseApproach=false);
+    void advance();
     std::optional<Projectile> tick(const WeaponDefinition&,double time,DarwinRandom&);
     void appendSprite(Frame&,Vec2 screenPosition,Vec2 imageSize,float retinaScale=.5f,std::string_view image="Airplane.png") const;
 };

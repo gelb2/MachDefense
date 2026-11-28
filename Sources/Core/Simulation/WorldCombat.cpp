@@ -1,10 +1,12 @@
 #include "Core/Simulation/AircraftVisual.hpp"
+#include "Core/Simulation/AlliedAircraft.hpp"
 #include "Core/Simulation/World.hpp"
 #include "Core/Simulation/Formation.hpp"
 #include <algorithm>
 #include <cmath>
 #include <cstdio>
 #include <functional>
+#include <limits>
 #include <stdexcept>
 
 #include "Core/Simulation/WorldSupport.hpp"
@@ -14,6 +16,39 @@ namespace {
 constexpr std::string_view crossfireAttack = "Crossfire-Missile";
 constexpr double crossfireReuseSeconds = 10.0;
 constexpr double crossfireScanSeconds = 0.25;
+constexpr std::string_view su33Missile = "E_Tank20_Wpn";
+constexpr std::string_view su33LaserReference = "Turret_lsr_01";
+constexpr double battleStep = double(.0166f);
+constexpr unsigned su33Missiles = 2;
+
+int distributeRaidDamage(int total, unsigned index, unsigned count) {
+    return total/int(count)+(index<unsigned(total%int(count)));
+}
+
+Vec2 su33Muzzle(const AirStrike& motion, bool left) {
+    // Wing sockets on the 256px right-facing sprite. The world y axis points up.
+    const float spriteScale=1.3f*motion.deviceScale*.5f;
+    const float forward=-16* spriteScale, lateral=(left ? 38.f : -38.f)*spriteScale;
+    const float x=std::cos(motion.angle), y=std::sin(motion.angle);
+    return {motion.position.x+x*forward-y*lateral, motion.position.y+y*forward+x*lateral};
+}
+
+double su33SafeGap(const AirStrike& motion, float distance, float clearance,
+                   float helicopterSpeed, unsigned remaining, double normal) {
+    const auto displacement=[&](double ticks) {
+        return std::hypot(motion.velocity.x,motion.velocity.y)*std::expm1(ticks*std::log1p(.01))/.01+
+               helicopterSpeed*ticks;
+    };
+    const double space=std::max(0.f,distance-clearance);
+    unsigned low=0, high=unsigned(std::ceil(remaining*normal/battleStep))+2;
+    if(displacement(high)<space)return normal;
+    while(high-low>1) {
+        const auto middle=low+(high-low)/2;
+        if(displacement(middle)<space)low=middle;
+        else high=middle;
+    }
+    return std::clamp(low*battleStep/remaining,battleStep,normal);
+}
 
 std::optional<float> crossfireDistance(const WorldActor& shooter,
                                        const WeaponDefinition& weapon, Vec2 point) {
@@ -53,17 +88,172 @@ AirStrike World::beginAirStrike(const WeaponDefinition& weapon,Vec2 point,float 
 void World::updateEnemyAirRaid() {
     if (!scheduledEnemyRaid_ || !scheduledEnemyRaid_->schedule.takeDue(time()-startTime_)) return;
     const WorldActor* target = nullptr;
+    const WorldActor* helicopter = nullptr;
     for (const auto& actor : actors_) {
-        if (!actor->player || actor->type != 0 || actor->hp <= 0 || actor->removed) continue;
-        if (!target || actor->position.y > target->position.y) target = actor.get();
+        if (!actor->player || actor->hp <= 0 || actor->removed) continue;
+        if (actor->type==0 && (!target || actor->position.y > target->position.y)) target=actor.get();
+        if (actor->flightTactics && (!helicopter || actor->position.y > helicopter->position.y)) helicopter=actor.get();
     }
-    if (!target) return;
-    constexpr std::string_view bomb = "AS_BOMB_01";
-    const auto* weapon = weapons_.find(bomb);
-    if (!weapon || weapon->type != WeaponType::bomb || weapon->damageRange <= 0 || !weapon->shotCount)
-        throw std::runtime_error("Enemy air raid requires the area-damage airstrike bomb");
-    constexpr float warningSeconds = 1.5f;
-    airStrikes_.push_back({std::string(bomb),beginAirStrike(*weapon,target->position,warningSeconds,true),scheduledEnemyRaid_->raid});
+    if (target) {
+        constexpr std::string_view bomb = "AS_BOMB_01";
+        const auto* weapon = weapons_.find(bomb);
+        if (!weapon || weapon->type != WeaponType::bomb || weapon->damageRange <= 0 || !weapon->shotCount)
+            throw std::runtime_error("Enemy air raid requires the area-damage airstrike bomb");
+        constexpr float warningSeconds = 1.5f;
+        airStrikes_.push_back({std::string(bomb),beginAirStrike(*weapon,target->position,warningSeconds,true),scheduledEnemyRaid_->raid});
+    }
+    if (helicopter && su33Budget_>0) beginSu33Raid(*helicopter);
+}
+
+int World::su33StageBudget(unsigned stage) const {
+    constexpr unsigned firstStage=10;
+    if(stage<firstStage)return 0;
+    int minimum=std::numeric_limits<int>::max();
+    for(const auto& entry:alliedAircraftCatalog) {
+        if(entry.mission>stage)continue;
+        for(unsigned level=1;const auto* build=builds_.find(specialWeaponName(entry.name,level));++level) {
+            const auto row=machinesTable_.findRow(build->machine);
+            if(!row)throw std::runtime_error("Missing allied helicopter data for Su-33 damage");
+            minimum=std::min(minimum,MachineDefinition::fromTable(machinesTable_,*row,geometry_).hp);
+        }
+    }
+    if(minimum==std::numeric_limits<int>::max())return 0;
+    const auto cap=std::int64_t(minimum)*160/100;
+    const auto span=mapTable_.rowCount()-1-firstStage;
+    return int(span ? cap*(span+stage-firstStage)/(2*span) : cap);
+}
+
+void World::beginSu33Raid(const WorldActor& target,bool trace) {
+    const auto* laser=weapons_.find(su33LaserReference);
+    if(!laser||laser->type!=WeaponType::gun||!laser->shotCount||laser->shotDelay<=0)
+        throw std::runtime_error("Missing laser turret salvo reference for Su-33");
+    const auto marker=[&] {
+        auto* particle=particles_->acquire(float(time()),su33Random_);
+        if(particle)setParticleImage(particle,enemyRaidReticleImage,1,1);
+        return particle;
+    };
+    auto motion=AirStrike::start(*laser,target.position,0,time(),geometry_.deviceScale,
+                                  su33Random_,marker,float(time()),true);
+    su33Raids_.push_back({motion,target.id,target.position,time(),time()+.28,0,su33Budget_,0,0,trace});
+    host_.playSound("SFX_AirStrike.wav");
+    if(trace) {
+        su33Trace_={};
+        su33Trace_.active=true;
+        su33Trace_.budget=su33Budget_;
+    }
+}
+
+bool World::validationSu33Start(ActorId id) {
+    const auto* target=actor(id);
+    if(!started_||state_!=WorldState::running||!su33Budget_||!target||!target->player||
+       !target->flightTactics||target->removed||target->hp<=0)return false;
+    beginSu33Raid(*target,true);
+    return true;
+}
+
+void World::fireSu33Laser(Vec2 muzzle,Vec2 destination,const WeaponDefinition& laser) {
+    const Vec2 delta{destination.x-muzzle.x,destination.y-muzzle.y};
+    const float angle=std::atan2(delta.y,delta.x);
+    const auto acquired=[&]{return particles_->acquire(float(time()),su33Random_);};
+    if(auto* flash=acquired()) {
+        flash->life=.1f;
+        flash->tile=int(su33Random_.next()%12);
+        flash->position=muzzle;
+        flash->angle=angle;
+        setParticleImage(flash,"Efx_Fire.png",4,4);
+        flash->start(float(time()));
+    }
+    if(auto* beam=acquired()) {
+        const auto width=resources_.imageSize("Efx_Ion03.png").x;
+        beam->blend=Blend::additive;
+        beam->life=.085f;
+        beam->position={muzzle.x+delta.x*.5f,muzzle.y+delta.y*.5f};
+        beam->angle=angle;
+        beam->scale={std::hypot(delta.x,delta.y)/std::max(1.f,width*geometry_.deviceScale),.24f};
+        setParticleImage(beam,"Efx_Ion03.png",1,1);
+        beam->start(float(time()));
+    }
+    emitWeaponImpact(laser,destination,angle,.03f);
+    host_.playSound(laser.fireSound);
+}
+
+void World::tickSu33Raids() {
+    if(su33Raids_.empty())return;
+    const auto* missile=weapons_.find(su33Missile);
+    const auto* laser=weapons_.find(su33LaserReference);
+    if(!missile||missile->type!=WeaponType::bullet||missile->damageRange<=0||!laser)
+        throw std::runtime_error("Missing Su-33 attack assets");
+    const double normal=double(laser->shotDelay)/1.3;
+    const float clearance=10.f/presentationScale_;
+    for(auto& raid:su33Raids_) {
+        auto* target=actor(raid.target);
+        const bool alive=target&&target->hp>0&&!target->removed;
+        if(alive)raid.aim=target->position;
+        auto& motion=raid.motion;
+        const Vec2 previous=motion.position;
+        motion.advance();
+        if(raid.lasers<laser->shotCount && alive) {
+            const Vec2 segment{motion.position.x-previous.x,motion.position.y-previous.y};
+            const float lengthSquared=distanceSquared(motion.position,previous);
+            const float along=lengthSquared>0 ? std::clamp(
+                ((raid.aim.x-previous.x)*segment.x+(raid.aim.y-previous.y)*segment.y)/lengthSquared,0.f,1.f) : 0.f;
+            if(distanceSquared({previous.x+segment.x*along,previous.y+segment.y*along},raid.aim)<=clearance*clearance) {
+                // A sudden turn or resize can invalidate the estimated firing window.
+                const Vec2 offset{previous.x-raid.aim.x,previous.y-raid.aim.y};
+                const float length=std::hypot(offset.x,offset.y);
+                const float distance=std::max(length,clearance+1.f);
+                motion.position=length>0 ? Vec2{raid.aim.x+offset.x*distance/length,raid.aim.y+offset.y*distance/length}
+                    : Vec2{raid.aim.x-std::cos(motion.angle)*distance,raid.aim.y-std::sin(motion.angle)*distance};
+                if(raid.traced)++su33Trace_.distanceAdjustments;
+            }
+        }
+        const float distance=std::sqrt(distanceSquared(motion.position,raid.aim));
+        if(raid.traced&&raid.lasers<laser->shotCount) {
+            const float pixels=distance*presentationScale_;
+            su33Trace_.closestWhileFiring=std::min(su33Trace_.closestWhileFiring,pixels);
+            su33Trace_.earlyClose|=alive&&pixels<=10.f;
+        }
+        const int laserBudget=raid.budget/2, missileBudget=raid.budget-laserBudget;
+        if(raid.missiles<su33Missiles && time()>=raid.enteredAt+.08*(raid.missiles+1)) {
+            const auto muzzle=su33Muzzle(motion,raid.missiles==0);
+            const float angle=std::atan2(raid.aim.y-muzzle.y,raid.aim.x-muzzle.x);
+            auto shot=Projectile::fire(*missile,muzzle,raid.aim,angle,time(),su33Random_);
+            shot.toPlayer=true;
+            const int value=distributeRaidDamage(missileBudget,raid.missiles++,su33Missiles);
+            addProjectile(missile->name,shot,0,5,value);
+            host_.playSound(missile->fireSound);
+            if(raid.traced){++su33Trace_.missiles;su33Trace_.scheduledDamage+=value;}
+        }
+        const unsigned remaining=laser->shotCount-raid.lasers;
+        if(remaining>0) {
+            const float helicopterSpeed=alive?std::max(target->aircraft.speed,target->aircraft.moveSpeed):0.f;
+            const double gap=su33SafeGap(motion,distance,clearance,helicopterSpeed,remaining,normal);
+            if(time()>=raid.nextLaserAt || (raid.lasers>0 && gap<normal && time()-raid.lastLaserAt+.000001>=gap)) {
+                const bool left=raid.lasers%2==0;
+                const int value=distributeRaidDamage(laserBudget,raid.lasers++,laser->shotCount);
+                fireSu33Laser(su33Muzzle(motion,left),raid.aim,*laser);
+                const int hp=alive ? target->hp : 0;
+                if(alive)damage(raid.target,value);
+                if(raid.traced) {
+                    auto& trace=su33Trace_;
+                    if(trace.laserShots==0)trace.firstLaserAt=time();
+                    trace.lastLaserAt=time();
+                    ++trace.laserShots;
+                    ++(left?trace.leftShots:trace.rightShots);
+                    trace.wingSequence+=left?'L':'R';
+                    trace.scheduledDamage+=value;
+                    if(alive)trace.appliedLaserDamage+=hp-target->hp;
+                }
+                raid.lastLaserAt=time();
+                raid.nextLaserAt=std::min(raid.nextLaserAt,time())+normal;
+            }
+        }
+        if(raid.lasers==laser->shotCount && raid.missiles==su33Missiles && time()>raid.enteredAt+4.0) {
+            motion.removed=true;
+            if(raid.traced){su33Trace_.active=false;su33Trace_.exited=true;}
+        }
+    }
+    std::erase_if(su33Raids_,[](const auto& raid){return raid.motion.removed;});
 }
 World::SpecialWeapon World::specialWeapon(const OwnedAttack& owned)const {
     const auto& attack=attacks_.definition(owned);

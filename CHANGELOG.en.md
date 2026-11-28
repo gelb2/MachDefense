@@ -4,6 +4,10 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## v0.8.4 — Su-33 helicopter interception
+
+November 28, 2026. A Lux Lunae Su-33 uses the enemy raid schedule when an allied helicopter is on the battlefield. It fires two unguided missiles and alternates seven blue laser shots from each wing. The cap for one F-15's cluster-bomb damage rose to 95% of the lowest eligible mech's maximum HP. This patch is available as source and for web/PWA. [Enemy raid rules](docs/game-design.md#적-공습기). [Verification](docs/evidence/su33-raid-20261128.md).
+
 ## v0.8.3 — Automatic Crossfire lock-on
 
 November 27, 2026. `LOCKED` marks one enemy that an allied mech can fire at. Tap the target to fire missiles from the nearest eligible mech at the current Crossfire level. Each mech waits 10 seconds of battle time between tap-triggered volleys. Tapping the target does not spend a skill charge. The existing skill button fires and spends charges as before. Apple and Android are 0.8.3 (build 11), and Tauri for Mac is 0.8.3. [How to use lock-on](docs/en/public/features.md#automatic-crossfire-lock-on) · [Test results](docs/evidence/crossfire-lockon-20261127.md).

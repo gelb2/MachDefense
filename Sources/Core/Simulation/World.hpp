@@ -42,6 +42,14 @@ struct WorldEvent {
     enum class Kind { enemyDestroyed,playerDestroyed,stageCleared,stageFailed } kind;
     ActorId actor=0; int experience=0;
 };
+struct Su33RaidTrace {
+    unsigned laserShots=0,leftShots=0,rightShots=0,missiles=0,distanceAdjustments=0;
+    int budget=0,scheduledDamage=0,appliedLaserDamage=0;
+    float closestWhileFiring=1e9f;
+    double firstLaserAt=0,lastLaserAt=0;
+    bool active=false,exited=false,earlyClose=false;
+    std::string wingSequence;
+};
 // GobWorld orchestration; save mutations are in memory. GameSession owns the
 // original explicit save/summary/menu points and first-use help dialog.
 class World {
@@ -77,6 +85,9 @@ public:
     void validationAircraftDodgeComparison();
     void validationCountermeasureBurst();
     ActorId validationAlliedAircraft(unsigned kind,Vec2 position);
+    ActorId validationSu33Scene(unsigned scenario);
+    bool validationSu33Start(ActorId target);
+    const Su33RaidTrace& validationSu33Trace() const{return su33Trace_;}
     bool activateSpecial(std::string_view ownedBaseName,Vec2 worldPoint);
     void refreshCrossfireLockWeapon(std::span<const OwnedAttack>);
     bool tapCrossfireLock(Vec2 worldPoint);
@@ -118,6 +129,23 @@ private:
     struct ScheduledEnemyRaid {EnemyAirRaid raid;EnemyAirRaidSchedule schedule;};
     std::optional<ScheduledEnemyRaid> scheduledEnemyRaid_;
     void updateEnemyAirRaid();
+    struct Su33Raid {
+        AirStrike motion;
+        ActorId target=0;
+        Vec2 aim;
+        double enteredAt=0,nextLaserAt=0,lastLaserAt=0;
+        int budget=0;
+        unsigned missiles=0,lasers=0;
+        bool traced=false;
+    };
+    std::vector<Su33Raid> su33Raids_;
+    int su33Budget_=0;
+    Su33RaidTrace su33Trace_;
+    DarwinRandom su33Random_{7433};
+    int su33StageBudget(unsigned stage) const;
+    void beginSu33Raid(const WorldActor& target,bool trace=false);
+    void tickSu33Raids();
+    void fireSu33Laser(Vec2 muzzle,Vec2 destination,const WeaponDefinition&);
     AirStrike beginAirStrike(const WeaponDefinition&,Vec2,float,bool enemy);
     struct SpecialWeapon {const WeaponDefinition* definition=nullptr; float delay=0;};
     SpecialWeapon specialWeapon(const OwnedAttack&)const;

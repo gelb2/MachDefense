@@ -16,7 +16,7 @@ struct Resources:md::ResourceAccess{
     md::Bytes read(std::string_view path)override{std::ifstream f(root/path,std::ios::binary);if(!f)throw std::runtime_error(std::string(path));return {std::istreambuf_iterator<char>(f),{}};}
     md::Vec2 imageSize(std::string_view name)override{auto it=sizes.find(std::string(name));if(it!=sizes.end())return it->second;if(!std::filesystem::exists(root/"Images"/name))return {};auto b=read("Images/"+std::string(name));if(b.size()>24&&b[0]==137){return sizes[std::string(name)]=mdtest::pngSize(b);}return {};}
 };
-struct Host:md::HostServices{int writes=0,sounds=0;unsigned groundExplosions=0,airStrikeStarts=0;std::optional<md::Bytes>readSave()override{return{};}bool writeSave(std::span<const std::uint8_t>)override{++writes;return true;}void playSound(std::string_view name,float,float)override{++sounds;groundExplosions+=name=="SFX_ExplGround.wav";airStrikeStarts+=name=="SFX_AirStrike.wav";}void playMusic(std::string_view,float)override{}void stopMusic()override{}void requestName(std::string,std::size_t,std::function<void(std::optional<std::string>)>)override{}};
+struct Host:md::HostServices{int writes=0,sounds=0;unsigned groundExplosions=0,airStrikeStarts=0,raidLaserShots=0;std::optional<md::Bytes>readSave()override{return{};}bool writeSave(std::span<const std::uint8_t>)override{++writes;return true;}void playSound(std::string_view name,float,float)override{++sounds;groundExplosions+=name=="SFX_ExplGround.wav";airStrikeStarts+=name=="SFX_AirStrike.wav";raidLaserShots+=name=="Plasma02.wav";}void playMusic(std::string_view,float)override{}void stopMusic()override{}void requestName(std::string,std::size_t,std::function<void(std::optional<std::string>)>)override{}};
 
 struct RaidWave { double at; unsigned count; };
 
@@ -72,7 +72,7 @@ int checkEnemyRaidDamage(Resources& resources, md::BattleGeometry geometry) {
         const auto* build=builds.find(b.name+"_01");
         return build && build->setType==0 && PlayerLoadout::fromBuild(*build,items,geometry).hp==minimum;
     }));
-    const int cap = minimum * 80 / 100;
+    const int cap = minimum * 95 / 100;
     int previous = 0;
     unsigned activeStages = 0;
     for (unsigned stage=0; stage<stages; ++stage) {
@@ -96,7 +96,7 @@ int checkEnemyRaidDamage(Resources& resources, md::BattleGeometry geometry) {
         }
         for (std::size_t i=0; i<players.size(); ++i) {
             assert(players[i].hp==fullHealth[i].hp-total);
-            assert(5*players[i].hp>=fullHealth[i].hp);
+            assert(20*players[i].hp>=fullHealth[i].hp);
         }
         assert(total==raid->maximumDamage && total<=cap && enemies[0].hp==minimum);
     }
@@ -216,7 +216,7 @@ double checkEnemyRaidInWorld(Resources& resources, Host& host, bool upgraded, un
         const auto budget=EnemyAirRaid::forStage(stage,80,minimumMechHPForTest);
         assert(budget);
         for (const int total:aircraftDamage) assert(total==budget->maximumDamage);
-        if (aircraftCount==1) assert(5*mech->hp>=mech->maxHP);
+        if (aircraftCount==1) assert(20*mech->hp>=mech->maxHP);
         if (stage==10||stage==79) assert(mechHit);
         return lastImpact-warningTime;
     }
@@ -309,6 +309,9 @@ void checkWorldRaidSchedule(Resources& resources,Host& host,const md::DataTable&
             assert(elapsed()>=scheduled && elapsed()-scheduled<.017);
             Frame frame;
             world.appendSprites(frame);
+            assert(std::none_of(frame.sprites.begin(),frame.sprites.end(),[](const auto& sprite) {
+                return sprite.image==md::enemySu33Image;
+            }));
             const auto planes=std::count_if(frame.sprites.begin(),frame.sprites.end(),[](const auto& sprite) {
                 return sprite.image==enemyRaidImage;
             });
@@ -326,10 +329,55 @@ void checkWorldRaidSchedule(Resources& resources,Host& host,const md::DataTable&
     std::cout<<"Stage 11: "<<waves.size()<<" waves through wrap, 1.5s between aircraft; no retiming on retry\n";
 }
 
+void checkSu33Campaign(Resources& resources, md::BattleGeometry geometry, unsigned stage, int expectedDamage) {
+    using namespace md;
+    Host host;
+    auto save=SaveData::empty(1);
+    save.createProfile("SU33",1);
+    World world(resources,host,save,0,geometry,781);
+    world.start(stage);
+    const auto targetId=world.validationSpawn("AircraftHeavy_01",true,{0,0});
+    auto* helicopter=world.actor(targetId);
+    assert(helicopter && helicopter->flightTactics);
+    helicopter->flightTactics->speed=0;
+    helicopter->flightTactics->dodgeReady=1000;
+    const auto initial=helicopter->hp;
+    const auto stock=md::DataTable::load(resources.root/"Tables"/"EnemyAirRaidSchedule.tsv");
+    const unsigned planes=expectedDamage>0 ? raidWaves(stock,stage+1).front().count : 0;
+    bool sawPlane=false,sawBeam=false,sawReticle=false;
+    for(unsigned tick=0;tick<4200;++tick) {
+        for(const auto& unit:world.actors()) {
+            unit->weapons.clear();
+            if(!unit->player&&!unit->base)unit->removed=true;
+        }
+        world.tick();
+        if(tick<3600)assert(host.airStrikeStarts==0);
+        if(world.time()>=60 && !sawBeam) {
+            Frame frame;
+            world.appendSprites(frame);
+            for(const auto& sprite:frame.sprites) {
+                sawPlane|=sprite.image==enemySu33Image;
+                sawBeam|=sprite.image=="Efx_Ion03.png";
+                sawReticle|=sprite.image==enemyRaidReticleImage;
+            }
+        }
+    }
+    assert(host.airStrikeStarts==planes && host.raidLaserShots==14*planes);
+    assert(sawPlane==(planes>0) && sawBeam==(planes>0) && sawReticle==(planes>0));
+    assert(helicopter->hp==initial-expectedDamage*int(planes));
+    assert(host.writes==0);
+    std::cout<<"Su-33 campaign stage "<<stage+1<<": "<<planes<<" sorties, "<<expectedDamage<<" damage per aircraft\n";
+}
+
 int main(int argc,char**argv){assert(argc==2);Resources resources;resources.root=argv[1];Host host;
     const auto table=md::DataTable::load(resources.root/"Tables"/"EnemyAirRaidSchedule.tsv");
     checkPrecomputedRaids(table);
     checkWorldRaidSchedule(resources,host,table);
+    for(const auto geometry:{md::BattleGeometry::phone(),md::BattleGeometry::pad()}) {
+        checkSu33Campaign(resources,geometry,9,0);
+        checkSu33Campaign(resources,geometry,10,168);
+        checkSu33Campaign(resources,geometry,79,336);
+    }
     const auto minimum=checkEnemyRaidDamage(resources,md::BattleGeometry::phone());
     assert(checkEnemyRaidDamage(resources,md::BattleGeometry::pad())==minimum);
     double latestImpact=0;
