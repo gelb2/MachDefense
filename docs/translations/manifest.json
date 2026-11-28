@@ -5,15 +5,15 @@
     {
       "ko": "README.md",
       "en": "README.en.md",
-      "ko_sha256": "882db23eceb5032ef3c390490f3a5d4caf94ee17da8fd81a8cb01244eca07938",
-      "en_sha256": "b573bce1ebbe0fcdf68e8a1cb7b1f8350694521837d5500221b4c2df990643e2",
+      "ko_sha256": "cc8fc17976e3faa41505405b2dec8368a783220953043442c997dd6ad00274f5",
+      "en_sha256": "42c18cd00355a0d4476c330e8758a6723385e2eb5d9488026d1b1351fee94cb4",
       "review": "2026-11-11 Sass source refresh: matched v0.7 versus later hotfix/platform coverage, unfinished helicopter hold, known test failures, completed writing tasks, current author sources and source-guide links in both languages. 2026-11-22: reviewed the full bilingual trilogy reflection and retained the existing Korean author edit from public main. 2026-11-23: checked both languages of the links to the other developer statements. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Compared the raid section with the author’s restored-game README and linked the design essay in both languages. Matched the before-and-after gameplay captures and their version labels in both languages. Matched the v0.8.2 release and current download references in both languages. 2026-11-27: matched Crossfire behavior, completion status, and current v0.8.3 references in both languages. 2026-11-28: matched the v0.8.4 source and PWA scope, and checked the updated enemy raid references and damage figures."
     },
     {
       "ko": "CHANGELOG.md",
       "en": "CHANGELOG.en.md",
-      "ko_sha256": "ce20475aada650f92a59bf36779815d12d510707130b3c42b36f2637033d6bfa",
-      "en_sha256": "cca24ec333aee824456ba6764d11c386d6c542656ec8170251852eb2929c8e3b",
+      "ko_sha256": "46862ea5e6075086a7ab2c33dc5666eb51895a6713833c62b4a7267cdc6ee91b",
+      "en_sha256": "6d3239586f7c3c762ff3b1a94eb349d47e2937a88c96176e5c82a383f6049da6",
       "review": "2026-11-10 author revision: compared requested title/subtitle, top placement and exact Korean opening/addition, complete restoration of material 4 with subsequent correction, source-collection links, original error blocks and retained separate methodology in both languages. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Matched the v0.8.2 release and current download references in both languages. 2026-11-27: matched Crossfire behavior, completion status, and current v0.8.3 references in both languages. 2026-11-28: matched the v0.8.4 source and PWA scope, and checked the updated enemy raid references and damage figures."
     },
     {
@@ -47,8 +47,8 @@
     {
       "ko": "docs/public/build-and-install.md",
       "en": "docs/en/public/build-and-install.md",
-      "ko_sha256": "985eff5c4136cad47726b9efea003ff527bf740bfea664018c5d730b31f97dd2",
-      "en_sha256": "b0a702c5832c23feb8acf848bd8e1554884a6712b2ebfbc1822ab78cbc0ba07a",
+      "ko_sha256": "caa9b39ca595e031d3de3ae9524b2b5e937ad2600daa221a8c959b21bcd1ce57",
+      "en_sha256": "ca1b68256347b9126e711104c7c18b72282258331ab3392419b45027b8311421",
       "review": "2026-11-07 v0.6: platform/build instructions, contributor credit, version, tested scope and pending work compared in Korean and English; author text preserved. 2026-11-27: checked v0.8 release and enemy raid wording in both languages. 2026-11-27: checked the v0.8.1 hotfix and download links in both languages. Matched the v0.8.2 release and current download references in both languages. 2026-11-27: matched Crossfire behavior, completion status, and current v0.8.3 references in both languages."
     },
     {
@@ -251,8 +251,8 @@
       "ko": "docs/public/enemy-air-raids.md",
       "en": "docs/en/public/enemy-air-raids.md",
       "review": "2026-11-27: compared the published HeavyMach 1 essay, the candidate 09 art record, the exact damage formula, and the first three stage 11 waves. Corrected attribution to the author of the restoration essay in both languages. Checked the personal account against the pinned HeavyMach 1 restoration essay and reviewed the art, schedule and damage against their sources in both languages. Matched the before-and-after gameplay captures and their version labels in both languages. 2026-11-28: matched the v0.8.4 source and PWA scope, and checked the updated enemy raid references and damage figures.",
-      "ko_sha256": "b49c26f67c108befce1f8c620739328b0fd1f94a6fe2044591b8da9b6be41827",
-      "en_sha256": "ea621b0ba245424be17c74b586ab7a1a2ca57a9f629c16bcc327cabf4026aec4"
+      "ko_sha256": "b76d2b135fb85ab8450037cb8a4e9e8eb9c60da25e61df0da7b55aede796069a",
+      "en_sha256": "9c041b85bd70d0b459d36cababa9ff17c2b756df76d25cd29655e90a9733ffbb"
     }
   ]
 }
