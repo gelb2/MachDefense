@@ -174,6 +174,8 @@ void World::appendSprites(Frame& frame,bool showCrossfireLock)const{
         const float aircraftScale = strike.raid ? scale * .5f : scale;
         strike.motion.appendSprite(layers[7],worldToView(strike.motion.position),resources_.imageSize(image),aircraftScale,image);
     }
+    for (const auto& raid : su33Raids_)
+        raid.motion.appendSprite(layers[7],worldToView(raid.motion.position),resources_.imageSize(enemySu33Image),scale*.5f,enemySu33Image);
     for(auto& layer:layers){const auto offset=frame.sprites.size();for(auto& mesh:layer.meshes){mesh.beforeSpriteIndex+=offset;frame.meshes.push_back(std::move(mesh));}for(auto& sprite:layer.sprites)frame.sprites.push_back(std::move(sprite));}
 
     // Transform every world layer together, including shadows and trail meshes.
