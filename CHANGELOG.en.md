@@ -4,6 +4,10 @@
 [한국어](CHANGELOG.md) | [English](CHANGELOG.en.md)
 <!-- language-nav:end -->
 
+## v0.8.5 — Increased enemy air-raid damage
+
+November 29, 2026. The per-aircraft damage cap is now 125% of the weakest eligible mech's maximum battle HP for the F-15, and 180% of the weakest eligible helicopter's for the Su-33. With the current units, those caps reach 375 and 378 in Stage 80. [Damage rules and verification (Korean)](docs/evidence/raid-damage-caps-20261129.md)
+
 ## v0.8.4 — Su-33 helicopter interception
 
 November 28, 2026. A Lux Lunae Su-33 uses the enemy raid schedule when an allied helicopter is on the battlefield. It fires two unguided missiles and alternates seven blue laser shots from each wing. The cap for one F-15's cluster-bomb damage rose to 95% of the lowest eligible mech's maximum HP. This patch is available as source and for web/PWA. [Enemy raid rules](docs/game-design.md#적-공습기). [Verification](docs/evidence/su33-raid-20261128.md).

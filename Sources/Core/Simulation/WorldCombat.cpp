@@ -118,7 +118,7 @@ int World::su33StageBudget(unsigned stage) const {
         }
     }
     if(minimum==std::numeric_limits<int>::max())return 0;
-    const auto cap=std::int64_t(minimum)*160/100;
+    const auto cap=std::int64_t(minimum)*180/100;
     const auto span=mapTable_.rowCount()-1-firstStage;
     return int(span ? cap*(span+stage-firstStage)/(2*span) : cap);
 }

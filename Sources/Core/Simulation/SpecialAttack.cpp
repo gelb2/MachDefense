@@ -26,10 +26,10 @@ std::string specialWeaponName(std::string_view prefix,float level) {
 std::optional<EnemyAirRaid> EnemyAirRaid::forStage(unsigned stage, std::size_t stageCount, int minimumMechHP) {
     constexpr unsigned firstRaidStage = 10;
     if (stage < firstRaidStage || stage >= stageCount || minimumMechHP < 2) return {};
-    const auto cap = static_cast<std::int64_t>(minimumMechHP) * 95 / 100;
+    const auto cap = static_cast<std::int64_t>(minimumMechHP) * 125 / 100;
     const auto span = static_cast<std::int64_t>(stageCount - 1 - firstRaidStage);
     const auto progress = static_cast<std::int64_t>(stage - firstRaidStage);
-    // Half the safe budget at first appearance, rising linearly to the full cap.
+    // Half the damage cap on the first raid stage, rising linearly to the full cap.
     const auto damage = span ? cap * (span + progress) / (2 * span) : cap;
     return EnemyAirRaid{static_cast<int>(damage)};
 }
